@@ -1,0 +1,38 @@
+----- BEGIN AHCL NOTICE -----
+
+<!-- AHCL KIT MANAGED SCOPE: code-and-script-files-including-common-events-gui-history-and-text-scripts-in-interface-localization-other-prose-images-audio-and-video-are-outside-this-scope -->
+This license notice applies to:
+Latria
+
+AHCL-covered portions:
+code and script files, including common/, events/, gui/, history/, and text scripts in interface/. Localization, other prose, images, audio, and video are outside this scope.
+
+The portions identified above are licensed under version 1.2 of the
+Aperip Heimdall Commons License (AHCL 1.2), subject to its provisions
+concerning migration to later official versions.
+
+Official AHCL text, announcements, and public notices:
+https://ahcl.aperip.com
+
+AHCL Materials Directory (relative to the directory containing this LICENSE):
+licenses/AHCL/
+
+Official or recognized AHCL 1.2 copy:
+licenses/AHCL/AHCL-1.2.md
+
+----- END AHCL NOTICE -----
+
+Prose, including localization and other written copy, is licensed under
+Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+by czxieddan.
+
+https://creativecommons.org/licenses/by-sa/4.0/
+Verbatim license text: licenses/CC-BY-SA-4.0.txt
+
+Images, audio, and video are licensed under the same CC BY-SA 4.0 terms
+by czxieddan. Modified versions of those files stay under CC BY-SA 4.0.
+Commercial use is allowed. There is no non-commercial limit and no ban on
+derivatives.
+
+https://creativecommons.org/licenses/by-sa/4.0/
+Verbatim license text: licenses/CC-BY-SA-4.0.txt

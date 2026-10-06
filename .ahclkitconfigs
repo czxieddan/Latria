@@ -1,0 +1,44 @@
+# AHCL Kit project configuration.
+schema = 1
+materials-directory = "licenses/AHCL"
+languages = []
+
+[project]
+name = "Latria"
+canonical-repository = "https://github.com/czxieddan/Latria.git"
+canonical-branch = "master"
+right-holders:
+  - "czxieddan"
+contact = "czxieddan@gmail.com"
+adoption-date = "2026-10-06"
+
+[license]
+version = "1.2"
+covered-scope = "code and script files, including common/, events/, gui/, history/, and text scripts in interface/. Localization, other prose, images, audio, and video are outside this scope."
+special-authorization-channel = ""
+
+[generation]
+strict-license-files = true
+
+# To enable the Rust adapter, replace `languages = []` above with:
+# languages:
+#   - "rust"
+#
+# Then add:
+# [rust.cargo]
+# manifests:
+#   - "Cargo.toml"
+# packages = []
+# rules = []
+#
+# To enable JavaScript package managers, use `javascript` and:
+# [javascript]
+# manifests:
+#   - "package.json"
+# managers:
+#   - "npm"
+# packages = []
+# rules = []
+#
+# `managers` accepts npm, pnpm, yarn, and bun. Omit it to select
+# the single lockfile beside each manifest.
