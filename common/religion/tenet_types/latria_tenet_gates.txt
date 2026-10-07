@@ -1,0 +1,16 @@
+# Registers the faith flags the act gate reads. Not a pickable tenet.
+latria_carnal_gate = {
+	icon = tenet_carnal_exaltation
+	is_shown = { always = no }
+	can_pick = { always = no }
+	can_pick_as_personal_tenet = { always = no }
+	piety_cost = { value = faith_tenet_cost_massive }
+	name = { desc = latria_carnal_gate_name }
+	desc = { desc = latria_carnal_gate_desc }
+	parameters = {
+		latria_carnal_rite_barred
+	}
+	personal_tenet_parameters = {
+		latria_carnal_personal_barred
+	}
+}
