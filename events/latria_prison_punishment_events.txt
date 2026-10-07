@@ -13,6 +13,7 @@ latria_prison_punishment.0001 = {
 	right_portrait = {
 		character = scope:recipient
 		animation = fear
+		outfit_tags = { no_clothes }
 		override_imprisonment_visuals = yes
 	}
 
@@ -56,6 +57,7 @@ latria_prison_punishment.0002 = {
 	left_portrait = {
 		character = root
 		animation = fear
+		outfit_tags = { no_clothes }
 		override_imprisonment_visuals = yes
 	}
 	right_portrait = {
