@@ -1,0 +1,89 @@
+latria_force_pig_embrace_interaction = {
+	interface_priority = 25
+	icon = torture_interaction
+	category = interaction_category_prison
+	desc = latria_force_pig_embrace_interaction_desc
+
+	is_shown = {
+		scope:puppet_or_actor ?= {
+			latria_can_impose_pig_embrace = yes
+		}
+		scope:recipient = {
+			is_imprisoned_by = scope:puppet_or_actor
+			NOT = { has_trait = latria_unclean }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			custom_description = {
+				text = currently_being_tortured
+				NOT = { has_character_flag = is_being_tortured }
+			}
+		}
+	}
+
+	on_accept = {
+		scope:recipient = {
+			add_character_flag = {
+				flag = is_being_tortured
+				months = 6
+			}
+		}
+
+		show_as_tooltip = {
+			scope:puppet_or_actor = {
+				latria_pig_embrace_actor_consequences = yes
+			}
+			scope:recipient = {
+				latria_pig_embrace_recipient_consequences = yes
+			}
+		}
+
+		scope:puppet_or_actor = {
+			trigger_event = {
+				id = latria_prison_punishment.0001
+				days = 1
+			}
+		}
+	}
+
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = prisoners
+	}
+
+	ai_will_do = {
+		base = -30
+		modifier = {
+			has_trait = sadistic
+			add = 60
+		}
+		modifier = {
+			has_trait = callous
+			add = 35
+		}
+		modifier = {
+			has_relation_rival = scope:recipient
+			add = 40
+		}
+		modifier = {
+			has_trait = compassionate
+			add = -100
+		}
+		modifier = {
+			has_trait = just
+			add = -40
+		}
+	}
+
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 144
+		duchy = 48
+		kingdom = 36
+		empire = 12
+		hegemony = 12
+	}
+}
