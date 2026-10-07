@@ -42,7 +42,7 @@ latria_can_propose_carnal_act = {
 	OR = {
 		latria_can_share_carnal_act = { PARTNER = $PARTNER$ }
 		AND = {
-			OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+			OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } }
 			latria_body_can_act = yes
 			is_attracted_to_gender_of = $PARTNER$
 			$PARTNER$ = { latria_body_can_act = yes }
