@@ -3,9 +3,9 @@ latria_propose_intercourse_interaction = {
 	common_interaction = yes
 	interface_priority = 40
 	category = interaction_category_friendly
-	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } } }
+	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } } }
 	send_name = latria_propose_act_send
-	auto_accept = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+	auto_accept = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } }
 
 	ai_targets = {
 		ai_recipients = spouses
@@ -39,7 +39,7 @@ latria_propose_intercourse_interaction = {
 				latria_act_interval_clear = { PARTNER = scope:recipient }
 			}
 			OR = {
-				OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+				OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } }
 				AND = {
 					scope:recipient = { is_imprisoned = no }
 					OR = {
@@ -63,7 +63,7 @@ latria_propose_intercourse_interaction = {
 						value = flag:latria_act_intercourse
 					}
 					if = {
-						limit = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+						limit = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } }
 						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
 					latria_resolve_act = yes
@@ -128,9 +128,9 @@ latria_propose_manual_interaction = {
 	common_interaction = yes
 	interface_priority = 39
 	category = interaction_category_friendly
-	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } } }
+	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } } }
 	send_name = latria_propose_act_send
-	auto_accept = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+	auto_accept = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } }
 
 	ai_targets = {
 		ai_recipients = spouses
@@ -164,7 +164,7 @@ latria_propose_manual_interaction = {
 				latria_act_interval_clear = { PARTNER = scope:recipient }
 			}
 			OR = {
-				OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+				OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } }
 				AND = {
 					scope:recipient = { is_imprisoned = no }
 					OR = {
@@ -188,7 +188,7 @@ latria_propose_manual_interaction = {
 						value = flag:latria_act_manual
 					}
 					if = {
-						limit = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+						limit = { OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } } }
 						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
 					latria_resolve_act = yes
