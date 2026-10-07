@@ -1,0 +1,13 @@
+# Saved schemes started before these slots existed still carry murder agents.
+
+latria_liaison_has_murder_agent = {
+	OR = {
+		any_scheme_agent_slot = { is_agent_slot_type = agent_infiltrator }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_footpad }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_socialite }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_alibi }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_assassin }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_thug }
+		any_scheme_agent_slot = { is_agent_slot_type = agent_lookout }
+	}
+}

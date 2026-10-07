@@ -1,0 +1,45 @@
+# Vanilla bonds. Read these. Do not replace the relations themselves.
+
+latria_are_consorts = {
+	OR = {
+		is_consort_of = $PARTNER$
+		$PARTNER$ = { is_consort_of = prev }
+	}
+}
+
+latria_partner_is_spouse = {
+	is_spouse_of = $PARTNER$
+}
+
+# The partner is the concubine. Do not call the holder a concubine.
+latria_partner_is_concubine = {
+	$PARTNER$ = { is_concubine_of = prev }
+}
+
+latria_partner_is_soulmate = {
+	has_relation_soulmate = $PARTNER$
+}
+
+latria_partner_is_lover = {
+	has_relation_lover = $PARTNER$
+}
+
+# Married, a concubine, or holding a concubine.
+latria_has_bound_partner = {
+	OR = {
+		is_married = yes
+		is_concubine = yes
+		any_concubine = { is_alive = yes }
+	}
+}
+
+# Cheating. Not a spouse, concubine, lover, or soulmate of this partner.
+latria_act_is_adultery = {
+	NOT = { latria_are_consorts = { PARTNER = $PARTNER$ } }
+	NOT = { latria_partner_is_lover = { PARTNER = $PARTNER$ } }
+	NOT = { latria_partner_is_soulmate = { PARTNER = $PARTNER$ } }
+	OR = {
+		latria_has_bound_partner = yes
+		$PARTNER$ = { latria_has_bound_partner = yes }
+	}
+}

@@ -1,0 +1,89 @@
+latria_solo_interval_clear = {
+	NOT = { has_character_flag = latria_recent_solo_act }
+}
+
+latria_solo_is_repeated = {
+	var:latria_solo_month_count >= 2
+}
+
+# Fourth act inside the open week.
+latria_solo_is_worn = {
+	var:latria_solo_week_count >= 4
+}
+
+# Past ten acts inside the open month.
+latria_solo_is_excessive = {
+	var:latria_solo_month_count >= 11
+}
+
+# Rite praise of flesh. Reads virtues, sins, and the carnal tenet. Does not permit the act.
+latria_solo_rite_favors_flesh = {
+	OR = {
+		rite = { trait_is_virtue_rite = lustful }
+		rite = { trait_is_sin_rite = chaste }
+		rite = { trait_is_sin_rite = temperate }
+		rite = { rite_has_tenet = tenet_carnal_exaltation }
+		rite = { rite_has_parameter = piety_from_seduction_active }
+	}
+}
+
+# Rite blame of flesh. A virtue of restraint, or lust treated as sin.
+latria_solo_rite_condemns_flesh = {
+	OR = {
+		rite = { trait_is_sin_rite = lustful }
+		rite = { trait_is_virtue_rite = chaste }
+		rite = { trait_is_virtue_rite = temperate }
+	}
+}
+
+# 1.20 keeps the adultery doctrine flags on the rite. Sex picks which flag.
+latria_solo_rite_accepts_license = {
+	OR = {
+		AND = {
+			is_female = yes
+			rite = { rite_has_parameter = adultery_female_accepted }
+		}
+		AND = {
+			is_male = yes
+			rite = { rite_has_parameter = adultery_male_accepted }
+		}
+	}
+}
+
+latria_solo_rite_shuns_license = {
+	OR = {
+		AND = {
+			is_female = yes
+			rite = { rite_has_parameter = adultery_female_shunned }
+		}
+		AND = {
+			is_male = yes
+			rite = { rite_has_parameter = adultery_male_shunned }
+		}
+	}
+}
+
+latria_solo_rite_crimes_license = {
+	OR = {
+		AND = {
+			is_female = yes
+			rite = { rite_has_parameter = adultery_female_crime }
+		}
+		AND = {
+			is_male = yes
+			rite = { rite_has_parameter = adultery_male_crime }
+		}
+	}
+}
+
+latria_solo_piety_moves = {
+	OR = {
+		latria_solo_rite_favors_flesh = yes
+		latria_solo_rite_condemns_flesh = yes
+		latria_solo_rite_accepts_license = yes
+		latria_solo_rite_shuns_license = yes
+		latria_solo_rite_crimes_license = yes
+		culture = { has_cultural_parameter = adultery_always_accepted }
+		culture = { has_cultural_parameter = adulterer_fornicator_penalties }
+	}
+}

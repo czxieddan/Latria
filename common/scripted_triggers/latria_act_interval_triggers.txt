@@ -1,0 +1,7 @@
+# Shared pause after a direct act. Not a safety gate.
+latria_act_interval_clear = {
+	NOT = { has_character_flag = latria_recent_carnal_act }
+	$PARTNER$ = {
+		NOT = { has_character_flag = latria_recent_carnal_act }
+	}
+}

@@ -1,0 +1,46 @@
+# Physiology. The body can still act: alive, and not incapable.
+# This is not puberty, and it is not adulthood in the period.
+latria_body_can_act = {
+	age >= 12
+	is_alive = yes
+	is_incapable = no
+}
+
+# Faith. Reads rite parameters and personal tenet flags only.
+# No tenet bars the act yet, so this does not withhold it. Later tenets narrow this trigger.
+# It does not change age, and it cannot permit carnal content by itself.
+latria_faith_stands = {
+	NOT = { rite = { rite_has_parameter = latria_carnal_rite_barred } }
+	NOT = { has_personal_tenet_flag = latria_carnal_personal_barred }
+}
+
+# AND of the three gates, plus attraction and the vanilla kin limit.
+# Callers pass PARTNER. They do not inline the three gates.
+latria_can_share_carnal_act = {
+	save_temporary_scope_as = latria_initiator
+	latria_body_can_act = yes
+	latria_faith_stands = yes
+	NOT = { this = $PARTNER$ }
+	is_attracted_to_gender_of = $PARTNER$
+	$PARTNER$ = {
+		latria_body_can_act = yes
+		latria_faith_stands = yes
+		is_attracted_to_gender_of = scope:latria_initiator
+	}
+	custom_tooltip = {
+		text = latria_kin_blocks_act
+		NOT = {
+			relation_with_character_is_incestuous_in_my_or_lieges_rite_trigger = {
+				CHARACTER = $PARTNER$
+			}
+		}
+	}
+}
+
+# One participant. The share gate rejects this = PARTNER.
+# AND of body, faith. No attraction. No kin check.
+# Callers do not inline the three gates.
+latria_can_act_alone = {
+	latria_body_can_act = yes
+	latria_faith_stands = yes
+}
