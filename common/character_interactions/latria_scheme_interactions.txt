@@ -1,0 +1,175 @@
+latria_start_fatal_liaison_interaction = {
+	icon = icon_scheme_seduce
+	common_interaction = yes
+	interface_priority = 80
+	category = interaction_category_hostile
+	ignores_pending_interaction_block = yes
+	scheme = latria_fatal_liaison
+	send_name = START_SCHEME
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = guests
+		max = 5
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 12
+		kingdom = 6
+		empire = 3
+		hegemony = 3
+	}
+
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:puppet_or_actor != scope:recipient
+		scope:puppet_or_actor = {
+			intrigue >= latria_fatal_liaison_show_intrigue
+			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+		}
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			can_start_scheme = {
+				type = latria_fatal_liaison
+				target_character = scope:recipient
+			}
+		}
+	}
+
+	options_heading = schemes.t.agent_packages
+	send_options_exclusive = yes
+	send_option = {
+		flag = agent_focus_balance
+		current_description = latria_fatal_liaison.tt.agent_focus_balance
+	}
+	send_option = {
+		flag = agent_focus_success
+		current_description = latria_fatal_liaison.tt.agent_focus_success
+	}
+	send_option = {
+		flag = agent_focus_speed
+		current_description = latria_fatal_liaison.tt.agent_focus_speed
+	}
+	send_option = {
+		flag = agent_focus_secrecy
+		current_description = latria_fatal_liaison.tt.agent_focus_secrecy
+	}
+
+	on_accept = {
+		scope:puppet_or_actor = {
+			save_scope_value_as = {
+				name = latria_act_kind
+				value = flag:latria_act_intercourse
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = latria_fatal_liaison_started
+				left_icon = scope:puppet_or_actor
+				right_icon = scope:recipient
+				latria_begin_fatal_liaison_effect = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 15
+			has_relation_rival = scope:recipient
+		}
+		modifier = {
+			add = -100
+			has_relation_lover = scope:recipient
+		}
+	}
+}
+
+latria_start_fatal_touch_interaction = {
+	icon = icon_scheme_seduce
+	common_interaction = yes
+	interface_priority = 79
+	category = interaction_category_hostile
+	ignores_pending_interaction_block = yes
+	scheme = latria_fatal_liaison
+	send_name = START_SCHEME
+	auto_accept = yes
+
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = guests
+		max = 5
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 12
+		kingdom = 6
+		empire = 3
+		hegemony = 3
+	}
+
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:puppet_or_actor != scope:recipient
+		scope:puppet_or_actor = {
+			intrigue >= latria_fatal_liaison_show_intrigue
+			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+		}
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			can_start_scheme = {
+				type = latria_fatal_liaison
+				target_character = scope:recipient
+			}
+		}
+	}
+
+	options_heading = schemes.t.agent_packages
+	send_options_exclusive = yes
+	send_option = {
+		flag = agent_focus_balance
+		current_description = latria_fatal_liaison.tt.agent_focus_balance
+	}
+	send_option = {
+		flag = agent_focus_success
+		current_description = latria_fatal_liaison.tt.agent_focus_success
+	}
+	send_option = {
+		flag = agent_focus_speed
+		current_description = latria_fatal_liaison.tt.agent_focus_speed
+	}
+	send_option = {
+		flag = agent_focus_secrecy
+		current_description = latria_fatal_liaison.tt.agent_focus_secrecy
+	}
+
+	on_accept = {
+		scope:puppet_or_actor = {
+			save_scope_value_as = {
+				name = latria_act_kind
+				value = flag:latria_act_manual
+			}
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = latria_fatal_touch_started
+				left_icon = scope:puppet_or_actor
+				right_icon = scope:recipient
+				latria_begin_fatal_liaison_effect = yes
+			}
+		}
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 15
+			has_relation_rival = scope:recipient
+		}
+		modifier = {
+			add = -100
+			has_relation_lover = scope:recipient
+		}
+	}
+}

@@ -1,0 +1,231 @@
+latria_propose_intercourse_interaction = {
+	icon = icon_scheme_seduce
+	common_interaction = yes
+	interface_priority = 40
+	category = interaction_category_friendly
+	send_name = latria_propose_act_send
+	auto_accept = no
+
+	ai_targets = {
+		ai_recipients = spouses
+		max = 4
+	}
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = guests
+		max = 5
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 12
+		kingdom = 6
+		empire = 6
+		hegemony = 6
+	}
+
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:puppet_or_actor != scope:recipient
+		scope:puppet_or_actor = {
+			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+		}
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			custom_tooltip = {
+				text = latria_act_too_recent
+				latria_act_interval_clear = { PARTNER = scope:recipient }
+			}
+			scope:recipient = { is_imprisoned = no }
+			OR = {
+				in_diplomatic_range = scope:recipient
+				location = scope:recipient.location
+			}
+		}
+	}
+
+	on_accept = {
+		custom_tooltip = {
+			text = latria_propose_intercourse_night_tt
+			hidden_effect = {
+				scope:puppet_or_actor = {
+					save_scope_as = latria_actor
+					scope:recipient = { save_scope_as = latria_partner }
+					save_scope_value_as = {
+						name = latria_act_kind
+						value = flag:latria_act_intercourse
+					}
+					latria_resolve_act = yes
+					if = {
+						limit = { is_ai = no }
+						trigger_event = latria_act.0101
+					}
+				}
+				scope:recipient = {
+					if = {
+						limit = {
+							is_alive = yes
+							is_ai = no
+						}
+						trigger_event = latria_act.0102
+					}
+				}
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 10
+		modifier = {
+			add = 40
+			desc = latria_act_accept_lover
+			has_relation_lover = scope:puppet_or_actor
+		}
+		modifier = {
+			add = 20
+			desc = latria_act_accept_lust
+			has_trait = lustful
+		}
+		modifier = {
+			add = -40
+			desc = latria_act_accept_chaste
+			has_trait = chaste
+		}
+		modifier = {
+			add = 15
+			desc = latria_act_accept_opinion
+			opinion = {
+				value >= medium_positive_opinion
+				target = scope:puppet_or_actor
+			}
+		}
+	}
+	ai_will_do = {
+		base = 5
+		modifier = {
+			add = 20
+			has_trait = lustful
+		}
+		modifier = {
+			add = -40
+			has_trait = chaste
+		}
+	}
+}
+
+latria_propose_manual_interaction = {
+	icon = icon_scheme_seduce
+	common_interaction = yes
+	interface_priority = 39
+	category = interaction_category_friendly
+	send_name = latria_propose_act_send
+	auto_accept = no
+
+	ai_targets = {
+		ai_recipients = spouses
+		max = 4
+	}
+	ai_targets = {
+		ai_recipients = courtiers
+		ai_recipients = guests
+		max = 5
+	}
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 24
+		duchy = 12
+		kingdom = 6
+		empire = 6
+		hegemony = 6
+	}
+
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:puppet_or_actor != scope:recipient
+		scope:puppet_or_actor = {
+			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+		}
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			custom_tooltip = {
+				text = latria_act_too_recent
+				latria_act_interval_clear = { PARTNER = scope:recipient }
+			}
+			scope:recipient = { is_imprisoned = no }
+			OR = {
+				in_diplomatic_range = scope:recipient
+				location = scope:recipient.location
+			}
+		}
+	}
+
+	on_accept = {
+		custom_tooltip = {
+			text = latria_propose_manual_night_tt
+			hidden_effect = {
+				scope:puppet_or_actor = {
+					save_scope_as = latria_actor
+					scope:recipient = { save_scope_as = latria_partner }
+					save_scope_value_as = {
+						name = latria_act_kind
+						value = flag:latria_act_manual
+					}
+					latria_resolve_act = yes
+					if = {
+						limit = { is_ai = no }
+						trigger_event = latria_act.0101
+					}
+				}
+				scope:recipient = {
+					if = {
+						limit = {
+							is_alive = yes
+							is_ai = no
+						}
+						trigger_event = latria_act.0102
+					}
+				}
+			}
+		}
+	}
+
+	ai_accept = {
+		base = 10
+		modifier = {
+			add = 40
+			desc = latria_act_accept_lover
+			has_relation_lover = scope:puppet_or_actor
+		}
+		modifier = {
+			add = 20
+			desc = latria_act_accept_lust
+			has_trait = lustful
+		}
+		modifier = {
+			add = -40
+			desc = latria_act_accept_chaste
+			has_trait = chaste
+		}
+		modifier = {
+			add = 15
+			desc = latria_act_accept_opinion
+			opinion = {
+				value >= medium_positive_opinion
+				target = scope:puppet_or_actor
+			}
+		}
+	}
+	ai_will_do = {
+		base = 5
+		modifier = {
+			add = 20
+			has_trait = lustful
+		}
+		modifier = {
+			add = -40
+			has_trait = chaste
+		}
+	}
+}

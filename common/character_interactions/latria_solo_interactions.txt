@@ -1,0 +1,72 @@
+latria_solo_relief_interaction = {
+	icon = icon_scheme_seduce
+	common_interaction = yes
+	interface_priority = 38
+	category = interaction_category_friendly
+	send_name = latria_solo_relief_send
+	auto_accept = yes
+
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:recipient = scope:puppet_or_actor
+		scope:puppet_or_actor = { latria_can_act_alone = yes }
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			custom_tooltip = {
+				text = latria_act_too_recent
+				latria_solo_interval_clear = yes
+			}
+			is_imprisoned = no
+		}
+	}
+
+	on_accept = {
+		custom_tooltip = {
+			text = latria_solo_relief_night_tt
+			hidden_effect = {
+				scope:puppet_or_actor = {
+					save_scope_as = latria_actor
+					save_scope_value_as = {
+						name = latria_act_kind
+						value = flag:latria_act_solo
+					}
+					latria_resolve_act = yes
+					if = {
+						limit = { is_ai = no }
+						trigger_event = latria_act.0201
+					}
+				}
+			}
+		}
+	}
+
+	ai_targets = { ai_recipients = self }
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 36
+		duchy = 24
+		kingdom = 12
+		empire = 12
+		hegemony = 12
+	}
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 25
+			has_trait = lustful
+		}
+		modifier = {
+			add = -50
+			has_trait = chaste
+		}
+		modifier = {
+			add = -25
+			has_trait = temperate
+		}
+		modifier = {
+			add = 20
+			stress >= low_stress
+		}
+	}
+}
