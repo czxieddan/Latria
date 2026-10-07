@@ -3,8 +3,13 @@ latria_unclean = {
 	icon = leper.dds
 
 	general_opinion = -10
-	islam_religion_opinion = -30
-	monthly_piety_gain_mult = -0.25
+	islam_religion_opinion = -100
+	monthly_prestige_gain_mult = -0.25
+
+	rite_modifier = {
+		parameter = islamic_syncretic_recipient
+		monthly_piety = -0.5
+	}
 
 	shown_in_ruler_designer = no
 
