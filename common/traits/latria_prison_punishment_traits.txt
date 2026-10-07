@@ -1,0 +1,20 @@
+latria_unclean = {
+	category = fame
+	icon = leper.dds
+
+	general_opinion = -10
+	islam_religion_opinion = -30
+	monthly_piety_gain_mult = -0.25
+
+	shown_in_ruler_designer = no
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_unclean_desc
+			}
+			desc = trait_latria_unclean_character_desc
+		}
+	}
+}
