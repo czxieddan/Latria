@@ -1,0 +1,49 @@
+latria_fatal_liaison_show_intrigue = 10
+latria_fatal_liaison_start_intrigue = 15
+latria_act_pregnancy_chance = 20
+
+# Direct acts use the flat chance. Vanilla callers can pass their own.
+latria_resolved_pregnancy_chance = {
+	value = latria_act_pregnancy_chance
+	if = {
+		limit = { exists = scope:latria_has_vanilla_pregnancy_chance }
+		multiply = 0
+		add = scope:latria_vanilla_pregnancy_chance
+	}
+}
+
+# Accidental strain on scope:latria_partner. Weight raises it. Prowess and learning lower it.
+# Capped so a court cannot be emptied by repeated acts.
+latria_act_strain_chance = {
+	value = 0.25
+	if = {
+		limit = { scope:latria_partner = { current_weight >= 40 } }
+		add = 0.25
+	}
+	if = {
+		limit = { scope:latria_partner = { current_weight >= 80 } }
+		add = 0.25
+	}
+	if = {
+		limit = { scope:latria_partner = { current_weight >= 120 } }
+		add = 0.25
+	}
+	if = {
+		limit = { scope:latria_partner = { prowess <= 6 } }
+		add = 0.25
+	}
+	if = {
+		limit = { scope:latria_partner = { prowess >= 16 } }
+		add = -0.15
+	}
+	if = {
+		limit = { scope:latria_partner = { learning <= 6 } }
+		add = 0.25
+	}
+	if = {
+		limit = { scope:latria_partner = { learning >= 16 } }
+		add = -0.15
+	}
+	min = 0.1
+	max = 1.5
+}

@@ -1,0 +1,151 @@
+# Signed stress. Negative relieves. Capped so one night cannot empty or break a mind.
+latria_solo_stress_delta = {
+	value = minor_stress_impact_loss
+	add = latria_solo_stress_traits
+	add = latria_solo_stress_rite
+	add = latria_solo_stress_doctrine
+	add = latria_solo_stress_culture
+	add = latria_solo_stress_excess
+	min = -40
+	max = 40
+}
+
+latria_solo_stress_traits = {
+	value = 0
+	if = {
+		limit = { has_trait = lustful }
+		add = -10
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add = minor_stress_impact_gain
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add = 10
+	}
+}
+
+latria_solo_stress_rite = {
+	value = 0
+	if = {
+		limit = { latria_solo_rite_favors_flesh = yes }
+		add = -5
+	}
+	if = {
+		limit = { latria_solo_rite_condemns_flesh = yes }
+		add = 15
+	}
+}
+
+latria_solo_stress_doctrine = {
+	value = 0
+	if = {
+		limit = { latria_solo_rite_accepts_license = yes }
+		add = -5
+	}
+	if = {
+		limit = { latria_solo_rite_shuns_license = yes }
+		add = 5
+	}
+	if = {
+		limit = { latria_solo_rite_crimes_license = yes }
+		add = 15
+	}
+}
+
+latria_solo_stress_culture = {
+	value = 0
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = adultery_always_accepted }
+		}
+		add = -5
+	}
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = naked_culture_active }
+		}
+		add = -10
+	}
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = adulterer_fornicator_penalties }
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = lustful_trait_less_common }
+		}
+		add = 5
+	}
+}
+
+latria_solo_stress_excess = {
+	value = 0
+	if = {
+		limit = { latria_solo_is_worn = yes }
+		add = 10
+	}
+	if = {
+		limit = { latria_solo_is_excessive = yes }
+		add = 10
+	}
+}
+
+latria_solo_piety_delta = {
+	value = 0
+	add = latria_solo_piety_rite
+	add = latria_solo_piety_doctrine
+	add = latria_solo_piety_culture
+	min = -50
+	max = 50
+}
+
+latria_solo_piety_rite = {
+	value = 0
+	if = {
+		limit = { latria_solo_rite_favors_flesh = yes }
+		add = miniscule_piety_gain
+	}
+	if = {
+		limit = { latria_solo_rite_condemns_flesh = yes }
+		add = miniscule_piety_loss
+	}
+}
+
+# Only after the month has already gone past ten. Low so a court does not fill with the ill.
+latria_solo_illness_chance = 5
+
+latria_solo_piety_doctrine = {
+	value = 0
+	if = {
+		limit = { latria_solo_rite_accepts_license = yes }
+		add = miniscule_piety_gain
+	}
+	if = {
+		limit = { latria_solo_rite_shuns_license = yes }
+		add = miniscule_piety_loss
+	}
+	if = {
+		limit = { latria_solo_rite_crimes_license = yes }
+		add = minor_piety_loss
+	}
+}
+
+latria_solo_piety_culture = {
+	value = 0
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = adultery_always_accepted }
+		}
+		add = miniscule_piety_gain
+	}
+	if = {
+		limit = {
+			culture = { has_cultural_parameter = adulterer_fornicator_penalties }
+		}
+		add = miniscule_piety_loss
+	}
+}
