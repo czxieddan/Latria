@@ -1,0 +1,24 @@
+﻿l_simp_chinese:
+ latria_agent_quack: "庸医"
+ latria_agent_quack_i: "[success_chance_max_i]"
+ latria_agent_quack_desc: "#WEAK 这脉，我只能说是急病。#!\n$EFFECT_LIST_BULLET$提供[success_chance_max_i][scheme_potential|E]\n$EFFECT_LIST_BULLET$需要[learning_i][learning|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('lifestyle_physician').GetName( GetNullCharacter )]和[GetTrait('lifestyle_herbalist').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('drunkard').GetName( GetNullCharacter )]和[GetTrait('impatient').GetName( GetNullCharacter )]等[traits|E]"
+
+ latria_agent_go_between: "牵线人"
+ latria_agent_go_between_i: "[success_chance_max_i]"
+ latria_agent_go_between_desc: "#WEAK 话我带到了枕边。#!\n$EFFECT_LIST_BULLET$提供[success_chance_max_i][scheme_potential|E]\n$EFFECT_LIST_BULLET$需要[diplomacy_i][diplomacy|E]和[intrigue_i][intrigue|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('lustful').GetName( GetNullCharacter )]和[GetTrait('gregarious').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('chaste').GetName( GetNullCharacter )]和[GetTrait('shy').GetName( GetNullCharacter )]等[traits|E]"
+
+ latria_agent_usher: "引路人"
+ latria_agent_usher_i: "[scheme_speed_i]"
+ latria_agent_usher_desc: "#WEAK 这条廊子今夜没有人。#!\n$EFFECT_LIST_BULLET$降低[scheme_speed_i][scheme_speed|E]\n$EFFECT_LIST_BULLET$需要[intrigue_i][intrigue|E]和[prowess_i][prowess|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('deceitful').GetName( GetNullCharacter )]和[GetTrait('diligent').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('honest').GetName( GetNullCharacter )]和[GetTrait('lazy').GetName( GetNullCharacter )]等[traits|E]"
+
+ latria_agent_runner: "传话人"
+ latria_agent_runner_i: "[scheme_speed_i]"
+ latria_agent_runner_desc: "#WEAK 口信已经送出。#!\n$EFFECT_LIST_BULLET$降低[scheme_speed_i][scheme_speed|E]\n$EFFECT_LIST_BULLET$需要[diplomacy_i][diplomacy|E]和[intrigue_i][intrigue|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('lifestyle_traveler').GetName( GetNullCharacter )]和[GetTrait('diligent').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('lazy').GetName( GetNullCharacter )]和[GetTrait('shy').GetName( GetNullCharacter )]等[traits|E]"
+
+ latria_agent_door: "守门人"
+ latria_agent_door_i: "[secrecy_i]"
+ latria_agent_door_desc: "#WEAK 门我看着。#!\n$EFFECT_LIST_BULLET$提供[secrecy_i][secrecy|E]\n$EFFECT_LIST_BULLET$需要[intrigue_i][intrigue|E]和[martial_i][martial|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('patient').GetName( GetNullCharacter )]和[GetTrait('paranoid').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('impatient').GetName( GetNullCharacter )]和[GetTrait('trusting').GetName( GetNullCharacter )]等[traits|E]"
+
+ latria_agent_cover: "托辞人"
+ latria_agent_cover_i: "[secrecy_i]"
+ latria_agent_cover_desc: "#WEAK 我可以发誓，是病。#!\n$EFFECT_LIST_BULLET$提供[secrecy_i][secrecy|E]\n$EFFECT_LIST_BULLET$需要[diplomacy_i][diplomacy|E]和[learning_i][learning|E]\n$EFFECT_LIST_BULLET$#P 受增益于#![GetTrait('honest').GetName( GetNullCharacter )]和[GetTrait('loyal').GetName( GetNullCharacter )]等[traits|E]\n$EFFECT_LIST_BULLET$#N 受惩罚于#![GetTrait('deceitful').GetName( GetNullCharacter )]和[GetTrait('disloyal').GetName( GetNullCharacter )]等[traits|E]"

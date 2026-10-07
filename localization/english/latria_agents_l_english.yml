@@ -1,0 +1,24 @@
+﻿l_english:
+ latria_agent_quack: "Quack"
+ latria_agent_quack_i: "[success_chance_max_i]"
+ latria_agent_quack_desc: "#WEAK I can only call this pulse a sudden sickness.#!\n$EFFECT_LIST_BULLET$ Provides [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Requires [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('lifestyle_physician').GetName( GetNullCharacter )] and [GetTrait('lifestyle_herbalist').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('drunkard').GetName( GetNullCharacter )] and [GetTrait('impatient').GetName( GetNullCharacter )]"
+
+ latria_agent_go_between: "Go-Between"
+ latria_agent_go_between_i: "[success_chance_max_i]"
+ latria_agent_go_between_desc: "#WEAK I carried the word as far as the pillow.#!\n$EFFECT_LIST_BULLET$ Provides [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Requires [diplomacy_i] [diplomacy|E] & [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('lustful').GetName( GetNullCharacter )] and [GetTrait('gregarious').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('chaste').GetName( GetNullCharacter )] and [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_usher: "Usher"
+ latria_agent_usher_i: "[scheme_speed_i]"
+ latria_agent_usher_desc: "#WEAK The passage is empty tonight.#!\n$EFFECT_LIST_BULLET$ Reduces [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Requires [intrigue_i] [intrigue|E] & [prowess_i] [prowess|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('deceitful').GetName( GetNullCharacter )] and [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('honest').GetName( GetNullCharacter )] and [GetTrait('lazy').GetName( GetNullCharacter )]"
+
+ latria_agent_runner: "Messenger"
+ latria_agent_runner_i: "[scheme_speed_i]"
+ latria_agent_runner_desc: "#WEAK The message has already gone.#!\n$EFFECT_LIST_BULLET$ Reduces [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Requires [diplomacy_i] [diplomacy|E] & [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('lifestyle_traveler').GetName( GetNullCharacter )] and [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('lazy').GetName( GetNullCharacter )] and [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_door: "Doorward"
+ latria_agent_door_i: "[secrecy_i]"
+ latria_agent_door_desc: "#WEAK I have the door.#!\n$EFFECT_LIST_BULLET$ Provides [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Requires [intrigue_i] [intrigue|E] & [martial_i] [martial|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('patient').GetName( GetNullCharacter )] and [GetTrait('paranoid').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('impatient').GetName( GetNullCharacter )] and [GetTrait('trusting').GetName( GetNullCharacter )]"
+
+ latria_agent_cover: "Pretext"
+ latria_agent_cover_i: "[secrecy_i]"
+ latria_agent_cover_desc: "#WEAK I can swear it was a sickness.#!\n$EFFECT_LIST_BULLET$ Provides [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Requires [diplomacy_i] [diplomacy|E] & [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Benefits#! from [traits|E] like [GetTrait('honest').GetName( GetNullCharacter )] and [GetTrait('loyal').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Suffers#! from [traits|E] like [GetTrait('deceitful').GetName( GetNullCharacter )] and [GetTrait('disloyal').GetName( GetNullCharacter )]"
