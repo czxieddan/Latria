@@ -43,7 +43,10 @@ latria_resolve_partner_act = {
 	latria_roll_partner_strain = yes
 	latria_roll_act_pregnancy = yes
 	if = {
-		limit = { NOT = { exists = scope:latria_force_death } }
+		limit = {
+			NOT = { exists = scope:latria_force_death }
+			NOT = { exists = scope:latria_skip_act_interval }
+		}
 		latria_mark_recent_carnal_act = yes
 	}
 }
