@@ -1,0 +1,42 @@
+LatriaSchemeBondTitle = {
+	type = character
+
+	text = {
+		trigger = {
+			exists = scope:target
+			latria_partner_is_spouse = { PARTNER = scope:target }
+		}
+		localization_key = latria_scheme.0010.t.spouse
+	}
+	text = {
+		trigger = {
+			exists = scope:target
+			latria_partner_is_concubine = { PARTNER = scope:target }
+		}
+		localization_key = latria_scheme.0010.t.concubine
+	}
+	text = {
+		trigger = {
+			exists = scope:target
+			latria_partner_is_soulmate = { PARTNER = scope:target }
+		}
+		localization_key = latria_scheme.0010.t.soulmate
+	}
+	text = {
+		trigger = {
+			exists = scope:target
+			latria_partner_is_lover = { PARTNER = scope:target }
+		}
+		localization_key = latria_scheme.0010.t.lover
+	}
+	text = {
+		trigger = {
+			exists = scope:target
+			latria_act_is_adultery = { PARTNER = scope:target }
+		}
+		localization_key = latria_scheme.0010.t.adultery
+	}
+	text = {
+		localization_key = latria_scheme.0010.t
+	}
+}
