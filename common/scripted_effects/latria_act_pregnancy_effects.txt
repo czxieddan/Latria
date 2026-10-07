@@ -1,0 +1,49 @@
+# Intercourse only. The two sexes have to differ. A manual act never reaches this.
+latria_roll_act_pregnancy_as_mother = {
+	random = {
+		chance = latria_resolved_pregnancy_chance
+		make_pregnant = { father = scope:latria_partner }
+	}
+}
+
+latria_roll_act_pregnancy_as_father = {
+	scope:latria_partner = {
+		random = {
+			chance = latria_resolved_pregnancy_chance
+			make_pregnant = { father = prev }
+		}
+	}
+}
+
+latria_roll_act_pregnancy = {
+	if = {
+		limit = {
+			scope:latria_act_kind = flag:latria_act_intercourse
+			is_alive = yes
+			is_female = yes
+			scope:latria_partner = {
+				is_alive = yes
+				is_male = yes
+			}
+			possible_pregnancy_after_sex_with_character_trigger = {
+				CHARACTER = scope:latria_partner
+			}
+		}
+		latria_roll_act_pregnancy_as_mother = yes
+	}
+	else_if = {
+		limit = {
+			scope:latria_act_kind = flag:latria_act_intercourse
+			is_alive = yes
+			is_male = yes
+			scope:latria_partner = {
+				is_alive = yes
+				is_female = yes
+				possible_pregnancy_after_sex_with_character_trigger = {
+					CHARACTER = prev
+				}
+			}
+		}
+		latria_roll_act_pregnancy_as_father = yes
+	}
+}

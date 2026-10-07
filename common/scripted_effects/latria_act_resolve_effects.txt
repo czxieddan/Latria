@@ -1,0 +1,49 @@
+# Only writer for an act. Caller sets latria_act_kind. A partner act also sets latria_partner.
+# latria_force_death, when set, skips the roll and still uses the same death.
+latria_mark_recent_carnal_act = {
+	add_character_flag = {
+		flag = latria_recent_carnal_act
+		days = 180
+	}
+	scope:latria_partner = {
+		if = {
+			limit = { is_alive = yes }
+			add_character_flag = {
+				flag = latria_recent_carnal_act
+				days = 180
+			}
+		}
+	}
+}
+
+# Vanilla reads is_naked for both the nude portrait and the nightgown fallback.
+latria_mark_act_undressed = {
+	add_character_flag = is_naked
+	$PARTNER$ = { add_character_flag = is_naked }
+}
+
+latria_clear_act_undressed = {
+	remove_character_flag = is_naked
+	$PARTNER$ = { remove_character_flag = is_naked }
+}
+
+latria_resolve_act = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_solo }
+		latria_resolve_solo_act = yes
+	}
+	else = {
+		latria_resolve_partner_act = yes
+	}
+	trigger_event = { on_action = latria_on_act_resolved }
+}
+
+# Partner path. Solo never reaches this: strain, pregnancy, and the shared pause need latria_partner.
+latria_resolve_partner_act = {
+	latria_roll_partner_strain = yes
+	latria_roll_act_pregnancy = yes
+	if = {
+		limit = { NOT = { exists = scope:latria_force_death } }
+		latria_mark_recent_carnal_act = yes
+	}
+}

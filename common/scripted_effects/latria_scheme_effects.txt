@@ -1,0 +1,147 @@
+latria_fatal_liaison_prep_effect = {
+	save_scope_as = scheme
+	scheme_owner = { save_scope_as = owner }
+	scheme_target_character = { save_scope_as = target }
+	save_scope_value_as = {
+		name = follow_up_event
+		value = event_id:latria_scheme.0001
+	}
+	if = {
+		limit = { NOT = { exists = scope:suppress_next_event } }
+		scheme_owner = { trigger_event = scheme_critical_moments.0002 }
+	}
+}
+
+latria_clear_liaison_agent_slots = {
+	while = {
+		limit = { any_scheme_agent_slot = { always = yes } }
+		random_scheme_agent_slot = { save_scope_as = latria_old_slot }
+		remove_agent_slot = scope:latria_old_slot
+	}
+}
+
+latria_replace_murder_liaison_agents = {
+	if = {
+		limit = { latria_liaison_has_murder_agent = yes }
+		latria_clear_liaison_agent_slots = yes
+		add_agent_slot = latria_agent_quack
+		add_agent_slot = latria_agent_go_between
+		add_agent_slot = latria_agent_usher
+		add_agent_slot = latria_agent_runner
+		add_agent_slot = latria_agent_door
+	}
+}
+
+# The flag stays up through end_scheme, so invalidation does not send a second event.
+latria_close_fatal_liaison_effect = {
+	if = {
+		limit = { exists = scope:scheme }
+		scope:scheme = { end_scheme = yes }
+	}
+	remove_character_flag = latria_fatal_liaison_concluded
+}
+
+latria_bind_fatal_liaison_scopes = {
+	if = {
+		limit = { NOT = { exists = scope:owner } }
+		save_scope_as = owner
+	}
+	if = {
+		limit = {
+			NOT = { exists = scope:target }
+			exists = scope:scheme
+		}
+		scope:scheme = {
+			scheme_target_character = { save_scope_as = target }
+		}
+	}
+}
+
+latria_store_scheme_act_kind = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_manual }
+		set_variable = {
+			name = latria_scheme_act_kind
+			value = flag:latria_act_manual
+		}
+	}
+	else = {
+		set_variable = {
+			name = latria_scheme_act_kind
+			value = flag:latria_act_intercourse
+		}
+	}
+}
+
+latria_begin_fatal_liaison_balanced = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_fatal_liaison
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = latria_agent_quack
+		AGENT_2 = latria_agent_go_between
+		AGENT_3 = latria_agent_usher
+		AGENT_4 = latria_agent_runner
+		AGENT_5 = latria_agent_door
+	}
+}
+
+latria_begin_fatal_liaison_success = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_fatal_liaison
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = latria_agent_quack
+		AGENT_2 = latria_agent_quack
+		AGENT_3 = latria_agent_go_between
+		AGENT_4 = latria_agent_usher
+		AGENT_5 = latria_agent_cover
+	}
+}
+
+latria_begin_fatal_liaison_speed = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_fatal_liaison
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = latria_agent_usher
+		AGENT_2 = latria_agent_runner
+		AGENT_3 = latria_agent_usher
+		AGENT_4 = latria_agent_quack
+		AGENT_5 = latria_agent_door
+	}
+}
+
+latria_begin_fatal_liaison_secrecy = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_fatal_liaison
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = latria_agent_door
+		AGENT_2 = latria_agent_cover
+		AGENT_3 = latria_agent_door
+		AGENT_4 = latria_agent_quack
+		AGENT_5 = latria_agent_usher
+	}
+}
+
+latria_begin_fatal_liaison_effect = {
+	if = {
+		limit = { scope:agent_focus_success ?= yes }
+		latria_begin_fatal_liaison_success = yes
+	}
+	else_if = {
+		limit = { scope:agent_focus_speed ?= yes }
+		latria_begin_fatal_liaison_speed = yes
+	}
+	else_if = {
+		limit = { scope:agent_focus_secrecy ?= yes }
+		latria_begin_fatal_liaison_secrecy = yes
+	}
+	else = { latria_begin_fatal_liaison_balanced = yes }
+	random_scheme = {
+		type = latria_fatal_liaison
+		limit = { scheme_target_character = scope:recipient }
+		latria_store_scheme_act_kind = yes
+	}
+}

@@ -1,0 +1,159 @@
+# Called only from latria_resolve_act. Stress, piety, and fulfillment stay on that entry.
+
+latria_open_solo_week = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_solo_week } }
+		set_variable = {
+			name = latria_solo_week_count
+			value = 0
+		}
+		add_character_flag = {
+			flag = latria_solo_week
+			days = 7
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:latria_solo_week_count } }
+		set_variable = {
+			name = latria_solo_week_count
+			value = 0
+		}
+	}
+}
+
+latria_count_solo_week = {
+	latria_open_solo_week = yes
+	change_variable = {
+		name = latria_solo_week_count
+		add = 1
+	}
+}
+
+latria_open_solo_month = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_solo_month } }
+		set_variable = {
+			name = latria_solo_month_count
+			value = 0
+		}
+		add_character_flag = {
+			flag = latria_solo_month
+			days = 30
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:latria_solo_month_count } }
+		set_variable = {
+			name = latria_solo_month_count
+			value = 0
+		}
+	}
+}
+
+latria_count_solo_month = {
+	latria_open_solo_month = yes
+	change_variable = {
+		name = latria_solo_month_count
+		add = 1
+	}
+}
+
+latria_count_solo_act = {
+	latria_count_solo_week = yes
+	latria_count_solo_month = yes
+}
+
+# Once a day. Not the six-month pause shared with a partner.
+latria_mark_solo_interval = {
+	add_character_flag = {
+		flag = latria_recent_solo_act
+		days = 1
+	}
+}
+
+latria_apply_solo_stress = {
+	add_stress = {
+		value = latria_solo_stress_delta
+	}
+}
+
+latria_apply_solo_piety = {
+	if = {
+		limit = { latria_solo_piety_moves = yes }
+		add_piety = {
+			value = latria_solo_piety_delta
+		}
+	}
+}
+
+latria_apply_solo_fulfillment_gain = {
+	if = {
+		limit = {
+			is_playable_character = yes
+			latria_solo_rite_favors_flesh = yes
+		}
+		change_spiritual_fulfillment = miniscule_spiritual_fulfillment_value
+	}
+}
+
+latria_apply_solo_fulfillment_loss = {
+	if = {
+		limit = {
+			is_playable_character = yes
+			OR = {
+				latria_solo_rite_condemns_flesh = yes
+				latria_solo_rite_crimes_license = yes
+			}
+		}
+		change_spiritual_fulfillment = miniscule_spiritual_fulfillment_loss
+	}
+}
+
+latria_apply_solo_wear = {
+	if = {
+		limit = { latria_solo_is_worn = yes }
+		add_character_modifier = {
+			modifier = latria_solo_wear
+			months = 1
+		}
+	}
+}
+
+latria_apply_solo_ruin = {
+	if = {
+		limit = { latria_solo_is_excessive = yes }
+		add_character_modifier = {
+			modifier = latria_solo_ruin
+			years = 3
+		}
+	}
+}
+
+latria_apply_solo_health = {
+	latria_apply_solo_wear = yes
+	latria_apply_solo_ruin = yes
+	latria_roll_solo_illness = yes
+}
+
+latria_roll_solo_illness = {
+	if = {
+		limit = {
+			latria_solo_is_excessive = yes
+			NOT = { has_trait = ill }
+		}
+		random = {
+			chance = latria_solo_illness_chance
+			add_trait = ill
+		}
+	}
+}
+
+latria_resolve_solo_act = {
+	latria_count_solo_act = yes
+	latria_mark_solo_interval = yes
+	latria_apply_solo_stress = yes
+	latria_apply_solo_piety = yes
+	latria_apply_solo_fulfillment_gain = yes
+	latria_apply_solo_fulfillment_loss = yes
+	latria_apply_solo_health = yes
+}

@@ -1,0 +1,67 @@
+# Replaces vanilla had_sex_with_effect.
+# Seduction, courtship, and every other vanilla sex call enter here.
+# Spouse, concubine, lover, and soulmate relations stay where vanilla sets them.
+# Same-sex acts are allowed when latria_can_share_carnal_act passes.
+# That gate already requires mutual attraction. There is no opposite-sex check.
+# $PREGNANCY_CHANCE$ is the caller's roll. Direct acts do not set it.
+
+latria_note_vanilla_pregnancy_chance = {
+	save_temporary_scope_value_as = {
+		name = latria_vanilla_pregnancy_chance
+		value = $PREGNANCY_CHANCE$
+	}
+	save_temporary_scope_value_as = {
+		name = latria_has_vanilla_pregnancy_chance
+		value = yes
+	}
+}
+
+latria_notify_vanilla_sex_death = {
+	if = {
+		limit = {
+			is_ai = no
+			scope:latria_partner = { is_alive = no }
+		}
+		trigger_event = latria_act.0101
+	}
+}
+
+latria_spread_vanilla_std = {
+	risk_of_std_from_effect = { PARTNER = scope:latria_partner }
+	scope:latria_partner = {
+		if = {
+			limit = { is_alive = yes }
+			risk_of_std_from_effect = { PARTNER = prev }
+		}
+	}
+}
+
+latria_commit_vanilla_sex = {
+	save_scope_as = latria_actor
+	save_scope_value_as = {
+		name = latria_act_kind
+		value = flag:latria_act_intercourse
+	}
+	latria_spread_vanilla_std = yes
+	latria_resolve_act = yes
+	latria_notify_vanilla_sex_death = yes
+}
+
+# Caller sets latria_partner. No act when the gate fails.
+latria_from_vanilla_sex = {
+	if = {
+		limit = {
+			is_imprisoned = no
+			scope:latria_partner = { is_imprisoned = no }
+			latria_can_share_carnal_act = { PARTNER = scope:latria_partner }
+		}
+		latria_commit_vanilla_sex = yes
+	}
+}
+
+had_sex_with_effect = {
+	clear_saved_scope = ignore_cheating_error_check
+	latria_note_vanilla_pregnancy_chance = { PREGNANCY_CHANCE = $PREGNANCY_CHANCE$ }
+	$CHARACTER$ = { save_scope_as = latria_partner }
+	latria_from_vanilla_sex = yes
+}

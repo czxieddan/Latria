@@ -1,0 +1,52 @@
+# Scheme success and the accidental roll both come through here.
+# No killer is written, so the two deaths read the same.
+latria_kill_partner_intercourse_strain = {
+	scope:latria_partner = {
+		death = { death_reason = death_latria_intercourse_strain }
+	}
+}
+
+latria_kill_partner_manual_strain = {
+	scope:latria_partner = {
+		death = { death_reason = death_latria_manual_strain }
+	}
+}
+
+latria_kill_partner_by_strain = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_manual }
+		latria_kill_partner_manual_strain = yes
+	}
+	else = {
+		latria_kill_partner_intercourse_strain = yes
+	}
+}
+
+latria_roll_partner_strain = {
+	if = {
+		limit = {
+			exists = scope:latria_force_death
+			scope:latria_partner = { is_alive = yes }
+		}
+		latria_kill_partner_by_strain = yes
+	}
+	else_if = {
+		limit = { scope:latria_partner = { is_alive = yes } }
+		scope:latria_partner = {
+			random = {
+				chance = latria_act_strain_chance
+				save_scope_value_as = {
+					name = latria_strain_kills
+					value = yes
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			exists = scope:latria_strain_kills
+			scope:latria_partner = { is_alive = yes }
+		}
+		latria_kill_partner_by_strain = yes
+	}
+}
