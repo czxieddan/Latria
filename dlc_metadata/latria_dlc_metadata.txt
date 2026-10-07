@@ -1,0 +1,8 @@
+dlc_latria = {
+	key = "Latria"
+	type = minor
+	priority = 1099
+	features = {
+		fake_dlc
+	}
+}
