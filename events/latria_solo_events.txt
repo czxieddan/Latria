@@ -1,0 +1,31 @@
+namespace = latria_act
+
+latria_act.0201 = {
+	type = character_event
+	title = latria_act.0201.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = love
+		outfit_tags = { no_clothes nightgown }
+	}
+	override_background = { reference = bedchamber }
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { latria_solo_is_repeated = yes }
+				desc = latria_act.0201.desc.again
+			}
+			desc = latria_act.0201.desc
+		}
+	}
+	immediate = {
+		add_character_flag = is_naked
+	}
+	option = {
+		name = latria_act.0201.a
+	}
+	after = {
+		remove_character_flag = is_naked
+	}
+}

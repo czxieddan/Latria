@@ -1,0 +1,94 @@
+namespace = latria_act
+
+latria_act.0101 = {
+	type = character_event
+	title = latria_act.0101.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		triggered_animation = {
+			trigger = { scope:latria_partner = { is_alive = no } }
+			animation = grief
+		}
+		animation = love
+		outfit_tags = { no_clothes nightgown }
+	}
+	right_portrait = {
+		character = scope:latria_partner
+		triggered_animation = {
+			trigger = { scope:latria_partner = { is_alive = no } }
+			animation = dead
+		}
+		animation = flirtation_left
+		outfit_tags = { no_clothes nightgown }
+	}
+	override_background = { reference = bedchamber }
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:latria_partner = { is_alive = no }
+					latria_act_is_adultery = { PARTNER = scope:latria_partner }
+				}
+				desc = latria_act.0101.desc.adultery_dead
+			}
+			triggered_desc = {
+				trigger = { scope:latria_partner = { is_alive = no } }
+				desc = latria_act.0101.desc.dead
+			}
+			triggered_desc = {
+				trigger = {
+					latria_act_is_adultery = { PARTNER = scope:latria_partner }
+				}
+				desc = latria_act.0101.desc.adultery
+			}
+			desc = latria_act.0101.desc
+		}
+	}
+	immediate = {
+		latria_mark_act_undressed = { PARTNER = scope:latria_partner }
+	}
+	option = {
+		name = latria_act.0101.a
+	}
+	after = {
+		latria_clear_act_undressed = { PARTNER = scope:latria_partner }
+	}
+}
+
+latria_act.0102 = {
+	type = character_event
+	title = latria_act.0101.t
+	theme = seduction
+	left_portrait = {
+		character = root
+		animation = flirtation
+		outfit_tags = { no_clothes nightgown }
+	}
+	right_portrait = {
+		character = scope:latria_actor
+		animation = love
+		outfit_tags = { no_clothes nightgown }
+	}
+	override_background = { reference = bedchamber }
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					latria_act_is_adultery = { PARTNER = scope:latria_actor }
+				}
+				desc = latria_act.0102.desc.adultery
+			}
+			desc = latria_act.0102.desc
+		}
+	}
+	immediate = {
+		latria_mark_act_undressed = { PARTNER = scope:latria_actor }
+	}
+	option = {
+		name = latria_act.0101.a
+	}
+	after = {
+		latria_clear_act_undressed = { PARTNER = scope:latria_actor }
+	}
+}

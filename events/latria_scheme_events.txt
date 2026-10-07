@@ -1,0 +1,117 @@
+namespace = latria_scheme
+
+latria_scheme.0001 = {
+	hidden = yes
+	immediate = {
+		latria_bind_fatal_liaison_scopes = yes
+		random = {
+			chance = scope:scheme.scheme_success_chance
+			save_scope_value_as = {
+				name = latria_scheme_succeeded
+				value = yes
+			}
+		}
+		if = {
+			limit = { exists = scope:latria_scheme_succeeded }
+			scope:owner = {
+				add_character_flag = latria_fatal_liaison_concluded
+				if = {
+					limit = {
+						scope:scheme = {
+							var:latria_scheme_act_kind ?= flag:latria_act_manual
+						}
+					}
+					save_scope_value_as = {
+						name = latria_act_kind
+						value = flag:latria_act_manual
+					}
+				}
+				else = {
+					save_scope_value_as = {
+						name = latria_act_kind
+						value = flag:latria_act_intercourse
+					}
+				}
+				save_scope_value_as = {
+					name = latria_force_death
+					value = yes
+				}
+				scope:target = { save_scope_as = latria_partner }
+				latria_resolve_act = yes
+				trigger_event = latria_scheme.0010
+			}
+		}
+		else = {
+			scope:owner = {
+				add_character_flag = latria_fatal_liaison_concluded
+				trigger_event = latria_scheme.0020
+			}
+		}
+	}
+}
+
+latria_scheme.0010 = {
+	type = character_event
+	title = latria_scheme.0010.t_line
+	theme = intrigue
+	left_portrait = {
+		character = root
+		animation = grief
+		outfit_tags = { no_clothes nightgown }
+	}
+	right_portrait = {
+		character = scope:target
+		animation = dead
+		outfit_tags = { no_clothes nightgown }
+	}
+	override_background = { reference = bedchamber }
+	desc = latria_scheme.0010.desc
+	immediate = {
+		latria_mark_act_undressed = { PARTNER = scope:target }
+		latria_close_fatal_liaison_effect = yes
+	}
+	option = {
+		name = latria_scheme.0010.a
+	}
+	after = {
+		latria_clear_act_undressed = { PARTNER = scope:target }
+	}
+}
+
+latria_scheme.0020 = {
+	type = character_event
+	title = latria_scheme.0020.t
+	theme = intrigue
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	override_background = { reference = bedchamber }
+	desc = latria_scheme.0020.desc
+	immediate = { latria_close_fatal_liaison_effect = yes }
+	option = {
+		name = latria_scheme.0020.a
+	}
+}
+
+latria_scheme.0030 = {
+	type = character_event
+	title = latria_scheme.0030.t
+	theme = intrigue
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	desc = latria_scheme.0030.desc
+	option = {
+		name = latria_scheme.0030.a
+	}
+}
+
+latria_scheme.0040 = {
+	type = character_event
+	title = latria_scheme.0040.t
+	theme = intrigue
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	desc = latria_scheme.0040.desc
+	option = {
+		name = latria_scheme.0040.a
+	}
+}
