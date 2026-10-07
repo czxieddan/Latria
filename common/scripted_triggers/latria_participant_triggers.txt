@@ -4,6 +4,7 @@ latria_body_can_act = {
 	age >= 12
 	is_alive = yes
 	is_incapable = no
+	NOT = { is_pregnant = yes }
 }
 
 # Faith. Reads rite parameters and personal tenet flags only.
@@ -33,6 +34,18 @@ latria_can_share_carnal_act = {
 			relation_with_character_is_incestuous_in_my_or_lieges_rite_trigger = {
 				CHARACTER = $PARTNER$
 			}
+		}
+	}
+}
+
+latria_can_propose_carnal_act = {
+	OR = {
+		latria_can_share_carnal_act = { PARTNER = $PARTNER$ }
+		AND = {
+			OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+			latria_body_can_act = yes
+			is_attracted_to_gender_of = $PARTNER$
+			$PARTNER$ = { latria_body_can_act = yes }
 		}
 	}
 }
