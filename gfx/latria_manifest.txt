@@ -1,0 +1,1 @@
+dlc_latria gfx/interface/icons/dlc/dlc_latria.dds dlc icon
