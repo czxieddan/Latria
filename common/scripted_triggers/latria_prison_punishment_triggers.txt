@@ -1,0 +1,15 @@
+latria_can_impose_pig_embrace = {
+	is_adult = yes
+	faith = {
+		NOR = {
+			religion_tag = islam_religion
+			religion_tag = judaism_religion
+		}
+	}
+	culture = {
+		OR = {
+			has_cultural_parameter = can_blind_prisoners
+			has_cultural_parameter = can_castrate_prisoners
+		}
+	}
+}
