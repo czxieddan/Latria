@@ -1,0 +1,34 @@
+celestial_hierarchy_acceptance_modifier = {
+	modifier = {
+		add = 20
+		$ACTOR$ = {
+			is_clergy = yes
+			faith = { has_doctrine_parameter = tenet_celestial_hierarchy_clergy_acceptance }
+		}
+		$RECIPIENT$ = {
+			is_clergy = no
+			is_ruler = yes
+		}
+		desc = CELESTIAL_HIERARCHY_CLERGY_ACCEPTANCE_REASON
+	}
+	modifier = {
+		add = {
+			value = $ACTOR$.piety_level
+			subtract = $RECIPIENT$.piety_level
+			multiply = 10
+		}
+		$ACTOR$ = {
+			has_personal_tenet_flag = tenet_celestial_hierarchy_interaction_acceptance
+			faith = $RECIPIENT$.faith
+		}
+		desc = CELESTIAL_HIERARCHY_DEVOTION_ACCEPTANCE_REASON
+	}
+	modifier = {
+		add = 100
+		exists = scope:excommunication_petition_authority
+		scope:secondary_recipient ?= {
+			has_trait = latria_unclean
+		}
+		desc = trait_latria_unclean
+	}
+}
