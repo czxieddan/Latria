@@ -1,0 +1,144 @@
+latria_fatal_liaison = {
+	skill = intrigue
+	desc = latria_fatal_liaison_desc_general
+	success_desc = "LATRIA_FATAL_LIAISON_SUCCESS_DESC"
+	discovery_desc = "LATRIA_FATAL_LIAISON_DISCOVERY_DESC"
+	icon = icon_scheme_seduce
+	illustration = "gfx/interface/illustrations/event_scenes/bedchamber.dds"
+	category = hostile
+	target_type = character
+	is_secret = yes
+	maximum_breaches = 5
+	cooldown = { months = 6 }
+
+	speed_per_skill_point = t2_spsp_owner_value
+	speed_per_target_skill_point = t2_spsp_target_value
+	base_progress_goal = t2_base_phase_length_value
+	maximum_secrecy = 95
+	base_maximum_success = t2_base_max_success_value
+	phases_per_agent_charge = 1
+	success_chance_growth_per_skill_point = t2_scgpsp_value
+
+	allow = {
+		intrigue >= latria_fatal_liaison_start_intrigue
+		is_imprisoned = no
+		latria_can_share_carnal_act = { PARTNER = scope:target }
+	}
+	valid = {
+		is_incapable = no
+		latria_can_share_carnal_act = { PARTNER = scope:target }
+		scope:target = {
+			is_imprisoned = no
+			in_diplomatic_range = scope:owner
+		}
+	}
+
+	agent_leave_threshold = -25
+	agent_join_chance = {
+		base = 0
+		ai_agent_join_chance_basic_suite_modifier = yes
+		ai_agent_join_chance_hostile_grievous_modifier = yes
+	}
+	agent_groups_owner_perspective = { courtiers guests scripted_relations puppets }
+	agent_groups_target_character_perspective = { courtiers vassals }
+	valid_agent = { is_valid_agent_standard_trigger = yes }
+
+	odds_prediction = {
+		add = hostile_scheme_base_odds_prediction_target_is_char_value
+		add = odds_skill_contribution_intrigue_value
+		add = agent_groups_owner_perspective_value
+		add = agent_groups_target_character_perspective_value
+		min = 0
+	}
+
+	base_success_chance = {
+		base = 0
+		scheme_type_skill_success_chance_modifier = { SKILL = INTRIGUE }
+		hostile_scheme_base_chance_modifier = yes
+		apply_calculated_scheme_success_chance_adjustments_modifier = yes
+		dangerous_hostile_scheme_base_chance_modifier = yes
+		house_feud_hostile_scheme_success_modifier = yes
+	}
+	base_secrecy = {
+		add = secrecy_base_value
+		add = countermeasure_apply_secrecy_maluses_value
+		add = secrecy_charting_realm_increase_value
+		if = {
+			limit = { scheme_owner = { intrigue >= latria_fatal_liaison_start_intrigue } }
+			add = {
+				value = 10
+				desc = latria_intrigue_hides_liaison
+			}
+		}
+		if = {
+			limit = { scheme_owner = { intrigue >= 25 } }
+			add = {
+				value = 10
+				desc = latria_intrigue_hides_liaison
+			}
+		}
+	}
+
+	on_start = {
+		set_variable = {
+			name = apply_countermeasures
+			value = flag:calculating
+		}
+		add_scheme_starting_opportunities_intrigue_effect = yes
+		if = {
+			limit = {
+				scheme_owner = { NOT = { has_variable = agents_added } }
+			}
+			add_agent_slot = latria_agent_quack
+			add_agent_slot = latria_agent_go_between
+			add_agent_slot = latria_agent_usher
+			add_agent_slot = latria_agent_runner
+			add_agent_slot = latria_agent_door
+		}
+		else = {
+			scheme_owner = { remove_variable = agents_added }
+		}
+	}
+	on_phase_completed = {
+		suppress_scheme_follow_up_event_till_input_given_effect = yes
+		latria_fatal_liaison_prep_effect = yes
+		cap_schemes_and_fire_reminders_effect = yes
+	}
+	on_hud_click = {
+		latria_replace_murder_liaison_agents = yes
+		latria_fatal_liaison_prep_effect = yes
+	}
+	on_semiyearly = {
+		if = {
+			limit = { scheme_owner = { is_ai = yes } }
+			latria_fatal_liaison_prep_effect = yes
+			purge_ai_scheme_slots_effect = yes
+		}
+	}
+	on_monthly = {
+		latria_replace_murder_liaison_agents = yes
+		hostile_scheme_monthly_discovery_chance_effect = yes
+	}
+	on_invalidated = {
+		scheme_target_character = { save_scope_as = target }
+		scheme_owner = { save_scope_as = owner }
+		if = {
+			limit = {
+				scope:target = { is_alive = no }
+				scope:owner = {
+					NOT = { has_character_flag = latria_fatal_liaison_concluded }
+				}
+			}
+			scope:owner = { trigger_event = latria_scheme.0030 }
+		}
+		else_if = {
+			limit = {
+				scope:target = { is_alive = yes }
+				scope:owner = {
+					NOT = { has_character_flag = latria_fatal_liaison_concluded }
+				}
+			}
+			scope:owner = { trigger_event = latria_scheme.0040 }
+		}
+	}
+}

@@ -1,0 +1,198 @@
+# Fatal liaison slots. Murder agents do not belong on this scheme.
+
+latria_agent_quack = {
+	contribution_type = success_chance_max
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = learning
+			multiply = agent_3to1_3_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.learning
+		}
+		if = {
+			limit = { has_trait = lifestyle_physician }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.lifestyle_physician
+			}
+		}
+		if = {
+			limit = { has_trait = lifestyle_herbalist }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.lifestyle_herbalist
+			}
+		}
+		if = {
+			limit = { has_trait = drunkard }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.drunkard
+			}
+		}
+		if = {
+			limit = { has_trait = impatient }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.impatient
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}
+
+latria_agent_go_between = {
+	contribution_type = success_chance_max
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = diplomacy
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.diplomacy
+		}
+		add = {
+			value = intrigue
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.intrigue
+		}
+		if = {
+			limit = { has_trait = lustful }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.lustful
+			}
+		}
+		if = {
+			limit = { has_trait = gregarious }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.gregarious
+			}
+		}
+		if = {
+			limit = { has_trait = chaste }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.chaste
+			}
+		}
+		if = {
+			limit = { has_trait = shy }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.shy
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}
+
+latria_agent_usher = {
+	contribution_type = speed
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = intrigue
+			multiply = agent_3to1_3_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.intrigue
+		}
+		add = {
+			value = prowess
+			multiply = agent_3to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.prowess
+		}
+		if = {
+			limit = { has_trait = deceitful }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.deceitful
+			}
+		}
+		if = {
+			limit = { has_trait = diligent }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.diligent
+			}
+		}
+		if = {
+			limit = { has_trait = honest }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.honest
+			}
+		}
+		if = {
+			limit = { has_trait = lazy }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.lazy
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}
+
+latria_agent_runner = {
+	contribution_type = speed
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = diplomacy
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.diplomacy
+		}
+		add = {
+			value = intrigue
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.intrigue
+		}
+		if = {
+			limit = { has_trait = lifestyle_traveler }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.lifestyle_traveler
+			}
+		}
+		if = {
+			limit = { has_trait = diligent }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.diligent
+			}
+		}
+		if = {
+			limit = { has_trait = lazy }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.lazy
+			}
+		}
+		if = {
+			limit = { has_trait = shy }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.shy
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}

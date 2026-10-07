@@ -1,0 +1,103 @@
+# Secrecy slots for the fatal liaison.
+
+latria_agent_door = {
+	contribution_type = secrecy
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = intrigue
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.intrigue
+		}
+		add = {
+			value = martial
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.martial
+		}
+		if = {
+			limit = { has_trait = patient }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.patient
+			}
+		}
+		if = {
+			limit = { has_trait = paranoid }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.paranoid
+			}
+		}
+		if = {
+			limit = { has_trait = impatient }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.impatient
+			}
+		}
+		if = {
+			limit = { has_trait = trusting }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.trusting
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}
+
+latria_agent_cover = {
+	contribution_type = secrecy
+	contribution = {
+		value = scheme_agent_general_bonuses_contribution_score_value
+		add = {
+			value = diplomacy
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.diplomacy
+		}
+		add = {
+			value = learning
+			multiply = agent_1to1_1_skill_mult_value
+			ceiling = yes
+			max = agent_max_skill_value
+			desc = scheme_agent_aptitude.skill.learning
+		}
+		if = {
+			limit = { has_trait = honest }
+			add = {
+				value = agent_trait_bonus_t3_value
+				desc = scheme_agent_aptitude.trait.honest
+			}
+		}
+		if = {
+			limit = { has_trait = loyal }
+			add = {
+				value = agent_trait_bonus_t2_value
+				desc = scheme_agent_aptitude.trait.loyal
+			}
+		}
+		if = {
+			limit = { has_trait = deceitful }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.deceitful
+			}
+		}
+		if = {
+			limit = { has_trait = disloyal }
+			add = {
+				value = agent_trait_malus_t2_value
+				desc = scheme_agent_aptitude.trait.disloyal
+			}
+		}
+		max = agent_scheme_contributor_max
+		min = agent_scheme_contributor_min
+	}
+}
