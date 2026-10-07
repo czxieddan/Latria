@@ -1,0 +1,17 @@
+﻿l_english:
+ latria_force_pig_embrace_interaction: "Carnal Pleasure with a Pig"
+ latria_force_pig_embrace_interaction_desc: "Force [recipient.GetShortUINameNoTooltip] to carnal pleasure with a pig before witnesses."
+
+ latria_prison_punishment.0001.t: "Carnal Pleasure with a Pig"
+ latria_prison_punishment.0001.desc: "The guards lead a squealing pig into the dungeon. [recipient.GetShortUIName] recoils, but at my command they force [recipient.GetHerHim] to carnal pleasure with it while the gaolers bear witness."
+ latria_prison_punishment.0001.a: "Hold [recipient.GetHerHim] there"
+
+ latria_prison_punishment.0002.t: "Unclean Before All"
+ latria_prison_punishment.0002.desc: "At [puppet_or_actor.GetShortUINamePossessive] command, the guards force me to carnal pleasure with a pig before the gathered gaolers. When they let go, word of the sentence is already passing from mouth to mouth."
+ latria_prison_punishment.0002.a: "I will remember this"
+
+ trait_latria_unclean: "Unclean"
+ trait_latria_unclean_desc: "This character was publicly forced to carnal pleasure with a pig and bears a lasting stain upon their name."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] was publicly forced to carnal pleasure with a pig and bears a lasting stain upon [ROOT.GetCharacter.GetHerHis] name."
+
+ latria_forced_pig_embrace_opinion: "Forced Me to Carnal Pleasure with a Pig"

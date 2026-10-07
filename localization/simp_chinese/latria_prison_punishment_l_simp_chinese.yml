@@ -1,0 +1,17 @@
+﻿l_simp_chinese:
+ latria_force_pig_embrace_interaction: "与猪交合"
+ latria_force_pig_embrace_interaction_desc: "命人当众强迫[recipient.GetShortUINameNoTooltip]与猪交合。"
+
+ latria_prison_punishment.0001.t: "与猪交合"
+ latria_prison_punishment.0001.desc: "卫兵把一头尖叫的猪牵进地牢。[recipient.GetShortUIName]连连后退，我一声令下，他们便按住[recipient.GetHerHim]，迫使[recipient.GetHerHim]在众狱卒面前与猪交合。"
+ latria_prison_punishment.0001.a: "让[recipient.GetHerHim]抱紧"
+
+ latria_prison_punishment.0002.t: "众目之下的不洁"
+ latria_prison_punishment.0002.desc: "奉[puppet_or_actor.GetShortUIName]之命，卫兵强迫我在众狱卒面前与猪交合。他们松手时，这场刑罚已经传遍众人之口。"
+ latria_prison_punishment.0002.a: "我不会忘记"
+
+ trait_latria_unclean: "不洁"
+ trait_latria_unclean_desc: "该角色曾被当众强迫与猪交合，名声从此蒙上洗不去的污点。"
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]曾被当众强迫与猪交合，[ROOT.GetCharacter.GetHerHis]的名声从此蒙上洗不去的污点。"
+
+ latria_forced_pig_embrace_opinion: "强迫我与猪交合"
