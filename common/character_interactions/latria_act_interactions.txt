@@ -3,8 +3,9 @@ latria_propose_intercourse_interaction = {
 	common_interaction = yes
 	interface_priority = 40
 	category = interaction_category_friendly
+	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } } }
 	send_name = latria_propose_act_send
-	auto_accept = no
+	auto_accept = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
 
 	ai_targets = {
 		ai_recipients = spouses
@@ -28,7 +29,7 @@ latria_propose_intercourse_interaction = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
-			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+			latria_can_propose_carnal_act = { PARTNER = scope:recipient }
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -37,10 +38,15 @@ latria_propose_intercourse_interaction = {
 				text = latria_act_too_recent
 				latria_act_interval_clear = { PARTNER = scope:recipient }
 			}
-			scope:recipient = { is_imprisoned = no }
 			OR = {
-				in_diplomatic_range = scope:recipient
-				location = scope:recipient.location
+				OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+				AND = {
+					scope:recipient = { is_imprisoned = no }
+					OR = {
+						in_diplomatic_range = scope:recipient
+						location = scope:recipient.location
+					}
+				}
 			}
 		}
 	}
@@ -55,6 +61,10 @@ latria_propose_intercourse_interaction = {
 					save_scope_value_as = {
 						name = latria_act_kind
 						value = flag:latria_act_intercourse
+					}
+					if = {
+						limit = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
 					latria_resolve_act = yes
 					if = {
@@ -113,14 +123,14 @@ latria_propose_intercourse_interaction = {
 		}
 	}
 }
-
 latria_propose_manual_interaction = {
 	icon = icon_scheme_seduce
 	common_interaction = yes
 	interface_priority = 39
 	category = interaction_category_friendly
+	use_diplomatic_range = { NOT = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } } }
 	send_name = latria_propose_act_send
-	auto_accept = no
+	auto_accept = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
 
 	ai_targets = {
 		ai_recipients = spouses
@@ -144,7 +154,7 @@ latria_propose_manual_interaction = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
-			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+			latria_can_propose_carnal_act = { PARTNER = scope:recipient }
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -153,10 +163,15 @@ latria_propose_manual_interaction = {
 				text = latria_act_too_recent
 				latria_act_interval_clear = { PARTNER = scope:recipient }
 			}
-			scope:recipient = { is_imprisoned = no }
 			OR = {
-				in_diplomatic_range = scope:recipient
-				location = scope:recipient.location
+				OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } }
+				AND = {
+					scope:recipient = { is_imprisoned = no }
+					OR = {
+						in_diplomatic_range = scope:recipient
+						location = scope:recipient.location
+					}
+				}
 			}
 		}
 	}
@@ -171,6 +186,10 @@ latria_propose_manual_interaction = {
 					save_scope_value_as = {
 						name = latria_act_kind
 						value = flag:latria_act_manual
+					}
+					if = {
+						limit = { OR = { debug_only = yes scope:puppet_or_actor = { is_imprisoned_by = scope:actor } } }
+						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
 					latria_resolve_act = yes
 					if = {
