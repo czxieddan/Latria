@@ -1,0 +1,93 @@
+namespace = latria_prison_punishment
+
+latria_prison_punishment.0001 = {
+	type = character_event
+	title = latria_prison_punishment.0001.t
+	desc = latria_prison_punishment.0001.desc
+	theme = dungeon
+
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+	}
+	right_portrait = {
+		character = scope:recipient
+		animation = fear
+		override_imprisonment_visuals = yes
+	}
+
+	trigger = {
+		scope:recipient = {
+			is_imprisoned_by = scope:puppet_or_actor
+			NOT = { has_trait = latria_unclean }
+		}
+	}
+
+	on_trigger_fail = {
+		scope:recipient = {
+			if = {
+				limit = { has_character_flag = is_being_tortured }
+				remove_character_flag = is_being_tortured
+			}
+		}
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+	}
+
+	option = {
+		name = latria_prison_punishment.0001.a
+		scope:puppet_or_actor = {
+			latria_pig_embrace_actor_consequences = yes
+		}
+		scope:recipient = {
+			trigger_event = latria_prison_punishment.0002
+		}
+	}
+}
+
+latria_prison_punishment.0002 = {
+	type = character_event
+	title = latria_prison_punishment.0002.t
+	desc = latria_prison_punishment.0002.desc
+	theme = dungeon
+
+	left_portrait = {
+		character = root
+		animation = fear
+		override_imprisonment_visuals = yes
+	}
+	right_portrait = {
+		character = scope:puppet_or_actor
+		animation = schadenfreude
+	}
+
+	trigger = {
+		is_imprisoned_by = scope:puppet_or_actor
+		NOT = { has_trait = latria_unclean }
+	}
+
+	on_trigger_fail = {
+		if = {
+			limit = { has_character_flag = is_being_tortured }
+			remove_character_flag = is_being_tortured
+		}
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_prison"
+	}
+
+	option = {
+		name = latria_prison_punishment.0002.a
+		latria_pig_embrace_recipient_consequences = yes
+	}
+
+	after = {
+		if = {
+			limit = { has_character_flag = is_being_tortured }
+			remove_character_flag = is_being_tortured
+		}
+	}
+}
