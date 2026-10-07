@@ -1,0 +1,118 @@
+latria_pig_embrace_actor_stress_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_trait = sadistic
+				has_trait = callous
+				has_trait = vengeful
+			}
+		}
+		add_stress = medium_stress_impact_loss
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_trait = compassionate
+				has_trait = just
+				has_trait = forgiving
+			}
+		}
+		add_stress = major_stress_impact_gain
+	}
+	else = {
+		add_stress = minor_stress_impact_gain
+	}
+}
+
+latria_pig_embrace_actor_dread_effect = {
+	add_dread = medium_dread_gain
+}
+
+latria_pig_embrace_actor_consequences = {
+	latria_pig_embrace_actor_stress_effect = yes
+	latria_pig_embrace_actor_dread_effect = yes
+}
+
+latria_pig_embrace_recipient_stress_effect = {
+	if = {
+		limit = {
+			OR = {
+				has_trait = zealous
+				has_trait = arrogant
+				has_trait = chaste
+			}
+		}
+		add_stress = major_stress_impact_gain
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_trait = cynical
+				has_trait = humble
+			}
+		}
+		add_stress = minor_stress_impact_gain
+	}
+	else = {
+		add_stress = medium_stress_impact_gain
+	}
+}
+
+latria_pig_embrace_recipient_faith_effect = {
+	if = {
+		limit = {
+			faith = {
+				OR = {
+					religion_tag = islam_religion
+					religion_tag = judaism_religion
+				}
+			}
+		}
+		add_piety = major_piety_loss
+		add_stress = medium_stress_impact_gain
+	}
+	else = {
+		add_piety = minor_piety_loss
+	}
+}
+
+latria_pig_embrace_recipient_culture_effect = {
+	if = {
+		limit = {
+			culture = {
+				OR = {
+					has_cultural_parameter = can_blind_prisoners
+					has_cultural_parameter = can_castrate_prisoners
+				}
+			}
+		}
+		add_prestige = minor_prestige_loss
+	}
+	else = {
+		add_prestige = medium_prestige_loss
+	}
+}
+
+latria_pig_embrace_recipient_trait_effect = {
+	add_trait = latria_unclean
+}
+
+latria_pig_embrace_recipient_opinion_effect = {
+	add_opinion = {
+		target = scope:puppet_or_actor
+		modifier = latria_forced_pig_embrace_opinion
+	}
+}
+
+latria_pig_embrace_recipient_release_effect = {
+	release_from_prison = yes
+}
+
+latria_pig_embrace_recipient_consequences = {
+	latria_pig_embrace_recipient_stress_effect = yes
+	latria_pig_embrace_recipient_faith_effect = yes
+	latria_pig_embrace_recipient_culture_effect = yes
+	latria_pig_embrace_recipient_trait_effect = yes
+	latria_pig_embrace_recipient_opinion_effect = yes
+	latria_pig_embrace_recipient_release_effect = yes
+}
