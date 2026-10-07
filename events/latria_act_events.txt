@@ -11,7 +11,7 @@ latria_act.0101 = {
 			animation = grief
 		}
 		animation = love
-		outfit_tags = { no_clothes nightgown }
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:latria_partner
@@ -20,7 +20,7 @@ latria_act.0101 = {
 			animation = dead
 		}
 		animation = flirtation_left
-		outfit_tags = { no_clothes nightgown }
+		outfit_tags = { no_clothes }
 	}
 	override_background = { reference = bedchamber }
 	desc = {
@@ -63,12 +63,12 @@ latria_act.0102 = {
 	left_portrait = {
 		character = root
 		animation = flirtation
-		outfit_tags = { no_clothes nightgown }
+		outfit_tags = { no_clothes }
 	}
 	right_portrait = {
 		character = scope:latria_actor
 		animation = love
-		outfit_tags = { no_clothes nightgown }
+		outfit_tags = { no_clothes }
 	}
 	override_background = { reference = bedchamber }
 	desc = {
