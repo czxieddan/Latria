@@ -2,20 +2,6 @@ latria_solo_interval_clear = {
 	NOT = { has_character_flag = latria_recent_solo_act }
 }
 
-latria_solo_is_repeated = {
-	var:latria_solo_month_count >= 2
-}
-
-# Fourth act inside the open week.
-latria_solo_is_worn = {
-	var:latria_solo_week_count >= 4
-}
-
-# Past ten acts inside the open month.
-latria_solo_is_excessive = {
-	var:latria_solo_month_count >= 11
-}
-
 # Rite praise of flesh. Reads virtues, sins, and the carnal tenet. Does not permit the act.
 latria_solo_rite_favors_flesh = {
 	OR = {

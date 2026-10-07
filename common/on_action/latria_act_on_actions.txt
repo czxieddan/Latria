@@ -1,3 +1,6 @@
 # Later packs listen here. They do not write the act themselves.
 latria_on_act_resolved = {
+	effect = {
+		latria_apply_resolved_act_exhaustion = yes
+	}
 }

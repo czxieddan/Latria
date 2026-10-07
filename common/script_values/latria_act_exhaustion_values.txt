@@ -1,0 +1,87 @@
+# The scores are hidden. Health and physique move only the limits, never the gain.
+latria_act_month_exhaustion_limit = {
+	value = 12
+	if = {
+		limit = { health >= good_health }
+		add = 2
+	}
+	if = {
+		limit = { health <= poor_health }
+		add = -2
+	}
+	if = {
+		limit = { has_trait = physique_good_1 }
+		add = 1
+	}
+	if = {
+		limit = { has_trait = physique_good_2 }
+		add = 2
+	}
+	if = {
+		limit = { has_trait = physique_good_3 }
+		add = 3
+	}
+	if = {
+		limit = { has_trait = physique_bad_1 }
+		add = -1
+	}
+	if = {
+		limit = { has_trait = physique_bad_2 }
+		add = -2
+	}
+	if = {
+		limit = { has_trait = physique_bad_3 }
+		add = -3
+	}
+	min = 6
+	max = 20
+}
+
+latria_act_year_exhaustion_limit = {
+	value = 36
+	if = {
+		limit = { health >= good_health }
+		add = 6
+	}
+	if = {
+		limit = { health <= poor_health }
+		add = -6
+	}
+	if = {
+		limit = { has_trait = physique_good_1 }
+		add = 3
+	}
+	if = {
+		limit = { has_trait = physique_good_2 }
+		add = 6
+	}
+	if = {
+		limit = { has_trait = physique_good_3 }
+		add = 9
+	}
+	if = {
+		limit = { has_trait = physique_bad_1 }
+		add = -3
+	}
+	if = {
+		limit = { has_trait = physique_bad_2 }
+		add = -6
+	}
+	if = {
+		limit = { has_trait = physique_bad_3 }
+		add = -9
+	}
+	min = 18
+	max = 60
+}
+
+# Decay is evaluated only when another act happens after the flag expires.
+latria_act_month_exhaustion_after_decay = {
+	value = var:latria_act_month_exhaustion
+	multiply = 0.5
+}
+
+latria_act_year_exhaustion_after_decay = {
+	value = var:latria_act_year_exhaustion
+	multiply = 0.75
+}

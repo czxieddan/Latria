@@ -1,0 +1,11 @@
+latria_act_month_exhaustion_reached = {
+	exists = var:latria_act_month_exhaustion
+	var:latria_act_month_exhaustion >= latria_act_month_exhaustion_limit
+	NOT = { has_character_flag = latria_act_month_exhaustion_consequence }
+}
+
+latria_act_year_exhaustion_reached = {
+	exists = var:latria_act_year_exhaustion
+	var:latria_act_year_exhaustion >= latria_act_year_exhaustion_limit
+	NOT = { has_character_flag = latria_act_year_exhaustion_consequence }
+}

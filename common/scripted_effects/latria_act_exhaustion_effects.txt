@@ -1,0 +1,203 @@
+# No periodic on_action reads these scores. An act performs decay, gain, and the limit check.
+latria_decay_act_month_exhaustion = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_act_month_exhaustion_decay } }
+		if = {
+			limit = { exists = var:latria_act_month_exhaustion }
+			set_variable = {
+				name = latria_act_month_exhaustion
+				value = latria_act_month_exhaustion_after_decay
+			}
+		}
+		add_character_flag = {
+			flag = latria_act_month_exhaustion_decay
+			days = 30
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:latria_act_month_exhaustion } }
+		set_variable = {
+			name = latria_act_month_exhaustion
+			value = 0
+		}
+	}
+}
+
+latria_decay_act_year_exhaustion = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_act_year_exhaustion_decay } }
+		if = {
+			limit = { exists = var:latria_act_year_exhaustion }
+			set_variable = {
+				name = latria_act_year_exhaustion
+				value = latria_act_year_exhaustion_after_decay
+			}
+		}
+		add_character_flag = {
+			flag = latria_act_year_exhaustion_decay
+			years = 1
+		}
+	}
+	if = {
+		limit = { NOT = { exists = var:latria_act_year_exhaustion } }
+		set_variable = {
+			name = latria_act_year_exhaustion
+			value = 0
+		}
+	}
+}
+
+latria_roll_solo_exhaustion_gain = {
+	random_list = {
+		40 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 2
+			}
+		}
+		40 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 3
+			}
+		}
+		20 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 4
+			}
+		}
+	}
+}
+
+latria_roll_manual_exhaustion_gain = {
+	random_list = {
+		40 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 2
+			}
+		}
+		40 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 3
+			}
+		}
+		20 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 4
+			}
+		}
+	}
+}
+
+latria_roll_intercourse_exhaustion_gain = {
+	random_list = {
+		30 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 3
+			}
+		}
+		50 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 4
+			}
+		}
+		20 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 5
+			}
+		}
+	}
+}
+
+latria_roll_act_exhaustion_gain = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+		latria_roll_intercourse_exhaustion_gain = yes
+	}
+	else_if = {
+		limit = { scope:latria_act_kind = flag:latria_act_manual }
+		latria_roll_manual_exhaustion_gain = yes
+	}
+	else = {
+		latria_roll_solo_exhaustion_gain = yes
+	}
+}
+
+latria_add_act_month_exhaustion = {
+	change_variable = {
+		name = latria_act_month_exhaustion
+		add = scope:latria_act_exhaustion_gain
+	}
+}
+
+latria_add_act_year_exhaustion = {
+	change_variable = {
+		name = latria_act_year_exhaustion
+		add = scope:latria_act_exhaustion_gain
+	}
+}
+
+latria_trigger_act_exhaustion_consequence = {
+	if = {
+		limit = { latria_act_year_exhaustion_reached = yes }
+		add_character_flag = {
+			flag = latria_act_year_exhaustion_consequence
+			years = 1
+		}
+		add_character_flag = {
+			flag = latria_act_month_exhaustion_consequence
+			days = 30
+		}
+		trigger_event = latria_act.0311
+	}
+	else_if = {
+		limit = { latria_act_month_exhaustion_reached = yes }
+		add_character_flag = {
+			flag = latria_act_month_exhaustion_consequence
+			days = 30
+		}
+		trigger_event = latria_act.0301
+	}
+}
+
+latria_apply_act_exhaustion = {
+	hidden_effect = {
+		latria_decay_act_month_exhaustion = yes
+		latria_decay_act_year_exhaustion = yes
+		latria_roll_act_exhaustion_gain = yes
+		latria_add_act_month_exhaustion = yes
+		latria_add_act_year_exhaustion = yes
+		latria_trigger_act_exhaustion_consequence = yes
+	}
+}
+
+# Intercourse strains both people. A manual act strains only the person receiving the touch.
+latria_apply_partner_act_exhaustion = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+		latria_apply_act_exhaustion = yes
+	}
+	if = {
+		limit = { scope:latria_partner = { is_alive = yes } }
+		scope:latria_partner = {
+			latria_apply_act_exhaustion = yes
+		}
+	}
+}
+
+latria_apply_resolved_act_exhaustion = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_solo }
+		latria_apply_act_exhaustion = yes
+	}
+	else = {
+		latria_apply_partner_act_exhaustion = yes
+	}
+}

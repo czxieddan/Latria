@@ -1,9 +1,0 @@
-latria_solo_wear = {
-	icon = health_negative
-	health = -0.5
-}
-
-latria_solo_ruin = {
-	icon = health_negative
-	health = -1.5
-}

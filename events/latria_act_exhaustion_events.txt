@@ -1,0 +1,119 @@
+namespace = latria_act
+
+latria_act.0301 = {
+	type = character_event
+	title = latria_act.0301.t
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = pain
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_flag = latria_act_exhaustion_illness }
+				desc = latria_act.0301.desc.illness
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = latria_act_exhaustion_stress }
+				desc = latria_act.0301.desc.stress
+			}
+			desc = latria_act.0301.desc.health
+		}
+	}
+	immediate = {
+		random_list = {
+			35 = {
+				trigger = { NOT = { has_trait = ill } }
+				add_trait = ill
+				add_character_flag = {
+					flag = latria_act_exhaustion_illness
+					days = 1
+				}
+			}
+			40 = {
+				add_stress = {
+					value = medium_stress_impact_gain
+				}
+				add_character_flag = {
+					flag = latria_act_exhaustion_stress
+					days = 1
+				}
+			}
+			25 = {
+				add_character_modifier = {
+					modifier = latria_act_exhausted_health
+					months = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = latria_act.0301.a
+	}
+}
+
+latria_act.0311 = {
+	type = character_event
+	title = latria_act.0311.t
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = pain
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_flag = latria_act_exhaustion_illness }
+				desc = latria_act.0311.desc.illness
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = latria_act_exhaustion_stress }
+				desc = latria_act.0311.desc.stress
+			}
+			triggered_desc = {
+				trigger = { has_character_flag = latria_act_exhaustion_infertile }
+				desc = latria_act.0311.desc.infertile
+			}
+			desc = latria_act.0311.desc.health
+		}
+	}
+	immediate = {
+		random_list = {
+			25 = {
+				trigger = { NOT = { has_trait = ill } }
+				add_trait = ill
+				add_character_flag = {
+					flag = latria_act_exhaustion_illness
+					days = 1
+				}
+			}
+			25 = {
+				add_stress = {
+					value = major_stress_impact_gain
+				}
+				add_character_flag = {
+					flag = latria_act_exhaustion_stress
+					days = 1
+				}
+			}
+			20 = {
+				trigger = { NOT = { has_trait = infertile } }
+				add_trait = infertile
+				add_character_flag = {
+					flag = latria_act_exhaustion_infertile
+					days = 1
+				}
+			}
+			30 = {
+				add_character_modifier = {
+					modifier = latria_act_depleted_health
+					years = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = latria_act.0311.a
+	}
+}

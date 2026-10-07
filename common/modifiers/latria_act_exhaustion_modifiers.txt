@@ -1,0 +1,9 @@
+latria_act_exhausted_health = {
+	icon = health_negative
+	health = -0.75
+}
+
+latria_act_depleted_health = {
+	icon = health_negative
+	health = -1.5
+}
