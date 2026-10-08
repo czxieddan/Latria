@@ -1,4 +1,4 @@
-latria_fatal_liaison_show_intrigue = 10
+latria_fatal_liaison_show_intrigue = 13
 latria_fatal_liaison_start_intrigue = 15
 latria_act_pregnancy_chance = 20
 
@@ -46,4 +46,59 @@ latria_act_strain_chance = {
 	}
 	min = 0.1
 	max = 1.5
+}
+
+latria_partner_dissatisfaction_chance = {
+	value = 0.5
+	if = {
+		limit = {
+			NOT = {
+				latria_both_partners_are_healthy_adults = {
+					PARTNER = scope:latria_partner
+				}
+			}
+		}
+		add = 4.5
+	}
+	if = { limit = { is_pregnant = yes } add = 10 }
+	if = { limit = { age <= latria_dissatisfaction_young_age_end } add = 15 }
+	if = { limit = { age >= latria_dissatisfaction_old_age_start } add = 15 }
+	if = { limit = { age >= latria_dissatisfaction_advanced_age_start } add = 30 }
+	if = { limit = { health <= poor_health } add = 15 }
+	if = { limit = { health <= 0.5 } add = 40 }
+	if = { limit = { scope:latria_partner = { is_pregnant = yes } } add = 10 }
+	if = { limit = { scope:latria_partner = { age <= latria_dissatisfaction_young_age_end } } add = 15 }
+	if = { limit = { scope:latria_partner = { age >= latria_dissatisfaction_old_age_start } } add = 15 }
+	if = { limit = { scope:latria_partner = { age >= latria_dissatisfaction_advanced_age_start } } add = 30 }
+	if = { limit = { scope:latria_partner = { health <= poor_health } } add = 15 }
+	if = { limit = { scope:latria_partner = { health <= 0.5 } } add = 40 }
+	max = 90
+}
+
+latria_partner_act_ai_desire = {
+	value = 11
+	if = {
+		limit = { any_consort = { count >= 4 } }
+		add = 69
+		if = { limit = { any_child = { count = 0 } } add = 20 }
+		if = { limit = { any_child = { count = 1 } } add = 16 }
+		if = { limit = { any_child = { count = 2 } } add = 12 }
+		if = { limit = { any_child = { count = 3 } } add = 8 }
+		if = { limit = { any_child = { count = 4 } } add = 4 }
+	}
+	else = {
+		if = { limit = { any_child = { count = 0 } } add = 89 }
+		if = { limit = { any_child = { count = 1 } } add = 84 }
+		if = { limit = { any_child = { count = 2 } } add = 74 }
+		if = { limit = { any_child = { count = 3 } } add = 59 }
+		if = { limit = { any_child = { count = 4 } } add = 39 }
+	}
+	if = { limit = { has_trait = lustful } add = 10 }
+	if = { limit = { has_trait = chaste } add = -20 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_3 } add = 10 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_4 } add = 20 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_5 } add = 30 }
+	if = { limit = { is_pregnant = yes } multiply = 0.1 }
+	min = 1
+	max = 100
 }

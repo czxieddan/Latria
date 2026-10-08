@@ -1,0 +1,38 @@
+latria_sexual_frustration_level_1_limit = 20
+latria_sexual_frustration_level_2_limit = 50
+latria_sexual_frustration_level_3_limit = 100
+latria_sexual_frustration_level_4_limit = 180
+latria_sexual_frustration_level_5_limit = 300
+
+latria_daily_sexual_frustration_gain = {
+	value = 0.1
+	if = {
+		limit = {
+			age >= latria_prime_adult_age_start
+			age <= latria_prime_adult_age_end
+		}
+		add = 0.05
+	}
+	if = { limit = { age >= latria_frustration_senior_age_start } add = -0.04 }
+	if = { limit = { has_trait = lustful } add = 0.1 }
+	if = { limit = { has_trait = chaste } add = -0.05 }
+	if = { limit = { has_trait = temperate } add = -0.02 }
+	if = { limit = { has_trait = gluttonous } add = 0.02 }
+	if = { limit = { has_trait = impatient } add = 0.02 }
+	min = 0.02
+	max = 0.3
+}
+
+latria_sexual_frustration_stress_gain = {
+	value = 20
+	if = { limit = { has_trait = lustful } add = 20 }
+	if = { limit = { has_trait = impatient } add = 10 }
+	if = { limit = { has_trait = wrathful } add = 10 }
+	if = { limit = { has_trait = chaste } add = -5 }
+	if = { limit = { has_trait = temperate } add = -5 }
+	if = { limit = { has_trait = calm } add = -5 }
+	if = { limit = { has_trait = content } add = -5 }
+	if = { limit = { has_trait = patient } add = -5 }
+	min = 5
+	max = 40
+}

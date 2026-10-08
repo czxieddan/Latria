@@ -1,0 +1,53 @@
+# Earliest age for solo and shared manual-touch acts.
+latria_manual_act_minimum_age = {
+	value = 10
+}
+
+# Earliest age for intercourse.
+latria_intercourse_minimum_age = {
+	value = 14
+}
+
+# First age at which daily sexual need accumulates.
+latria_sexual_need_start_age = {
+	value = 12
+}
+
+# Age at which daily sexual need stops accumulating.
+latria_sexual_need_end_age = {
+	value = 70
+}
+
+# Prime-adult range shared by satisfaction and frustration calculations.
+latria_prime_adult_age_start = {
+	value = 25
+}
+
+latria_prime_adult_age_end = {
+	value = 45
+}
+
+# Age at or below which youth raises dissatisfaction risk.
+latria_dissatisfaction_young_age_end = {
+	value = 18
+}
+
+# Age at which older age begins raising dissatisfaction risk.
+latria_dissatisfaction_old_age_start = {
+	value = 60
+}
+
+# Age at which advanced age raises dissatisfaction risk further.
+latria_dissatisfaction_advanced_age_start = {
+	value = 65
+}
+
+# Age at which daily sexual-frustration gain begins declining.
+latria_frustration_senior_age_start = {
+	value = 60
+}
+
+# Minimum recipient age for the pig-embrace prison punishment.
+latria_pig_embrace_minimum_age = {
+	value = 12
+}
