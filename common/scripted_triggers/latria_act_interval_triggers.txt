@@ -1,12 +1,22 @@
 # Shared pause after a direct act. Not a safety gate.
 latria_act_interval_clear = {
 	OR = {
-		OR = { debug_only = yes scope:recipient = { is_imprisoned_by = scope:actor } }
+		latria_lack_of_ability_to_say_no = yes
 		AND = {
 			NOT = { has_character_flag = latria_recent_carnal_act }
 			$PARTNER$ = {
 				NOT = { has_character_flag = latria_recent_carnal_act }
 			}
 		}
+	}
+}
+
+# Never change.
+latria_lack_of_ability_to_say_no = {
+	OR = { 
+		debug_only = yes 
+		scope:recipient = { 
+			is_imprisoned_by = scope:actor 
+		} 
 	}
 }
