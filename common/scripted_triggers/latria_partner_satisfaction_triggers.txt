@@ -1,0 +1,21 @@
+latria_has_dissatisfaction_risk = {
+	OR = {
+		is_pregnant = yes
+		age <= latria_dissatisfaction_young_age_end
+		age >= latria_dissatisfaction_old_age_start
+		health <= poor_health
+	}
+}
+
+latria_both_partners_are_healthy_adults = {
+	age >= latria_prime_adult_age_start
+	age <= latria_prime_adult_age_end
+	health >= good_health
+	is_pregnant = no
+	$PARTNER$ = {
+		age >= latria_prime_adult_age_start
+		age <= latria_prime_adult_age_end
+		health >= good_health
+		is_pregnant = no
+	}
+}

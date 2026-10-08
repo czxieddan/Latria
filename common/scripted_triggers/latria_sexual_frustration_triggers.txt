@@ -1,0 +1,34 @@
+latria_sexual_frustration_level_1_reached = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_sexual_frustration_level_1_limit
+}
+
+latria_sexual_frustration_level_2_reached = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_sexual_frustration_level_2_limit
+}
+
+latria_sexual_frustration_level_3_reached = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_sexual_frustration_level_3_limit
+}
+
+latria_sexual_frustration_level_4_reached = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_sexual_frustration_level_4_limit
+}
+
+latria_sexual_frustration_level_5_reached = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_sexual_frustration_level_5_limit
+}
+
+latria_sexual_frustration_resists_collapse = {
+	OR = {
+		has_trait = chaste
+		has_trait = temperate
+		has_trait = calm
+		has_trait = content
+		has_trait = patient
+	}
+}

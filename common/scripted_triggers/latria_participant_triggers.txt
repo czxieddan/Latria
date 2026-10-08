@@ -1,10 +1,17 @@
 # Physiology. The body can still act: alive, and not incapable.
 # This is not puberty, and it is not adulthood in the period.
 latria_body_can_act = {
-	age >= 12
 	is_alive = yes
 	is_incapable = no
 	# NOT = { is_pregnant = yes }
+}
+
+latria_has_manual_act_age = {
+	age >= latria_manual_act_minimum_age
+}
+
+latria_has_intercourse_age = {
+	age >= latria_intercourse_minimum_age
 }
 
 # Faith. Reads rite parameters and personal tenet flags only.
@@ -15,8 +22,8 @@ latria_faith_stands = {
 	NOT = { has_personal_tenet_flag = latria_carnal_personal_barred }
 }
 
-# AND of the three gates, plus attraction and the vanilla kin limit.
-# Callers pass PARTNER. They do not inline the three gates.
+# Shared non-age gates, plus attraction and the vanilla kin limit.
+# Age-specific callers add the manual-touch or intercourse boundary.
 latria_can_share_carnal_act = {
 	save_temporary_scope_as = latria_initiator
 	latria_body_can_act = yes
@@ -38,14 +45,46 @@ latria_can_share_carnal_act = {
 	}
 }
 
-latria_can_propose_carnal_act = {
+latria_can_share_manual_act = {
+	latria_has_manual_act_age = yes
+	latria_can_share_carnal_act = { PARTNER = $PARTNER$ }
+	$PARTNER$ = { latria_has_manual_act_age = yes }
+}
+
+latria_can_share_intercourse = {
+	latria_has_intercourse_age = yes
+	latria_can_share_carnal_act = { PARTNER = $PARTNER$ }
+	$PARTNER$ = { latria_has_intercourse_age = yes }
+}
+
+latria_can_propose_manual_act = {
 	OR = {
-		latria_can_share_carnal_act = { PARTNER = $PARTNER$ }
+		latria_can_share_manual_act = { PARTNER = $PARTNER$ }
 		AND = {
 			latria_lack_of_ability_to_say_no = yes
 			latria_body_can_act = yes
+			latria_has_manual_act_age = yes
 			is_attracted_to_gender_of = $PARTNER$
-			$PARTNER$ = { latria_body_can_act = yes }
+			$PARTNER$ = {
+				latria_body_can_act = yes
+				latria_has_manual_act_age = yes
+			}
+		}
+	}
+}
+
+latria_can_propose_intercourse = {
+	OR = {
+		latria_can_share_intercourse = { PARTNER = $PARTNER$ }
+		AND = {
+			latria_lack_of_ability_to_say_no = yes
+			latria_body_can_act = yes
+			latria_has_intercourse_age = yes
+			is_attracted_to_gender_of = $PARTNER$
+			$PARTNER$ = {
+				latria_body_can_act = yes
+				latria_has_intercourse_age = yes
+			}
 		}
 	}
 }
@@ -55,5 +94,12 @@ latria_can_propose_carnal_act = {
 # Callers do not inline the three gates.
 latria_can_act_alone = {
 	latria_body_can_act = yes
+	latria_has_manual_act_age = yes
 	latria_faith_stands = yes
+}
+
+latria_has_sexual_need = {
+	is_alive = yes
+	age >= latria_sexual_need_start_age
+	age < latria_sexual_need_end_age
 }
