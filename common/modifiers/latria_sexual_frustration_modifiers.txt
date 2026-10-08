@@ -1,0 +1,33 @@
+latria_sexual_frustration_1 = {
+	icon = stress_negative
+	stress_gain_mult = 0.05
+}
+
+latria_sexual_frustration_2 = {
+	icon = stress_negative
+	stress_gain_mult = 0.1
+	diplomacy = -1
+}
+
+latria_sexual_frustration_3 = {
+	icon = stress_negative
+	stress_gain_mult = 0.2
+	diplomacy = -2
+	prowess = -1
+}
+
+latria_sexual_frustration_4 = {
+	icon = stress_negative
+	stress_gain_mult = 0.35
+	diplomacy = -3
+	prowess = -2
+	health = -0.25
+}
+
+latria_sexual_frustration_5 = {
+	icon = stress_negative
+	stress_gain_mult = 0.5
+	diplomacy = -4
+	prowess = -3
+	health = -0.5
+}
