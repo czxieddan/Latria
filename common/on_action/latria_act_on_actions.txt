@@ -4,3 +4,30 @@ latria_on_act_resolved = {
 		latria_apply_resolved_act_exhaustion = yes
 	}
 }
+
+on_game_start_after_lobby = {
+	on_actions = { latria_initialize_sexual_frustration }
+}
+
+latria_initialize_sexual_frustration = {
+	effect = {
+		every_living_character = {
+			limit = { latria_has_sexual_need = yes }
+			latria_start_sexual_frustration_loop = yes
+		}
+	}
+}
+
+on_birthday_adulthood = {
+	on_actions = { latria_sexual_frustration_birthday }
+}
+
+latria_sexual_frustration_birthday = {
+	effect = {
+		if = {
+			limit = { latria_has_sexual_need = yes }
+			latria_start_sexual_frustration_loop = yes
+		}
+		else = { latria_stop_sexual_frustration = yes }
+	}
+}
