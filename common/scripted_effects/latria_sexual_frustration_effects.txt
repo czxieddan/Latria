@@ -15,15 +15,6 @@ latria_set_sexual_frustration_level = {
 				var:latria_sexual_frustration_level > $LEVEL$
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					NOT = { exists = var:latria_sexual_frustration_level }
-					var:latria_sexual_frustration_level < $LEVEL$
-				}
-			}
-			trigger_event = $EVENT$
-		}
 		set_variable = {
 			name = latria_sexual_frustration_level
 			value = $LEVEL$
@@ -54,7 +45,6 @@ latria_sync_sexual_frustration_level = {
 		limit = { latria_sexual_frustration_level_5_reached = yes }
 		latria_set_sexual_frustration_level = {
 			LEVEL = 5
-			EVENT = latria_act.0405
 			MODIFIER = latria_sexual_frustration_5
 		}
 	}
@@ -62,7 +52,6 @@ latria_sync_sexual_frustration_level = {
 		limit = { latria_sexual_frustration_level_4_reached = yes }
 		latria_set_sexual_frustration_level = {
 			LEVEL = 4
-			EVENT = latria_act.0404
 			MODIFIER = latria_sexual_frustration_4
 		}
 	}
@@ -70,7 +59,6 @@ latria_sync_sexual_frustration_level = {
 		limit = { latria_sexual_frustration_level_3_reached = yes }
 		latria_set_sexual_frustration_level = {
 			LEVEL = 3
-			EVENT = latria_act.0403
 			MODIFIER = latria_sexual_frustration_3
 		}
 	}
@@ -78,7 +66,6 @@ latria_sync_sexual_frustration_level = {
 		limit = { latria_sexual_frustration_level_2_reached = yes }
 		latria_set_sexual_frustration_level = {
 			LEVEL = 2
-			EVENT = latria_act.0402
 			MODIFIER = latria_sexual_frustration_2
 		}
 	}
@@ -86,14 +73,68 @@ latria_sync_sexual_frustration_level = {
 		limit = { latria_sexual_frustration_level_1_reached = yes }
 		latria_set_sexual_frustration_level = {
 			LEVEL = 1
-			EVENT = latria_act.0401
 			MODIFIER = latria_sexual_frustration_1
 		}
 	}
 	else = { latria_clear_sexual_frustration_level = yes }
 }
 
-latria_add_daily_sexual_frustration = {
+latria_store_prior_sexual_frustration = {
+	if = {
+		limit = { exists = var:latria_sexual_frustration }
+		save_temporary_scope_value_as = {
+			name = latria_prior_sexual_frustration
+			value = var:latria_sexual_frustration
+		}
+	}
+	else = {
+		save_temporary_scope_value_as = {
+			name = latria_prior_sexual_frustration
+			value = 0
+		}
+	}
+}
+
+latria_fire_crossed_sexual_frustration_levels = {
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration < latria_sexual_frustration_level_1_limit
+			var:latria_sexual_frustration >= latria_sexual_frustration_level_1_limit
+		}
+		trigger_event = latria_act.0401
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration < latria_sexual_frustration_level_2_limit
+			var:latria_sexual_frustration >= latria_sexual_frustration_level_2_limit
+		}
+		trigger_event = latria_act.0402
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration < latria_sexual_frustration_level_3_limit
+			var:latria_sexual_frustration >= latria_sexual_frustration_level_3_limit
+		}
+		trigger_event = latria_act.0403
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration < latria_sexual_frustration_level_4_limit
+			var:latria_sexual_frustration >= latria_sexual_frustration_level_4_limit
+		}
+		trigger_event = latria_act.0404
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration < latria_sexual_frustration_level_5_limit
+			var:latria_sexual_frustration >= latria_sexual_frustration_level_5_limit
+		}
+		trigger_event = latria_act.0405
+	}
+}
+
+latria_add_sexual_frustration = {
+	latria_store_prior_sexual_frustration = yes
 	if = {
 		limit = { NOT = { exists = var:latria_sexual_frustration } }
 		set_variable = {
@@ -103,9 +144,18 @@ latria_add_daily_sexual_frustration = {
 	}
 	change_variable = {
 		name = latria_sexual_frustration
-		add = latria_daily_sexual_frustration_gain
+		add = $GAIN$
 	}
+	latria_fire_crossed_sexual_frustration_levels = yes
 	latria_sync_sexual_frustration_level = yes
+}
+
+latria_add_daily_sexual_frustration = {
+	latria_add_sexual_frustration = { GAIN = latria_daily_sexual_frustration_gain }
+}
+
+latria_add_yearly_sexual_frustration = {
+	latria_add_sexual_frustration = { GAIN = latria_yearly_sexual_frustration_gain }
 }
 
 latria_reduce_sexual_frustration = {
@@ -149,6 +199,8 @@ latria_relieve_partner_sexual_frustration = {
 latria_start_sexual_frustration_loop = {
 	if = {
 		limit = {
+			is_ai = no
+			is_ruler = yes
 			latria_has_sexual_need = yes
 			NOT = { has_character_flag = latria_sexual_frustration_loop }
 		}

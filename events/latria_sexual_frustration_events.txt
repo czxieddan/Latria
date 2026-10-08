@@ -2,7 +2,11 @@ namespace = latria_act
 
 latria_act.0400 = {
 	hidden = yes
-	trigger = { latria_has_sexual_need = yes }
+	trigger = {
+		is_ai = no
+		is_ruler = yes
+		latria_has_sexual_need = yes
+	}
 	immediate = {
 		add_character_flag = {
 			flag = latria_sexual_frustration_loop

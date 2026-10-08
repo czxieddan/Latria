@@ -23,6 +23,12 @@ latria_daily_sexual_frustration_gain = {
 	max = 0.3
 }
 
+# One birthday replaces the old daily tick. 365 keeps the yearly total.
+latria_yearly_sexual_frustration_gain = {
+	value = latria_daily_sexual_frustration_gain
+	multiply = 365
+}
+
 latria_sexual_frustration_stress_gain = {
 	value = 20
 	if = { limit = { has_trait = lustful } add = 20 }

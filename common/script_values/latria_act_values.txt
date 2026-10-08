@@ -102,3 +102,12 @@ latria_partner_act_ai_desire = {
 	min = 1
 	max = 100
 }
+
+# Same weights as the manual interaction ai_will_do. Player overtures roll this.
+latria_manual_overture_chance = {
+	value = 5
+	if = { limit = { has_trait = lustful } add = 20 }
+	if = { limit = { has_trait = chaste } add = -40 }
+	min = 0
+	max = 100
+}

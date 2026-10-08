@@ -1,0 +1,140 @@
+latria_run_quarterly_carnal_maintenance = {
+	if = {
+		limit = { is_ai = no }
+		latria_send_player_carnal_overtures = yes
+	}
+	else = { latria_ai_try_consort_intercourse = yes }
+}
+
+latria_ai_proposition_player = {
+	add_character_flag = {
+		flag = latria_player_carnal_overture
+		days = 80
+	}
+	save_scope_as = latria_suitor
+	root = { save_scope_as = latria_player_target }
+	if = {
+		limit = { latria_suitor_can_offer_intercourse = yes }
+		latria_send_intercourse_overture = yes
+	}
+	if = {
+		limit = { latria_suitor_can_offer_manual = yes }
+		latria_send_manual_overture = yes
+	}
+}
+
+latria_send_intercourse_overture = {
+	random = {
+		chance = latria_partner_act_ai_desire
+		run_interaction = {
+			interaction = latria_propose_intercourse_interaction
+			actor = scope:latria_suitor
+			recipient = scope:latria_player_target
+			send_threshold = decline
+		}
+	}
+}
+
+latria_send_manual_overture = {
+	random = {
+		chance = latria_manual_overture_chance
+		run_interaction = {
+			interaction = latria_propose_manual_interaction
+			actor = scope:latria_suitor
+			recipient = scope:latria_player_target
+			send_threshold = decline
+		}
+	}
+}
+
+# Player scope. Only people already tied to this player, not the court list.
+latria_send_player_carnal_overtures = {
+	every_relation = {
+		type = lover
+		limit = { latria_ai_can_proposition_player = yes }
+		latria_ai_proposition_player = yes
+	}
+	every_relation = {
+		type = soulmate
+		limit = {
+			NOT = { has_relation_lover = root }
+			latria_ai_can_proposition_player = yes
+		}
+		latria_ai_proposition_player = yes
+	}
+	every_spouse = {
+		limit = { latria_ai_can_proposition_player = yes }
+		latria_ai_proposition_player = yes
+	}
+	every_concubine = {
+		limit = { latria_ai_can_proposition_player = yes }
+		latria_ai_proposition_player = yes
+	}
+	if = {
+		limit = {
+			is_concubine = yes
+			court_owner = { latria_ai_can_proposition_player = yes }
+		}
+		court_owner = { latria_ai_proposition_player = yes }
+	}
+	every_scheme = {
+		limit = {
+			scheme_type = seduce
+			scheme_target_character = { latria_ai_can_proposition_player = yes }
+		}
+		scheme_target_character = { latria_ai_proposition_player = yes }
+	}
+	every_targeting_scheme = {
+		limit = {
+			scheme_type = seduce
+			scheme_owner = { latria_ai_can_proposition_player = yes }
+		}
+		scheme_owner = { latria_ai_proposition_player = yes }
+	}
+}
+
+latria_ai_try_consort_intercourse = {
+	if = {
+		limit = {
+			is_alive = yes
+			NOT = { has_character_flag = latria_recent_carnal_act }
+		}
+		every_spouse = {
+			limit = { latria_consort_can_take_ai_intercourse = yes }
+			add_to_temporary_list = latria_ai_consort_pool
+		}
+		every_concubine = {
+			limit = { latria_consort_can_take_ai_intercourse = yes }
+			add_to_temporary_list = latria_ai_consort_pool
+		}
+		if = {
+			limit = {
+				any_in_list = {
+					list = latria_ai_consort_pool
+					count > 0
+				}
+			}
+			random_in_list = {
+				list = latria_ai_consort_pool
+				save_scope_as = latria_partner
+				root = { latria_roll_direct_intercourse = yes }
+			}
+		}
+	}
+}
+
+latria_roll_direct_intercourse = {
+	random = {
+		chance = latria_partner_act_ai_desire
+		latria_commit_direct_intercourse = yes
+	}
+}
+
+latria_commit_direct_intercourse = {
+	save_scope_as = latria_actor
+	save_scope_value_as = {
+		name = latria_act_kind
+		value = flag:latria_act_intercourse
+	}
+	latria_resolve_act = yes
+}
