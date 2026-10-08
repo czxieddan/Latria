@@ -1,0 +1,3 @@
+latria_unsatisfying_act_opinion = {
+	opinion = -20
+}
