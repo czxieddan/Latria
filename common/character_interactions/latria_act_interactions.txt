@@ -18,18 +18,34 @@ latria_propose_intercourse_interaction = {
 	}
 	ai_frequency_by_tier = {
 		barony = 0
-		county = 24
-		duchy = 12
-		kingdom = 6
-		empire = 6
-		hegemony = 6
+		county = 3
+		duchy = 3
+		kingdom = 3
+		empire = 3
+		hegemony = 3
 	}
 
 	is_shown = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
-			latria_can_propose_carnal_act = { PARTNER = scope:recipient }
+			latria_can_propose_intercourse = { PARTNER = scope:recipient }
+		}
+		scope:puppet_or_actor = {
+			custom_tooltip = {
+				text = latria_act_too_recent
+				latria_act_interval_clear = { PARTNER = scope:recipient }
+			}
+			OR = {
+				latria_lack_of_ability_to_say_no = yes
+				AND = {
+					scope:recipient = { is_imprisoned = no }
+					OR = {
+						in_diplomatic_range = scope:recipient
+						location = scope:recipient.location
+					}
+				}
+			}
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -110,17 +126,17 @@ latria_propose_intercourse_interaction = {
 				target = scope:puppet_or_actor
 			}
 		}
+		modifier = {
+			add = -100
+			desc = latria_act_accept_pregnant
+			is_pregnant = yes
+			scope:puppet_or_actor = {
+				NOT = { latria_lack_of_ability_to_say_no = yes }
+			}
+		}
 	}
 	ai_will_do = {
-		base = 5
-		modifier = {
-			add = 20
-			has_trait = lustful
-		}
-		modifier = {
-			add = -40
-			has_trait = chaste
-		}
+		base = latria_partner_act_ai_desire
 	}
 }
 latria_propose_manual_interaction = {
@@ -154,7 +170,23 @@ latria_propose_manual_interaction = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
-			latria_can_propose_carnal_act = { PARTNER = scope:recipient }
+			latria_can_propose_manual_act = { PARTNER = scope:recipient }
+		}
+		scope:puppet_or_actor = {
+			custom_tooltip = {
+				text = latria_act_too_recent
+				latria_act_interval_clear = { PARTNER = scope:recipient }
+			}
+			OR = {
+				latria_lack_of_ability_to_say_no = yes
+				AND = {
+					scope:recipient = { is_imprisoned = no }
+					OR = {
+						in_diplomatic_range = scope:recipient
+						location = scope:recipient.location
+					}
+				}
+			}
 		}
 	}
 	is_valid_showing_failures_only = {

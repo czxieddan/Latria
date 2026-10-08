@@ -27,7 +27,7 @@ latria_start_fatal_liaison_interaction = {
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
 			intrigue >= latria_fatal_liaison_show_intrigue
-			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+			latria_can_share_intercourse = { PARTNER = scope:recipient }
 		}
 	}
 	is_valid_showing_failures_only = {
@@ -115,7 +115,7 @@ latria_start_fatal_touch_interaction = {
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
 			intrigue >= latria_fatal_liaison_show_intrigue
-			latria_can_share_carnal_act = { PARTNER = scope:recipient }
+			latria_can_share_manual_act = { PARTNER = scope:recipient }
 		}
 	}
 	is_valid_showing_failures_only = {
