@@ -22,11 +22,12 @@ latria_fatal_liaison = {
 	allow = {
 		intrigue >= latria_fatal_liaison_start_intrigue
 		is_imprisoned = no
-		latria_can_share_carnal_act = { PARTNER = scope:target }
+		# The two launchers apply their own age boundary; this shared scheme keeps the lower one.
+		latria_can_share_manual_act = { PARTNER = scope:target }
 	}
 	valid = {
 		is_incapable = no
-		latria_can_share_carnal_act = { PARTNER = scope:target }
+		latria_can_share_manual_act = { PARTNER = scope:target }
 		scope:target = {
 			is_imprisoned = no
 			in_diplomatic_range = scope:owner
