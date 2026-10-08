@@ -38,6 +38,18 @@ latria_act.0101 = {
 			}
 			triggered_desc = {
 				trigger = {
+					scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied
+				}
+				desc = latria_act.0101.desc.actor_dissatisfied
+			}
+			triggered_desc = {
+				trigger = {
+					scope:latria_dissatisfied_person = flag:latria_partner_dissatisfied
+				}
+				desc = latria_act.0101.desc.partner_dissatisfied
+			}
+			triggered_desc = {
+				trigger = {
 					latria_act_is_adultery = { PARTNER = scope:latria_partner }
 				}
 				desc = latria_act.0101.desc.adultery
@@ -73,6 +85,18 @@ latria_act.0102 = {
 	override_background = { reference = bedchamber }
 	desc = {
 		first_valid = {
+			triggered_desc = {
+				trigger = {
+					scope:latria_dissatisfied_person = flag:latria_partner_dissatisfied
+				}
+				desc = latria_act.0102.desc.partner_dissatisfied
+			}
+			triggered_desc = {
+				trigger = {
+					scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied
+				}
+				desc = latria_act.0102.desc.actor_dissatisfied
+			}
 			triggered_desc = {
 				trigger = {
 					latria_act_is_adultery = { PARTNER = scope:latria_actor }
