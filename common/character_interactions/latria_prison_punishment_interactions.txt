@@ -11,6 +11,8 @@ latria_force_pig_embrace_interaction = {
 		scope:recipient = {
 			is_imprisoned_by = scope:puppet_or_actor
 			NOT = { has_trait = latria_unclean }
+			age >= 12
+			is_alive = yes
 		}
 	}
 
