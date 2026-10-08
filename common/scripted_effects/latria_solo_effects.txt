@@ -52,4 +52,5 @@ latria_resolve_solo_act = {
 	latria_apply_solo_piety = yes
 	latria_apply_solo_fulfillment_gain = yes
 	latria_apply_solo_fulfillment_loss = yes
+	latria_relieve_solo_sexual_frustration = yes
 }

@@ -1,0 +1,62 @@
+latria_mark_actor_dissatisfied = {
+	save_scope_value_as = {
+		name = latria_dissatisfied_person
+		value = flag:latria_actor_dissatisfied
+	}
+	add_opinion = {
+		target = scope:latria_partner
+		modifier = latria_unsatisfying_act_opinion
+		months = 3
+	}
+}
+
+latria_mark_partner_dissatisfied = {
+	save_scope_value_as = {
+		name = latria_dissatisfied_person
+		value = flag:latria_partner_dissatisfied
+	}
+	scope:latria_partner = {
+		add_opinion = {
+			target = scope:latria_actor
+			modifier = latria_unsatisfying_act_opinion
+			months = 3
+		}
+	}
+}
+
+latria_choose_dissatisfied_partner = {
+	if = {
+		limit = {
+			scope:latria_partner = { latria_has_dissatisfaction_risk = yes }
+			NOT = { latria_has_dissatisfaction_risk = yes }
+		}
+		latria_mark_actor_dissatisfied = yes
+	}
+	else_if = {
+		limit = {
+			latria_has_dissatisfaction_risk = yes
+			scope:latria_partner = { NOT = { latria_has_dissatisfaction_risk = yes } }
+		}
+		latria_mark_partner_dissatisfied = yes
+	}
+	else = {
+		random_list = {
+			50 = { latria_mark_actor_dissatisfied = yes }
+			50 = { latria_mark_partner_dissatisfied = yes }
+		}
+	}
+}
+
+latria_roll_partner_satisfaction = {
+	random = {
+		chance = latria_partner_dissatisfaction_chance
+		latria_choose_dissatisfied_partner = yes
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_dissatisfied_person } }
+		save_scope_value_as = {
+			name = latria_act_satisfied
+			value = yes
+		}
+	}
+}

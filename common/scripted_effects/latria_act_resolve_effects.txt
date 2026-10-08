@@ -40,8 +40,14 @@ latria_resolve_act = {
 
 # Partner path. Solo never reaches this: strain, pregnancy, and the shared pause need latria_partner.
 latria_resolve_partner_act = {
+	save_scope_as = latria_actor
+	latria_roll_partner_satisfaction = yes
 	latria_roll_partner_strain = yes
-	latria_roll_act_pregnancy = yes
+	if = {
+		limit = { exists = scope:latria_act_satisfied }
+		latria_roll_act_pregnancy = yes
+		latria_relieve_partner_sexual_frustration = yes
+	}
 	if = {
 		limit = {
 			NOT = { exists = scope:latria_force_death }
