@@ -1,0 +1,81 @@
+# Vanilla birth and adultery events expect these scope names during the act chain.
+latria_register_vanilla_sex_scopes = {
+	save_scope_as = had_sex_root_character
+	scope:latria_partner = { save_scope_as = had_sex_with_effect_partner }
+}
+
+latria_record_actor_adultery_suspicion = {
+	set_variable = {
+		name = had_recent_sex_with
+		value = scope:latria_partner
+		days = 1000
+	}
+	random = {
+		chance = 50
+		every_relation = {
+			type = soulmate
+			limit = { this != scope:latria_partner }
+			add_to_temporary_list = latria_actor_bound_partners
+		}
+		every_consort = {
+			add_to_temporary_list = latria_actor_bound_partners
+		}
+		random_in_list = {
+			list = latria_actor_bound_partners
+			limit = { is_ai = no }
+			alternative_limit = { always = yes }
+			trigger_event = {
+				id = adultery.0001
+				days = { 14 365 }
+			}
+		}
+	}
+}
+
+latria_record_partner_adultery_suspicion = {
+	set_variable = {
+		name = had_recent_sex_with
+		value = scope:latria_actor
+		days = 1000
+	}
+	random = {
+		chance = 50
+		every_relation = {
+			type = soulmate
+			limit = { this != scope:latria_actor }
+			add_to_temporary_list = latria_partner_bound_partners
+		}
+		every_consort = {
+			add_to_temporary_list = latria_partner_bound_partners
+		}
+		random_in_list = {
+			list = latria_partner_bound_partners
+			limit = { is_ai = no }
+			alternative_limit = { always = yes }
+			trigger_event = {
+				id = adultery.0001
+				days = { 14 365 }
+			}
+		}
+	}
+}
+
+# Only the participant who is breaking an existing bond gets suspicion state.
+latria_record_adultery_suspicion = {
+	if = {
+		limit = {
+			latria_has_bound_partner = yes
+			latria_act_is_adultery = { PARTNER = scope:latria_partner }
+		}
+		latria_record_actor_adultery_suspicion = yes
+	}
+	scope:latria_partner = {
+		if = {
+			limit = {
+				latria_has_bound_partner = yes
+				latria_act_is_adultery = { PARTNER = scope:latria_actor }
+			}
+			latria_record_partner_adultery_suspicion = yes
+		}
+	}
+}

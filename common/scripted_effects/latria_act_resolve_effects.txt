@@ -41,6 +41,9 @@ latria_resolve_act = {
 # Partner path. Solo never reaches this: strain, pregnancy, and the shared pause need latria_partner.
 latria_resolve_partner_act = {
 	save_scope_as = latria_actor
+	# Register vanilla state before strain can kill either participant.
+	latria_register_vanilla_sex_scopes = yes
+	latria_record_adultery_suspicion = yes
 	latria_roll_partner_satisfaction = yes
 	latria_roll_partner_strain = yes
 	if = {

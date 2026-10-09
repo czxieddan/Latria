@@ -49,7 +49,11 @@ latria_apply_solo_fulfillment_loss = {
 latria_resolve_solo_act = {
 	latria_mark_solo_interval = yes
 	latria_apply_solo_stress = yes
-	latria_apply_solo_piety = yes
+	# Human piety is applied by the event option so the interaction stays silent.
+	if = {
+		limit = { is_ai = yes }
+		latria_apply_solo_piety = yes
+	}
 	latria_apply_solo_fulfillment_gain = yes
 	latria_apply_solo_fulfillment_loss = yes
 	latria_relieve_solo_sexual_frustration = yes

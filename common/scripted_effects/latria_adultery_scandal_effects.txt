@@ -1,0 +1,79 @@
+latria_remove_all_legitimacy_for_adultery = {
+	if = {
+		limit = { has_legitimacy = yes }
+		add_legitimacy = {
+			value = legitimacy
+			multiply = -1
+		}
+	}
+}
+
+latria_remove_piety_level_for_adultery = {
+	set_piety_level = { value = 0 }
+}
+
+latria_collect_head_of_faith_depose_attackers = {
+	save_scope_as = latria_scandal_target
+	every_vassal_or_below = {
+		limit = {
+			opinion = {
+				target = scope:latria_scandal_target
+				value < 100
+			}
+		}
+		add_to_temporary_list = latria_scandal_attackers
+	}
+	every_ally = {
+		limit = {
+			is_landed = yes
+			opinion = {
+				target = scope:latria_scandal_target
+				value < 100
+			}
+			NOT = { is_in_list = latria_scandal_attackers }
+		}
+		add_to_temporary_list = latria_scandal_attackers
+	}
+	every_independent_ruler = {
+		limit = {
+			this != scope:latria_scandal_target
+			is_landed = yes
+			rite = scope:latria_scandal_target.rite
+			NOT = { is_in_list = latria_scandal_attackers }
+		}
+		add_to_temporary_list = latria_scandal_attackers
+	}
+}
+
+latria_start_head_of_faith_depose_wars = {
+	# Scripted declaration bypasses the AI-only selection rule on depose_war.
+	every_in_list = {
+		list = latria_scandal_attackers
+		start_war = {
+			casus_belli = depose_war
+			target = scope:latria_scandal_target
+		}
+	}
+}
+
+latria_punish_adulterous_head_of_faith = {
+	latria_collect_head_of_faith_depose_attackers = yes
+	latria_start_head_of_faith_depose_wars = yes
+}
+
+latria_punish_adulterous_theocratic_ruler = {
+	# Deposition removes every title held under the character's theocratic government.
+	depose = yes
+}
+
+latria_apply_adultery_scandal_punishment = {
+	latria_remove_all_legitimacy_for_adultery = yes
+	latria_remove_piety_level_for_adultery = yes
+	if = {
+		limit = { latria_adultery_scandal_is_head_of_faith = yes }
+		latria_punish_adulterous_head_of_faith = yes
+	}
+	else = {
+		latria_punish_adulterous_theocratic_ruler = yes
+	}
+}

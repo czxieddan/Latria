@@ -1,5 +1,10 @@
 # Intercourse only. The two sexes have to differ. A manual act never reaches this.
 latria_roll_act_pregnancy_as_mother = {
+	# Vanilla bastard birth events read this list after the pregnancy begins.
+	add_to_variable_list = {
+		name = potential_father_variable_list
+		target = scope:latria_partner
+	}
 	random = {
 		chance = latria_resolved_pregnancy_chance
 		make_pregnant = { father = scope:latria_partner }
@@ -8,6 +13,11 @@ latria_roll_act_pregnancy_as_mother = {
 
 latria_roll_act_pregnancy_as_father = {
 	scope:latria_partner = {
+		# Keep Latria as the only pregnancy roll while restoring vanilla paternity state.
+		add_to_variable_list = {
+			name = potential_father_variable_list
+			target = scope:latria_actor
+		}
 		random = {
 			chance = latria_resolved_pregnancy_chance
 			make_pregnant = { father = prev }

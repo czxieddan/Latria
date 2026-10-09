@@ -95,6 +95,7 @@ latria_pig_embrace_recipient_culture_effect = {
 
 latria_pig_embrace_recipient_trait_effect = {
 	add_trait = latria_unclean
+	give_nickname = nick_latria_the_unclean
 }
 
 latria_pig_embrace_recipient_opinion_effect = {
