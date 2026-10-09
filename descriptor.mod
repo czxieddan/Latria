@@ -5,4 +5,5 @@ tags={
 	"Events"
 }
 name="Latria"
+picture="thumbnail.jpg"
 supported_version="1.20.*"
