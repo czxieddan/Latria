@@ -1,0 +1,26 @@
+latria_adultery_is_criminal_for_character = {
+	OR = {
+		AND = {
+			is_female = yes
+			rite = { rite_has_parameter = adultery_female_crime }
+		}
+		AND = {
+			is_male = yes
+			rite = { rite_has_parameter = adultery_male_crime }
+		}
+	}
+}
+
+latria_adultery_scandal_is_head_of_faith = {
+	any_held_title = { is_head_of_faith = yes }
+}
+
+# Public adulterer and fornicator traits are applied by vanilla secret exposure.
+latria_adultery_scandal_applies = {
+	OR = {
+		scope:trait = trait:adulterer
+		scope:trait = trait:fornicator
+	}
+	government_has_flag = government_is_theocracy
+	latria_adultery_is_criminal_for_character = yes
+}
