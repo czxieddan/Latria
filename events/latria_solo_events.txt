@@ -16,6 +16,7 @@ latria_act.0201 = {
 	}
 	option = {
 		name = latria_act.0201.a
+		latria_apply_solo_piety = yes
 	}
 	after = {
 		remove_character_flag = is_naked
