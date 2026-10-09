@@ -83,11 +83,38 @@ latria_solo_stress_culture = {
 
 latria_solo_piety_delta = {
 	value = 0
-	add = latria_solo_piety_rite
-	add = latria_solo_piety_doctrine
-	add = latria_solo_piety_culture
+	if = {
+		limit = { rite = { trait_is_sin_rite = lustful } }
+		add = latria_solo_lust_sin_piety_delta
+	}
+	else = {
+		add = latria_solo_piety_rite
+		add = latria_solo_piety_doctrine
+		add = latria_solo_piety_culture
+	}
 	min = -50
 	max = 50
+}
+
+# A lust-sinning rite sets the base loss; clerical office and vows deepen it.
+latria_solo_lust_sin_piety_delta = {
+	value = -10
+	if = {
+		limit = { is_clergy = yes }
+		add = -15
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = devoted
+				has_trait = celibate
+				has_trait = chaste
+				has_trait = temperate
+				has_trait = zealous
+			}
+		}
+		add = -10
+	}
 }
 
 latria_solo_piety_rite = {
