@@ -14,4 +14,6 @@
  trait_latria_unclean_desc: "该角色曾被当众强迫与猪交合，名声从此蒙上洗不去的污点。"
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]曾被当众强迫与猪交合，[ROOT.GetCharacter.GetHerHis]的名声从此蒙上洗不去的污点。"
 
+ nick_latria_the_unclean: "不洁者"
+
  latria_forced_pig_embrace_opinion: "强迫我与猪交合"
