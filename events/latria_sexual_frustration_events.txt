@@ -25,7 +25,6 @@ latria_act.0401 = {
 	title = latria_act.0401.t
 	theme = mental_break
 	desc = latria_act.0401.desc
-	immediate = { add_stress = { value = latria_sexual_frustration_stress_gain } }
 	option = { name = latria_act.0401.a }
 }
 
@@ -34,7 +33,7 @@ latria_act.0402 = {
 	title = latria_act.0402.t
 	theme = mental_break
 	desc = latria_act.0402.desc
-	immediate = { add_stress = { value = latria_sexual_frustration_stress_gain } }
+	immediate = { latria_charge_sexual_frustration_stress_2 = yes }
 	option = { name = latria_act.0402.a }
 }
 
@@ -43,7 +42,7 @@ latria_act.0403 = {
 	title = latria_act.0403.t
 	theme = mental_break
 	desc = latria_act.0403.desc
-	immediate = { add_stress = { value = latria_sexual_frustration_stress_gain } }
+	immediate = { latria_charge_sexual_frustration_stress_3 = yes }
 	option = { name = latria_act.0403.a }
 }
 
@@ -52,7 +51,7 @@ latria_act.0404 = {
 	title = latria_act.0404.t
 	theme = mental_break
 	desc = latria_act.0404.desc
-	immediate = { add_stress = { value = latria_sexual_frustration_stress_gain } }
+	immediate = { latria_charge_sexual_frustration_stress_4 = yes }
 	option = { name = latria_act.0404.a }
 }
 
@@ -61,7 +60,7 @@ latria_act.0405 = {
 	title = latria_act.0405.t
 	theme = mental_break
 	desc = latria_act.0405.desc
-	immediate = { add_stress = { value = latria_sexual_frustration_stress_gain } }
+	immediate = { latria_charge_sexual_frustration_stress_5 = yes }
 	option = {
 		trigger = { latria_sexual_frustration_resists_collapse = no }
 		name = latria_act.0405.a

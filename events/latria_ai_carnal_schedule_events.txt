@@ -1,0 +1,14 @@
+
+namespace = latria_act
+
+latria_act.0501 = {
+	hidden = yes
+	trigger = {
+		is_ai = yes
+		is_alive = yes
+		latria_has_sexual_need = yes
+	}
+	immediate = {
+		latria_ai_run_carnal_pulse = yes
+	}
+}
