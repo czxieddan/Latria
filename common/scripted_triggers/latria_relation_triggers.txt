@@ -20,6 +20,13 @@ latria_partner_is_soulmate = {
 	has_relation_soulmate = $PARTNER$
 }
 
+latria_partner_is_spouse_or_soulmate = {
+	OR = {
+		latria_partner_is_spouse = { PARTNER = $PARTNER$ }
+		latria_partner_is_soulmate = { PARTNER = $PARTNER$ }
+	}
+}
+
 latria_partner_is_lover = {
 	has_relation_lover = $PARTNER$
 }

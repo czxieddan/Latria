@@ -2,7 +2,22 @@
 latria_act_interval_clear = {
 	OR = {
 		latria_lack_of_ability_to_say_no = yes
+		latria_pair_act_interval_clear = { PARTNER = $PARTNER$ }
+	}
+}
+
+# Spouse and soulmate use the shorter pause. Other partners keep six months.
+latria_pair_act_interval_clear = {
+	OR = {
 		AND = {
+			latria_partner_is_spouse_or_soulmate = { PARTNER = $PARTNER$ }
+			NOT = { has_character_flag = latria_recent_close_bond_act }
+			$PARTNER$ = {
+				NOT = { has_character_flag = latria_recent_close_bond_act }
+			}
+		}
+		AND = {
+			NOT = { latria_partner_is_spouse_or_soulmate = { PARTNER = $PARTNER$ } }
 			NOT = { has_character_flag = latria_recent_carnal_act }
 			$PARTNER$ = {
 				NOT = { has_character_flag = latria_recent_carnal_act }

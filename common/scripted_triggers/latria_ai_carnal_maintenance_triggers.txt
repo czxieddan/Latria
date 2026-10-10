@@ -3,15 +3,15 @@ latria_ai_can_proposition_player = {
 	is_ai = yes
 	is_alive = yes
 	NOT = { has_character_flag = latria_player_carnal_overture }
+	NOT = { has_character_flag = latria_no_carnal_drive }
 }
 
 # Suitor scope, after latria_player_target is saved.
 latria_suitor_can_reach_player = {
-	NOT = { has_character_flag = latria_recent_carnal_act }
+	latria_pair_act_interval_clear = { PARTNER = scope:latria_player_target }
 	scope:latria_player_target = {
 		is_alive = yes
 		is_imprisoned = no
-		NOT = { has_character_flag = latria_recent_carnal_act }
 	}
 	OR = {
 		in_diplomatic_range = scope:latria_player_target
@@ -35,13 +35,45 @@ latria_consort_can_take_ai_intercourse = {
 	is_ai = yes
 	is_imprisoned = no
 	NOT = { is_pregnant = yes }
-	NOT = { has_character_flag = latria_recent_carnal_act }
+	NOT = { has_character_flag = latria_no_carnal_drive }
 	save_temporary_scope_as = latria_consort_target
 	root = {
 		is_alive = yes
 		is_imprisoned = no
 		NOT = { is_pregnant = yes }
-		NOT = { has_character_flag = latria_recent_carnal_act }
+		NOT = { has_character_flag = latria_no_carnal_drive }
+		latria_pair_act_interval_clear = { PARTNER = scope:latria_consort_target }
 		latria_can_share_intercourse = { PARTNER = scope:latria_consort_target }
+	}
+}
+
+# Spouse or concubine scope is not required. Soulmates use this too.
+latria_consort_can_take_ai_manual = {
+	is_alive = yes
+	is_ai = yes
+	is_imprisoned = no
+	NOT = { has_character_flag = latria_no_carnal_drive }
+	save_temporary_scope_as = latria_consort_target
+	root = {
+		is_alive = yes
+		is_imprisoned = no
+		NOT = { has_character_flag = latria_no_carnal_drive }
+		latria_pair_act_interval_clear = { PARTNER = scope:latria_consort_target }
+		latria_can_share_manual_act = { PARTNER = scope:latria_consort_target }
+	}
+}
+
+# Explicit target wins. Recipient is only the interaction fallback.
+latria_desire_target_is_spouse_or_soulmate = {
+	OR = {
+		AND = {
+			exists = scope:latria_desire_target
+			latria_partner_is_spouse_or_soulmate = { PARTNER = scope:latria_desire_target }
+		}
+		AND = {
+			NOT = { exists = scope:latria_desire_target }
+			exists = scope:recipient
+			latria_partner_is_spouse_or_soulmate = { PARTNER = scope:recipient }
+		}
 	}
 }
