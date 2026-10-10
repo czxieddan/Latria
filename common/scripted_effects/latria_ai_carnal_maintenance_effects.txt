@@ -3,7 +3,6 @@ latria_run_quarterly_carnal_maintenance = {
 		limit = { is_ai = no }
 		latria_send_player_carnal_overtures = yes
 	}
-	else = { latria_ai_try_consort_intercourse = yes }
 }
 
 latria_ai_proposition_player = {
@@ -24,6 +23,7 @@ latria_ai_proposition_player = {
 }
 
 latria_send_intercourse_overture = {
+	scope:latria_player_target = { save_scope_as = latria_desire_target }
 	random = {
 		chance = latria_partner_act_ai_desire
 		run_interaction = {
@@ -36,6 +36,7 @@ latria_send_intercourse_overture = {
 }
 
 latria_send_manual_overture = {
+	scope:latria_player_target = { save_scope_as = latria_desire_target }
 	random = {
 		chance = latria_manual_overture_chance
 		run_interaction = {
@@ -95,16 +96,21 @@ latria_send_player_carnal_overtures = {
 
 latria_ai_try_consort_intercourse = {
 	if = {
-		limit = {
-			is_alive = yes
-			NOT = { has_character_flag = latria_recent_carnal_act }
-		}
+		limit = { is_alive = yes }
 		every_spouse = {
 			limit = { latria_consort_can_take_ai_intercourse = yes }
 			add_to_temporary_list = latria_ai_consort_pool
 		}
 		every_concubine = {
 			limit = { latria_consort_can_take_ai_intercourse = yes }
+			add_to_temporary_list = latria_ai_consort_pool
+		}
+		every_relation = {
+			type = soulmate
+			limit = {
+				NOT = { is_consort_of = root }
+				latria_consort_can_take_ai_intercourse = yes
+			}
 			add_to_temporary_list = latria_ai_consort_pool
 		}
 		if = {
@@ -124,6 +130,7 @@ latria_ai_try_consort_intercourse = {
 }
 
 latria_roll_direct_intercourse = {
+	scope:latria_partner = { save_scope_as = latria_desire_target }
 	random = {
 		chance = latria_partner_act_ai_desire
 		latria_commit_direct_intercourse = yes
@@ -131,10 +138,92 @@ latria_roll_direct_intercourse = {
 }
 
 latria_commit_direct_intercourse = {
+	add_character_flag = {
+		flag = latria_partner_act_today
+		days = 1
+	}
 	save_scope_as = latria_actor
 	save_scope_value_as = {
 		name = latria_act_kind
 		value = flag:latria_act_intercourse
+	}
+	latria_resolve_act = yes
+}
+
+# Caress is rolled first. Intercourse still runs when that roll does not happen.
+latria_ai_try_close_manual = {
+	if = {
+		limit = { is_alive = yes }
+		every_spouse = {
+			limit = { latria_consort_can_take_ai_manual = yes }
+			add_to_temporary_list = latria_ai_manual_pool
+		}
+		every_relation = {
+			type = soulmate
+			limit = {
+				NOT = { is_spouse_of = root }
+				latria_consort_can_take_ai_manual = yes
+			}
+			add_to_temporary_list = latria_ai_manual_pool
+		}
+		if = {
+			limit = {
+				any_in_list = {
+					list = latria_ai_manual_pool
+					count > 0
+				}
+			}
+			random_in_list = {
+				list = latria_ai_manual_pool
+				save_scope_as = latria_partner
+				root = { latria_roll_direct_manual = yes }
+			}
+		}
+	}
+}
+
+latria_roll_direct_manual = {
+	scope:latria_partner = { save_scope_as = latria_desire_target }
+	random = {
+		chance = latria_manual_overture_chance
+		latria_commit_direct_manual = yes
+	}
+}
+
+latria_commit_direct_manual = {
+	add_character_flag = {
+		flag = latria_partner_act_today
+		days = 1
+	}
+	save_scope_as = latria_actor
+	save_scope_value_as = {
+		name = latria_act_kind
+		value = flag:latria_act_manual
+	}
+	latria_resolve_act = yes
+}
+
+latria_ai_try_solo_relief = {
+	if = {
+		limit = {
+			is_imprisoned = no
+			latria_can_act_alone = yes
+			latria_solo_interval_clear = yes
+			NOT = { has_character_flag = latria_no_carnal_drive }
+			NOT = { has_character_flag = latria_partner_act_today }
+		}
+		random = {
+			chance = latria_solo_relief_ai_chance
+			latria_commit_direct_solo = yes
+		}
+	}
+}
+
+latria_commit_direct_solo = {
+	save_scope_as = latria_actor
+	save_scope_value_as = {
+		name = latria_act_kind
+		value = flag:latria_act_solo
 	}
 	latria_resolve_act = yes
 }

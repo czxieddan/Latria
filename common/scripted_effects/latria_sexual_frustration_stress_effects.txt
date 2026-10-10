@@ -1,0 +1,130 @@
+# Remember the stress this crossing added. A later drop refunds that amount, not a new roll.
+latria_charge_sexual_frustration_stress_2 = {
+	save_temporary_scope_value_as = {
+		name = latria_stress_charge
+		value = latria_sexual_frustration_stress_gain
+	}
+	set_variable = {
+		name = latria_sexual_frustration_stress_2
+		value = scope:latria_stress_charge
+	}
+	add_stress = { value = scope:latria_stress_charge }
+}
+
+latria_charge_sexual_frustration_stress_3 = {
+	save_temporary_scope_value_as = {
+		name = latria_stress_charge
+		value = latria_sexual_frustration_stress_gain
+	}
+	set_variable = {
+		name = latria_sexual_frustration_stress_3
+		value = scope:latria_stress_charge
+	}
+	add_stress = { value = scope:latria_stress_charge }
+}
+
+latria_charge_sexual_frustration_stress_4 = {
+	save_temporary_scope_value_as = {
+		name = latria_stress_charge
+		value = latria_sexual_frustration_stress_gain
+	}
+	set_variable = {
+		name = latria_sexual_frustration_stress_4
+		value = scope:latria_stress_charge
+	}
+	add_stress = { value = scope:latria_stress_charge }
+}
+
+latria_charge_sexual_frustration_stress_5 = {
+	save_temporary_scope_value_as = {
+		name = latria_stress_charge
+		value = latria_sexual_frustration_stress_gain
+	}
+	set_variable = {
+		name = latria_sexual_frustration_stress_5
+		value = scope:latria_stress_charge
+	}
+	add_stress = { value = scope:latria_stress_charge }
+}
+
+latria_refund_sexual_frustration_stress_2 = {
+	if = {
+		limit = { exists = var:latria_sexual_frustration_stress_2 }
+		add_stress = {
+			value = var:latria_sexual_frustration_stress_2
+			multiply = -1
+		}
+		remove_variable = latria_sexual_frustration_stress_2
+	}
+}
+
+latria_refund_sexual_frustration_stress_3 = {
+	if = {
+		limit = { exists = var:latria_sexual_frustration_stress_3 }
+		add_stress = {
+			value = var:latria_sexual_frustration_stress_3
+			multiply = -1
+		}
+		remove_variable = latria_sexual_frustration_stress_3
+	}
+}
+
+latria_refund_sexual_frustration_stress_4 = {
+	if = {
+		limit = { exists = var:latria_sexual_frustration_stress_4 }
+		add_stress = {
+			value = var:latria_sexual_frustration_stress_4
+			multiply = -1
+		}
+		remove_variable = latria_sexual_frustration_stress_4
+	}
+}
+
+latria_refund_sexual_frustration_stress_5 = {
+	if = {
+		limit = { exists = var:latria_sexual_frustration_stress_5 }
+		add_stress = {
+			value = var:latria_sexual_frustration_stress_5
+			multiply = -1
+		}
+		remove_variable = latria_sexual_frustration_stress_5
+	}
+}
+
+latria_refund_fallen_sexual_frustration_stress = {
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration >= latria_sexual_frustration_level_5_limit
+			var:latria_sexual_frustration < latria_sexual_frustration_level_5_limit
+		}
+		latria_refund_sexual_frustration_stress_5 = yes
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration >= latria_sexual_frustration_level_4_limit
+			var:latria_sexual_frustration < latria_sexual_frustration_level_4_limit
+		}
+		latria_refund_sexual_frustration_stress_4 = yes
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration >= latria_sexual_frustration_level_3_limit
+			var:latria_sexual_frustration < latria_sexual_frustration_level_3_limit
+		}
+		latria_refund_sexual_frustration_stress_3 = yes
+	}
+	if = {
+		limit = {
+			scope:latria_prior_sexual_frustration >= latria_sexual_frustration_level_2_limit
+			var:latria_sexual_frustration < latria_sexual_frustration_level_2_limit
+		}
+		latria_refund_sexual_frustration_stress_2 = yes
+	}
+}
+
+latria_refund_all_sexual_frustration_stress = {
+	latria_refund_sexual_frustration_stress_5 = yes
+	latria_refund_sexual_frustration_stress_4 = yes
+	latria_refund_sexual_frustration_stress_3 = yes
+	latria_refund_sexual_frustration_stress_2 = yes
+}

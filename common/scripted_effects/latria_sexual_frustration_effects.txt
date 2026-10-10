@@ -161,6 +161,7 @@ latria_add_yearly_sexual_frustration = {
 latria_reduce_sexual_frustration = {
 	if = {
 		limit = { exists = var:latria_sexual_frustration }
+		latria_store_prior_sexual_frustration = yes
 		change_variable = {
 			name = latria_sexual_frustration
 			add = $RELIEF$
@@ -173,6 +174,7 @@ latria_reduce_sexual_frustration = {
 			}
 		}
 		latria_sync_sexual_frustration_level = yes
+		latria_refund_fallen_sexual_frustration_stress = yes
 	}
 }
 
@@ -217,7 +219,8 @@ latria_start_sexual_frustration_loop = {
 
 latria_stop_sexual_frustration = {
 	remove_character_flag = latria_sexual_frustration_loop
+	latria_clear_sexual_frustration_modifiers = yes
+	latria_refund_all_sexual_frustration_stress = yes
 	remove_variable = latria_sexual_frustration
 	remove_variable = latria_sexual_frustration_level
-	latria_clear_sexual_frustration_modifiers = yes
 }

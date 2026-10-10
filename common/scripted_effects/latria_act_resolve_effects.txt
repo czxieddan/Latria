@@ -14,6 +14,53 @@ latria_mark_recent_carnal_act = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			latria_partner_is_spouse_or_soulmate = { PARTNER = scope:latria_partner }
+		}
+		latria_mark_recent_close_bond_act = yes
+	}
+}
+
+# Lustful pairs wait 100 days. Other spouses and soulmates wait 165.
+# Partners who are neither still use the six-month carnal flag.
+latria_mark_recent_close_bond_act = {
+	if = {
+		limit = {
+			OR = {
+				has_trait = lustful
+				scope:latria_partner = { has_trait = lustful }
+			}
+		}
+		add_character_flag = {
+			flag = latria_recent_close_bond_act
+			days = 100
+		}
+		scope:latria_partner = {
+			if = {
+				limit = { is_alive = yes }
+				add_character_flag = {
+					flag = latria_recent_close_bond_act
+					days = 100
+				}
+			}
+		}
+	}
+	else = {
+		add_character_flag = {
+			flag = latria_recent_close_bond_act
+			days = 165
+		}
+		scope:latria_partner = {
+			if = {
+				limit = { is_alive = yes }
+				add_character_flag = {
+					flag = latria_recent_close_bond_act
+					days = 165
+				}
+			}
+		}
+	}
 }
 
 # Vanilla reads is_naked for both the nude portrait and the nightgown fallback.

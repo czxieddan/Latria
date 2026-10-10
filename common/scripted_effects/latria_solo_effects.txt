@@ -1,10 +1,10 @@
 # Called only from latria_resolve_act. Stress, piety, and fulfillment stay on that entry.
 
-# Once a day. Not the six-month pause shared with a partner.
+# Caps the AI birthday schedule. Not the pause shared with a partner.
 latria_mark_solo_interval = {
 	add_character_flag = {
 		flag = latria_recent_solo_act
-		days = 1
+		days = 130
 	}
 }
 

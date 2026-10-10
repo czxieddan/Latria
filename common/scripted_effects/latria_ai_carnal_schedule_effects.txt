@@ -1,0 +1,50 @@
+
+# Four pulses a year, spread out so month-exhaustion does not trip on one day.
+# The slice below is one quarter of the yearly gain. Two in a hundred never act:
+# unprotected characters in that slice are the frustration deaths.
+latria_roll_ai_carnal_drive = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_carnal_drive_rolled } }
+		add_character_flag = latria_carnal_drive_rolled
+		random = {
+			chance = latria_ai_no_carnal_drive_percent
+			add_character_flag = latria_no_carnal_drive
+		}
+	}
+}
+
+latria_ai_run_carnal_pulse = {
+	if = {
+		limit = {
+			is_alive = yes
+			is_ai = yes
+			latria_has_sexual_need = yes
+			NOT = { has_character_flag = latria_no_carnal_drive }
+		}
+		latria_ai_try_close_manual = yes
+		latria_ai_try_consort_intercourse = yes
+		latria_ai_try_solo_relief = yes
+	}
+	if = {
+		limit = {
+			is_alive = yes
+			latria_has_sexual_need = yes
+		}
+		latria_add_sexual_frustration = { GAIN = latria_ai_pulse_sexual_frustration_gain }
+	}
+}
+
+latria_schedule_ai_carnal_year = {
+	if = {
+		limit = {
+			is_ai = yes
+			is_alive = yes
+			latria_has_sexual_need = yes
+		}
+		latria_roll_ai_carnal_drive = yes
+		latria_ai_run_carnal_pulse = yes
+		trigger_event = { id = latria_act.0501 days = 90 }
+		trigger_event = { id = latria_act.0501 days = 180 }
+		trigger_event = { id = latria_act.0501 days = 270 }
+	}
+}
