@@ -5,28 +5,34 @@ latria_sexual_frustration_level_4_limit = 180
 latria_sexual_frustration_level_5_limit = 300
 
 latria_daily_sexual_frustration_gain = {
-	value = 0.1
+	value = 0.05
 	if = {
 		limit = {
 			age >= latria_prime_adult_age_start
 			age <= latria_prime_adult_age_end
 		}
-		add = 0.05
+		add = 0.025
 	}
-	if = { limit = { age >= latria_frustration_senior_age_start } add = -0.04 }
-	if = { limit = { has_trait = lustful } add = 0.1 }
-	if = { limit = { has_trait = chaste } add = -0.05 }
-	if = { limit = { has_trait = temperate } add = -0.02 }
-	if = { limit = { has_trait = gluttonous } add = 0.02 }
-	if = { limit = { has_trait = impatient } add = 0.02 }
-	min = 0.02
-	max = 0.3
+	if = { limit = { age >= latria_frustration_senior_age_start } add = -0.02 }
+	if = { limit = { has_trait = lustful } add = 0.05 }
+	if = { limit = { has_trait = chaste } add = -0.025 }
+	if = { limit = { has_trait = temperate } add = -0.01 }
+	if = { limit = { has_trait = gluttonous } add = 0.01 }
+	if = { limit = { has_trait = impatient } add = 0.01 }
+	min = 0.01
+	max = 0.15
 }
 
 # One birthday replaces the old daily tick. 365 keeps the yearly total.
 latria_yearly_sexual_frustration_gain = {
 	value = latria_daily_sexual_frustration_gain
 	multiply = 365
+}
+
+# One quarter of the yearly total. latria_schedule_ai_carnal_year fires four pulses.
+latria_ai_pulse_sexual_frustration_gain = {
+	value = latria_yearly_sexual_frustration_gain
+	multiply = 0.25
 }
 
 latria_sexual_frustration_stress_gain = {

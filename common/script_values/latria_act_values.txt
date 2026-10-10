@@ -75,8 +75,13 @@ latria_partner_dissatisfaction_chance = {
 	max = 90
 }
 
+latria_close_bond_desire_bonus = 24
+latria_close_bond_manual_bonus = 8
+# Unprotected characters in this slice are the frustration deaths.
+latria_ai_no_carnal_drive_percent = 2
+
 latria_partner_act_ai_desire = {
-	value = 11
+	value = 16
 	if = {
 		limit = { any_consort = { count >= 4 } }
 		add = 69
@@ -87,27 +92,77 @@ latria_partner_act_ai_desire = {
 		if = { limit = { any_child = { count = 4 } } add = 4 }
 	}
 	else = {
-		if = { limit = { any_child = { count = 0 } } add = 89 }
-		if = { limit = { any_child = { count = 1 } } add = 84 }
-		if = { limit = { any_child = { count = 2 } } add = 74 }
-		if = { limit = { any_child = { count = 3 } } add = 59 }
-		if = { limit = { any_child = { count = 4 } } add = 39 }
+		if = { limit = { any_child = { count = 0 } } add = 58 }
+		if = { limit = { any_child = { count = 1 } } add = 46 }
+		if = { limit = { any_child = { count = 2 } } add = 30 }
+		if = { limit = { any_child = { count = 3 } } add = 14 }
+		if = { limit = { any_child = { count = 4 } } add = 4 }
 	}
-	if = { limit = { has_trait = lustful } add = 10 }
-	if = { limit = { has_trait = chaste } add = -20 }
+	if = { limit = { has_trait = lustful } add = 36 }
+	if = { limit = { has_trait = chaste } add = -160 }
+	if = { limit = { has_trait = temperate } add = -35 }
 	if = { limit = { has_character_modifier = latria_sexual_frustration_3 } add = 10 }
 	if = { limit = { has_character_modifier = latria_sexual_frustration_4 } add = 20 }
 	if = { limit = { has_character_modifier = latria_sexual_frustration_5 } add = 30 }
+	if = { limit = { latria_desire_target_is_spouse_or_soulmate = yes } add = latria_close_bond_desire_bonus }
+	if = { limit = { has_trait = chaste } multiply = 0 }
+	if = { limit = { has_character_flag = latria_no_carnal_drive } multiply = 0 }
+	if = {
+		limit = {
+			exists = scope:latria_desire_target
+			scope:latria_desire_target = { has_trait = chaste }
+		}
+		multiply = 0
+	}
+	if = {
+		limit = {
+			exists = scope:latria_desire_target
+			scope:latria_desire_target = { has_character_flag = latria_no_carnal_drive }
+		}
+		multiply = 0
+	}
 	if = { limit = { is_pregnant = yes } multiply = 0.1 }
-	min = 1
+	min = 0
 	max = 100
 }
 
-# Same weights as the manual interaction ai_will_do. Player overtures roll this.
+# Player overtures and the manual interaction both read this.
 latria_manual_overture_chance = {
 	value = 5
-	if = { limit = { has_trait = lustful } add = 20 }
-	if = { limit = { has_trait = chaste } add = -40 }
+	if = { limit = { has_trait = lustful } add = 8 }
+	if = { limit = { has_trait = chaste } add = -80 }
+	if = { limit = { has_trait = temperate } add = -20 }
+	if = { limit = { latria_desire_target_is_spouse_or_soulmate = yes } add = latria_close_bond_manual_bonus }
+	if = { limit = { has_trait = chaste } multiply = 0 }
+	if = { limit = { has_character_flag = latria_no_carnal_drive } multiply = 0 }
+	if = {
+		limit = {
+			exists = scope:latria_desire_target
+			scope:latria_desire_target = { has_trait = chaste }
+		}
+		multiply = 0
+	}
+	if = {
+		limit = {
+			exists = scope:latria_desire_target
+			scope:latria_desire_target = { has_character_flag = latria_no_carnal_drive }
+		}
+		multiply = 0
+	}
+	min = 0
+	max = 100
+}
+
+# AI birthday schedule. Chaste and temperate stay near zero; lustful does not.
+latria_solo_relief_ai_chance = {
+	value = 62
+	if = { limit = { has_trait = lustful } add = 30 }
+	if = { limit = { has_trait = chaste } add = -100 }
+	if = { limit = { has_trait = temperate } add = -80 }
+	if = { limit = { stress >= low_stress } add = 40 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_3 } add = 10 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_4 } add = 20 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_5 } add = 30 }
 	min = 0
 	max = 100
 }
