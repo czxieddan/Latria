@@ -252,14 +252,6 @@ latria_propose_manual_interaction = {
 		}
 	}
 	ai_will_do = {
-		base = 5
-		modifier = {
-			add = 20
-			has_trait = lustful
-		}
-		modifier = {
-			add = -40
-			has_trait = chaste
-		}
+		base = latria_manual_overture_chance
 	}
 }
