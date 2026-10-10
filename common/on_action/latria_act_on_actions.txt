@@ -40,6 +40,13 @@ latria_sexual_frustration_birthday = {
 			latria_start_sexual_frustration_loop = yes
 		}
 		else_if = {
+			limit = {
+				is_ai = yes
+				latria_has_sexual_need = yes
+			}
+			latria_schedule_ai_carnal_year = yes
+		}
+		else_if = {
 			limit = { latria_has_sexual_need = yes }
 			latria_add_yearly_sexual_frustration = yes
 		}
