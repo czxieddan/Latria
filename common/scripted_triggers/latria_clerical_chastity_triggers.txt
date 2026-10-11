@@ -1,0 +1,26 @@
+latria_is_unvowed_clerical_chastity_witness = {
+	is_alive = yes
+	NOT = { has_character_modifier = clerical_chastity_vow_modifier }
+}
+
+latria_can_report_clerical_chastity_breach = {
+	latria_is_unvowed_clerical_chastity_witness = yes
+	piety_level >= 2
+	rite = $OATHBREAKER$.rite
+	$OATHBREAKER$ = {
+		NOR = {
+			has_trait = excommunicated
+			has_character_modifier = excommunication_recently_lifted
+		}
+		OR = {
+			faith.religious_head ?= {
+				is_alive = yes
+				this != $OATHBREAKER$
+			}
+			rite.head_of_rite ?= {
+				is_alive = yes
+				this != $OATHBREAKER$
+			}
+		}
+	}
+}
