@@ -60,21 +60,14 @@ latria_record_partner_adultery_suspicion = {
 	}
 }
 
-# Only the participant who is breaking an existing bond gets suspicion state.
+# Both participants retain the affair state when either breaks an existing bond.
 latria_record_adultery_suspicion = {
 	if = {
 		limit = {
-			latria_has_bound_partner = yes
 			latria_act_is_adultery = { PARTNER = scope:latria_partner }
 		}
 		latria_record_actor_adultery_suspicion = yes
-	}
-	scope:latria_partner = {
-		if = {
-			limit = {
-				latria_has_bound_partner = yes
-				latria_act_is_adultery = { PARTNER = scope:latria_actor }
-			}
+		scope:latria_partner = {
 			latria_record_partner_adultery_suspicion = yes
 		}
 	}
