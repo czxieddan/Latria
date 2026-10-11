@@ -95,3 +95,8 @@
  latria_act_exhausted_health_desc: "身体尚未恢复。"
  latria_act_depleted_health: "积劳亏虚"
  latria_act_depleted_health_desc: "长久的消耗伤了身体。"
+
+ latria_clerical_chastity_vow_broken_toast: "违背贞洁誓愿"
+ latria_clerical_chastity_breach_hook_toast: "违誓把柄在手"
+ latria_clerical_chastity_breach_reported_toast: "收到违誓揭发"
+ latria_clerical_chastity_breach_denounced_toast: "违誓已被揭发"

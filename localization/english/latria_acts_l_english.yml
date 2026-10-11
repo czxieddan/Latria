@@ -95,3 +95,8 @@
  latria_act_exhausted_health_desc: "The body has yet to recover."
  latria_act_depleted_health: "Depleted Constitution"
  latria_act_depleted_health_desc: "Long exertion has injured the body."
+
+ latria_clerical_chastity_vow_broken_toast: "Chastity Vow Broken"
+ latria_clerical_chastity_breach_hook_toast: "A Broken Vow in Your Hands"
+ latria_clerical_chastity_breach_reported_toast: "A Broken Chastity Vow Reported"
+ latria_clerical_chastity_breach_denounced_toast: "The Broken Vow Denounced"
