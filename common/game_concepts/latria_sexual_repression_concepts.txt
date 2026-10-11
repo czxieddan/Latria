@@ -1,0 +1,8 @@
+﻿latria_sexual_repression = {
+	texture = "gfx/interface/icons/latria_sexual_frustration_flat.dds"
+}
+
+latria_sexual_repression_level = {
+	parent = latria_sexual_repression
+	texture = "gfx/interface/icons/latria_sexual_frustration_5.dds"
+}
