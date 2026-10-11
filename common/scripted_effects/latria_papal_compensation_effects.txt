@@ -1,0 +1,79 @@
+latria_pay_papal_reparations_2000 = {
+	pay_short_term_gold = {
+		target = scope:latria_papal_victor
+		gold = 2000
+	}
+	add_prestige = -2000
+	scope:latria_papal_victor = { add_prestige = 2000 }
+}
+
+latria_pay_papal_reparations_1000 = {
+	pay_short_term_gold = {
+		target = scope:latria_papal_victor
+		gold = 1000
+	}
+	add_prestige = -1000
+	scope:latria_papal_victor = { add_prestige = 1000 }
+}
+
+latria_pay_papal_reparations_500 = {
+	pay_short_term_gold = {
+		target = scope:latria_papal_victor
+		gold = 500
+	}
+	add_prestige = -500
+	scope:latria_papal_victor = { add_prestige = 500 }
+}
+
+latria_pay_papal_reparations_250 = {
+	pay_short_term_gold = {
+		target = scope:latria_papal_victor
+		gold = 250
+	}
+	add_prestige = -250
+	scope:latria_papal_victor = { add_prestige = 250 }
+}
+
+latria_pay_papal_reparations_100 = {
+	pay_short_term_gold = {
+		target = scope:latria_papal_victor
+		gold = 100
+	}
+	add_prestige = -100
+	scope:latria_papal_victor = { add_prestige = 100 }
+}
+
+latria_pay_papal_reparations_by_rank = {
+	if = {
+		limit = {
+			OR = {
+				highest_held_title_tier = tier_hegemony
+				highest_held_title_tier = tier_empire
+			}
+		}
+		latria_pay_papal_reparations_2000 = yes
+	}
+	else_if = {
+		limit = { highest_held_title_tier = tier_kingdom }
+		latria_pay_papal_reparations_1000 = yes
+	}
+	else_if = {
+		limit = { highest_held_title_tier = tier_duchy }
+		latria_pay_papal_reparations_500 = yes
+	}
+	else_if = {
+		limit = { highest_held_title_tier = tier_county }
+		latria_pay_papal_reparations_250 = yes
+	}
+	else = {
+		latria_pay_papal_reparations_100 = yes
+	}
+}
+
+latria_collect_papal_scandal_reparations = {
+	scope:latria_scandal_war = {
+		every_war_attacker = {
+			latria_pay_papal_reparations_by_rank = yes
+		}
+	}
+}

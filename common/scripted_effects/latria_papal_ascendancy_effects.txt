@@ -1,0 +1,51 @@
+latria_reform_papal_rite_after_scandal_victory = {
+	rite = {
+		if = {
+			limit = { scope:latria_papal_victor = { is_male = yes } }
+			change_rite_doctrine = doctrine_adultery_men_accepted
+		}
+		else = {
+			change_rite_doctrine = doctrine_adultery_women_accepted
+		}
+		change_rite_doctrine = doctrine_clerical_marriage_allowed
+	}
+}
+
+latria_grant_papal_scandal_victory_rewards = {
+	add_realm_law_skip_effects = crown_authority_3
+	if = {
+		limit = { NOT = { has_trait = conqueror } }
+		add_trait = conqueror
+	}
+	if = {
+		limit = { NOT = { has_character_modifier = ai_extreme_conqueror_modifier } }
+		add_character_modifier = { modifier = ai_extreme_conqueror_modifier }
+	}
+	if = {
+		limit = { NOT = { has_trait = latria_army_of_god } }
+		add_trait = latria_army_of_god
+	}
+	set_variable = {
+		name = latria_papal_redemption_unlocked
+		value = yes
+	}
+}
+
+latria_announce_papal_ascendancy = {
+	if = {
+		limit = { is_ai = no }
+		trigger_event = latria_papal_ascendancy.0001
+	}
+	every_player = {
+		limit = { this != scope:latria_papal_victor }
+		trigger_event = latria_papal_ascendancy.0002
+	}
+}
+
+latria_apply_papal_scandal_victory = {
+	save_scope_as = latria_papal_victor
+	latria_reform_papal_rite_after_scandal_victory = yes
+	latria_grant_papal_scandal_victory_rewards = yes
+	latria_collect_papal_scandal_reparations = yes
+	latria_announce_papal_ascendancy = yes
+}

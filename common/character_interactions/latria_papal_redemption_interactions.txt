@@ -1,0 +1,70 @@
+latria_papal_redemption_or_ruin = {
+	category = interaction_category_vassal
+	icon = invasion
+	popup_on_receive = yes
+	pause_on_receive = yes
+	common_interaction = yes
+	force_notification = yes
+	ai_maybe = yes
+	interface_priority = 300
+	desc = latria_papal_redemption_or_ruin_desc
+	greeting = negative
+	notification_text = LATRIA_PAPAL_REDEMPTION_OR_RUIN_NOTIFICATION
+	can_send_despite_rejection = yes
+
+	ai_targets = { ai_recipients = neighboring_rulers }
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 3
+		empire = 3
+		hegemony = 3
+	}
+
+	is_available = {
+		scope:actor = { latria_papal_redemption_is_unlocked = yes }
+	}
+
+	is_shown = {
+		scope:actor = { latria_papal_redemption_is_unlocked = yes }
+		scope:actor != scope:recipient
+		scope:recipient = {
+			is_landed = yes
+			is_independent_ruler = yes
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		scope:recipient = {
+			NOT = { is_at_war_with = scope:actor }
+		}
+	}
+
+	ai_min_reply_days = 3
+	ai_max_reply_days = 5
+
+	ai_accept = {
+		base = -50
+		offer_vassalization_interaction_ai_acceptance_general = yes
+	}
+
+	on_accept = {
+		latria_force_papal_submission = {
+			REDEEMER = scope:actor
+			SUBJECT = scope:recipient
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			start_war = {
+				cb = latria_papal_redemption_war
+				target = scope:recipient
+				target_title = scope:recipient.primary_title
+			}
+		}
+	}
+
+	ai_will_do = { base = 100 }
+}

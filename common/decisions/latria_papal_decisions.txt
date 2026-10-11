@@ -1,0 +1,35 @@
+latria_reveal_papal_secret_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	decision_group_type = religious
+	desc = latria_reveal_papal_secret_decision_desc
+	selection_tooltip = latria_reveal_papal_secret_decision_tooltip
+
+	is_shown = {
+		is_ai = no
+		latria_is_canonical_pope = yes
+		latria_adultery_is_criminal_for_character = yes
+		NOR = {
+			has_trait = adulterer
+			has_trait = fornicator
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		latria_can_reveal_papal_secret = yes
+	}
+
+	effect = { latria_reveal_papal_secret = yes }
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	ai_potential = { always = no }
+	ai_will_do = { base = 0 }
+}

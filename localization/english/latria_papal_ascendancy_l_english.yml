@@ -1,0 +1,29 @@
+﻿l_english:
+ latria_papal_ascendancy.0001.t: "The Throne Above Every Crown"
+ latria_papal_ascendancy.0001.desc: "Before the gathered prelates, I raise my hand over the broken banners of those who came to cast me down. God did not preserve His vicar so that I might bargain with princes. By His command, the Holy See shall wield undivided authority and carry salvation to every realm."
+ latria_papal_ascendancy.0001.a: "Let the world kneel before the Holy See"
+
+ latria_papal_ascendancy.0002.t: "The Vicar's Mandate"
+ latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] has broken the host raised against the Holy See. Before the clergy and the defeated princes, [latria_papal_victor.GetSheHe] proclaims that God has entrusted [latria_papal_victor.GetHerHim] with absolute authority and the salvation of the world."
+ latria_papal_ascendancy.0002.a: "A new order begins"
+
+ trait_latria_army_of_god: "Army of God"
+ trait_latria_army_of_god_desc: "This character commands a host consecrated to the absolute authority of the Holy See."
+ trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] commands a host consecrated to the absolute authority of the Holy See."
+
+ latria_papal_redemption_or_ruin: "Redemption or Ruin"
+ latria_papal_redemption_or_ruin_desc: "Demand that [recipient.GetShortUINameNoTooltip] submit to the Holy See and adopt [actor.GetShortUINamePossessiveNoTooltip] [rite|E]. Refusal will bring war."
+ LATRIA_PAPAL_REDEMPTION_OR_RUIN_NOTIFICATION: "[actor.GetShortUIName] demands your submission to the Holy See and conversion to [actor.GetHerHis] [rite|E]."
+
+ latria_reveal_papal_secret_decision: "Reveal the Secret"
+ latria_reveal_papal_secret_decision_desc: "I will name my secret before the clergy and princes. Let every ruler hear it from my own mouth, and let those who deny my office take up arms."
+ latria_reveal_papal_secret_decision_tooltip: "Publicly reveal your affair and face the deposition war."
+ latria_reveal_papal_secret_decision_confirm: "Reveal it before all"
+
+ latria_papal_redemption_war: "Papal War of Redemption"
+ LATRIA_PAPAL_REDEMPTION_CB_NAME: "Papal Redemption"
+ LATRIA_PAPAL_REDEMPTION_WAR_NAME: "[ATTACKER.GetPrimaryTitle.GetAdjective] War of Redemption against [DEFENDER.GetPrimaryTitle.GetBaseNameNoTier]"
+ LATRIA_PAPAL_REDEMPTION_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective] War of Redemption"
+ latria_papal_redemption_war_victory_desc: "The defender is reduced in rank, made a vassal of the Pope, and converted to the Pope's [rite|E]."
+ latria_papal_redemption_war_white_peace_desc: "The demand for submission is withdrawn."
+ latria_papal_redemption_war_defeat_desc: "The Pope's demand for submission is defeated."

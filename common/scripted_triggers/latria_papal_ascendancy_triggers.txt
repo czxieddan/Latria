@@ -1,0 +1,22 @@
+latria_is_canonical_pope = {
+	has_title = title:k_papal_state
+	latria_adultery_scandal_is_head_of_faith = yes
+}
+
+latria_papal_redemption_is_unlocked = {
+	latria_is_canonical_pope = yes
+	has_variable = latria_papal_redemption_unlocked
+}
+
+latria_can_reveal_papal_secret = {
+	latria_is_canonical_pope = yes
+	latria_adultery_is_criminal_for_character = yes
+	NOR = {
+		has_trait = adulterer
+		has_trait = fornicator
+	}
+	OR = {
+		any_secret = { type = secret_lover }
+		exists = var:had_recent_sex_with
+	}
+}

@@ -1,0 +1,29 @@
+﻿l_simp_chinese:
+ latria_papal_ascendancy.0001.t: "凌驾诸冠的宝座"
+ latria_papal_ascendancy.0001.desc: "在众教士面前，我于叛军折断的旗帜间举起手。上帝保全祂的代牧，不是为了让我同诸侯讨价还价。奉祂的旨意，圣座将执掌不容分割的权威，把救赎带到每一片国土。"
+ latria_papal_ascendancy.0001.a: "让世界跪伏于圣座之前"
+
+ latria_papal_ascendancy.0002.t: "代牧的天命"
+ latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName]击溃了为废黜圣座而来的大军。在教士与战败诸侯面前，[latria_papal_victor.GetSheHe]宣告上帝已将绝对的权威与救赎世界的使命托付给[latria_papal_victor.GetHerHim]。"
+ latria_papal_ascendancy.0002.a: "新的秩序开始了"
+
+ trait_latria_army_of_god: "上帝之师"
+ trait_latria_army_of_god_desc: "该角色统率一支奉献于圣座绝对权威的军队。"
+ trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]统率一支奉献于圣座绝对权威的军队。"
+
+ latria_papal_redemption_or_ruin: "救赎或毁灭"
+ latria_papal_redemption_or_ruin_desc: "要求[recipient.GetShortUINameNoTooltip]臣服于圣座并改信[actor.GetShortUINamePossessiveNoTooltip]的[rite|E]。拒绝即意味着战争。"
+ LATRIA_PAPAL_REDEMPTION_OR_RUIN_NOTIFICATION: "[actor.GetShortUIName]要求你臣服于圣座，并改信[actor.GetHerHis]的[rite|E]。"
+
+ latria_reveal_papal_secret_decision: "公开秘密"
+ latria_reveal_papal_secret_decision_desc: "我将亲自在教士与诸侯面前说出这个秘密。每位统治者都会从我口中听见真相，否认我职分的人自可举兵而来。"
+ latria_reveal_papal_secret_decision_tooltip: "公开你的私通，并面对随之而来的废黜战争。"
+ latria_reveal_papal_secret_decision_confirm: "当众公开"
+
+ latria_papal_redemption_war: "教皇救赎战争"
+ LATRIA_PAPAL_REDEMPTION_CB_NAME: "教皇的救赎"
+ LATRIA_PAPAL_REDEMPTION_WAR_NAME: "[ATTACKER.GetPrimaryTitle.GetAdjective]对[DEFENDER.GetPrimaryTitle.GetBaseNameNoTier]的救赎战争"
+ LATRIA_PAPAL_REDEMPTION_WAR_NAME_BASE: "[ATTACKER.GetPrimaryTitle.GetAdjective]救赎战争"
+ latria_papal_redemption_war_victory_desc: "防守方将被降级，臣服于教皇并改信教皇的[rite|E]。"
+ latria_papal_redemption_war_white_peace_desc: "臣服要求被撤回。"
+ latria_papal_redemption_war_defeat_desc: "教皇的臣服要求遭到挫败。"

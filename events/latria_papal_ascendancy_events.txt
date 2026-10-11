@@ -1,0 +1,35 @@
+namespace = latria_papal_ascendancy
+
+latria_papal_ascendancy.0001 = {
+	type = character_event
+	window = fullscreen_event
+	queue_icon = "gfx/interface/icons/situation_types/christian_church.dds"
+	title = latria_papal_ascendancy.0001.t
+	desc = latria_papal_ascendancy.0001.desc
+	theme = christian
+	override_background = { reference = pam_the_christian_church_zeal }
+
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	option = { name = latria_papal_ascendancy.0001.a }
+}
+
+latria_papal_ascendancy.0002 = {
+	type = character_event
+	window = fullscreen_event
+	queue_icon = "gfx/interface/icons/situation_types/christian_church.dds"
+	title = latria_papal_ascendancy.0002.t
+	desc = latria_papal_ascendancy.0002.desc
+	theme = christian
+	override_background = { reference = pam_the_christian_church_zeal }
+
+	left_portrait = {
+		character = scope:latria_papal_victor
+		animation = personality_zealous
+	}
+
+	option = { name = latria_papal_ascendancy.0002.a }
+}

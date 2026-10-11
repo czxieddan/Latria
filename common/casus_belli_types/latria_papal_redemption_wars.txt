@@ -1,0 +1,68 @@
+latria_papal_redemption_war = {
+	icon = invasion
+	group = event
+	allow_hostages = no
+
+	allowed_for_character = {
+		latria_papal_redemption_is_unlocked = yes
+	}
+
+	allowed_against_character = {
+		scope:defender = {
+			is_landed = yes
+			is_independent_ruler = yes
+		}
+	}
+
+	should_invalidate = {
+		scope:defender = {
+			OR = {
+				is_landed = no
+				is_independent_ruler = no
+			}
+		}
+	}
+
+	on_invalidated_desc = msg_subjugation_war_invalidated_message
+	on_invalidated = {}
+	on_declaration = { on_declared_war = yes }
+
+	on_victory_desc = { desc = latria_papal_redemption_war_victory_desc }
+	on_victory = {
+		latria_force_papal_submission = {
+			REDEEMER = scope:attacker
+			SUBJECT = scope:defender
+		}
+		add_truce_attacker_victory_effect = yes
+	}
+
+	on_white_peace_desc = { desc = latria_papal_redemption_war_white_peace_desc }
+	on_white_peace = {
+		scope:attacker = { add_prestige = -250 }
+		add_truce_white_peace_effect = yes
+	}
+
+	on_defeat_desc = { desc = latria_papal_redemption_war_defeat_desc }
+	on_defeat = {
+		scope:attacker = { add_prestige = -500 }
+		scope:defender = { add_prestige = 250 }
+		add_truce_attacker_defeat_effect = yes
+	}
+
+	transfer_behavior = transfer
+	on_primary_attacker_death = inherit
+	on_primary_defender_death = inherit
+	attacker_allies_inherit = yes
+	defender_allies_inherit = yes
+
+	war_name = "LATRIA_PAPAL_REDEMPTION_WAR_NAME"
+	war_name_base = "LATRIA_PAPAL_REDEMPTION_WAR_NAME_BASE"
+	cb_name = "LATRIA_PAPAL_REDEMPTION_CB_NAME"
+	interface_priority = 200
+
+	ticking_war_score_targets_entire_realm = yes
+	attacker_wargoal_percentage = 0.8
+	attacker_ticking_warscore = 0
+	max_defender_score_from_occupation = 150
+	max_attacker_score_from_occupation = 150
+}

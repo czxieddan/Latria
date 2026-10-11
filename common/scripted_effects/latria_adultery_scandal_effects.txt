@@ -45,20 +45,53 @@ latria_collect_head_of_faith_depose_attackers = {
 	}
 }
 
-latria_start_head_of_faith_depose_wars = {
-	# Scripted declaration bypasses the AI-only selection rule on depose_war.
-	every_in_list = {
+latria_select_head_of_faith_depose_war_leader = {
+	ordered_in_list = {
 		list = latria_scandal_attackers
-		start_war = {
-			casus_belli = depose_war
-			target = scope:latria_scandal_target
+		order_by = current_military_strength
+		max = 1
+		save_scope_as = latria_scandal_war_leader
+	}
+}
+
+latria_start_head_of_faith_depose_war = {
+	if = {
+		limit = { exists = scope:latria_scandal_war_leader }
+		scope:latria_scandal_war_leader = {
+			# Scripted declaration bypasses the AI-only selection rule on depose_war.
+			start_war = {
+				casus_belli = depose_war
+				target = scope:latria_scandal_target
+			}
+			random_character_war = {
+				limit = {
+					using_cb = depose_war
+					primary_attacker = scope:latria_scandal_war_leader
+					primary_defender = scope:latria_scandal_target
+				}
+				set_variable = {
+					name = latria_adultery_scandal_war
+					value = yes
+				}
+				every_in_list = {
+					list = latria_scandal_attackers
+					limit = {
+						NOR = {
+							is_attacker_in_war = prev
+							is_defender_in_war = prev
+						}
+					}
+					prev = { add_attacker = prev }
+				}
+			}
 		}
 	}
 }
 
 latria_punish_adulterous_head_of_faith = {
 	latria_collect_head_of_faith_depose_attackers = yes
-	latria_start_head_of_faith_depose_wars = yes
+	latria_select_head_of_faith_depose_war_leader = yes
+	latria_start_head_of_faith_depose_war = yes
 }
 
 latria_punish_adulterous_theocratic_ruler = {
