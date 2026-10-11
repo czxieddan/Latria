@@ -1,0 +1,392 @@
+types LatriaSexualFrustrationTooltip {
+	type latria_sexual_frustration_hud_tooltip = object_tooltip_pop_out {
+		blockoverride "title_text" {
+			margin = { 0 8 }
+			text = "latria_sexual_frustration_hud_title"
+			default_format = "#T"
+		}
+
+		blockoverride "concept_link" {
+			text = "[latria_sexual_repression|E]"
+		}
+
+		blockoverride "subheading" {
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				autoresize = yes
+				fontsize_min = 14
+				using = Font_Size_Small
+				text = "latria_sexual_frustration_hud_subheading"
+				default_format = "#weak"
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+				max_width = 400
+				margin_top = -4
+			}
+		}
+
+		blockoverride "header_additions" {
+			widget = {
+				size = { 120 74 }
+
+				widget = {
+					size = { 240 74 }
+					position = { -16 0 }
+
+					proportional_icon = {
+						size = { 100% 100% }
+						texture = "gfx/interface/window_legend_chronicle/expected_legitimacy_decoration.dds"
+						using = Mask_Rough_Edges
+
+						modify_texture = {
+							texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+							blend_mode = alphaMultiply
+						}
+					}
+				}
+			}
+		}
+
+		blockoverride "main_description" {
+			vbox = {
+				layoutpolicy_horizontal = expanding
+				margin_right = 10
+
+				cooltip_paragraph = {
+					visible = "[Or( Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet ), EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+					text = "latria_sexual_frustration_no_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)1' )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_1')]"
+					text = "latria_sexual_frustration_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)2' )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_2')]"
+					text = "latria_sexual_frustration_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)3' )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_3')]"
+					text = "latria_sexual_frustration_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)4' )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_4')]"
+					text = "latria_sexual_frustration_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)5' )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_5')]"
+					text = "latria_sexual_frustration_level_effects"
+					max_width = 500
+				}
+
+				spacer = {
+					size = { 0 15 }
+				}
+
+				hbox = {
+					datacontext = "[GuiScope.SetRoot( GetPlayer.MakeScope ).GetScriptValueBreakdown( 'latria_daily_sexual_frustration_gain' )]"
+					layoutpolicy_horizontal = expanding
+					using = tooltip_se
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						text = "latria_daily_sexual_frustration_gain_display"
+						align = nobaseline
+					}
+
+					tooltip_visible = "[ValueBreakdown.HasTooltip]"
+					tooltipwidget = {
+						widget_value_breakdown_tooltip = {}
+					}
+					expand = {}
+				}
+
+				spacer = {
+					size = { 0 15 }
+				}
+
+				hbox = {
+					name = "track_header"
+					layoutpolicy_horizontal = expanding
+					spacing = 5
+					margin_left = -10
+					min_height = 45
+
+					background = {
+						using = Background_Area
+						margin = { -5 -5 }
+
+						modify_texture = {
+							texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+							blend_mode = alphaMultiply
+						}
+					}
+
+					icon_flat_standard = {
+						size = { 36 36 }
+						texture = "gfx/interface/icons/latria_sexual_frustration_flat.dds"
+					}
+
+					text_single = {
+						text = "latria_sexual_frustration_track_title"
+						layoutpolicy_horizontal = expanding
+						align = nobaseline
+					}
+				}
+
+				margin_widget = {
+					size = { 500 50 }
+					margin = { 10 0 }
+
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						layoutpolicy_vertical = expanding
+						margin_top = 30
+
+							widget = {
+								layoutpolicy_horizontal = expanding
+								layoutpolicy_vertical = expanding
+								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)300', '(int32)480' )]"
+
+								background = {
+									texture = "gfx/interface/progressbars/progress_standard.dds"
+								}
+							}
+
+							widget = {
+								layoutpolicy_horizontal = expanding
+								layoutpolicy_vertical = expanding
+								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxOtherScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)300', '(int32)480' )]"
+
+								background = {
+									texture = "gfx/interface/progressbars/progress_black.dds"
+								}
+							}
+						}
+
+						widget = {
+							position = { 0 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "0"
+								}
+								blockoverride "active_visibility" {
+									visible = "[Or( Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet ), EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[And( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet, Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_zero_tooltip = {}
+									}
+								}
+							}
+						}
+
+						widget = {
+							position = { 32 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "1"
+								}
+								blockoverride "marker_line" {
+									icon = {
+										texture = "gfx/interface/colors/white.dds"
+										using = Mask_Rough_Edges
+										position = { -4 28 }
+										size = { 8 40 }
+										alpha = 0.4
+									}
+								}
+								blockoverride "active_visibility" {
+									visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)1' )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)1' ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_tooltip = {
+											datacontext = "[GetModifier('latria_sexual_frustration_1')]"
+										}
+									}
+								}
+							}
+						}
+
+						widget = {
+							position = { 80 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "2"
+								}
+								blockoverride "marker_line" {
+									icon = {
+										texture = "gfx/interface/colors/white.dds"
+										using = Mask_Rough_Edges
+										position = { -4 28 }
+										size = { 8 40 }
+										alpha = 0.4
+									}
+								}
+								blockoverride "active_visibility" {
+									visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)2' )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)2' ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_tooltip = {
+											datacontext = "[GetModifier('latria_sexual_frustration_2')]"
+											blockoverride "threshold_text" {
+												text = "latria_sexual_frustration_requires_50"
+											}
+										}
+									}
+								}
+							}
+						}
+
+						widget = {
+							position = { 160 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "3"
+								}
+								blockoverride "marker_line" {
+									icon = {
+										texture = "gfx/interface/colors/white.dds"
+										using = Mask_Rough_Edges
+										position = { -4 28 }
+										size = { 8 40 }
+										alpha = 0.4
+									}
+								}
+								blockoverride "active_visibility" {
+									visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)3' )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)3' ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_tooltip = {
+											datacontext = "[GetModifier('latria_sexual_frustration_3')]"
+											blockoverride "threshold_text" {
+												text = "latria_sexual_frustration_requires_100"
+											}
+										}
+									}
+								}
+							}
+						}
+
+						widget = {
+							position = { 288 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "4"
+								}
+								blockoverride "marker_line" {
+									icon = {
+										texture = "gfx/interface/colors/white.dds"
+										using = Mask_Rough_Edges
+										position = { -4 28 }
+										size = { 8 40 }
+										alpha = 0.4
+									}
+								}
+								blockoverride "active_visibility" {
+									visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)4' )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)4' ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_tooltip = {
+											datacontext = "[GetModifier('latria_sexual_frustration_4')]"
+											blockoverride "threshold_text" {
+												text = "latria_sexual_frustration_requires_180"
+											}
+										}
+									}
+								}
+							}
+						}
+
+						widget = {
+							position = { 480 0 }
+							size = { 0 50 }
+							allow_outside = yes
+
+							latria_sexual_frustration_track_marker = {
+								blockoverride "marker_text" {
+									raw_text = "5"
+								}
+								blockoverride "marker_line" {
+									icon = {
+										texture = "gfx/interface/colors/white.dds"
+										using = Mask_Rough_Edges
+										position = { -4 28 }
+										size = { 8 40 }
+										alpha = 0.4
+									}
+								}
+								blockoverride "active_visibility" {
+									visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)5' )]"
+								}
+								blockoverride "inactive_visibility" {
+									visible = "[Not( EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)5' ) )]"
+								}
+								blockoverride "level_tooltip" {
+									tooltipwidget = {
+										latria_sexual_frustration_level_tooltip = {
+											datacontext = "[GetModifier('latria_sexual_frustration_5')]"
+											blockoverride "threshold_text" {
+												text = "latria_sexual_frustration_requires_300"
+											}
+										}
+									}
+								}
+							}
+					}
+				}
+
+				spacer = {
+					size = { 0 15 }
+				}
+			}
+		}
+	}
+}

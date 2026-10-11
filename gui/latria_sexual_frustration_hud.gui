@@ -1,0 +1,73 @@
+types LatriaSexualFrustrationHud {
+	type latria_sexual_frustration_hud_button = button_normal {
+		parentanchor = bottom|left
+		widgetanchor = bottom|left
+		position = { 101 -37 }
+		size = { 48 48 }
+		using = tooltip_ne
+
+		tooltipwidget = {
+			latria_sexual_frustration_hud_tooltip = {}
+		}
+
+		icon = {
+			texture = "gfx/interface/icons/activity_phases/button_activity_base.dds"
+			size = { 100% 100% }
+		}
+
+		icon = {
+			name = "progress_frame"
+			texture = "gfx/interface/progressbars/action_progress_frame.dds"
+			size = { 100% 100% }
+		}
+
+		icon = {
+			visible = "[Or( Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet ), EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+			parentanchor = vcenter
+			position = { 6 0 }
+			size = { 36 36 }
+			texture = "gfx/interface/icons/latria_sexual_frustration_0.dds"
+		}
+
+		icon = {
+			visible = "[GreaterThan_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' )]"
+			parentanchor = vcenter
+			position = { 6 0 }
+			size = { 36 36 }
+			texture = "gfx/interface/icons/latria_sexual_frustration_levels.dds"
+			framesize = { 70 70 }
+			frame = "[IntToFrameIndex( Subtract_int32( FixedPointToInt( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue ), '(int32)1' ) )]"
+		}
+
+		progresspie = {
+			name = "progress"
+			size = { 42 42 }
+			texture = "gfx/interface/progressbars/action_progress_thin_blue.dds"
+			framesize = { 128 128 }
+			frame = 2
+			min = 0
+			max = 300
+			value = "[FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue )]"
+			parentanchor = center
+
+			modify_texture = {
+				texture = "gfx/interface/colors/blue.dds"
+				blend_mode = normal
+			}
+		}
+	}
+}
+
+widget = {
+	name = "latria_sexual_frustration_hud_root"
+	size = { 100% 100% }
+	layer = hud_layer
+	alwaystransparent = yes
+	allow_outside = yes
+	visible = "[And( GetPlayer.IsValid, And( And( Not( IsPauseMenuShown ), IsDefaultGUIMode ), And( And( Not( IsGameViewOpen('barbershop') ), Not( GetVariableSystem.Exists('hide_bottom_left_HUD') ) ), Not( GreaterThan_CFixedPoint( GetPlayer.MakeScope.Var('hide_ui_bottom_left_bar').GetValue, '(CFixedPoint)0' ) ) ) ) )]"
+
+	latria_sexual_frustration_hud_button = {
+		alwaystransparent = no
+		filter_mouse = all
+	}
+}

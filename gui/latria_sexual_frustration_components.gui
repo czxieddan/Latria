@@ -1,0 +1,96 @@
+types LatriaSexualFrustrationComponents {
+	type latria_sexual_frustration_level_tooltip = object_tooltip_pop_out {
+		blockoverride "title_text" {
+			margin = { 0 8 }
+			text = "[StaticModifier.GetName]"
+			default_format = "#T"
+		}
+
+		blockoverride "concept_link" {
+			text = "[latria_sexual_repression|E]"
+		}
+
+		blockoverride "subheading" {
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				autoresize = yes
+				fontsize_min = 14
+				using = Font_Size_Small
+				default_format = "#weak"
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+				max_width = 400
+				margin_top = -4
+
+				block "threshold_text" {
+					text = "latria_sexual_frustration_requires_20"
+				}
+			}
+		}
+
+		blockoverride "main_description" {
+			cooltip_paragraph = {
+				text = "latria_sexual_frustration_level_effects"
+				max_width = 500
+			}
+		}
+	}
+
+	type latria_sexual_frustration_level_zero_tooltip = object_tooltip_pop_out {
+		blockoverride "title_text" {
+			margin = { 0 8 }
+			text = "latria_sexual_frustration_0"
+			default_format = "#T"
+		}
+
+		blockoverride "concept_link" {
+			text = "[latria_sexual_repression|E]"
+		}
+
+		blockoverride "subheading" {
+			text_single = {
+				layoutpolicy_horizontal = expanding
+				autoresize = yes
+				fontsize_min = 14
+				using = Font_Size_Small
+				text = "latria_sexual_frustration_requires_0"
+				default_format = "#weak"
+				fonttintcolor = "[TooltipInfo.GetTintColor]"
+				max_width = 400
+				margin_top = -4
+			}
+		}
+
+		blockoverride "main_description" {
+			cooltip_paragraph = {
+				text = "latria_sexual_frustration_no_level_effects"
+				max_width = 500
+			}
+		}
+	}
+
+	type latria_sexual_frustration_track_marker = widget_level_marker {
+		position = { 0 -10 }
+		scale = 0.75
+
+		blockoverride "marker_addon" {
+			block "marker_line" {}
+		}
+
+		blockoverride "visible_active" {
+			block "active_visibility" {
+				visible = no
+			}
+		}
+
+		blockoverride "visible_inactive" {
+			block "inactive_visibility" {
+				visible = yes
+			}
+		}
+
+		blockoverride "marker_tooltip" {
+			using = tooltip_se
+			block "level_tooltip" {}
+		}
+	}
+}
