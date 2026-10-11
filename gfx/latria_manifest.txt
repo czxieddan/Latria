@@ -1,1 +1,5 @@
 dlc_latria gfx/interface/icons/dlc/dlc_latria.dds dlc icon
+latria_sexual_frustration_0 gfx/interface/icons/latria_sexual_frustration_0.dds sexual repression level zero icon
+latria_sexual_frustration_5 gfx/interface/icons/latria_sexual_frustration_5.dds sexual repression level five icon
+latria_sexual_frustration_flat gfx/interface/icons/latria_sexual_frustration_flat.dds sexual repression track icon
+latria_sexual_frustration_levels gfx/interface/icons/latria_sexual_frustration_levels.dds sexual repression level icon atlas
