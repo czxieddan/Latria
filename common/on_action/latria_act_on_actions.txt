@@ -2,6 +2,7 @@
 latria_on_act_resolved = {
 	effect = {
 		latria_apply_resolved_act_exhaustion = yes
+		latria_handle_resolved_act_clerical_chastity = yes
 	}
 }
 
