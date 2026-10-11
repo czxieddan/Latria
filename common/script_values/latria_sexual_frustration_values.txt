@@ -1,24 +1,66 @@
-latria_sexual_frustration_level_1_limit = 20
+﻿latria_sexual_frustration_level_1_limit = 20
 latria_sexual_frustration_level_2_limit = 50
 latria_sexual_frustration_level_3_limit = 100
 latria_sexual_frustration_level_4_limit = 180
 latria_sexual_frustration_level_5_limit = 300
 
 latria_daily_sexual_frustration_gain = {
-	value = 0.05
+	value = {
+		value = 0.05
+		desc = latria_daily_sexual_frustration_gain_base
+	}
 	if = {
 		limit = {
 			age >= latria_prime_adult_age_start
 			age <= latria_prime_adult_age_end
 		}
-		add = 0.025
+		add = {
+			value = 0.025
+			desc = latria_daily_sexual_frustration_gain_prime_age
+		}
 	}
-	if = { limit = { age >= latria_frustration_senior_age_start } add = -0.02 }
-	if = { limit = { has_trait = lustful } add = 0.05 }
-	if = { limit = { has_trait = chaste } add = -0.025 }
-	if = { limit = { has_trait = temperate } add = -0.01 }
-	if = { limit = { has_trait = gluttonous } add = 0.01 }
-	if = { limit = { has_trait = impatient } add = 0.01 }
+	if = {
+		limit = { age >= latria_frustration_senior_age_start }
+		add = {
+			value = -0.02
+			desc = latria_daily_sexual_frustration_gain_senior_age
+		}
+	}
+	if = {
+		limit = { has_trait = lustful }
+		add = {
+			value = 0.05
+			desc = latria_daily_sexual_frustration_gain_lustful
+		}
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add = {
+			value = -0.025
+			desc = latria_daily_sexual_frustration_gain_chaste
+		}
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add = {
+			value = -0.01
+			desc = latria_daily_sexual_frustration_gain_temperate
+		}
+	}
+	if = {
+		limit = { has_trait = gluttonous }
+		add = {
+			value = 0.01
+			desc = latria_daily_sexual_frustration_gain_gluttonous
+		}
+	}
+	if = {
+		limit = { has_trait = impatient }
+		add = {
+			value = 0.01
+			desc = latria_daily_sexual_frustration_gain_impatient
+		}
+	}
 	min = 0.01
 	max = 0.15
 }
