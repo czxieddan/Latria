@@ -2,7 +2,7 @@ types LatriaSexualFrustrationHud {
 	type latria_sexual_frustration_hud_button = button_normal {
 		parentanchor = bottom|left
 		widgetanchor = bottom|left
-		position = { 101 -37 }
+		position = { 95 -52 }
 		size = { 48 48 }
 		using = tooltip_ne
 
