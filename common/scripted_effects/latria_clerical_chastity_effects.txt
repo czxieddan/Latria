@@ -1,0 +1,182 @@
+latria_apply_clerical_chastity_vow_penalty = {
+	send_interface_toast = {
+		type = event_toast_effect_bad
+		title = latria_clerical_chastity_vow_broken_toast
+		left_icon = this
+		add_piety_level = -2
+		add_piety = -1000
+	}
+}
+
+latria_grant_clerical_chastity_breach_hook = {
+	if = {
+		limit = {
+			can_add_hook = {
+				target = $OATHBREAKER$
+				type = strong_favor_hook
+			}
+		}
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = latria_clerical_chastity_breach_hook_toast
+			left_icon = this
+			right_icon = $OATHBREAKER$
+			add_hook = {
+				target = $OATHBREAKER$
+				type = strong_favor_hook
+			}
+		}
+	}
+}
+
+# Same-rite witnesses can follow different faiths, so the target's church head issues the excommunication.
+latria_apply_clerical_chastity_excommunication = {
+	$EXCOMMUNICATOR$ = { save_scope_as = latria_chastity_excommunicator }
+	$REPORTER$ = { save_scope_as = latria_chastity_reporter }
+	save_scope_as = latria_chastity_oathbreaker
+	set_variable = {
+		name = excommunication_issuer
+		value = scope:latria_chastity_excommunicator
+	}
+	add_excommunication_actual_effect = yes
+	add_piety_level = -1
+	excommunication_legitimacy_effect = yes
+	add_character_flag = pope_excom
+	if = {
+		limit = { scope:latria_chastity_reporter != scope:latria_chastity_excommunicator }
+		set_variable = {
+			name = requested_my_excommunication
+			value = scope:latria_chastity_reporter
+		}
+		add_opinion = {
+			modifier = excommunicated_opinion
+			target = scope:latria_chastity_excommunicator
+			opinion = -30
+		}
+		add_opinion = {
+			modifier = hate_opinion
+			target = scope:latria_chastity_reporter
+			opinion = -50
+		}
+		trigger_event = {
+			id = religious_interaction.1020
+			days = 5
+		}
+	}
+	else = {
+		add_opinion = {
+			modifier = excommunicated_opinion
+			target = scope:latria_chastity_excommunicator
+			opinion = -50
+		}
+		trigger_event = {
+			id = religious_interaction.1021
+			days = 5
+		}
+	}
+	if = {
+		limit = { is_playable_character = yes }
+		change_spiritual_fulfillment = massive_spiritual_fulfillment_loss
+	}
+}
+
+latria_report_clerical_chastity_breach = {
+	save_scope_as = latria_chastity_reporter
+	$OATHBREAKER$ = { save_scope_as = latria_chastity_oathbreaker }
+	if = {
+		limit = {
+			$OATHBREAKER$.faith.religious_head ?= {
+				is_alive = yes
+				this != $OATHBREAKER$
+			}
+		}
+		$OATHBREAKER$.faith.religious_head = {
+			save_scope_as = latria_chastity_excommunicator
+		}
+	}
+	else = {
+		$OATHBREAKER$.rite.head_of_rite = {
+			save_scope_as = latria_chastity_excommunicator
+		}
+	}
+	scope:latria_chastity_excommunicator = {
+		send_interface_toast = {
+			type = event_toast_effect_neutral
+			title = latria_clerical_chastity_breach_reported_toast
+			left_icon = scope:latria_chastity_reporter
+			right_icon = scope:latria_chastity_oathbreaker
+		}
+	}
+	scope:latria_chastity_oathbreaker = {
+		latria_apply_clerical_chastity_excommunication = {
+			EXCOMMUNICATOR = scope:latria_chastity_excommunicator
+			REPORTER = scope:latria_chastity_reporter
+		}
+	}
+	scope:latria_chastity_reporter = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = latria_clerical_chastity_breach_denounced_toast
+			left_icon = scope:latria_chastity_reporter
+			right_icon = scope:latria_chastity_oathbreaker
+		}
+	}
+}
+
+latria_resolve_clerical_chastity_breach = {
+	if = {
+		limit = {
+			$OATHBREAKER$ = {
+				is_alive = yes
+				has_character_modifier = clerical_chastity_vow_modifier
+			}
+		}
+		$OATHBREAKER$ = { latria_apply_clerical_chastity_vow_penalty = yes }
+		if = {
+			limit = {
+				$WITNESS$ = { latria_is_unvowed_clerical_chastity_witness = yes }
+			}
+			$WITNESS$ = {
+				latria_grant_clerical_chastity_breach_hook = {
+					OATHBREAKER = $OATHBREAKER$
+				}
+				if = {
+					limit = {
+						latria_can_report_clerical_chastity_breach = {
+							OATHBREAKER = $OATHBREAKER$
+						}
+					}
+					latria_report_clerical_chastity_breach = {
+						OATHBREAKER = $OATHBREAKER$
+					}
+				}
+			}
+		}
+	}
+}
+
+latria_handle_resolved_act_clerical_chastity = {
+	if = {
+		limit = { scope:latria_act_kind = flag:latria_act_solo }
+		scope:latria_actor = {
+			if = {
+				limit = {
+					is_alive = yes
+					has_character_modifier = clerical_chastity_vow_modifier
+				}
+				latria_apply_clerical_chastity_vow_penalty = yes
+			}
+		}
+	}
+	else_if = {
+		limit = { exists = scope:latria_partner }
+		latria_resolve_clerical_chastity_breach = {
+			OATHBREAKER = scope:latria_actor
+			WITNESS = scope:latria_partner
+		}
+		latria_resolve_clerical_chastity_breach = {
+			OATHBREAKER = scope:latria_partner
+			WITNESS = scope:latria_actor
+		}
+	}
+}
