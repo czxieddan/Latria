@@ -35,7 +35,7 @@ latria_grant_papal_scandal_victory_rewards = {
 
 latria_grant_papal_holy_see = {
 	create_title_and_vassal_change = {
-		type = granted
+		type = created
 		save_scope_as = latria_holy_see_change
 		add_claim_on_loss = no
 	}
