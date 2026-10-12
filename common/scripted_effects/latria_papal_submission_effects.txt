@@ -1,6 +1,102 @@
+latria_reduce_papal_subject_rank = {
+	# Preserve only the subject's kingdom layer before making the ruler a vassal.
+	scope:latria_redeemed_ruler = {
+		hidden_effect = {
+			every_vassal = {
+				limit = {
+					highest_held_title_tier = tier_kingdom
+				}
+				create_title_and_vassal_change = {
+					type = swear_fealty
+					save_scope_as = latria_papal_kingdom_vassal_change
+					add_claim_on_loss = no
+				}
+				change_liege = {
+					liege = scope:latria_redeemer
+					change = scope:latria_papal_kingdom_vassal_change
+				}
+				resolve_title_and_vassal_change = scope:latria_papal_kingdom_vassal_change
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = {
+					any_held_title = {
+						tier = tier_kingdom
+					}
+				}
+			}
+			if = {
+				limit = {
+					capital_county.kingdom ?= {
+						NOT = { exists = holder }
+					}
+				}
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = latria_papal_created_kingdom_change
+					add_claim_on_loss = no
+				}
+				capital_county.kingdom = {
+					change_title_holder = {
+						holder = scope:latria_redeemed_ruler
+						change = scope:latria_papal_created_kingdom_change
+					}
+				}
+				resolve_title_and_vassal_change = scope:latria_papal_created_kingdom_change
+			}
+			else = {
+				primary_title = { save_scope_as = old_title }
+				create_dynamic_title = {
+					tier = kingdom
+					name = LATRIA_PAPAL_REDUCED_TITLE_NAME
+					adj = LATRIA_PAPAL_REDUCED_TITLE_NAME_ADJ
+					article = article_CONFEDERATION_CULTURE_NAME
+				}
+				scope:new_title = {
+					set_color_from_title = scope:latria_redeemed_ruler.capital_county
+					set_definitive_form = yes
+					generate_coa = yes
+				}
+				create_title_and_vassal_change = {
+					type = created
+					save_scope_as = latria_papal_created_kingdom_change
+					add_claim_on_loss = no
+				}
+				scope:new_title = {
+					change_title_holder = {
+						holder = scope:latria_redeemed_ruler
+						change = scope:latria_papal_created_kingdom_change
+					}
+				}
+				resolve_title_and_vassal_change = scope:latria_papal_created_kingdom_change
+			}
+		}
+
+		every_held_title = {
+			limit = {
+				tier >= tier_empire
+			}
+			scope:latria_redeemed_ruler = {
+				destroy_title = prev
+			}
+		}
+	}
+}
+
 latria_force_papal_submission = {
 	$REDEEMER$ = { save_scope_as = latria_redeemer }
 	$SUBJECT$ = { save_scope_as = latria_redeemed_ruler }
+
+	if = {
+		limit = {
+			scope:latria_redeemed_ruler = {
+				highest_held_title_tier >= tier_empire
+			}
+		}
+		latria_reduce_papal_subject_rank = yes
+	}
 
 	create_title_and_vassal_change = {
 		type = swear_fealty
@@ -8,54 +104,10 @@ latria_force_papal_submission = {
 		add_claim_on_loss = no
 	}
 
-	if = {
-		limit = {
-			scope:latria_redeemed_ruler.primary_title.tier < scope:latria_redeemer.primary_title.tier
-		}
-		scope:latria_redeemed_ruler = {
-			change_liege = {
-				liege = scope:latria_redeemer
-				change = scope:latria_papal_submission_change
-			}
-		}
-	}
-	else = {
-		scope:latria_redeemed_ruler = {
-			every_held_title = {
-				if = {
-					limit = { tier >= scope:latria_redeemer.primary_title.tier }
-					change_title_holder = {
-						holder = scope:latria_redeemer
-						change = scope:latria_papal_submission_change
-					}
-				}
-				else_if = {
-					limit = {
-						OR = {
-							NOT = { exists = scope:latria_redeemed_secondary_title }
-							tier > scope:latria_redeemed_secondary_title.tier
-						}
-					}
-					save_temporary_scope_as = latria_redeemed_secondary_title
-				}
-			}
-			if = {
-				limit = { exists = scope:latria_redeemed_secondary_title }
-				every_vassal = {
-					limit = {
-						primary_title.tier >= scope:latria_redeemed_secondary_title.tier
-						primary_title.tier > tier_barony
-					}
-					change_liege = {
-						liege = scope:latria_redeemer
-						change = scope:latria_papal_submission_change
-					}
-				}
-			}
-			change_liege = {
-				liege = scope:latria_redeemer
-				change = scope:latria_papal_submission_change
-			}
+	scope:latria_redeemed_ruler = {
+		change_liege = {
+			liege = scope:latria_redeemer
+			change = scope:latria_papal_submission_change
 		}
 	}
 

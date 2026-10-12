@@ -1,1 +1,2 @@
 nick_latria_the_unclean = { is_bad = yes }
+nick_latria_vicar_of_christ = { }

@@ -1,4 +1,8 @@
 ﻿l_english:
+ h_latria_holy_see: "Holy See"
+ h_latria_holy_see_adj: "Catholic"
+ nick_latria_vicar_of_christ: "the Vicar of Christ"
+
  latria_papal_ascendancy.0001.t: "The Throne Above Every Crown"
  latria_papal_ascendancy.0001.desc: "Before the gathered prelates, I raise my hand over the broken banners of those who came to cast me down. God did not preserve His vicar so that I might bargain with princes. By His command, the Holy See shall wield undivided authority and carry salvation to every realm."
  latria_papal_ascendancy.0001.a: "Let the world kneel before the Holy See"
@@ -14,6 +18,8 @@
  latria_papal_redemption_or_ruin: "Redemption or Ruin"
  latria_papal_redemption_or_ruin_desc: "Demand that [recipient.GetShortUINameNoTooltip] submit to the Holy See and adopt [actor.GetShortUINamePossessiveNoTooltip] [rite|E]. Refusal will bring war."
  LATRIA_PAPAL_REDEMPTION_OR_RUIN_NOTIFICATION: "[actor.GetShortUIName] demands your submission to the Holy See and conversion to [actor.GetHerHis] [rite|E]."
+ LATRIA_PAPAL_REDUCED_TITLE_NAME: "Lesser [old_title.GetBaseNameNoTierNoTooltip]"
+ LATRIA_PAPAL_REDUCED_TITLE_NAME_ADJ: "Lesser [old_title.GetAdjectiveNoTooltip]"
 
  latria_reveal_papal_secret_decision: "Reveal the Secret"
  latria_reveal_papal_secret_decision_desc: "I will name my secret before the clergy and princes. Let every ruler hear it from my own mouth, and let those who deny my office take up arms."

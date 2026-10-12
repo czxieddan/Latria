@@ -5,7 +5,10 @@ latria_is_canonical_pope = {
 
 latria_papal_redemption_is_unlocked = {
 	latria_is_canonical_pope = yes
-	has_variable = latria_papal_redemption_unlocked
+	OR = {
+		has_trait = latria_army_of_god
+		has_variable = latria_papal_redemption_unlocked
+	}
 }
 
 latria_can_reveal_papal_secret = {

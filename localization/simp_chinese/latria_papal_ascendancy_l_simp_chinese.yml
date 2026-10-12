@@ -1,4 +1,8 @@
 ﻿l_simp_chinese:
+ h_latria_holy_see: "圣座"
+ h_latria_holy_see_adj: "天主国"
+ nick_latria_vicar_of_christ: "基督的代牧"
+
  latria_papal_ascendancy.0001.t: "凌驾诸冠的宝座"
  latria_papal_ascendancy.0001.desc: "在众教士面前，我于叛军折断的旗帜间举起手。上帝保全祂的代牧，不是为了让我同诸侯讨价还价。奉祂的旨意，圣座将执掌不容分割的权威，把救赎带到每一片国土。"
  latria_papal_ascendancy.0001.a: "让世界跪伏于圣座之前"
@@ -14,6 +18,8 @@
  latria_papal_redemption_or_ruin: "救赎或毁灭"
  latria_papal_redemption_or_ruin_desc: "要求[recipient.GetShortUINameNoTooltip]臣服于圣座并改信[actor.GetShortUINamePossessiveNoTooltip]的[rite|E]。拒绝即意味着战争。"
  LATRIA_PAPAL_REDEMPTION_OR_RUIN_NOTIFICATION: "[actor.GetShortUIName]要求你臣服于圣座，并改信[actor.GetHerHis]的[rite|E]。"
+ LATRIA_PAPAL_REDUCED_TITLE_NAME: "次级[old_title.GetBaseNameNoTierNoTooltip]"
+ LATRIA_PAPAL_REDUCED_TITLE_NAME_ADJ: "次级[old_title.GetAdjectiveNoTooltip]"
 
  latria_reveal_papal_secret_decision: "公开秘密"
  latria_reveal_papal_secret_decision_desc: "我将亲自在教士与诸侯面前说出这个秘密。每位统治者都会从我口中听见真相，否认我职分的人自可举兵而来。"

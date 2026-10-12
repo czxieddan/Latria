@@ -2,20 +2,10 @@ latria_army_of_god = {
 	category = fame
 	icon = holy_warrior.dds
 
-	men_at_arms_limit = 10
+	men_at_arms_limit = 8
+	men_at_arms_cap = 10
+	levy_size = 1.0
 	army_maintenance_mult = -0.30
-	heavy_infantry_max_size_add = 2
-	pikemen_max_size_add = 2
-	archers_max_size_add = 2
-	light_cavalry_max_size_add = 2
-	heavy_cavalry_max_size_add = 2
-	skirmishers_max_size_add = 2
-	camel_cavalry_max_size_add = 2
-	elephant_cavalry_max_size_add = 2
-	archer_cavalry_max_size_add = 2
-	nomadic_horde_max_size_add = 2
-	siege_weapon_max_size_add = 2
-	gunpowder_max_size_add = 2
 
 	shown_in_ruler_designer = no
 }

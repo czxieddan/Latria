@@ -1,0 +1,19 @@
+# The Holy See - a landless hegemon title granted to the victorious Pope.
+h_latria_holy_see = {
+	color = { 255 249 198 }
+
+	capital = c_roma
+	definite_form = yes
+	ruler_uses_title_name = no
+	can_use_nomadic_naming = no
+	landless = yes
+	allow_domicile = no
+	disable_regnal_numbers = never
+	destroy_if_invalid_heir = yes
+	no_automatic_claims = yes
+	always_follows_primary_heir = yes
+	de_jure_drift_disabled = yes
+	can_be_named_after_dynasty = no
+	ignore_titularity_for_title_weighting = yes
+	can_create = { always = no }
+}

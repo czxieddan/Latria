@@ -23,7 +23,8 @@ latria_papal_redemption_or_ruin = {
 	}
 
 	is_available = {
-		scope:actor = { latria_papal_redemption_is_unlocked = yes }
+		# Only root (the actor) is available at this stage.
+		latria_papal_redemption_is_unlocked = yes
 	}
 
 	is_shown = {
@@ -31,15 +32,17 @@ latria_papal_redemption_or_ruin = {
 		scope:actor != scope:recipient
 		scope:recipient = {
 			is_landed = yes
-			is_independent_ruler = yes
 		}
 	}
 
 	is_valid_showing_failures_only = {
 		scope:recipient = {
+			is_independent_ruler = yes
 			NOT = { is_at_war_with = scope:actor }
 		}
 	}
+
+	is_highlighted = { always = yes }
 
 	ai_min_reply_days = 3
 	ai_max_reply_days = 5
