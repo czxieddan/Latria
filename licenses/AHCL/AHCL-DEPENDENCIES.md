@@ -6,7 +6,14 @@ Configuration summary:
 - AHCL version: 1.2
 - Materials directory: `licenses/AHCL`
 - Ecosystem adapters: None.
+- Strict license files: true
+
+## Contributing Lockfiles
+
+None.
 
 ## Dependencies and Referenced Materials
 
 None.
+
+AHCL Kit reports declared metadata and retained evidence without selecting or interpreting legal terms.
