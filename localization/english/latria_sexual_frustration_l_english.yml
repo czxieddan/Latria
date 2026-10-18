@@ -15,7 +15,7 @@
  latria_sexual_frustration_hud_subheading: "[latria_sexual_repression_level|E] for [GetPlayer.GetSexuality]"
  latria_sexual_frustration_level_effects: "#S Effects:#!\n[StaticModifier.GetDescWithEffects]"
  latria_sexual_frustration_no_level_effects: "#S Effects:#!\nNo sexual repression modifier is currently affecting this character."
- latria_daily_sexual_frustration_gain_display: "#P [ValueBreakdown.GetFixedPointValue|+=3]#!/day"
+ latria_daily_sexual_frustration_gain_display: "#P [GetPlayer.MakeScope.ScriptValue('latria_daily_sexual_frustration_gain')|+=3]#!/day"
  latria_sexual_frustration_track_title: "Repression [GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue|0]/300"
  latria_sexual_frustration_requires_0: "Requires at least #V 0#! Repression"
  latria_sexual_frustration_requires_20: "Requires at least #V 20#! Repression"

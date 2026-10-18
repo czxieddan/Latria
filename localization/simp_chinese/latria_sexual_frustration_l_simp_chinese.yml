@@ -15,7 +15,7 @@
  latria_sexual_frustration_hud_subheading: "[GetPlayer.GetSexuality]的[latria_sexual_repression_level|E]"
  latria_sexual_frustration_level_effects: "#S 效果：#!\n[StaticModifier.GetDescWithEffects]"
  latria_sexual_frustration_no_level_effects: "#S 效果：#!\n当前没有压抑性修正。"
- latria_daily_sexual_frustration_gain_display: "#P [ValueBreakdown.GetFixedPointValue|+=3]#!/日"
+ latria_daily_sexual_frustration_gain_display: "#P [GetPlayer.MakeScope.ScriptValue('latria_daily_sexual_frustration_gain')|+=3]#!/日"
  latria_sexual_frustration_track_title: "压抑性[GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue|0]/300"
  latria_sexual_frustration_requires_0: "至少需要#V 0#!压抑性"
  latria_sexual_frustration_requires_20: "至少需要#V 20#!压抑性"
