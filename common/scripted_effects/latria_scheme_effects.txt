@@ -145,3 +145,22 @@ latria_begin_fatal_liaison_effect = {
 		latria_store_scheme_act_kind = yes
 	}
 }
+
+# Keep the event icon available after the scheme has ended.
+latria_save_fatal_liaison_icon_kind = {
+	save_scope_value_as = {
+		name = latria_fatal_icon_kind
+		value = flag:latria_act_intercourse
+	}
+	if = {
+		limit = {
+			scope:scheme = {
+				var:latria_scheme_act_kind ?= flag:latria_act_manual
+			}
+		}
+		save_scope_value_as = {
+			name = latria_fatal_icon_kind
+			value = flag:latria_act_manual
+		}
+	}
+}

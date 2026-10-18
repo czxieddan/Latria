@@ -3,7 +3,7 @@ latria_fatal_liaison = {
 	desc = latria_fatal_liaison_desc_general
 	success_desc = "LATRIA_FATAL_LIAISON_SUCCESS_DESC"
 	discovery_desc = "LATRIA_FATAL_LIAISON_DISCOVERY_DESC"
-	icon = icon_scheme_seduce
+	icon = latria_fatal_liaison
 	illustration = "gfx/interface/illustrations/event_scenes/bedchamber.dds"
 	category = hostile
 	target_type = character
@@ -121,6 +121,7 @@ latria_fatal_liaison = {
 		hostile_scheme_monthly_discovery_chance_effect = yes
 	}
 	on_invalidated = {
+		latria_save_fatal_liaison_icon_kind = yes
 		scheme_target_character = { save_scope_as = target }
 		scheme_owner = { save_scope_as = owner }
 		if = {

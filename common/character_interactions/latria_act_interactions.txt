@@ -1,5 +1,5 @@
 latria_propose_intercourse_interaction = {
-	icon = icon_scheme_seduce
+	icon = latria_propose_intercourse
 	common_interaction = yes
 	interface_priority = 40
 	category = interaction_category_friendly
@@ -117,7 +117,7 @@ latria_propose_intercourse_interaction = {
 	}
 }
 latria_propose_manual_interaction = {
-	icon = icon_scheme_seduce
+	icon = latria_propose_manual
 	common_interaction = yes
 	interface_priority = 39
 	category = interaction_category_friendly

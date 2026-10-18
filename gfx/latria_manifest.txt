@@ -3,3 +3,9 @@ latria_sexual_frustration_0 gfx/interface/icons/latria_sexual_frustration_0.dds 
 latria_sexual_frustration_5 gfx/interface/icons/latria_sexual_frustration_5.dds sexual repression level five icon
 latria_sexual_frustration_flat gfx/interface/icons/latria_sexual_frustration_flat.dds sexual repression track icon
 latria_sexual_frustration_levels gfx/interface/icons/latria_sexual_frustration_levels.dds sexual repression level icon atlas
+latria_propose_intercourse gfx/interface/icons/character_interactions/latria_propose_intercourse.dds intercourse invitation icon
+latria_propose_manual gfx/interface/icons/character_interactions/latria_propose_manual.dds manual invitation icon
+latria_solo_relief gfx/interface/icons/character_interactions/latria_solo_relief.dds solo relief icon
+latria_fatal_liaison gfx/interface/icons/character_interactions/latria_fatal_liaison.dds fatal liaison interaction and event icon
+latria_fatal_touch gfx/interface/icons/character_interactions/latria_fatal_touch.dds fatal touch interaction and event icon
+latria_fatal_liaison_scheme gfx/interface/icons/scheme_types/latria_fatal_liaison.dds shared fatal liaison scheme icon

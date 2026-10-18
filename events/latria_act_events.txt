@@ -4,6 +4,24 @@ latria_act.0101 = {
 	type = character_event
 	title = latria_act.0101.t
 	theme = seduction
+	override_icon = {
+		trigger = {
+			scope:latria_act_kind ?= flag:latria_act_manual
+			scope:latria_partner = { is_alive = no }
+		}
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		trigger = { scope:latria_partner = { is_alive = no } }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_icon = {
+		trigger = { scope:latria_act_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_propose_manual.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_propose_intercourse.dds"
+	}
 	left_portrait = {
 		character = root
 		triggered_animation = {
@@ -76,6 +94,24 @@ latria_act.0102 = {
 	type = character_event
 	title = latria_act.0101.t
 	theme = seduction
+	override_icon = {
+		trigger = {
+			scope:latria_act_kind ?= flag:latria_act_manual
+			scope:latria_actor = { is_alive = no }
+		}
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		trigger = { scope:latria_actor = { is_alive = no } }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_icon = {
+		trigger = { scope:latria_act_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_propose_manual.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_propose_intercourse.dds"
+	}
 	left_portrait = {
 		character = root
 		animation = flirtation

@@ -4,6 +4,7 @@ latria_scheme.0001 = {
 	hidden = yes
 	immediate = {
 		latria_bind_fatal_liaison_scopes = yes
+		latria_save_fatal_liaison_icon_kind = yes
 		random = {
 			chance = scope:scheme.scheme_success_chance
 			save_scope_value_as = {
@@ -54,6 +55,13 @@ latria_scheme.0010 = {
 	type = character_event
 	title = latria_scheme.0010.t_line
 	theme = intrigue
+	override_icon = {
+		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
 	left_portrait = {
 		character = root
 		animation = grief
@@ -82,6 +90,13 @@ latria_scheme.0020 = {
 	type = character_event
 	title = latria_scheme.0020.t
 	theme = intrigue
+	override_icon = {
+		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
 	left_portrait = { character = root }
 	right_portrait = { character = scope:target }
 	override_background = { reference = bedchamber }
@@ -96,6 +111,13 @@ latria_scheme.0030 = {
 	type = character_event
 	title = latria_scheme.0030.t
 	theme = intrigue
+	override_icon = {
+		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
 	left_portrait = { character = root }
 	right_portrait = { character = scope:target }
 	desc = latria_scheme.0030.desc
@@ -108,6 +130,13 @@ latria_scheme.0040 = {
 	type = character_event
 	title = latria_scheme.0040.t
 	theme = intrigue
+	override_icon = {
+		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
 	left_portrait = { character = root }
 	right_portrait = { character = scope:target }
 	desc = latria_scheme.0040.desc
