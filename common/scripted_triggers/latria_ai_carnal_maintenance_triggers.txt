@@ -8,6 +8,7 @@ latria_ai_can_proposition_player = {
 
 # Suitor scope, after latria_player_target is saved.
 latria_suitor_can_reach_player = {
+	latria_can_exchange_act_invitation = { PARTNER = scope:latria_player_target }
 	latria_pair_act_interval_clear = { PARTNER = scope:latria_player_target }
 	scope:latria_player_target = {
 		is_alive = yes
@@ -31,6 +32,7 @@ latria_suitor_can_offer_manual = {
 
 # Spouse or concubine scope. Root is the initiator.
 latria_consort_can_take_ai_intercourse = {
+	latria_can_exchange_act_invitation = { PARTNER = root }
 	is_alive = yes
 	is_ai = yes
 	is_imprisoned = no
@@ -49,6 +51,7 @@ latria_consort_can_take_ai_intercourse = {
 
 # Spouse or concubine scope is not required. Soulmates use this too.
 latria_consort_can_take_ai_manual = {
+	latria_can_exchange_act_invitation = { PARTNER = root }
 	is_alive = yes
 	is_ai = yes
 	is_imprisoned = no

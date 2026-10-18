@@ -1,0 +1,122 @@
+# Shared by both invitations. All relationship checks are from the recipient's side.
+# Only the strongest existing intimate bond contributes.
+latria_act_romance_acceptance_modifiers = {
+	modifier = {
+		add = 80
+		desc = "[soulmate|E]"
+		scope:recipient = { has_relation_soulmate = scope:puppet_or_actor }
+	}
+	modifier = {
+		add = 60
+		desc = "[lover|E]"
+		scope:recipient = {
+			has_relation_lover = scope:puppet_or_actor
+			NOT = { has_relation_soulmate = scope:puppet_or_actor }
+		}
+	}
+}
+
+latria_act_consort_acceptance_modifiers = {
+	modifier = {
+		add = 50
+		desc = "[spouse|E]"
+		scope:recipient = {
+			is_spouse_of = scope:puppet_or_actor
+			NOT = { latria_has_romantic_bond = { PARTNER = scope:puppet_or_actor } }
+		}
+	}
+	modifier = {
+		add = 40
+		desc = "[concubine|E]"
+		scope:recipient = {
+			latria_are_consorts = { PARTNER = scope:puppet_or_actor }
+			NOT = { is_spouse_of = scope:puppet_or_actor }
+			NOT = { latria_has_romantic_bond = { PARTNER = scope:puppet_or_actor } }
+		}
+	}
+	modifier = {
+		add = -60
+		desc = latria_act_accept_no_bond
+		scope:recipient = {
+			NOT = { latria_has_intimate_bond = { PARTNER = scope:puppet_or_actor } }
+		}
+	}
+}
+
+latria_act_appearance_acceptance_modifiers = {
+	modifier = {
+		add = 10
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_good_1 }
+	}
+	modifier = {
+		add = 20
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_good_2 }
+	}
+	modifier = {
+		add = 30
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_good_3 }
+	}
+	modifier = {
+		add = -10
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_bad_1 }
+	}
+	modifier = {
+		add = -20
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_bad_2 }
+	}
+	modifier = {
+		add = -30
+		desc = latria_act_accept_appearance
+		scope:puppet_or_actor = { has_trait = beauty_bad_3 }
+	}
+}
+
+latria_act_attitude_acceptance_modifiers = {
+	opinion_modifier = {
+		who = scope:recipient
+		opinion_target = scope:puppet_or_actor
+		multiplier = 0.5
+		desc = latria_act_accept_opinion
+	}
+	modifier = {
+		add = 20
+		desc = trait_lustful
+		scope:recipient = { has_trait = lustful }
+	}
+	modifier = {
+		add = -40
+		desc = trait_chaste
+		scope:recipient = { has_trait = chaste }
+	}
+	modifier = {
+		add = -300
+		desc = "[rival|E]"
+		scope:recipient = {
+			has_relation_rival = scope:puppet_or_actor
+			NOT = { has_relation_nemesis = scope:puppet_or_actor }
+		}
+	}
+	modifier = {
+		add = -1000
+		desc = "[nemesis|E]"
+		scope:recipient = { has_relation_nemesis = scope:puppet_or_actor }
+	}
+}
+
+latria_act_rank_acceptance_modifiers = {
+	modifier = {
+		add = {
+			value = scope:puppet_or_actor.highest_held_title_tier
+			subtract = scope:recipient.highest_held_title_tier
+			multiply = 10
+			min = -30
+			max = 30
+		}
+		desc = latria_act_accept_rank
+	}
+}

@@ -1,0 +1,25 @@
+# Activity scope. The vanilla bridge saves both participants before checking this.
+latria_wedding_has_act_spouses = {
+	OR = {
+		AND = {
+			special_guest:spouse_1 = scope:latria_actor
+			special_guest:spouse_2 = scope:latria_partner
+		}
+		AND = {
+			special_guest:spouse_2 = scope:latria_actor
+			special_guest:spouse_1 = scope:latria_partner
+		}
+	}
+}
+
+latria_is_wedding_night_act = {
+	exists = involved_activity
+	is_spouse_of = scope:latria_partner
+	scope:latria_partner = { involved_activity = scope:latria_actor.involved_activity }
+	involved_activity = {
+		has_activity_type = activity_wedding
+		has_current_phase = wedding_phase_wnight
+		is_current_phase_active = yes
+		latria_wedding_has_act_spouses = yes
+	}
+}

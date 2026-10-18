@@ -1,0 +1,10 @@
+latria_available_for_act_invitation = {
+	is_in_activity = no
+	is_commanding_army = no
+}
+
+# Check both sides so an activity participant cannot send an invitation either.
+latria_can_exchange_act_invitation = {
+	latria_available_for_act_invitation = yes
+	$PARTNER$ = { latria_available_for_act_invitation = yes }
+}

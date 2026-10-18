@@ -49,6 +49,10 @@ latria_act.0101 = {
 				desc = latria_act.0101.desc.partner_dissatisfied
 			}
 			triggered_desc = {
+				trigger = { scope:latria_act_kind = flag:latria_act_manual }
+				desc = latria_act.0101.desc.manual
+			}
+			triggered_desc = {
 				trigger = {
 					latria_act_is_adultery = { PARTNER = scope:latria_partner }
 				}
@@ -96,6 +100,10 @@ latria_act.0102 = {
 					scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied
 				}
 				desc = latria_act.0102.desc.actor_dissatisfied
+			}
+			triggered_desc = {
+				trigger = { scope:latria_act_kind = flag:latria_act_manual }
+				desc = latria_act.0102.desc.manual
 			}
 			triggered_desc = {
 				trigger = {

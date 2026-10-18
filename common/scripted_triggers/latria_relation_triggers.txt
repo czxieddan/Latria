@@ -50,3 +50,18 @@ latria_act_is_adultery = {
 		$PARTNER$ = { latria_has_bound_partner = yes }
 	}
 }
+
+# Intimate invitation acceptance uses the strongest bond, not cumulative bonuses.
+latria_has_romantic_bond = {
+	OR = {
+		has_relation_soulmate = $PARTNER$
+		has_relation_lover = $PARTNER$
+	}
+}
+
+latria_has_intimate_bond = {
+	OR = {
+		latria_has_romantic_bond = { PARTNER = $PARTNER$ }
+		latria_are_consorts = { PARTNER = $PARTNER$ }
+	}
+}

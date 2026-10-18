@@ -1,0 +1,43 @@
+# Vanilla bedding options already call had_sex_with_effect. Do not add another roll
+# at a weekly pulse: the couple may not have consummated the marriage there.
+latria_resolve_wedding_night_act = {
+	if = {
+		limit = {
+			involved_activity = { NOT = { has_variable = latria_wedding_night_resolved } }
+		}
+		# Mark the activity first; strain can end the wedding by killing a participant.
+		involved_activity = {
+			set_variable = {
+				name = latria_wedding_night_resolved
+				value = yes
+			}
+		}
+		latria_commit_vanilla_sex = yes
+		latria_notify_wedding_night_act = yes
+	}
+}
+
+latria_notify_wedding_night_act = {
+	if = {
+		limit = {
+			scope:latria_actor = { is_alive = yes }
+			scope:latria_partner = { is_alive = yes }
+			NOT = { exists = scope:latria_dissatisfied_person }
+		}
+		scope:latria_actor = { latria_send_wedding_night_message = yes }
+		scope:latria_partner = { latria_send_wedding_night_message = yes }
+	}
+}
+
+latria_send_wedding_night_message = {
+	if = {
+		limit = { is_ai = no }
+		send_interface_message = {
+			type = event_generic_good_text
+			title = latria_wedding_night.t
+			desc = latria_wedding_night.desc
+			left_icon = scope:latria_actor
+			right_icon = scope:latria_partner
+		}
+	}
+}

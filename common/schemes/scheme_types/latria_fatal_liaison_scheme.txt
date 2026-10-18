@@ -68,14 +68,14 @@ latria_fatal_liaison = {
 			limit = { scheme_owner = { intrigue >= latria_fatal_liaison_start_intrigue } }
 			add = {
 				value = 10
-				desc = latria_intrigue_hides_liaison
+				desc = "[intrigue|E]"
 			}
 		}
 		if = {
 			limit = { scheme_owner = { intrigue >= 25 } }
 			add = {
 				value = 10
-				desc = latria_intrigue_hides_liaison
+				desc = "[intrigue|E]"
 			}
 		}
 	}

@@ -21,20 +21,36 @@ latria_act.0400 = {
 }
 
 latria_act.0401 = {
-	type = character_event
-	title = latria_act.0401.t
-	theme = mental_break
-	desc = latria_act.0401.desc
-	option = { name = latria_act.0401.a }
+	hidden = yes
+	trigger = { latria_has_sexual_need = yes }
+	immediate = {
+		if = {
+			limit = { is_ai = no }
+			send_interface_message = {
+				type = event_generic_bad_text
+				title = latria_act.0401.t
+				desc = latria_act.0401.desc
+				left_icon = root
+			}
+		}
+	}
 }
 
 latria_act.0402 = {
-	type = character_event
-	title = latria_act.0402.t
-	theme = mental_break
-	desc = latria_act.0402.desc
-	immediate = { latria_charge_sexual_frustration_stress_2 = yes }
-	option = { name = latria_act.0402.a }
+	hidden = yes
+	trigger = { latria_has_sexual_need = yes }
+	immediate = {
+		latria_charge_sexual_frustration_stress_2 = yes
+		if = {
+			limit = { is_ai = no }
+			send_interface_message = {
+				type = event_generic_bad_text
+				title = latria_act.0402.t
+				desc = latria_act.0402.desc
+				left_icon = root
+			}
+		}
+	}
 }
 
 latria_act.0403 = {

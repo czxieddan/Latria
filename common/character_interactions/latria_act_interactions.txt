@@ -21,6 +21,7 @@ latria_propose_intercourse_interaction = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
+			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
 			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 		}
 		scope:puppet_or_actor = {
@@ -42,6 +43,8 @@ latria_propose_intercourse_interaction = {
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
+			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 			custom_tooltip = {
 				text = latria_act_too_recent
 				latria_act_interval_clear = { PARTNER = scope:recipient }
@@ -94,34 +97,16 @@ latria_propose_intercourse_interaction = {
 	}
 
 	ai_accept = {
-		base = 10
-		modifier = {
-			add = 40
-			desc = latria_act_accept_lover
-			has_relation_lover = scope:puppet_or_actor
-		}
-		modifier = {
-			add = 20
-			desc = latria_act_accept_lust
-			has_trait = lustful
-		}
-		modifier = {
-			add = -40
-			desc = latria_act_accept_chaste
-			has_trait = chaste
-		}
-		modifier = {
-			add = 15
-			desc = latria_act_accept_opinion
-			opinion = {
-				value >= medium_positive_opinion
-				target = scope:puppet_or_actor
-			}
-		}
+		base = -10
+		latria_act_romance_acceptance_modifiers = yes
+		latria_act_consort_acceptance_modifiers = yes
+		latria_act_appearance_acceptance_modifiers = yes
+		latria_act_attitude_acceptance_modifiers = yes
+		latria_act_rank_acceptance_modifiers = yes
 		modifier = {
 			add = -100
-			desc = latria_act_accept_pregnant
-			is_pregnant = yes
+			desc = trait_pregnant
+			scope:recipient = { is_pregnant = yes }
 			scope:puppet_or_actor = {
 				NOT = { latria_lack_of_ability_to_say_no = yes }
 			}
@@ -153,6 +138,7 @@ latria_propose_manual_interaction = {
 		exists = scope:puppet_or_actor
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
+			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
 			latria_can_propose_manual_act = { PARTNER = scope:recipient }
 		}
 		scope:puppet_or_actor = {
@@ -174,6 +160,8 @@ latria_propose_manual_interaction = {
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
+			latria_can_propose_manual_act = { PARTNER = scope:recipient }
 			custom_tooltip = {
 				text = latria_act_too_recent
 				latria_act_interval_clear = { PARTNER = scope:recipient }
@@ -226,30 +214,12 @@ latria_propose_manual_interaction = {
 	}
 
 	ai_accept = {
-		base = 10
-		modifier = {
-			add = 40
-			desc = latria_act_accept_lover
-			has_relation_lover = scope:puppet_or_actor
-		}
-		modifier = {
-			add = 20
-			desc = latria_act_accept_lust
-			has_trait = lustful
-		}
-		modifier = {
-			add = -40
-			desc = latria_act_accept_chaste
-			has_trait = chaste
-		}
-		modifier = {
-			add = 15
-			desc = latria_act_accept_opinion
-			opinion = {
-				value >= medium_positive_opinion
-				target = scope:puppet_or_actor
-			}
-		}
+		base = -10
+		latria_act_romance_acceptance_modifiers = yes
+		latria_act_consort_acceptance_modifiers = yes
+		latria_act_appearance_acceptance_modifiers = yes
+		latria_act_attitude_acceptance_modifiers = yes
+		latria_act_rank_acceptance_modifiers = yes
 	}
 	ai_will_do = {
 		base = latria_manual_overture_chance

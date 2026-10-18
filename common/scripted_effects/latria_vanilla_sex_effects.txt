@@ -68,7 +68,12 @@ latria_from_vanilla_sex = {
 			scope:latria_partner = { is_imprisoned = no }
 			latria_can_share_intercourse = { PARTNER = scope:latria_partner }
 		}
-		latria_commit_vanilla_sex = yes
+		save_scope_as = latria_actor
+		if = {
+			limit = { latria_is_wedding_night_act = yes }
+			latria_resolve_wedding_night_act = yes
+		}
+		else = { latria_commit_vanilla_sex = yes }
 	}
 }
 
