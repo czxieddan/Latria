@@ -68,6 +68,42 @@ types LatriaSexualFrustrationComponents {
 		}
 	}
 
+	type latria_sexual_frustration_gain_breakdown = widget {
+		size = { 50 50 }
+		alwaystransparent = no
+		using = DefaultTooltipBackground
+
+		vbox = {
+			set_parent_size_to_minimum = yes
+			margin = { 20 10 }
+			margin_bottom = 27
+			spacing = 5
+			datamodel = "[ValueBreakdown.GetSubValues]"
+
+			item = {
+				hbox = {
+					layoutpolicy_horizontal = expanding
+
+					text_single = {
+						layoutpolicy_horizontal = expanding
+						text = "[ValueBreakdown.GetName]"
+						min_width = 180
+						max_width = 275
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+						margin_right = 10
+					}
+
+					text_single = {
+						visible = "[ValueBreakdown.ShouldShowValue]"
+						text = "[ValueBreakdown.GetFixedPointValue|+=3]"
+						align = right
+						fonttintcolor = "[TooltipInfo.GetTintColor]"
+					}
+				}
+			}
+		}
+	}
+
 	type latria_sexual_frustration_track_marker = widget_level_marker {
 		position = { 0 -10 }
 		scale = 0.75
