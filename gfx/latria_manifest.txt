@@ -8,4 +8,5 @@ latria_propose_manual gfx/interface/icons/character_interactions/latria_propose_
 latria_solo_relief gfx/interface/icons/character_interactions/latria_solo_relief.dds solo relief icon
 latria_fatal_liaison gfx/interface/icons/character_interactions/latria_fatal_liaison.dds fatal liaison interaction and event icon
 latria_fatal_touch gfx/interface/icons/character_interactions/latria_fatal_touch.dds fatal touch interaction and event icon
-latria_fatal_liaison_scheme gfx/interface/icons/scheme_types/latria_fatal_liaison.dds shared fatal liaison scheme icon
+latria_fatal_liaison_scheme gfx/interface/icons/scheme_types/latria_fatal_liaison.dds fatal liaison scheme icon
+latria_fatal_touch_scheme gfx/interface/icons/scheme_types/latria_fatal_touch.dds fatal touch scheme icon

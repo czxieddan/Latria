@@ -1,0 +1,89 @@
+namespace = latria_fatal_touch
+
+latria_fatal_touch.0001 = {
+	hidden = yes
+	immediate = {
+		latria_resolve_fatal_liaison_outcome = {
+			SUCCESS_EVENT = latria_fatal_touch.0010
+			FAILURE_EVENT = latria_fatal_touch.0020
+		}
+	}
+}
+
+latria_fatal_touch.0010 = {
+	type = character_event
+	title = latria_fatal_touch
+	theme = intrigue
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	left_portrait = {
+		character = root
+		animation = grief
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:target
+		animation = dead
+		outfit_tags = { no_clothes }
+	}
+	override_background = { reference = bedchamber }
+	desc = latria_scheme.0010.desc
+	immediate = {
+		latria_mark_act_undressed = { PARTNER = scope:target }
+		latria_close_fatal_liaison_effect = yes
+	}
+	option = {
+		name = latria_scheme.0010.a
+	}
+	after = {
+		latria_clear_act_undressed = { PARTNER = scope:target }
+	}
+}
+
+latria_fatal_touch.0020 = {
+	type = character_event
+	title = latria_scheme.0020.t
+	theme = intrigue
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	override_background = { reference = bedchamber }
+	desc = latria_scheme.0020.desc
+	immediate = { latria_close_fatal_liaison_effect = yes }
+	option = {
+		name = latria_scheme.0020.a
+	}
+}
+
+latria_fatal_touch.0030 = {
+	type = character_event
+	title = latria_scheme.0030.t
+	theme = intrigue
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	desc = latria_scheme.0030.desc
+	option = {
+		name = latria_scheme.0030.a
+	}
+}
+
+latria_fatal_touch.0040 = {
+	type = character_event
+	title = latria_scheme.0040.t
+	theme = intrigue
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	left_portrait = { character = root }
+	right_portrait = { character = scope:target }
+	desc = latria_scheme.0040.desc
+	option = {
+		name = latria_scheme.0040.a
+	}
+}

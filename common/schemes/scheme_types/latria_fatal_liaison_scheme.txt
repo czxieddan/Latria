@@ -22,12 +22,11 @@ latria_fatal_liaison = {
 	allow = {
 		intrigue >= latria_fatal_liaison_start_intrigue
 		is_imprisoned = no
-		# The two launchers apply their own age boundary; this shared scheme keeps the lower one.
-		latria_can_share_manual_act = { PARTNER = scope:target }
+		latria_can_share_intercourse = { PARTNER = scope:target }
 	}
 	valid = {
 		is_incapable = no
-		latria_can_share_manual_act = { PARTNER = scope:target }
+		latria_can_share_intercourse = { PARTNER = scope:target }
 		scope:target = {
 			is_imprisoned = no
 			in_diplomatic_range = scope:owner
@@ -82,6 +81,10 @@ latria_fatal_liaison = {
 
 	on_start = {
 		set_variable = {
+			name = latria_scheme_act_kind
+			value = flag:latria_act_intercourse
+		}
+		set_variable = {
 			name = apply_countermeasures
 			value = flag:calculating
 		}
@@ -102,17 +105,17 @@ latria_fatal_liaison = {
 	}
 	on_phase_completed = {
 		suppress_scheme_follow_up_event_till_input_given_effect = yes
-		latria_fatal_liaison_prep_effect = yes
+		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
 		cap_schemes_and_fire_reminders_effect = yes
 	}
 	on_hud_click = {
 		latria_replace_murder_liaison_agents = yes
-		latria_fatal_liaison_prep_effect = yes
+		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
 	}
 	on_semiyearly = {
 		if = {
 			limit = { scheme_owner = { is_ai = yes } }
-			latria_fatal_liaison_prep_effect = yes
+			latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
 			purge_ai_scheme_slots_effect = yes
 		}
 	}

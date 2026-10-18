@@ -3,50 +3,9 @@ namespace = latria_scheme
 latria_scheme.0001 = {
 	hidden = yes
 	immediate = {
-		latria_bind_fatal_liaison_scopes = yes
-		latria_save_fatal_liaison_icon_kind = yes
-		random = {
-			chance = scope:scheme.scheme_success_chance
-			save_scope_value_as = {
-				name = latria_scheme_succeeded
-				value = yes
-			}
-		}
-		if = {
-			limit = { exists = scope:latria_scheme_succeeded }
-			scope:owner = {
-				add_character_flag = latria_fatal_liaison_concluded
-				if = {
-					limit = {
-						scope:scheme = {
-							var:latria_scheme_act_kind ?= flag:latria_act_manual
-						}
-					}
-					save_scope_value_as = {
-						name = latria_act_kind
-						value = flag:latria_act_manual
-					}
-				}
-				else = {
-					save_scope_value_as = {
-						name = latria_act_kind
-						value = flag:latria_act_intercourse
-					}
-				}
-				save_scope_value_as = {
-					name = latria_force_death
-					value = yes
-				}
-				scope:target = { save_scope_as = latria_partner }
-				latria_resolve_act = yes
-				trigger_event = latria_scheme.0010
-			}
-		}
-		else = {
-			scope:owner = {
-				add_character_flag = latria_fatal_liaison_concluded
-				trigger_event = latria_scheme.0020
-			}
+		latria_resolve_fatal_liaison_outcome = {
+			SUCCESS_EVENT = latria_scheme.0010
+			FAILURE_EVENT = latria_scheme.0020
 		}
 	}
 }

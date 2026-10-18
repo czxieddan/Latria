@@ -3,12 +3,12 @@
 latria_act_romance_acceptance_modifiers = {
 	modifier = {
 		add = 80
-		desc = "[soulmate|E]"
+		desc = latria_act_accept_soulmate
 		scope:recipient = { has_relation_soulmate = scope:puppet_or_actor }
 	}
 	modifier = {
 		add = 60
-		desc = "[lover|E]"
+		desc = latria_act_accept_lover
 		scope:recipient = {
 			has_relation_lover = scope:puppet_or_actor
 			NOT = { has_relation_soulmate = scope:puppet_or_actor }
@@ -19,7 +19,7 @@ latria_act_romance_acceptance_modifiers = {
 latria_act_consort_acceptance_modifiers = {
 	modifier = {
 		add = 50
-		desc = "[spouse|E]"
+		desc = latria_act_accept_spouse
 		scope:recipient = {
 			is_spouse_of = scope:puppet_or_actor
 			NOT = { latria_has_romantic_bond = { PARTNER = scope:puppet_or_actor } }
@@ -27,7 +27,7 @@ latria_act_consort_acceptance_modifiers = {
 	}
 	modifier = {
 		add = 40
-		desc = "[concubine|E]"
+		desc = latria_act_accept_concubine
 		scope:recipient = {
 			latria_are_consorts = { PARTNER = scope:puppet_or_actor }
 			NOT = { is_spouse_of = scope:puppet_or_actor }
@@ -85,17 +85,17 @@ latria_act_attitude_acceptance_modifiers = {
 	}
 	modifier = {
 		add = 20
-		desc = trait_lustful
+		desc = latria_act_accept_lustful
 		scope:recipient = { has_trait = lustful }
 	}
 	modifier = {
 		add = -40
-		desc = trait_chaste
+		desc = latria_act_accept_chaste
 		scope:recipient = { has_trait = chaste }
 	}
 	modifier = {
 		add = -300
-		desc = "[rival|E]"
+		desc = latria_act_accept_rival
 		scope:recipient = {
 			has_relation_rival = scope:puppet_or_actor
 			NOT = { has_relation_nemesis = scope:puppet_or_actor }
@@ -103,7 +103,7 @@ latria_act_attitude_acceptance_modifiers = {
 	}
 	modifier = {
 		add = -1000
-		desc = "[nemesis|E]"
+		desc = latria_act_accept_nemesis
 		scope:recipient = { has_relation_nemesis = scope:puppet_or_actor }
 	}
 }

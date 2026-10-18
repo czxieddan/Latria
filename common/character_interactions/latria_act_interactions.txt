@@ -105,7 +105,7 @@ latria_propose_intercourse_interaction = {
 		latria_act_rank_acceptance_modifiers = yes
 		modifier = {
 			add = -100
-			desc = trait_pregnant
+			desc = latria_act_accept_pregnant
 			scope:recipient = { is_pregnant = yes }
 			scope:puppet_or_actor = {
 				NOT = { latria_lack_of_ability_to_say_no = yes }

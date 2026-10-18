@@ -60,16 +60,12 @@ latria_start_fatal_liaison_interaction = {
 
 	on_accept = {
 		scope:puppet_or_actor = {
-			save_scope_value_as = {
-				name = latria_act_kind
-				value = flag:latria_act_intercourse
-			}
 			send_interface_toast = {
 				type = event_toast_effect_neutral
 				title = latria_fatal_liaison_started
 				left_icon = scope:puppet_or_actor
 				right_icon = scope:recipient
-				latria_begin_fatal_liaison_effect = yes
+				latria_begin_fatal_liaison_effect = { SCHEME_TYPE = latria_fatal_liaison }
 			}
 		}
 	}
@@ -92,7 +88,7 @@ latria_start_fatal_touch_interaction = {
 	interface_priority = 79
 	category = interaction_category_hostile
 	ignores_pending_interaction_block = yes
-	scheme = latria_fatal_liaison
+	scheme = latria_fatal_touch
 	send_name = START_SCHEME
 	auto_accept = yes
 
@@ -121,7 +117,7 @@ latria_start_fatal_touch_interaction = {
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
 			can_start_scheme = {
-				type = latria_fatal_liaison
+				type = latria_fatal_touch
 				target_character = scope:recipient
 			}
 		}
@@ -148,16 +144,12 @@ latria_start_fatal_touch_interaction = {
 
 	on_accept = {
 		scope:puppet_or_actor = {
-			save_scope_value_as = {
-				name = latria_act_kind
-				value = flag:latria_act_manual
-			}
 			send_interface_toast = {
 				type = event_toast_effect_neutral
 				title = latria_fatal_touch_started
 				left_icon = scope:puppet_or_actor
 				right_icon = scope:recipient
-				latria_begin_fatal_liaison_effect = yes
+				latria_begin_fatal_liaison_effect = { SCHEME_TYPE = latria_fatal_touch }
 			}
 		}
 	}

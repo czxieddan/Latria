@@ -4,7 +4,7 @@ latria_fatal_liaison_prep_effect = {
 	scheme_target_character = { save_scope_as = target }
 	save_scope_value_as = {
 		name = follow_up_event
-		value = event_id:latria_scheme.0001
+		value = event_id:$FOLLOW_UP_EVENT$
 	}
 	if = {
 		limit = { NOT = { exists = scope:suppress_next_event } }
@@ -57,25 +57,9 @@ latria_bind_fatal_liaison_scopes = {
 	}
 }
 
-latria_store_scheme_act_kind = {
-	if = {
-		limit = { scope:latria_act_kind = flag:latria_act_manual }
-		set_variable = {
-			name = latria_scheme_act_kind
-			value = flag:latria_act_manual
-		}
-	}
-	else = {
-		set_variable = {
-			name = latria_scheme_act_kind
-			value = flag:latria_act_intercourse
-		}
-	}
-}
-
 latria_begin_fatal_liaison_balanced = {
 	begin_scheme_with_agents_effect = {
-		SCHEME_TYPE = latria_fatal_liaison
+		SCHEME_TYPE = $SCHEME_TYPE$
 		TARGET_TYPE = target_character
 		TARGET_SCOPE = scope:recipient
 		AGENT_1 = latria_agent_quack
@@ -88,7 +72,7 @@ latria_begin_fatal_liaison_balanced = {
 
 latria_begin_fatal_liaison_success = {
 	begin_scheme_with_agents_effect = {
-		SCHEME_TYPE = latria_fatal_liaison
+		SCHEME_TYPE = $SCHEME_TYPE$
 		TARGET_TYPE = target_character
 		TARGET_SCOPE = scope:recipient
 		AGENT_1 = latria_agent_quack
@@ -101,7 +85,7 @@ latria_begin_fatal_liaison_success = {
 
 latria_begin_fatal_liaison_speed = {
 	begin_scheme_with_agents_effect = {
-		SCHEME_TYPE = latria_fatal_liaison
+		SCHEME_TYPE = $SCHEME_TYPE$
 		TARGET_TYPE = target_character
 		TARGET_SCOPE = scope:recipient
 		AGENT_1 = latria_agent_usher
@@ -114,7 +98,7 @@ latria_begin_fatal_liaison_speed = {
 
 latria_begin_fatal_liaison_secrecy = {
 	begin_scheme_with_agents_effect = {
-		SCHEME_TYPE = latria_fatal_liaison
+		SCHEME_TYPE = $SCHEME_TYPE$
 		TARGET_TYPE = target_character
 		TARGET_SCOPE = scope:recipient
 		AGENT_1 = latria_agent_door
@@ -128,22 +112,17 @@ latria_begin_fatal_liaison_secrecy = {
 latria_begin_fatal_liaison_effect = {
 	if = {
 		limit = { scope:agent_focus_success ?= yes }
-		latria_begin_fatal_liaison_success = yes
+		latria_begin_fatal_liaison_success = { SCHEME_TYPE = $SCHEME_TYPE$ }
 	}
 	else_if = {
 		limit = { scope:agent_focus_speed ?= yes }
-		latria_begin_fatal_liaison_speed = yes
+		latria_begin_fatal_liaison_speed = { SCHEME_TYPE = $SCHEME_TYPE$ }
 	}
 	else_if = {
 		limit = { scope:agent_focus_secrecy ?= yes }
-		latria_begin_fatal_liaison_secrecy = yes
+		latria_begin_fatal_liaison_secrecy = { SCHEME_TYPE = $SCHEME_TYPE$ }
 	}
-	else = { latria_begin_fatal_liaison_balanced = yes }
-	random_scheme = {
-		type = latria_fatal_liaison
-		limit = { scheme_target_character = scope:recipient }
-		latria_store_scheme_act_kind = yes
-	}
+	else = { latria_begin_fatal_liaison_balanced = { SCHEME_TYPE = $SCHEME_TYPE$ } }
 }
 
 # Keep the event icon available after the scheme has ended.
@@ -162,5 +141,37 @@ latria_save_fatal_liaison_icon_kind = {
 			name = latria_fatal_icon_kind
 			value = flag:latria_act_manual
 		}
+	}
+}
+
+latria_resolve_fatal_liaison_outcome = {
+	latria_bind_fatal_liaison_scopes = yes
+	latria_save_fatal_liaison_icon_kind = yes
+	random = {
+		chance = scope:scheme.scheme_success_chance
+		save_scope_value_as = {
+			name = latria_scheme_succeeded
+			value = yes
+		}
+	}
+	scope:owner = { add_character_flag = latria_fatal_liaison_concluded }
+	if = {
+		limit = { exists = scope:latria_scheme_succeeded }
+		scope:owner = {
+			save_scope_value_as = {
+				name = latria_act_kind
+				value = scope:latria_fatal_icon_kind
+			}
+			save_scope_value_as = {
+				name = latria_force_death
+				value = yes
+			}
+			scope:target = { save_scope_as = latria_partner }
+			latria_resolve_act = yes
+			trigger_event = $SUCCESS_EVENT$
+		}
+	}
+	else = {
+		scope:owner = { trigger_event = $FAILURE_EVENT$ }
 	}
 }
