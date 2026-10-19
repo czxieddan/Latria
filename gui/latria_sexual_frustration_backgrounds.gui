@@ -1,0 +1,117 @@
+types LatriaSexualFrustrationBackgrounds {
+	type latria_sexual_frustration_background = widget {
+		size = { 120 74 }
+
+		widget = {
+			size = { 240 74 }
+			position = { -16 0 }
+
+			# Keep texture paths literal; select gender through visibility.
+			proportional_icon = {
+				size = { 100% 100% }
+				visible = "[Not(GetPlayer.IsFemale)]"
+				block "latria_background_male_texture" {}
+				using = Mask_Rough_Edges
+
+				modify_texture = {
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+					blend_mode = alphaMultiply
+				}
+			}
+
+			proportional_icon = {
+				size = { 100% 100% }
+				visible = "[GetPlayer.IsFemale]"
+				block "latria_background_female_texture" {}
+				using = Mask_Rough_Edges
+
+				modify_texture = {
+					texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
+					blend_mode = alphaMultiply
+				}
+			}
+		}
+	}
+
+	type latria_sexual_frustration_background_0 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_0.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_0.dds"
+		}
+	}
+
+	type latria_sexual_frustration_background_1 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_1.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_1.dds"
+		}
+	}
+
+	type latria_sexual_frustration_background_2 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_2.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_2.dds"
+		}
+	}
+
+	type latria_sexual_frustration_background_3 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_3.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_3.dds"
+		}
+	}
+
+	type latria_sexual_frustration_background_4 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_4.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_4.dds"
+		}
+	}
+
+	type latria_sexual_frustration_background_5 = latria_sexual_frustration_background {
+		blockoverride "latria_background_male_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_male_5.dds"
+		}
+		blockoverride "latria_background_female_texture" {
+			texture = "gfx/interface/illustrations/latria_sexual_frustration_female_5.dds"
+		}
+	}
+
+	type latria_sexual_frustration_current_background = widget {
+		size = { 120 74 }
+
+		latria_sexual_frustration_background_0 = {
+			visible = "[Or( Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet ), EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+		}
+
+		latria_sexual_frustration_background_1 = {
+			visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)1' )]"
+		}
+
+		latria_sexual_frustration_background_2 = {
+			visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)2' )]"
+		}
+
+		latria_sexual_frustration_background_3 = {
+			visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)3' )]"
+		}
+
+		latria_sexual_frustration_background_4 = {
+			visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)4' )]"
+		}
+
+		latria_sexual_frustration_background_5 = {
+			visible = "[EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)5' )]"
+		}
+	}
+}

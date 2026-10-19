@@ -27,6 +27,12 @@ types LatriaSexualFrustrationComponents {
 			}
 		}
 
+		blockoverride "header_additions" {
+			block "latria_level_background" {
+				latria_sexual_frustration_background_1 = {}
+			}
+		}
+
 		blockoverride "main_description" {
 			cooltip_paragraph = {
 				text = "latria_sexual_frustration_level_effects"
@@ -58,6 +64,10 @@ types LatriaSexualFrustrationComponents {
 				max_width = 400
 				margin_top = -4
 			}
+		}
+
+		blockoverride "header_additions" {
+			latria_sexual_frustration_background_0 = {}
 		}
 
 		blockoverride "main_description" {

@@ -25,25 +25,7 @@ types LatriaSexualFrustrationTooltip {
 		}
 
 		blockoverride "header_additions" {
-			widget = {
-				size = { 120 74 }
-
-				widget = {
-					size = { 240 74 }
-					position = { -16 0 }
-
-					proportional_icon = {
-						size = { 100% 100% }
-						texture = "gfx/interface/window_legend_chronicle/expected_legitimacy_decoration.dds"
-						using = Mask_Rough_Edges
-
-						modify_texture = {
-							texture = "gfx/interface/component_masks/mask_fade_horizontal_right.dds"
-							blend_mode = alphaMultiply
-						}
-					}
-				}
-			}
+			latria_sexual_frustration_current_background = {}
 		}
 
 		blockoverride "main_description" {
@@ -262,6 +244,9 @@ types LatriaSexualFrustrationTooltip {
 									tooltipwidget = {
 										latria_sexual_frustration_level_tooltip = {
 											datacontext = "[GetModifier('latria_sexual_frustration_2')]"
+											blockoverride "latria_level_background" {
+												latria_sexual_frustration_background_2 = {}
+											}
 											blockoverride "threshold_text" {
 												text = "latria_sexual_frustration_requires_50"
 											}
@@ -299,6 +284,9 @@ types LatriaSexualFrustrationTooltip {
 									tooltipwidget = {
 										latria_sexual_frustration_level_tooltip = {
 											datacontext = "[GetModifier('latria_sexual_frustration_3')]"
+											blockoverride "latria_level_background" {
+												latria_sexual_frustration_background_3 = {}
+											}
 											blockoverride "threshold_text" {
 												text = "latria_sexual_frustration_requires_100"
 											}
@@ -336,6 +324,9 @@ types LatriaSexualFrustrationTooltip {
 									tooltipwidget = {
 										latria_sexual_frustration_level_tooltip = {
 											datacontext = "[GetModifier('latria_sexual_frustration_4')]"
+											blockoverride "latria_level_background" {
+												latria_sexual_frustration_background_4 = {}
+											}
 											blockoverride "threshold_text" {
 												text = "latria_sexual_frustration_requires_180"
 											}
@@ -373,6 +364,9 @@ types LatriaSexualFrustrationTooltip {
 									tooltipwidget = {
 										latria_sexual_frustration_level_tooltip = {
 											datacontext = "[GetModifier('latria_sexual_frustration_5')]"
+											blockoverride "latria_level_background" {
+												latria_sexual_frustration_background_5 = {}
+											}
 											blockoverride "threshold_text" {
 												text = "latria_sexual_frustration_requires_300"
 											}
