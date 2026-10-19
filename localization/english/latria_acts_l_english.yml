@@ -41,8 +41,8 @@
  latria_propose_manual_interaction: "Offer a Caress"
  latria_propose_manual_interaction_desc: "Find a private moment with [recipient.GetShortUINameNoTooltip] for kisses and caresses."
  latria_propose_act_send: "Send Invitation"
- latria_propose_intercourse_night_tt: "Lie with [recipient.GetShortUIName]. This may ease [latria_sexual_repression|E] and may result in pregnancy."
- latria_propose_manual_night_tt: "Exchange caresses with [recipient.GetShortUIName]. This may ease [latria_sexual_repression|E], but cannot result in pregnancy."
+ latria_propose_intercourse_night_tt: "Spend an intimate night with [recipient.GetShortUIName]. This may ease [latria_sexual_repression|E]."
+ latria_propose_manual_night_tt: "Share tender caresses with [recipient.GetShortUIName]. This may ease [latria_sexual_repression|E]."
 
  latria_fatal_liaison: "Fatal Coupling"
  latria_fatal_liaison_action: "Fatal Coupling"

@@ -41,8 +41,8 @@
  latria_propose_manual_interaction: "邀约爱抚"
  latria_propose_manual_interaction_desc: "邀[recipient.GetShortUINameNoTooltip]私下亲吻、爱抚。"
  latria_propose_act_send: "发出邀请"
- latria_propose_intercourse_night_tt: "与[recipient.GetShortUIName]交合，可能缓解[latria_sexual_repression|E]，也可能带来身孕。"
- latria_propose_manual_night_tt: "与[recipient.GetShortUIName]互相爱抚，可能缓解[latria_sexual_repression|E]，不会因此受孕。"
+ latria_propose_intercourse_night_tt: "与[recipient.GetShortUIName]共度缠绵之夜，可能缓解[latria_sexual_repression|E]。"
+ latria_propose_manual_night_tt: "与[recipient.GetShortUIName]温柔地互相爱抚，可能缓解[latria_sexual_repression|E]。"
 
  latria_fatal_liaison: "致命交合"
  latria_fatal_liaison_action: "致命交合"
