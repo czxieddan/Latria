@@ -5,6 +5,9 @@ latria_prison_punishment.0001 = {
 	title = latria_prison_punishment.0001.t
 	desc = latria_prison_punishment.0001.desc
 	theme = dungeon
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_force_pig_embrace.dds"
+	}
 
 	left_portrait = {
 		character = root
@@ -53,6 +56,9 @@ latria_prison_punishment.0002 = {
 	title = latria_prison_punishment.0002.t
 	desc = latria_prison_punishment.0002.desc
 	theme = dungeon
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_force_pig_embrace.dds"
+	}
 
 	left_portrait = {
 		character = root

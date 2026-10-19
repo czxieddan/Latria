@@ -1,6 +1,6 @@
 latria_force_pig_embrace_interaction = {
 	interface_priority = 25
-	icon = torture_interaction
+	icon = latria_force_pig_embrace
 	category = interaction_category_prison
 	desc = latria_force_pig_embrace_interaction_desc
 
