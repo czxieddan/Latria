@@ -92,21 +92,6 @@ latria_act.0101 = {
 		}
 		if = {
 			limit = {
-				exists = scope:latria_partner
-				scope:latria_partner = {
-					is_alive = yes
-					exists = var:latria_recent_repression_relief
-					var:latria_recent_repression_relief > 0
-				}
-			}
-			show_as_tooltip = {
-				scope:latria_partner = {
-					custom_tooltip = latria_partner_repression_relieved_tt
-				}
-			}
-		}
-		if = {
-			limit = {
 				scope:latria_act_kind = flag:latria_act_intercourse
 				has_character_flag = latria_gained_serene_mind
 			}
@@ -221,21 +206,6 @@ latria_act.0102 = {
 			}
 			show_as_tooltip = {
 				custom_tooltip = latria_repression_relieved_tt
-			}
-		}
-		if = {
-			limit = {
-				exists = scope:latria_actor
-				scope:latria_actor = {
-					is_alive = yes
-					exists = var:latria_recent_repression_relief
-					var:latria_recent_repression_relief > 0
-				}
-			}
-			show_as_tooltip = {
-				scope:latria_actor = {
-					custom_tooltip = latria_partner_repression_relieved_tt
-				}
 			}
 		}
 		if = {
