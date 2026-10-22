@@ -25,6 +25,8 @@
  latria_reveal_papal_secret_decision_desc: "我将亲自在教士与诸侯面前说出这个秘密。每位统治者都会从我口中听见真相，否认我职分的人自可举兵而来。"
  latria_reveal_papal_secret_decision_tooltip: "公开你的私通，并面对随之而来的废黜战争。"
  latria_reveal_papal_secret_decision_confirm: "当众公开"
+ latria_can_reveal_papal_secret_trigger: "拥有可以公开的私通秘密"
+ NOT_ANY_OF_MY_SECRETS: "没有属于你的秘密："
 
  latria_papal_redemption_war: "教皇救赎战争"
  LATRIA_PAPAL_REDEMPTION_CB_NAME: "教皇的救赎"

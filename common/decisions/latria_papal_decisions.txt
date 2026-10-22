@@ -17,7 +17,10 @@ latria_reveal_papal_secret_decision = {
 	}
 
 	is_valid_showing_failures_only = {
-		latria_can_reveal_papal_secret = yes
+		custom_description = {
+			text = latria_can_reveal_papal_secret_trigger
+			latria_can_reveal_papal_secret = yes
+		}
 	}
 
 	effect = { latria_reveal_papal_secret = yes }

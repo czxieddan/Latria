@@ -25,6 +25,8 @@
  latria_reveal_papal_secret_decision_desc: "I will name my secret before the clergy and princes. Let every ruler hear it from my own mouth, and let those who deny my office take up arms."
  latria_reveal_papal_secret_decision_tooltip: "Publicly reveal your affair and face the deposition war."
  latria_reveal_papal_secret_decision_confirm: "Reveal it before all"
+ latria_can_reveal_papal_secret_trigger: "You have an affair secret that can be revealed"
+ NOT_ANY_OF_MY_SECRETS: "None of your Secrets:"
 
  latria_papal_redemption_war: "Papal War of Redemption"
  LATRIA_PAPAL_REDEMPTION_CB_NAME: "Papal Redemption"

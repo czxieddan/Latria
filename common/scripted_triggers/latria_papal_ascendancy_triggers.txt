@@ -18,8 +18,11 @@ latria_can_reveal_papal_secret = {
 		has_trait = adulterer
 		has_trait = fornicator
 	}
-	OR = {
-		any_secret = { type = secret_lover }
-		exists = var:had_recent_sex_with
+	custom_description = {
+		text = latria_can_reveal_papal_secret_trigger
+		OR = {
+			any_secret = { type = secret_lover }
+			exists = var:had_recent_sex_with
+		}
 	}
 }
