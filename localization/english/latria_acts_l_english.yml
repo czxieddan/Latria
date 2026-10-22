@@ -121,4 +121,4 @@
 
  latria_serene_mind: "Refreshed and Serene"
  latria_serene_mind_desc: "A deeply satisfying intimate encounter leaves the mind and body invigorated."
- latria_repression_relieved_tt: "[latria_sexual_repression|E]: #P -[ROOT.Var('latria_recent_repression_relief').GetValue|0]#!"
+ latria_repression_relieved_tt: "[latria_sexual_repression|E]: #P -[GetPlayer.MakeScope.ScriptValue('latria_recent_repression_relief_value')|0]#!"
