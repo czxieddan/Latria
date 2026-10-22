@@ -118,3 +118,8 @@
 
  latria_wedding_night.t: "The Wedding Night"
  latria_wedding_night.desc: "The last of the wedding party withdraws, leaving [latria_actor.GetShortUIName] and [latria_partner.GetShortUIName] to spend their first night as a married couple in private."
+
+ latria_serene_mind: "Refreshed and Serene"
+ latria_serene_mind_desc: "A deeply satisfying intimate encounter leaves the mind and body invigorated."
+ latria_repression_relieved_tt: "[latria_sexual_repression|E]: #P -[ROOT.Char.MakeScope.Var('latria_recent_repression_relief').GetValue|0]#!"
+ latria_partner_repression_relieved_tt: "[latria_sexual_repression|E]: #P -[THIS.Char.MakeScope.Var('latria_recent_repression_relief').GetValue|0]#!"

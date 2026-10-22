@@ -173,8 +173,22 @@ latria_reduce_sexual_frustration = {
 				value = 0
 			}
 		}
+		set_variable = {
+			name = latria_recent_repression_relief
+			value = {
+				value = scope:latria_prior_sexual_frustration
+				subtract = var:latria_sexual_frustration
+			}
+		}
+		if = {
+			limit = { var:latria_recent_repression_relief <= 0 }
+			remove_variable = latria_recent_repression_relief
+		}
 		latria_sync_sexual_frustration_level = yes
 		latria_refund_fallen_sexual_frustration_stress = yes
+	}
+	else = {
+		remove_variable = latria_recent_repression_relief
 	}
 }
 

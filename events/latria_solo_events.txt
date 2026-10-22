@@ -16,6 +16,15 @@ latria_act.0201 = {
 	desc = latria_act.0201.desc
 	immediate = {
 		add_character_flag = is_naked
+		if = {
+			limit = {
+				exists = var:latria_recent_repression_relief
+				var:latria_recent_repression_relief > 0
+			}
+			show_as_tooltip = {
+				custom_tooltip = latria_repression_relieved_tt
+			}
+		}
 	}
 	option = {
 		name = latria_act.0201.a
@@ -23,5 +32,6 @@ latria_act.0201 = {
 	}
 	after = {
 		remove_character_flag = is_naked
+		remove_variable = latria_recent_repression_relief
 	}
 }

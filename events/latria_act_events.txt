@@ -81,12 +81,74 @@ latria_act.0101 = {
 	}
 	immediate = {
 		latria_mark_act_undressed = { PARTNER = scope:latria_partner }
+		if = {
+			limit = {
+				exists = var:latria_recent_repression_relief
+				var:latria_recent_repression_relief > 0
+			}
+			show_as_tooltip = {
+				custom_tooltip = latria_repression_relieved_tt
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:latria_partner
+				scope:latria_partner = {
+					is_alive = yes
+					exists = var:latria_recent_repression_relief
+					var:latria_recent_repression_relief > 0
+				}
+			}
+			show_as_tooltip = {
+				scope:latria_partner = {
+					custom_tooltip = latria_partner_repression_relieved_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:latria_act_kind = flag:latria_act_intercourse
+				has_character_flag = latria_gained_serene_mind
+			}
+			show_as_tooltip = {
+				add_character_modifier = {
+					modifier = latria_serene_mind
+					months = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:latria_act_kind = flag:latria_act_intercourse
+				scope:latria_partner = {
+					is_alive = yes
+					has_character_flag = latria_gained_serene_mind
+				}
+			}
+			show_as_tooltip = {
+				scope:latria_partner = {
+					add_character_modifier = {
+						modifier = latria_serene_mind
+						months = 1
+					}
+				}
+			}
+		}
 	}
 	option = {
 		name = latria_act.0101.a
 	}
 	after = {
 		latria_clear_act_undressed = { PARTNER = scope:latria_partner }
+		remove_character_flag = latria_gained_serene_mind
+		remove_variable = latria_recent_repression_relief
+		scope:latria_partner = {
+			if = {
+				limit = { is_alive = yes }
+				remove_character_flag = latria_gained_serene_mind
+				remove_variable = latria_recent_repression_relief
+			}
+		}
 	}
 }
 
@@ -152,11 +214,73 @@ latria_act.0102 = {
 	}
 	immediate = {
 		latria_mark_act_undressed = { PARTNER = scope:latria_actor }
+		if = {
+			limit = {
+				exists = var:latria_recent_repression_relief
+				var:latria_recent_repression_relief > 0
+			}
+			show_as_tooltip = {
+				custom_tooltip = latria_repression_relieved_tt
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:latria_actor
+				scope:latria_actor = {
+					is_alive = yes
+					exists = var:latria_recent_repression_relief
+					var:latria_recent_repression_relief > 0
+				}
+			}
+			show_as_tooltip = {
+				scope:latria_actor = {
+					custom_tooltip = latria_partner_repression_relieved_tt
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:latria_act_kind = flag:latria_act_intercourse
+				has_character_flag = latria_gained_serene_mind
+			}
+			show_as_tooltip = {
+				add_character_modifier = {
+					modifier = latria_serene_mind
+					months = 1
+				}
+			}
+		}
+		if = {
+			limit = {
+				scope:latria_act_kind = flag:latria_act_intercourse
+				scope:latria_actor = {
+					is_alive = yes
+					has_character_flag = latria_gained_serene_mind
+				}
+			}
+			show_as_tooltip = {
+				scope:latria_actor = {
+					add_character_modifier = {
+						modifier = latria_serene_mind
+						months = 1
+					}
+				}
+			}
+		}
 	}
 	option = {
 		name = latria_act.0101.a
 	}
 	after = {
 		latria_clear_act_undressed = { PARTNER = scope:latria_actor }
+		remove_character_flag = latria_gained_serene_mind
+		remove_variable = latria_recent_repression_relief
+		scope:latria_actor = {
+			if = {
+				limit = { is_alive = yes }
+				remove_character_flag = latria_gained_serene_mind
+				remove_variable = latria_recent_repression_relief
+			}
+		}
 	}
 }

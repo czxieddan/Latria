@@ -1,0 +1,5 @@
+latria_serene_mind = {
+	icon = stress_positive
+	stress_gain_mult = -0.15
+	health = 0.5
+}

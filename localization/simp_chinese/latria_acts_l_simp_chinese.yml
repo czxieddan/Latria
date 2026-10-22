@@ -118,3 +118,8 @@
 
  latria_wedding_night.t: "新婚之夜"
  latria_wedding_night.desc: "送新人入房的宾客终于散去，[latria_actor.GetShortUIName]与[latria_partner.GetShortUIName]得以独处，共度了新婚之夜。"
+
+ latria_serene_mind: "心旷神怡"
+ latria_serene_mind_desc: "一场身心皆畅的相会令人神清气爽，疲意尽消。"
+ latria_repression_relieved_tt: "[latria_sexual_repression|E]：#P -[ROOT.Char.MakeScope.Var('latria_recent_repression_relief').GetValue|0]#!"
+ latria_partner_repression_relieved_tt: "[latria_sexual_repression|E]：#P -[THIS.Char.MakeScope.Var('latria_recent_repression_relief').GetValue|0]#!"

@@ -1,10 +1,38 @@
 # Called only from latria_resolve_act. Stress, piety, and fulfillment stay on that entry.
 
 # Caps the AI birthday schedule. Not the pause shared with a partner.
+# Caps the AI birthday schedule. Scaled down so relief frequency is significantly increased.
 latria_mark_solo_interval = {
-	add_character_flag = {
-		flag = latria_recent_solo_act
-		days = 130
+	if = {
+		limit = {
+			OR = {
+				has_trait = lustful
+				has_character_modifier = latria_sexual_frustration_4
+				has_character_modifier = latria_sexual_frustration_5
+			}
+		}
+		add_character_flag = {
+			flag = latria_recent_solo_act
+			days = 15
+		}
+	}
+	else_if = {
+		limit = {
+			OR = {
+				has_character_modifier = latria_sexual_frustration_2
+				has_character_modifier = latria_sexual_frustration_3
+			}
+		}
+		add_character_flag = {
+			flag = latria_recent_solo_act
+			days = 20
+		}
+	}
+	else = {
+		add_character_flag = {
+			flag = latria_recent_solo_act
+			days = 30
+		}
 	}
 }
 

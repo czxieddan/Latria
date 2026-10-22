@@ -153,16 +153,109 @@ latria_manual_overture_chance = {
 	max = 100
 }
 
-# AI birthday schedule. Chaste and temperate stay near zero; lustful does not.
+# AI carnal schedule. Elevated base and responsive frustration scaling.
 latria_solo_relief_ai_chance = {
-	value = 62
+	value = 80
 	if = { limit = { has_trait = lustful } add = 30 }
-	if = { limit = { has_trait = chaste } add = -100 }
-	if = { limit = { has_trait = temperate } add = -80 }
+	if = { limit = { has_trait = chaste } add = -60 }
+	if = { limit = { has_trait = temperate } add = -40 }
 	if = { limit = { stress >= low_stress } add = 40 }
-	if = { limit = { has_character_modifier = latria_sexual_frustration_3 } add = 10 }
-	if = { limit = { has_character_modifier = latria_sexual_frustration_4 } add = 20 }
-	if = { limit = { has_character_modifier = latria_sexual_frustration_5 } add = 30 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_1 } add = 15 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_2 } add = 30 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_3 } add = 50 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_4 } add = 70 }
+	if = { limit = { has_character_modifier = latria_sexual_frustration_5 } add = 90 }
+	if = {
+		limit = {
+			NOT = { exists = spouse }
+			NOT = { any_consort = { always = yes } }
+			NOT = { any_relation = { type = lover } }
+		}
+		add = 25
+	}
 	min = 0
 	max = 100
+}
+
+latria_serene_mind_chance = {
+	value = 50
+	if = {
+		limit = {
+			exists = scope:latria_serene_target
+			has_relation_soulmate = scope:latria_serene_target
+		}
+		add = 20
+	}
+	else_if = {
+		limit = {
+			exists = scope:latria_serene_target
+			has_relation_lover = scope:latria_serene_target
+		}
+		add = 10
+	}
+	if = {
+		limit = { has_trait = lustful }
+		add = 15
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = calm
+				has_trait = content
+			}
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			exists = scope:latria_serene_target
+			scope:latria_serene_target = {
+				OR = {
+					has_trait = beauty_good_1
+					has_trait = beauty_good_2
+					has_trait = beauty_good_3
+				}
+			}
+		}
+		add = 10
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add = -15
+	}
+	if = {
+		limit = {
+			OR = {
+				has_trait = wrathful
+				has_trait = paranoid
+			}
+		}
+		add = -10
+	}
+	if = {
+		limit = { stress_level >= 2 }
+		add = -15
+	}
+	if = {
+		limit = {
+			exists = scope:latria_serene_target
+			opinion = {
+				target = scope:latria_serene_target
+				value >= 50
+			}
+		}
+		add = 10
+	}
+	if = {
+		limit = {
+			exists = scope:latria_serene_target
+			opinion = {
+				target = scope:latria_serene_target
+				value < 0
+			}
+		}
+		add = -20
+	}
+	min = 5
+	max = 95
 }

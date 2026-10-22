@@ -71,10 +71,10 @@ latria_yearly_sexual_frustration_gain = {
 	multiply = 365
 }
 
-# One quarter of the yearly total. latria_schedule_ai_carnal_year fires four pulses.
+# One eighth of the yearly total. latria_schedule_ai_carnal_year fires eight pulses.
 latria_ai_pulse_sexual_frustration_gain = {
 	value = latria_yearly_sexual_frustration_gain
-	multiply = 0.25
+	multiply = 0.125
 }
 
 latria_sexual_frustration_stress_gain = {

@@ -1,6 +1,6 @@
 
-# Four pulses a year, spread out so month-exhaustion does not trip on one day.
-# The slice below is one quarter of the yearly gain. Two in a hundred never act:
+# Eight pulses a year, spread out so relief opportunities arise frequently.
+# The slice below is one eighth of the yearly gain. Two in a hundred never act:
 # unprotected characters in that slice are the frustration deaths.
 latria_roll_ai_carnal_drive = {
 	if = {
@@ -43,8 +43,12 @@ latria_schedule_ai_carnal_year = {
 		}
 		latria_roll_ai_carnal_drive = yes
 		latria_ai_run_carnal_pulse = yes
+		trigger_event = { id = latria_act.0501 days = 45 }
 		trigger_event = { id = latria_act.0501 days = 90 }
+		trigger_event = { id = latria_act.0501 days = 135 }
 		trigger_event = { id = latria_act.0501 days = 180 }
+		trigger_event = { id = latria_act.0501 days = 225 }
 		trigger_event = { id = latria_act.0501 days = 270 }
+		trigger_event = { id = latria_act.0501 days = 315 }
 	}
 }

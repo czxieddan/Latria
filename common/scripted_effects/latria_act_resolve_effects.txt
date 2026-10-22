@@ -86,6 +86,43 @@ latria_resolve_act = {
 }
 
 # Partner path. Solo never reaches this: strain, pregnancy, and the shared pause need latria_partner.
+latria_roll_serene_mind = {
+	if = {
+		limit = {
+			scope:latria_act_kind = flag:latria_act_intercourse
+			exists = scope:latria_act_satisfied
+			is_alive = yes
+			scope:latria_partner = { is_alive = yes }
+		}
+		scope:latria_partner = { save_scope_as = latria_serene_target }
+		random = {
+			chance = latria_serene_mind_chance
+			add_character_modifier = {
+				modifier = latria_serene_mind
+				months = 1
+			}
+			add_character_flag = {
+				flag = latria_gained_serene_mind
+				days = 2
+			}
+		}
+		scope:latria_partner = {
+			scope:latria_actor = { save_scope_as = latria_serene_target }
+			random = {
+				chance = latria_serene_mind_chance
+				add_character_modifier = {
+					modifier = latria_serene_mind
+					months = 1
+				}
+				add_character_flag = {
+					flag = latria_gained_serene_mind
+					days = 2
+				}
+			}
+		}
+	}
+}
+
 latria_resolve_partner_act = {
 	save_scope_as = latria_actor
 	# Register vanilla state before strain can kill either participant.
@@ -97,6 +134,7 @@ latria_resolve_partner_act = {
 		limit = { exists = scope:latria_act_satisfied }
 		latria_roll_act_pregnancy = yes
 		latria_relieve_partner_sexual_frustration = yes
+		latria_roll_serene_mind = yes
 	}
 	if = {
 		limit = {
