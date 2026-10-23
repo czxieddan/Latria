@@ -23,15 +23,18 @@ latria_act.0301 = {
 	}
 	immediate = {
 		random_list = {
-			35 = {
-				trigger = { NOT = { has_trait = ill } }
+			10 = {
+				trigger = {
+					NOT = { has_trait = ill }
+					health <= good_health
+				}
 				add_trait = ill
 				add_character_flag = {
 					flag = latria_act_exhaustion_illness
 					days = 1
 				}
 			}
-			40 = {
+			65 = {
 				add_stress = {
 					value = medium_stress_impact_gain
 				}
@@ -80,15 +83,18 @@ latria_act.0311 = {
 	}
 	immediate = {
 		random_list = {
-			25 = {
-				trigger = { NOT = { has_trait = ill } }
+			10 = {
+				trigger = {
+					NOT = { has_trait = ill }
+					health <= good_health
+				}
 				add_trait = ill
 				add_character_flag = {
 					flag = latria_act_exhaustion_illness
 					days = 1
 				}
 			}
-			25 = {
+			60 = {
 				add_stress = {
 					value = major_stress_impact_gain
 				}
@@ -97,18 +103,21 @@ latria_act.0311 = {
 					days = 1
 				}
 			}
-			20 = {
-				trigger = { NOT = { has_trait = infertile } }
+			5 = {
+				trigger = {
+					NOT = { has_trait = infertile }
+					age >= 40
+				}
 				add_trait = infertile
 				add_character_flag = {
 					flag = latria_act_exhaustion_infertile
 					days = 1
 				}
 			}
-			30 = {
+			25 = {
 				add_character_modifier = {
 					modifier = latria_act_depleted_health
-					years = 2
+					months = 12
 				}
 			}
 		}

@@ -1,6 +1,6 @@
 # The scores are hidden. Health and physique move only the limits, never the gain.
 latria_act_month_exhaustion_limit = {
-	value = 12
+	value = 20
 	if = {
 		limit = { health >= good_health }
 		add = 2
@@ -33,12 +33,12 @@ latria_act_month_exhaustion_limit = {
 		limit = { has_trait = physique_bad_3 }
 		add = -3
 	}
-	min = 6
-	max = 20
+	min = 12
+	max = 32
 }
 
 latria_act_year_exhaustion_limit = {
-	value = 36
+	value = 60
 	if = {
 		limit = { health >= good_health }
 		add = 6
@@ -71,17 +71,17 @@ latria_act_year_exhaustion_limit = {
 		limit = { has_trait = physique_bad_3 }
 		add = -9
 	}
-	min = 18
-	max = 60
+	min = 36
+	max = 100
 }
 
 # Decay is evaluated only when another act happens after the flag expires.
 latria_act_month_exhaustion_after_decay = {
 	value = var:latria_act_month_exhaustion
-	multiply = 0.5
+	multiply = 0.25
 }
 
 latria_act_year_exhaustion_after_decay = {
 	value = var:latria_act_year_exhaustion
-	multiply = 0.75
+	multiply = 0.5
 }

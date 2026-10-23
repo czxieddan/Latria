@@ -49,22 +49,22 @@ latria_decay_act_year_exhaustion = {
 
 latria_roll_solo_exhaustion_gain = {
 	random_list = {
-		40 = {
+		70 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 0
+			}
+		}
+		25 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 1
+			}
+		}
+		5 = {
 			save_scope_value_as = {
 				name = latria_act_exhaustion_gain
 				value = 2
-			}
-		}
-		40 = {
-			save_scope_value_as = {
-				name = latria_act_exhaustion_gain
-				value = 3
-			}
-		}
-		20 = {
-			save_scope_value_as = {
-				name = latria_act_exhaustion_gain
-				value = 4
 			}
 		}
 	}
@@ -72,6 +72,29 @@ latria_roll_solo_exhaustion_gain = {
 
 latria_roll_manual_exhaustion_gain = {
 	random_list = {
+		50 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 1
+			}
+		}
+		40 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 2
+			}
+		}
+		10 = {
+			save_scope_value_as = {
+				name = latria_act_exhaustion_gain
+				value = 3
+			}
+		}
+	}
+}
+
+latria_roll_intercourse_exhaustion_gain = {
+	random_list = {
 		40 = {
 			save_scope_value_as = {
 				name = latria_act_exhaustion_gain
@@ -88,29 +111,6 @@ latria_roll_manual_exhaustion_gain = {
 			save_scope_value_as = {
 				name = latria_act_exhaustion_gain
 				value = 4
-			}
-		}
-	}
-}
-
-latria_roll_intercourse_exhaustion_gain = {
-	random_list = {
-		30 = {
-			save_scope_value_as = {
-				name = latria_act_exhaustion_gain
-				value = 3
-			}
-		}
-		50 = {
-			save_scope_value_as = {
-				name = latria_act_exhaustion_gain
-				value = 4
-			}
-		}
-		20 = {
-			save_scope_value_as = {
-				name = latria_act_exhaustion_gain
-				value = 5
 			}
 		}
 	}

@@ -92,16 +92,16 @@ latria_solo_piety_delta = {
 		add = latria_solo_piety_doctrine
 		add = latria_solo_piety_culture
 	}
-	min = -50
-	max = 50
+	min = -10
+	max = 20
 }
 
 # A lust-sinning rite sets the base loss; clerical office and vows deepen it.
 latria_solo_lust_sin_piety_delta = {
-	value = -10
+	value = -2
 	if = {
 		limit = { is_clergy = yes }
-		add = -15
+		add = -3
 	}
 	if = {
 		limit = {
@@ -113,7 +113,7 @@ latria_solo_lust_sin_piety_delta = {
 				has_trait = zealous
 			}
 		}
-		add = -10
+		add = -3
 	}
 }
 
@@ -121,11 +121,11 @@ latria_solo_piety_rite = {
 	value = 0
 	if = {
 		limit = { latria_solo_rite_favors_flesh = yes }
-		add = miniscule_piety_gain
+		add = 5
 	}
 	if = {
 		limit = { latria_solo_rite_condemns_flesh = yes }
-		add = miniscule_piety_loss
+		add = -2
 	}
 }
 
@@ -133,15 +133,15 @@ latria_solo_piety_doctrine = {
 	value = 0
 	if = {
 		limit = { latria_solo_rite_accepts_license = yes }
-		add = miniscule_piety_gain
+		add = 5
 	}
 	if = {
 		limit = { latria_solo_rite_shuns_license = yes }
-		add = miniscule_piety_loss
+		add = -2
 	}
 	if = {
 		limit = { latria_solo_rite_crimes_license = yes }
-		add = minor_piety_loss
+		add = -4
 	}
 }
 
@@ -151,12 +151,12 @@ latria_solo_piety_culture = {
 		limit = {
 			culture = { has_cultural_parameter = adultery_always_accepted }
 		}
-		add = miniscule_piety_gain
+		add = 5
 	}
 	if = {
 		limit = {
 			culture = { has_cultural_parameter = adulterer_fornicator_penalties }
 		}
-		add = miniscule_piety_loss
+		add = -2
 	}
 }
