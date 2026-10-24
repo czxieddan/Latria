@@ -1,4 +1,4 @@
-latria_papal_scandal_ally_share_fraction = 0.1
+﻿latria_papal_scandal_ally_share_fraction = 0.1
 
 latria_papal_scandal_ally_share_gold_value = {
 	value = scope:latria_papal_victor.var:latria_scandal_total_gold_collected
@@ -20,4 +20,15 @@ latria_papal_scandal_ally_share_prestige_value = {
 latria_papal_scandal_ally_total_prestige_cut = {
 	value = scope:latria_papal_victor.var:latria_scandal_total_prestige_collected
 	multiply = latria_papal_scandal_ally_share_fraction
+}
+
+latria_papal_scandal_event_troop_count = {
+	value = current_military_strength
+	if = {
+		limit = { is_ai = no }
+		multiply = 25
+	}
+	else = {
+		multiply = 10
+	}
 }

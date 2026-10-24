@@ -130,10 +130,7 @@ latria_spawn_papal_scandal_event_troops = {
 			current_military_strength > 0
 		}
 		spawn_army = {
-			levies = {
-				value = current_military_strength
-				multiply = 10
-			}
+			levies = latria_papal_scandal_event_troop_count
 			location = capital_province
 			origin = capital_province
 			uses_supply = yes
