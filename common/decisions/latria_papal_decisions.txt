@@ -1,4 +1,4 @@
-latria_reveal_papal_secret_decision = {
+﻿latria_reveal_papal_secret_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
 	}
@@ -16,14 +16,49 @@ latria_reveal_papal_secret_decision = {
 		}
 	}
 
-	is_valid_showing_failures_only = {
+	is_valid = {
 		custom_description = {
 			text = latria_can_reveal_papal_secret_trigger
 			latria_can_reveal_papal_secret = yes
 		}
 	}
 
-	effect = { latria_reveal_papal_secret = yes }
+	effect = {
+		custom_description_no_bullet = {
+			text = latria_decision_immediate_effect
+		}
+
+		custom_description_no_bullet = {
+			text = latria_decision_war_warning_effect
+		}
+		custom_tooltip = latria_decision_war_attackers_tt
+		custom_tooltip = latria_decision_paramour_defense_tt
+		custom_tooltip = latria_decision_forced_defenders_tt
+		custom_tooltip = latria_decision_disgraced_defenders_tt
+		custom_tooltip = latria_decision_hook_defenders_tt
+		custom_tooltip = latria_decision_allies_call_tt
+
+		custom_description_no_bullet = {
+			text = latria_decision_if_win_effect
+		}
+
+		custom_description_no_bullet = {
+			text = latria_decision_if_lose_effect
+		}
+		show_as_tooltip = {
+			depose = yes
+		}
+		custom_tooltip = latria_decision_defeat_imprison_tt
+
+		custom_description_no_bullet = {
+			text = latria_decision_if_white_peace_effect
+		}
+		custom_tooltip = latria_papal_scandal_depose_war_white_peace_desc
+
+		hidden_effect = {
+			latria_reveal_papal_secret = yes
+		}
+	}
 
 	ai_check_interval_by_tier = {
 		barony = 0

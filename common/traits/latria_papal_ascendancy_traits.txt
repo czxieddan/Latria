@@ -6,6 +6,7 @@ latria_army_of_god = {
 	men_at_arms_cap = 10
 	levy_size = 1.0
 	army_maintenance_mult = -0.30
+	vassal_levy_contribution_mult = 0.5
 
 	shown_in_ruler_designer = no
 }

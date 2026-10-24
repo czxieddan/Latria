@@ -12,76 +12,74 @@ latria_remove_piety_level_for_adultery = {
 	set_piety_level = { value = 0 }
 }
 
-latria_collect_head_of_faith_depose_attackers = {
-	save_scope_as = latria_scandal_target
-	every_vassal_or_below = {
-		limit = {
-			opinion = {
-				target = scope:latria_scandal_target
-				value < 100
-			}
-		}
-		add_to_temporary_list = latria_scandal_attackers
-	}
-	every_ally = {
-		limit = {
-			is_landed = yes
-			opinion = {
-				target = scope:latria_scandal_target
-				value < 100
-			}
-			NOT = { is_in_list = latria_scandal_attackers }
-		}
-		add_to_temporary_list = latria_scandal_attackers
-	}
-	every_independent_ruler = {
-		limit = {
-			this != scope:latria_scandal_target
-			is_landed = yes
-			rite = scope:latria_scandal_target.rite
-			NOT = { is_in_list = latria_scandal_attackers }
-		}
-		add_to_temporary_list = latria_scandal_attackers
-	}
-}
-
-latria_select_head_of_faith_depose_war_leader = {
-	ordered_in_list = {
-		list = latria_scandal_attackers
-		order_by = current_military_strength
-		max = 1
-		save_scope_as = latria_scandal_war_leader
-	}
-}
-
-latria_start_head_of_faith_depose_war = {
+latria_resolve_papal_paramour = {
 	if = {
-		limit = { exists = scope:latria_scandal_war_leader }
-		scope:latria_scandal_war_leader = {
-			# Scripted declaration bypasses the AI-only selection rule on depose_war.
-			start_war = {
-				casus_belli = depose_war
-				target = scope:latria_scandal_target
-			}
-			random_character_war = {
-				limit = {
-					using_cb = depose_war
-					primary_attacker = scope:latria_scandal_war_leader
-					primary_defender = scope:latria_scandal_target
-				}
+		limit = {
+			exists = var:latria_papal_paramour
+			var:latria_papal_paramour = { is_alive = yes }
+		}
+		var:latria_papal_paramour = { save_scope_as = latria_scandal_paramour }
+	}
+	else_if = {
+		limit = {
+			exists = var:had_recent_sex_with
+			var:had_recent_sex_with = { is_alive = yes }
+		}
+		var:had_recent_sex_with = {
+			save_scope_as = latria_scandal_paramour
+			root = {
 				set_variable = {
-					name = latria_adultery_scandal_war
-					value = yes
+					name = latria_papal_paramour
+					value = prev
+					days = 1825
 				}
-				every_in_list = {
-					list = latria_scandal_attackers
-					limit = {
-						NOR = {
-							is_attacker_in_war = prev
-							is_defender_in_war = prev
-						}
-					}
-					prev = { add_attacker = prev }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_relation = {
+				type = soulmate
+				is_alive = yes
+				this != root
+			}
+		}
+		random_relation = {
+			type = soulmate
+			limit = {
+				is_alive = yes
+				this != root
+			}
+			save_scope_as = latria_scandal_paramour
+			root = {
+				set_variable = {
+					name = latria_papal_paramour
+					value = prev
+					days = 1825
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			any_relation = {
+				type = lover
+				is_alive = yes
+				this != root
+			}
+		}
+		random_relation = {
+			type = lover
+			limit = {
+				is_alive = yes
+				this != root
+			}
+			save_scope_as = latria_scandal_paramour
+			root = {
+				set_variable = {
+					name = latria_papal_paramour
+					value = prev
+					days = 1825
 				}
 			}
 		}

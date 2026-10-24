@@ -1,0 +1,35 @@
+latria_decision_immediate_effect = {
+	global = latria_decision_immediate_effect_loc
+	first = latria_decision_immediate_effect_loc
+	third = latria_decision_immediate_effect_loc
+}
+
+latria_decision_war_warning_effect = {
+	global = latria_decision_war_warning_effect_loc
+	first = latria_decision_war_warning_effect_loc
+	third = latria_decision_war_warning_effect_loc
+}
+
+latria_decision_if_win_effect = {
+	global = latria_decision_if_win_effect_loc
+	first = latria_decision_if_win_effect_loc
+	third = latria_decision_if_win_effect_loc
+}
+
+latria_decision_if_lose_effect = {
+	global = latria_decision_if_lose_effect_loc
+	first = latria_decision_if_lose_effect_loc
+	third = latria_decision_if_lose_effect_loc
+}
+
+latria_decision_if_white_peace_effect = {
+	global = latria_decision_if_white_peace_effect_loc
+	first = latria_decision_if_white_peace_effect_loc
+	third = latria_decision_if_white_peace_effect_loc
+}
+
+latria_papal_scandal_reparations_effect = {
+	global = latria_papal_scandal_reparations_global
+	first = latria_papal_scandal_reparations_first
+	third = latria_papal_scandal_reparations_third
+}

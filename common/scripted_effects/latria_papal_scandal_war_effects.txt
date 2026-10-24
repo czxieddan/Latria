@@ -1,0 +1,144 @@
+﻿latria_collect_head_of_faith_depose_attackers = {
+	save_scope_as = latria_scandal_target
+	latria_resolve_papal_paramour = yes
+	every_vassal_or_below = {
+		limit = {
+			latria_can_oppose_papal_scandal = yes
+			opinion = {
+				target = scope:latria_scandal_target
+				value < 100
+			}
+		}
+		add_to_temporary_list = latria_scandal_attackers
+	}
+	every_independent_ruler = {
+		limit = {
+			latria_can_oppose_papal_scandal = yes
+			rite = scope:latria_scandal_target.rite
+			NOT = { is_in_list = latria_scandal_attackers }
+		}
+		add_to_temporary_list = latria_scandal_attackers
+	}
+}
+
+latria_select_head_of_faith_depose_war_leader = {
+	ordered_in_list = {
+		list = latria_scandal_attackers
+		limit = { is_ai = yes }
+		order_by = current_military_strength
+		max = 1
+		save_scope_as = latria_scandal_war_leader
+	}
+}
+
+latria_force_papal_scandal_defense = {
+	if = {
+		limit = { latria_papal_scandal_defends_without_hook = yes }
+		scope:latria_scandal_war = { add_defender = prev }
+	}
+	else = {
+		scope:latria_scandal_war = { add_defender = prev }
+		# A hook is destroyed only after it actually brings its target into the defense.
+		if = {
+			limit = { is_defender_in_war = scope:latria_scandal_war }
+			scope:latria_scandal_target = { remove_hook = { target = prev } }
+		}
+	}
+}
+
+latria_add_papal_scandal_forced_defenders = {
+	every_living_character = {
+		limit = {
+			latria_papal_scandal_forced_defender = yes
+			latria_can_join_papal_scandal_war = yes
+		}
+		latria_force_papal_scandal_defense = yes
+	}
+}
+
+latria_add_papal_scandal_attackers = {
+	every_in_list = {
+		list = latria_scandal_attackers
+		limit = {
+			latria_can_join_papal_scandal_war = yes
+			latria_can_oppose_papal_scandal = yes
+		}
+		if = {
+			limit = { is_ai = yes }
+			scope:latria_scandal_war = { add_attacker = prev }
+		}
+		else = {
+			trigger_event = {
+				id = latria_papal_scandal_war.0001
+				days = { 1 3 }
+			}
+		}
+	}
+}
+
+latria_call_papal_scandal_allies = {
+	scope:latria_scandal_target = {
+		every_ally = {
+			limit = {
+				is_landed = yes
+				latria_can_join_papal_scandal_war = yes
+				NOT = { latria_papal_scandal_forced_defender = yes }
+			}
+			trigger_event = {
+				id = latria_papal_ascendancy.0010
+				days = { 1 3 }
+			}
+		}
+	}
+}
+
+latria_add_papal_scandal_war_participants = {
+	latria_add_papal_scandal_forced_defenders = yes
+	latria_add_papal_scandal_attackers = yes
+	latria_call_papal_scandal_allies = yes
+}
+
+latria_start_head_of_faith_depose_war = {
+	if = {
+		limit = { exists = scope:latria_scandal_war_leader }
+		scope:latria_scandal_war_leader = {
+			start_war = {
+				casus_belli = latria_papal_scandal_depose_war
+				target = scope:latria_scandal_target
+			}
+			random_character_war = {
+				limit = {
+					using_cb = latria_papal_scandal_depose_war
+					primary_attacker = scope:latria_scandal_war_leader
+					primary_defender = scope:latria_scandal_target
+				}
+				set_variable = {
+					name = latria_adultery_scandal_war
+					value = yes
+				}
+				save_scope_as = latria_scandal_war
+				latria_add_papal_scandal_war_participants = yes
+			}
+		}
+	}
+}
+
+latria_spawn_papal_scandal_event_troops = {
+	if = {
+		limit = {
+			exists = capital_province
+			current_military_strength > 0
+		}
+		spawn_army = {
+			levies = {
+				value = current_military_strength
+				multiply = 10
+			}
+			location = capital_province
+			origin = capital_province
+			uses_supply = yes
+			inheritable = no
+			name = latria_papal_scandal_event_troops
+		}
+	}
+}

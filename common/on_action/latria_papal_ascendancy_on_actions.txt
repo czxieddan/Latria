@@ -1,11 +1,13 @@
-on_war_won_defender = {
+﻿on_war_won_defender = {
 	on_actions = { latria_papal_ascendancy_on_scandal_victory }
 }
 
 latria_papal_ascendancy_on_scandal_victory = {
 	trigger = {
 		root.war = { has_variable = latria_adultery_scandal_war }
-		scope:defender = { latria_is_canonical_pope = yes }
+		scope:defender = {
+			latria_is_canonical_pope = yes
+		}
 	}
 	effect = {
 		root.war = { save_scope_as = latria_scandal_war }

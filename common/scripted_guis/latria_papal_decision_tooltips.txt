@@ -1,0 +1,32 @@
+﻿# Render each phase separately so scope grouping cannot move effects into another phase.
+latria_papal_secret_immediate_preview = {
+	scope = character
+
+	effect = {
+		show_as_tooltip = {
+			latria_reveal_papal_secret = yes
+			latria_remove_all_legitimacy_for_adultery = yes
+			latria_remove_piety_level_for_adultery = yes
+		}
+	}
+}
+
+latria_papal_secret_victory_preview = {
+	scope = character
+
+	effect = {
+		show_as_tooltip = {
+			latria_papal_scandal_victory_preview = yes
+		}
+	}
+}
+
+latria_papal_secret_war_preview = {
+	scope = character
+
+	effect = {
+		show_as_tooltip = {
+			latria_spawn_papal_scandal_event_troops = yes
+		}
+	}
+}

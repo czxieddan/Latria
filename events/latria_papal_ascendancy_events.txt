@@ -1,4 +1,4 @@
-namespace = latria_papal_ascendancy
+﻿namespace = latria_papal_ascendancy
 
 latria_papal_ascendancy.0001 = {
 	type = character_event
@@ -32,4 +32,168 @@ latria_papal_ascendancy.0002 = {
 	}
 
 	option = { name = latria_papal_ascendancy.0002.a }
+}
+
+latria_papal_ascendancy.0010 = {
+	type = character_event
+	title = latria_papal_ascendancy.0010.t
+	desc = latria_papal_ascendancy.0010.desc
+	theme = war
+	override_background = { reference = council_chamber }
+
+	immediate = {
+		if = {
+			limit = { exists = scope:latria_scandal_target }
+			scope:latria_scandal_target = { save_scope_as = latria_pope }
+		}
+		else = {
+			every_ally = {
+				limit = { latria_is_canonical_pope = yes }
+				save_scope_as = latria_pope
+			}
+		}
+		if = {
+			limit = { exists = scope:latria_scandal_war }
+			scope:latria_scandal_war = { save_scope_as = latria_war }
+		}
+		else_if = {
+			limit = { exists = scope:latria_pope }
+			scope:latria_pope = {
+				random_character_war = {
+					limit = { has_variable = latria_adultery_scandal_war }
+					save_scope_as = latria_war
+				}
+			}
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_cautious
+	}
+	right_portrait = {
+		character = scope:latria_pope
+		animation = sadness
+	}
+
+	option = {
+		name = latria_papal_ascendancy.0010.a
+		add_piety = -250
+		if = {
+			limit = { exists = scope:latria_war }
+			scope:latria_war = {
+				add_defender = root
+			}
+			set_variable = {
+				name = latria_joined_papal_defense
+				value = yes
+				days = 1825
+			}
+		}
+		if = {
+			limit = { exists = scope:latria_pope }
+			add_opinion = {
+				target = scope:latria_pope
+				modifier = latria_honored_papal_alliance_opinion
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 1000
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value >= 90
+				}
+			}
+			modifier = {
+				add = 30
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value >= 50
+				}
+			}
+			modifier = {
+				add = 15
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value >= 20
+				}
+			}
+			modifier = {
+				add = -40
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value < 0
+				}
+			}
+			modifier = {
+				add = 30
+				has_trait = loyal
+			}
+			modifier = {
+				add = -30
+				has_trait = disloyal
+			}
+			modifier = {
+				add = 20
+				has_trait = zealous
+			}
+			modifier = {
+				add = 20
+				has_trait = brave
+			}
+			modifier = {
+				add = -30
+				has_trait = craven
+			}
+		}
+	}
+
+	option = {
+		name = latria_papal_ascendancy.0010.b
+		add_prestige = -250
+		if = {
+			limit = { exists = scope:latria_pope }
+			add_opinion = {
+				target = scope:latria_pope
+				modifier = latria_refused_papal_alliance_opinion
+			}
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				factor = 0
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value >= 90
+				}
+			}
+			modifier = {
+				add = 40
+				exists = scope:latria_pope
+				opinion = {
+					target = scope:latria_pope
+					value < 0
+				}
+			}
+			modifier = {
+				add = -30
+				has_trait = loyal
+			}
+			modifier = {
+				add = 30
+				has_trait = disloyal
+			}
+			modifier = {
+				add = 30
+				has_trait = craven
+			}
+		}
+	}
 }

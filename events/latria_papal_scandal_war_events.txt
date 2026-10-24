@@ -1,0 +1,36 @@
+﻿namespace = latria_papal_scandal_war
+
+latria_papal_scandal_war.0001 = {
+	type = character_event
+	title = latria_papal_scandal_war.0001.t
+	desc = latria_papal_scandal_war.0001.desc
+	theme = war
+	override_background = { reference = council_chamber }
+
+	trigger = {
+		latria_player_can_join_papal_scandal_attack = yes
+	}
+
+	left_portrait = {
+		character = root
+		animation = personality_cautious
+	}
+	right_portrait = {
+		character = scope:latria_scandal_target
+		animation = sadness
+	}
+
+	option = {
+		name = latria_papal_scandal_war.0001.a
+		trigger = { latria_player_can_join_papal_scandal_attack = yes }
+		if = {
+			limit = { latria_player_can_join_papal_scandal_attack = yes }
+			scope:latria_scandal_war = { add_attacker = root }
+		}
+	}
+
+	option = {
+		name = latria_papal_scandal_war.0001.b
+		add_piety_level = -1
+	}
+}

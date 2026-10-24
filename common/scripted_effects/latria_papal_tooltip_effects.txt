@@ -1,0 +1,9 @@
+latria_papal_scandal_victory_preview = {
+	latria_reform_papal_rite_after_scandal_victory = yes
+	latria_grant_papal_scandal_victory_rewards = yes
+	custom_description = {
+		text = latria_papal_scandal_reparations_effect
+	}
+	custom_tooltip = latria_papal_scandal_ally_share_tt
+	custom_tooltip = latria_papal_redemption_unlocked_tt
+}

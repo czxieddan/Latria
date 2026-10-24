@@ -1,0 +1,80 @@
+﻿latria_papal_scandal_disgraced_defender = {
+	rite = scope:latria_scandal_target.rite
+	current_military_strength > 0
+	OR = {
+		has_trait = adulterer
+		has_trait = fornicator
+	}
+}
+
+latria_papal_scandal_puppet_defender = {
+	is_ruler = yes
+	puppeteer ?= scope:latria_scandal_target
+}
+
+latria_papal_scandal_sinner_defender = {
+	is_independent_ruler = yes
+	is_ai = yes
+	rite = scope:latria_scandal_target.rite
+	piety_level = 0
+}
+
+latria_papal_scandal_paramour_defender = {
+	is_landed = yes
+	exists = scope:latria_scandal_paramour
+	this = scope:latria_scandal_paramour
+}
+
+latria_papal_scandal_defends_without_hook = {
+	OR = {
+		latria_papal_scandal_puppet_defender = yes
+		latria_papal_scandal_sinner_defender = yes
+		latria_papal_scandal_paramour_defender = yes
+		latria_papal_scandal_disgraced_defender = yes
+	}
+}
+
+latria_papal_scandal_defends_with_hook = {
+	rite = scope:latria_scandal_target.rite
+	scope:latria_scandal_target = { has_hook = prev }
+}
+
+latria_papal_scandal_forced_defender = {
+	is_alive = yes
+	this != scope:latria_scandal_target
+	OR = {
+		latria_papal_scandal_defends_without_hook = yes
+		latria_papal_scandal_defends_with_hook = yes
+	}
+}
+
+latria_can_oppose_papal_scandal = {
+	is_alive = yes
+	is_landed = yes
+	this != scope:latria_scandal_target
+	NOR = {
+		is_allied_to = scope:latria_scandal_target
+		latria_papal_scandal_forced_defender = yes
+	}
+}
+
+latria_can_join_papal_scandal_war = {
+	is_alive = yes
+	exists = scope:latria_scandal_war
+	scope:latria_scandal_war = {
+		has_variable = latria_adultery_scandal_war
+		using_cb = latria_papal_scandal_depose_war
+	}
+	NOR = {
+		is_attacker_in_war = scope:latria_scandal_war
+		is_defender_in_war = scope:latria_scandal_war
+	}
+}
+
+latria_player_can_join_papal_scandal_attack = {
+	is_ai = no
+	exists = scope:latria_scandal_target
+	scope:latria_scandal_target = { is_alive = yes }
+	latria_can_join_papal_scandal_war = yes
+	latria_can_oppose_papal_scandal = yes
+}

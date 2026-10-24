@@ -1,7 +1,7 @@
-latria_reform_papal_rite_after_scandal_victory = {
+﻿latria_reform_papal_rite_after_scandal_victory = {
 	rite = {
 		if = {
-			limit = { scope:latria_papal_victor = { is_male = yes } }
+			limit = { prev = { is_male = yes } }
 			change_rite_doctrine = doctrine_adultery_men_accepted
 		}
 		else = {
@@ -70,9 +70,26 @@ latria_announce_papal_ascendancy = {
 }
 
 latria_apply_papal_scandal_victory = {
-	save_scope_as = latria_papal_victor
-	latria_reform_papal_rite_after_scandal_victory = yes
-	latria_grant_papal_scandal_victory_rewards = yes
-	latria_collect_papal_scandal_reparations = yes
-	latria_announce_papal_ascendancy = yes
+	if = {
+		limit = {
+			exists = scope:latria_scandal_war
+			scope:latria_scandal_war = {
+				using_cb = latria_papal_scandal_depose_war
+				NOT = { has_variable = latria_papal_scandal_victory_applied }
+			}
+		}
+		save_scope_as = latria_papal_victor
+		latria_reform_papal_rite_after_scandal_victory = yes
+		latria_grant_papal_scandal_victory_rewards = yes
+		latria_collect_papal_scandal_reparations = yes
+		latria_distribute_papal_scandal_ally_shares = yes
+		# Both callbacks may run; mark this war after settlement, not the character.
+		scope:latria_scandal_war = {
+			set_variable = {
+				name = latria_papal_scandal_victory_applied
+				value = yes
+			}
+		}
+		latria_announce_papal_ascendancy = yes
+	}
 }

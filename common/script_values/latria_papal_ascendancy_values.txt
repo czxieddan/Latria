@@ -1,0 +1,23 @@
+latria_papal_scandal_ally_share_fraction = 0.1
+
+latria_papal_scandal_ally_share_gold_value = {
+	value = scope:latria_papal_victor.var:latria_scandal_total_gold_collected
+	multiply = latria_papal_scandal_ally_share_fraction
+	divide = scope:latria_papal_victor.var:latria_participating_allies_count
+}
+
+latria_papal_scandal_ally_total_gold_cut = {
+	value = scope:latria_papal_victor.var:latria_scandal_total_gold_collected
+	multiply = latria_papal_scandal_ally_share_fraction
+}
+
+latria_papal_scandal_ally_share_prestige_value = {
+	value = scope:latria_papal_victor.var:latria_scandal_total_prestige_collected
+	multiply = latria_papal_scandal_ally_share_fraction
+	divide = scope:latria_papal_victor.var:latria_participating_allies_count
+}
+
+latria_papal_scandal_ally_total_prestige_cut = {
+	value = scope:latria_papal_victor.var:latria_scandal_total_prestige_collected
+	multiply = latria_papal_scandal_ally_share_fraction
+}

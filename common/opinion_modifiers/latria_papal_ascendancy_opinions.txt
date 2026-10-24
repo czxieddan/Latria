@@ -1,0 +1,11 @@
+latria_honored_papal_alliance_opinion = {
+	opinion = 30
+	years = 10
+	decaying = yes
+}
+
+latria_refused_papal_alliance_opinion = {
+	opinion = -30
+	years = 10
+	decaying = yes
+}

@@ -1,10 +1,20 @@
-latria_pay_papal_reparations_2000 = {
+﻿latria_pay_papal_reparations_2000 = {
 	pay_short_term_gold = {
 		target = scope:latria_papal_victor
 		gold = 2000
 	}
 	add_prestige = -2000
-	scope:latria_papal_victor = { add_prestige = 2000 }
+	scope:latria_papal_victor = {
+		add_prestige = 2000
+		change_variable = {
+			name = latria_scandal_total_gold_collected
+			add = 2000
+		}
+		change_variable = {
+			name = latria_scandal_total_prestige_collected
+			add = 2000
+		}
+	}
 }
 
 latria_pay_papal_reparations_1000 = {
@@ -13,7 +23,17 @@ latria_pay_papal_reparations_1000 = {
 		gold = 1000
 	}
 	add_prestige = -1000
-	scope:latria_papal_victor = { add_prestige = 1000 }
+	scope:latria_papal_victor = {
+		add_prestige = 1000
+		change_variable = {
+			name = latria_scandal_total_gold_collected
+			add = 1000
+		}
+		change_variable = {
+			name = latria_scandal_total_prestige_collected
+			add = 1000
+		}
+	}
 }
 
 latria_pay_papal_reparations_500 = {
@@ -22,7 +42,17 @@ latria_pay_papal_reparations_500 = {
 		gold = 500
 	}
 	add_prestige = -500
-	scope:latria_papal_victor = { add_prestige = 500 }
+	scope:latria_papal_victor = {
+		add_prestige = 500
+		change_variable = {
+			name = latria_scandal_total_gold_collected
+			add = 500
+		}
+		change_variable = {
+			name = latria_scandal_total_prestige_collected
+			add = 500
+		}
+	}
 }
 
 latria_pay_papal_reparations_250 = {
@@ -31,7 +61,17 @@ latria_pay_papal_reparations_250 = {
 		gold = 250
 	}
 	add_prestige = -250
-	scope:latria_papal_victor = { add_prestige = 250 }
+	scope:latria_papal_victor = {
+		add_prestige = 250
+		change_variable = {
+			name = latria_scandal_total_gold_collected
+			add = 250
+		}
+		change_variable = {
+			name = latria_scandal_total_prestige_collected
+			add = 250
+		}
+	}
 }
 
 latria_pay_papal_reparations_100 = {
@@ -40,7 +80,17 @@ latria_pay_papal_reparations_100 = {
 		gold = 100
 	}
 	add_prestige = -100
-	scope:latria_papal_victor = { add_prestige = 100 }
+	scope:latria_papal_victor = {
+		add_prestige = 100
+		change_variable = {
+			name = latria_scandal_total_gold_collected
+			add = 100
+		}
+		change_variable = {
+			name = latria_scandal_total_prestige_collected
+			add = 100
+		}
+	}
 }
 
 latria_pay_papal_reparations_by_rank = {
@@ -71,9 +121,86 @@ latria_pay_papal_reparations_by_rank = {
 }
 
 latria_collect_papal_scandal_reparations = {
-	scope:latria_scandal_war = {
-		every_war_attacker = {
-			latria_pay_papal_reparations_by_rank = yes
+	scope:latria_papal_victor = {
+		set_variable = {
+			name = latria_scandal_total_gold_collected
+			value = 0
+		}
+		set_variable = {
+			name = latria_scandal_total_prestige_collected
+			value = 0
+		}
+	}
+	if = {
+		limit = { exists = scope:latria_scandal_war }
+		scope:latria_scandal_war = {
+			every_war_attacker = {
+				latria_pay_papal_reparations_by_rank = yes
+			}
+		}
+	}
+}
+
+latria_distribute_papal_scandal_ally_shares = {
+	scope:latria_papal_victor = {
+		set_variable = {
+			name = latria_participating_allies_count
+			value = 0
+		}
+	}
+	if = {
+		limit = { exists = scope:latria_scandal_war }
+		scope:latria_scandal_war = {
+			every_war_defender = {
+				limit = {
+					this != scope:latria_papal_victor
+					OR = {
+						has_variable = latria_joined_papal_defense
+						is_allied_to = scope:latria_papal_victor
+					}
+				}
+				add_to_temporary_list = latria_participating_allies
+				scope:latria_papal_victor = {
+					change_variable = {
+						name = latria_participating_allies_count
+						add = 1
+					}
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			scope:latria_papal_victor = {
+				var:latria_participating_allies_count > 0
+				var:latria_scandal_total_gold_collected > 0
+			}
+		}
+		# 10% deducted from the Pope
+		scope:latria_papal_victor = {
+			remove_short_term_gold = {
+				value = latria_papal_scandal_ally_total_gold_cut
+			}
+			add_prestige = {
+				value = latria_papal_scandal_ally_total_prestige_cut
+				multiply = -1
+			}
+		}
+		# Split equally among participating allies
+		every_in_list = {
+			list = latria_participating_allies
+			add_gold = {
+				value = latria_papal_scandal_ally_share_gold_value
+			}
+			add_prestige = {
+				value = latria_papal_scandal_ally_share_prestige_value
+			}
+			send_interface_message = {
+				type = event_generic_good_text
+				title = latria_ally_share_received_msg_title
+				desc = latria_ally_share_received_msg_desc
+				left_icon = scope:latria_papal_victor
+			}
 		}
 	}
 }
