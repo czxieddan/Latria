@@ -6,84 +6,52 @@ latria_on_act_resolved = {
 	}
 }
 
-# Only human rulers get a daily loop. AI remains on staggered birthdays.
 on_game_start_after_lobby = {
-	on_actions = { latria_initialize_player_sexual_frustration }
+	on_actions = { latria_initialize_sexual_frustration }
 }
 
-latria_initialize_player_sexual_frustration = {
+latria_initialize_sexual_frustration = {
 	effect = {
-		every_player = {
-			limit = {
-				is_ruler = yes
-				latria_has_sexual_need = yes
-			}
-			latria_start_sexual_frustration_loop = yes
-		}
+		every_living_character = { latria_initialize_carnal_character = yes }
 	}
 }
 
-on_birthday = {
-	on_actions = {
-		latria_sexual_frustration_birthday
-		latria_unlanded_player_carnal_overture
-	}
+# Birth and direct character generation are separate engine hooks.
+on_birth_child = {
+	on_actions = { latria_initialize_new_carnal_character }
 }
 
-latria_sexual_frustration_birthday = {
+on_character_created = {
+	on_actions = { latria_initialize_new_carnal_character }
+}
+
+latria_initialize_new_carnal_character = {
+	trigger = { is_alive = yes }
 	effect = {
-		if = {
-			limit = {
-				is_ai = no
-				is_ruler = yes
-				latria_has_sexual_need = yes
-			}
-			latria_start_sexual_frustration_loop = yes
-		}
-		else_if = {
-			limit = {
-				is_ai = yes
-				latria_has_sexual_need = yes
-			}
-			latria_schedule_ai_carnal_year = yes
-		}
-		else_if = {
-			limit = { latria_has_sexual_need = yes }
-			latria_add_yearly_sexual_frustration = yes
-		}
-		else_if = {
-			limit = { exists = var:latria_sexual_frustration }
-			latria_stop_sexual_frustration = yes
-		}
+		latria_roll_carnal_drive = yes
+		latria_ensure_ai_carnal_story = yes
 	}
 }
 
-latria_unlanded_player_carnal_overture = {
-	trigger = {
-		is_ai = no
-		NOT = {
-			is_playable_character = yes
-			highest_held_title_tier >= tier_county
-		}
-	}
-	effect = { latria_send_player_carnal_overtures = yes }
-}
-
-# Count+ already wake once a quarter. Ride that instead of scanning courts.
-quarterly_playable_pulse = {
-	on_actions = { latria_quarterly_carnal_maintenance }
-}
-
-latria_quarterly_carnal_maintenance = {
+# Dispatching from story_owner gives the existing effects a character root.
+latria_player_sexual_frustration_pulse = {
+	trigger = { is_alive = yes }
 	effect = {
 		if = {
-			limit = {
-				is_ai = no
-				is_ruler = yes
-				latria_has_sexual_need = yes
-			}
-			latria_start_sexual_frustration_loop = yes
+			limit = { is_ai = yes }
+			latria_use_ai_carnal_story = yes
 		}
-		latria_run_quarterly_carnal_maintenance = yes
+		else = { latria_process_player_sexual_frustration = yes }
+	}
+}
+
+latria_ai_carnal_story_pulse = {
+	trigger = { is_alive = yes }
+	effect = {
+		if = {
+			limit = { is_ai = no }
+			latria_use_player_carnal_story = yes
+		}
+		else = { latria_process_ai_carnal_month = yes }
 	}
 }

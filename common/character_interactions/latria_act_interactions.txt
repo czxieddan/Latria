@@ -7,7 +7,7 @@ latria_propose_intercourse_interaction = {
 	send_name = latria_propose_act_send
 	auto_accept = { latria_lack_of_ability_to_say_no = yes }
 
-	# Engine target scans are off. Count+ consorts resolve directly; player-linked AI use overtures.
+	# Engine target scans are off. AI partners resolve directly; monthly overtures reach related players.
 	ai_frequency_by_tier = {
 		barony = 0
 		county = 0

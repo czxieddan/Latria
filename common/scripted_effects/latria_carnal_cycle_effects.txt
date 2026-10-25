@@ -1,0 +1,86 @@
+latria_initialize_carnal_character = {
+	if = {
+		limit = { is_alive = yes }
+		latria_roll_carnal_drive = yes
+		latria_assign_carnal_story = yes
+	}
+}
+
+latria_assign_carnal_story = {
+	if = {
+		limit = { is_ai = yes }
+		latria_use_ai_carnal_story = yes
+	}
+	else = { latria_use_player_carnal_story = yes }
+}
+
+latria_use_player_carnal_story = {
+	every_owned_story = {
+		limit = { story_type = latria_ai_carnal_cycle }
+		end_story = yes
+	}
+	latria_ensure_player_carnal_story = yes
+}
+
+latria_use_ai_carnal_story = {
+	every_owned_story = {
+		limit = { story_type = latria_player_carnal_cycle }
+		end_story = yes
+	}
+	latria_ensure_ai_carnal_story = yes
+}
+
+latria_ensure_player_carnal_story = {
+	if = {
+		limit = { NOT = { owns_story_of_type = latria_player_carnal_cycle } }
+		create_story = latria_player_carnal_cycle
+	}
+}
+
+latria_ensure_ai_carnal_story = {
+	if = {
+		limit = { NOT = { owns_story_of_type = latria_ai_carnal_cycle } }
+		create_story = latria_ai_carnal_cycle
+	}
+}
+
+# Roll once at initialization, before age or player control can change.
+latria_roll_carnal_drive = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_carnal_drive_rolled } }
+		add_character_flag = latria_carnal_drive_rolled
+		random = {
+			chance = latria_ai_no_carnal_drive_percent
+			add_character_flag = latria_no_carnal_drive
+		}
+	}
+}
+
+latria_process_player_sexual_frustration = {
+	latria_add_daily_sexual_frustration = yes
+	latria_clear_inactive_sexual_frustration = yes
+}
+
+latria_process_ai_carnal_month = {
+	latria_ai_run_carnal_pulse = yes
+	latria_clear_inactive_sexual_frustration = yes
+}
+
+latria_ai_run_carnal_pulse = {
+	latria_ai_try_player_overtures = yes
+	if = {
+		limit = {
+			is_alive = yes
+			is_ai = yes
+			latria_has_sexual_need = yes
+			NOT = { has_character_flag = latria_no_carnal_drive }
+		}
+		latria_ai_try_close_manual = yes
+		latria_ai_try_consort_intercourse = yes
+		latria_ai_try_solo_relief = yes
+	}
+	if = {
+		limit = { is_alive = yes }
+		latria_add_sexual_frustration = { GAIN = latria_ai_pulse_sexual_frustration_gain }
+	}
+}

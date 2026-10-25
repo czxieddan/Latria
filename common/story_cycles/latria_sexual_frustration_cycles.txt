@@ -1,0 +1,30 @@
+# Story pulses enter character on_actions so effects keep a character root.
+latria_player_carnal_cycle = {
+	visible = no
+
+	on_owner_death = { end_story = yes }
+
+	effect_group = {
+		days = 1
+		fallback = {
+			story_owner = {
+				trigger_event = { on_action = latria_player_sexual_frustration_pulse }
+			}
+		}
+	}
+}
+
+latria_ai_carnal_cycle = {
+	visible = no
+
+	on_owner_death = { end_story = yes }
+
+	effect_group = {
+		months = 1
+		fallback = {
+			story_owner = {
+				trigger_event = { on_action = latria_ai_carnal_story_pulse }
+			}
+		}
+	}
+}

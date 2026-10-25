@@ -1,9 +1,16 @@
-# Suitor scope. Root is the player.
+# AI suitor scope.
 latria_ai_can_proposition_player = {
 	is_ai = yes
 	is_alive = yes
 	NOT = { has_character_flag = latria_player_carnal_overture }
 	NOT = { has_character_flag = latria_no_carnal_drive }
+}
+
+# Related player scope. Recheck the suitor so only one target consumes the cooldown.
+latria_player_can_receive_carnal_overture = {
+	is_ai = no
+	is_alive = yes
+	scope:latria_suitor = { latria_ai_can_proposition_player = yes }
 }
 
 # Suitor scope, after latria_player_target is saved.

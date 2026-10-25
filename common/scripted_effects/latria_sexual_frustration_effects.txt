@@ -154,10 +154,6 @@ latria_add_daily_sexual_frustration = {
 	latria_add_sexual_frustration = { GAIN = latria_daily_sexual_frustration_gain }
 }
 
-latria_add_yearly_sexual_frustration = {
-	latria_add_sexual_frustration = { GAIN = latria_yearly_sexual_frustration_gain }
-}
-
 latria_reduce_sexual_frustration = {
 	if = {
 		limit = { exists = var:latria_sexual_frustration }
@@ -213,29 +209,17 @@ latria_relieve_partner_sexual_frustration = {
 	}
 }
 
-latria_start_sexual_frustration_loop = {
+latria_clear_inactive_sexual_frustration = {
 	if = {
-		limit = {
-			is_ai = no
-			is_ruler = yes
-			latria_has_sexual_need = yes
-			NOT = { has_character_flag = latria_sexual_frustration_loop }
-		}
-		add_character_flag = {
-			flag = latria_sexual_frustration_loop
-			days = 2
-		}
-		trigger_event = {
-			id = latria_act.0400
-			days = 1
-		}
+		limit = { latria_has_sexual_need = no }
+		latria_clear_sexual_frustration_state = yes
 	}
 }
 
-latria_stop_sexual_frustration = {
-	remove_character_flag = latria_sexual_frustration_loop
+latria_clear_sexual_frustration_state = {
 	latria_clear_sexual_frustration_modifiers = yes
 	latria_refund_all_sexual_frustration_stress = yes
 	remove_variable = latria_sexual_frustration
 	remove_variable = latria_sexual_frustration_level
+	remove_variable = latria_recent_repression_relief
 }

@@ -1,0 +1,108 @@
+# AI scope. Related players are found from the suitor's own monthly pulse.
+latria_ai_try_player_overtures = {
+	if = {
+		limit = { latria_ai_can_proposition_player = yes }
+		save_scope_as = latria_suitor
+		latria_ai_invite_player_relations = yes
+		latria_ai_invite_player_consorts = yes
+		latria_ai_invite_player_scheme_contacts = yes
+	}
+}
+
+latria_ai_invite_player_relations = {
+	every_relation = {
+		type = lover
+		limit = { latria_player_can_receive_carnal_overture = yes }
+		latria_offer_carnal_act_to_player = yes
+	}
+	every_relation = {
+		type = soulmate
+		limit = {
+			NOT = { has_relation_lover = root }
+			latria_player_can_receive_carnal_overture = yes
+		}
+		latria_offer_carnal_act_to_player = yes
+	}
+}
+
+latria_ai_invite_player_consorts = {
+	every_spouse = {
+		limit = { latria_player_can_receive_carnal_overture = yes }
+		latria_offer_carnal_act_to_player = yes
+	}
+	every_concubine = {
+		limit = { latria_player_can_receive_carnal_overture = yes }
+		latria_offer_carnal_act_to_player = yes
+	}
+	if = {
+		limit = {
+			is_concubine = yes
+			court_owner = { latria_player_can_receive_carnal_overture = yes }
+		}
+		court_owner = { latria_offer_carnal_act_to_player = yes }
+	}
+}
+
+latria_ai_invite_player_scheme_contacts = {
+	every_scheme = {
+		limit = {
+			scheme_type = seduce
+			scheme_target_character = { latria_player_can_receive_carnal_overture = yes }
+		}
+		scheme_target_character = { latria_offer_carnal_act_to_player = yes }
+	}
+	every_targeting_scheme = {
+		limit = {
+			scheme_type = seduce
+			scheme_owner = { latria_player_can_receive_carnal_overture = yes }
+		}
+		scheme_owner = { latria_offer_carnal_act_to_player = yes }
+	}
+}
+
+# Player scope. Preserve both roles before returning to the AI suitor.
+latria_offer_carnal_act_to_player = {
+	save_scope_as = latria_player_target
+	scope:latria_suitor = { latria_ai_proposition_player = yes }
+}
+
+latria_ai_proposition_player = {
+	add_character_flag = {
+		flag = latria_player_carnal_overture
+		days = 80
+	}
+	if = {
+		limit = { latria_suitor_can_offer_intercourse = yes }
+		latria_send_intercourse_overture = yes
+	}
+	if = {
+		limit = { latria_suitor_can_offer_manual = yes }
+		latria_send_manual_overture = yes
+	}
+}
+
+latria_send_intercourse_overture = {
+	scope:latria_player_target = { save_scope_as = latria_desire_target }
+	random = {
+		chance = latria_partner_act_ai_desire
+		run_interaction = {
+			interaction = latria_propose_intercourse_interaction
+			actor = scope:latria_suitor
+			recipient = scope:latria_player_target
+			send_threshold = decline
+		}
+	}
+}
+
+latria_send_manual_overture = {
+	scope:latria_player_target = { save_scope_as = latria_desire_target }
+	random = {
+		chance = latria_manual_overture_chance
+		run_interaction = {
+			interaction = latria_propose_manual_interaction
+			actor = scope:latria_suitor
+			recipient = scope:latria_player_target
+			send_threshold = decline
+		}
+	}
+}
