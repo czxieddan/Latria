@@ -1,0 +1,27 @@
+# Evaluated on the witness. Equal intrigue gives an 8% chance, or 12% at activities.
+latria_same_sex_discovery_chance = {
+	value = 8
+	add = {
+		value = intrigue
+		multiply = 0.4
+	}
+	subtract = {
+		value = scope:latria_actor.intrigue
+		multiply = 0.2
+	}
+	subtract = {
+		value = scope:latria_partner.intrigue
+		multiply = 0.2
+	}
+	if = {
+		limit = {
+			OR = {
+				scope:latria_actor = { is_in_activity = yes }
+				scope:latria_partner = { is_in_activity = yes }
+			}
+		}
+		add = 4
+	}
+	min = 1
+	max = 25
+}

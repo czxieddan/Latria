@@ -1,0 +1,162 @@
+# Vanilla's homosexual secret is male-only; a lover secret requires a lover relation.
+# This targeted secret records the act itself and exposes both participants together.
+latria_save_same_sex_pair_secret = {
+	random_secret = {
+		type = latria_secret_same_sex_act
+		limit = {
+			secret_target = $PARTNER$
+			secret_owner = { NOT = { has_trait = sodomite } }
+		}
+		save_scope_as = latria_act_secret
+	}
+}
+
+latria_create_same_sex_pair_secret = {
+	add_secret = {
+		type = latria_secret_same_sex_act
+		target = $PARTNER$
+	}
+	latria_save_same_sex_pair_secret = { PARTNER = $PARTNER$ }
+}
+
+latria_find_or_create_same_sex_secret = {
+	clear_saved_scope = latria_act_secret
+	latria_save_same_sex_pair_secret = { PARTNER = scope:latria_partner }
+	if = {
+		limit = { NOT = { exists = scope:latria_act_secret } }
+		scope:latria_partner = {
+			latria_save_same_sex_pair_secret = { PARTNER = scope:latria_actor }
+		}
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_act_secret } }
+		if = {
+			limit = { has_trait = sodomite }
+			scope:latria_partner = {
+				latria_create_same_sex_pair_secret = { PARTNER = scope:latria_actor }
+			}
+		}
+		else = { latria_create_same_sex_pair_secret = { PARTNER = scope:latria_partner } }
+	}
+}
+
+latria_clear_act_witnesses = {
+	every_in_list = {
+		list = latria_act_witnesses
+		remove_from_list = latria_act_witnesses
+	}
+}
+
+# Run on a court owner. Include the ruler as well as courtiers and guests.
+latria_collect_court_act_witnesses = {
+	if = {
+		limit = { latria_can_witness_same_sex_act = yes }
+		add_to_temporary_list = latria_act_witnesses
+	}
+	every_courtier_or_guest = {
+		limit = { latria_can_witness_same_sex_act = yes }
+		add_to_temporary_list = latria_act_witnesses
+	}
+}
+
+latria_collect_local_act_witnesses = {
+	if = {
+		limit = { is_ruler = yes }
+		latria_collect_court_act_witnesses = yes
+	}
+	else_if = {
+		limit = { exists = court_owner }
+		court_owner = { latria_collect_court_act_witnesses = yes }
+	}
+	if = {
+		limit = { is_in_activity = yes }
+		involved_activity = {
+			every_attending_character = {
+				limit = { latria_can_witness_same_sex_act = yes }
+				add_to_temporary_list = latria_act_witnesses
+			}
+		}
+	}
+}
+
+# Roll once per act, regardless of court or activity size. The witness is the current scope.
+latria_discover_same_sex_secret = {
+	latria_clear_act_witnesses = yes
+	latria_collect_local_act_witnesses = yes
+	scope:latria_partner = { latria_collect_local_act_witnesses = yes }
+	random_in_list = {
+		list = latria_act_witnesses
+		random = {
+			chance = latria_same_sex_discovery_chance
+			scope:latria_act_secret = { reveal_to = prev }
+		}
+	}
+	latria_clear_act_witnesses = yes
+}
+
+# Accepted participants are public immediately and do not own a secret.
+latria_recognize_accepted_same_sex_act = {
+	if = {
+		limit = {
+			latria_same_sex_act_is_accepted = yes
+			NOT = { has_trait = sodomite }
+		}
+		add_trait = sodomite
+	}
+}
+
+latria_roll_same_sex_discovery = {
+	if = {
+		limit = {
+			scope:latria_act_kind = flag:latria_act_intercourse
+			latria_same_sex_act_participants_are_valid = { PARTNER = scope:latria_partner }
+		}
+		latria_recognize_accepted_same_sex_act = yes
+		scope:latria_partner = { latria_recognize_accepted_same_sex_act = yes }
+		if = {
+			limit = { latria_same_sex_pair_is_undisclosed = { PARTNER = scope:latria_partner } }
+			latria_find_or_create_same_sex_secret = yes
+			latria_discover_same_sex_secret = yes
+		}
+	}
+}
+
+# Capture both characters before traits can invalidate the secret.
+latria_save_same_sex_secret_participants = {
+	scope:secret_owner = { save_scope_as = latria_secret_actor }
+	scope:secret_target = { save_scope_as = latria_secret_partner }
+}
+
+latria_notify_same_sex_discovery = {
+	latria_save_same_sex_secret_participants = yes
+	scope:discoverer = {
+		if = {
+			limit = { is_ai = no }
+			send_interface_message = {
+				type = event_generic_neutral_text
+				title = latria_same_sex_discovered.t
+				desc = latria_same_sex_discovered.desc
+				left_icon = scope:latria_secret_actor
+				right_icon = scope:latria_secret_partner
+			}
+		}
+	}
+}
+
+latria_apply_same_sex_exposure = {
+	if = {
+		limit = { NOT = { has_trait = sodomite } }
+		add_trait = sodomite
+		remove_piety_level_for_shunned_or_criminal_trait_effect = { TRAIT = trait:sodomite }
+	}
+	if = {
+		limit = { is_ai = no }
+		send_interface_message = {
+			type = event_generic_neutral_text
+			title = latria_same_sex_exposed.t
+			desc = latria_same_sex_exposed.desc
+			left_icon = scope:latria_secret_actor
+			right_icon = scope:latria_secret_partner
+		}
+	}
+}

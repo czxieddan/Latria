@@ -1,0 +1,10 @@
+﻿l_english:
+ latria_secret_same_sex_act: "Same-Sex Liaison"
+ latria_secret_same_sex_act_desc: "Has shared a same-sex liaison with [TARGET_CHARACTER.GetShortUIName]"
+ latria_secret_same_sex_act_tooltip_desc: "This character has had intercourse with someone of the same sex. Exposing this secret gives both participants the [GetTrait('sodomite').GetName(GetNullCharacter)] trait."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "Same-Sex Liaison Discovered"
+ latria_same_sex_discovered.desc: "You have discovered a same-sex liaison between [latria_secret_actor.GetShortUIName] and [latria_secret_partner.GetShortUIName]. Their secret is now in your hands."
+ latria_same_sex_exposed.t: "Liaison Exposed"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U] has exposed the same-sex liaison between [latria_secret_actor.GetShortUIName] and [latria_secret_partner.GetShortUIName]."

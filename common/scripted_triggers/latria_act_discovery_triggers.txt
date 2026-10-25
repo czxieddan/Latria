@@ -1,0 +1,43 @@
+# Marriage permission and rite acceptance are independent exceptions for each participant.
+latria_same_sex_act_is_accepted = {
+	OR = {
+		has_game_rule = accepted_same_sex_marriage
+		rite = { rite_has_parameter = homosexuality_accepted }
+	}
+}
+
+latria_same_sex_act_participants_are_valid = {
+	is_alive = yes
+	is_adult = yes
+	$PARTNER$ = {
+		is_alive = yes
+		is_adult = yes
+	}
+	sex_same_as = $PARTNER$
+}
+
+latria_same_sex_pair_is_undisclosed = {
+	OR = {
+		NOT = { has_trait = sodomite }
+		$PARTNER$ = { NOT = { has_trait = sodomite } }
+	}
+}
+
+latria_is_available_act_witness = {
+	is_alive = yes
+	is_adult = yes
+	is_imprisoned = no
+	is_incapable = no
+}
+
+# Candidates must be present at either participant's location, including remote invitations.
+latria_can_witness_same_sex_act = {
+	latria_is_available_act_witness = yes
+	this != scope:latria_actor
+	this != scope:latria_partner
+	OR = {
+		location = scope:latria_actor.location
+		location = scope:latria_partner.location
+	}
+	scope:latria_act_secret = { NOT = { is_known_by = prev } }
+}

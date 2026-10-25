@@ -150,6 +150,7 @@ latria_resolve_partner_act = {
 	# Register vanilla state before strain can kill either participant.
 	latria_register_vanilla_sex_scopes = yes
 	latria_record_adultery_suspicion = yes
+	latria_roll_same_sex_discovery = yes
 	latria_roll_partner_satisfaction = yes
 	latria_roll_partner_strain = yes
 	if = {

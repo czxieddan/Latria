@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ latria_secret_same_sex_act: "同性私情"
+ latria_secret_same_sex_act_desc: "曾与[TARGET_CHARACTER.GetShortUIName]发生同性性行为"
+ latria_secret_same_sex_act_tooltip_desc: "该角色曾与同性发生性行为。秘密公开后，双方都会获得[GetTrait('sodomite').GetName(GetNullCharacter)]特质。"
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "发现同性私情"
+ latria_same_sex_discovered.desc: "你发现了[latria_secret_actor.GetShortUIName]与[latria_secret_partner.GetShortUIName]的同性私情。这个秘密如今掌握在你手中。"
+ latria_same_sex_exposed.t: "私情败露"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U]公开了[latria_secret_actor.GetShortUIName]与[latria_secret_partner.GetShortUIName]的同性私情。"
