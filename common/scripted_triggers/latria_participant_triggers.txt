@@ -98,8 +98,16 @@ latria_can_act_alone = {
 	latria_faith_stands = yes
 }
 
+latria_sexual_need_is_too_early = {
+	age < latria_sexual_need_start_age
+}
+
+latria_sexual_need_has_ended = {
+	age >= latria_sexual_need_end_age
+}
+
 latria_has_sexual_need = {
 	is_alive = yes
-	age >= latria_sexual_need_start_age
-	age < latria_sexual_need_end_age
+	latria_sexual_need_is_too_early = no
+	latria_sexual_need_has_ended = no
 }

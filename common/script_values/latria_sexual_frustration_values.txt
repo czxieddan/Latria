@@ -4,7 +4,7 @@ latria_sexual_frustration_level_3_limit = 100
 latria_sexual_frustration_level_4_limit = 180
 latria_sexual_frustration_level_5_limit = 300
 
-latria_daily_sexual_frustration_gain = {
+latria_daily_sexual_frustration_potential = {
 	value = {
 		value = 0.05
 		desc = latria_daily_sexual_frustration_gain_base
@@ -65,16 +65,36 @@ latria_daily_sexual_frustration_gain = {
 	max = 0.15
 }
 
-# One birthday replaces the old daily tick. 365 keeps the yearly total.
+# Keep each cancellation independent of temporary values when building the breakdown.
+latria_daily_sexual_frustration_gain = {
+	value = latria_daily_sexual_frustration_potential
+	if = {
+		limit = { latria_sexual_need_is_too_early = yes }
+		add = {
+			value = latria_daily_sexual_frustration_potential
+			multiply = -1
+			desc = latria_daily_sexual_frustration_gain_too_early
+		}
+	}
+	else_if = {
+		limit = { latria_sexual_need_has_ended = yes }
+		add = {
+			value = latria_daily_sexual_frustration_potential
+			multiply = -1
+			desc = latria_daily_sexual_frustration_gain_no_longer
+		}
+	}
+}
+
 latria_yearly_sexual_frustration_gain = {
 	value = latria_daily_sexual_frustration_gain
 	multiply = 365
 }
 
-# One eighth of the yearly total. latria_schedule_ai_carnal_year fires eight pulses.
+# Each monthly AI pulse adds one twelfth of the yearly total.
 latria_ai_pulse_sexual_frustration_gain = {
 	value = latria_yearly_sexual_frustration_gain
-	multiply = 0.125
+	divide = 12
 }
 
 latria_sexual_frustration_stress_gain = {

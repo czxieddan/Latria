@@ -37,6 +37,8 @@
  latria_daily_sexual_frustration_gain_temperate: "[GetTrait('temperate').GetName( GetPlayer )]"
  latria_daily_sexual_frustration_gain_gluttonous: "[GetTrait('gluttonous').GetName( GetPlayer )]"
  latria_daily_sexual_frustration_gain_impatient: "[GetTrait('impatient').GetName( GetPlayer )]"
+ latria_daily_sexual_frustration_gain_too_early: "Too early"
+ latria_daily_sexual_frustration_gain_no_longer: "No longer repressed"
 
  latria_act.0401.t: "A Restless Night"
  latria_act.0401.desc: "Sleep comes slowly. The desire I set aside returns once the chamber is still."
