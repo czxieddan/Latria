@@ -1,0 +1,52 @@
+# Only the target's attraction matters; beauty_good covers all three positive tiers.
+latria_can_charm_abduction_target = {
+	has_trait = beauty_good
+	$TARGET$ = { is_attracted_to_gender_of = prev }
+}
+
+latria_charming_abduction_multiplayer_allowed = {
+	NAND = {
+		has_game_rule = no_players_multiplayer_murder_schemes
+		scope:actor = { is_ai = no }
+		scope:recipient = { is_ai = no }
+	}
+	NAND = {
+		has_game_rule = no_player_families_multiplayer_murder_schemes
+		scope:actor = { is_ai = no }
+		scope:recipient = { latria_charming_abduction_player_family = yes }
+	}
+}
+
+latria_charming_abduction_player_family = {
+	OR = {
+		is_ai = no
+		any_close_family_member = {
+			is_ai = no
+			this != scope:actor
+		}
+	}
+}
+
+latria_charming_abduction_target_available = {
+	is_imprisoned = no
+	is_hostage = no
+	exists = location
+	in_diplomatic_range = scope:owner
+}
+
+latria_charming_abduction_no_scheming_allowed = {
+	trigger_if = {
+		limit = { has_variable = no_scheming_allowed_var }
+		custom_tooltip = {
+			text = no_scheming_allowed_var_tt
+			var:no_scheming_allowed_var != $TARGET$
+		}
+	}
+}
+
+latria_charming_abduction_has_indulgences = {
+	OR = {
+		has_character_modifier = pam_granted_indulgences_modifier
+		has_character_modifier = pam_granted_indulgences_modifier_small
+	}
+}

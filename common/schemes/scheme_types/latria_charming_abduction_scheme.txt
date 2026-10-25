@@ -1,0 +1,144 @@
+latria_charming_abduction = {
+	skill = intrigue
+	desc = latria_charming_abduction_desc_general
+	success_desc = ABDUCT_SUCCESS_DESC
+	discovery_desc = ABDUCT_DISCOVERY_DESC
+	icon = icon_scheme_abduct
+	illustration = "gfx/interface/illustrations/event_scenes/corridor.dds"
+	category = hostile
+	target_type = character
+	is_secret = yes
+	maximum_breaches = 5
+	cooldown = { years = 10 }
+
+	speed_per_skill_point = t2_spsp_owner_value
+	speed_per_target_skill_point = t2_spsp_target_value
+	base_progress_goal = t2_base_phase_length_value
+	maximum_secrecy = 85
+	base_maximum_success = latria_charming_abduction_max_success_value
+	phases_per_agent_charge = 1
+	success_chance_growth_per_skill_point = latria_charming_abduction_growth_per_intrigue_value
+
+	# Beauty and the target's attraction replace the vanilla perk unlock.
+	allow = {
+		latria_can_charm_abduction_target = { TARGET = scope:target }
+		is_adult = yes
+		is_playable_character = yes
+		is_imprisoned = no
+	}
+	valid = {
+		is_playable_character = yes
+		is_ruler = yes
+		is_incapable = no
+		custom_description = {
+			text = abduct_own_children_block
+			object = scope:target
+			trigger_if = {
+				limit = { is_parent_of = scope:target }
+				has_trait_with_flag = can_murder_own_children
+			}
+		}
+		scope:target = { latria_charming_abduction_target_available = yes }
+		NOT = {
+			scope:owner = {
+				is_ai = yes
+				has_opinion_modifier = {
+					target = scope:target
+					modifier = repentant_opinion
+				}
+			}
+		}
+		latria_charming_abduction_no_scheming_allowed = { TARGET = scope:target }
+	}
+
+	agent_leave_threshold = -25
+	agent_join_chance = {
+		base = 0
+		ai_agent_join_chance_basic_suite_modifier = yes
+		ai_agent_join_chance_hostile_grievous_modifier = yes
+	}
+	agent_groups_owner_perspective = { courtiers guests scripted_relations puppets }
+	agent_groups_target_character_perspective = { courtiers vassals }
+	valid_agent = { is_valid_agent_standard_trigger = yes }
+
+	odds_prediction = {
+		add = hostile_scheme_base_odds_prediction_target_is_char_value
+		add = latria_charming_abduction_attribute_odds_value
+		add = agent_groups_owner_perspective_value
+		add = agent_groups_target_character_perspective_value
+		add = odds_abduct_scheme_misc_value
+		min = 0
+	}
+	base_success_chance = {
+		base = latria_charming_abduction_base_success_value
+		scheme_type_skill_success_chance_modifier = { SKILL = INTRIGUE }
+		latria_charming_abduction_attribute_modifier = yes
+		hostile_scheme_base_chance_modifier = yes
+		apply_calculated_scheme_success_chance_adjustments_modifier = yes
+		modifier = {
+			add = 100
+			desc = SCHEME_DISCOVERED_ESCAPE_TUNNEL
+			scope:owner = {
+				exists = var:discovered_escape_tunnel_of
+				var:discovered_escape_tunnel_of = scope:target
+			}
+		}
+		dangerous_hostile_scheme_base_chance_modifier = yes
+		house_feud_hostile_scheme_success_modifier = yes
+		latria_charming_abduction_target_difficulty_modifier = yes
+		latria_charming_abduction_war_difficulty_modifier = yes
+		diarch_scheming_within_realm_bonus_modifier = yes
+		modifier = {
+			add = 25
+			desc = SCHEME_SECRET_DOMICILE_TUNNEL
+			scope:owner = { exists = var:ep3_secret_tunnels_var }
+		}
+	}
+	base_secrecy = {
+		add = secrecy_base_value
+		add = countermeasure_apply_secrecy_maluses_value
+	}
+
+	# Reuse the vanilla abduction event chain and agent types throughout.
+	on_start = {
+		set_variable = {
+			name = apply_countermeasures
+			value = flag:calculating
+		}
+		add_scheme_starting_opportunities_intrigue_effect = yes
+		if = {
+			limit = { scheme_owner = { NOT = { has_variable = agents_added } } }
+			add_agent_slot = agent_thug
+			add_agent_slot = agent_thug
+			add_agent_slot = agent_muscle
+			add_agent_slot = agent_footpad
+			add_agent_slot = agent_lookout
+		}
+	}
+	on_phase_completed = {
+		suppress_scheme_follow_up_event_till_input_given_effect = yes
+		abduct_scheme_prep_effect = yes
+		cap_schemes_and_fire_reminders_effect = yes
+	}
+	on_hud_click = { abduct_scheme_prep_effect = yes }
+	on_semiyearly = {
+		if = {
+			limit = { scheme_owner = { is_ai = yes } }
+			abduct_scheme_prep_effect = yes
+			purge_ai_scheme_slots_effect = yes
+		}
+	}
+	on_monthly = {
+		hostile_scheme_monthly_discovery_chance_effect = yes
+		if = {
+			limit = { NOT = { exists = scope:discovery_event_happening } }
+			scheme_owner = {
+				trigger_event = {
+					on_action = abduct_ongoing
+					days = { 1 30 }
+				}
+			}
+		}
+	}
+	on_invalidated = { latria_charming_abduction_invalidated_effect = yes }
+}

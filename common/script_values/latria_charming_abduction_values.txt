@@ -1,0 +1,132 @@
+# Beauty and relationship bonuses are percentage points. Target opinion is
+# scaled by the coefficient below; the existing success cap still applies.
+latria_charming_abduction_base_success_value = -25
+latria_charming_abduction_max_success_value = 85
+latria_charming_abduction_growth_per_intrigue_value = 0.3
+
+latria_charming_abduction_beauty_1_bonus_value = 45
+latria_charming_abduction_beauty_2_bonus_value = 90
+latria_charming_abduction_beauty_3_bonus_value = 135
+latria_charming_abduction_opinion_coefficient = 0.5
+latria_charming_abduction_soulmate_bonus_value = 50
+latria_charming_abduction_lover_bonus_value = 30
+latria_charming_abduction_spouse_bonus_value = 20
+latria_charming_abduction_concubine_bonus_value = 15
+
+latria_charming_abduction_beauty_value = {
+	value = 0
+	if = {
+		limit = { scope:owner = { has_trait = beauty_good_3 } }
+		add = latria_charming_abduction_beauty_3_bonus_value
+	}
+	else_if = {
+		limit = { scope:owner = { has_trait = beauty_good_2 } }
+		add = latria_charming_abduction_beauty_2_bonus_value
+	}
+	else_if = {
+		limit = { scope:owner = { has_trait = beauty_good_1 } }
+		add = latria_charming_abduction_beauty_1_bonus_value
+	}
+}
+
+latria_charming_abduction_target_prowess_value = {
+	value = scope:target.prowess
+	multiply = -2
+}
+
+latria_charming_abduction_target_intrigue_value = {
+	value = scope:target.intrigue
+	multiply = -1.5
+}
+
+# Replace the generic skill estimate so target Intrigue is not counted twice.
+latria_charming_abduction_attribute_odds_value = {
+	add = {
+		value = scope:owner.intrigue
+		desc = scheme_odds.intrigue.owner
+	}
+	add = {
+		value = latria_charming_abduction_beauty_value
+		desc = latria_charming_abduction_beauty_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_target_prowess_value
+		desc = latria_charming_abduction_target_prowess_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_target_intrigue_value
+		desc = latria_charming_abduction_target_intrigue_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_target_opinion_value
+		desc = latria_charming_abduction_target_opinion_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_soulmate_value
+		desc = latria_charming_abduction_soulmate_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_lover_value
+		desc = latria_charming_abduction_lover_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_spouse_value
+		desc = latria_charming_abduction_spouse_odds_desc
+	}
+	add = {
+		value = latria_charming_abduction_concubine_value
+		desc = latria_charming_abduction_concubine_odds_desc
+	}
+}
+
+latria_charming_abduction_target_opinion_value = {
+	scope:target = { value = "opinion(scope:owner)" }
+	multiply = latria_charming_abduction_opinion_coefficient
+}
+
+# A soulmate replaces the lover bonus; marriage can add to either romantic bond.
+latria_charming_abduction_soulmate_value = {
+	value = 0
+	scope:target = {
+		if = {
+			limit = { has_relation_soulmate = scope:owner }
+			add = latria_charming_abduction_soulmate_bonus_value
+		}
+	}
+}
+
+latria_charming_abduction_lover_value = {
+	value = 0
+	scope:target = {
+		if = {
+			limit = {
+				has_relation_lover = scope:owner
+				NOT = { has_relation_soulmate = scope:owner }
+			}
+			add = latria_charming_abduction_lover_bonus_value
+		}
+	}
+}
+
+latria_charming_abduction_spouse_value = {
+	value = 0
+	scope:target = {
+		if = {
+			limit = { is_spouse_of = scope:owner }
+			add = latria_charming_abduction_spouse_bonus_value
+		}
+	}
+}
+
+latria_charming_abduction_concubine_value = {
+	value = 0
+	scope:target = {
+		if = {
+			limit = {
+				latria_are_consorts = { PARTNER = scope:owner }
+				NOT = { is_spouse_of = scope:owner }
+			}
+			add = latria_charming_abduction_concubine_bonus_value
+		}
+	}
+}

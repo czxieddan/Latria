@@ -1,0 +1,121 @@
+latria_start_charming_abduction_interaction = {
+	icon = icon_scheme_abduct
+	interface_priority = 71
+	category = interaction_category_hostile
+	scheme = latria_charming_abduction
+	send_name = START_SCHEME
+	ignores_pending_interaction_block = yes
+	auto_accept = yes
+
+	is_available = {
+		trigger_if = {
+			limit = { is_ai = yes }
+			is_diarch = yes
+			liege ?= { has_diarchy_active_parameter = diarchy_is_co_rulership }
+			ai_diarch_would_maim_execute_superior_if_got_chance_trigger = { LIEGE = liege }
+		}
+	}
+	is_shown = {
+		exists = scope:puppet_or_actor
+		scope:puppet_or_actor != scope:recipient
+		scope:puppet_or_actor = {
+			latria_can_charm_abduction_target = { TARGET = scope:recipient }
+		}
+		scope:recipient = { NOT = { is_imprisoned_by = scope:puppet_or_actor } }
+		latria_charming_abduction_multiplayer_allowed = yes
+	}
+	is_valid_showing_failures_only = {
+		scope:puppet_or_actor = {
+			can_start_scheme = {
+				type = latria_charming_abduction
+				target_character = scope:recipient
+			}
+			latria_charming_abduction_no_scheming_allowed = { TARGET = scope:recipient }
+		}
+		scope:recipient = { NOT = { has_strong_hook = scope:puppet_or_actor } }
+		trigger_if = {
+			limit = {
+				scope:puppet_or_actor = { has_government = landless_adventurer_government }
+			}
+			ep3_laamp_diplo_range_trigger = {
+				TARGET = scope:recipient
+				LAAMP = scope:puppet_or_actor
+			}
+		}
+	}
+
+	options_heading = schemes.t.agent_packages
+	send_options_exclusive = yes
+	send_option = {
+		flag = agent_focus_balance
+		current_description = start_abduct.tt.agent_focus_balance
+	}
+	send_option = {
+		flag = agent_focus_success
+		current_description = start_abduct.tt.agent_focus_success
+	}
+	send_option = {
+		flag = agent_focus_speed
+		current_description = start_abduct.tt.agent_focus_speed
+	}
+	send_option = {
+		flag = agent_focus_secrecy
+		current_description = start_abduct.tt.agent_focus_secrecy
+	}
+
+	on_send = {
+		scope:puppet_or_actor = {
+			if = {
+				limit = { latria_charming_abduction_has_indulgences = yes }
+				change_spiritual_fulfillment = medium_spiritual_fulfillment_loss
+			}
+		}
+	}
+	on_accept = {
+		scope:puppet_or_actor = {
+			latria_charming_abduction_stress_effect = yes
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = latria_charming_abduction_started
+				left_icon = scope:puppet_or_actor
+				right_icon = scope:recipient
+				latria_begin_charming_abduction_effect = yes
+			}
+		}
+		latria_charming_abduction_puppeteer_toast_effect = yes
+		scope:puppet_or_actor = { save_scope_as = owner }
+		scope:recipient = { save_scope_as = target }
+		abduction_rivalry_progress_tooltip_forecast_effect = yes
+	}
+
+	ai_targets = { ai_recipients = liege }
+	ai_frequency_by_tier = {
+		barony = 0
+		county = 60
+		duchy = 60
+		kingdom = 60
+		empire = 0
+		hegemony = 0
+	}
+	ai_will_do = {
+		base = -100
+		opinion_modifier = {
+			opinion_target = scope:recipient
+			multiplier = -1
+		}
+		ai_value_modifier = { ai_honor = -1 }
+		latria_charming_abduction_ai_ambition_modifier = yes
+		latria_charming_abduction_ai_restraint_modifier = yes
+		modifier = {
+			add = {
+				value = years_as_diarch
+				multiply = 2
+			}
+			always = yes
+		}
+		modifier = {
+			latria_charming_abduction_has_indulgences = yes
+			factor = 0.1
+		}
+	}
+}

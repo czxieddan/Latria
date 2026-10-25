@@ -1,0 +1,138 @@
+latria_charming_abduction_attribute_modifier = {
+	modifier = {
+		add = latria_charming_abduction_beauty_value
+		desc = latria_charming_abduction_beauty_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_target_prowess_value
+		desc = latria_charming_abduction_target_prowess_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_target_intrigue_value
+		desc = latria_charming_abduction_target_intrigue_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_target_opinion_value
+		desc = latria_charming_abduction_target_opinion_modifier_desc
+	}
+	latria_charming_abduction_relationship_modifier = yes
+}
+
+latria_charming_abduction_relationship_modifier = {
+	modifier = {
+		add = latria_charming_abduction_soulmate_value
+		desc = latria_charming_abduction_soulmate_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_lover_value
+		desc = latria_charming_abduction_lover_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_spouse_value
+		desc = latria_charming_abduction_spouse_modifier_desc
+	}
+	modifier = {
+		add = latria_charming_abduction_concubine_value
+		desc = latria_charming_abduction_concubine_modifier_desc
+	}
+}
+
+# Keep the vanilla abduction penalties without replacing any vanilla definitions.
+latria_charming_abduction_target_difficulty_modifier = {
+	first_valid = {
+		modifier = {
+			add = -75
+			desc = sway_foreign_target
+			scope:target = {
+				is_ruler = yes
+				scope:target.top_liege != scope:owner.top_liege
+			}
+		}
+		modifier = {
+			add = -40
+			desc = sway_foreign_target
+			scope:target = {
+				is_foreign_court_or_pool_guest = no
+				scope:target.top_liege != scope:owner.top_liege
+			}
+		}
+		modifier = {
+			add = -50
+			desc = FABRICATE_HOOK_RULER_TARGET
+			scope:target = {
+				is_ruler = yes
+				scope:target.top_liege = scope:owner.top_liege
+			}
+		}
+	}
+}
+
+latria_charming_abduction_war_difficulty_modifier = {
+	first_valid = {
+		modifier = {
+			add = -500
+			desc = SCHEME_AT_WAR
+			scope:target = { is_at_war_with = scope:owner }
+		}
+		modifier = {
+			add = -350
+			desc = SCHEME_AT_WAR_WITH_LIEGE
+			scope:target = {
+				is_playable_character = no
+				this != top_liege
+				any_liege_or_above = { is_at_war_with = scope:owner }
+			}
+		}
+		modifier = {
+			add = -250
+			desc = SCHEME_AT_WAR_WITH_LIEGE
+			scope:target = {
+				is_playable_character = yes
+				this != top_liege
+				any_liege_or_above = { is_at_war_with = scope:owner }
+			}
+		}
+	}
+}
+
+latria_charming_abduction_ai_ambition_modifier = {
+	modifier = {
+		add = 100
+		has_trait = disloyal
+	}
+	modifier = {
+		add = 75
+		has_trait = ambitious
+	}
+	modifier = {
+		add = 25
+		has_trait = arrogant
+	}
+	modifier = {
+		add = 25
+		has_trait = fickle
+	}
+	modifier = {
+		add = 25
+		has_trait = callous
+	}
+}
+
+latria_charming_abduction_ai_restraint_modifier = {
+	modifier = {
+		add = -50
+		has_trait = compassionate
+	}
+	modifier = {
+		add = -50
+		has_trait = humble
+	}
+	modifier = {
+		add = -100
+		has_trait = content
+	}
+	modifier = {
+		add = -300
+		has_trait = loyal
+	}
+}

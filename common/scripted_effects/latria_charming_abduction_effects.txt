@@ -1,0 +1,161 @@
+latria_begin_charming_abduction_balanced_effect = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_charming_abduction
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = agent_thug
+		AGENT_2 = agent_muscle
+		AGENT_3 = agent_footpad
+		AGENT_4 = agent_infiltrator
+		AGENT_5 = agent_lookout
+	}
+}
+
+latria_begin_charming_abduction_success_effect = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_charming_abduction
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = agent_thug
+		AGENT_2 = agent_thug
+		AGENT_3 = agent_muscle
+		AGENT_4 = agent_footpad
+		AGENT_5 = agent_lookout
+	}
+}
+
+latria_begin_charming_abduction_speed_effect = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_charming_abduction
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = agent_footpad
+		AGENT_2 = agent_footpad
+		AGENT_3 = agent_infiltrator
+		AGENT_4 = agent_thug
+		AGENT_5 = agent_lookout
+	}
+}
+
+latria_begin_charming_abduction_secrecy_effect = {
+	begin_scheme_with_agents_effect = {
+		SCHEME_TYPE = latria_charming_abduction
+		TARGET_TYPE = target_character
+		TARGET_SCOPE = scope:recipient
+		AGENT_1 = agent_lookout
+		AGENT_2 = agent_lookout
+		AGENT_3 = agent_decoy
+		AGENT_4 = agent_thug
+		AGENT_5 = agent_footpad
+	}
+}
+
+latria_begin_charming_abduction_effect = {
+	if = {
+		limit = { scope:agent_focus_success ?= yes }
+		latria_begin_charming_abduction_success_effect = yes
+	}
+	else_if = {
+		limit = { scope:agent_focus_speed ?= yes }
+		latria_begin_charming_abduction_speed_effect = yes
+	}
+	else_if = {
+		limit = { scope:agent_focus_secrecy ?= yes }
+		latria_begin_charming_abduction_secrecy_effect = yes
+	}
+	else = { latria_begin_charming_abduction_balanced_effect = yes }
+}
+
+latria_charming_abduction_stress_effect = {
+	if = {
+		limit = { NOT = { sp_hostile_schemes_except_murder_no_stress_or_fulfillment_trigger = yes } }
+		stress_and_fulfillment_impact = {
+			compassionate = medium_stress_impact_gain
+			honest = minor_stress_impact_gain
+			just = minor_stress_impact_gain
+		}
+	}
+}
+
+latria_charming_abduction_puppeteer_toast_effect = {
+	if = {
+		limit = {
+			scope:is_puppet_action ?= yes
+			scope:actor != scope:recipient
+		}
+		scope:actor = {
+			send_interface_toast = {
+				type = event_toast_effect_neutral
+				title = latria_charming_abduction_started_puppeteer
+				left_icon = scope:puppet_or_actor
+				right_icon = scope:recipient
+			}
+		}
+	}
+}
+
+latria_charming_abduction_invalidated_effect = {
+	scheme_target_character = { save_scope_as = target }
+	scheme_owner = { save_scope_as = owner }
+	if = {
+		limit = { scope:target = { is_alive = no } }
+		scope:owner = {
+			send_interface_toast = {
+				title = abduct_scheme_invalidated_title
+				left_icon = scope:target
+				custom_tooltip = scheme_target_died
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				is_imprisoned = yes
+				imprisoner = scope:owner
+			}
+			scope:owner = { NOT = { has_character_flag = is_in_event_abduct_outcome_0001 } }
+		}
+		scope:owner = {
+			send_interface_message = {
+				title = abduct_scheme_invalidated_title
+				type = abduct_invalidated_i_imprisoned_message
+				desc = abduct_scheme_i_imprisoned_them_message
+				left_icon = scope:target
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			scope:target = {
+				is_imprisoned = yes
+				imprisoner != scope:owner
+			}
+		}
+		scope:target.imprisoner = { save_scope_as = other_imprisoner }
+		scope:owner = {
+			send_interface_toast = {
+				title = abduct_scheme_invalidated_title
+				left_icon = scope:target
+				right_icon = scope:other_imprisoner
+				custom_description_no_bullet = {
+					subject = scope:other_imprisoner
+					object = scope:target
+					text = scheme_target_imprisoned_by_other
+				}
+			}
+		}
+	}
+	else_if = {
+		limit = { scope:target = { NOT = { in_diplomatic_range = scope:owner } } }
+		scope:owner = {
+			send_interface_toast = {
+				title = abduct_scheme_invalidated_title
+				left_icon = scope:target
+				custom_description_no_bullet = {
+					object = scope:target
+					text = scheme_target_not_in_diplomatic_range
+				}
+			}
+		}
+	}
+}
