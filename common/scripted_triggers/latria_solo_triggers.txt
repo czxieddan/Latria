@@ -1,5 +1,9 @@
+# Human initiators can repeat solo acts. AI retains its existing pause.
 latria_solo_interval_clear = {
-	NOT = { has_character_flag = latria_recent_solo_act }
+	OR = {
+		is_ai = no
+		NOT = { has_character_flag = latria_recent_solo_act }
+	}
 }
 
 # Rite praise of flesh. Reads virtues, sins, and the carnal tenet. Does not permit the act.

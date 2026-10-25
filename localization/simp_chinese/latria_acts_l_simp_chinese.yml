@@ -77,6 +77,7 @@
  latria_act_accept_rival: "[rival|E]：$VALUE|+0=$"
  latria_act_accept_nemesis: "[nemesis|E]：$VALUE|+0=$"
  latria_act_accept_pregnant: "$trait_pregnant$：$VALUE|+0=$"
+ latria_act_accept_recent_act: "近期有过亲密行为：$VALUE|+0=$"
  latria_unsatisfying_act_opinion: "对这场肉体欢愉不满"
 
  latria_carnal_gate_name: "未启"

@@ -77,6 +77,7 @@
  latria_act_accept_rival: "[rival|E]: $VALUE|+0=$"
  latria_act_accept_nemesis: "[nemesis|E]: $VALUE|+0=$"
  latria_act_accept_pregnant: "$trait_pregnant$: $VALUE|+0=$"
+ latria_act_accept_recent_act: "Recent intimacy: $VALUE|+0=$"
  latria_unsatisfying_act_opinion: "Dissatisfied with our carnal encounter"
 
  latria_carnal_gate_name: "Unopened"

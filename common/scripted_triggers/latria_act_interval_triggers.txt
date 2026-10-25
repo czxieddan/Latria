@@ -1,6 +1,7 @@
-# Shared pause after a direct act. Not a safety gate.
+# Human initiators use acceptance penalties; AI keeps the shared hard pause.
 latria_act_interval_clear = {
 	OR = {
+		is_ai = no
 		latria_lack_of_ability_to_say_no = yes
 		latria_pair_act_interval_clear = { PARTNER = $PARTNER$ }
 	}

@@ -1,18 +1,42 @@
 # Only writer for an act. Caller sets latria_act_kind. A partner act also sets latria_partner.
 # latria_force_death, when set, skips the roll and still uses the same death.
-latria_mark_recent_carnal_act = {
+# Keep the original AI cooldown flag; timestamp and duration drive player acceptance.
+latria_record_act_interval = {
+	remove_character_flag = $FLAG$
 	add_character_flag = {
-		flag = latria_recent_carnal_act
-		days = 180
+		flag = $FLAG$
+		days = $DAYS$
+	}
+	set_variable = {
+		name = $DATE_VARIABLE$
+		value = current_date
+		days = $DAYS$
+	}
+}
+
+latria_record_pair_act_interval = {
+	latria_record_act_interval = {
+		FLAG = $FLAG$
+		DATE_VARIABLE = $DATE_VARIABLE$
+		DAYS = $DAYS$
 	}
 	scope:latria_partner = {
 		if = {
 			limit = { is_alive = yes }
-			add_character_flag = {
-				flag = latria_recent_carnal_act
-				days = 180
+			latria_record_act_interval = {
+				FLAG = $FLAG$
+				DATE_VARIABLE = $DATE_VARIABLE$
+				DAYS = $DAYS$
 			}
 		}
+	}
+}
+
+latria_mark_recent_carnal_act = {
+	latria_record_pair_act_interval = {
+		FLAG = latria_recent_carnal_act
+		DATE_VARIABLE = latria_last_carnal_act_date
+		DAYS = 180
 	}
 	if = {
 		limit = {
@@ -22,8 +46,30 @@ latria_mark_recent_carnal_act = {
 	}
 }
 
-# Lustful pairs wait 100 days. Other spouses and soulmates wait 165.
-# Partners who are neither still use the six-month carnal flag.
+# Capture the duration at the time of the act, even if traits change afterward.
+latria_record_close_bond_act_interval = {
+	latria_record_pair_act_interval = {
+		FLAG = latria_recent_close_bond_act
+		DATE_VARIABLE = latria_last_close_bond_act_date
+		DAYS = $DAYS$
+	}
+	set_variable = {
+		name = latria_close_bond_act_interval_days
+		value = $DAYS$
+		days = $DAYS$
+	}
+	scope:latria_partner = {
+		if = {
+			limit = { is_alive = yes }
+			set_variable = {
+				name = latria_close_bond_act_interval_days
+				value = $DAYS$
+				days = $DAYS$
+			}
+		}
+	}
+}
+
 latria_mark_recent_close_bond_act = {
 	if = {
 		limit = {
@@ -32,34 +78,10 @@ latria_mark_recent_close_bond_act = {
 				scope:latria_partner = { has_trait = lustful }
 			}
 		}
-		add_character_flag = {
-			flag = latria_recent_close_bond_act
-			days = 100
-		}
-		scope:latria_partner = {
-			if = {
-				limit = { is_alive = yes }
-				add_character_flag = {
-					flag = latria_recent_close_bond_act
-					days = 100
-				}
-			}
-		}
+		latria_record_close_bond_act_interval = { DAYS = 100 }
 	}
 	else = {
-		add_character_flag = {
-			flag = latria_recent_close_bond_act
-			days = 165
-		}
-		scope:latria_partner = {
-			if = {
-				limit = { is_alive = yes }
-				add_character_flag = {
-					flag = latria_recent_close_bond_act
-					days = 165
-				}
-			}
-		}
+		latria_record_close_bond_act_interval = { DAYS = 165 }
 	}
 }
 

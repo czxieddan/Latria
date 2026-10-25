@@ -103,6 +103,7 @@ latria_propose_intercourse_interaction = {
 		latria_act_appearance_acceptance_modifiers = yes
 		latria_act_attitude_acceptance_modifiers = yes
 		latria_act_rank_acceptance_modifiers = yes
+		latria_act_recency_acceptance_modifiers = yes
 		modifier = {
 			add = -100
 			desc = latria_act_accept_pregnant
@@ -220,6 +221,7 @@ latria_propose_manual_interaction = {
 		latria_act_appearance_acceptance_modifiers = yes
 		latria_act_attitude_acceptance_modifiers = yes
 		latria_act_rank_acceptance_modifiers = yes
+		latria_act_recency_acceptance_modifiers = yes
 	}
 	ai_will_do = {
 		base = latria_manual_overture_chance

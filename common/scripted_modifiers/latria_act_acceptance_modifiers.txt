@@ -120,3 +120,16 @@ latria_act_rank_acceptance_modifiers = {
 		desc = latria_act_accept_rank
 	}
 }
+
+# Human invitations trade the hard pause for a penalty only when the recipient is AI.
+latria_act_recency_acceptance_modifiers = {
+	modifier = {
+		add = latria_act_recency_acceptance_penalty
+		desc = latria_act_accept_recent_act
+		scope:puppet_or_actor = {
+			is_ai = no
+			NOT = { latria_pair_act_interval_clear = { PARTNER = scope:recipient } }
+		}
+		scope:recipient = { is_ai = yes }
+	}
+}

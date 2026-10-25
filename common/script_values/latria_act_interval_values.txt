@@ -1,0 +1,80 @@
+# current_date is a numeric day count. No daily updates or stage flags are needed.
+# Old saves without timestamps use 75% progress (-100) until the original flag expires.
+latria_carnal_act_recovery_progress = {
+	value = 1
+	if = {
+		limit = { has_character_flag = latria_recent_carnal_act }
+		value = 0.75
+		if = {
+			limit = { exists = var:latria_last_carnal_act_date }
+			value = current_date
+			subtract = var:latria_last_carnal_act_date
+			divide = 180
+		}
+	}
+	min = 0
+	max = 1
+}
+
+latria_close_bond_act_recovery_progress = {
+	value = 1
+	if = {
+		limit = { has_character_flag = latria_recent_close_bond_act }
+		value = 0.75
+		if = {
+			limit = {
+				exists = var:latria_last_close_bond_act_date
+				exists = var:latria_close_bond_act_interval_days
+				var:latria_close_bond_act_interval_days > 0
+			}
+			value = current_date
+			subtract = var:latria_last_close_bond_act_date
+			divide = var:latria_close_bond_act_interval_days
+		}
+	}
+	min = 0
+	max = 1
+}
+
+# The less recovered participant determines the penalty; do not add both penalties.
+# Keep the original distinction between close bonds and other partners.
+latria_act_recovery_progress = {
+	value = 1
+	if = {
+		limit = {
+			scope:puppet_or_actor = {
+				latria_partner_is_spouse_or_soulmate = { PARTNER = scope:recipient }
+			}
+		}
+		value = scope:puppet_or_actor.latria_close_bond_act_recovery_progress
+		max = scope:recipient.latria_close_bond_act_recovery_progress
+	}
+	else = {
+		value = scope:puppet_or_actor.latria_carnal_act_recovery_progress
+		max = scope:recipient.latria_carnal_act_recovery_progress
+	}
+}
+
+# Continuous piecewise-linear curve: (0, -180), (0.5, -150), (0.75, -100), (1, 0).
+# Slopes are 60, 200, and 400 per full recovery window. No stage conditionals.
+latria_act_recency_acceptance_penalty = {
+	value = -180
+	add = {
+		value = latria_act_recovery_progress
+		multiply = 60
+	}
+	add = {
+		value = latria_act_recovery_progress
+		subtract = 0.5
+		min = 0
+		multiply = 140
+	}
+	add = {
+		value = latria_act_recovery_progress
+		subtract = 0.75
+		min = 0
+		multiply = 200
+	}
+	min = -180
+	max = 0
+}
