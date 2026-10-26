@@ -21,5 +21,7 @@ latria_solo_relief gfx/interface/icons/character_interactions/latria_solo_relief
 latria_fatal_liaison gfx/interface/icons/character_interactions/latria_fatal_liaison.dds fatal liaison interaction and event icon
 latria_fatal_touch gfx/interface/icons/character_interactions/latria_fatal_touch.dds fatal touch interaction and event icon
 latria_force_pig_embrace gfx/interface/icons/character_interactions/latria_force_pig_embrace.dds pig embrace interaction and event icon
+latria_charming_abduction gfx/interface/icons/character_interactions/latria_charming_abduction.dds charming abduction interaction icon
 latria_fatal_liaison_scheme gfx/interface/icons/scheme_types/latria_fatal_liaison.dds fatal liaison scheme icon
 latria_fatal_touch_scheme gfx/interface/icons/scheme_types/latria_fatal_touch.dds fatal touch scheme icon
+latria_charming_abduction_scheme gfx/interface/icons/scheme_types/latria_charming_abduction.dds charming abduction scheme icon
