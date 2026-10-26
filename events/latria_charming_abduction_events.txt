@@ -1,0 +1,130 @@
+namespace = latria_charming_abduction
+
+latria_charming_abduction.1001 = {
+	type = character_event
+	title = latria_charming_abduction.1001.t
+	desc = latria_charming_abduction.1001.desc
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = flirtation
+		outfit_tags = { no_clothes }
+	}
+	right_portrait = {
+		character = scope:target
+		animation = love
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	trigger = { latria_charming_abduction_preparation_available = yes }
+	immediate = {
+		scope:scheme = {
+			set_variable = { name = latria_charming_abduction_invitation_pending value = yes }
+		}
+	}
+
+	option = {
+		name = latria_charming_abduction.1001.a
+		trigger = { latria_charming_abduction_can_execute = yes }
+		latria_charming_abduction_attempt_effect = { APPROACH = bedchamber }
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = latria_charming_abduction.1001.b
+		trigger = { latria_charming_abduction_can_execute = yes }
+		latria_charming_abduction_attempt_effect = { APPROACH = antechamber }
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = latria_charming_abduction.1001.c
+		custom_tooltip = latria_charming_abduction_wait_tt
+		latria_charming_abduction_wait_effect = yes
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = latria_charming_abduction.1001.d
+		latria_charming_abduction_cancel_effect = yes
+		ai_chance = { base = 0 }
+	}
+}
+
+latria_charming_abduction.1101 = {
+	type = character_event
+	title = latria_charming_abduction.1101.t
+	desc = latria_charming_abduction.1101.desc
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:target
+		animation = love
+	}
+	trigger = { latria_charming_abduction_preparation_available = yes }
+
+	option = {
+		name = latria_charming_abduction.1101.a
+		latria_charming_abduction_add_preparation_effect = {
+			MODIFIER = latria_charming_abduction_perfumed_letter_modifier
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = latria_charming_abduction.1101.b
+		latria_charming_abduction_add_preparation_effect = {
+			MODIFIER = latria_charming_abduction_unsigned_letter_modifier
+		}
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = latria_charming_abduction.1101.c
+		ai_chance = { base = 10 }
+	}
+}
+
+latria_charming_abduction.1102 = {
+	type = character_event
+	title = latria_charming_abduction.1102.t
+	desc = latria_charming_abduction.1102.desc
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = corridor_night }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:target
+		animation = worry
+	}
+	trigger = { latria_charming_abduction_preparation_available = yes }
+
+	option = {
+		name = latria_charming_abduction.1102.a
+		trigger = { gold >= minor_gold_value }
+		show_as_unavailable = { gold < minor_gold_value }
+		latria_charming_abduction_bribe_attendant_effect = yes
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = latria_charming_abduction.1102.b
+		latria_charming_abduction_add_preparation_effect = {
+			MODIFIER = latria_charming_abduction_impetuous_invitation_modifier
+		}
+		ai_chance = { base = 25 }
+	}
+	option = {
+		name = latria_charming_abduction.1102.c
+		latria_charming_abduction_add_preparation_effect = {
+			MODIFIER = latria_charming_abduction_waiting_modifier
+		}
+		ai_chance = { base = 25 }
+	}
+}

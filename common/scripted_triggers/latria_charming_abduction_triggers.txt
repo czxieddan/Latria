@@ -1,7 +1,16 @@
-# Only the target's attraction matters; beauty_good covers all three positive tiers.
+latria_charming_abduction_adult = {
+	age >= latria_charming_abduction_minimum_age
+}
+
+# The invitation is bait, so only the target's attraction matters.
+# beauty_good covers all three positive tiers; no carnal act is resolved here.
 latria_can_charm_abduction_target = {
+	latria_charming_abduction_adult = yes
 	has_trait = beauty_good
-	$TARGET$ = { is_attracted_to_gender_of = prev }
+	$TARGET$ = {
+		latria_charming_abduction_adult = yes
+		is_attracted_to_gender_of = prev
+	}
 }
 
 latria_charming_abduction_multiplayer_allowed = {
@@ -28,6 +37,8 @@ latria_charming_abduction_player_family = {
 }
 
 latria_charming_abduction_target_available = {
+	latria_charming_abduction_adult = yes
+	latria_body_can_act = yes
 	is_imprisoned = no
 	is_hostage = no
 	exists = location
@@ -48,5 +59,66 @@ latria_charming_abduction_has_indulgences = {
 	OR = {
 		has_character_modifier = pam_granted_indulgences_modifier
 		has_character_modifier = pam_granted_indulgences_modifier_small
+	}
+}
+
+# Saved character scopes remain usable in outcome events after the scheme ends.
+latria_charming_abduction_adult_participants = {
+	scope:owner = {
+		is_alive = yes
+		latria_charming_abduction_adult = yes
+	}
+	scope:target = {
+		is_alive = yes
+		latria_charming_abduction_adult = yes
+	}
+}
+
+# Delayed events must still belong to the same scheme and its saved participants.
+latria_charming_abduction_scheme_matches = {
+	exists = scope:scheme
+	scope:scheme = {
+		scheme_type = latria_charming_abduction
+		scheme_owner = { this = scope:owner }
+		scheme_target_character = { this = scope:target }
+	}
+}
+
+latria_charming_abduction_participants_available = {
+	latria_charming_abduction_adult_participants = yes
+	scope:owner = {
+		is_imprisoned = no
+		latria_body_can_act = yes
+	}
+	scope:target = { latria_charming_abduction_target_available = yes }
+}
+
+latria_charming_abduction_scene_available = {
+	latria_charming_abduction_scheme_matches = yes
+	latria_charming_abduction_participants_available = yes
+	scope:scheme = { NOT = { has_variable = latria_charming_abduction_resolved } }
+}
+
+latria_charming_abduction_preparation_available = {
+	latria_charming_abduction_scene_available = yes
+	scope:scheme = { NOT = { has_variable = latria_charming_abduction_invitation_pending } }
+}
+
+# The shared preparation window has already consumed the required opportunities.
+latria_charming_abduction_can_execute = {
+	latria_charming_abduction_scene_available = yes
+	scope:scheme = { has_variable = latria_charming_abduction_invitation_pending }
+}
+
+latria_charming_abduction_can_retry = {
+	latria_charming_abduction_scheme_matches = yes
+	latria_charming_abduction_participants_available = yes
+	scope:scheme = { has_variable = latria_charming_abduction_resolved }
+}
+
+latria_charming_abduction_has_unseen_preparation = {
+	OR = {
+		NOT = { has_variable = latria_charming_abduction_letter_sent }
+		NOT = { has_variable = latria_charming_abduction_attendant_seen }
 	}
 }

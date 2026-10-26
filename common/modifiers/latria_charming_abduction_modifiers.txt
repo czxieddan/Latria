@@ -1,0 +1,42 @@
+# These modifiers belong to the scheme, never to either participant.
+latria_charming_abduction_bedchamber_modifier = {
+	icon = love_positive
+	scheme_success_chance = 10
+	scheme_secrecy = -10
+}
+
+latria_charming_abduction_antechamber_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = -5
+	scheme_secrecy = 10
+}
+
+latria_charming_abduction_perfumed_letter_modifier = {
+	icon = love_positive
+	scheme_success_chance = 10
+	scheme_secrecy = -5
+}
+
+latria_charming_abduction_unsigned_letter_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = -5
+	scheme_secrecy = 10
+}
+
+latria_charming_abduction_distracted_attendant_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 10
+	scheme_secrecy = 5
+}
+
+latria_charming_abduction_impetuous_invitation_modifier = {
+	icon = love_positive
+	scheme_success_chance = 5
+	scheme_secrecy = -10
+}
+
+latria_charming_abduction_waiting_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = -5
+	scheme_secrecy = 10
+}

@@ -51,3 +51,8 @@ latria_frustration_senior_age_start = {
 latria_pig_embrace_minimum_age = {
 	value = 12
 }
+
+# Minimum recipient age for the charming abduction scheme.
+latria_charming_abduction_minimum_age = {
+	value = 15
+}

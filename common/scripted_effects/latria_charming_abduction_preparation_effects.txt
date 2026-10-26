@@ -1,0 +1,115 @@
+# Called in scheme scope by the scheme callbacks.
+latria_charming_abduction_bind_scheme_effect = {
+	save_scope_as = scheme
+	scheme_owner = { save_scope_as = owner }
+	scheme_target_character = { save_scope_as = target }
+}
+
+latria_charming_abduction_prep_effect = {
+	latria_charming_abduction_bind_scheme_effect = yes
+	save_scope_value_as = {
+		name = follow_up_event
+		value = event_id:latria_charming_abduction.1001
+	}
+	if = {
+		limit = {
+			latria_charming_abduction_preparation_available = yes
+			NOT = { exists = scope:suppress_next_event }
+		}
+		# The shared agent/opportunity window pays the execution cost once.
+		scheme_owner = { trigger_event = scheme_critical_moments.0002 }
+	}
+}
+
+latria_charming_abduction_monthly_effect = {
+	if = {
+		limit = {
+			latria_charming_abduction_preparation_available = yes
+			NOT = { exists = scope:discovery_event_happening }
+			latria_charming_abduction_has_unseen_preparation = yes
+		}
+		random = {
+			chance = 10
+			latria_charming_abduction_choose_preparation_effect = yes
+		}
+	}
+}
+
+latria_charming_abduction_choose_preparation_effect = {
+	random_list = {
+		50 = {
+			trigger = { NOT = { has_variable = latria_charming_abduction_letter_sent } }
+			set_variable = { name = latria_charming_abduction_letter_sent value = yes }
+			scheme_owner = {
+				trigger_event = { id = latria_charming_abduction.1101 days = { 1 30 } }
+			}
+		}
+		50 = {
+			trigger = { NOT = { has_variable = latria_charming_abduction_attendant_seen } }
+			set_variable = { name = latria_charming_abduction_attendant_seen value = yes }
+			scheme_owner = {
+				trigger_event = { id = latria_charming_abduction.1102 days = { 1 30 } }
+			}
+		}
+	}
+}
+
+latria_charming_abduction_add_preparation_effect = {
+	if = {
+		limit = { latria_charming_abduction_preparation_available = yes }
+		scope:scheme = { add_scheme_modifier = { type = $MODIFIER$ } }
+	}
+}
+
+latria_charming_abduction_bribe_attendant_effect = {
+	if = {
+		limit = {
+			latria_charming_abduction_preparation_available = yes
+			gold >= minor_gold_value
+		}
+		remove_short_term_gold = minor_gold_value
+		latria_charming_abduction_add_preparation_effect = {
+			MODIFIER = latria_charming_abduction_distracted_attendant_modifier
+		}
+	}
+}
+
+latria_charming_abduction_wait_effect = {
+	if = {
+		limit = { latria_charming_abduction_can_execute = yes }
+		scope:scheme = {
+			remove_variable = latria_charming_abduction_invitation_pending
+			reset_failed_scheme_effect = yes
+		}
+		stress_and_fulfillment_impact = {
+			impatient = medium_stress_impact_gain
+			stubborn = medium_stress_impact_gain
+		}
+	}
+}
+
+latria_charming_abduction_close_scheme_effect = {
+	if = {
+		limit = { latria_charming_abduction_scheme_matches = yes }
+		scope:scheme = {
+			set_variable = { name = latria_charming_abduction_resolved value = yes }
+			end_scheme = yes
+		}
+	}
+}
+
+latria_charming_abduction_cancel_effect = {
+	latria_charming_abduction_close_scheme_effect = yes
+}
+
+latria_charming_abduction_retry_effect = {
+	if = {
+		limit = { latria_charming_abduction_can_retry = yes }
+		scope:scheme = {
+			remove_variable = latria_charming_abduction_resolved
+			remove_scheme_modifier = latria_charming_abduction_bedchamber_modifier
+			remove_scheme_modifier = latria_charming_abduction_antechamber_modifier
+			reset_failed_scheme_effect = yes
+		}
+	}
+}

@@ -1,10 +1,10 @@
 latria_charming_abduction = {
 	skill = intrigue
 	desc = latria_charming_abduction_desc_general
-	success_desc = ABDUCT_SUCCESS_DESC
-	discovery_desc = ABDUCT_DISCOVERY_DESC
+	success_desc = LATRIA_CHARMING_ABDUCTION_SUCCESS_DESC
+	discovery_desc = LATRIA_CHARMING_ABDUCTION_DISCOVERY_DESC
 	icon = latria_charming_abduction
-	illustration = "gfx/interface/illustrations/event_scenes/corridor.dds"
+	illustration = "gfx/interface/illustrations/event_scenes/bedchamber.dds"
 	category = hostile
 	target_type = character
 	is_secret = yes
@@ -27,6 +27,7 @@ latria_charming_abduction = {
 		is_imprisoned = no
 	}
 	valid = {
+		latria_charming_abduction_adult = yes
 		is_playable_character = yes
 		is_ruler = yes
 		is_incapable = no
@@ -99,7 +100,7 @@ latria_charming_abduction = {
 		add = countermeasure_apply_secrecy_maluses_value
 	}
 
-	# Reuse the vanilla abduction event chain and agent types throughout.
+	# Dedicated invitations and outcomes retain the standard hostile agent slots.
 	on_start = {
 		set_variable = {
 			name = apply_countermeasures
@@ -117,27 +118,26 @@ latria_charming_abduction = {
 	}
 	on_phase_completed = {
 		suppress_scheme_follow_up_event_till_input_given_effect = yes
-		abduct_scheme_prep_effect = yes
-		cap_schemes_and_fire_reminders_effect = yes
+		latria_charming_abduction_prep_effect = yes
+		if = {
+			limit = { latria_charming_abduction_preparation_available = yes }
+			cap_schemes_and_fire_reminders_effect = yes
+		}
 	}
-	on_hud_click = { abduct_scheme_prep_effect = yes }
+	on_hud_click = { latria_charming_abduction_prep_effect = yes }
 	on_semiyearly = {
 		if = {
 			limit = { scheme_owner = { is_ai = yes } }
-			abduct_scheme_prep_effect = yes
+			latria_charming_abduction_prep_effect = yes
 			purge_ai_scheme_slots_effect = yes
 		}
 	}
 	on_monthly = {
-		hostile_scheme_monthly_discovery_chance_effect = yes
+		latria_charming_abduction_bind_scheme_effect = yes
 		if = {
-			limit = { NOT = { exists = scope:discovery_event_happening } }
-			scheme_owner = {
-				trigger_event = {
-					on_action = abduct_ongoing
-					days = { 1 30 }
-				}
-			}
+			limit = { NOT = { has_variable = latria_charming_abduction_resolved } }
+			hostile_scheme_monthly_discovery_chance_effect = yes
+			latria_charming_abduction_monthly_effect = yes
 		}
 	}
 	on_invalidated = { latria_charming_abduction_invalidated_effect = yes }

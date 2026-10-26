@@ -95,65 +95,78 @@ latria_charming_abduction_puppeteer_toast_effect = {
 }
 
 latria_charming_abduction_invalidated_effect = {
-	scheme_target_character = { save_scope_as = target }
-	scheme_owner = { save_scope_as = owner }
+	latria_charming_abduction_bind_scheme_effect = yes
+	if = {
+		limit = {
+			NOT = { has_variable = latria_charming_abduction_resolved }
+			scope:owner = { is_alive = yes }
+		}
+		latria_charming_abduction_invalidated_notification_effect = yes
+	}
+}
+
+latria_charming_abduction_invalidated_notification_effect = {
 	if = {
 		limit = { scope:target = { is_alive = no } }
 		scope:owner = {
 			send_interface_toast = {
-				title = abduct_scheme_invalidated_title
+				title = latria_charming_abduction_invalidated_title
 				left_icon = scope:target
 				custom_tooltip = scheme_target_died
 			}
 		}
 	}
 	else_if = {
-		limit = {
-			scope:target = {
-				is_imprisoned = yes
-				imprisoner = scope:owner
+		limit = { scope:target = { is_imprisoned = yes } }
+		latria_charming_abduction_imprisoned_notification_effect = yes
+	}
+	else_if = {
+		limit = { scope:target = { NOT = { in_diplomatic_range = scope:owner } } }
+		scope:owner = {
+			send_interface_toast = {
+				title = latria_charming_abduction_invalidated_title
+				left_icon = scope:target
+				custom_description_no_bullet = {
+					object = scope:target
+					text = scheme_target_not_in_diplomatic_range
+				}
 			}
-			scope:owner = { NOT = { has_character_flag = is_in_event_abduct_outcome_0001 } }
 		}
+	}
+	else = {
+		scope:owner = {
+			send_interface_toast = {
+				title = latria_charming_abduction_invalidated_title
+				left_icon = scope:target
+				custom_tooltip = latria_charming_abduction_no_longer_possible
+			}
+		}
+	}
+}
+
+latria_charming_abduction_imprisoned_notification_effect = {
+	if = {
+		limit = { scope:target = { imprisoner = scope:owner } }
 		scope:owner = {
 			send_interface_message = {
-				title = abduct_scheme_invalidated_title
+				title = latria_charming_abduction_invalidated_title
 				type = abduct_invalidated_i_imprisoned_message
-				desc = abduct_scheme_i_imprisoned_them_message
+				desc = latria_charming_abduction_i_imprisoned_message
 				left_icon = scope:target
 			}
 		}
 	}
-	else_if = {
-		limit = {
-			scope:target = {
-				is_imprisoned = yes
-				imprisoner != scope:owner
-			}
-		}
+	else = {
 		scope:target.imprisoner = { save_scope_as = other_imprisoner }
 		scope:owner = {
 			send_interface_toast = {
-				title = abduct_scheme_invalidated_title
+				title = latria_charming_abduction_invalidated_title
 				left_icon = scope:target
 				right_icon = scope:other_imprisoner
 				custom_description_no_bullet = {
 					subject = scope:other_imprisoner
 					object = scope:target
 					text = scheme_target_imprisoned_by_other
-				}
-			}
-		}
-	}
-	else_if = {
-		limit = { scope:target = { NOT = { in_diplomatic_range = scope:owner } } }
-		scope:owner = {
-			send_interface_toast = {
-				title = abduct_scheme_invalidated_title
-				left_icon = scope:target
-				custom_description_no_bullet = {
-					object = scope:target
-					text = scheme_target_not_in_diplomatic_range
 				}
 			}
 		}

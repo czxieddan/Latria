@@ -1,0 +1,158 @@
+namespace = latria_charming_abduction
+
+latria_charming_abduction.0001 = {
+	hidden = yes
+	trigger = { latria_charming_abduction_can_execute = yes }
+	immediate = { latria_charming_abduction_resolve_effect = yes }
+}
+
+latria_charming_abduction.2001 = {
+	type = character_event
+	title = latria_charming_abduction.2001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_approach ?= flag:bedchamber }
+				desc = latria_charming_abduction.2001.bedchamber
+			}
+			desc = latria_charming_abduction.2001.antechamber
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_exposed ?= yes }
+				desc = latria_charming_abduction.2001.exposed
+			}
+			desc = latria_charming_abduction.2001.secret
+		}
+	}
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+		outfit_tags = { nightgown }
+	}
+	right_portrait = {
+		character = scope:target
+		animation = fear
+		outfit_tags = { nightgown }
+	}
+	trigger = { latria_charming_abduction_adult_participants = yes }
+	option = { name = latria_charming_abduction.2001.a }
+}
+
+latria_charming_abduction.2002 = {
+	type = character_event
+	title = latria_charming_abduction.2002.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_approach ?= flag:bedchamber }
+				desc = latria_charming_abduction.2002.bedchamber
+			}
+			desc = latria_charming_abduction.2002.antechamber
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_exposed ?= yes }
+				desc = latria_charming_abduction.2002.exposed
+			}
+			desc = latria_charming_abduction.2002.secret
+		}
+	}
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = sadness
+		outfit_tags = { nightgown }
+	}
+	right_portrait = {
+		character = scope:target
+		animation = worry
+		outfit_tags = { nightgown }
+	}
+	trigger = { latria_charming_abduction_adult_participants = yes }
+	option = {
+		name = latria_charming_abduction.2002.a
+		latria_charming_abduction_cancel_effect = yes
+		stress_and_fulfillment_impact = { stubborn = medium_stress_impact_gain }
+		ai_chance = { base = 100 }
+	}
+	option = {
+		name = latria_charming_abduction.2002.b
+		trigger = { latria_charming_abduction_can_retry = yes }
+		custom_tooltip = latria_charming_abduction_retry_tt
+		latria_charming_abduction_retry_effect = yes
+		ai_chance = {
+			base = 10
+			modifier = { add = 200 has_trait = stubborn }
+		}
+	}
+}
+
+latria_charming_abduction.2101 = {
+	type = character_event
+	title = latria_charming_abduction.2101.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_approach ?= flag:bedchamber }
+				desc = latria_charming_abduction.2101.bedchamber
+			}
+			desc = latria_charming_abduction.2101.antechamber
+		}
+	}
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = fear
+		outfit_tags = { nightgown }
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = schadenfreude
+		outfit_tags = { nightgown }
+	}
+	trigger = { latria_charming_abduction_adult_participants = yes }
+	option = { name = latria_charming_abduction.2101.a }
+}
+
+latria_charming_abduction.2102 = {
+	type = character_event
+	title = latria_charming_abduction.2102.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_charming_abduction_exposed ?= yes }
+				desc = latria_charming_abduction.2102.exposed
+			}
+			desc = latria_charming_abduction.2102.secret
+		}
+	}
+	theme = intrigue
+	override_icon = { reference = "gfx/interface/icons/character_interactions/latria_charming_abduction.dds" }
+	override_background = { reference = corridor_night }
+	left_portrait = {
+		character = root
+		animation = worry
+		outfit_tags = { nightgown }
+	}
+	right_portrait = {
+		character = scope:latria_charming_abduction_revealed_owner
+		animation = personality_rational
+		outfit_tags = { nightgown }
+	}
+	trigger = { latria_charming_abduction_adult_participants = yes }
+	immediate = {
+		if = {
+			limit = { scope:latria_charming_abduction_exposed ?= yes }
+			scope:owner = { save_scope_as = latria_charming_abduction_revealed_owner }
+		}
+	}
+	option = { name = latria_charming_abduction.2102.a }
+}

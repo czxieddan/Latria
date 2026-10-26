@@ -1,0 +1,125 @@
+# The shared preparation window has already spent the execution opportunities.
+latria_charming_abduction_attempt_effect = {
+	if = {
+		limit = { latria_charming_abduction_can_execute = yes }
+		save_scope_value_as = {
+			name = latria_charming_abduction_approach
+			value = flag:$APPROACH$
+		}
+		scope:scheme = {
+			add_scheme_modifier = { type = latria_charming_abduction_$APPROACH$_modifier }
+		}
+		trigger_event = latria_charming_abduction.0001
+	}
+}
+
+latria_charming_abduction_roll_effect = {
+	# Explicit defaults prevent an earlier attempt's saved result from leaking into a retry.
+	save_scope_value_as = { name = latria_charming_abduction_succeeded value = no }
+	save_scope_value_as = { name = latria_charming_abduction_exposed value = no }
+	save_scope_value_as = {
+		name = latria_charming_abduction_discovery_chance
+		value = {
+			value = 100
+			subtract = scope:scheme.scheme_secrecy
+		}
+	}
+	random = {
+		chance = scope:scheme.scheme_success_chance
+		save_scope_value_as = { name = latria_charming_abduction_succeeded value = yes }
+	}
+	random = {
+		chance = scope:latria_charming_abduction_discovery_chance
+		save_scope_value_as = { name = latria_charming_abduction_exposed value = yes }
+	}
+}
+
+latria_charming_abduction_resolve_effect = {
+	if = {
+		limit = { latria_charming_abduction_can_execute = yes }
+		latria_charming_abduction_roll_effect = yes
+		# Imprisonment ends schemes, so preserve the resolution state before any consequences.
+		scope:scheme = {
+			remove_variable = latria_charming_abduction_invitation_pending
+			set_variable = { name = latria_charming_abduction_resolved value = yes }
+		}
+		if = {
+			limit = { scope:latria_charming_abduction_succeeded = yes }
+			latria_charming_abduction_success_effect = yes
+		}
+		else = { latria_charming_abduction_failure_effect = yes }
+	}
+}
+
+latria_charming_abduction_house_relations_effect = {
+	if = {
+		limit = {
+			exists = scope:owner.house
+			exists = scope:target.house
+		}
+		scope:owner.house = {
+			change_house_relation_effect = {
+				HOUSE = scope:target.house
+				VALUE = house_relation_damage_medium_value
+				REASON = abduction
+				CHAR = scope:owner
+				TARGET_CHAR = scope:target
+				TITLE = scope:dummy_gender
+			}
+		}
+	}
+}
+
+latria_charming_abduction_success_rewards_effect = {
+	scope:owner = {
+		mandala_trickster_increment_successful_schemes_effect = yes
+		if = {
+			limit = { rite = { rite_has_parameter = piety_gain_from_successful_intrigue_schemes } }
+			add_piety = minor_piety_gain
+		}
+		sacred_shadows_personal_tenet_scheme_reward_effect = yes
+	}
+}
+
+latria_charming_abduction_success_effect = {
+	# Notify the puppeteer while its scheme variable still exists.
+	notify_puppeteer_of_scheme_outcome_effect = {
+		OWNER = scope:owner
+		TARGET = scope:target
+		TYPE = event_toast_effect_good
+		TITLE = latria_charming_abduction_success_puppeteer
+	}
+	scope:target = {
+		add_character_flag = { flag = was_abducted_block_notification_event days = 2 }
+		add_opinion = { target = scope:owner modifier = abducted_me_opinion }
+	}
+	abduction_rivalry_progress_effect = yes
+	latria_charming_abduction_house_relations_effect = yes
+	latria_charming_abduction_success_rewards_effect = yes
+	hard_imprison_character_effect = {
+		TARGET = scope:target
+		IMPRISONER = scope:owner
+	}
+	# The saved characters and outcome values survive the scheme's removal.
+	scope:owner = { trigger_event = latria_charming_abduction.2001 }
+	scope:target = { trigger_event = latria_charming_abduction.2101 }
+}
+
+latria_charming_abduction_failure_effect = {
+	notify_puppeteer_of_scheme_outcome_effect = {
+		OWNER = scope:owner
+		TARGET = scope:target
+		TYPE = event_toast_effect_bad
+		TITLE = latria_charming_abduction_failure_puppeteer
+	}
+	scope:target = {
+		add_character_modifier = { modifier = watchful_modifier days = watchful_modifier_duration }
+		if = {
+			limit = { scope:latria_charming_abduction_exposed = yes }
+			add_opinion = { target = scope:owner modifier = attempted_abduction_opinion }
+		}
+	}
+	# Keep the resolved scheme paused until its owner abandons it or explicitly retries.
+	scope:owner = { trigger_event = latria_charming_abduction.2002 }
+	scope:target = { trigger_event = latria_charming_abduction.2102 }
+}
