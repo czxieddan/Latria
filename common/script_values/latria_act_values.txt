@@ -122,6 +122,7 @@ latria_partner_act_ai_desire = {
 		multiply = 0
 	}
 	if = { limit = { is_pregnant = yes } multiply = 0.1 }
+	multiply = latria_nonlustful_carnal_drive_multiplier
 	min = 0
 	max = 100
 }
@@ -149,6 +150,7 @@ latria_manual_overture_chance = {
 		}
 		multiply = 0
 	}
+	multiply = latria_nonlustful_carnal_drive_multiplier
 	min = 0
 	max = 100
 }
@@ -173,11 +175,18 @@ latria_solo_relief_ai_chance = {
 		}
 		add = 25
 	}
+	multiply = latria_nonlustful_carnal_drive_multiplier
 	min = 0
 	max = 100
 }
 
 latria_serene_mind_chance = {
+	value = latria_serene_mind_base_chance
+	multiply = latria_current_carnal_relief_level
+	max = 95
+}
+
+latria_serene_mind_base_chance = {
 	value = 50
 	if = {
 		limit = {
@@ -267,3 +276,4 @@ latria_recent_repression_relief_value = {
 		value = var:latria_recent_repression_relief
 	}
 }
+

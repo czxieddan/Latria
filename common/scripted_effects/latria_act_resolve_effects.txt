@@ -156,9 +156,9 @@ latria_resolve_partner_act = {
 	if = {
 		limit = { exists = scope:latria_act_satisfied }
 		latria_roll_act_pregnancy = yes
-		latria_relieve_partner_sexual_frustration = yes
 		latria_roll_serene_mind = yes
 	}
+	latria_apply_pair_carnal_repression_relief = yes
 	if = {
 		limit = {
 			NOT = { exists = scope:latria_force_death }

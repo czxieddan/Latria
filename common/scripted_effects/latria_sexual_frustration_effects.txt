@@ -189,22 +189,6 @@ latria_reduce_sexual_frustration = {
 	}
 }
 
-latria_relieve_partner_sexual_frustration = {
-	if = {
-		limit = { scope:latria_act_kind = flag:latria_act_intercourse }
-		latria_reduce_sexual_frustration = { RELIEF = -120 }
-		scope:latria_partner = {
-			latria_reduce_sexual_frustration = { RELIEF = -120 }
-		}
-	}
-	else = {
-		latria_reduce_sexual_frustration = { RELIEF = -60 }
-		scope:latria_partner = {
-			latria_reduce_sexual_frustration = { RELIEF = -60 }
-		}
-	}
-}
-
 latria_clear_inactive_sexual_frustration = {
 	if = {
 		limit = { latria_has_sexual_need = no }

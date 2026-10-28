@@ -1,0 +1,74 @@
+latria_current_carnal_relief_level = {
+	value = 0
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 1 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 2 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_3 } add = 3 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_4 } add = 4 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_5 } add = 5 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_6 } add = 6 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_7 } add = 7 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_8 } add = 8 }
+}
+
+latria_solo_repression_relief_amount = {
+	value = -35
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 17 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 26 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_3 } add = 31 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_4 } add = 33 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_5 } add = 34 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_6 } add = 34 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_7 } add = 35 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_8 } add = 35 }
+}
+
+latria_manual_repression_relief_amount = {
+	value = -60
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 30 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 45 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_3 } add = 52 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_4 } add = 56 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_5 } add = 58 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_6 } add = 59 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_7 } add = 60 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_8 } add = 60 }
+}
+
+latria_intercourse_repression_relief_amount = {
+	value = -120
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 60 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 90 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_3 } add = 105 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_4 } add = 112 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_5 } add = 116 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_6 } add = 118 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_7 } add = 119 }
+	if = { limit = { has_character_flag = latria_carnal_repression_relief_8 } add = 120 }
+}
+
+latria_nonlustful_carnal_drive_multiplier = {
+	value = 1
+	if = {
+		limit = { NOT = { has_trait = lustful } }
+		if = {
+			limit = { has_character_flag = latria_carnal_repression_relief_8 }
+			multiply = 0.1
+		}
+		else_if = {
+			limit = { has_character_flag = latria_carnal_repression_relief_7 }
+			multiply = 0.2
+		}
+		else_if = {
+			limit = { has_character_flag = latria_carnal_repression_relief_6 }
+			multiply = 0.3
+		}
+		else_if = {
+			limit = { has_character_flag = latria_carnal_repression_relief_5 }
+			multiply = 0.5
+		}
+		else_if = {
+			limit = { has_character_flag = latria_carnal_repression_relief_4 }
+			multiply = 0.75
+		}
+	}
+}
