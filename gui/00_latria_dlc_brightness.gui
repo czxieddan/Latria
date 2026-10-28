@@ -1,0 +1,79 @@
+types GameSetupTypes
+{
+	type dlc_button = button {
+		datacontext = "[DlcItem.GetDlc]"
+		size = "[Dlc.GetIconSize]"
+		texture = "[Dlc.GetIcon]"
+		onclick = "[DlcItem.ShowInStore]"
+		tooltip = "DLC_BUTTON_TOOLTIP"
+
+		modify_texture = {
+			visible = "[And( Not( Dlc.IsEnabled ), Or( Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_001') ), EqualTo_string( Dlc.GetName, Localize('dlc_002') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_003') ), EqualTo_string( Dlc.GetName, Localize('dlc_004') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_005') ), EqualTo_string( Dlc.GetName, Localize('dlc_006') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_007') ), EqualTo_string( Dlc.GetName, Localize('dlc_008') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_009') ), EqualTo_string( Dlc.GetName, Localize('dlc_010') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_011') ), EqualTo_string( Dlc.GetName, Localize('dlc_012') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_013') ), EqualTo_string( Dlc.GetName, Localize('dlc_014') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_015') ) ) ) ), Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_016') ), EqualTo_string( Dlc.GetName, Localize('dlc_017') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_018') ), EqualTo_string( Dlc.GetName, Localize('dlc_019') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_020') ), EqualTo_string( Dlc.GetName, Localize('dlc_021') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_022') ), EqualTo_string( Dlc.GetName, Localize('dlc_023') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_024') ), EqualTo_string( Dlc.GetName, Localize('dlc_025') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_026') ), EqualTo_string( Dlc.GetName, Localize('dlc_027') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_028') ), EqualTo_string( Dlc.GetName, Localize('dlc_029') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_030') ) ) ) ) ) ) )]"
+			texture = "gfx/interface/colors/black.dds"
+			blend_mode = normal
+			alpha = 0.4
+		}
+	}
+
+	type vbox_dlc_list_entry = vbox {
+		datacontext = "[DlcItem.GetDlc]"
+		spacing = 4
+
+		hbox = {
+			layoutpolicy_horizontal = expanding
+			spacing = 8
+			margin = { 16 6 }
+
+			background = {
+				using = Background_Area_Dark
+			}
+
+			container = {
+				min_width = 47
+
+				icon = {
+					size = "[Dlc.GetIconSize]"
+					texture = "[Dlc.GetIcon]"
+					parentanchor = hcenter
+
+					modify_texture = {
+						visible = "[And( Not( Dlc.IsEnabled ), Or( Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_001') ), EqualTo_string( Dlc.GetName, Localize('dlc_002') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_003') ), EqualTo_string( Dlc.GetName, Localize('dlc_004') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_005') ), EqualTo_string( Dlc.GetName, Localize('dlc_006') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_007') ), EqualTo_string( Dlc.GetName, Localize('dlc_008') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_009') ), EqualTo_string( Dlc.GetName, Localize('dlc_010') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_011') ), EqualTo_string( Dlc.GetName, Localize('dlc_012') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_013') ), EqualTo_string( Dlc.GetName, Localize('dlc_014') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_015') ) ) ) ), Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_016') ), EqualTo_string( Dlc.GetName, Localize('dlc_017') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_018') ), EqualTo_string( Dlc.GetName, Localize('dlc_019') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_020') ), EqualTo_string( Dlc.GetName, Localize('dlc_021') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_022') ), EqualTo_string( Dlc.GetName, Localize('dlc_023') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_024') ), EqualTo_string( Dlc.GetName, Localize('dlc_025') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_026') ), EqualTo_string( Dlc.GetName, Localize('dlc_027') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_028') ), EqualTo_string( Dlc.GetName, Localize('dlc_029') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_030') ) ) ) ) ) ) )]"
+						texture = "gfx/interface/colors/black.dds"
+						blend_mode = normal
+						alpha = 0.4
+					}
+				}
+			}
+
+			text_single = {
+				text = "[Dlc.GetName]"
+				layoutpolicy_horizontal = expanding
+				using = Font_Size_Medium
+				using = Font_Type_Flavor
+				align = nobaseline
+				alpha = "[Select_float( Or( Dlc.IsEnabled, Not( Or( Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_001') ), EqualTo_string( Dlc.GetName, Localize('dlc_002') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_003') ), EqualTo_string( Dlc.GetName, Localize('dlc_004') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_005') ), EqualTo_string( Dlc.GetName, Localize('dlc_006') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_007') ), EqualTo_string( Dlc.GetName, Localize('dlc_008') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_009') ), EqualTo_string( Dlc.GetName, Localize('dlc_010') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_011') ), EqualTo_string( Dlc.GetName, Localize('dlc_012') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_013') ), EqualTo_string( Dlc.GetName, Localize('dlc_014') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_015') ) ) ) ), Or( Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_016') ), EqualTo_string( Dlc.GetName, Localize('dlc_017') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_018') ), EqualTo_string( Dlc.GetName, Localize('dlc_019') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_020') ), EqualTo_string( Dlc.GetName, Localize('dlc_021') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_022') ), EqualTo_string( Dlc.GetName, Localize('dlc_023') ) ) ) ), Or( Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_024') ), EqualTo_string( Dlc.GetName, Localize('dlc_025') ) ), Or( EqualTo_string( Dlc.GetName, Localize('dlc_026') ), EqualTo_string( Dlc.GetName, Localize('dlc_027') ) ) ), Or( Or( EqualTo_string( Dlc.GetName, Localize('dlc_028') ), EqualTo_string( Dlc.GetName, Localize('dlc_029') ) ), EqualTo_string( Dlc.GetName, Localize('dlc_030') ) ) ) ) ) ) ), '(float)1.0', '(float)0.5' )]"
+				max_width = 300
+			}
+
+			text_single = {
+				text = "DLC_ENABLED_DISABLED_SHORT"
+				align = nobaseline
+				max_width = 100
+			}
+
+			button_standard = {
+				text = "DLC_VISIT_STORE"
+				onclick = "[DlcItem.ShowInStore]"
+			}
+		}
+
+		text_multi = {
+			text = "[Dlc.GetDesc]"
+			autoresize = yes
+			default_format = "#F"
+			max_width = 700
+			min_width = 700
+			margin = { 16 0 }
+		}
+	}
+}
