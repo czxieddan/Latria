@@ -1,0 +1,119 @@
+namespace = latria_sexual_frustration_flavor
+
+latria_sexual_frustration_flavor.1406 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1406.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { culture = { has_cultural_parameter = adultery_always_accepted } } desc = latria_sexual_frustration_flavor.1406.desc.accepted }
+			triggered_desc = { trigger = { culture = { has_cultural_parameter = adulterer_fornicator_penalties } } desc = latria_sexual_frustration_flavor.1406.desc.strict }
+			desc = latria_sexual_frustration_flavor.1406.desc
+		}
+	}
+	theme = feast
+	left_portrait = { character = root animation = sadness }
+	option = {
+		name = latria_sexual_frustration_flavor.1406.a
+		latria_flavor_release = yes
+		latria_flavor_culture_consequences = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1406.b
+		latria_flavor_resist = yes
+		latria_flavor_culture_restraint_consequences = yes
+	}
+}
+
+latria_sexual_frustration_flavor.1407 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1407.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_solo_rite_favors_flesh = yes } desc = latria_sexual_frustration_flavor.1407.desc.favors }
+			triggered_desc = { trigger = { latria_solo_rite_condemns_flesh = yes } desc = latria_sexual_frustration_flavor.1407.desc.condemns }
+			desc = latria_sexual_frustration_flavor.1407.desc
+		}
+	}
+	theme = christian
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = personality_zealous outfit_tags = { nightgown } }
+	option = {
+		name = latria_sexual_frustration_flavor.1407.a
+		latria_flavor_release = yes
+		latria_flavor_faith_consequences = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1407.b
+		latria_flavor_resist = yes
+		latria_flavor_faith_restraint_consequences = yes
+	}
+}
+
+latria_sexual_frustration_flavor.1408 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1408.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { has_trait = lustful } desc = latria_sexual_frustration_flavor.1408.desc.lustful }
+			triggered_desc = { trigger = { has_trait = chaste } desc = latria_sexual_frustration_flavor.1408.desc.chaste }
+			desc = latria_sexual_frustration_flavor.1408.desc
+		}
+	}
+	theme = seduction
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = worry outfit_tags = { no_clothes } }
+	option = {
+		name = latria_sexual_frustration_flavor.1408.a
+		latria_flavor_release = yes
+		latria_flavor_trait_release_consequences = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1408.b
+		latria_flavor_resist = yes
+		latria_flavor_trait_resist_consequences = yes
+	}
+}
+
+latria_sexual_frustration_flavor.1409 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1409.t
+	desc = latria_sexual_frustration_flavor.1409.desc
+	theme = diplomacy
+	override_background = { reference = council_chamber }
+	left_portrait = { character = root animation = fear outfit_tags = { no_clothes } }
+	trigger = { is_ruler = yes }
+	option = {
+		name = latria_sexual_frustration_flavor.1409.a
+		latria_apply_flavor_public_disgrace = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1409.b
+		latria_flavor_resist = yes
+		latria_flavor_identity_restraint_consequences = yes
+	}
+}
+
+latria_sexual_frustration_flavor.1410 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1410.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { is_female = yes } desc = latria_sexual_frustration_flavor.1410.desc.female }
+			triggered_desc = { trigger = { is_male = yes } desc = latria_sexual_frustration_flavor.1410.desc.male }
+			desc = latria_sexual_frustration_flavor.1410.desc
+		}
+	}
+	theme = seduction
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = sadness outfit_tags = { nightgown } }
+	option = {
+		name = latria_sexual_frustration_flavor.1410.a
+		latria_flavor_release = yes
+		latria_flavor_gender_consequences = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1410.b
+		latria_flavor_resist = yes
+		latria_flavor_gender_restraint_consequences = yes
+	}
+}

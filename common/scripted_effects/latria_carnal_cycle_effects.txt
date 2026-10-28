@@ -59,11 +59,13 @@ latria_roll_carnal_drive = {
 latria_process_player_sexual_frustration = {
 	latria_add_daily_sexual_frustration = yes
 	latria_clear_inactive_sexual_frustration = yes
+	latria_try_sexual_frustration_flavor_event = yes
 }
 
 latria_process_ai_carnal_month = {
 	latria_ai_run_carnal_pulse = yes
 	latria_clear_inactive_sexual_frustration = yes
+	latria_try_sexual_frustration_flavor_event = yes
 }
 
 latria_ai_run_carnal_pulse = {

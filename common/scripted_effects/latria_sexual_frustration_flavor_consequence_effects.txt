@@ -1,0 +1,148 @@
+latria_flavor_gender_consequences = {
+	if = {
+		limit = { latria_solo_rite_shuns_license = yes }
+		add_piety = { value = latria_flavor_gender_yield_cost }
+	}
+	if = {
+		limit = { latria_solo_rite_accepts_license = yes }
+		add_piety = { value = latria_flavor_gender_resist_gain }
+	}
+}
+
+latria_flavor_gender_restraint_consequences = {
+	if = {
+		limit = { latria_solo_rite_shuns_license = yes }
+		add_piety = { value = latria_flavor_gender_resist_gain }
+	}
+	if = {
+		limit = { latria_solo_rite_accepts_license = yes }
+		add_piety = { value = latria_flavor_gender_resist_cost }
+	}
+}
+
+latria_flavor_culture_consequences = {
+	if = {
+		limit = { culture = { has_cultural_parameter = adultery_always_accepted } }
+		add_prestige = { value = latria_flavor_culture_yield_prestige }
+	}
+	if = {
+		limit = { culture = { has_cultural_parameter = adulterer_fornicator_penalties } }
+		if = {
+			limit = { scope:latria_flavor_resolution_severity >= 5 }
+			add_character_modifier = { modifier = latria_flavor_sullied years = 10 }
+		}
+		else_if = {
+			limit = { scope:latria_flavor_resolution_severity >= 4 }
+			add_character_modifier = { modifier = latria_flavor_sullied years = 5 }
+		}
+		else_if = {
+			limit = { scope:latria_flavor_resolution_severity >= 3 }
+			add_character_modifier = { modifier = latria_flavor_sullied years = 3 }
+		}
+		else = { add_character_modifier = { modifier = latria_flavor_sullied years = 1 } }
+	}
+}
+
+latria_flavor_culture_restraint_consequences = {
+	if = {
+		limit = { culture = { has_cultural_parameter = adulterer_fornicator_penalties } }
+		add_prestige = { value = latria_flavor_culture_resist_prestige }
+	}
+}
+
+latria_flavor_faith_consequences = {
+	if = {
+		limit = { latria_solo_rite_favors_flesh = yes }
+		add_piety = { value = latria_flavor_faith_favors_yield }
+	}
+	else_if = {
+		limit = { latria_solo_rite_condemns_flesh = yes }
+		add_piety = { value = latria_flavor_faith_condemns_yield }
+	}
+}
+
+latria_flavor_faith_restraint_consequences = {
+	if = {
+		limit = { latria_solo_rite_favors_flesh = yes }
+		add_piety = { value = latria_flavor_faith_favors_resist }
+	}
+	else_if = {
+		limit = { latria_solo_rite_condemns_flesh = yes }
+		add_piety = { value = latria_flavor_faith_condemns_resist }
+	}
+}
+
+latria_flavor_trait_release_consequences = {
+	if = {
+		limit = { has_trait = lustful }
+		add_stress = { value = latria_flavor_release_stress }
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add_stress = { value = latria_flavor_trait_yield_stress }
+		add_piety = { value = latria_flavor_faith_condemns_yield }
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add_stress = { value = latria_flavor_trait_yield_stress }
+	}
+}
+
+latria_flavor_trait_resist_consequences = {
+	if = {
+		limit = { has_trait = lustful }
+		add_stress = { value = latria_flavor_trait_lustful_resist_stress }
+	}
+	if = {
+		limit = { has_trait = chaste }
+		add_stress = { value = latria_flavor_trait_patient_resist_relief }
+		add_piety = { value = latria_flavor_trait_resist_piety }
+	}
+	if = {
+		limit = { has_trait = temperate }
+		add_piety = { value = latria_flavor_trait_resist_piety }
+	}
+	if = {
+		limit = { has_trait = patient }
+		add_stress = { value = latria_flavor_trait_patient_resist_relief }
+	}
+	if = {
+		limit = { has_trait = impatient }
+		add_stress = { value = latria_flavor_trait_resist_stress }
+	}
+}
+
+latria_flavor_identity_consequences = {
+	if = {
+		limit = { is_clergy = yes }
+		add_piety = { value = latria_flavor_clergy_yield_piety }
+	}
+	if = {
+		limit = { is_adventurer = yes }
+		add_prestige = { value = latria_flavor_adventurer_yield_prestige }
+		add_character_modifier = { modifier = latria_flavor_vagabond_focus years = 1 }
+	}
+	if = {
+		limit = { is_ruler = yes }
+		add_prestige = { value = latria_flavor_ruler_yield_prestige }
+	}
+	if = {
+		limit = { highest_held_title_tier = tier_empire }
+		add_prestige = { value = latria_flavor_emperor_yield_prestige }
+	}
+}
+
+latria_flavor_identity_restraint_consequences = {
+	if = {
+		limit = { is_clergy = yes }
+		add_piety = { value = latria_flavor_clergy_resist_piety }
+	}
+	if = {
+		limit = { is_ruler = yes }
+		add_prestige = { value = latria_flavor_culture_resist_prestige }
+	}
+	if = {
+		limit = { is_adventurer = yes }
+		add_character_modifier = { modifier = latria_flavor_vagabond_focus years = 2 }
+	}
+}

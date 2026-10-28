@@ -1,0 +1,34 @@
+latria_flavor_focus = {
+	icon = learning_positive
+	learning = 1
+}
+
+latria_flavor_remorse = {
+	icon = stress_negative
+	diplomacy = -1
+	stress_gain_mult = 0.1
+}
+
+latria_flavor_sullied = {
+	icon = diplomacy_negative
+	diplomacy = -2
+	general_opinion = -5
+}
+
+latria_flavor_broken_sleep = {
+	icon = stress_negative
+	diplomacy = -2
+	stress_gain_mult = 0.2
+}
+
+latria_flavor_vagabond_focus = {
+	icon = prowess_positive
+	prowess = 1
+	martial = 1
+}
+
+latria_flavor_public_disgrace = {
+	icon = diplomacy_negative
+	diplomacy = -3
+	general_opinion = -10
+}
