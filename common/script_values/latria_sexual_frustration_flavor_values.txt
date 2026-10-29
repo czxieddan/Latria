@@ -9,131 +9,109 @@ latria_sexual_frustration_flavor_event_chance = {
 	max = 100
 }
 
+# Saved in the event's immediate block, before any option tooltip is evaluated.
 latria_flavor_severity = { value = scope:latria_flavor_resolution_severity }
 
+latria_flavor_release_amount = {
+	value = 10
+	if = { limit = { scope:latria_flavor_resolution_severity >= 2 } value = 20 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 3 } value = 35 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 4 } value = 55 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 5 } value = 80 }
+	max = var:latria_sexual_frustration
+	min = 0
+}
+
 latria_flavor_release_relief = {
-	value = -25
-	multiply = latria_flavor_severity
+	value = latria_flavor_release_amount
+	multiply = -1
 }
 
-latria_flavor_release_stress = {
-	value = -4
+latria_flavor_reflection_amount = {
+	value = 5
 	multiply = latria_flavor_severity
+	max = var:latria_sexual_frustration
+	min = 0
 }
 
-latria_flavor_release_prestige = {
-	value = scope:latria_flavor_resolution_severity
-	add = -1
-	multiply = -20
+latria_flavor_reflection_relief = {
+	value = latria_flavor_reflection_amount
+	multiply = -1
 }
 
 latria_flavor_resistance_gain = {
-	value = 6
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_resistance_stress = {
-	value = 12
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_faith_favors_yield = {
-	value = 4
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_faith_condemns_yield = {
-	value = -8
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_faith_favors_resist = {
-	value = -3
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_faith_condemns_resist = {
-	value = 7
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_gender_yield_cost = {
-	value = -5
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_gender_resist_gain = {
-	value = 3
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_culture_yield_prestige = {
-	value = 4
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_clergy_yield_piety = {
-	value = -10
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_clergy_resist_piety = {
-	value = 7
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_adventurer_yield_prestige = {
-	value = -5
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_ruler_yield_prestige = {
-	value = -10
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_emperor_yield_prestige = {
-	value = -15
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_trait_yield_stress = {
-	value = 6
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_trait_resist_stress = {
 	value = 5
 	multiply = latria_flavor_severity
 }
 
-latria_flavor_gender_resist_cost = {
-	value = -2
+# These are vanilla stress, separate from the repression values above.
+latria_flavor_indulgence_stress = {
+	value = -5
+	if = { limit = { has_trait = chaste } value = 5 }
+	else_if = { limit = { has_trait = temperate } value = 2 }
+	else_if = { limit = { has_trait = lustful } value = -8 }
 	multiply = latria_flavor_severity
 }
 
-latria_flavor_culture_resist_prestige = {
+latria_flavor_restraint_stress = {
+	value = 5
+	if = { limit = { has_trait = lustful } value = 8 }
+	else_if = { limit = { OR = { has_trait = chaste has_trait = temperate } } value = 2 }
+	if = { limit = { has_trait = patient } multiply = 0.5 }
+	if = { limit = { has_trait = impatient } multiply = 1.5 }
+	multiply = latria_flavor_severity
+	min = 1
+}
+
+latria_flavor_comfort_stress = {
+	value = -5
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_effort_stress = {
+	value = 10
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_prestige_gain = {
+	value = 25
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_prestige_loss = {
+	value = -25
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_major_prestige_loss = {
+	value = -50
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_piety_gain = {
+	value = 25
+	multiply = latria_flavor_severity
+}
+
+latria_flavor_piety_loss = {
+	value = -25
+	multiply = latria_flavor_severity
+}
+latria_flavor_vigil_piety_gain = {
+	value = latria_flavor_piety_gain
+	multiply = 2
+}
+
+
+latria_flavor_modifier_months = {
 	value = 3
 	multiply = latria_flavor_severity
 }
 
-latria_flavor_trait_release_stress = {
-	value = 6
-	multiply = latria_flavor_severity
-}
-
-
-latria_flavor_trait_resist_piety = {
-	value = 7
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_trait_lustful_resist_stress = {
-	value = 8
-	multiply = latria_flavor_severity
-}
-
-latria_flavor_trait_patient_resist_relief = {
-	value = -2
-	multiply = latria_flavor_severity
+latria_flavor_reputation_months = {
+	value = 3
+	if = { limit = { scope:latria_flavor_resolution_severity >= 2 } value = 6 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 3 } value = 12 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 4 } value = 24 }
+	if = { limit = { scope:latria_flavor_resolution_severity >= 5 } value = 60 }
 }

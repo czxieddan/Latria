@@ -145,53 +145,31 @@ latria_roll_sexual_frustration_flavor_level_5 = {
 	}
 }
 
+# An event-scoped value also exists while the game builds option previews.
 latria_capture_flavor_severity = {
-	save_temporary_scope_value_as = {
+	save_scope_value_as = {
 		name = latria_flavor_resolution_severity
-		value = var:latria_sexual_frustration_level
+		value = $LEVEL$
 	}
 }
 
 latria_flavor_release = {
-	latria_capture_flavor_severity = yes
-	latria_reduce_sexual_frustration = { RELIEF = latria_flavor_release_relief }
-	add_stress = { value = latria_flavor_release_stress }
-	add_prestige = { value = latria_flavor_release_prestige }
 	if = {
-		limit = { scope:latria_flavor_resolution_severity >= 5 }
-		add_character_modifier = { modifier = latria_flavor_remorse years = 5 }
-		add_character_modifier = { modifier = latria_flavor_sullied years = 10 }
+		limit = { var:latria_sexual_frustration > 0 }
+		custom_tooltip = latria_flavor_repression_released_tt
+		latria_reduce_sexual_frustration = { RELIEF = latria_flavor_release_relief }
 	}
-	else_if = {
-		limit = { scope:latria_flavor_resolution_severity >= 4 }
-		add_character_modifier = { modifier = latria_flavor_remorse years = 4 }
-		add_character_modifier = { modifier = latria_flavor_sullied years = 5 }
-	}
-	else_if = {
-		limit = { scope:latria_flavor_resolution_severity >= 3 }
-		add_character_modifier = { modifier = latria_flavor_remorse years = 2 }
+}
+
+latria_flavor_reflect = {
+	if = {
+		limit = { var:latria_sexual_frustration > 0 }
+		custom_tooltip = latria_flavor_repression_reflected_tt
+		latria_reduce_sexual_frustration = { RELIEF = latria_flavor_reflection_relief }
 	}
 }
 
 latria_flavor_resist = {
-	latria_capture_flavor_severity = yes
+	custom_tooltip = latria_flavor_repression_restrained_tt
 	latria_add_sexual_frustration = { GAIN = latria_flavor_resistance_gain }
-	add_stress = { value = latria_flavor_resistance_stress }
-	if = {
-		limit = { scope:latria_flavor_resolution_severity >= 5 }
-		add_character_modifier = { modifier = latria_flavor_focus years = 3 }
-		add_character_modifier = { modifier = latria_flavor_broken_sleep years = 5 }
-	}
-	else_if = {
-		limit = { scope:latria_flavor_resolution_severity >= 4 }
-		add_character_modifier = { modifier = latria_flavor_focus years = 2 }
-		add_character_modifier = { modifier = latria_flavor_broken_sleep years = 2 }
-	}
-	else = { add_character_modifier = { modifier = latria_flavor_focus years = 1 } }
-}
-
-latria_apply_flavor_public_disgrace = {
-	latria_flavor_release = yes
-	latria_flavor_identity_consequences = yes
-	add_character_modifier = { modifier = latria_flavor_public_disgrace years = 10 }
 }

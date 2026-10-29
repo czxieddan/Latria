@@ -32,3 +32,25 @@ latria_flavor_public_disgrace = {
 	diplomacy = -3
 	general_opinion = -10
 }
+
+latria_flavor_hunting_focus = {
+	icon = prowess_positive
+	prowess = 1
+	martial = 1
+}
+
+latria_flavor_warm_company = {
+	icon = diplomacy_positive
+	diplomacy = 1
+}
+
+latria_flavor_neglected_duties = {
+	icon = stewardship_negative
+	stewardship = -1
+	diplomacy = -1
+}
+
+latria_flavor_diligent_work = {
+	icon = stewardship_positive
+	stewardship = 2
+}

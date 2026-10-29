@@ -10,8 +10,11 @@ latria_sexual_frustration_flavor.1206 = {
 			desc = latria_sexual_frustration_flavor.1206.desc
 		}
 	}
-	theme = feast
+	theme = party
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = feast }
 	left_portrait = { character = root animation = worry }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 3 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1206.a
 		latria_flavor_release = yes
@@ -20,7 +23,13 @@ latria_sexual_frustration_flavor.1206 = {
 	option = {
 		name = latria_sexual_frustration_flavor.1206.b
 		latria_flavor_resist = yes
-		latria_flavor_culture_restraint_consequences = yes
+		latria_flavor_private_restraint = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1206.c
+		trigger = { has_trait = poet }
+		latria_flavor_reflect = yes
+		latria_flavor_poetry = yes
 	}
 }
 
@@ -34,8 +43,11 @@ latria_sexual_frustration_flavor.1207 = {
 			desc = latria_sexual_frustration_flavor.1207.desc
 		}
 	}
-	theme = christian
+	theme = faith
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = temple }
 	left_portrait = { character = root animation = personality_zealous }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 3 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1207.a
 		latria_flavor_release = yes
@@ -45,6 +57,12 @@ latria_sexual_frustration_flavor.1207 = {
 		name = latria_sexual_frustration_flavor.1207.b
 		latria_flavor_resist = yes
 		latria_flavor_faith_restraint_consequences = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1207.c
+		trigger = { has_trait = zealous }
+		latria_flavor_reflect = yes
+		latria_flavor_devotional_study = yes
 	}
 }
 
@@ -58,8 +76,11 @@ latria_sexual_frustration_flavor.1208 = {
 			desc = latria_sexual_frustration_flavor.1208.desc
 		}
 	}
-	theme = hunt
+	theme = hunt_activity
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = wilderness_forest }
 	left_portrait = { character = root animation = personality_rational }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 3 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1208.a
 		latria_flavor_release = yes
@@ -68,7 +89,14 @@ latria_sexual_frustration_flavor.1208 = {
 	option = {
 		name = latria_sexual_frustration_flavor.1208.b
 		latria_flavor_resist = yes
-		latria_flavor_trait_resist_consequences = yes
+		latria_flavor_private_restraint = yes
+		latria_flavor_hunting_discipline = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1208.c
+		trigger = { has_trait = patient }
+		latria_flavor_reflect = yes
+		latria_flavor_hunting_discipline = yes
 	}
 }
 
@@ -83,17 +111,30 @@ latria_sexual_frustration_flavor.1209 = {
 		}
 	}
 	theme = seduction
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
 	override_background = { reference = bedchamber }
 	left_portrait = { character = root animation = worry outfit_tags = { nightgown } }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 3 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1209.a
 		latria_flavor_release = yes
-		latria_flavor_gender_consequences = yes
+		latria_flavor_private_indulgence = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1209.b
 		latria_flavor_resist = yes
-		latria_flavor_gender_restraint_consequences = yes
+		latria_flavor_private_restraint = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1209.c
+		latria_flavor_reflect = yes
+		latria_flavor_comfort = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1209.d
+		trigger = { has_trait = poet }
+		latria_flavor_release = yes
+		latria_flavor_poetry = yes
 	}
 }
 
@@ -105,22 +146,30 @@ latria_sexual_frustration_flavor.1210 = {
 			triggered_desc = { trigger = { highest_held_title_tier = tier_empire } desc = latria_sexual_frustration_flavor.1210.desc.emperor }
 			triggered_desc = { trigger = { is_adventurer = yes } desc = latria_sexual_frustration_flavor.1210.desc.adventurer }
 			triggered_desc = { trigger = { is_clergy = yes } desc = latria_sexual_frustration_flavor.1210.desc.clergy }
-			triggered_desc = { trigger = { is_ruler = yes } desc = latria_sexual_frustration_flavor.1210.desc.ruler }
-			desc = latria_sexual_frustration_flavor.1210.desc
+			desc = latria_sexual_frustration_flavor.1210.desc.ruler
 		}
 	}
-	theme = seduction
+	theme = diplomacy
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
 	override_background = { reference = bedchamber }
-	left_portrait = { character = root animation = personality_cautious }
+	left_portrait = { character = root animation = sadness outfit_tags = { nightgown } }
 	trigger = { OR = { is_clergy = yes is_adventurer = yes is_ruler = yes } }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 3 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1210.a
 		latria_flavor_release = yes
-		latria_flavor_identity_consequences = yes
+		latria_flavor_private_indulgence = yes
+		latria_flavor_warm_company = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1210.b
 		latria_flavor_resist = yes
-		latria_flavor_identity_restraint_consequences = yes
+		latria_flavor_sleepless_restraint = yes
+	}
+	option = {
+		name = latria_sexual_frustration_flavor.1210.c
+		trigger = { has_trait = diligent }
+		latria_flavor_reflect = yes
+		latria_flavor_diligent_work = yes
 	}
 }

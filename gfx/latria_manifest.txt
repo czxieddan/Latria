@@ -25,3 +25,4 @@ latria_charming_abduction gfx/interface/icons/character_interactions/latria_char
 latria_fatal_liaison_scheme gfx/interface/icons/scheme_types/latria_fatal_liaison.dds fatal liaison scheme icon
 latria_fatal_touch_scheme gfx/interface/icons/scheme_types/latria_fatal_touch.dds fatal touch scheme icon
 latria_charming_abduction_scheme gfx/interface/icons/scheme_types/latria_charming_abduction.dds charming abduction scheme icon
+latria_sexual_frustration_flavor gfx/interface/icons/latria_sexual_frustration_flavor.dds sexual repression flavor event icon
