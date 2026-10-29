@@ -1,0 +1,166 @@
+namespace = latria_sexual_frustration_flavor
+
+latria_sexual_frustration_flavor.1501 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1501.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_collapse_outcome_fatal = yes } desc = latria_sexual_frustration_flavor.1501.desc.dead }
+			triggered_desc = { trigger = { latria_collapse_outcome_severe = yes } desc = latria_sexual_frustration_flavor.1501.desc.severe }
+			desc = latria_sexual_frustration_flavor.1501.desc.survived
+		}
+	}
+	theme = mental_break
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = sadness outfit_tags = { nightgown } }
+	trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_sexual_frustration_collapse = { METHOD = 1 }
+		latria_resolve_collapse_blade_injuries = yes
+	}
+	option = {
+		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1501.a.dead }
+		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1501.a.survived }
+		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1501.a.severe }
+		default_option = yes
+		if = {
+			limit = { latria_collapse_attempt_survived = yes }
+			custom_tooltip = latria_collapse_no_relief_tt
+		}
+	}
+	after = { latria_finish_sexual_frustration_collapse = yes }
+}
+
+latria_sexual_frustration_flavor.1502 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1502.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_collapse_outcome_fatal = yes } desc = latria_sexual_frustration_flavor.1502.desc.dead }
+			triggered_desc = { trigger = { latria_collapse_outcome_severe = yes } desc = latria_sexual_frustration_flavor.1502.desc.severe }
+			desc = latria_sexual_frustration_flavor.1502.desc.survived
+		}
+	}
+	theme = mental_break
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = worry }
+	trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_sexual_frustration_collapse = { METHOD = 2 }
+		latria_resolve_collapse_poison_injuries = yes
+	}
+	option = {
+		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1502.a.dead }
+		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1502.a.survived }
+		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1502.a.severe }
+		default_option = yes
+		if = {
+			limit = { latria_collapse_attempt_survived = yes }
+			custom_tooltip = latria_collapse_no_relief_tt
+		}
+	}
+	after = { latria_finish_sexual_frustration_collapse = yes }
+}
+
+latria_sexual_frustration_flavor.1503 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1503.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_collapse_outcome_fatal = yes } desc = latria_sexual_frustration_flavor.1503.desc.dead }
+			triggered_desc = { trigger = { latria_collapse_outcome_severe = yes } desc = latria_sexual_frustration_flavor.1503.desc.severe }
+			desc = latria_sexual_frustration_flavor.1503.desc.survived
+		}
+	}
+	theme = mental_break
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = bp3_riverside }
+	left_portrait = { character = root animation = worry }
+	trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_sexual_frustration_collapse = { METHOD = 3 }
+		latria_resolve_collapse_river_injuries = yes
+	}
+	option = {
+		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1503.a.dead }
+		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1503.a.survived }
+		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1503.a.severe }
+		default_option = yes
+		if = {
+			limit = { latria_collapse_attempt_survived = yes }
+			custom_tooltip = latria_collapse_no_relief_tt
+		}
+	}
+	after = { latria_finish_sexual_frustration_collapse = yes }
+}
+
+latria_sexual_frustration_flavor.1504 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1504.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_collapse_outcome_fatal = yes } desc = latria_sexual_frustration_flavor.1504.desc.dead }
+			triggered_desc = { trigger = { latria_collapse_outcome_severe = yes } desc = latria_sexual_frustration_flavor.1504.desc.severe }
+			desc = latria_sexual_frustration_flavor.1504.desc.survived
+		}
+	}
+	theme = mental_break
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = wilderness_mountains }
+	left_portrait = { character = root animation = fear }
+	trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_sexual_frustration_collapse = { METHOD = 4 }
+		latria_resolve_collapse_fall_injuries = yes
+	}
+	option = {
+		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1504.a.dead }
+		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1504.a.survived }
+		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1504.a.severe }
+		default_option = yes
+		if = {
+			limit = { latria_collapse_attempt_survived = yes }
+			custom_tooltip = latria_collapse_no_relief_tt
+		}
+	}
+	after = { latria_finish_sexual_frustration_collapse = yes }
+}
+
+latria_sexual_frustration_flavor.1505 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1505.t
+	desc = {
+		first_valid = {
+			triggered_desc = { trigger = { latria_collapse_outcome_fatal = yes } desc = latria_sexual_frustration_flavor.1505.desc.dead }
+			triggered_desc = { trigger = { latria_collapse_outcome_severe = yes } desc = latria_sexual_frustration_flavor.1505.desc.severe }
+			desc = latria_sexual_frustration_flavor.1505.desc.survived
+		}
+	}
+	theme = mental_break
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = bedchamber }
+	left_portrait = { character = root animation = sadness }
+	trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_sexual_frustration_collapse = { METHOD = 5 }
+		latria_resolve_collapse_rope_injuries = yes
+	}
+	option = {
+		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1505.a.dead }
+		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1505.a.survived }
+		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1505.a.severe }
+		default_option = yes
+		if = {
+			limit = { latria_collapse_attempt_survived = yes }
+			custom_tooltip = latria_collapse_no_relief_tt
+		}
+	}
+	after = { latria_finish_sexual_frustration_collapse = yes }
+}

@@ -82,7 +82,7 @@ latria_act.0405 = {
 	option = {
 		trigger = { latria_sexual_frustration_resists_collapse = no }
 		name = latria_act.0405.a
-		committed_suicide_effect = yes
+		custom_tooltip = latria_sexual_frustration_collapse_warning_tt
 	}
 	option = {
 		trigger = { latria_sexual_frustration_resists_collapse = yes }

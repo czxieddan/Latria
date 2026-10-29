@@ -1,0 +1,121 @@
+latria_clear_sexual_frustration_collapse = {
+	remove_character_flag = latria_sexual_frustration_collapse_pending
+	remove_variable = latria_sexual_frustration_collapse_last_method
+}
+
+latria_prepare_sexual_frustration_collapse = {
+	set_variable = {
+		name = latria_sexual_frustration_collapse_last_method
+		value = $METHOD$
+	}
+	random_list = {
+		50 = {
+			save_scope_value_as = { name = latria_collapse_outcome value = 1 }
+		}
+		35 = {
+			save_scope_value_as = { name = latria_collapse_outcome value = 2 }
+		}
+		15 = {
+			save_scope_value_as = { name = latria_collapse_outcome value = 3 }
+		}
+	}
+	if = {
+		limit = { latria_collapse_attempt_survived = yes }
+		add_character_flag = latria_sexual_frustration_collapse_pending
+		attempted_suicide_effect = yes
+	}
+}
+
+# Keep the result window visible before the confirmed death transfers the player.
+latria_finish_sexual_frustration_collapse = {
+	if = {
+		limit = {
+			is_alive = yes
+			latria_collapse_outcome_fatal = yes
+		}
+		latria_clear_sexual_frustration_collapse = yes
+		committed_suicide_effect = yes
+	}
+}
+
+latria_collapse_wounds = {
+	change_trait_rank = { trait = wounded rank = 2 max = 3 }
+}
+
+latria_collapse_grievous_wounds = {
+	change_trait_rank = { trait = wounded rank = 3 max = 3 }
+}
+
+latria_collapse_illness = {
+	if = {
+		limit = { NOT = { has_trait = pneumonic } }
+		add_trait = ill
+	}
+}
+
+latria_collapse_infirmity = {
+	if = {
+		limit = { NOT = { has_trait = incapable } }
+		add_trait = infirm
+	}
+}
+
+latria_collapse_pneumonia = {
+	remove_trait = ill
+	add_trait = pneumonic
+}
+
+latria_resolve_collapse_blade_injuries = {
+	if = {
+		limit = { latria_collapse_outcome_moderate = yes }
+		latria_collapse_wounds = yes
+	}
+	else_if = {
+		limit = { latria_collapse_outcome_severe = yes }
+		latria_collapse_grievous_wounds = yes
+	}
+}
+
+latria_resolve_collapse_poison_injuries = {
+	if = {
+		limit = { latria_collapse_outcome_moderate = yes }
+		latria_collapse_illness = yes
+	}
+	else_if = {
+		limit = { latria_collapse_outcome_severe = yes }
+		latria_collapse_infirmity = yes
+	}
+}
+
+latria_resolve_collapse_river_injuries = {
+	if = {
+		limit = { latria_collapse_outcome_moderate = yes }
+		latria_collapse_illness = yes
+	}
+	else_if = {
+		limit = { latria_collapse_outcome_severe = yes }
+		latria_collapse_pneumonia = yes
+	}
+}
+
+latria_resolve_collapse_fall_injuries = {
+	if = {
+		limit = { latria_collapse_outcome_moderate = yes }
+		latria_collapse_wounds = yes
+	}
+	else_if = {
+		limit = { latria_collapse_outcome_severe = yes }
+		apply_maimed_trait_and_modifier_effect = yes
+	}
+}
+
+latria_resolve_collapse_rope_injuries = {
+	if = {
+		limit = { latria_collapse_outcome_moderate = yes }
+		latria_collapse_wounds = yes
+	}
+	else_if = {
+		limit = { latria_collapse_outcome_severe = yes }
+		upgrade_infirm_to_incapable_effect = yes
+	}
+}

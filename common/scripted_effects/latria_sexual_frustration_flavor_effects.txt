@@ -1,9 +1,7 @@
 latria_try_sexual_frustration_flavor_event = {
 	if = {
 		limit = {
-			is_alive = yes
-			latria_has_sexual_need = yes
-			latria_sexual_frustration_level_1_reached = yes
+			latria_can_receive_sexual_frustration_flavor_event = yes
 			NOT = { has_character_flag = latria_sexual_frustration_flavor_cooldown }
 		}
 		random = {
@@ -125,16 +123,20 @@ latria_roll_sexual_frustration_flavor_level_4 = {
 }
 
 latria_roll_sexual_frustration_flavor_level_5 = {
+	if = {
+		limit = { latria_must_repeat_sexual_frustration_collapse = yes }
+		latria_roll_sexual_frustration_collapse_level_5 = yes
+	}
+	else = { latria_roll_sexual_frustration_flavor_level_5_pool = yes }
+}
+
+latria_roll_sexual_frustration_flavor_level_5_pool = {
 	random_list = {
-		1 = { trigger_event = latria_sexual_frustration_flavor.1401 }
-		1 = { trigger_event = latria_sexual_frustration_flavor.1402 }
-		1 = { trigger_event = latria_sexual_frustration_flavor.1403 }
-		1 = { trigger_event = latria_sexual_frustration_flavor.1404 }
+		5 = { latria_roll_sexual_frustration_flavor_level_5_group = yes }
 		1 = {
 			trigger = { OR = { is_clergy = yes is_adventurer = yes is_ruler = yes } }
 			trigger_event = latria_sexual_frustration_flavor.1405
 		}
-		1 = { trigger_event = latria_sexual_frustration_flavor.1406 }
 		1 = { trigger_event = latria_sexual_frustration_flavor.1407 }
 		1 = { trigger_event = latria_sexual_frustration_flavor.1408 }
 		1 = {
@@ -142,6 +144,46 @@ latria_roll_sexual_frustration_flavor_level_5 = {
 			trigger_event = latria_sexual_frustration_flavor.1409
 		}
 		1 = { trigger_event = latria_sexual_frustration_flavor.1410 }
+		5 = {
+			trigger = { latria_can_receive_sexual_frustration_collapse_event = yes }
+			latria_roll_sexual_frustration_collapse_level_5 = yes
+		}
+	}
+}
+
+# Only unconditional entries share this weight, preserving each event's chance.
+latria_roll_sexual_frustration_flavor_level_5_group = {
+	random_list = {
+		1 = { trigger_event = latria_sexual_frustration_flavor.1401 }
+		1 = { trigger_event = latria_sexual_frustration_flavor.1402 }
+		1 = { trigger_event = latria_sexual_frustration_flavor.1403 }
+		1 = { trigger_event = latria_sexual_frustration_flavor.1404 }
+		1 = { trigger_event = latria_sexual_frustration_flavor.1406 }
+	}
+}
+
+latria_roll_sexual_frustration_collapse_level_5 = {
+	random_list = {
+		1 = {
+			trigger = { latria_can_roll_sexual_frustration_collapse_method = { METHOD = 1 } }
+			trigger_event = latria_sexual_frustration_flavor.1501
+		}
+		1 = {
+			trigger = { latria_can_roll_sexual_frustration_collapse_method = { METHOD = 2 } }
+			trigger_event = latria_sexual_frustration_flavor.1502
+		}
+		1 = {
+			trigger = { latria_can_roll_sexual_frustration_collapse_method = { METHOD = 3 } }
+			trigger_event = latria_sexual_frustration_flavor.1503
+		}
+		1 = {
+			trigger = { latria_can_roll_sexual_frustration_collapse_method = { METHOD = 4 } }
+			trigger_event = latria_sexual_frustration_flavor.1504
+		}
+		1 = {
+			trigger = { latria_can_roll_sexual_frustration_collapse_method = { METHOD = 5 } }
+			trigger_event = latria_sexual_frustration_flavor.1505
+		}
 	}
 }
 
