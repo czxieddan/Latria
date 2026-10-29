@@ -1,0 +1,14 @@
+latria_flavor_has_recent_memory = {
+	any_memory = {
+		has_memory_type = $TYPE$
+		memory_age_years < 1
+	}
+}
+
+latria_flavor_has_recent_confidence_memory = {
+	any_memory = {
+		has_memory_type = latria_flavor_night_confidence_memory
+		has_memory_participant = scope:latria_flavor_company
+		memory_age_years < 1
+	}
+}

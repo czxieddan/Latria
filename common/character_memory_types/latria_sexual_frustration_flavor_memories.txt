@@ -1,0 +1,29 @@
+latria_flavor_published_confession_memory = {
+	categories = { negative major }
+	icon = "_default.dds"
+	description = { random_valid = { desc = latria_flavor_published_confession_memory_desc } }
+	second_perspective_description = { random_valid = { desc = latria_flavor_published_confession_memory_desc_second_perspective } }
+	third_perspective_description = { random_valid = { desc = latria_flavor_published_confession_memory_desc_third_perspective } }
+	participants = {}
+	duration = { years = memory_default_duration }
+}
+
+latria_flavor_court_disgrace_memory = {
+	categories = { negative major }
+	icon = "_default.dds"
+	description = { random_valid = { desc = latria_flavor_court_disgrace_memory_desc } }
+	second_perspective_description = { random_valid = { desc = latria_flavor_court_disgrace_memory_desc_second_perspective } }
+	third_perspective_description = { random_valid = { desc = latria_flavor_court_disgrace_memory_desc_third_perspective } }
+	participants = {}
+	duration = { years = memory_default_duration }
+}
+
+latria_flavor_night_confidence_memory = {
+	categories = { positive minor }
+	icon = "_default.dds"
+	description = { random_valid = { desc = latria_flavor_night_confidence_memory_desc } }
+	second_perspective_description = { random_valid = { desc = latria_flavor_night_confidence_memory_desc_second_perspective } }
+	third_perspective_description = { random_valid = { desc = latria_flavor_night_confidence_memory_desc_third_perspective } }
+	participants = { confidant }
+	duration = { years = memory_default_duration }
+}

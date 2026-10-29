@@ -4,14 +4,14 @@
  latria_sexual_frustration_flavor.1201.desc.male: "我穿着寝衣在窗前等了许久，庭院里只有夜巡的脚步。没有人会来，我仍不愿立刻熄灯。"
  latria_sexual_frustration_flavor.1201.desc: "烛芯烧短了，窗外始终没有动静。"
  latria_sexual_frustration_flavor.1201.a: "把想说的话写下来。"
- latria_sexual_frustration_flavor.1201.b: "吹熄灯烛，压下这场空等。"
+ latria_sexual_frustration_flavor.1201.b: "吹熄灯烛，压下渴望后躺下。"
 
  latria_sexual_frustration_flavor.1202.t: "浴堂前的风声"
  latria_sexual_frustration_flavor.1202.desc.accepted: "浴堂外的谈笑声不曾因谁与谁同行而停下。这样的寻常景象本该使我不以为意，我却想起自己许久没有如此自在。"
  latria_sexual_frustration_flavor.1202.desc.strict: "浴堂门外，几名贵族正谈论谁该避开谁。我听见自己的名字，谈话随即停住。"
  latria_sexual_frustration_flavor.1202.desc: "浴堂里水声不断，门外的人声却更令我分神。"
- latria_sexual_frustration_flavor.1202.a: "向众人坦言，我也盼着一场相会。"
- latria_sexual_frustration_flavor.1202.b: "收起心思，从侧门离开。"
+ latria_sexual_frustration_flavor.1202.a: "向众人细说我盼望的相会，说着说着便忘了收住话头。"
+ latria_sexual_frustration_flavor.1202.b: "收起心思，谢过众人后告辞。"
 
  latria_sexual_frustration_flavor.1203.t: "祈祷后的沉默"
  latria_sexual_frustration_flavor.1203.desc.favors: "祭司说，人的欲望并非天生有罪。我想相信他的话，可心头的空缺并未因此缩小。"
@@ -40,8 +40,8 @@
  latria_sexual_frustration_flavor.1206.desc.accepted: "有人在宴席上谈起情人，语气轻松得像在谈天气。我本想一笑置之，却发现自己已很久没有这样的闲谈。"
  latria_sexual_frustration_flavor.1206.desc.strict: "几名贵族谈起一位因失仪而失宠的同僚，随后有人提到了我的名字。我低头理了理袖口，没有加入谈话。"
  latria_sexual_frustration_flavor.1206.desc: "乐声隔着人群传来，席间的交谈却更令我分神。"
- latria_sexual_frustration_flavor.1206.a: "讲起自己的旧情，不再顾忌旁人。"
- latria_sexual_frustration_flavor.1206.b: "把话咽回去，沿侧廊离开。"
+ latria_sexual_frustration_flavor.1206.a: "把旧情从头细说，连私下说过的话也再讲一遍。"
+ latria_sexual_frustration_flavor.1206.b: "把话咽回去，向同席诸人致意后告退。"
 
  latria_sexual_frustration_flavor.1207.t: "祈祷后的空座"
  latria_sexual_frustration_flavor.1207.desc.favors: "礼拜结束后，祭司把经卷留在座上便离开了。信仰并不把欲念视作罪，我却仍不知如何平复心绪。"
@@ -62,7 +62,7 @@
  latria_sexual_frustration_flavor.1209.desc.male: "我穿着寝衣倚着窗框，望着庭院里巡夜的灯火。那段未得回应的情意仍不肯退去。"
  latria_sexual_frustration_flavor.1209.desc: "窗外寂静，炉火渐暗，我却毫无睡意。"
  latria_sexual_frustration_flavor.1209.a: "把念头写在纸上。"
- latria_sexual_frustration_flavor.1209.b: "添柴后躺下，把心事压回去。"
+ latria_sexual_frustration_flavor.1209.b: "添好炉火，压下心事后躺下。"
 
  latria_sexual_frustration_flavor.1210.t: "无人叩门"
  latria_sexual_frustration_flavor.1210.desc.emperor: "近侍已替我收好礼冠，我披着寝衣独坐床边。帝国的重担没有让我忘记那件始终无法言明的私事。"
@@ -70,8 +70,8 @@
  latria_sexual_frustration_flavor.1210.desc.clergy: "我把法衣挂在床边，披着寝衣独坐小室。誓词仍在耳畔，心绪却没有因此平静。"
  latria_sexual_frustration_flavor.1210.desc.ruler: "礼服已经收起，我披着寝衣留在床边。门外的守卫没有听见我的叹息，权位也未替我安顿这份心事。"
  latria_sexual_frustration_flavor.1210.desc: "夜色已深，我仍独自守着这桩心事。"
- latria_sexual_frustration_flavor.1210.a: "叫来可信之人，把心事说完。"
- latria_sexual_frustration_flavor.1210.b: "把话咽回去，独自熬过长夜。"
+ latria_sexual_frustration_flavor.1210.a: "夜虽深了，仍叫来熟人，把心事细细谈开。"
+ latria_sexual_frustration_flavor.1210.b: "把心事压下，熄灯躺下。"
 
  latria_sexual_frustration_flavor.1202.c: "换个话题，问候同行者。"
  latria_sexual_frustration_flavor.1202.d: "邀众人一同饮茶，谈到兴尽。"

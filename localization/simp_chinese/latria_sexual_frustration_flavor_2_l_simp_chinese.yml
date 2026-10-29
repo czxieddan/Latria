@@ -4,21 +4,21 @@
  latria_sexual_frustration_flavor.1101.desc.male: "我从床榻上醒来，寝衣已落在床尾。窗外一片沉寂，我却无法让心思停在睡意上。"
  latria_sexual_frustration_flavor.1101.desc: "床帐半垂，长夜未尽，念头仍旧纷乱。"
  latria_sexual_frustration_flavor.1101.a: "闭上眼，容我再想一想心上人。"
- latria_sexual_frustration_flavor.1101.b: "起身点灯，把念头压下。"
+ latria_sexual_frustration_flavor.1101.b: "把念头压下，拉好床帐，重新安歇。"
 
  latria_sexual_frustration_flavor.1102.t: "舞步间的目光"
  latria_sexual_frustration_flavor.1102.desc.accepted: "舞曲换了几支，席间的人也换了几轮。无人因一段过近的舞步而侧目，我却仍记得那一瞬的相望。"
  latria_sexual_frustration_flavor.1102.desc.strict: "舞步越近，周遭的笑声便越像窃窃私语。我不愿让旁人猜出心思，只把目光移向乐师。"
  latria_sexual_frustration_flavor.1102.desc: "乐声渐急，心思却没有随舞步散去。"
  latria_sexual_frustration_flavor.1102.a: "再邀一曲，任由彼此靠近。"
- latria_sexual_frustration_flavor.1102.b: "收回目光，退到席边。"
+ latria_sexual_frustration_flavor.1102.b: "行礼谢过舞伴，退到席边。"
 
  latria_sexual_frustration_flavor.1103.t: "求教的门前"
  latria_sexual_frustration_flavor.1103.desc.favors: "引导者说，压下欲念并非唯一的虔敬之路。我本想追问更多，门外的脚步声却已停在门边。"
  latria_sexual_frustration_flavor.1103.desc.condemns: "引导者提醒我，贞洁不是只在众人面前才有分量。我低头应下，心里却仍盼着对方不要再问。"
  latria_sexual_frustration_flavor.1103.desc: "屋里灯火昏暗，我斟酌着该如何向引导者开口。"
  latria_sexual_frustration_flavor.1103.a: "承认自己的渴望，不再掩饰。"
- latria_sexual_frustration_flavor.1103.b: "只谈职责，把心事咽回去。"
+ latria_sexual_frustration_flavor.1103.b: "只请教眼下的职责，把心事咽回去。"
 
  latria_sexual_frustration_flavor.1104.t: "鹰未归巢"
  latria_sexual_frustration_flavor.1104.desc.lustful: "鹰盘旋在猎场上空，迟迟不肯落回手套。我几乎羡慕它能随心而去，不必向任何人解释。"
@@ -34,14 +34,14 @@
  latria_sexual_frustration_flavor.1105.desc.ruler: "侍从收起礼服，我披着寝衣坐在灯下。桌上的文书尚未批完，手边那封未寄出的信却先被我展开了。"
  latria_sexual_frustration_flavor.1105.desc: "灯火将尽，一封未寄出的信仍在手边。"
  latria_sexual_frustration_flavor.1105.a: "把那封信交给信使。"
- latria_sexual_frustration_flavor.1105.b: "亲手销毁它，把心事压下。"
+ latria_sexual_frustration_flavor.1105.b: "亲手销毁它，今夜不再想，熄灯歇息。"
 
  latria_sexual_frustration_flavor.1106.t: "灯下难眠"
  latria_sexual_frustration_flavor.1106.desc.female: "我披着寝衣坐在床边，烛火映着窗上的影子。夜已深，心底那份未得回应的渴望却仍没有退去。"
  latria_sexual_frustration_flavor.1106.desc.male: "我披着寝衣坐在床边，窗外的守夜人已经走过两轮。我仍无法让心思归于平静。"
  latria_sexual_frustration_flavor.1106.desc: "烛火渐短，床帐间仍没有睡意。"
  latria_sexual_frustration_flavor.1106.a: "让思绪停在那段情意上。"
- latria_sexual_frustration_flavor.1106.b: "压下渴望，躺下等候天明。"
+ latria_sexual_frustration_flavor.1106.b: "不再顺着渴望想下去，熄灯安歇。"
 
 
  latria_sexual_frustration_flavor.1107.t: "回敬的一支舞"
@@ -49,7 +49,7 @@
  latria_sexual_frustration_flavor.1107.desc.strict: "舞伴邀我再跳一支，席间几道目光随即转来。我还没有回答，已经有人俯身向邻座低语。"
  latria_sexual_frustration_flavor.1107.desc: "乐师奏起新的舞曲，我迟迟没有起身。"
  latria_sexual_frustration_flavor.1107.a: "接受邀舞，再靠近一步。"
- latria_sexual_frustration_flavor.1107.b: "低头谢绝，留在座位上。"
+ latria_sexual_frustration_flavor.1107.b: "行礼谢过邀舞，祝舞伴尽兴。"
 
  latria_sexual_frustration_flavor.1108.t: "睡前的祷告"
  latria_sexual_frustration_flavor.1108.desc.favors: "我穿着寝衣在床边祈祷。信仰容许肉体欢愉的教诲仍在耳畔，可这份迫切并未因此平息。"
@@ -67,7 +67,7 @@
  latria_sexual_frustration_flavor.1110.desc.adventurer: "客栈中只剩几盏灯。我穿着寝衣坐在床沿，仍无法把心思从那封未寄出的信上移开。"
  latria_sexual_frustration_flavor.1110.desc: "门外的声响渐渐远去，我仍在床边等候。"
  latria_sexual_frustration_flavor.1110.a: "写完那封信，留待清晨送出。"
- latria_sexual_frustration_flavor.1110.b: "闩好房门，把心事压下。"
+ latria_sexual_frustration_flavor.1110.b: "闩好房门，今夜不再想它，早些歇息。"
 
  latria_sexual_frustration_flavor.1101.c: "披衣坐稳，慢慢平复呼吸。"
  latria_sexual_frustration_flavor.1102.c: "与乐师说说曲调。"

@@ -1,0 +1,29 @@
+latria_flavor_remember_public_choice = {
+	if = {
+		limit = {
+			NOT = { latria_flavor_has_recent_memory = { TYPE = $TYPE$ } }
+		}
+		create_character_memory = { type = $TYPE$ }
+	}
+}
+
+latria_flavor_remember_public_avowal = {
+	latria_flavor_remember_public_choice = { TYPE = latria_flavor_published_confession_memory }
+}
+
+latria_flavor_remember_court_disgrace = {
+	latria_flavor_remember_public_choice = { TYPE = latria_flavor_court_disgrace_memory }
+}
+
+latria_flavor_remember_confidence = {
+	if = {
+		limit = {
+			exists = scope:latria_flavor_company
+			NOT = { latria_flavor_has_recent_confidence_memory = yes }
+		}
+		create_character_memory = {
+			type = latria_flavor_night_confidence_memory
+			participants = { confidant = scope:latria_flavor_company }
+		}
+	}
+}

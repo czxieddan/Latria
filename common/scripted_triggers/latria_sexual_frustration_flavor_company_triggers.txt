@@ -1,0 +1,45 @@
+# These scopes are witnesses or conversational companions, never romantic partners.
+latria_flavor_available_company = {
+	is_available_adult = yes
+	this != root
+	location = root.location
+}
+
+latria_flavor_available_confidant = {
+	latria_flavor_available_company = yes
+	opinion = { target = root value >= 0 }
+}
+
+latria_flavor_available_guide = {
+	latria_flavor_available_company = yes
+	faith = root.faith
+	OR = {
+		is_clergy = yes
+		has_council_position = councillor_court_chaplain
+	}
+}
+
+latria_flavor_company_enjoys_candor = {
+	OR = {
+		has_trait = gregarious
+		has_trait = lustful
+	}
+}
+
+latria_flavor_can_relate_to_company = {
+	is_available_adult = yes
+	exists = scope:latria_flavor_company
+	scope:latria_flavor_company = { latria_flavor_available_company = yes }
+}
+
+latria_flavor_can_grow_company_friendship = {
+	latria_flavor_can_relate_to_company = yes
+	scope:latria_flavor_company = { latria_flavor_available_confidant = yes }
+	opinion = { target = scope:latria_flavor_company value >= 0 }
+	can_set_relation_friend_trigger = { CHARACTER = scope:latria_flavor_company }
+}
+
+latria_flavor_can_grow_company_rivalry = {
+	latria_flavor_can_relate_to_company = yes
+	can_set_relation_rival_trigger = { CHARACTER = scope:latria_flavor_company }
+}

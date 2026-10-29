@@ -1,0 +1,61 @@
+latria_flavor_practice_diplomacy = {
+	add_diplomacy_lifestyle_xp = latria_flavor_practice_xp
+}
+
+latria_flavor_practice_martial = {
+	add_martial_lifestyle_xp = latria_flavor_practice_xp
+}
+
+latria_flavor_practice_stewardship = {
+	add_stewardship_lifestyle_xp = latria_flavor_practice_xp
+}
+
+latria_flavor_practice_intrigue = {
+	add_intrigue_lifestyle_xp = latria_flavor_practice_xp
+}
+
+latria_flavor_practice_learning = {
+	add_learning_lifestyle_xp = latria_flavor_practice_xp
+}
+
+latria_flavor_chess = {
+	latria_flavor_clear_judgment = yes
+	latria_flavor_practice_intrigue = yes
+}
+
+latria_flavor_read_for_comfort = {
+	latria_flavor_comfort = yes
+	latria_flavor_practice_learning = yes
+}
+
+latria_flavor_practice_falconry = {
+	if = {
+		limit = { has_trait = lifestyle_hunter }
+		add_trait_xp = {
+			trait = lifestyle_hunter
+			track = falconer
+			value = latria_flavor_hunter_practice_xp
+		}
+	}
+}
+
+latria_flavor_practice_tracking = {
+	if = {
+		limit = { has_trait = lifestyle_hunter }
+		add_trait_xp = {
+			trait = lifestyle_hunter
+			track = hunter
+			value = latria_flavor_hunter_practice_xp
+		}
+	}
+}
+
+latria_flavor_falconry = {
+	latria_flavor_hunting_discipline = yes
+	latria_flavor_practice_falconry = yes
+}
+
+latria_flavor_tracking = {
+	latria_flavor_hunting_discipline = yes
+	latria_flavor_practice_tracking = yes
+}

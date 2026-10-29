@@ -17,8 +17,9 @@ latria_flavor_sullied = {
 
 latria_flavor_broken_sleep = {
 	icon = stress_negative
-	diplomacy = -2
-	stress_gain_mult = 0.2
+	diplomacy = -1
+	prowess = -1
+	stress_gain_mult = 0.1
 }
 
 latria_flavor_vagabond_focus = {
@@ -52,5 +53,76 @@ latria_flavor_neglected_duties = {
 
 latria_flavor_diligent_work = {
 	icon = stewardship_positive
-	stewardship = 2
+	stewardship = 3
+	stress_gain_mult = -0.1
+}
+
+latria_flavor_distracted = {
+	icon = stewardship_negative
+	learning = -1
+	stewardship = -1
+}
+
+latria_flavor_composure = {
+	icon = learning_positive
+	intrigue = 1
+	stress_gain_mult = -0.15
+}
+
+latria_flavor_rested = {
+	icon = prowess_positive
+	prowess = 1
+	stress_gain_mult = -0.1
+}
+
+latria_flavor_observance = {
+	icon = learning_positive
+	same_faith_opinion = 5
+}
+
+latria_flavor_reliable = {
+	icon = stewardship_positive
+	stewardship = 1
+	diplomacy = 1
+}
+
+latria_flavor_scriptural_insight = {
+	icon = learning_positive
+	learning = 2
+}
+
+latria_flavor_unburdened = {
+	icon = diplomacy_positive
+	stress_gain_mult = -0.25
+	stress_loss_mult = 0.2
+}
+
+latria_flavor_ridiculed = {
+	icon = diplomacy_negative
+	diplomacy = -1
+	general_opinion = -3
+}
+
+latria_flavor_missed_hunt = {
+	icon = stewardship_negative
+	martial = -1
+	prowess = -1
+}
+
+latria_flavor_creative_focus = {
+	icon = learning_positive
+	learning = 1
+	diplomacy = 1
+}
+
+latria_flavor_restored_spirits = {
+	icon = diplomacy_positive
+	diplomacy = 1
+	stress_loss_mult = 0.1
+}
+
+latria_flavor_clear_judgment = {
+	icon = learning_positive
+	learning = 1
+	intrigue = 1
 }

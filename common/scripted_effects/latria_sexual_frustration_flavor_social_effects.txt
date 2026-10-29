@@ -1,0 +1,105 @@
+latria_flavor_culture_reputation = {
+	if = {
+		limit = { culture = { has_cultural_parameter = adultery_always_accepted } }
+		add_prestige = { value = latria_flavor_prestige_gain }
+	}
+	else_if = {
+		limit = { culture = { has_cultural_parameter = adulterer_fornicator_penalties } }
+		add_prestige = { value = latria_flavor_prestige_loss }
+		latria_flavor_public_rumors = yes
+	}
+}
+
+latria_flavor_culture_consequences = {
+	latria_flavor_indulgence_stress_consequence = yes
+	latria_flavor_culture_reputation = yes
+	latria_flavor_candid_company_reaction = yes
+}
+
+latria_flavor_public_confession = {
+	latria_flavor_indulgence_stress_consequence = yes
+	latria_flavor_culture_reputation = yes
+	add_character_modifier = { modifier = latria_flavor_ridiculed months = latria_flavor_short_months }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_foolish_display_opinion }
+	latria_flavor_lose_authority = yes
+}
+
+latria_flavor_courteous_withdrawal = {
+	latria_flavor_private_restraint = yes
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_courteous_guest_opinion }
+}
+
+latria_flavor_warm_company = {
+	add_character_modifier = { modifier = latria_flavor_warm_company months = latria_flavor_modifier_months }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_pleasant_conversation_opinion }
+	latria_flavor_grow_company_friendship = yes
+}
+
+latria_flavor_good_company = {
+	latria_flavor_comfort = yes
+	latria_flavor_warm_company = yes
+}
+
+latria_flavor_private_confidence = {
+	latria_flavor_indulgence_stress_consequence = yes
+	add_character_modifier = { modifier = latria_flavor_warm_company months = latria_flavor_modifier_months }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_trusted_confidant_opinion }
+	add_character_modifier = { modifier = latria_flavor_broken_sleep days = latria_flavor_fatigue_days }
+	latria_flavor_grow_company_friendship = yes
+	latria_flavor_remember_confidence = yes
+}
+
+latria_flavor_faith_guidance = {
+	latria_flavor_focus_on_duties = yes
+	latria_flavor_listen_to_guide = yes
+}
+
+latria_flavor_honest_confession = {
+	latria_flavor_comfort = yes
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_trusted_confidant_opinion }
+	add_character_modifier = { modifier = latria_flavor_composure months = latria_flavor_modifier_months }
+	latria_flavor_grow_company_friendship = yes
+}
+
+latria_flavor_hunting_discipline = {
+	add_character_modifier = { modifier = latria_flavor_hunting_focus months = latria_flavor_modifier_months }
+	latria_flavor_practice_martial = yes
+}
+
+latria_flavor_hunt_indulgence = {
+	latria_flavor_indulgence_stress_consequence = yes
+	add_character_modifier = { modifier = latria_flavor_missed_hunt months = latria_flavor_short_months }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_delayed_hunt_opinion }
+}
+
+latria_flavor_poetry = {
+	latria_flavor_comfort = yes
+	add_character_modifier = { modifier = latria_flavor_creative_focus months = latria_flavor_modifier_months }
+	latria_flavor_practice_diplomacy = yes
+}
+
+latria_flavor_public_poetry = {
+	latria_flavor_poetry = yes
+	add_prestige = { value = latria_flavor_prestige_gain }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_pleasant_conversation_opinion }
+	latria_flavor_grow_company_friendship = yes
+}
+
+latria_flavor_music = {
+	latria_flavor_comfort = yes
+	add_character_modifier = { modifier = latria_flavor_restored_spirits months = latria_flavor_short_months }
+}
+
+latria_flavor_clear_judgment = {
+	add_character_modifier = { modifier = latria_flavor_clear_judgment months = latria_flavor_modifier_months }
+}
+
+latria_flavor_walk = {
+	latria_flavor_comfort = yes
+	add_character_modifier = { modifier = latria_flavor_rested months = latria_flavor_short_months }
+}
+
+latria_flavor_public_duty_indulgence = {
+	latria_flavor_duty_indulgence = yes
+	add_prestige = { value = latria_flavor_prestige_loss }
+}

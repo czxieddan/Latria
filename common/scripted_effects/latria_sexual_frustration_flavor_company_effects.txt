@@ -1,0 +1,95 @@
+latria_find_flavor_company = {
+	random_courtier_or_guest = {
+		limit = { latria_flavor_available_company = yes }
+		save_scope_as = latria_flavor_company
+	}
+}
+
+latria_prepare_flavor_company = {
+	latria_find_flavor_company = yes
+	if = {
+		limit = { NOT = { exists = scope:latria_flavor_company } }
+		liege_or_court_owner ?= { latria_find_flavor_company = yes }
+	}
+}
+
+latria_find_flavor_guide = {
+	random_courtier_or_guest = {
+		limit = { latria_flavor_available_guide = yes }
+		save_scope_as = latria_flavor_company
+	}
+}
+
+latria_prepare_flavor_guide = {
+	cp:councillor_court_chaplain ?= {
+		if = {
+			limit = { latria_flavor_available_guide = yes }
+			save_scope_as = latria_flavor_company
+		}
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_flavor_company } }
+		latria_find_flavor_guide = yes
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_flavor_company } }
+		liege_or_court_owner ?= { latria_find_flavor_guide = yes }
+	}
+}
+
+latria_find_flavor_confidant = {
+	random_courtier_or_guest = {
+		limit = { latria_flavor_available_confidant = yes }
+		save_scope_as = latria_flavor_company
+	}
+}
+
+latria_prepare_flavor_confidant = {
+	random_relation = {
+		type = friend
+		limit = { latria_flavor_available_confidant = yes }
+		save_scope_as = latria_flavor_company
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_flavor_company } }
+		latria_find_flavor_confidant = yes
+	}
+	if = {
+		limit = { NOT = { exists = scope:latria_flavor_company } }
+		liege_or_court_owner ?= { latria_find_flavor_confidant = yes }
+	}
+}
+
+latria_flavor_company_opinion = {
+	scope:latria_flavor_company ?= {
+		add_opinion = { target = root modifier = $MODIFIER$ }
+	}
+}
+
+latria_flavor_candid_company_reaction = {
+	scope:latria_flavor_company ?= {
+		if = {
+			limit = { latria_flavor_company_enjoys_candor = yes }
+			add_opinion = { target = root modifier = latria_flavor_enjoyed_candor_opinion }
+		}
+		else = {
+			add_opinion = { target = root modifier = latria_flavor_foolish_display_opinion }
+		}
+	}
+}
+
+latria_flavor_disappoint_colleague = {
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_delayed_business_opinion }
+}
+
+latria_flavor_impress_colleague = {
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_reliable_colleague_opinion }
+}
+
+latria_flavor_listen_to_guide = {
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_attentive_student_opinion }
+}
+
+latria_flavor_scandalize_witness = {
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_scandalized_witness_opinion }
+}

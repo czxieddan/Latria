@@ -1,0 +1,26 @@
+latria_flavor_grow_company_friendship = {
+	if = {
+		limit = { latria_flavor_can_grow_company_friendship = yes }
+		progress_towards_friend_effect = {
+			CHARACTER = scope:latria_flavor_company
+			OPINION = 0
+			REASON = latria_flavor_shared_company_friend
+		}
+	}
+}
+
+latria_flavor_grow_company_rivalry = {
+	if = {
+		limit = { latria_flavor_can_grow_company_rivalry = yes }
+		progress_towards_rival_effect = {
+			CHARACTER = scope:latria_flavor_company
+			OPINION = 0
+			REASON = latria_flavor_public_quarrel_rival
+		}
+	}
+}
+
+latria_flavor_quarrelsome_confession = {
+	latria_flavor_public_confession = yes
+	latria_flavor_grow_company_rivalry = yes
+}

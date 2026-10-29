@@ -4,21 +4,21 @@
  latria_sexual_frustration_flavor.1101.desc.male: "I wake in the bed, my nightgown fallen at its foot. The world beyond the window is silent, but sleep will not keep my thoughts."
  latria_sexual_frustration_flavor.1101.desc: "The canopy hangs low. The night is long, and my thoughts will not settle."
  latria_sexual_frustration_flavor.1101.a: "Close my eyes and think of the one I long for."
- latria_sexual_frustration_flavor.1101.b: "Rise, light a candle, and suppress the thought."
+ latria_sexual_frustration_flavor.1101.b: "Put the thought aside, draw the curtains, and settle back to sleep."
 
  latria_sexual_frustration_flavor.1102.t: "Glances Between Dances"
  latria_sexual_frustration_flavor.1102.desc.accepted: "Several dances pass, and the faces around me change. No one minds a close turn, yet I remember that brief meeting of eyes."
  latria_sexual_frustration_flavor.1102.desc.strict: "The closer the dance, the more the laughter sounds like whispers. I turn my gaze to the musicians lest anyone guess my thoughts."
  latria_sexual_frustration_flavor.1102.desc: "The music quickens, but the dance does not carry my thoughts away."
  latria_sexual_frustration_flavor.1102.a: "Ask for another dance, and draw a little closer."
- latria_sexual_frustration_flavor.1102.b: "Avert my gaze and retire to the edge of the hall."
+ latria_sexual_frustration_flavor.1102.b: "Thank my partner with a bow and retire to the edge of the hall."
 
  latria_sexual_frustration_flavor.1103.t: "At the Guide's Door"
  latria_sexual_frustration_flavor.1103.desc.favors: "My spiritual guide says that denying desire is not the only path to devotion. I would ask more, but footsteps have stopped outside the door."
  latria_sexual_frustration_flavor.1103.desc.condemns: "My spiritual guide reminds me that chastity matters beyond the eyes of others. I bow my head, hoping there will be no more questions."
  latria_sexual_frustration_flavor.1103.desc: "The room is dim. I weigh how to speak to my spiritual guide."
  latria_sexual_frustration_flavor.1103.a: "Admit my longing and cease to hide it."
- latria_sexual_frustration_flavor.1103.b: "Speak only of duty, and swallow the rest."
+ latria_sexual_frustration_flavor.1103.b: "Ask only about my present duties, and swallow the rest."
 
  latria_sexual_frustration_flavor.1104.t: "The Unreturned Eagle"
  latria_sexual_frustration_flavor.1104.desc.lustful: "The eagle circles above the field and will not return to my glove. I envy its freedom to follow its desire without explanation."
@@ -34,14 +34,14 @@
  latria_sexual_frustration_flavor.1105.desc.ruler: "My attendants put away my formal clothes. In my nightgown beneath the lamp, I unfold the unsent letter before attending to the unfinished papers."
  latria_sexual_frustration_flavor.1105.desc: "The candles burn low. An unsent letter remains within reach."
  latria_sexual_frustration_flavor.1105.a: "Give the letter to a messenger."
- latria_sexual_frustration_flavor.1105.b: "Destroy it myself and suppress the thought."
+ latria_sexual_frustration_flavor.1105.b: "Destroy it, put the thought aside, and snuff the candle for sleep."
 
  latria_sexual_frustration_flavor.1106.t: "Restless by Candlelight"
  latria_sexual_frustration_flavor.1106.desc.female: "In my nightgown, I sit beside the bed as candlelight moves across the window. The hour is late, yet the longing that went unanswered has not left me."
  latria_sexual_frustration_flavor.1106.desc.male: "In my nightclothes, I sit beside the bed. The night watch has crossed the courtyard twice, and still my thoughts will not settle."
  latria_sexual_frustration_flavor.1106.desc: "The candle burns low, but sleep will not come beneath the canopy."
  latria_sexual_frustration_flavor.1106.a: "Let my thoughts dwell upon that affection."
- latria_sexual_frustration_flavor.1106.b: "Restrain my longing and wait in bed for dawn."
+ latria_sexual_frustration_flavor.1106.b: "Dwell on it no longer; snuff the candle and settle to sleep."
 
 
  latria_sexual_frustration_flavor.1107.t: "A Dance in Return"
@@ -49,7 +49,7 @@
  latria_sexual_frustration_flavor.1107.desc.strict: "My partner asks for another dance, and several faces turn toward us. Before I can answer, someone leans over to whisper to a neighbor."
  latria_sexual_frustration_flavor.1107.desc: "The musicians begin another dance, but I do not rise."
  latria_sexual_frustration_flavor.1107.a: "Accept the dance and draw closer."
- latria_sexual_frustration_flavor.1107.b: "Decline with a bow and remain in my seat."
+ latria_sexual_frustration_flavor.1107.b: "Decline with a bow and wish my partner a pleasant dance."
 
  latria_sexual_frustration_flavor.1108.t: "Prayer Before Sleep"
  latria_sexual_frustration_flavor.1108.desc.favors: "In my nightgown, I pray beside the bed. My faith permits the pleasures of the flesh, yet that urgency within does not abate."
@@ -67,7 +67,7 @@
  latria_sexual_frustration_flavor.1110.desc.adventurer: "Only a few lamps remain lit at the inn. In my nightgown, I sit at the bedside, still thinking of the letter I never sent."
  latria_sexual_frustration_flavor.1110.desc: "The sounds beyond the door fade. I remain beside the bed, waiting."
  latria_sexual_frustration_flavor.1110.a: "Finish the letter and have it sent at dawn."
- latria_sexual_frustration_flavor.1110.b: "Bar the door and suppress the thought."
+ latria_sexual_frustration_flavor.1110.b: "Bar the door, put the thought aside, and retire for the night."
 
  latria_sexual_frustration_flavor.1101.c: "Put on a robe, sit still, and let my breathing settle."
  latria_sexual_frustration_flavor.1102.c: "Speak with the musicians about their tunes."

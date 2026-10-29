@@ -1,0 +1,13 @@
+﻿l_simp_chinese:
+ latria_flavor_published_confession_memory: "让私情见诸抄本"
+ latria_flavor_published_confession_memory_desc: "我让人抄写并传阅自己的口述，把藏在心里的渴望公之于众。"
+ latria_flavor_published_confession_memory_desc_second_perspective: "你让人抄写并传阅自己的口述，把藏在心里的渴望公之于众。"
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName]让人抄写并传阅自己的口述，把藏在心里的渴望公之于众。"
+ latria_flavor_court_disgrace_memory: "在朝会上失仪"
+ latria_flavor_court_disgrace_memory_desc: "我在朝会上衣衫不整，任由众臣看见了自己的失态。"
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "你在朝会上衣衫不整，任由众臣看见了自己的失态。"
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName]在朝会上衣衫不整，任由众臣看见了自己的失态。"
+ latria_flavor_night_confidence_memory: "向熟人彻夜倾诉"
+ latria_flavor_night_confidence_memory_desc: "我与[confidant.GetName]谈到深夜，说出了藏在心里的事。"
+ latria_flavor_night_confidence_memory_desc_second_perspective: "你与[confidant.GetName]谈到深夜，说出了藏在心里的事。"
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName]与[confidant.GetName]谈到深夜，说出了藏在心里的事。"

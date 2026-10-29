@@ -1,0 +1,13 @@
+﻿l_english:
+ latria_flavor_published_confession_memory: "made a private longing public"
+ latria_flavor_published_confession_memory_desc: "I had my account copied and circulated, making public the longing I had kept to myself."
+ latria_flavor_published_confession_memory_desc_second_perspective: "you had your account copied and circulated, making public the longing you had kept to yourself."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName] had an account copied and circulated, making public a private longing."
+ latria_flavor_court_disgrace_memory: "lost composure before the court"
+ latria_flavor_court_disgrace_memory_desc: "I stood improperly dressed before the court and let the assembled lords witness my lapse."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "you stood improperly dressed before the court and let the assembled lords witness your lapse."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName] stood improperly dressed before the court and let the assembled lords witness the lapse."
+ latria_flavor_night_confidence_memory: "confided in a companion late at night"
+ latria_flavor_night_confidence_memory_desc: "I spoke with [confidant.GetName] late into the night and shared what I had kept to myself."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "you spoke with [confidant.GetName] late into the night and shared what you had kept to yourself."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName] spoke with [confidant.GetName] late into the night and shared a private burden."

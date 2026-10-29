@@ -23,7 +23,7 @@ latria_sexual_frustration_flavor.1401 = {
 	option = {
 		name = latria_sexual_frustration_flavor.1401.b
 		latria_flavor_resist = yes
-		latria_flavor_private_restraint = yes
+		latria_flavor_restful_restraint = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1401.c
@@ -47,28 +47,31 @@ latria_sexual_frustration_flavor.1402 = {
 	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
 	override_background = { reference = feast }
 	left_portrait = { character = root animation = flirtation }
-	immediate = { latria_capture_flavor_severity = { LEVEL = 5 } }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_flavor_company = yes
+	}
 	option = {
 		name = latria_sexual_frustration_flavor.1402.a
 		latria_flavor_release = yes
-		latria_flavor_culture_consequences = yes
+		latria_flavor_public_confession = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1402.b
 		latria_flavor_resist = yes
-		latria_flavor_private_restraint = yes
+		latria_flavor_courteous_withdrawal = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1402.c
+		trigger = { gold >= latria_flavor_music_cost }
 		latria_flavor_reflect = yes
-		latria_flavor_comfort = yes
+		latria_flavor_musical_patronage = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1402.d
 		trigger = { has_trait = gregarious }
 		latria_flavor_reflect = yes
-		latria_flavor_comfort = yes
-		latria_flavor_warm_company = yes
+		latria_flavor_good_company = yes
 	}
 }
 
@@ -162,7 +165,10 @@ latria_sexual_frustration_flavor.1405 = {
 	override_background = { reference = study }
 	left_portrait = { character = root animation = worry }
 	trigger = { OR = { is_clergy = yes is_adventurer = yes is_ruler = yes } }
-	immediate = { latria_capture_flavor_severity = { LEVEL = 5 } }
+	immediate = {
+		latria_capture_flavor_severity = { LEVEL = 5 }
+		latria_prepare_flavor_company = yes
+	}
 	option = {
 		name = latria_sexual_frustration_flavor.1405.a
 		latria_flavor_release = yes
@@ -178,6 +184,7 @@ latria_sexual_frustration_flavor.1405 = {
 		name = latria_sexual_frustration_flavor.1405.c
 		latria_flavor_reflect = yes
 		latria_flavor_comfort = yes
+		latria_flavor_clear_judgment = yes
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1405.d

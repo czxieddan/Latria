@@ -4,14 +4,14 @@
  latria_sexual_frustration_flavor.1201.desc.male: "I wait by the window in my nightgown. Only the night watch crosses the courtyard. No one is coming, but I am not ready to put out the candle."
  latria_sexual_frustration_flavor.1201.desc: "The wick burns low. Nothing stirs beyond the window."
  latria_sexual_frustration_flavor.1201.a: "Write down the words I meant to say."
- latria_sexual_frustration_flavor.1201.b: "Put out the candle and stifle this empty hope."
+ latria_sexual_frustration_flavor.1201.b: "Put out the candle, stifle the longing, and lie down."
 
  latria_sexual_frustration_flavor.1202.t: "Whispers Outside the Bathhouse"
  latria_sexual_frustration_flavor.1202.desc.accepted: "Laughter carries from the bathhouse, undisturbed by who arrived with whom. It ought to be an ordinary sight, yet I remember how long it has been since I felt so unguarded."
  latria_sexual_frustration_flavor.1202.desc.strict: "Outside the bathhouse, several nobles discuss who must avoid whom. I hear my name, and the conversation falls silent."
  latria_sexual_frustration_flavor.1202.desc: "Water echoes within the bathhouse. The voices outside distract me more."
- latria_sexual_frustration_flavor.1202.a: "Tell them that I, too, long for a meeting."
- latria_sexual_frustration_flavor.1202.b: "Suppress the thought and leave by the side door."
+ latria_sexual_frustration_flavor.1202.a: "Tell them of the meeting I long for, letting the tale run on and on."
+ latria_sexual_frustration_flavor.1202.b: "Set the thought aside, thank them, and take my leave."
 
  latria_sexual_frustration_flavor.1203.t: "Silence After Prayer"
  latria_sexual_frustration_flavor.1203.desc.favors: "The priest says that desire is not sinful in itself. I would like to believe him, but the hollow in my heart remains."
@@ -40,8 +40,8 @@
  latria_sexual_frustration_flavor.1206.desc.accepted: "Someone at the feast speaks of a lover as casually as the weather. I mean to laugh it off, then realize how long it has been since I joined such talk."
  latria_sexual_frustration_flavor.1206.desc.strict: "Several nobles speak of a fellow courtier who lost favor through impropriety, and one of them mentions my name. I smooth my sleeve and do not join them."
  latria_sexual_frustration_flavor.1206.desc: "Music carries across the company. Their conversation distracts me more."
- latria_sexual_frustration_flavor.1206.a: "Tell them of my old affection, heedless of their judgment."
- latria_sexual_frustration_flavor.1206.b: "Swallow the words and leave by the side passage."
+ latria_sexual_frustration_flavor.1206.a: "Tell my old story in full, repeating even the words spoken in private."
+ latria_sexual_frustration_flavor.1206.b: "Hold my tongue, bow to my companions at table, and take my leave."
 
  latria_sexual_frustration_flavor.1207.t: "An Empty Place After Prayer"
  latria_sexual_frustration_flavor.1207.desc.favors: "After the service, the priest leaves his book upon the bench and departs. My faith does not condemn desire, yet I cannot settle my thoughts."
@@ -62,7 +62,7 @@
  latria_sexual_frustration_flavor.1209.desc.male: "In my nightgown, I lean against the window and watch the night watch cross the yard. An affection unanswered will not leave my thoughts."
  latria_sexual_frustration_flavor.1209.desc: "Beyond the window all is quiet. The fire fades, but I am not sleepy."
  latria_sexual_frustration_flavor.1209.a: "Set my thoughts down on paper."
- latria_sexual_frustration_flavor.1209.b: "Stoke the fire, lie down, and suppress the thought."
+ latria_sexual_frustration_flavor.1209.b: "Stoke the fire, put the longing aside, and lie down."
 
  latria_sexual_frustration_flavor.1210.t: "No Knock at the Door"
  latria_sexual_frustration_flavor.1210.desc.emperor: "My attendants have put away the crown. In my nightgown beside the bed, the empire's burdens cannot make me forget what I cannot bring myself to say."
@@ -70,8 +70,8 @@
  latria_sexual_frustration_flavor.1210.desc.clergy: "I hang my vestments beside the bed and sit alone in my nightgown. My vow remains in my ears, but my thoughts do not quiet."
  latria_sexual_frustration_flavor.1210.desc.ruler: "My formal clothes are put away. In my nightgown beside the bed, the guards outside hear no sigh, and office cannot settle this private matter."
  latria_sexual_frustration_flavor.1210.desc: "The hour is late, and I remain alone with this worry."
- latria_sexual_frustration_flavor.1210.a: "Call for someone I trust and tell them everything."
- latria_sexual_frustration_flavor.1210.b: "Swallow the words and bear the long night alone."
+ latria_sexual_frustration_flavor.1210.a: "Send for a trusted acquaintance, late as it is, and talk at length."
+ latria_sexual_frustration_flavor.1210.b: "Suppress the longing, put out the candle, and lie down."
 
  latria_sexual_frustration_flavor.1202.c: "Change the subject and ask after my companions."
  latria_sexual_frustration_flavor.1202.d: "Invite them all to tea and talk until we tire."
