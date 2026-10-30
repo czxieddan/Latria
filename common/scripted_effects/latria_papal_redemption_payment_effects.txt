@@ -1,0 +1,72 @@
+# Record the demand in the interaction's saved scopes, so later balance changes do not alter it.
+latria_snapshot_papal_redemption_payment = {
+	save_scope_value_as = {
+		name = latria_papal_redemption_gold
+		value = { value = gold min = 100 }
+	}
+	save_scope_value_as = {
+		name = latria_papal_redemption_treasury
+		value = 0
+	}
+	if = {
+		limit = { has_treasury = yes }
+		save_scope_value_as = {
+			name = latria_papal_redemption_treasury
+			value = { value = treasury min = 100 }
+		}
+	}
+}
+
+# War variables preserve the original demand through save/load and ruler succession.
+latria_store_papal_redemption_war_payment = {
+	set_variable = {
+		name = latria_papal_redemption_gold
+		value = scope:latria_papal_redemption_gold
+	}
+	set_variable = {
+		name = latria_papal_redemption_treasury
+		value = scope:latria_papal_redemption_treasury
+	}
+}
+
+latria_load_papal_redemption_war_payment = {
+	if = {
+		limit = {
+			has_variable = latria_papal_redemption_gold
+			has_variable = latria_papal_redemption_treasury
+		}
+		save_scope_value_as = {
+			name = latria_papal_redemption_gold
+			value = var:latria_papal_redemption_gold
+		}
+		save_scope_value_as = {
+			name = latria_papal_redemption_treasury
+			value = var:latria_papal_redemption_treasury
+		}
+	}
+}
+
+latria_collect_papal_redemption_payment = {
+	# Supply a preview before sending, and a fallback for demands/wars from older saves.
+	if = {
+		limit = { NOT = { exists = scope:latria_papal_redemption_gold } }
+		scope:latria_redeemed_ruler = { latria_snapshot_papal_redemption_payment = yes }
+	}
+	scope:latria_redeemed_ruler = {
+		add_gold = {
+			value = scope:latria_papal_redemption_gold
+			multiply = -1
+		}
+	}
+	scope:latria_redeemer = { add_gold = scope:latria_papal_redemption_gold }
+	if = {
+		limit = { scope:latria_papal_redemption_treasury > 0 }
+		scope:latria_redeemed_ruler = {
+			add_treasury = {
+				value = scope:latria_papal_redemption_treasury
+				multiply = -1
+			}
+		}
+		scope:latria_redeemer = { add_treasury = scope:latria_papal_redemption_treasury }
+	}
+}

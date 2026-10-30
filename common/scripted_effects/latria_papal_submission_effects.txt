@@ -88,6 +88,7 @@ latria_reduce_papal_subject_rank = {
 latria_force_papal_submission = {
 	$REDEEMER$ = { save_scope_as = latria_redeemer }
 	$SUBJECT$ = { save_scope_as = latria_redeemed_ruler }
+	latria_collect_papal_redemption_payment = yes
 
 	if = {
 		limit = {

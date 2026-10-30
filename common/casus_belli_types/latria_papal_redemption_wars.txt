@@ -29,6 +29,10 @@ latria_papal_redemption_war = {
 
 	on_victory_desc = { desc = latria_papal_redemption_war_victory_desc }
 	on_victory = {
+		if = {
+			limit = { exists = root.war }
+			root.war = { latria_load_papal_redemption_war_payment = yes }
+		}
 		latria_force_papal_submission = {
 			REDEEMER = scope:attacker
 			SUBJECT = scope:defender

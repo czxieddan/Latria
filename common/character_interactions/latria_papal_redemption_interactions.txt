@@ -52,6 +52,10 @@ latria_papal_redemption_or_ruin = {
 		offer_vassalization_interaction_ai_acceptance_general = yes
 	}
 
+	on_send = {
+		scope:recipient = { latria_snapshot_papal_redemption_payment = yes }
+	}
+
 	on_accept = {
 		latria_force_papal_submission = {
 			REDEEMER = scope:actor
@@ -62,9 +66,17 @@ latria_papal_redemption_or_ruin = {
 	on_decline = {
 		scope:actor = {
 			start_war = {
-				cb = latria_papal_redemption_war
+				casus_belli = latria_papal_redemption_war
 				target = scope:recipient
 				target_title = scope:recipient.primary_title
+			}
+			random_character_war = {
+				limit = {
+					using_cb = latria_papal_redemption_war
+					primary_attacker = scope:actor
+					primary_defender = scope:recipient
+				}
+				latria_store_papal_redemption_war_payment = yes
 			}
 		}
 	}
