@@ -1,0 +1,13 @@
+﻿l_korean:
+ latria_flavor_published_confession_memory: "은밀한 갈망을 세상에 알림"
+ latria_flavor_published_confession_memory_desc: "나는 내 이야기를 필사하여 돌려 읽게 하면서 혼자 간직했던 갈망을 세상에 알렸다."
+ latria_flavor_published_confession_memory_desc_second_perspective: "당신은 자신의 이야기를 필사하여 돌려 읽게 하면서 혼자 간직했던 갈망을 세상에 알렸다."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName](은)는 자신의 이야기를 필사하여 돌려 읽게 하면서 은밀한 갈망을 세상에 알렸다."
+ latria_flavor_court_disgrace_memory: "궁정에서 평정심을 잃음"
+ latria_flavor_court_disgrace_memory_desc: "나는 옷매무새가 흐트러진 채 궁정에 서서 모인 영주들에게 추태를 보였다."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "당신은 옷매무새가 흐트러진 채 궁정에 서서 모인 영주들에게 추태를 보였다."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName](은)는 옷매무새가 흐트러진 채 궁정에 서서 모인 영주들에게 추태를 보였다."
+ latria_flavor_night_confidence_memory: "밤늦게 벗에게 속마음을 털어놓음"
+ latria_flavor_night_confidence_memory_desc: "나는 [confidant.GetName](와)과 밤늦도록 이야기하며 혼자 간직했던 속마음을 털어놓았다."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "당신은 [confidant.GetName](와)과 밤늦도록 이야기하며 혼자 간직했던 속마음을 털어놓았다."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName](은)는 [confidant.GetName](와)과 밤늦도록 이야기하며 사적인 고뇌를 털어놓았다."

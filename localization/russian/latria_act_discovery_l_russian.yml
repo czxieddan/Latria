@@ -1,0 +1,10 @@
+﻿l_russian:
+ latria_secret_same_sex_act: "Однополая связь"
+ latria_secret_same_sex_act_desc: "Плотская связь с персоной своего пола по имени [TARGET_CHARACTER.GetShortUIName]"
+ latria_secret_same_sex_act_tooltip_desc: "Этот персонаж предавался плотским утехам с кем-то своего пола. Разоблачение тайны даст обоим участникам свойство [GetTrait('sodomite').GetName(GetNullCharacter)]."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "Обнаружена однополая связь"
+ latria_same_sex_discovered.desc: "Вы узнали об однополой связи между персонажами [latria_secret_actor.GetShortUIName] и [latria_secret_partner.GetShortUIName]. Теперь их тайна в ваших руках."
+ latria_same_sex_exposed.t: "Связь разоблачена"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U] раскрывает однополую связь между персонажами [latria_secret_actor.GetShortUIName] и [latria_secret_partner.GetShortUIName]."

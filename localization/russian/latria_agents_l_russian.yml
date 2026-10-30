@@ -1,0 +1,24 @@
+﻿l_russian:
+ latria_agent_quack: "Шарлатан"
+ latria_agent_quack_i: "[success_chance_max_i]"
+ latria_agent_quack_desc: "#WEAK По этому пульсу я могу судить лишь о внезапной болезни.#!\n$EFFECT_LIST_BULLET$ Повышает [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Требуется [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('lifestyle_physician').GetName( GetNullCharacter )] и [GetTrait('lifestyle_herbalist').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('drunkard').GetName( GetNullCharacter )] и [GetTrait('impatient').GetName( GetNullCharacter )]"
+
+ latria_agent_go_between: "Посредник"
+ latria_agent_go_between_i: "[success_chance_max_i]"
+ latria_agent_go_between_desc: "#WEAK Мои слова дошли до самой постели.#!\n$EFFECT_LIST_BULLET$ Повышает [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Требуются [diplomacy_i] [diplomacy|E] и [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('lustful').GetName( GetNullCharacter )] и [GetTrait('gregarious').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('chaste').GetName( GetNullCharacter )] и [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_usher: "Проводник"
+ latria_agent_usher_i: "[scheme_speed_i]"
+ latria_agent_usher_desc: "#WEAK Этой ночью коридор пуст.#!\n$EFFECT_LIST_BULLET$ Сокращает [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Требуются [intrigue_i] [intrigue|E] и [prowess_i] [prowess|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('deceitful').GetName( GetNullCharacter )] и [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('honest').GetName( GetNullCharacter )] и [GetTrait('lazy').GetName( GetNullCharacter )]"
+
+ latria_agent_runner: "Гонец"
+ latria_agent_runner_i: "[scheme_speed_i]"
+ latria_agent_runner_desc: "#WEAK Послание уже отправлено.#!\n$EFFECT_LIST_BULLET$ Сокращает [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Требуются [diplomacy_i] [diplomacy|E] и [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('lifestyle_traveler').GetName( GetNullCharacter )] и [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('lazy').GetName( GetNullCharacter )] и [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_door: "Привратник"
+ latria_agent_door_i: "[secrecy_i]"
+ latria_agent_door_desc: "#WEAK Я присмотрю за дверью.#!\n$EFFECT_LIST_BULLET$ Повышает [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Требуются [intrigue_i] [intrigue|E] и [martial_i] [martial|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('patient').GetName( GetNullCharacter )] и [GetTrait('paranoid').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('impatient').GetName( GetNullCharacter )] и [GetTrait('trusting').GetName( GetNullCharacter )]"
+
+ latria_agent_cover: "Прикрытие"
+ latria_agent_cover_i: "[secrecy_i]"
+ latria_agent_cover_desc: "#WEAK Клянусь, это была болезнь.#!\n$EFFECT_LIST_BULLET$ Повышает [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Требуются [diplomacy_i] [diplomacy|E] и [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Помогают#! такие [traits|E], как [GetTrait('honest').GetName( GetNullCharacter )] и [GetTrait('loyal').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Мешают#! такие [traits|E], как [GetTrait('deceitful').GetName( GetNullCharacter )] и [GetTrait('disloyal').GetName( GetNullCharacter )]"

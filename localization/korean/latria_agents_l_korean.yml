@@ -1,0 +1,24 @@
+﻿l_korean:
+ latria_agent_quack: "돌팔이 의사"
+ latria_agent_quack_i: "[success_chance_max_i]"
+ latria_agent_quack_desc: "#WEAK 이 맥은 급병이라 할 수밖에 없겠군요.#!\n$EFFECT_LIST_BULLET$ [success_chance_max_i] [scheme_potential|E] 제공\n$EFFECT_LIST_BULLET$ [learning_i] [learning|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('lifestyle_physician').GetName( GetNullCharacter )] 및 [GetTrait('lifestyle_herbalist').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('drunkard').GetName( GetNullCharacter )] 및 [GetTrait('impatient').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"
+
+ latria_agent_go_between: "중개인"
+ latria_agent_go_between_i: "[success_chance_max_i]"
+ latria_agent_go_between_desc: "#WEAK 침상 곁까지 말을 전했습니다.#!\n$EFFECT_LIST_BULLET$ [success_chance_max_i] [scheme_potential|E] 제공\n$EFFECT_LIST_BULLET$ [diplomacy_i] [diplomacy|E] 및 [intrigue_i] [intrigue|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('lustful').GetName( GetNullCharacter )] 및 [GetTrait('gregarious').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('chaste').GetName( GetNullCharacter )] 및 [GetTrait('shy').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"
+
+ latria_agent_usher: "안내인"
+ latria_agent_usher_i: "[scheme_speed_i]"
+ latria_agent_usher_desc: "#WEAK 오늘 밤 복도에는 아무도 없습니다.#!\n$EFFECT_LIST_BULLET$ [scheme_speed_i] [scheme_speed|E] 감소\n$EFFECT_LIST_BULLET$ [intrigue_i] [intrigue|E] 및 [prowess_i] [prowess|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('deceitful').GetName( GetNullCharacter )] 및 [GetTrait('diligent').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('honest').GetName( GetNullCharacter )] 및 [GetTrait('lazy').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"
+
+ latria_agent_runner: "전령"
+ latria_agent_runner_i: "[scheme_speed_i]"
+ latria_agent_runner_desc: "#WEAK 전갈은 벌써 보냈습니다.#!\n$EFFECT_LIST_BULLET$ [scheme_speed_i] [scheme_speed|E] 감소\n$EFFECT_LIST_BULLET$ [diplomacy_i] [diplomacy|E] 및 [intrigue_i] [intrigue|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('lifestyle_traveler').GetName( GetNullCharacter )] 및 [GetTrait('diligent').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('lazy').GetName( GetNullCharacter )] 및 [GetTrait('shy').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"
+
+ latria_agent_door: "문지기"
+ latria_agent_door_i: "[secrecy_i]"
+ latria_agent_door_desc: "#WEAK 문은 제가 지킵니다.#!\n$EFFECT_LIST_BULLET$ [secrecy_i] [secrecy|E] 제공\n$EFFECT_LIST_BULLET$ [intrigue_i] [intrigue|E] 및 [martial_i] [martial|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('patient').GetName( GetNullCharacter )] 및 [GetTrait('paranoid').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('impatient').GetName( GetNullCharacter )] 및 [GetTrait('trusting').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"
+
+ latria_agent_cover: "위증인"
+ latria_agent_cover_i: "[secrecy_i]"
+ latria_agent_cover_desc: "#WEAK 병 때문이었다고 맹세할 수 있습니다.#!\n$EFFECT_LIST_BULLET$ [secrecy_i] [secrecy|E] 제공\n$EFFECT_LIST_BULLET$ [diplomacy_i] [diplomacy|E] 및 [learning_i] [learning|E] 필요\n$EFFECT_LIST_BULLET$ [GetTrait('honest').GetName( GetNullCharacter )] 및 [GetTrait('loyal').GetName( GetNullCharacter )] 등의 [traits|E]으로 #P 이익#!을 얻음\n$EFFECT_LIST_BULLET$ [GetTrait('deceitful').GetName( GetNullCharacter )] 및 [GetTrait('disloyal').GetName( GetNullCharacter )] 등의 [traits|E]으로 #N 불이익#!을 받음"

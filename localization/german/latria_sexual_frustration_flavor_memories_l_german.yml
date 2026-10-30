@@ -1,0 +1,13 @@
+﻿l_german:
+ latria_flavor_published_confession_memory: "machte eine private Sehnsucht öffentlich"
+ latria_flavor_published_confession_memory_desc: "Ich ließ meinen Bericht abschreiben und verbreiten und machte die Sehnsucht öffentlich, die ich für mich behalten hatte."
+ latria_flavor_published_confession_memory_desc_second_perspective: "Ihr ließt Euren Bericht abschreiben und verbreiten und machtet die Sehnsucht öffentlich, die Ihr für Euch behalten hattet."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName] ließ einen Bericht abschreiben und verbreiten und machte eine private Sehnsucht öffentlich."
+ latria_flavor_court_disgrace_memory: "verlor vor dem Hof die Fassung"
+ latria_flavor_court_disgrace_memory_desc: "Ich stand ungebührlich gekleidet vor dem Hof und ließ die versammelten Herren meinen Fehltritt sehen."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "Ihr standet ungebührlich gekleidet vor dem Hof und ließt die versammelten Herren Euren Fehltritt sehen."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName] stand ungebührlich gekleidet vor dem Hof und ließ die versammelten Herren den Fehltritt sehen."
+ latria_flavor_night_confidence_memory: "vertraute sich spät nachts einem Gefährten an"
+ latria_flavor_night_confidence_memory_desc: "Ich sprach mit [confidant.GetName] bis tief in die Nacht und erzählte, was ich für mich behalten hatte."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "Ihr spracht mit [confidant.GetName] bis tief in die Nacht und erzähltet, was Ihr für Euch behalten hattet."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName] sprach mit [confidant.GetName] bis tief in die Nacht und teilte eine private Last."

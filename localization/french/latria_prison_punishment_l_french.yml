@@ -1,0 +1,19 @@
+﻿l_french:
+ latria_force_pig_embrace_interaction: "Plaisirs charnels avec un porc"
+ latria_force_pig_embrace_interaction_desc: "Forcer [recipient.GetShortUINameNoTooltip] à des rapports charnels avec un porc devant témoins."
+
+ latria_prison_punishment.0001.t: "Plaisirs charnels avec un porc"
+ latria_prison_punishment.0001.desc: "Les gardes mènent un porc couinant dans le cachot. [recipient.GetShortUIName] recule, mais à mon ordre, ils [recipient.GetHerHim] contraignent à des rapports charnels avec l’animal sous les yeux des geôliers."
+ latria_prison_punishment.0001.a: "[recipient.GetHerHim|U] maintenir sur place"
+
+ latria_prison_punishment.0002.t: "L’impureté au grand jour"
+ latria_prison_punishment.0002.desc: "Sur l’ordre de [puppet_or_actor.GetShortUINamePossessive], les gardes me contraignent à des rapports charnels avec un porc devant les geôliers assemblés. Lorsqu’ils me relâchent, le récit de la sentence passe déjà de bouche en bouche."
+ latria_prison_punishment.0002.a: "Je m’en souviendrai"
+
+ trait_latria_unclean: "Impureté"
+ trait_latria_unclean_desc: "Ce personnage a subi en public des rapports charnels forcés avec un porc, et son nom en reste à jamais souillé."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] a subi en public des rapports charnels forcés avec un porc, et son nom en reste à jamais souillé."
+
+ nick_latria_the_unclean: "l’Impur"
+
+ latria_forced_pig_embrace_opinion: "M’a forcé à des rapports charnels avec un porc"

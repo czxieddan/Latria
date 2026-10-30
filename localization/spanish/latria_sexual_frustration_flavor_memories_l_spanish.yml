@@ -1,0 +1,13 @@
+﻿l_spanish:
+ latria_flavor_published_confession_memory: "hizo público un anhelo privado"
+ latria_flavor_published_confession_memory_desc: "Mandé copiar y difundir mi relato e hice público el anhelo que había guardado para mí."
+ latria_flavor_published_confession_memory_desc_second_perspective: "mandaste copiar y difundir tu relato e hiciste público el anhelo que habías guardado para ti."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName] mandó copiar y difundir un relato e hizo público un anhelo privado."
+ latria_flavor_court_disgrace_memory: "perdió la compostura ante la corte"
+ latria_flavor_court_disgrace_memory_desc: "Me presenté con vestimenta indecorosa ante la corte y dejé que los señores reunidos presenciaran mi falta."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "te presentaste con vestimenta indecorosa ante la corte y dejaste que los señores reunidos presenciaran tu falta."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName] se presentó con vestimenta indecorosa ante la corte y dejó que los señores reunidos presenciaran la falta."
+ latria_flavor_night_confidence_memory: "se confió a una persona cercana hasta bien entrada la noche"
+ latria_flavor_night_confidence_memory_desc: "Hablé con [confidant.GetName] hasta bien entrada la noche y compartí lo que había guardado para mí."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "hablaste con [confidant.GetName] hasta bien entrada la noche y compartiste lo que habías guardado para ti."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName] habló con [confidant.GetName] hasta bien entrada la noche y compartió una preocupación privada."

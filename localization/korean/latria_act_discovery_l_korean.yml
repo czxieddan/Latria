@@ -1,0 +1,10 @@
+﻿l_korean:
+ latria_secret_same_sex_act: "동성과의 밀회"
+ latria_secret_same_sex_act_desc: "[TARGET_CHARACTER.GetShortUIName](와)과 동성 간의 밀회를 가졌음"
+ latria_secret_same_sex_act_tooltip_desc: "해당 인물은 동성과 정사를 나눴습니다. 이 비밀을 폭로하면 두 인물 모두 [GetTrait('sodomite').GetName(GetNullCharacter)] 특성을 얻습니다."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "동성과의 밀회 발견"
+ latria_same_sex_discovered.desc: "[latria_secret_actor.GetShortUIName](와)과 [latria_secret_partner.GetShortUIName] 사이의 동성 간의 밀회를 알아냈습니다. 이제 그 비밀은 당신 손에 있습니다."
+ latria_same_sex_exposed.t: "밀회 폭로"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U](이)가 [latria_secret_actor.GetShortUIName](와)과 [latria_secret_partner.GetShortUIName] 사이의 동성 간의 밀회를 폭로했습니다."

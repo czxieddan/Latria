@@ -1,0 +1,10 @@
+﻿l_german:
+ latria_secret_same_sex_act: "Gleichgeschlechtliche Liebschaft"
+ latria_secret_same_sex_act_desc: "Hatte eine gleichgeschlechtliche Liebschaft mit [TARGET_CHARACTER.GetShortUIName]"
+ latria_secret_same_sex_act_tooltip_desc: "Dieser Charakter hatte eine fleischliche Verbindung mit einer Person desselben Geschlechts. Die Enthüllung dieses Geheimnisses verleiht beiden Beteiligten die Eigenschaft [GetTrait('sodomite').GetName(GetNullCharacter)]."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "Gleichgeschlechtliche Liebschaft entdeckt"
+ latria_same_sex_discovered.desc: "Ihr habt eine gleichgeschlechtliche Liebschaft zwischen [latria_secret_actor.GetShortUIName] und [latria_secret_partner.GetShortUIName] entdeckt. Ihr Geheimnis liegt nun in Eurer Hand."
+ latria_same_sex_exposed.t: "Liebschaft enthüllt"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U] hat die gleichgeschlechtliche Liebschaft zwischen [latria_secret_actor.GetShortUIName] und [latria_secret_partner.GetShortUIName] enthüllt."

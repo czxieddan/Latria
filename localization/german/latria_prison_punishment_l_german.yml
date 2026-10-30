@@ -1,0 +1,19 @@
+﻿l_german:
+ latria_force_pig_embrace_interaction: "Fleischliche Freuden mit einem Schwein"
+ latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip] vor Zeugen zu fleischlichen Freuden mit einem Schwein zwingen."
+
+ latria_prison_punishment.0001.t: "Fleischliche Freuden mit einem Schwein"
+ latria_prison_punishment.0001.desc: "Die Wachen führen ein quiekendes Schwein in den Kerker. [recipient.GetShortUIName] weicht zurück, doch auf meinen Befehl zwingen sie [recipient.GetHerHim] vor den Augen der Kerkermeister zu fleischlichen Freuden mit dem Tier."
+ latria_prison_punishment.0001.a: "[recipient.GetHerHim] dort festhalten"
+
+ latria_prison_punishment.0002.t: "Unrein vor aller Augen"
+ latria_prison_punishment.0002.desc: "Auf [puppet_or_actor.GetShortUINamePossessive] Befehl zwingen mich die Wachen vor den versammelten Kerkermeistern zu fleischlichen Freuden mit einem Schwein. Als sie mich loslassen, geht die Nachricht von der Strafe bereits von Mund zu Mund."
+ latria_prison_punishment.0002.a: "Das werde ich nicht vergessen"
+
+ trait_latria_unclean: "Unrein"
+ trait_latria_unclean_desc: "Dieser Charakter wurde öffentlich zu fleischlichen Freuden mit einem Schwein gezwungen und trägt seither einen unauslöschlichen Makel auf seinem Namen."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] wurde öffentlich zu fleischlichen Freuden mit einem Schwein gezwungen. Auf [ROOT.GetCharacter.Custom('DE_PRO_POS_S_3P')]em Namen liegt seither ein unauslöschlicher Makel."
+
+ nick_latria_the_unclean: "der Unreine"
+
+ latria_forced_pig_embrace_opinion: "Zwang mich zu fleischlichen Freuden mit einem Schwein"

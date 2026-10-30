@@ -1,0 +1,10 @@
+﻿l_spanish:
+ latria_secret_same_sex_act: "Relación entre personas del mismo sexo"
+ latria_secret_same_sex_act_desc: "Ha mantenido una relación con [TARGET_CHARACTER.GetShortUIName], de su mismo sexo"
+ latria_secret_same_sex_act_tooltip_desc: "Este personaje ha mantenido relaciones carnales con alguien de su mismo sexo. Revelar este secreto otorga a ambos participantes el rasgo [GetTrait('sodomite').GetName(GetNullCharacter)]."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "Relación entre personas del mismo sexo descubierta"
+ latria_same_sex_discovered.desc: "Has descubierto una relación entre [latria_secret_actor.GetShortUIName] y [latria_secret_partner.GetShortUIName], ambos del mismo sexo. Su secreto está ahora en tus manos."
+ latria_same_sex_exposed.t: "Relación revelada"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U] ha revelado la relación entre [latria_secret_actor.GetShortUIName] y [latria_secret_partner.GetShortUIName], ambos del mismo sexo."

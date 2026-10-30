@@ -1,0 +1,19 @@
+﻿l_japanese:
+ latria_force_pig_embrace_interaction: "豚との交わり"
+ latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip]に、人前で豚との肉体の交わりを強いる。"
+
+ latria_prison_punishment.0001.t: "豚との交わり"
+ latria_prison_punishment.0001.desc: "衛兵が鳴き叫ぶ豚を地下牢に引き入れた。[recipient.GetShortUIName]は身を引くが、私の命令で、衛兵は[recipient.GetHerHim]に獄吏たちの前で豚との肉体の交わりを強いた。"
+ latria_prison_punishment.0001.a: "[recipient.GetHerHim]をそこに押さえておけ"
+
+ latria_prison_punishment.0002.t: "衆目に晒された穢れ"
+ latria_prison_punishment.0002.desc: "[puppet_or_actor.GetShortUINamePossessive]の命令で、衛兵は集まった獄吏たちの前で私に豚との肉体の交わりを強いた。解放された時には、刑の話がすでに人々の間に広まっていた。"
+ latria_prison_punishment.0002.a: "この仕打ちは忘れない"
+
+ trait_latria_unclean: "穢れた者"
+ trait_latria_unclean_desc: "この人物は衆目の前で豚との肉体の交わりを強いられ、その名に消えない汚点を負っている。"
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]は衆目の前で豚との肉体の交わりを強いられ、[ROOT.GetCharacter.GetHerHis]の名に消えない汚点を負っている。"
+
+ nick_latria_the_unclean: "穢れた者"
+
+ latria_forced_pig_embrace_opinion: "豚との交わりを強いた"

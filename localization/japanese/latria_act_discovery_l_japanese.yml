@@ -1,0 +1,10 @@
+﻿l_japanese:
+ latria_secret_same_sex_act: "同性との情事"
+ latria_secret_same_sex_act_desc: "[TARGET_CHARACTER.GetShortUIName]と同性同士の情事を持った"
+ latria_secret_same_sex_act_tooltip_desc: "この人物は同性と肉体の交わりを持った。この秘密が暴露されると、双方が[GetTrait('sodomite').GetName(GetNullCharacter)]の特性を得る。"
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "同性との情事を発見"
+ latria_same_sex_discovered.desc: "あなたは[latria_secret_actor.GetShortUIName]と[latria_secret_partner.GetShortUIName]の同性同士の情事を発見した。その秘密は今やあなたの手中にある。"
+ latria_same_sex_exposed.t: "暴かれた情事"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U]は[latria_secret_actor.GetShortUIName]と[latria_secret_partner.GetShortUIName]の同性同士の情事を暴露した。"

@@ -1,0 +1,19 @@
+﻿l_korean:
+ latria_force_pig_embrace_interaction: "돼지와의 정사"
+ latria_force_pig_embrace_interaction_desc: "사람들이 보는 앞에서 [recipient.GetShortUINameNoTooltip]에게 돼지와의 정사를 강요합니다."
+
+ latria_prison_punishment.0001.t: "돼지와의 정사"
+ latria_prison_punishment.0001.desc: "경비병들이 꽥꽥거리는 돼지를 지하 감옥으로 끌고 온다. [recipient.GetShortUIName](은)는 뒷걸음질 치지만, 내 명령에 경비병들은 [recipient.GetHerHim]에게 간수들이 보는 앞에서 돼지와의 정사를 강요한다."
+ latria_prison_punishment.0001.a: "[recipient.GetHerHim](을)를 거기 붙잡아 둬라"
+
+ latria_prison_punishment.0002.t: "모두 앞에서 더럽혀지다"
+ latria_prison_punishment.0002.desc: "[puppet_or_actor.GetShortUINamePossessive] 명에 따라 경비병들이 모여든 간수들 앞에서 나에게 돼지와의 정사를 강요한다. 풀려날 무렵에는 벌써 그 형벌에 관한 말이 입에서 입으로 퍼지고 있다."
+ latria_prison_punishment.0002.a: "이 일을 잊지 않겠다"
+
+ trait_latria_unclean: "불결한"
+ trait_latria_unclean_desc: "해당 인물은 공개적으로 돼지와의 정사를 강요당해 명성에 씻을 수 없는 오점이 남았습니다."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip](은)는 공개적으로 돼지와의 정사를 강요당해 [ROOT.GetCharacter.GetHerHis] 명성에 씻을 수 없는 오점이 남았습니다."
+
+ nick_latria_the_unclean: "불결한 자"
+
+ latria_forced_pig_embrace_opinion: "나에게 돼지와의 정사를 강요함"

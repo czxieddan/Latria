@@ -1,0 +1,19 @@
+﻿l_polish:
+ latria_force_pig_embrace_interaction: "Cielesne uciechy ze świnią"
+ latria_force_pig_embrace_interaction_desc: "Zmuś do cielesnych uciech ze świnią na oczach świadków osobę, którą jest [recipient.GetShortUINameNoTooltip]."
+
+ latria_prison_punishment.0001.t: "Cielesne uciechy ze świnią"
+ latria_prison_punishment.0001.desc: "Strażnicy wprowadzają do lochu kwiczącą świnię. [recipient.GetShortUIName] cofa się, lecz na mój rozkaz zmuszają [Select_CString( recipient.IsFemale, 'ją', 'go' )] do cielesnych uciech ze zwierzęciem na oczach dozorców."
+ latria_prison_punishment.0001.a: "Przytrzymać [Select_CString( recipient.IsFemale, 'ją', 'go' )] tam"
+
+ latria_prison_punishment.0002.t: "Nieczystość na oczach wszystkich"
+ latria_prison_punishment.0002.desc: "Na rozkaz [puppet_or_actor.GetShortUINamePossessive] strażnicy zmuszają mnie do cielesnych uciech ze świnią na oczach zebranych dozorców. Gdy puszczają, wieść o wyroku już przechodzi z ust do ust."
+ latria_prison_punishment.0002.a: "Zapamiętam to"
+
+ trait_latria_unclean: "Postać nieczysta"
+ trait_latria_unclean_desc: "Tę postać publicznie zmuszono do cielesnych uciech ze świnią, trwale plamiąc jej imię."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] to osoba publicznie zmuszona do cielesnych uciech ze świnią. Na [ROOT.GetCharacter.GetHerHis] imieniu ciąży trwała skaza."
+
+ nick_latria_the_unclean: "Nieczysty"
+
+ latria_forced_pig_embrace_opinion: "Przymus do cielesnych uciech ze świnią"

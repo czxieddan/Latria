@@ -1,0 +1,13 @@
+﻿l_polish:
+ latria_flavor_published_confession_memory: "ujawnienie skrywanego pragnienia"
+ latria_flavor_published_confession_memory_desc: "Z mojego polecenia spisano i rozpowszechniono moją relację, ujawniając pragnienie, które dotąd skrywało moje serce."
+ latria_flavor_published_confession_memory_desc_second_perspective: "z twojego polecenia spisano i rozpowszechniono twoją relację, ujawniając pragnienie, które dotąd skrywało twoje serce."
+ latria_flavor_published_confession_memory_desc_third_perspective: "Z polecenia postaci [owner.GetName] spisano i rozpowszechniono relację ujawniającą skrywane pragnienie."
+ latria_flavor_court_disgrace_memory: "utrata opanowania przed dworem"
+ latria_flavor_court_disgrace_memory_desc: "Zgromadzeni możni ujrzeli moje uchybienie, gdy przyszło mi stanąć przed dworem w nieodpowiednim stroju."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "zgromadzeni możni ujrzeli twoje uchybienie, gdy przyszło ci stanąć przed dworem w nieodpowiednim stroju."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "Zgromadzeni możni ujrzeli uchybienie postaci [owner.GetName], stojącej przed dworem w nieodpowiednim stroju."
+ latria_flavor_night_confidence_memory: "zwierzenia towarzyszowi późną nocą"
+ latria_flavor_night_confidence_memory_desc: "Rozmowa z osobą [confidant.GetName] trwała do późnej nocy i pozwoliła mi wyjawić skrywane troski."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "rozmowa z osobą [confidant.GetName] trwała do późnej nocy i pozwoliła ci wyjawić skrywane troski."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "Rozmowa z osobą [confidant.GetName] trwała do późnej nocy i pozwoliła postaci [owner.GetName] wyjawić skrywane troski."

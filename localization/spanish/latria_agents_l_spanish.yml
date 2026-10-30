@@ -1,0 +1,24 @@
+﻿l_spanish:
+ latria_agent_quack: "Matasanos"
+ latria_agent_quack_i: "[success_chance_max_i]"
+ latria_agent_quack_desc: "#WEAK Por este pulso, solo puedo decir que es una enfermedad repentina.#!\n$EFFECT_LIST_BULLET$ Proporciona [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Requiere [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('lifestyle_physician').GetName( GetNullCharacter )] y [GetTrait('lifestyle_herbalist').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('drunkard').GetName( GetNullCharacter )] e [GetTrait('impatient').GetName( GetNullCharacter )]"
+
+ latria_agent_go_between: "Intermediario"
+ latria_agent_go_between_i: "[success_chance_max_i]"
+ latria_agent_go_between_desc: "#WEAK Llevé el mensaje hasta la almohada.#!\n$EFFECT_LIST_BULLET$ Proporciona [success_chance_max_i] [scheme_potential|E]\n$EFFECT_LIST_BULLET$ Requiere [diplomacy_i] [diplomacy|E] e [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('lustful').GetName( GetNullCharacter )] y [GetTrait('gregarious').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('chaste').GetName( GetNullCharacter )] y [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_usher: "Guía"
+ latria_agent_usher_i: "[scheme_speed_i]"
+ latria_agent_usher_desc: "#WEAK Esta noche el pasillo está vacío.#!\n$EFFECT_LIST_BULLET$ Reduce [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Requiere [intrigue_i] [intrigue|E] y [prowess_i] [prowess|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('deceitful').GetName( GetNullCharacter )] y [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('honest').GetName( GetNullCharacter )] y [GetTrait('lazy').GetName( GetNullCharacter )]"
+
+ latria_agent_runner: "Mensajero"
+ latria_agent_runner_i: "[scheme_speed_i]"
+ latria_agent_runner_desc: "#WEAK El mensaje ya ha salido.#!\n$EFFECT_LIST_BULLET$ Reduce [scheme_speed_i] [scheme_speed|E]\n$EFFECT_LIST_BULLET$ Requiere [diplomacy_i] [diplomacy|E] e [intrigue_i] [intrigue|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('lifestyle_traveler').GetName( GetNullCharacter )] y [GetTrait('diligent').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('lazy').GetName( GetNullCharacter )] y [GetTrait('shy').GetName( GetNullCharacter )]"
+
+ latria_agent_door: "Portero"
+ latria_agent_door_i: "[secrecy_i]"
+ latria_agent_door_desc: "#WEAK Yo vigilo la puerta.#!\n$EFFECT_LIST_BULLET$ Proporciona [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Requiere [intrigue_i] [intrigue|E] y [martial_i] [martial|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('patient').GetName( GetNullCharacter )] y [GetTrait('paranoid').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('impatient').GetName( GetNullCharacter )] y [GetTrait('trusting').GetName( GetNullCharacter )]"
+
+ latria_agent_cover: "Coartada"
+ latria_agent_cover_i: "[secrecy_i]"
+ latria_agent_cover_desc: "#WEAK Puedo jurar que fue una enfermedad.#!\n$EFFECT_LIST_BULLET$ Proporciona [secrecy_i] [secrecy|E]\n$EFFECT_LIST_BULLET$ Requiere [diplomacy_i] [diplomacy|E] y [learning_i] [learning|E]\n$EFFECT_LIST_BULLET$ #P Se beneficia#! de [traits|E] como [GetTrait('honest').GetName( GetNullCharacter )] y [GetTrait('loyal').GetName( GetNullCharacter )]\n$EFFECT_LIST_BULLET$ #N Se ve perjudicado#! por [traits|E] como [GetTrait('deceitful').GetName( GetNullCharacter )] y [GetTrait('disloyal').GetName( GetNullCharacter )]"

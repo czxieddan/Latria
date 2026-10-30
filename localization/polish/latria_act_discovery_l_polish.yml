@@ -1,0 +1,10 @@
+﻿l_polish:
+ latria_secret_same_sex_act: "Zbliżenie z osobą tej samej płci"
+ latria_secret_same_sex_act_desc: "Ma za sobą zbliżenie z osobą tej samej płci — [TARGET_CHARACTER.GetShortUIName]"
+ latria_secret_same_sex_act_tooltip_desc: "Ta postać współżyła z osobą tej samej płci. Ujawnienie tego sekretu nada obu uczestnikom cechę [GetTrait('sodomite').GetName(GetNullCharacter)]."
+ latria_secret_same_sex_act_type_desc: "$latria_secret_same_sex_act_tooltip_desc$"
+
+ latria_same_sex_discovered.t: "Odkryto zbliżenie osób tej samej płci"
+ latria_same_sex_discovered.desc: "Odkrywasz zbliżenie osób tej samej płci: [latria_secret_actor.GetShortUIName] i [latria_secret_partner.GetShortUIName]. Ich sekret jest teraz w twoich rękach."
+ latria_same_sex_exposed.t: "Ujawnione zbliżenie"
+ latria_same_sex_exposed.desc: "[secret_exposer.GetShortUIName|U] ujawnia zbliżenie osób tej samej płci: [latria_secret_actor.GetShortUIName] i [latria_secret_partner.GetShortUIName]."

@@ -1,0 +1,13 @@
+﻿l_russian:
+ latria_flavor_published_confession_memory: "Обнародованное тайное желание"
+ latria_flavor_published_confession_memory_desc: "По моему велению мой рассказ переписали и распространили, обнародовав желание, которое прежде оставалось тайной."
+ latria_flavor_published_confession_memory_desc_second_perspective: "по вашему велению ваш рассказ переписали и распространили, обнародовав желание, которое прежде оставалось тайной."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName] велит переписать и распространить свой рассказ, обнародовав тайное желание."
+ latria_flavor_court_disgrace_memory: "Потеря самообладания при дворе"
+ latria_flavor_court_disgrace_memory_desc: "Мне довелось предстать перед двором в неподобающем наряде, позволив собравшимся вельможам увидеть мою оплошность."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "вы предстали перед двором в неподобающем наряде, позволив собравшимся вельможам увидеть вашу оплошность."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName] предстаёт перед двором в неподобающем наряде, позволяя собравшимся вельможам увидеть эту оплошность."
+ latria_flavor_night_confidence_memory: "Откровенный разговор глубокой ночью"
+ latria_flavor_night_confidence_memory_desc: "Наш разговор с [confidant.GetName] затянулся до глубокой ночи, и мне удалось рассказать о том, что прежде оставалось невысказанным."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "ваш разговор с [confidant.GetName] затянулся до глубокой ночи, и вы рассказали о том, что прежде оставалось невысказанным."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName] беседует с [confidant.GetName] до глубокой ночи и делится сокровенным."

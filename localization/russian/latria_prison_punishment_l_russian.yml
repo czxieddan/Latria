@@ -1,0 +1,19 @@
+﻿l_russian:
+ latria_force_pig_embrace_interaction: "Плотские утехи со свиньёй"
+ latria_force_pig_embrace_interaction_desc: "Заставить персону по имени [recipient.GetShortUINameNoTooltip] предаться плотским утехам со свиньёй при свидетелях."
+
+ latria_prison_punishment.0001.t: "Плотские утехи со свиньёй"
+ latria_prison_punishment.0001.desc: "Стражники приводят в темницу визжащую свинью. [recipient.GetShortUIName] отшатывается, но по моему приказу они заставляют [Select_CString(recipient.IsFemale, 'её', 'его')] предаться с ней плотским утехам на глазах у тюремщиков."
+ latria_prison_punishment.0001.a: "Удерживать [Select_CString(recipient.IsFemale, 'её', 'его')] на месте"
+
+ latria_prison_punishment.0002.t: "Нечистота перед всеми"
+ latria_prison_punishment.0002.desc: "По приказу персоны по имени [puppet_or_actor.GetShortUINamePossessive] стражники заставляют меня предаться плотским утехам со свиньёй перед собравшимися тюремщиками. Когда меня отпускают, весть о наказании уже передаётся из уст в уста."
+ latria_prison_punishment.0002.a: "Я это запомню"
+
+ trait_latria_unclean: "Нечистота"
+ trait_latria_unclean_desc: "Этого персонажа публично принудили к плотским утехам со свиньёй, навеки запятнав его имя."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] терпит публичное принуждение к плотским утехам со свиньёй, и [ROOT.GetCharacter.GetHerHis] имя навеки запятнано."
+
+ nick_latria_the_unclean: "Нечистый"
+
+ latria_forced_pig_embrace_opinion: "Принуждение к плотским утехам со свиньёй"

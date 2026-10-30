@@ -1,0 +1,19 @@
+﻿l_spanish:
+ latria_force_pig_embrace_interaction: "Placer carnal con un cerdo"
+ latria_force_pig_embrace_interaction_desc: "Obligar a [recipient.GetShortUINameNoTooltip] a unirse carnalmente con un cerdo ante testigos."
+
+ latria_prison_punishment.0001.t: "Placer carnal con un cerdo"
+ latria_prison_punishment.0001.desc: "Los guardias llevan un cerdo que chilla a la mazmorra. [recipient.GetShortUIName] retrocede, pero, a mi orden, [recipient.GetHerHim] obligan a unirse carnalmente con el animal ante los carceleros."
+ latria_prison_punishment.0001.a: "Sujetar[recipient.GetHerHim] ahí"
+
+ latria_prison_punishment.0002.t: "Impureza ante todos"
+ latria_prison_punishment.0002.desc: "Por orden [puppet_or_actor.GetShortUINamePossessive], los guardias me obligan a unirme carnalmente con un cerdo ante los carceleros reunidos. Cuando me sueltan, la noticia de la condena ya corre de boca en boca."
+ latria_prison_punishment.0002.a: "Recordaré esto"
+
+ trait_latria_unclean: "Impuro"
+ trait_latria_unclean_desc: "Este personaje fue obligado públicamente a unirse carnalmente con un cerdo y su nombre lleva una mancha imborrable."
+ trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] fue obligado públicamente a unirse carnalmente con un cerdo y [ROOT.GetCharacter.GetHerHis] nombre lleva una mancha imborrable."
+
+ nick_latria_the_unclean: "el Impuro"
+
+ latria_forced_pig_embrace_opinion: "Me obligó a unirme carnalmente con un cerdo"

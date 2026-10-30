@@ -1,0 +1,13 @@
+﻿l_french:
+ latria_flavor_published_confession_memory: "a rendu public un désir intime"
+ latria_flavor_published_confession_memory_desc: "J’ai fait copier et circuler mon récit, révélant le désir que je gardais pour moi."
+ latria_flavor_published_confession_memory_desc_second_perspective: "vous avez fait copier et circuler votre récit, révélant le désir que vous gardiez pour vous."
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName] a fait copier et circuler son récit, révélant un désir intime."
+ latria_flavor_court_disgrace_memory: "a perdu toute retenue devant la cour"
+ latria_flavor_court_disgrace_memory_desc: "J’ai paru en tenue inconvenante devant la cour, laissant les seigneurs réunis assister à mon écart."
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "vous avez paru en tenue inconvenante devant la cour, laissant les seigneurs réunis assister à votre écart."
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName] a paru en tenue inconvenante devant la cour, laissant les seigneurs réunis assister à cet écart."
+ latria_flavor_night_confidence_memory: "a fait des confidences à un proche tard dans la nuit"
+ latria_flavor_night_confidence_memory_desc: "J’ai parlé avec [confidant.GetName] jusque tard dans la nuit et confié ce que je gardais pour moi."
+ latria_flavor_night_confidence_memory_desc_second_perspective: "vous avez parlé avec [confidant.GetName] jusque tard dans la nuit et confié ce que vous gardiez pour vous."
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName] a parlé avec [confidant.GetName] jusque tard dans la nuit et confié ses tourments intimes."

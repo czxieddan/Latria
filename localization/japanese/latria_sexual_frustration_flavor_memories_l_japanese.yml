@@ -1,0 +1,13 @@
+﻿l_japanese:
+ latria_flavor_published_confession_memory: "胸に秘めた渇望を公にした"
+ latria_flavor_published_confession_memory_desc: "私は自分の告白を書き写させて広め、胸に秘めていた渇望を公にした。"
+ latria_flavor_published_confession_memory_desc_second_perspective: "あなたは自分の告白を書き写させて広め、胸に秘めていた渇望を公にした。"
+ latria_flavor_published_confession_memory_desc_third_perspective: "[owner.GetName]は自分の告白を書き写させて広め、私的な渇望を公にした。"
+ latria_flavor_court_disgrace_memory: "宮廷で失態をさらした"
+ latria_flavor_court_disgrace_memory_desc: "私は身なりの乱れた姿で宮廷に立ち、集まった諸侯に失態を見られた。"
+ latria_flavor_court_disgrace_memory_desc_second_perspective: "あなたは身なりの乱れた姿で宮廷に立ち、集まった諸侯に失態を見られた。"
+ latria_flavor_court_disgrace_memory_desc_third_perspective: "[owner.GetName]は身なりの乱れた姿で宮廷に立ち、集まった諸侯に失態を見られた。"
+ latria_flavor_night_confidence_memory: "夜更けに知人へ胸の内を明かした"
+ latria_flavor_night_confidence_memory_desc: "私は[confidant.GetName]と夜更けまで語り、胸にしまっていたことを打ち明けた。"
+ latria_flavor_night_confidence_memory_desc_second_perspective: "あなたは[confidant.GetName]と夜更けまで語り、胸にしまっていたことを打ち明けた。"
+ latria_flavor_night_confidence_memory_desc_third_perspective: "[owner.GetName]は[confidant.GetName]と夜更けまで語り、私的な悩みを打ち明けた。"
