@@ -1,0 +1,33 @@
+[h1]Latria[/h1]
+
+[i]Ninguna corona gobierna el deseo. Ningún trono escapa al juicio.[/i]
+
+Tu casa tiene un nombre que defender, una descendencia que asegurar y enemigos que aguardan un momento de debilidad. Sin embargo, quien lleva la corona alberga anhelos que el deber no puede acallar.
+
+La confidencia de un amante puede convertirse en una acusación en la corte. Un voto roto puede poner en duda la autoridad sagrada. Lo que empieza tras una puerta cerrada puede acabar con ejércitos al pie de las murallas.
+
+[b]Latria[/b] es una expansión sobre sexualidad y romance para [b]Crusader Kings III[/b], que incorpora el deseo, la devoción y el dominio a la historia de tu dinastía. Entre los placeres de la carne y las exigencias del alma, un gobernante puede hallar consuelo, salvación o ruina.
+
+[h2]El corazón bajo la corona[/h2]
+
+El matrimonio sirve a tu casa. El amor puede pedirte algo distinto. Cónyuges, amantes, lealtad y traición dan a la vida privada un lugar junto a las ambiciones de una dinastía. Quienes más cerca están de ti pueden convertirse en tu refugio, tu debilidad o quienes recuerden lo que los cronistas dejan sin escribir.
+
+[h2]El precio del placer[/h2]
+
+Tu rango no te libra de las exigencias del cuerpo. El deseo insatisfecho pesa sobre el espíritu; entregarse al placer también puede dejar heridas. La satisfacción, la contención y el agotamiento hacen de la búsqueda del placer una parte de la vida de un gobernante, con consecuencias que no desaparecen cuando se abre la puerta de la alcoba.
+
+[h2]Ante dioses y príncipes[/h2]
+
+Los votos atan a los devotos, y el escándalo alcanza incluso a las más altas esferas del poder. La conciencia, el juicio religioso y el derecho a gobernar pueden chocar. Una fe que exige obediencia puede tener que afrontar los fallos de sus propios líderes; un gobernante acusado de pecado puede responder con sumisión o rebeldía.
+
+[h2]De los secretos a la soberanía[/h2]
+
+La intimidad puede amparar una ambición o dejarla al descubierto. Los secretos se convierten en instrumentos de presión, las acusaciones en motivos de conflicto, y las disputas por la virtud pueden transformarse en luchas por las coronas. En Latria, la distancia entre la deshonra privada y la agitación de todo un reino puede ser más corta de lo que cualquier soberano espera.
+
+[h2]Una crónica que sigue escribiéndose[/h2]
+
+Latria sigue creciendo en torno a una visión a largo plazo de un mundo medieval donde el deseo, la fe y la ambición dinástica se moldean entre sí. Nuevas historias y perspectivas llevarán esa visión más lejos.
+
+Escritores, traductores, artistas, creadores de scripts y jugadores están invitados a dar forma a lo que vendrá. Comparte ideas, informa de problemas o contribuye en el [url=https://github.com/czxieddan/Latria]repositorio de GitHub[/url].
+
+[b]Nota sobre el contenido:[/b] Este mod incluye temas para adultos, como contenido sexual, coacción, violencia y conflictos religiosos.

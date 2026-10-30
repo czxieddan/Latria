@@ -2,7 +2,7 @@
 
 **肉欲、信仰与王权。**
 
-[English](../README.md)
+[English](../README.md) | **简体中文** | [Français](README_fr.md) | [Deutsch](README_de.md) | [Español](README_es.md) | [Русский](README_ru.md) | [한국어](README_ko.md) | [日本語](README_ja.md) | [Polski](README_pl.md)
 
 帝国在神圣的旗帜下崛起，王朝凭借血脉与婚姻延续。然而，一扇寝宫门后的秘密，也可能动摇数代人建立的基业。
 

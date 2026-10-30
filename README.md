@@ -2,7 +2,7 @@
 
 **Flesh. Faith. Dominion.**
 
-[简体中文](docs/README_zh-CN.md)
+**English** | [简体中文](docs/README_zh-CN.md) | [Français](docs/README_fr.md) | [Deutsch](docs/README_de.md) | [Español](docs/README_es.md) | [Русский](docs/README_ru.md) | [한국어](docs/README_ko.md) | [日本語](docs/README_ja.md) | [Polski](docs/README_pl.md)
 
 Empires rise beneath sacred banners. Dynasties endure through blood and marriage. Yet a secret behind a chamber door can threaten what generations have built.
 

@@ -1,0 +1,33 @@
+[h1]Latria[/h1]
+
+[i]Keine Krone gebietet dem Begehren. Kein Thron entgeht dem Urteil.[/i]
+
+Dein Haus muss seinen Namen verteidigen und für Erben sorgen. Feinde warten auf einen Moment der Schwäche. Doch der Herrscher unter der Krone hat Sehnsüchte, die keine Pflicht zum Schweigen bringen kann.
+
+Was ein Geliebter dir anvertraut, kann zur Anklage am Hof werden. Ein gebrochenes Gelübde kann heilige Autorität infrage stellen. Was hinter einer verschlossenen Tür beginnt, kann mit Heeren vor den Mauern enden.
+
+[b]Latria[/b] ist eine Erweiterung für [b]Crusader Kings III[/b] über Sexualität und romantische Beziehungen, die Begehren, Frömmigkeit und Herrschaft in die Geschichte deiner Dynastie einbindet. Zwischen den Freuden des Fleisches und den Ansprüchen der Seele kann ein Herrscher Trost, Erlösung oder Verderben finden.
+
+[h2]Das Herz unter der Krone[/h2]
+
+Die Ehe dient deinem Haus. Die Liebe verlangt vielleicht etwas anderes von dir. Ehepartner, Geliebte, Treue und Verrat geben dem Privatleben einen Platz neben den Ambitionen einer Dynastie. Die Menschen, die dir am nächsten stehen, können deine Zuflucht, deine Schwäche oder jene sein, die sich an das erinnern, was die Chronisten ungeschrieben lassen.
+
+[h2]Der Preis der Lust[/h2]
+
+Dein Rang befreit dich nicht von den Ansprüchen des Körpers. Unerfülltes Begehren lastet auf dem Geist; auch Genuss kann Wunden hinterlassen. Befriedigung, Enthaltsamkeit und Erschöpfung machen das Streben nach Lust zu einem Teil des Herrscherlebens, mit Folgen, die nicht verschwinden, sobald sich die Tür des Gemachs öffnet.
+
+[h2]Vor Göttern und Fürsten[/h2]
+
+Gelübde binden die Gläubigen, und Skandale erreichen selbst die höchsten Sitze der Macht. Gewissen, religiöses Urteil und das Recht zu herrschen können aufeinanderprallen. Ein Glaube, der Gehorsam fordert, muss sich womöglich dem Versagen seiner eigenen Oberhäupter stellen; ein der Sünde beschuldigter Herrscher kann mit Unterwerfung oder Widerstand antworten.
+
+[h2]Von Geheimnissen zur Herrschaft[/h2]
+
+Intimität kann Ehrgeiz schützen oder offenlegen. Geheimnisse werden zu Druckmitteln, Anschuldigungen zu Anlässen für Konflikte, und aus Kämpfen um Tugend können Kämpfe um Kronen werden. In Latria kann der Weg von privater Schande zu den Erschütterungen eines ganzen Reiches kürzer sein, als ein Herrscher je erwartet.
+
+[h2]Eine Chronik, die weitergeschrieben wird[/h2]
+
+Latria wächst weiter mit der langfristigen Vision einer mittelalterlichen Welt, in der Begehren, Glaube und dynastischer Ehrgeiz einander prägen. Neue Geschichten und Blickwinkel werden diese Vision weitertragen.
+
+Autoren, Übersetzer, Künstler, Skriptautoren und Spieler sind eingeladen, die Zukunft mitzugestalten. Teile Ideen, melde Probleme oder leiste einen Beitrag im [url=https://github.com/czxieddan/Latria]GitHub-Repository[/url].
+
+[b]Inhaltshinweis:[/b] Diese Mod enthält Themen für Erwachsene, darunter sexuelle Inhalte, Zwang, Gewalt und religiöse Konflikte.
