@@ -1,0 +1,19 @@
+texticon = {
+	icon = latria_repression_gain_icon
+	iconsize = {
+		texture = "gfx/interface/icons/latria_repression_gain_icon.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
+
+texticon = {
+	icon = latria_repression_loss_icon
+	iconsize = {
+		texture = "gfx/interface/icons/latria_repression_loss_icon.dds"
+		size = { 25 25 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}
