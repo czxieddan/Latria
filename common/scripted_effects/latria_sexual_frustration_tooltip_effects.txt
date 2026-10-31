@@ -1,0 +1,29 @@
+latria_sexual_frustration_change_tooltip = {
+	if = {
+		limit = { $CHANGE$ > 0 }
+		custom_description = {
+			text = latria_repression_gained_effect
+			subject = this
+			value = $CHANGE$
+		}
+	}
+	else_if = {
+		limit = {
+			$CHANGE$ < 0
+			$MAX_LOSS$ > 0
+		}
+		save_temporary_scope_value_as = {
+			name = latria_repression_tooltip_amount
+			value = {
+				value = $CHANGE$
+				multiply = -1
+				max = $MAX_LOSS$
+			}
+		}
+		custom_description = {
+			text = latria_repression_lost_effect
+			subject = this
+			value = scope:latria_repression_tooltip_amount
+		}
+	}
+}

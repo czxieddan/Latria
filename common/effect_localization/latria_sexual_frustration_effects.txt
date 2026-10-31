@@ -1,0 +1,11 @@
+latria_repression_gained_effect = {
+	global = latria_repression_gained_tt
+	first = latria_repression_gained_tt
+	third = latria_repression_gained_tt
+}
+
+latria_repression_lost_effect = {
+	global = latria_repression_lost_tt
+	first = latria_repression_lost_tt
+	third = latria_repression_lost_tt
+}

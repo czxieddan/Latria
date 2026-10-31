@@ -122,4 +122,5 @@
 
  latria_serene_mind: "상쾌하고 평온함"
  latria_serene_mind_desc: "더없이 만족스러운 친밀한 만남으로 몸과 마음에 활력이 돌았습니다."
- latria_repression_relieved_tt: "[latria_sexual_repression|E]: #P -[GetPlayer.MakeScope.ScriptValue('latria_recent_repression_relief_value')|0]#!"
+ latria_repression_gained_tt: "[CHARACTER.GetShortUIName|U](이)가 [latria_sexual_repression|E]를 #N $VALUE|0$#!만큼 획득함 @latria_repression_gain_icon!"
+ latria_repression_lost_tt: "[CHARACTER.GetShortUIName|U](이)가 [latria_sexual_repression|E]를 #P $VALUE|0$#!만큼 상실함 @latria_repression_loss_icon!"

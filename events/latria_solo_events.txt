@@ -22,7 +22,10 @@ latria_act.0201 = {
 				var:latria_recent_repression_relief > 0
 			}
 			show_as_tooltip = {
-				custom_tooltip = latria_repression_relieved_tt
+				latria_sexual_frustration_change_tooltip = {
+					CHANGE = latria_recent_repression_relief_change
+					MAX_LOSS = var:latria_recent_repression_relief
+				}
 			}
 		}
 	}

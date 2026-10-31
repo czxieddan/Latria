@@ -110,3 +110,20 @@ latria_sexual_frustration_stress_gain = {
 	min = 5
 	max = 40
 }
+
+latria_recent_repression_relief_change = {
+	value = 0
+	if = {
+		limit = { exists = var:latria_recent_repression_relief }
+		value = var:latria_recent_repression_relief
+	}
+	multiply = -1
+}
+
+latria_current_sexual_frustration = {
+	value = 0
+	if = {
+		limit = { exists = var:latria_sexual_frustration }
+		value = var:latria_sexual_frustration
+	}
+}

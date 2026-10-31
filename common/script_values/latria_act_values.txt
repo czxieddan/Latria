@@ -268,12 +268,3 @@ latria_serene_mind_base_chance = {
 	min = 5
 	max = 95
 }
-
-latria_recent_repression_relief_value = {
-	value = 0
-	if = {
-		limit = { exists = var:latria_recent_repression_relief }
-		value = var:latria_recent_repression_relief
-	}
-}
-

@@ -122,4 +122,5 @@
 
  latria_serene_mind: "爽やかな安らぎ"
  latria_serene_mind_desc: "心から満ち足りた親密な逢瀬が、心身に活力をもたらした。"
- latria_repression_relieved_tt: "[latria_sexual_repression|E]：#P -[GetPlayer.MakeScope.ScriptValue('latria_recent_repression_relief_value')|0]#!"
+ latria_repression_gained_tt: "[CHARACTER.GetShortUIName|U]が#N $VALUE|0$#!の[latria_sexual_repression|E]を得る @latria_repression_gain_icon!"
+ latria_repression_lost_tt: "[CHARACTER.GetShortUIName|U]が#P $VALUE|0$#!の[latria_sexual_repression|E]を失う @latria_repression_loss_icon!"

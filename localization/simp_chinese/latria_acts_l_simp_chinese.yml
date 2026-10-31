@@ -122,4 +122,5 @@
 
  latria_serene_mind: "心旷神怡"
  latria_serene_mind_desc: "一场身心皆畅的相会令人神清气爽，疲意尽消。"
- latria_repression_relieved_tt: "[latria_sexual_repression|E]：#P -[GetPlayer.MakeScope.ScriptValue('latria_recent_repression_relief_value')|0]#!"
+ latria_repression_gained_tt: "[CHARACTER.GetShortUIName|U]获得#N $VALUE|0$#![latria_sexual_repression|E]@latria_repression_gain_icon!"
+ latria_repression_lost_tt: "[CHARACTER.GetShortUIName|U]失去#P $VALUE|0$#![latria_sexual_repression|E]@latria_repression_loss_icon!"
