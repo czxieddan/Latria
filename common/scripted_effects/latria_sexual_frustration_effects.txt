@@ -133,61 +133,57 @@ latria_fire_crossed_sexual_frustration_levels = {
 	}
 }
 
-latria_add_sexual_frustration = {
+latria_change_sexual_frustration = {
 	latria_store_prior_sexual_frustration = yes
-	if = {
-		limit = { NOT = { exists = var:latria_sexual_frustration } }
-		set_variable = {
-			name = latria_sexual_frustration
-			value = 0
+	save_temporary_scope_value_as = {
+		name = latria_sexual_frustration_change
+		value = {
+			value = $CHANGE$
+			min = {
+				value = scope:latria_prior_sexual_frustration
+				multiply = -1
+			}
 		}
 	}
-	change_variable = {
-		name = latria_sexual_frustration
-		add = $GAIN$
+	latria_sexual_frustration_change_tooltip = {
+		CHANGE = $CHANGE$
+		MAX_LOSS = latria_current_sexual_frustration
 	}
-	latria_fire_crossed_sexual_frustration_levels = yes
+	hidden_effect = {
+		set_variable = {
+			name = latria_sexual_frustration
+			value = {
+				value = scope:latria_prior_sexual_frustration
+				add = scope:latria_sexual_frustration_change
+			}
+		}
+		latria_finish_sexual_frustration_change = yes
+	}
+}
+
+latria_finish_sexual_frustration_change = {
+	if = {
+		limit = { var:latria_sexual_frustration > scope:latria_prior_sexual_frustration }
+		latria_fire_crossed_sexual_frustration_levels = yes
+	}
+	else_if = {
+		limit = { var:latria_sexual_frustration < scope:latria_prior_sexual_frustration }
+		set_variable = {
+			name = latria_recent_repression_relief
+			value = {
+				value = scope:latria_prior_sexual_frustration
+				subtract = var:latria_sexual_frustration
+			}
+		}
+		latria_clear_sexual_frustration_collapse = yes
+		latria_refund_fallen_sexual_frustration_stress = yes
+	}
+	else = { remove_variable = latria_recent_repression_relief }
 	latria_sync_sexual_frustration_level = yes
 }
 
 latria_add_daily_sexual_frustration = {
-	latria_add_sexual_frustration = { GAIN = latria_daily_sexual_frustration_gain }
-}
-
-latria_reduce_sexual_frustration = {
-	if = {
-		limit = { exists = var:latria_sexual_frustration }
-		latria_store_prior_sexual_frustration = yes
-		set_variable = {
-			name = latria_recent_repression_relief
-			value = var:latria_sexual_frustration
-		}
-		change_variable = {
-			name = latria_sexual_frustration
-			add = $RELIEF$
-		}
-		if = {
-			limit = { var:latria_sexual_frustration < 0 }
-			set_variable = {
-				name = latria_sexual_frustration
-				value = 0
-			}
-		}
-		change_variable = {
-			name = latria_recent_repression_relief
-			subtract = var:latria_sexual_frustration
-		}
-		if = {
-			limit = { var:latria_recent_repression_relief <= 0 }
-			remove_variable = latria_recent_repression_relief
-		}
-		else = { latria_clear_sexual_frustration_collapse = yes }
-		latria_sync_sexual_frustration_level = yes
-		latria_refund_fallen_sexual_frustration_stress = yes
-	}
-	else = {
-		remove_variable = latria_recent_repression_relief
-	}
+	latria_change_sexual_frustration = { CHANGE = latria_daily_sexual_frustration_gain }
 }
 
 latria_clear_inactive_sexual_frustration = {

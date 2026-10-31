@@ -83,6 +83,6 @@ latria_ai_run_carnal_pulse = {
 	}
 	if = {
 		limit = { is_alive = yes }
-		latria_add_sexual_frustration = { GAIN = latria_ai_pulse_sexual_frustration_gain }
+		latria_change_sexual_frustration = { CHANGE = latria_ai_pulse_sexual_frustration_gain }
 	}
 }

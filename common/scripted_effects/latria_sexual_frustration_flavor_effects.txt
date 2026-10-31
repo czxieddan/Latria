@@ -198,20 +198,17 @@ latria_capture_flavor_severity = {
 latria_flavor_release = {
 	if = {
 		limit = { var:latria_sexual_frustration > 0 }
-		custom_tooltip = latria_flavor_repression_released_tt
-		latria_reduce_sexual_frustration = { RELIEF = latria_flavor_release_relief }
+		latria_change_sexual_frustration = { CHANGE = latria_flavor_release_relief }
 	}
 }
 
 latria_flavor_reflect = {
 	if = {
 		limit = { var:latria_sexual_frustration > 0 }
-		custom_tooltip = latria_flavor_repression_reflected_tt
-		latria_reduce_sexual_frustration = { RELIEF = latria_flavor_reflection_relief }
+		latria_change_sexual_frustration = { CHANGE = latria_flavor_reflection_relief }
 	}
 }
 
 latria_flavor_resist = {
-	custom_tooltip = latria_flavor_repression_restrained_tt
-	latria_add_sexual_frustration = { GAIN = latria_flavor_resistance_gain }
+	latria_change_sexual_frustration = { CHANGE = latria_flavor_resistance_gain }
 }
