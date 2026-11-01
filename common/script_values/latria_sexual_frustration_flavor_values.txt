@@ -148,3 +148,123 @@ latria_flavor_music_cost = {
 	value = 5
 	multiply = latria_flavor_severity
 }
+
+# AI weights for flavor choices. Traits, current stress, current repression,
+# piety, and prestige all move the same kinds of choice in the same direction.
+latria_ai_flavor_release = {
+	value = 20
+	if = { limit = { has_trait = lustful } add = 45 }
+	if = { limit = { has_trait = gluttonous } add = 15 }
+	if = { limit = { has_trait = arrogant } add = 10 }
+	if = { limit = { has_trait = fickle } add = 10 }
+	if = { limit = { has_trait = chaste } add = -40 }
+	if = { limit = { has_trait = temperate } add = -20 }
+	if = { limit = { has_trait = zealous } add = -15 }
+	if = { limit = { has_trait = patient } add = -10 }
+	if = { limit = { stress_level = 1 } add = 10 }
+	if = { limit = { stress_level = 2 } add = 25 }
+	if = { limit = { stress_level >= 3 } add = 45 }
+	if = { limit = { latria_sexual_frustration_level_2_reached = yes } add = 10 }
+	if = { limit = { latria_sexual_frustration_level_3_reached = yes } add = 15 }
+	if = { limit = { latria_sexual_frustration_level_4_reached = yes } add = 25 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = 40 }
+	if = { limit = { piety_level >= 3 } add = -15 }
+	if = { limit = { piety_level >= 4 } add = -20 }
+	if = { limit = { prestige_level >= 3 } add = -10 }
+	if = { limit = { prestige_level >= 4 } add = -15 }
+	min = 1
+}
+latria_ai_flavor_resist = {
+	value = 25
+	if = { limit = { has_trait = chaste } add = 45 }
+	if = { limit = { has_trait = temperate } add = 25 }
+	if = { limit = { has_trait = zealous } add = 20 }
+	if = { limit = { has_trait = patient } add = 15 }
+	if = { limit = { has_trait = stubborn } add = 10 }
+	if = { limit = { has_trait = content } add = 10 }
+	if = { limit = { has_trait = lustful } add = -40 }
+	if = { limit = { has_trait = impatient } add = -15 }
+	if = { limit = { stress_level = 1 } add = -5 }
+	if = { limit = { stress_level = 2 } add = -15 }
+	if = { limit = { stress_level >= 3 } add = -30 }
+	if = { limit = { latria_sexual_frustration_level_3_reached = yes } add = -10 }
+	if = { limit = { latria_sexual_frustration_level_4_reached = yes } add = -20 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = -30 }
+	if = { limit = { piety_level >= 2 } add = 10 }
+	if = { limit = { piety_level >= 4 } add = 20 }
+	if = { limit = { prestige_level >= 3 } add = 10 }
+	if = { limit = { prestige_level >= 5 } add = 15 }
+	min = 1
+}
+latria_ai_flavor_reflect = {
+	value = 30
+	if = { limit = { has_trait = temperate } add = 20 }
+	if = { limit = { has_trait = patient } add = 15 }
+	if = { limit = { has_trait = calm } add = 15 }
+	if = { limit = { has_trait = diligent } add = 10 }
+	if = { limit = { has_trait = content } add = 10 }
+	if = { limit = { has_trait = lustful } add = -15 }
+	if = { limit = { has_trait = impatient } add = -10 }
+	if = { limit = { has_trait = wrathful } add = -10 }
+	if = { limit = { stress_level = 1 } add = 5 }
+	if = { limit = { stress_level = 2 } add = 10 }
+	if = { limit = { stress_level >= 3 } add = -5 }
+	if = { limit = { latria_sexual_frustration_level_2_reached = yes } add = 5 }
+	if = { limit = { latria_sexual_frustration_level_4_reached = yes } add = -10 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = -15 }
+	if = { limit = { piety_level >= 2 } add = 5 }
+	if = { limit = { prestige_level >= 3 } add = 5 }
+	min = 1
+}
+latria_ai_flavor_public_release = {
+	value = latria_ai_flavor_release
+	multiply = 0.45
+	if = { limit = { has_trait = shy } add = -25 }
+	if = { limit = { has_trait = paranoid } add = -20 }
+	if = { limit = { has_trait = gregarious } add = 10 }
+	if = { limit = { has_trait = eccentric } add = 10 }
+	if = { limit = { prestige_level >= 3 } add = -25 }
+	if = { limit = { prestige_level >= 5 } add = -40 }
+	if = { limit = { piety_level >= 4 } add = -15 }
+	if = { limit = { stress_level >= 3 } add = 15 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = 20 }
+	min = 1
+}
+latria_ai_flavor_devotion = {
+	value = latria_ai_flavor_resist
+	if = { limit = { has_trait = zealous } add = 30 }
+	if = { limit = { has_trait = cynical } add = -25 }
+	if = { limit = { piety_level >= 3 } add = 20 }
+	if = { limit = { piety_level >= 5 } add = 25 }
+	if = { limit = { stress_level >= 3 } add = -10 }
+	min = 1
+}
+latria_ai_flavor_duty = {
+	value = latria_ai_flavor_reflect
+	if = { limit = { has_trait = diligent } add = 25 }
+	if = { limit = { has_trait = ambitious } add = 15 }
+	if = { limit = { has_trait = just } add = 10 }
+	if = { limit = { has_trait = lazy } add = -25 }
+	if = { limit = { prestige_level >= 3 } add = 15 }
+	if = { limit = { prestige_level >= 5 } add = 20 }
+	if = { limit = { stress_level >= 3 } add = -10 }
+	min = 1
+}
+latria_ai_flavor_embrace_chastity = {
+	value = latria_ai_flavor_devotion
+	if = { limit = { has_trait = lustful } add = -30 }
+	if = { limit = { has_trait = chaste } add = 20 }
+	if = { limit = { piety_level >= 4 } add = 25 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = -20 }
+	min = 1
+}
+latria_ai_flavor_abandon_chastity = {
+	value = latria_ai_flavor_release
+	multiply = 0.35
+	if = { limit = { has_trait = chaste } add = -35 }
+	if = { limit = { has_trait = zealous } add = -25 }
+	if = { limit = { piety_level >= 4 } add = -30 }
+	if = { limit = { stress_level >= 3 } add = 20 }
+	if = { limit = { latria_sexual_frustration_level_5_reached = yes } add = 30 }
+	min = 1
+}

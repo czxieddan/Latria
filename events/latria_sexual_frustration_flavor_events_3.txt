@@ -19,11 +19,13 @@ latria_sexual_frustration_flavor.1201 = {
 		name = latria_sexual_frustration_flavor.1201.a
 		latria_flavor_release = yes
 		latria_flavor_private_indulgence = yes
+		ai_chance = { base = latria_ai_flavor_release }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1201.b
 		latria_flavor_resist = yes
 		latria_flavor_restful_restraint = yes
+		ai_chance = { base = latria_ai_flavor_resist }
 	}
 }
 
@@ -49,22 +51,26 @@ latria_sexual_frustration_flavor.1202 = {
 		name = latria_sexual_frustration_flavor.1202.a
 		latria_flavor_release = yes
 		latria_flavor_public_confession = yes
+		ai_chance = { base = latria_ai_flavor_public_release }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1202.b
 		latria_flavor_resist = yes
 		latria_flavor_courteous_withdrawal = yes
+		ai_chance = { base = latria_ai_flavor_resist }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1202.c
 		latria_flavor_reflect = yes
 		latria_flavor_warm_company = yes
+		ai_chance = { base = latria_ai_flavor_reflect }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1202.d
 		trigger = { has_trait = gregarious }
 		latria_flavor_reflect = yes
 		latria_flavor_good_company = yes
+		ai_chance = { base = latria_ai_flavor_reflect }
 	}
 }
 
@@ -90,17 +96,20 @@ latria_sexual_frustration_flavor.1203 = {
 		name = latria_sexual_frustration_flavor.1203.a
 		latria_flavor_release = yes
 		latria_flavor_faith_consequences = yes
+		ai_chance = { base = latria_ai_flavor_release }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1203.b
 		latria_flavor_resist = yes
 		latria_flavor_faith_restraint_consequences = yes
+		ai_chance = { base = latria_ai_flavor_devotion }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1203.c
 		trigger = { has_trait = zealous }
 		latria_flavor_reflect = yes
 		latria_flavor_guided_study = yes
+		ai_chance = { base = latria_ai_flavor_devotion }
 	}
 }
 
@@ -123,18 +132,21 @@ latria_sexual_frustration_flavor.1204 = {
 		name = latria_sexual_frustration_flavor.1204.a
 		latria_flavor_release = yes
 		latria_flavor_trait_release_consequences = yes
+		ai_chance = { base = latria_ai_flavor_release }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1204.b
 		latria_flavor_resist = yes
 		latria_flavor_private_restraint = yes
 		latria_flavor_focus_on_duties = yes
+		ai_chance = { base = latria_ai_flavor_duty }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1204.c
 		trigger = { has_trait = patient }
 		latria_flavor_reflect = yes
 		latria_flavor_comfort = yes
+		ai_chance = { base = latria_ai_flavor_reflect }
 	}
 }
 
@@ -162,21 +174,25 @@ latria_sexual_frustration_flavor.1205 = {
 		name = latria_sexual_frustration_flavor.1205.a
 		latria_flavor_release = yes
 		latria_flavor_duty_indulgence = yes
+		ai_chance = { base = latria_ai_flavor_release }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1205.b
 		latria_flavor_resist = yes
 		latria_flavor_duty_restraint = yes
+		ai_chance = { base = latria_ai_flavor_duty }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1205.c
 		latria_flavor_reflect = yes
 		latria_flavor_focus_on_duties = yes
+		ai_chance = { base = latria_ai_flavor_duty }
 	}
 	option = {
 		name = latria_sexual_frustration_flavor.1205.d
 		trigger = { has_trait = diligent }
 		latria_flavor_reflect = yes
 		latria_flavor_diligent_work = yes
+		ai_chance = { base = latria_ai_flavor_duty }
 	}
 }
