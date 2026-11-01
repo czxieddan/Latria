@@ -30,8 +30,12 @@ latria_roll_partner_strain = {
 		}
 		latria_kill_partner_by_strain = yes
 	}
+	# The game rule only stops the accidental roll. Scheme deaths are forced above.
 	else_if = {
-		limit = { scope:latria_partner = { is_alive = yes } }
+		limit = {
+			latria_carnal_strain_death_is_enabled = yes
+			scope:latria_partner = { is_alive = yes }
+		}
 		scope:latria_partner = {
 			random = {
 				chance = latria_act_strain_chance

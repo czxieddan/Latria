@@ -15,6 +15,13 @@ latria_adultery_scandal_is_head_of_faith = {
 	any_held_title = { is_head_of_faith = yes }
 }
 
+# Hidden. Without the Vicar's Mandate rule no deposition war can be raised against a head of faith,
+# so the exposure is taken back instead of punished.
+latria_adultery_scandal_spares_head_of_faith = {
+	latria_adultery_scandal_is_head_of_faith = yes
+	latria_vicar_mandate_is_enabled = no
+}
+
 # Public adulterer and fornicator traits are applied by vanilla secret exposure.
 latria_adultery_scandal_applies = {
 	OR = {

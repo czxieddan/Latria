@@ -72,6 +72,7 @@ latria_announce_papal_ascendancy = {
 latria_apply_papal_scandal_victory = {
 	if = {
 		limit = {
+			latria_vicar_mandate_is_enabled = yes
 			exists = scope:latria_scandal_war
 			scope:latria_scandal_war = {
 				using_cb = latria_papal_scandal_depose_war

@@ -1,0 +1,74 @@
+# Scripts read these settings only through latria_game_rule_triggers and latria_game_rule_values.
+
+latria_repression_growth = {
+	categories = {
+		latria difficulty
+	}
+
+	default = latria_repression_growth_default
+
+	latria_repression_growth_minus_50 = { flag = blocks_achievements }
+	latria_repression_growth_minus_25 = { flag = blocks_achievements }
+	latria_repression_growth_default = {}
+	latria_repression_growth_plus_50 = { flag = blocks_achievements }
+	latria_repression_growth_plus_100 = { flag = blocks_achievements }
+	latria_repression_growth_plus_250 = { flag = blocks_achievements }
+	latria_repression_growth_plus_500 = { flag = blocks_achievements }
+}
+
+latria_repression_suicide = {
+	categories = {
+		latria health
+	}
+
+	default = latria_repression_suicide_enabled
+
+	latria_repression_suicide_enabled = {}
+	latria_repression_suicide_disabled = { flag = blocks_achievements }
+}
+
+latria_carnal_strain_death = {
+	categories = {
+		latria health
+	}
+
+	default = latria_carnal_strain_death_enabled
+
+	latria_carnal_strain_death_enabled = {}
+	latria_carnal_strain_death_disabled = { flag = blocks_achievements }
+}
+
+latria_act_pregnancy = {
+	categories = {
+		latria health
+	}
+
+	default = latria_act_pregnancy_default
+
+	latria_act_pregnancy_none = { flag = blocks_achievements }
+	latria_act_pregnancy_halved = { flag = blocks_achievements }
+	latria_act_pregnancy_default = {}
+	latria_act_pregnancy_doubled = { flag = blocks_achievements }
+}
+
+latria_ai_overtures = {
+	categories = {
+		latria ai
+	}
+
+	default = latria_ai_overtures_enabled
+
+	latria_ai_overtures_enabled = {}
+	latria_ai_overtures_disabled = { flag = blocks_achievements }
+}
+
+latria_vicar_mandate = {
+	categories = {
+		latria faith
+	}
+
+	default = latria_vicar_mandate_enabled
+
+	latria_vicar_mandate_enabled = {}
+	latria_vicar_mandate_disabled = { flag = blocks_achievements }
+}

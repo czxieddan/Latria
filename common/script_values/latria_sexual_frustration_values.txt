@@ -65,13 +65,31 @@ latria_daily_sexual_frustration_potential = {
 	max = 0.15
 }
 
+# The game rule scales the whole potential. Each cancellation removes the scaled total.
+latria_daily_sexual_frustration_rule_change = {
+	value = latria_daily_sexual_frustration_potential
+	multiply = latria_repression_growth_rule_factor
+}
+
+latria_daily_sexual_frustration_scaled_potential = {
+	value = latria_daily_sexual_frustration_potential
+	add = latria_daily_sexual_frustration_rule_change
+}
+
 # Keep each cancellation independent of temporary values when building the breakdown.
 latria_daily_sexual_frustration_gain = {
 	value = latria_daily_sexual_frustration_potential
 	if = {
+		limit = { latria_repression_growth_is_adjusted = yes }
+		add = {
+			value = latria_daily_sexual_frustration_rule_change
+			desc = latria_daily_sexual_frustration_gain_game_rule
+		}
+	}
+	if = {
 		limit = { latria_sexual_need_is_too_early = yes }
 		add = {
-			value = latria_daily_sexual_frustration_potential
+			value = latria_daily_sexual_frustration_scaled_potential
 			multiply = -1
 			desc = latria_daily_sexual_frustration_gain_too_early
 		}
@@ -79,7 +97,7 @@ latria_daily_sexual_frustration_gain = {
 	else_if = {
 		limit = { latria_sexual_need_has_ended = yes }
 		add = {
-			value = latria_daily_sexual_frustration_potential
+			value = latria_daily_sexual_frustration_scaled_potential
 			multiply = -1
 			desc = latria_daily_sexual_frustration_gain_no_longer
 		}

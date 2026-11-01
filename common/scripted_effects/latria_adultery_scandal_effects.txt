@@ -97,7 +97,12 @@ latria_punish_adulterous_theocratic_ruler = {
 	depose = yes
 }
 
-latria_apply_adultery_scandal_punishment = {
+# Vanilla exposure has already consumed the secret. Removing the trait it left keeps the scandal from existing.
+latria_erase_head_of_faith_scandal = {
+	remove_trait = scope:trait
+}
+
+latria_apply_adultery_scandal_penalties = {
 	latria_remove_all_legitimacy_for_adultery = yes
 	latria_remove_piety_level_for_adultery = yes
 	if = {
@@ -106,5 +111,15 @@ latria_apply_adultery_scandal_punishment = {
 	}
 	else = {
 		latria_punish_adulterous_theocratic_ruler = yes
+	}
+}
+
+latria_apply_adultery_scandal_punishment = {
+	if = {
+		limit = { latria_adultery_scandal_spares_head_of_faith = yes }
+		latria_erase_head_of_faith_scandal = yes
+	}
+	else = {
+		latria_apply_adultery_scandal_penalties = yes
 	}
 }

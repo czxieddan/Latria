@@ -1,5 +1,6 @@
 # AI suitor scope.
 latria_ai_can_proposition_player = {
+	latria_ai_overtures_are_enabled = yes
 	is_ai = yes
 	is_alive = yes
 	NOT = { has_character_flag = latria_player_carnal_overture }

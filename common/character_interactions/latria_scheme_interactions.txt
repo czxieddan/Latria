@@ -27,6 +27,7 @@ latria_start_fatal_liaison_interaction = {
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
 			intrigue >= latria_fatal_liaison_show_intrigue
+			latria_carnal_strain_death_is_enabled = yes
 			latria_can_share_intercourse = { PARTNER = scope:recipient }
 		}
 	}
@@ -111,6 +112,7 @@ latria_start_fatal_touch_interaction = {
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
 			intrigue >= latria_fatal_liaison_show_intrigue
+			latria_carnal_strain_death_is_enabled = yes
 			latria_can_share_manual_act = { PARTNER = scope:recipient }
 		}
 	}

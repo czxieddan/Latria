@@ -3,6 +3,7 @@ latria_fatal_liaison_start_intrigue = 15
 latria_act_pregnancy_chance = 20
 
 # Direct acts use the flat chance. Vanilla callers can pass their own.
+# The game rule scales either one. Engine pregnancies between consorts never come here.
 latria_resolved_pregnancy_chance = {
 	value = latria_act_pregnancy_chance
 	if = {
@@ -10,6 +11,8 @@ latria_resolved_pregnancy_chance = {
 		multiply = 0
 		add = scope:latria_vanilla_pregnancy_chance
 	}
+	multiply = latria_act_pregnancy_rule_multiplier
+	max = 100
 }
 
 # Accidental strain on scope:latria_partner. Weight raises it. Prowess and learning lower it.

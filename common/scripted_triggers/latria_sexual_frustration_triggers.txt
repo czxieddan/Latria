@@ -33,6 +33,12 @@ latria_sexual_frustration_resists_collapse = {
 	}
 }
 
+# The game rule rules out collapse for everyone. Trait resistance applies when it is on.
+latria_sexual_frustration_can_collapse = {
+	latria_repression_suicide_is_enabled = yes
+	latria_sexual_frustration_resists_collapse = no
+}
+
 latria_can_receive_sexual_frustration_flavor_event = {
 	is_alive = yes
 	latria_has_sexual_need = yes
@@ -42,7 +48,7 @@ latria_can_receive_sexual_frustration_flavor_event = {
 latria_can_receive_sexual_frustration_collapse_event = {
 	latria_can_receive_sexual_frustration_flavor_event = yes
 	latria_sexual_frustration_level_5_reached = yes
-	latria_sexual_frustration_resists_collapse = no
+	latria_sexual_frustration_can_collapse = yes
 }
 
 latria_must_repeat_sexual_frustration_collapse = {

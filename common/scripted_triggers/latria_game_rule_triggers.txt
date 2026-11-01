@@ -1,0 +1,23 @@
+# Every Latria game rule is read here. Settings that keep the old behavior are tested
+# by exclusion, so a save started before the rule existed behaves as before.
+
+latria_repression_growth_is_adjusted = {
+	NOT = { has_game_rule = latria_repression_growth_default }
+}
+
+latria_repression_suicide_is_enabled = {
+	NOT = { has_game_rule = latria_repression_suicide_disabled }
+}
+
+latria_carnal_strain_death_is_enabled = {
+	NOT = { has_game_rule = latria_carnal_strain_death_disabled }
+}
+
+latria_ai_overtures_are_enabled = {
+	NOT = { has_game_rule = latria_ai_overtures_disabled }
+}
+
+# On by default. An old save that never stored this rule keeps the deposition war.
+latria_vicar_mandate_is_enabled = {
+	NOT = { has_game_rule = latria_vicar_mandate_disabled }
+}

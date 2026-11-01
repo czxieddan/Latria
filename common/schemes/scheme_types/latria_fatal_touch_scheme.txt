@@ -22,6 +22,7 @@ latria_fatal_touch = {
 	allow = {
 		intrigue >= latria_fatal_liaison_start_intrigue
 		is_imprisoned = no
+		latria_carnal_strain_death_is_enabled = yes
 		latria_can_share_manual_act = { PARTNER = scope:target }
 	}
 	valid = {

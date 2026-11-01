@@ -6,7 +6,9 @@
 
 	allowed_for_character = {}
 	allowed_against_character = {}
-	valid_to_start = {}
+	valid_to_start = {
+		latria_vicar_mandate_is_enabled = yes
+	}
 
 	should_invalidate = {
 		scope:defender = {

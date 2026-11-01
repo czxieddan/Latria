@@ -1,0 +1,44 @@
+﻿# Fraction added on top of the daily potential. The default setting adds nothing.
+latria_repression_growth_rule_factor = {
+	value = 0
+	if = {
+		limit = { has_game_rule = latria_repression_growth_minus_50 }
+		value = -0.5
+	}
+	else_if = {
+		limit = { has_game_rule = latria_repression_growth_minus_25 }
+		value = -0.25
+	}
+	else_if = {
+		limit = { has_game_rule = latria_repression_growth_plus_50 }
+		value = 0.5
+	}
+	else_if = {
+		limit = { has_game_rule = latria_repression_growth_plus_100 }
+		value = 1
+	}
+	else_if = {
+		limit = { has_game_rule = latria_repression_growth_plus_250 }
+		value = 2.5
+	}
+	else_if = {
+		limit = { has_game_rule = latria_repression_growth_plus_500 }
+		value = 5
+	}
+}
+
+latria_act_pregnancy_rule_multiplier = {
+	value = 1
+	if = {
+		limit = { has_game_rule = latria_act_pregnancy_none }
+		value = 0
+	}
+	else_if = {
+		limit = { has_game_rule = latria_act_pregnancy_halved }
+		value = 0.5
+	}
+	else_if = {
+		limit = { has_game_rule = latria_act_pregnancy_doubled }
+		value = 2
+	}
+}
