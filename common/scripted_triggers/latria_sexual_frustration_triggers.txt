@@ -63,6 +63,16 @@ latria_can_roll_sexual_frustration_collapse_method = {
 	}
 }
 
+# Recent flavor events form a three-slot queue. Slot 2 holds the newest event.
+latria_flavor_recent_at = {
+	exists = var:latria_flavor_recent_$SLOT$
+	var:latria_flavor_recent_$SLOT$ = $EVENT$
+}
+
+latria_can_roll_flavor_event = {
+	NOT = { latria_flavor_recent_at = { SLOT = 2 EVENT = $EVENT$ } }
+}
+
 latria_collapse_outcome_fatal = { scope:latria_collapse_outcome = 1 }
 
 latria_collapse_outcome_moderate = { scope:latria_collapse_outcome = 2 }
