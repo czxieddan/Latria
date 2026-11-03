@@ -1,7 +1,17 @@
 latria_white_tiger = {
 	physical = yes
+	genetic = yes
+	random_creation = 0.5
 	icon = latria_white_tiger.dds
 	minimum_age = 10
+
+	# Only enforced after the lobby, so ruler designer picks and the creation pool at game start are not blocked.
+	potential = {
+		trigger_if = {
+			limit = { has_global_variable = latria_white_tiger_gate_active }
+			latria_can_gain_white_tiger = yes
+		}
+	}
 
 	attraction_opinion = 10
 	fertility = 0.1

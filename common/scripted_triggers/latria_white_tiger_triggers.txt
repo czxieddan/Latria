@@ -1,6 +1,20 @@
-# Alive, exactly at the sex-specific age, and not already marked.
+# Alive, at or above the sex-specific age.
 latria_can_gain_white_tiger = {
 	is_alive = yes
+	OR = {
+		AND = {
+			is_female = yes
+			age >= latria_white_tiger_female_minimum_age
+		}
+		AND = {
+			is_female = no
+			age >= latria_white_tiger_male_minimum_age
+		}
+	}
+}
+
+# Exactly at the sex-specific age, so the birthday roll happens once.
+latria_reaches_white_tiger_age = {
 	OR = {
 		AND = {
 			is_female = yes
@@ -11,5 +25,4 @@ latria_can_gain_white_tiger = {
 			age = latria_white_tiger_male_minimum_age
 		}
 	}
-	NOT = { has_trait = latria_white_tiger }
 }
