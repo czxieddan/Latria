@@ -1,20 +1,7 @@
 latria_white_tiger = {
-	category = physical
 	physical = yes
 	icon = latria_white_tiger.dds
-	minimum_age = latria_white_tiger_female_minimum_age
-	ruler_designer_potential = {
-		OR = {
-			AND = {
-				is_female = yes
-				age >= latria_white_tiger_female_minimum_age
-			}
-			AND = {
-				is_female = no
-				age >= latria_white_tiger_male_minimum_age
-			}
-		}
-	}
+	minimum_age = 10
 
 	attraction_opinion = 10
 	fertility = 0.1
