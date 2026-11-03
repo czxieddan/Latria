@@ -1,0 +1,5 @@
+﻿l_french:
+ trait_latria_white_tiger_male: "Tigre blanc"
+ trait_latria_white_tiger_female: "Tigresse blanche"
+ trait_latria_white_tiger_desc: "L’aine de ce personnage est pâle et glabre."
+ trait_latria_white_tiger_character_desc: "L’aine de [ROOT.GetCharacter.GetFirstNameNoTooltip] est pâle et glabre."

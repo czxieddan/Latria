@@ -1,0 +1,5 @@
+﻿l_english:
+ trait_latria_white_tiger_male: "White Tiger"
+ trait_latria_white_tiger_female: "White Tigress"
+ trait_latria_white_tiger_desc: "This character has a pale, hairless groin."
+ trait_latria_white_tiger_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] has a pale, hairless groin."

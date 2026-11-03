@@ -1,0 +1,47 @@
+latria_white_tiger = {
+	category = physical
+	physical = yes
+	icon = latria_white_tiger.dds
+	minimum_age = latria_white_tiger_female_minimum_age
+	ruler_designer_potential = {
+		OR = {
+			AND = {
+				is_female = yes
+				age >= latria_white_tiger_female_minimum_age
+			}
+			AND = {
+				is_female = no
+				age >= latria_white_tiger_male_minimum_age
+			}
+		}
+	}
+
+	attraction_opinion = 10
+	fertility = 0.1
+
+	ruler_designer_cost = 40
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_white_tiger_male
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_latria_white_tiger_female
+			}
+			desc = trait_latria_white_tiger_male
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_white_tiger_desc
+			}
+			desc = trait_latria_white_tiger_character_desc
+		}
+	}
+}

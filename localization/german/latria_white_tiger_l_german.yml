@@ -1,0 +1,5 @@
+﻿l_german:
+ trait_latria_white_tiger_male: "Weißer Tiger"
+ trait_latria_white_tiger_female: "Weiße Tigerin"
+ trait_latria_white_tiger_desc: "Die Leiste dieses Charakters ist bleich und unbehaart."
+ trait_latria_white_tiger_character_desc: "Die Leiste von [ROOT.GetCharacter.GetFirstNameNoTooltip] ist bleich und unbehaart."

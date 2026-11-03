@@ -1,0 +1,5 @@
+﻿l_spanish:
+ trait_latria_white_tiger_male: "Tigre blanco"
+ trait_latria_white_tiger_female: "Tigresa blanca"
+ trait_latria_white_tiger_desc: "La ingle de este personaje es pálida y lampiña."
+ trait_latria_white_tiger_character_desc: "La ingle de [ROOT.GetCharacter.GetFirstNameNoTooltip] es pálida y lampiña."

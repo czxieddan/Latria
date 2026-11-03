@@ -1,0 +1,5 @@
+﻿l_korean:
+ trait_latria_white_tiger_male: "백호"
+ trait_latria_white_tiger_female: "백호"
+ trait_latria_white_tiger_desc: "이 인물의 사타구니는 희고 털이 없다."
+ trait_latria_white_tiger_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]의 사타구니는 희고 털이 없다."

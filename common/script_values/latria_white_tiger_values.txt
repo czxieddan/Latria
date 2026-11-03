@@ -1,0 +1,8 @@
+# Share of adults in the published clinical samples.
+latria_white_tiger_female_chance = {
+	value = 0.4
+}
+
+latria_white_tiger_male_chance = {
+	value = 1.2
+}

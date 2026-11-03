@@ -1,0 +1,22 @@
+# Once, on the birthday that first meets the age requirement.
+on_birthday = {
+	on_actions = { latria_white_tiger_on_birthday }
+}
+
+latria_white_tiger_on_birthday = {
+	trigger = {
+		is_alive = yes
+		OR = {
+			AND = {
+				is_female = yes
+				age = latria_white_tiger_female_minimum_age
+			}
+			AND = {
+				is_female = no
+				age = latria_white_tiger_male_minimum_age
+			}
+		}
+		NOT = { has_trait = latria_white_tiger }
+	}
+	effect = { latria_try_gain_white_tiger = yes }
+}

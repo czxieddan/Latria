@@ -56,3 +56,12 @@ latria_pig_embrace_minimum_age = {
 latria_charming_abduction_minimum_age = {
 	value = 15
 }
+
+# Earliest age for the white tiger physical trait.
+latria_white_tiger_female_minimum_age = {
+	value = 10
+}
+
+latria_white_tiger_male_minimum_age = {
+	value = 11
+}

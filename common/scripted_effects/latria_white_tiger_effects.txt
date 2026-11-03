@@ -1,0 +1,16 @@
+# Population rate among adults: 0.4% female, 1.2% male.
+latria_try_gain_white_tiger = {
+	if = {
+		limit = { is_female = yes }
+		random = {
+			chance = latria_white_tiger_female_chance
+			add_trait = latria_white_tiger
+		}
+	}
+	else = {
+		random = {
+			chance = latria_white_tiger_male_chance
+			add_trait = latria_white_tiger
+		}
+	}
+}

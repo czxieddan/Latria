@@ -1,0 +1,5 @@
+﻿l_simp_chinese:
+ trait_latria_white_tiger_male: "白虎"
+ trait_latria_white_tiger_female: "白虎"
+ trait_latria_white_tiger_desc: "该角色下体白净，不生毛发。"
+ trait_latria_white_tiger_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]下体白净，不生毛发。"

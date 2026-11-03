@@ -1,0 +1,5 @@
+﻿l_russian:
+ trait_latria_white_tiger_male: "Белый тигр"
+ trait_latria_white_tiger_female: "Белая тигрица"
+ trait_latria_white_tiger_desc: "Пах этого персонажа бледен и лишён волос."
+ trait_latria_white_tiger_character_desc: "Пах [ROOT.GetCharacter.GetFirstNameNoTooltip] бледен и лишён волос."
