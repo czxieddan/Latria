@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "숲 옆을 걷다가 일행에게 돌아간다."
 
  nick_latria_the_unquiet: "평온을 잃은 자"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U](은)는 자신의 육욕을 연대기에 기록하게 했고, 그 사본은 지금도 곳곳에 퍼져 있습니다."
  latria_flavor_focus: "다잡은 결의"
  latria_flavor_focus_desc: "해당 인물은 경전과 일상적인 의무에 주의를 기울이고 있습니다."
  latria_flavor_remorse: "가시지 않는 후회"

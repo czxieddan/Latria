@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "Пройти вдоль леса, прежде чем вернуться к спутникам."
 
  nick_latria_the_unquiet: "Беспокойный"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer, 'велели', Select_CString(CHARACTER.IsFemale, 'велела', 'велел' ))] записать в летопись свои плотские желания, и списки этой летописи до сих пор расходятся повсюду."
  latria_flavor_focus: "Собранная воля"
  latria_flavor_focus_desc: "Этот персонаж сосредоточился на писании и повседневных обязанностях."
  latria_flavor_remorse: "Неотступное раскаяние"

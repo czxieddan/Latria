@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "Caminar junto al bosque antes de volver a la comitiva."
 
  nick_latria_the_unquiet: "el Inquieto"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString( CHARACTER.IsLocalPlayer, 'hiciste', 'hizo' )] constar en la crónica [Select_CString( CHARACTER.IsLocalPlayer, 'tus', 'sus' )] deseos carnales, y las copias aún circulan por todas partes."
  latria_flavor_focus: "Determinación reunida"
  latria_flavor_focus_desc: "Este personaje ha dedicado su atención a las escrituras y los deberes cotidianos."
  latria_flavor_remorse: "Remordimiento persistente"

@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "Walk beside the wood before returning to the company."
 
  nick_latria_the_unquiet: "the Unquiet"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] dictated [CharYourHerHis(CHARACTER)] carnal desires into the chronicle, and copies still circulate far and wide."
  latria_flavor_focus: "Gathered Resolve"
  latria_flavor_focus_desc: "This character has turned their attention to scripture and daily duties."
  latria_flavor_remorse: "Lingering Remorse"

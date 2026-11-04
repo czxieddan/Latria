@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "林沿いを歩いてから皆の所へ戻ろう。"
 
  nick_latria_the_unquiet: "心休まらぬ者"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]は自らの性欲を年代記に書き留めさせ、その写本は今も各地で読まれている。"
  latria_flavor_focus: "定まった決意"
  latria_flavor_focus_desc: "この人物は聖典と日々の務めに心を向けている。"
  latria_flavor_remorse: "消えない後悔"

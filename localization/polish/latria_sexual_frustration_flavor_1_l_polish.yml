@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "Przejść się skrajem lasu przed powrotem do towarzyszy."
 
  nick_latria_the_unquiet: "Niespokojny"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNotMeNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsFemale, 'kazała', 'kazał' )] wpisać do kroniki swoje cielesne pragnienia, a odpisy tej kroniki wciąż krążą po całym świecie."
  latria_flavor_focus: "Zebrana determinacja"
  latria_flavor_focus_desc: "Ta postać skupia uwagę na świętych księgach i codziennych obowiązkach."
  latria_flavor_remorse: "Nieustające wyrzuty sumienia"

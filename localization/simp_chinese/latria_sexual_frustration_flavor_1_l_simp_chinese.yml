@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "沿林地走一段，再返回队伍。"
 
  nick_latria_the_unquiet: "欲火难平者"
+ nick_latria_the_unquiet_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]不愿再把性欲藏在心里，亲口说给书记写进编年史，抄本至今仍在各地流传。"
  latria_flavor_focus: "收束心神"
  latria_flavor_focus_desc: "此人将精力投入经卷与日常事务。"
  latria_flavor_remorse: "挥之不去的悔意"

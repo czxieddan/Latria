@@ -83,6 +83,7 @@
  latria_sexual_frustration_flavor.1010.c: "Marcher le long du bois avant de rejoindre la compagnie."
 
  nick_latria_the_unquiet: "l’Inquiet"
+ nick_latria_the_unquiet_desc: "[CHARACTER.Custom('FR_le_Char_U_Pi')|U][CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer,'avez','a')] fait consigner [Select_CString(CHARACTER.IsLocalPlayer,'vos','ses')] désirs charnels dans la chronique, dont les copies circulent encore partout."
  latria_flavor_focus: "Résolution affermie"
  latria_flavor_focus_desc: "Ce personnage a tourné son attention vers les Écritures et ses devoirs quotidiens."
  latria_flavor_remorse: "Remords persistants"
