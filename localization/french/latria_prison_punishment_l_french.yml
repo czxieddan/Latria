@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] a subi en public des rapports charnels forcés avec un porc, et son nom en reste à jamais souillé."
 
  nick_latria_the_unclean: "l’Impur"
+ nick_latria_the_unclean_desc: "[CHARACTER.Custom('FR_le_Char_U_Pi')|U][CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer,'avez','a')] subi au cachot un châtiment dont le récit s’est répandu partout, et plus personne n’accepte de s’asseoir à [Select_CString(CHARACTER.IsLocalPlayer,'votre','sa')] table."
 
  latria_forced_pig_embrace_opinion: "M’a forcé à des rapports charnels avec un porc"

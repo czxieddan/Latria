@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] fue obligado públicamente a unirse carnalmente con un cerdo y [ROOT.GetCharacter.GetHerHis] nombre lleva una mancha imborrable."
 
  nick_latria_the_unclean: "el Impuro"
+ nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString( CHARACTER.IsLocalPlayer, 'sufriste', 'sufrió' )] en la mazmorra un castigo del que todos han oído hablar, y ya nadie quiere sentarse a [Select_CString( CHARACTER.IsLocalPlayer, 'tu', 'su' )] mesa."
 
  latria_forced_pig_embrace_opinion: "Me obligó a unirme carnalmente con un cerdo"

@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip](은)는 공개적으로 돼지와의 정사를 강요당해 [ROOT.GetCharacter.GetHerHis] 명성에 씻을 수 없는 오점이 남았습니다."
 
  nick_latria_the_unclean: "불결한 자"
+ nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U](이)가 지하 감옥에서 받은 형벌이 널리 알려진 뒤로, 아무도 같은 식탁에 앉으려 하지 않습니다."
 
  latria_forced_pig_embrace_opinion: "나에게 돼지와의 정사를 강요함"

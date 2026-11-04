@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]曾被当众强迫与猪交合，[ROOT.GetCharacter.GetHerHis]的名声从此蒙上洗不去的污点。"
 
  nick_latria_the_unclean: "不洁者"
+ nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]在地牢中受刑的事早已传遍街巷，至今没有人愿意与[Select_CString(CHARACTER.IsLocalPlayer, '你', Select_CString(CHARACTER.IsFemale, '她', '他' ))]同桌而食。"
 
  latria_forced_pig_embrace_opinion: "强迫我与猪交合"

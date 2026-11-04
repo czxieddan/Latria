@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] терпит публичное принуждение к плотским утехам со свиньёй, и [ROOT.GetCharacter.GetHerHis] имя навеки запятнано."
 
  nick_latria_the_unclean: "Нечистый"
+ nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer, 'понесли', Select_CString(CHARACTER.IsFemale, 'понесла', 'понёс' ))] в подземелье наказание, о котором теперь знают все, и никто больше не желает сидеть с [Select_CString(CHARACTER.IsLocalPlayer, 'вами', Select_CString(CHARACTER.IsFemale, 'ней', 'ним' ))] за одним столом."
 
  latria_forced_pig_embrace_opinion: "Принуждение к плотским утехам со свиньёй"

@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] wurde öffentlich zu fleischlichen Freuden mit einem Schwein gezwungen. Auf [ROOT.GetCharacter.Custom('DE_PRO_POS_S_3P')]em Namen liegt seither ein unauslöschlicher Makel."
 
  nick_latria_the_unclean: "der Unreine"
+ nick_latria_the_unclean_desc: "Seit sich die Kunde von der Strafe verbreitet hat, die dieser Charakter im Kerker erlitt, will niemand mehr mit ihm an einem Tisch sitzen."
 
  latria_forced_pig_embrace_opinion: "Zwang mich zu fleischlichen Freuden mit einem Schwein"

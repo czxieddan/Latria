@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]は衆目の前で豚との肉体の交わりを強いられ、[ROOT.GetCharacter.GetHerHis]の名に消えない汚点を負っている。"
 
  nick_latria_the_unclean: "穢れた者"
+ nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]が地下牢で受けた刑罰は広く知れ渡り、今では誰も[CharYouSheHe(CHARACTER)]と食卓を共にしようとしない。"
 
  latria_forced_pig_embrace_opinion: "豚との交わりを強いた"

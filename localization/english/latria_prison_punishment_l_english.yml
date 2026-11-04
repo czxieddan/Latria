@@ -15,5 +15,6 @@
  trait_latria_unclean_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] was publicly forced to carnal pleasure with a pig and bears a lasting stain upon [ROOT.GetCharacter.GetHerHis] name."
 
  nick_latria_the_unclean: "the Unclean"
+ nick_latria_the_unclean_desc: "Since word of [CHARACTER.GetShortUINamePossessiveNoTooltipNoFormat] punishment in the dungeon spread, no one will share a table with [CharYouHerHim(CHARACTER)]."
 
  latria_forced_pig_embrace_opinion: "Forced Me to Carnal Pleasure with a Pig"
