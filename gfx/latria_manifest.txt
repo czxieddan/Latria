@@ -28,3 +28,4 @@ latria_charming_abduction_scheme gfx/interface/icons/scheme_types/latria_charmin
 latria_sexual_frustration_flavor gfx/interface/icons/latria_sexual_frustration_flavor.dds sexual repression flavor event icon
 latria_repression_gain_icon gfx/interface/icons/latria_repression_gain_icon.dds sexual repression gain text icon
 latria_repression_loss_icon gfx/interface/icons/latria_repression_loss_icon.dds sexual repression loss text icon
+latria_army_of_god gfx/interface/icons/traits/latria_army_of_god.dds lord's holy army trait icon

@@ -1,6 +1,6 @@
 latria_army_of_god = {
 	category = fame
-	icon = holy_warrior.dds
+	icon = latria_army_of_god.dds
 
 	men_at_arms_limit = 8
 	men_at_arms_cap = 10
