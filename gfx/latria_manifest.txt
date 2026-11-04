@@ -29,3 +29,4 @@ latria_sexual_frustration_flavor gfx/interface/icons/latria_sexual_frustration_f
 latria_repression_gain_icon gfx/interface/icons/latria_repression_gain_icon.dds sexual repression gain text icon
 latria_repression_loss_icon gfx/interface/icons/latria_repression_loss_icon.dds sexual repression loss text icon
 latria_army_of_god gfx/interface/icons/traits/latria_army_of_god.dds lord's holy army trait icon
+latria_white_tiger gfx/interface/icons/traits/latria_white_tiger.dds white tiger trait icon
