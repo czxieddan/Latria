@@ -2,6 +2,7 @@
  h_latria_holy_see: "圣座"
  h_latria_holy_see_adj: "天主国"
  nick_latria_vicar_of_christ: "基督的代牧"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]是[CHARACTER.GetFaith.HighGodName]赐予这沉沦之世的最后救赎——若世人尚能自救，[CHARACTER.GetFaith.HighGodName]又怎会将#EMP [Select_CString(CHARACTER.IsLocalPlayer, '你', Select_CString(CHARACTER.IsFemale, '她', '他' ))]#!高举于万王之上？"
 
  latria_papal_ascendancy.0001.t: "凌驾诸冠的宝座"
  latria_papal_ascendancy.0001.desc: "在众教士面前，我于叛军折断的旗帜间举起手。上帝保全祂的代牧，不是为了让我同诸侯讨价还价。奉祂的旨意，圣座将执掌不容分割的权威，把救赎带到每一片国土。"

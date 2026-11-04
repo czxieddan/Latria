@@ -2,6 +2,7 @@
  h_latria_holy_see: "Heiliger Stuhl"
  h_latria_holy_see_adj: "Katholisch"
  nick_latria_vicar_of_christ: "der Stellvertreter Christi"
+ nick_latria_vicar_of_christ_desc: "Dieser Charakter ist die letzte Erlösung, welche die höchsten Mächte ([CHARACTER.GetFaith.HighGodName]) einer gefallenen Welt gewähren – denn könnte die Welt sich noch selbst retten, hätten diese Mächte dann einen wie #EMP ihn#! über alle Kronen erhoben?"
 
  latria_papal_ascendancy.0001.t: "Der Thron über allen Kronen"
  latria_papal_ascendancy.0001.desc: "Vor den versammelten Prälaten erhebe ich meine Hand über den zerbrochenen Bannern jener, die mich stürzen wollten. Gott hat Seinen Stellvertreter nicht bewahrt, damit ich mit Fürsten feilsche. Auf Seinen Befehl soll der Heilige Stuhl ungeteilte Gewalt ausüben und jedem Reich die Erlösung bringen."

@@ -2,6 +2,7 @@
  h_latria_holy_see: "Saint-Siège"
  h_latria_holy_see_adj: "catholique"
  nick_latria_vicar_of_christ: "le Vicaire du Christ"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.Custom('FR_le_Char_U_Pi')|U][CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer,'êtes','est')] l’ultime salut que [CHARACTER.GetFaith.HighGodName] accorde à un monde déchu — car si le monde pouvait encore se sauver seul, [CHARACTER.GetFaith.HighGodName] aurait-[CHARACTER.GetFaith.HighGodNameSheHe] élevé au-dessus de toutes les couronnes quelqu’un comme #EMP [Select_CString(CHARACTER.IsLocalPlayer,'vous',Select_CString(CHARACTER.IsFemale,'elle','lui'))]#! ?"
 
  latria_papal_ascendancy.0001.t: "Le trône au-dessus de toutes les couronnes"
  latria_papal_ascendancy.0001.desc: "Devant les prélats assemblés, je lève la main au-dessus des bannières brisées de ceux qui venaient me renverser. Dieu n’a pas préservé Son vicaire pour que je marchande avec les princes. Selon Sa volonté, le Saint-Siège exercera une autorité indivisible et portera le salut à tous les royaumes."

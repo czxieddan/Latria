@@ -2,6 +2,7 @@
  h_latria_holy_see: "성좌"
  h_latria_holy_see_adj: "가톨릭"
  nick_latria_vicar_of_christ: "그리스도의 대리자"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U](은)는 [CHARACTER.GetFaith.HighGodName](이)가 타락한 세계에 내리는 마지막 구원입니다. 세상이 아직 스스로 구원받을 수 있었다면, [CHARACTER.GetFaith.HighGodName]께서 #EMP [CHARACTER.GetShortUINameNoTooltipNoFormat]#! 같은 인물을 모든 왕관 위에 세우지도 않으셨겠지요."
 
  latria_papal_ascendancy.0001.t: "모든 왕관 위의 옥좌"
  latria_papal_ascendancy.0001.desc: "모여든 고위 성직자들 앞에서, 나를 끌어내리려던 자들의 부러진 군기 위로 손을 든다. 하느님께서 당신의 대리자를 지켜주신 것은 내가 제후들과 흥정하도록 하기 위함이 아니다. 그분의 명에 따라 성좌는 나뉠 수 없는 권위를 행사하고 모든 봉역에 구원을 전하리라."

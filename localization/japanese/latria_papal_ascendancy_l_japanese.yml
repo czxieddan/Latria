@@ -2,6 +2,7 @@
  h_latria_holy_see: "聖座"
  h_latria_holy_see_adj: "カトリック"
  nick_latria_vicar_of_christ: "キリストの代理人"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U]は、堕ちた世界に[CHARACTER.GetFaith.HighGodName]が与えた最後の救済である ― もし世界がまだ自らを救えたのなら、[CHARACTER.GetFaith.HighGodName]は#EMP [CharYouSheHe(CHARACTER)]#!のような者をあらゆる王冠の上に掲げただろうか？"
 
  latria_papal_ascendancy.0001.t: "すべての王冠に優る玉座"
  latria_papal_ascendancy.0001.desc: "集まった高位聖職者たちの前で、私は自らを追い落とそうとした者たちの折れた旗の上に手を掲げる。神がその代理人を守られたのは、諸侯と取引をさせるためではない。神の命により、聖座は分かつことのできぬ権威を振るい、あらゆる国に救済をもたらすのだ。"

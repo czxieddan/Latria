@@ -2,6 +2,7 @@
  h_latria_holy_see: "Святой престол"
  h_latria_holy_see_adj: "Католическ"
  nick_latria_vicar_of_christ: "Наместник Христа"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] — последнее спасение, ниспосланное падшему миру милостью [CHARACTER.GetFaith.HighGodNamePossessive], ведь будь мир ещё способен спастись сам, разве склонились бы перед #EMP [Select_CString(CHARACTER.IsLocalPlayer, 'вами', Select_CString(CHARACTER.IsFemale, 'ней', 'ним' ))]#! все короны?"
 
  latria_papal_ascendancy.0001.t: "Престол над всеми коронами"
  latria_papal_ascendancy.0001.desc: "Перед собравшимися прелатами я поднимаю руку над сломанными знамёнами тех, кто пришёл меня низложить. Бог сохранил своего наместника не ради торга с князьями. По Его воле Святой престол обретёт безраздельную власть и принесёт спасение в каждую державу."

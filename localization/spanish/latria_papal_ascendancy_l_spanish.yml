@@ -2,6 +2,7 @@
  h_latria_holy_see: "Santa Sede"
  h_latria_holy_see_adj: "católica"
  nick_latria_vicar_of_christ: "el Vicario de Cristo"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer,'eres','es')] la última salvación que [CHARACTER.GetFaith.HighGodName] concede a un mundo caído. Pues, si el mundo aún pudiera salvarse solo, ¿habría alzado [CHARACTER.GetFaith.HighGodName] por encima de todas las coronas a alguien como #EMP [Select_CString( CHARACTER.IsLocalPlayer, 'tú', CHARACTER.GetShortUINameNoTooltip)]#!?"
 
  latria_papal_ascendancy.0001.t: "El trono por encima de toda corona"
  latria_papal_ascendancy.0001.desc: "Ante los prelados reunidos, alzo la mano sobre los estandartes rotos de quienes vinieron a derrocarme. Dios no salvó a Su vicario para que negociase con los príncipes. Por Su mandato, la Santa Sede ejercerá una autoridad indivisible y llevará la salvación a todos los reinos."

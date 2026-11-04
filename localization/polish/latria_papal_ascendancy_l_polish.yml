@@ -2,6 +2,7 @@
  h_latria_holy_see: "Stolica Apostolska"
  h_latria_holy_see_adj: "Katolicka"
  nick_latria_vicar_of_christ: "Namiestnik Chrystusa"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNotMeNoTooltipNoFormat|U] jest ostatnim zbawieniem [CHARACTER.GetFaith.HighGodNamePossessive] dla upadłego świata – bo gdyby świat mógł jeszcze zbawić się sam, czy [CHARACTER.GetFaith.HighGodName] [Select_CString(EqualTo_string(CHARACTER.GetFaith.HighGodNameSheHe, 'ona' ), 'wyniosłaby', 'wyniósłby' )] ponad wszystkie korony kogoś takiego jak #EMP [Select_CString(CHARACTER.IsFemale, 'ona', 'on' )]#!?"
 
  latria_papal_ascendancy.0001.t: "Tron ponad każdą koroną"
  latria_papal_ascendancy.0001.desc: "Przed zebranymi prałatami wznoszę rękę nad połamanymi sztandarami tych, którzy przybyli mnie obalić. Bóg nie ocalił swego namiestnika po to, bym targował się z książętami. Z Jego woli Stolica Apostolska obejmie niepodzielną władzę i zaniesie zbawienie do każdego państwa."

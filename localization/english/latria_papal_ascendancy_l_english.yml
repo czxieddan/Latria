@@ -2,6 +2,7 @@
  h_latria_holy_see: "Holy See"
  h_latria_holy_see_adj: "Catholic"
  nick_latria_vicar_of_christ: "the Vicar of Christ"
+ nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharAreIs(CHARACTER)] the last salvation [CHARACTER.GetFaith.HighGodName] has granted a fallen world — for if the world could still save itself, would [CHARACTER.GetFaith.HighGodName] have raised one such as #EMP [CharYouHerHim(CHARACTER)]#! above every crown?"
 
  latria_papal_ascendancy.0001.t: "The Throne Above Every Crown"
  latria_papal_ascendancy.0001.desc: "Before the gathered prelates, I raise my hand over the broken banners of those who came to cast me down. God did not preserve His vicar so that I might bargain with princes. By His command, the Holy See shall wield undivided authority and carry salvation to every realm."
