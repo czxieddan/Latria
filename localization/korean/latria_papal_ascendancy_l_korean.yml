@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName](이)가 성좌에 맞서 일어난 대군을 격파했다. 성직자와 패배한 제후들 앞에서 [latria_papal_victor.GetSheHe](은)는 하느님께서 [latria_papal_victor.GetHerHim]에게 절대적인 권위와 세상의 구원을 맡기셨다고 선포한다."
  latria_papal_ascendancy.0002.a: "새로운 질서가 시작되는군"
 
- trait_latria_army_of_god: "하느님의 군대"
+ trait_latria_army_of_god: "주님의 거룩한 군대"
  trait_latria_army_of_god_desc: "해당 인물은 성좌의 절대적인 권위에 봉헌된 군대를 지휘합니다."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip](은)는 성좌의 절대적인 권위에 봉헌된 군대를 지휘합니다."
 

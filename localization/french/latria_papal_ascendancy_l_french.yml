@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] a brisé l’armée levée contre le Saint-Siège. Devant le clergé et les princes vaincus, [latria_papal_victor.GetSheHe] proclame que Dieu lui a confié l’autorité absolue et le salut du monde."
  latria_papal_ascendancy.0002.a: "Un nouvel ordre commence"
 
- trait_latria_army_of_god: "Armée de Dieu"
+ trait_latria_army_of_god: "Sainte armée du Seigneur"
  trait_latria_army_of_god_desc: "Ce personnage commande une armée consacrée à l’autorité absolue du Saint-Siège."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] commande une armée consacrée à l’autorité absolue du Saint-Siège."
 

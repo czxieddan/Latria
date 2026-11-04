@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] сокрушает войско, выступившее против Святого престола. Перед духовенством и побеждёнными князьями [latria_papal_victor.GetSheHe] провозглашает, что Бог даровал [latria_papal_victor.GetHerHim] безраздельную власть и поручил спасение мира."
  latria_papal_ascendancy.0002.a: "Начинается новый порядок"
 
- trait_latria_army_of_god: "Воинство Божье"
+ trait_latria_army_of_god: "Святое воинство Господне"
  trait_latria_army_of_god_desc: "Этот персонаж командует войском, посвящённым безраздельной власти Святого престола."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] командует войском, посвящённым безраздельной власти Святого престола."
 

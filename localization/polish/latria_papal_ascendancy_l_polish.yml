@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] rozbija wojsko zebrane przeciw Stolicy Apostolskiej. Przed duchowieństwem i pokonanymi książętami [latria_papal_victor.GetSheHe] ogłasza, że Bóg powierzył [latria_papal_victor.GetHerHim] władzę absolutną i zbawienie świata."
  latria_papal_ascendancy.0002.a: "Nastaje nowy porządek"
 
- trait_latria_army_of_god: "Armia Boga"
+ trait_latria_army_of_god: "Święta armia Pana"
  trait_latria_army_of_god_desc: "Ta postać dowodzi wojskiem poświęconym absolutnej władzy Stolicy Apostolskiej."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] dowodzi wojskiem poświęconym absolutnej władzy Stolicy Apostolskiej."
 

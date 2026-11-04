@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName]は聖座に敵対する軍勢を打ち破った。聖職者と敗れた諸侯の前で、[latria_papal_victor.GetSheHe]は神が絶対の権威と世界の救済を[latria_papal_victor.GetHerHim]に託されたと宣言する。"
  latria_papal_ascendancy.0002.a: "新たな秩序が始まる"
 
- trait_latria_army_of_god: "神の軍勢"
+ trait_latria_army_of_god: "主の聖なる軍勢"
  trait_latria_army_of_god_desc: "この人物は、聖座の絶対的権威に身を捧げた軍勢を率いている。"
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]は、聖座の絶対的権威に身を捧げた軍勢を率いている。"
 

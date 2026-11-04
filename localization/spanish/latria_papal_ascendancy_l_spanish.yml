@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] ha derrotado al ejército alzado contra la Santa Sede. Ante el clero y los príncipes vencidos, [latria_papal_victor.GetSheHe] proclama que Dios [latria_papal_victor.GetHerHim] ha investido de autoridad absoluta y le ha encomendado la salvación del mundo."
  latria_papal_ascendancy.0002.a: "Comienza un nuevo orden"
 
- trait_latria_army_of_god: "Ejército de Dios"
+ trait_latria_army_of_god: "Santo ejército del Señor"
  trait_latria_army_of_god_desc: "Este personaje dirige un ejército consagrado a la autoridad absoluta de la Santa Sede."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] dirige un ejército consagrado a la autoridad absoluta de la Santa Sede."
 

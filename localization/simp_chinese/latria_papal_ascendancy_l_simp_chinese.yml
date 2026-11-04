@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName]击溃了为废黜圣座而来的大军。在教士与战败诸侯面前，[latria_papal_victor.GetSheHe]宣告上帝已将绝对的权威与救赎世界的使命托付给[latria_papal_victor.GetHerHim]。"
  latria_papal_ascendancy.0002.a: "新的秩序开始了"
 
- trait_latria_army_of_god: "上帝之师"
+ trait_latria_army_of_god: "主的圣军"
  trait_latria_army_of_god_desc: "该角色统率一支奉献于圣座绝对权威的军队。"
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip]统率一支奉献于圣座绝对权威的军队。"
 

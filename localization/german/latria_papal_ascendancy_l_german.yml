@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] hat das gegen den Heiligen Stuhl aufgebotene Heer zerschlagen. Vor der Geistlichkeit und den besiegten Fürsten verkündet [latria_papal_victor.GetSheHe], Gott habe [latria_papal_victor.GetHerHim] mit der uneingeschränkten Gewalt und der Erlösung der Welt betraut."
  latria_papal_ascendancy.0002.a: "Eine neue Ordnung beginnt"
 
- trait_latria_army_of_god: "Heer Gottes"
+ trait_latria_army_of_god: "Heiliges Heer des Herrn"
  trait_latria_army_of_god_desc: "Dieser Charakter befehligt ein Heer, das der uneingeschränkten Gewalt des Heiligen Stuhls geweiht ist."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] befehligt ein Heer, das der uneingeschränkten Gewalt des Heiligen Stuhls geweiht ist."
 

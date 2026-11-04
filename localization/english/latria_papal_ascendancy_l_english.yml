@@ -12,7 +12,7 @@
  latria_papal_ascendancy.0002.desc: "[latria_papal_victor.GetShortUIName] has broken the host raised against the Holy See. Before the clergy and the defeated princes, [latria_papal_victor.GetSheHe] proclaims that God has entrusted [latria_papal_victor.GetHerHim] with absolute authority and the salvation of the world."
  latria_papal_ascendancy.0002.a: "A new order begins"
 
- trait_latria_army_of_god: "Army of God"
+ trait_latria_army_of_god: "The Lord's Holy Army"
  trait_latria_army_of_god_desc: "This character commands a host consecrated to the absolute authority of the Holy See."
  trait_latria_army_of_god_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] commands a host consecrated to the absolute authority of the Holy See."
 
