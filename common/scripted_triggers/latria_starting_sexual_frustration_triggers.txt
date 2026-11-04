@@ -1,0 +1,45 @@
+# Game start. The partner is read from its own side; scope:latria_starting_owner asks.
+latria_starting_partner_accepts = {
+	save_temporary_scope_as = latria_starting_partner
+	scope:latria_starting_owner = {
+		latria_can_share_intercourse = { PARTNER = scope:latria_starting_partner }
+	}
+	latria_starting_partner_acceptance > 0
+}
+
+latria_starting_has_accepting_soulmate = {
+	any_relation = {
+		type = soulmate
+		latria_starting_partner_accepts = yes
+	}
+}
+
+latria_starting_has_accepting_spouse = {
+	any_spouse = { latria_starting_partner_accepts = yes }
+}
+
+# Either side of a concubine bond.
+latria_starting_has_accepting_concubine = {
+	OR = {
+		any_concubine = { latria_starting_partner_accepts = yes }
+		AND = {
+			is_concubine = yes
+			concubinist = { latria_starting_partner_accepts = yes }
+		}
+	}
+}
+
+latria_starting_has_accepting_lover = {
+	any_relation = {
+		type = lover
+		latria_starting_partner_accepts = yes
+	}
+}
+
+# Faith or a vow keeps them from solo relief. Only these may start past 100.
+latria_starting_shuns_solo_relief = {
+	OR = {
+		latria_faith_stands = no
+		has_character_modifier = clerical_chastity_vow_modifier
+	}
+}

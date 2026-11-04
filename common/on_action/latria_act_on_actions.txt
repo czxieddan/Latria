@@ -7,12 +7,22 @@ latria_on_act_resolved = {
 }
 
 on_game_start_after_lobby = {
-	on_actions = { latria_initialize_sexual_frustration }
+	on_actions = {
+		latria_initialize_sexual_frustration
+		latria_initialize_starting_sexual_frustration
+	}
 }
 
 latria_initialize_sexual_frustration = {
 	effect = {
 		every_living_character = { latria_initialize_carnal_character = yes }
+	}
+}
+
+# Listed after the stories, so every drive roll exists first.
+latria_initialize_starting_sexual_frustration = {
+	effect = {
+		every_living_character = { latria_assign_starting_sexual_frustration = yes }
 	}
 }
 

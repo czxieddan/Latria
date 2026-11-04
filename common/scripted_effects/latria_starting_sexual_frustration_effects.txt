@@ -1,0 +1,67 @@
+# Game start only. Characters without the need keep no value.
+latria_assign_starting_sexual_frustration = {
+	if = {
+		limit = { latria_has_sexual_need = yes }
+		save_temporary_scope_as = latria_starting_owner
+		latria_add_starting_sexual_frustration_by_bond = yes
+	}
+}
+
+# The closest accepting bond decides how many days have built up.
+# A spouse at the base gain lands at 10 to 25, prime age included.
+latria_add_starting_sexual_frustration_by_bond = {
+	if = {
+		limit = { latria_starting_has_accepting_soulmate = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 200 MAX_DAYS = 260 }
+	}
+	else_if = {
+		limit = { latria_starting_has_accepting_spouse = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 200 MAX_DAYS = 330 }
+	}
+	else_if = {
+		limit = { latria_starting_has_accepting_concubine = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 220 MAX_DAYS = 360 }
+	}
+	else_if = {
+		limit = { latria_starting_has_accepting_lover = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 260 MAX_DAYS = 420 }
+	}
+	else = { latria_add_starting_sexual_frustration_alone = yes }
+}
+
+# Solo relief keeps the rest near 40. Without it, the days run past 100.
+latria_add_starting_sexual_frustration_alone = {
+	if = {
+		limit = {
+			latria_starting_shuns_solo_relief = yes
+			latria_has_bound_partner = yes
+		}
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 2200 MAX_DAYS = 3400 }
+	}
+	else_if = {
+		limit = { latria_starting_shuns_solo_relief = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 2000 MAX_DAYS = 3000 }
+	}
+	else_if = {
+		limit = { latria_has_bound_partner = yes }
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 360 MAX_DAYS = 530 }
+	}
+	else = {
+		latria_add_starting_sexual_frustration = { MIN_DAYS = 300 MAX_DAYS = 500 }
+	}
+}
+
+# The game rule stays out, so a scaled rule cannot inflate the start.
+latria_add_starting_sexual_frustration = {
+	save_temporary_scope_value_as = {
+		name = latria_starting_sexual_frustration
+		value = {
+			integer_range = { min = $MIN_DAYS$ max = $MAX_DAYS$ }
+			multiply = latria_daily_sexual_frustration_no_rule_gain
+			min = 0
+			max = latria_starting_sexual_frustration_max
+		}
+	}
+	# Also fires the crossed level events and syncs the level modifier.
+	latria_change_sexual_frustration = { CHANGE = scope:latria_starting_sexual_frustration }
+}

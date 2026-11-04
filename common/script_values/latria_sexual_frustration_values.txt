@@ -165,3 +165,86 @@ latria_current_sexual_frustration = {
 		value = var:latria_sexual_frustration
 	}
 }
+
+# Starting repression. Read in the partner's scope; scope:latria_starting_owner asks.
+# Mirrors latria_act_acceptance_modifiers. Recency and pregnancy do not apply before any act.
+latria_starting_sexual_frustration_max = 250
+
+latria_starting_bond_acceptance = {
+	value = -60
+	if = {
+		limit = { latria_partner_is_soulmate = { PARTNER = scope:latria_starting_owner } }
+		value = 80
+	}
+	else_if = {
+		limit = { latria_partner_is_lover = { PARTNER = scope:latria_starting_owner } }
+		value = 60
+	}
+	else_if = {
+		limit = { latria_partner_is_spouse = { PARTNER = scope:latria_starting_owner } }
+		value = 50
+	}
+	else_if = {
+		limit = { latria_are_consorts = { PARTNER = scope:latria_starting_owner } }
+		value = 40
+	}
+}
+
+latria_starting_attitude_acceptance = {
+	value = "opinion(scope:latria_starting_owner)"
+	multiply = 0.5
+	if = { limit = { has_trait = lustful } add = 20 }
+	if = { limit = { has_trait = chaste } add = -40 }
+	if = {
+		limit = { has_relation_nemesis = scope:latria_starting_owner }
+		add = -1000
+	}
+	else_if = {
+		limit = { has_relation_rival = scope:latria_starting_owner }
+		add = -300
+	}
+}
+
+latria_starting_rank_acceptance = {
+	value = scope:latria_starting_owner.highest_held_title_tier
+	subtract = highest_held_title_tier
+	multiply = 10
+	min = -30
+	max = 30
+}
+
+latria_starting_appearance_acceptance = {
+	value = 0
+	if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_good_3 } }
+		value = 30
+	}
+	else_if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_good_2 } }
+		value = 20
+	}
+	else_if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_good_1 } }
+		value = 10
+	}
+	else_if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_bad_1 } }
+		value = -10
+	}
+	else_if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_bad_2 } }
+		value = -20
+	}
+	else_if = {
+		limit = { scope:latria_starting_owner = { has_trait = beauty_bad_3 } }
+		value = -30
+	}
+}
+
+latria_starting_partner_acceptance = {
+	value = -10
+	add = latria_starting_bond_acceptance
+	add = latria_starting_attitude_acceptance
+	add = latria_starting_rank_acceptance
+	add = latria_starting_appearance_acceptance
+}
