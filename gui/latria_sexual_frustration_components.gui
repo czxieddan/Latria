@@ -22,7 +22,7 @@ types LatriaSexualFrustrationComponents {
 				margin_top = -4
 
 				block "threshold_text" {
-					text = "latria_sexual_frustration_requires_20"
+					text = "latria_sexual_frustration_requires_50"
 				}
 			}
 		}
@@ -72,7 +72,8 @@ types LatriaSexualFrustrationComponents {
 
 		blockoverride "main_description" {
 			cooltip_paragraph = {
-				text = "latria_sexual_frustration_no_level_effects"
+				datacontext = "[GetModifier('latria_sexual_frustration_0')]"
+				text = "latria_sexual_frustration_level_effects"
 				max_width = 500
 			}
 		}

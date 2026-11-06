@@ -46,7 +46,7 @@ types LatriaSexualFrustrationHud {
 			framesize = { 128 128 }
 			frame = 2
 			min = 0
-			max = 300
+			max = 400
 			value = "[FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue )]"
 			parentanchor = center
 

@@ -34,8 +34,15 @@ types LatriaSexualFrustrationTooltip {
 				margin_right = 10
 
 				cooltip_paragraph = {
-					visible = "[Or( Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet ), EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+					visible = "[Not( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet )]"
 					text = "latria_sexual_frustration_no_level_effects"
+					max_width = 500
+				}
+
+				cooltip_paragraph = {
+					visible = "[And( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').IsSet, EqualTo_CFixedPoint( GetPlayer.MakeScope.Var('latria_sexual_frustration_level').GetValue, '(CFixedPoint)0' ) )]"
+					datacontext = "[GetModifier('latria_sexual_frustration_0')]"
+					text = "latria_sexual_frustration_level_effects"
 					max_width = 500
 				}
 
@@ -141,7 +148,7 @@ types LatriaSexualFrustrationTooltip {
 							widget = {
 								layoutpolicy_horizontal = expanding
 								layoutpolicy_vertical = expanding
-								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)300', '(int32)480' )]"
+								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)400', '(int32)480' )]"
 
 								background = {
 									texture = "gfx/interface/progressbars/progress_standard.dds"
@@ -151,7 +158,7 @@ types LatriaSexualFrustrationTooltip {
 							widget = {
 								layoutpolicy_horizontal = expanding
 								layoutpolicy_vertical = expanding
-								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxOtherScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)300', '(int32)480' )]"
+								layoutstretchfactor_horizontal = "[GetProgressBarValueMaxOtherScaled( FixedPointToFloat( GetPlayer.MakeScope.Var('latria_sexual_frustration').GetValue ), '(float)400', '(int32)480' )]"
 
 								background = {
 									texture = "gfx/interface/progressbars/progress_black.dds"
@@ -183,7 +190,7 @@ types LatriaSexualFrustrationTooltip {
 						}
 
 						widget = {
-							position = { 32 0 }
+							position = { 60 0 }
 							size = { 0 50 }
 							allow_outside = yes
 
@@ -217,7 +224,7 @@ types LatriaSexualFrustrationTooltip {
 						}
 
 						widget = {
-							position = { 80 0 }
+							position = { 102 0 }
 							size = { 0 50 }
 							allow_outside = yes
 
@@ -248,7 +255,7 @@ types LatriaSexualFrustrationTooltip {
 												latria_sexual_frustration_background_2 = {}
 											}
 											blockoverride "threshold_text" {
-												text = "latria_sexual_frustration_requires_50"
+												text = "latria_sexual_frustration_requires_85"
 											}
 										}
 									}
@@ -257,7 +264,7 @@ types LatriaSexualFrustrationTooltip {
 						}
 
 						widget = {
-							position = { 160 0 }
+							position = { 168 0 }
 							size = { 0 50 }
 							allow_outside = yes
 
@@ -288,7 +295,7 @@ types LatriaSexualFrustrationTooltip {
 												latria_sexual_frustration_background_3 = {}
 											}
 											blockoverride "threshold_text" {
-												text = "latria_sexual_frustration_requires_100"
+												text = "latria_sexual_frustration_requires_140"
 											}
 										}
 									}
@@ -297,7 +304,7 @@ types LatriaSexualFrustrationTooltip {
 						}
 
 						widget = {
-							position = { 288 0 }
+							position = { 252 0 }
 							size = { 0 50 }
 							allow_outside = yes
 
@@ -328,7 +335,7 @@ types LatriaSexualFrustrationTooltip {
 												latria_sexual_frustration_background_4 = {}
 											}
 											blockoverride "threshold_text" {
-												text = "latria_sexual_frustration_requires_180"
+												text = "latria_sexual_frustration_requires_210"
 											}
 										}
 									}
@@ -337,7 +344,7 @@ types LatriaSexualFrustrationTooltip {
 						}
 
 						widget = {
-							position = { 480 0 }
+							position = { 384 0 }
 							size = { 0 50 }
 							allow_outside = yes
 
@@ -368,7 +375,7 @@ types LatriaSexualFrustrationTooltip {
 												latria_sexual_frustration_background_5 = {}
 											}
 											blockoverride "threshold_text" {
-												text = "latria_sexual_frustration_requires_300"
+												text = "latria_sexual_frustration_requires_320"
 											}
 										}
 									}

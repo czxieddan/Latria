@@ -1,4 +1,5 @@
 latria_clear_sexual_frustration_modifiers = {
+	remove_character_modifier = latria_sexual_frustration_0
 	remove_character_modifier = latria_sexual_frustration_1
 	remove_character_modifier = latria_sexual_frustration_2
 	remove_character_modifier = latria_sexual_frustration_3
@@ -13,6 +14,7 @@ latria_set_sexual_frustration_level = {
 				NOT = { exists = var:latria_sexual_frustration_level }
 				var:latria_sexual_frustration_level < $LEVEL$
 				var:latria_sexual_frustration_level > $LEVEL$
+				NOT = { has_character_modifier = $MODIFIER$ }
 			}
 		}
 		set_variable = {
@@ -23,20 +25,6 @@ latria_set_sexual_frustration_level = {
 		add_character_modifier = {
 			modifier = $MODIFIER$
 		}
-	}
-}
-
-latria_clear_sexual_frustration_level = {
-	if = {
-		limit = {
-			exists = var:latria_sexual_frustration_level
-			var:latria_sexual_frustration_level > 0
-		}
-		set_variable = {
-			name = latria_sexual_frustration_level
-			value = 0
-		}
-		latria_clear_sexual_frustration_modifiers = yes
 	}
 }
 
@@ -76,7 +64,12 @@ latria_sync_sexual_frustration_level = {
 			MODIFIER = latria_sexual_frustration_1
 		}
 	}
-	else = { latria_clear_sexual_frustration_level = yes }
+	else = {
+		latria_set_sexual_frustration_level = {
+			LEVEL = 0
+			MODIFIER = latria_sexual_frustration_0
+		}
+	}
 }
 
 latria_store_prior_sexual_frustration = {
@@ -143,10 +136,14 @@ latria_change_sexual_frustration = {
 				value = scope:latria_prior_sexual_frustration
 				multiply = -1
 			}
+			max = {
+				value = latria_sexual_frustration_max
+				subtract = scope:latria_prior_sexual_frustration
+			}
 		}
 	}
 	latria_sexual_frustration_change_tooltip = {
-		CHANGE = $CHANGE$
+		CHANGE = scope:latria_sexual_frustration_change
 		MAX_LOSS = latria_current_sexual_frustration
 	}
 	hidden_effect = {

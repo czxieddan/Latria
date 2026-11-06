@@ -1,8 +1,9 @@
-﻿latria_sexual_frustration_level_1_limit = 20
-latria_sexual_frustration_level_2_limit = 50
-latria_sexual_frustration_level_3_limit = 100
-latria_sexual_frustration_level_4_limit = 180
-latria_sexual_frustration_level_5_limit = 300
+﻿latria_sexual_frustration_level_1_limit = 50
+latria_sexual_frustration_level_2_limit = 85
+latria_sexual_frustration_level_3_limit = 140
+latria_sexual_frustration_level_4_limit = 210
+latria_sexual_frustration_level_5_limit = 320
+latria_sexual_frustration_max = 400
 
 latria_daily_sexual_frustration_potential = {
 	value = {
