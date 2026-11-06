@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Secuestrar mediante el encanto"
  latria_charming_abduction_desc_general: "Usar la belleza para que el objetivo baje la guardia y conspirar para [imprison|E] a esa persona."
  latria_charming_abduction_desc: "Usaré mi belleza para atraer, secuestrar y [imprison|E] a [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip]."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (conjura)#!"
  latria_start_charming_abduction_interaction_desc: "Usar tu belleza para atraer a [recipient.GetShortUINameNoTooltip] a un secuestro y [imprison|E] a esa persona."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] ha iniciado una conjura de secuestro por encanto contra [recipient.GetShortUIName]"

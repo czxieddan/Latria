@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U]は交わりのさなかに死亡する"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "あなたの関与は露見しない"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U]はあなたの愛撫のさなかに死亡する"
- latria_start_fatal_liaison_interaction: "致命の交わり"
+ latria_start_fatal_liaison_interaction: "致命の交わり#weak （工作）#!"
  latria_start_fatal_liaison_interaction_desc: "[recipient.GetShortUINameNoTooltip]が生き延びることのない肉体の交わり。"
  latria_fatal_liaison_started: "致命の交わり"
- latria_start_fatal_touch_interaction: "致命の愛撫"
+ latria_start_fatal_touch_interaction: "致命の愛撫#weak （工作）#!"
  latria_start_fatal_touch_interaction_desc: "[recipient.GetShortUINameNoTooltip]が生き延びることのない愛撫。"
  latria_fatal_touch_started: "致命の愛撫"
 

@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] stirbt bei der Vereinigung"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "Ihr werdet nicht entlarvt"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] stirbt unter Euren Zärtlichkeiten"
- latria_start_fatal_liaison_interaction: "Tödliche Vereinigung"
+ latria_start_fatal_liaison_interaction: "Tödliche Vereinigung #weak (Komplott)#!"
  latria_start_fatal_liaison_interaction_desc: "Ein fleischliches Treffen, das [recipient.GetShortUINameNoTooltip] nicht überleben wird."
  latria_fatal_liaison_started: "Tödliche Vereinigung"
- latria_start_fatal_touch_interaction: "Tödliche Berührung"
+ latria_start_fatal_touch_interaction: "Tödliche Berührung #weak (Komplott)#!"
  latria_start_fatal_touch_interaction_desc: "Eine zärtliche Berührung, die [recipient.GetShortUINameNoTooltip] nicht überleben wird."
  latria_fatal_touch_started: "Tödliche Berührung"
 

@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] умирает во время плотских утех"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "Вас не разоблачают"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] умирает от ваших ласк"
- latria_start_fatal_liaison_interaction: "Смертельная близость"
+ latria_start_fatal_liaison_interaction: "Смертельная близость #weak (происки)#!"
  latria_start_fatal_liaison_interaction_desc: "Любовное свидание, которого [recipient.GetShortUINameNoTooltip] не переживёт."
  latria_fatal_liaison_started: "Смертельная близость"
- latria_start_fatal_touch_interaction: "Смертельная ласка"
+ latria_start_fatal_touch_interaction: "Смертельная ласка #weak (происки)#!"
  latria_start_fatal_touch_interaction_desc: "Любовные ласки, которых [recipient.GetShortUINameNoTooltip] не переживёт."
  latria_fatal_touch_started: "Смертельная ласка"
 

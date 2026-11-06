@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "매혹을 통한 납치"
  latria_charming_abduction_desc_general: "미모로 대상의 경계를 풀고 [imprison|E]할 음모를 꾸밉니다."
  latria_charming_abduction_desc: "미모로 [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip](을)를 유인해 납치하고 [imprison|E]하겠다."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (모략)#!"
  latria_start_charming_abduction_interaction_desc: "미모로 [recipient.GetShortUINameNoTooltip](을)를 유인해 납치하고 [imprison|E]합니다."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName](이)가 [recipient.GetShortUIName](을)를 대상으로 매혹을 통한 납치 모략을 시작함"

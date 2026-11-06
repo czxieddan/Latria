@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Abduct through Charm"
  latria_charming_abduction_desc_general: "Use beauty to lower a target's guard and plot to [imprison|E] them."
  latria_charming_abduction_desc: "I will use my beauty to lure, kidnap, and [imprison|E] [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip]."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (Scheme)#!"
  latria_start_charming_abduction_interaction_desc: "Use your beauty to lure [recipient.GetShortUINameNoTooltip] into an abduction and [imprison|E] them."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] has begun a Charming Abduction scheme against [recipient.GetShortUIName]"

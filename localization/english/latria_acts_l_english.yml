@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] dies in the act"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "You are not exposed"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] dies under your caresses"
- latria_start_fatal_liaison_interaction: "Fatal Coupling"
+ latria_start_fatal_liaison_interaction: "Fatal Coupling #weak (Scheme)#!"
  latria_start_fatal_liaison_interaction_desc: "A carnal meeting [recipient.GetShortUINameNoTooltip] will not survive."
  latria_fatal_liaison_started: "Fatal Coupling"
- latria_start_fatal_touch_interaction: "Fatal Touch"
+ latria_start_fatal_touch_interaction: "Fatal Touch #weak (Scheme)#!"
  latria_start_fatal_touch_interaction_desc: "A carnal touch [recipient.GetShortUINameNoTooltip] will not survive."
  latria_fatal_touch_started: "Fatal Touch"
 

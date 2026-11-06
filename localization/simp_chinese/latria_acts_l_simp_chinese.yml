@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U]死在这场肉体欢愉里"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "你没有暴露"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U]死在这场爱抚里"
- latria_start_fatal_liaison_interaction: "致命交合"
+ latria_start_fatal_liaison_interaction: "致命交合#weak （计谋）#!"
  latria_start_fatal_liaison_interaction_desc: "一场[recipient.GetShortUINameNoTooltip]活不下来的肉体欢愉。"
  latria_fatal_liaison_started: "致命交合"
- latria_start_fatal_touch_interaction: "致命爱抚"
+ latria_start_fatal_touch_interaction: "致命爱抚#weak （计谋）#!"
  latria_start_fatal_touch_interaction_desc: "一场[recipient.GetShortUINameNoTooltip]活不下来的爱抚。"
  latria_fatal_touch_started: "致命爱抚"
 

@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "魅惑绑架"
  latria_charming_abduction_desc_general: "利用美貌诱使目标放松警惕，策划将其[imprison|E]。"
  latria_charming_abduction_desc: "我会以美貌为饵，绑架并[imprison|E][SCHEME.GetTargetCharacter.GetShortUINameNoTooltip]。"
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$#weak （计谋）#!"
  latria_start_charming_abduction_interaction_desc: "利用美貌引诱[recipient.GetShortUINameNoTooltip]，策划将其绑架并[imprison|E]。"
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName]已对[recipient.GetShortUIName]发起魅惑绑架计谋"

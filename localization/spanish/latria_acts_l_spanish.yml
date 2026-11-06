@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] muere durante el encuentro carnal"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "No se descubre tu implicación"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] muere bajo tus caricias"
- latria_start_fatal_liaison_interaction: "Unión fatal"
+ latria_start_fatal_liaison_interaction: "Unión fatal #weak (conjura)#!"
  latria_start_fatal_liaison_interaction_desc: "Un encuentro carnal al que [recipient.GetShortUINameNoTooltip] no sobrevivirá."
  latria_fatal_liaison_started: "Unión fatal"
- latria_start_fatal_touch_interaction: "Caricia fatal"
+ latria_start_fatal_touch_interaction: "Caricia fatal #weak (conjura)#!"
  latria_start_fatal_touch_interaction_desc: "Una caricia carnal a la que [recipient.GetShortUINameNoTooltip] no sobrevivirá."
  latria_fatal_touch_started: "Caricia fatal"
 

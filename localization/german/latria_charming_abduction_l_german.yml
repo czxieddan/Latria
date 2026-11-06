@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Durch Verführung entführen"
  latria_charming_abduction_desc_general: "Mit Schönheit die Wachsamkeit eines Ziels schwächen und ein Komplott schmieden, um es zu [imprison|E]."
  latria_charming_abduction_desc: "Ich werde [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip] mit meiner Schönheit anlocken, entführen und [imprison|E]."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (Komplott)#!"
  latria_start_charming_abduction_interaction_desc: "Nutzt Eure Schönheit, um [recipient.GetShortUINameNoTooltip] in eine Falle zu locken, zu entführen und zu [imprison|E]."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] hat ein Komplott zur Entführung durch Verführung gegen [recipient.GetShortUIName] begonnen"

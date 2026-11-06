@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Enlever par le charme"
  latria_charming_abduction_desc_general: "User de sa beauté pour abaisser la garde d’une cible et comploter pour l’[imprison|E]."
  latria_charming_abduction_desc: "J’userai de ma beauté pour attirer, enlever et [imprison|E] [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip]."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (complot)#!"
  latria_start_charming_abduction_interaction_desc: "User de votre beauté pour attirer [recipient.GetShortUINameNoTooltip] dans un piège, puis l’[imprison|E]."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] a lancé un complot d’Enlèvement par le charme contre [recipient.GetShortUIName]"

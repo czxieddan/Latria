@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Porwij urokiem"
  latria_charming_abduction_desc_general: "Wykorzystaj urodę, by uśpić czujność celu i przygotować uwięzienie ([imprison|E])."
  latria_charming_abduction_desc: "Wykorzystam urodę, by zwabić i porwać osobę, którą jest [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip], a następnie dokonać uwięzienia ([imprison|E])."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (spisek)#!"
  latria_start_charming_abduction_interaction_desc: "Wykorzystaj urodę, by zwabić do pułapki osobę, którą jest [recipient.GetShortUINameNoTooltip], i dokonać uwięzienia ([imprison|E])."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] rozpoczyna spisek Porwanie urokiem przeciw osobie, którą jest [recipient.GetShortUIName]"

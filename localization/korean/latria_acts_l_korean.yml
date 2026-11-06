@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U](이)가 정사 중에 사망함"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "당신의 정체가 드러나지 않음"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U](이)가 당신의 애무를 받다 사망함"
- latria_start_fatal_liaison_interaction: "치명적인 정사"
+ latria_start_fatal_liaison_interaction: "치명적인 정사 #weak (모략)#!"
  latria_start_fatal_liaison_interaction_desc: "[recipient.GetShortUINameNoTooltip](이)가 살아남지 못할 정사입니다."
  latria_fatal_liaison_started: "치명적인 정사"
- latria_start_fatal_touch_interaction: "치명적인 애무"
+ latria_start_fatal_touch_interaction: "치명적인 애무 #weak (모략)#!"
  latria_start_fatal_touch_interaction_desc: "[recipient.GetShortUINameNoTooltip](이)가 살아남지 못할 애무입니다."
  latria_fatal_touch_started: "치명적인 애무"
 

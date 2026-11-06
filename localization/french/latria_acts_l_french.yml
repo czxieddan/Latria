@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] succombe pendant l’acte"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "Votre implication reste secrète"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] succombe à vos caresses"
- latria_start_fatal_liaison_interaction: "Étreinte fatale"
+ latria_start_fatal_liaison_interaction: "Étreinte fatale #weak (complot)#!"
  latria_start_fatal_liaison_interaction_desc: "Une rencontre charnelle à laquelle [recipient.GetShortUINameNoTooltip] ne survivra pas."
  latria_fatal_liaison_started: "Étreinte fatale"
- latria_start_fatal_touch_interaction: "Caresse fatale"
+ latria_start_fatal_touch_interaction: "Caresse fatale #weak (complot)#!"
  latria_start_fatal_touch_interaction_desc: "Une caresse charnelle à laquelle [recipient.GetShortUINameNoTooltip] ne survivra pas."
  latria_fatal_touch_started: "Caresse fatale"
 

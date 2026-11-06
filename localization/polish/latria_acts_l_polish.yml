@@ -55,10 +55,10 @@
  LATRIA_FATAL_LIAISON_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] umiera podczas zbliżenia"
  LATRIA_FATAL_LIAISON_DISCOVERY_DESC: "Nie wyjdzie na jaw twój udział"
  LATRIA_FATAL_TOUCH_SUCCESS_DESC: "[TARGET_CHARACTER.GetShortUIName|U] umiera pod twoimi pieszczotami"
- latria_start_fatal_liaison_interaction: "Śmiertelne zbliżenie"
+ latria_start_fatal_liaison_interaction: "Śmiertelne zbliżenie #weak (spisek)#!"
  latria_start_fatal_liaison_interaction_desc: "Cielesne spotkanie, którego nie przeżyje [recipient.GetShortUINameNoTooltip]."
  latria_fatal_liaison_started: "Śmiertelne zbliżenie"
- latria_start_fatal_touch_interaction: "Śmiertelny dotyk"
+ latria_start_fatal_touch_interaction: "Śmiertelny dotyk #weak (spisek)#!"
  latria_start_fatal_touch_interaction_desc: "Cielesny dotyk, którego nie przeżyje [recipient.GetShortUINameNoTooltip]."
  latria_fatal_touch_started: "Śmiertelny dotyk"
 

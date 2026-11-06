@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "Похитить обаянием"
  latria_charming_abduction_desc_general: "Усыпить бдительность цели красотой и задумать [imprison|E]."
  latria_charming_abduction_desc: "Моя красота поможет заманить и похитить персону по имени [SCHEME.GetTargetCharacter.GetShortUINameNoTooltip], чтобы затем [imprison|E]."
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$ #weak (происки)#!"
  latria_start_charming_abduction_interaction_desc: "Своей красотой заманить персону по имени [recipient.GetShortUINameNoTooltip] в ловушку, чтобы похитить и [imprison|E]."
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName] начинает происки «Похищение обаянием» против персоны по имени [recipient.GetShortUIName]"

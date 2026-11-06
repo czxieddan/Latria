@@ -3,7 +3,7 @@
  latria_charming_abduction_action: "魅惑による誘拐"
  latria_charming_abduction_desc_general: "美貌で相手の警戒を解き、[imprison|E]する計画を練る。"
  latria_charming_abduction_desc: "私は美貌を餌に[SCHEME.GetTargetCharacter.GetShortUINameNoTooltip]を誘い出してさらい、[imprison|E]する。"
- latria_start_charming_abduction_interaction: "$latria_charming_abduction$"
+ latria_start_charming_abduction_interaction: "$latria_charming_abduction$#weak （工作）#!"
  latria_start_charming_abduction_interaction_desc: "美貌で[recipient.GetShortUINameNoTooltip]を誘い出し、さらって[imprison|E]する。"
  latria_charming_abduction_started: "$latria_charming_abduction$"
  latria_charming_abduction_started_puppeteer: "[puppet_or_actor.GetShortUIName]は[recipient.GetShortUIName]に対する魅惑による誘拐の計画を開始した"
