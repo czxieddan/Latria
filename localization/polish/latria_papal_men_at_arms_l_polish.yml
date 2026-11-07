@@ -1,0 +1,4 @@
+﻿l_polish:
+ latria_saint_peter_iron_guard: "Żelazna Gwardia Świętego Piotra"
+ latria_saint_peter_iron_guard_flavor: "#F Ci ciężkozbrojni jeźdźcy przysięgają wierność papieżowi i szarżują pod sztandarem świętego Piotra.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Odblokowuje [men_at_arms|E]: $latria_saint_peter_iron_guard$"

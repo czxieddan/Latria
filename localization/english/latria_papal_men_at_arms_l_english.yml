@@ -1,0 +1,4 @@
+﻿l_english:
+ latria_saint_peter_iron_guard: "Saint Peter's Iron Guard"
+ latria_saint_peter_iron_guard_flavor: "#F These heavily armored horsemen swear fealty to the Pope and charge beneath Saint Peter's banner.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Can recruit $latria_saint_peter_iron_guard$ [men_at_arms|E]"

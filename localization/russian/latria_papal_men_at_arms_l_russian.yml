@@ -1,0 +1,4 @@
+﻿l_russian:
+ latria_saint_peter_iron_guard: "Железная гвардия святого Петра"
+ latria_saint_peter_iron_guard_flavor: "#F Эти тяжеловооружённые всадники присягают на верность Папе и идут в атаку под знаменем святого Петра.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Можно набирать [men_at_arms|E] «$latria_saint_peter_iron_guard$»"

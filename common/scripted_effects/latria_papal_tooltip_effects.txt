@@ -6,4 +6,5 @@ latria_papal_scandal_victory_preview = {
 	}
 	custom_tooltip = latria_papal_scandal_ally_share_tt
 	custom_tooltip = latria_papal_redemption_unlocked_tt
+	custom_tooltip = latria_saint_peter_iron_guard_unlocked_tt
 }

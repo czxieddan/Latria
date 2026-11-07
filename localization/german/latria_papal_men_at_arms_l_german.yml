@@ -1,0 +1,4 @@
+﻿l_german:
+ latria_saint_peter_iron_guard: "Eiserne Garde des heiligen Petrus"
+ latria_saint_peter_iron_guard_flavor: "#F Diese schwer gepanzerten Reiter schwören dem Papst die Treue und stürmen unter dem Banner des heiligen Petrus in die Schlacht.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Erlaubt die Rekrutierung von [men_at_arms|E]: $latria_saint_peter_iron_guard$"

@@ -1,0 +1,4 @@
+﻿l_simp_chinese:
+ latria_saint_peter_iron_guard: "圣彼得铁卫"
+ latria_saint_peter_iron_guard_flavor: "#F 这些重骑兵向教宗宣誓效忠，在圣彼得的旗帜下冲锋。#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "可以招募$latria_saint_peter_iron_guard$[men_at_arms|E]"

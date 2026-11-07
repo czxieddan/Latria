@@ -1,0 +1,4 @@
+﻿l_spanish:
+ latria_saint_peter_iron_guard: "Guardia de Hierro de San Pedro"
+ latria_saint_peter_iron_guard_flavor: "#F Estos jinetes de pesada armadura juran lealtad al papa y cargan bajo el estandarte de San Pedro.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Permite reclutar [men_at_arms|E] de la $latria_saint_peter_iron_guard$"

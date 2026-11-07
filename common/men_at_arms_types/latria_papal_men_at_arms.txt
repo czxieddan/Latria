@@ -1,0 +1,45 @@
+latria_saint_peter_iron_guard = {
+	type = heavy_cavalry
+
+	damage = 191
+	toughness = 63
+	pursuit = 41
+	screen = 15
+
+	terrain_bonus = {
+		plains = { damage = 30 toughness = 5 }
+		drylands = { damage = 30 }
+		hills = { damage = -10 }
+		mountains = { damage = -50 }
+		desert_mountains = { damage = -50 }
+		wetlands = { damage = -80 toughness = -15 pursuit = -10 }
+	}
+
+	counters = {
+		archers = 1
+		gunpowder = 1
+	}
+
+	winter_bonus = {
+		normal_winter = { damage = -15 toughness = -5 }
+		harsh_winter = { damage = -30 toughness = -10 }
+	}
+
+	can_recruit = {
+		latria_papal_redemption_is_unlocked = yes
+	}
+	access_through_subject = {
+		latria_papal_redemption_is_unlocked = yes
+	}
+	allowed_in_hired_troops = no
+
+	# Vanilla cataphract costs * 1.2; maintenance rounded to two decimals.
+	buy_cost = { gold = 312 }
+	low_maintenance_cost = { gold = 1.09 }
+	high_maintenance_cost = { gold = 3.28 }
+	provision_cost = 30
+
+	stack = 50
+	ai_quality = { value = 80 }
+	icon = latria_saint_peter_iron_guard
+}

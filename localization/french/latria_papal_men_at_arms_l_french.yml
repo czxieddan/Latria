@@ -1,0 +1,4 @@
+﻿l_french:
+ latria_saint_peter_iron_guard: "Garde de fer de saint Pierre"
+ latria_saint_peter_iron_guard_flavor: "#F Ces cavaliers lourdement cuirassés jurent fidélité au pape et chargent sous la bannière de saint Pierre.#!"
+ latria_saint_peter_iron_guard_unlocked_tt: "Permet de recruter des [men_at_arms|E] de la $latria_saint_peter_iron_guard$"
