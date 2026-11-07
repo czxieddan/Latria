@@ -7,10 +7,10 @@ latria_flavor_lose_authority = {
 
 latria_flavor_embarrass_family = {
 	every_spouse = {
-		add_opinion = { target = root modifier = latria_flavor_embarrassed_family_opinion }
+		add_opinion = { target = root modifier = latria_flavor_embarrassed_family_opinion days = latria_flavor_lasting_opinion_days }
 	}
 	every_concubine = {
-		add_opinion = { target = root modifier = latria_flavor_embarrassed_family_opinion }
+		add_opinion = { target = root modifier = latria_flavor_embarrassed_family_opinion days = latria_flavor_lasting_opinion_days }
 	}
 }
 
@@ -22,6 +22,6 @@ latria_flavor_musical_patronage = {
 	latria_flavor_pay_musicians = yes
 	latria_flavor_music = yes
 	add_prestige = { value = latria_flavor_prestige_gain }
-	latria_flavor_company_opinion = { MODIFIER = latria_flavor_pleasant_conversation_opinion }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_pleasant_conversation_opinion DAYS = latria_flavor_opinion_days }
 	latria_flavor_grow_company_friendship = yes
 }

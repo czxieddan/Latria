@@ -8,18 +8,18 @@ latria_flavor_restraint_stress_consequence = {
 
 latria_flavor_private_indulgence = {
 	latria_flavor_indulgence_stress_consequence = yes
-	add_character_modifier = { modifier = latria_flavor_distracted months = latria_flavor_short_months }
+	add_character_modifier = { modifier = latria_flavor_distracted days = latria_flavor_short_days }
 }
 
 latria_flavor_private_restraint = {
 	latria_flavor_restraint_stress_consequence = yes
-	add_character_modifier = { modifier = latria_flavor_composure months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_composure days = latria_flavor_modifier_days }
 }
 
 latria_flavor_restful_restraint = {
 	latria_flavor_restraint_stress_consequence = yes
 	remove_character_modifier = latria_flavor_broken_sleep
-	add_character_modifier = { modifier = latria_flavor_rested months = latria_flavor_short_months }
+	add_character_modifier = { modifier = latria_flavor_rested days = latria_flavor_short_days }
 }
 
 latria_flavor_comfort = {
@@ -29,7 +29,7 @@ latria_flavor_comfort = {
 latria_flavor_public_rumors = {
 	if = {
 		limit = { scope:latria_flavor_resolution_severity >= 3 }
-		add_character_modifier = { modifier = latria_flavor_sullied months = latria_flavor_reputation_months }
+		add_character_modifier = { modifier = latria_flavor_sullied days = latria_flavor_reputation_days }
 	}
 }
 
@@ -52,47 +52,47 @@ latria_flavor_faith_consequences = {
 latria_flavor_faith_restraint_consequences = {
 	latria_flavor_restraint_stress_consequence = yes
 	add_piety = { value = latria_flavor_piety_gain }
-	add_character_modifier = { modifier = latria_flavor_observance months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_observance days = latria_flavor_modifier_days }
 }
 
 latria_flavor_trait_release_consequences = {
 	latria_flavor_private_indulgence = yes
 	if = {
 		limit = { has_trait = chaste }
-		add_character_modifier = { modifier = latria_flavor_remorse months = latria_flavor_short_months }
+		add_character_modifier = { modifier = latria_flavor_remorse days = latria_flavor_short_days }
 	}
 }
 
 latria_flavor_focus_on_duties = {
-	add_character_modifier = { modifier = latria_flavor_focus months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_focus days = latria_flavor_modifier_days }
 }
 
 latria_flavor_duty_indulgence = {
 	latria_flavor_indulgence_stress_consequence = yes
-	add_character_modifier = { modifier = latria_flavor_neglected_duties months = latria_flavor_short_months }
+	add_character_modifier = { modifier = latria_flavor_neglected_duties days = latria_flavor_short_days }
 	latria_flavor_disappoint_colleague = yes
 }
 
 latria_flavor_duty_restraint = {
 	latria_flavor_restraint_stress_consequence = yes
-	add_character_modifier = { modifier = latria_flavor_reliable months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_reliable days = latria_flavor_modifier_days }
 	latria_flavor_impress_colleague = yes
 	if = {
 		limit = { is_adventurer = yes }
-		add_character_modifier = { modifier = latria_flavor_vagabond_focus months = latria_flavor_modifier_months }
+		add_character_modifier = { modifier = latria_flavor_vagabond_focus days = latria_flavor_modifier_days }
 	}
 }
 
 latria_flavor_diligent_work = {
 	add_stress = { value = latria_flavor_effort_stress }
-	add_character_modifier = { modifier = latria_flavor_diligent_work months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_diligent_work days = latria_flavor_modifier_days }
 	latria_flavor_practice_stewardship = yes
 }
 
 latria_flavor_devotional_study = {
 	add_stress = { value = latria_flavor_effort_stress }
 	add_piety = { value = latria_flavor_piety_gain }
-	add_character_modifier = { modifier = latria_flavor_scriptural_insight months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_scriptural_insight days = latria_flavor_modifier_days }
 	latria_flavor_practice_learning = yes
 }
 
@@ -104,7 +104,7 @@ latria_flavor_guided_study = {
 latria_flavor_vigil = {
 	add_stress = { value = latria_flavor_effort_stress }
 	add_piety = { value = latria_flavor_vigil_piety_gain }
-	add_character_modifier = { modifier = latria_flavor_observance months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_observance days = latria_flavor_modifier_days }
 	add_character_modifier = { modifier = latria_flavor_broken_sleep days = latria_flavor_fatigue_days }
 	latria_flavor_practice_learning = yes
 }
@@ -112,8 +112,8 @@ latria_flavor_vigil = {
 latria_flavor_public_avowal = {
 	latria_flavor_indulgence_stress_consequence = yes
 	add_prestige = { value = latria_flavor_major_prestige_loss }
-	add_character_modifier = { modifier = latria_flavor_sullied months = latria_flavor_reputation_months }
-	add_character_modifier = { modifier = latria_flavor_unburdened months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_sullied days = latria_flavor_reputation_days }
+	add_character_modifier = { modifier = latria_flavor_unburdened days = latria_flavor_modifier_days }
 	latria_flavor_scandalize_witness = yes
 	latria_flavor_lose_authority = yes
 	latria_flavor_embarrass_family = yes
@@ -123,8 +123,8 @@ latria_flavor_public_avowal = {
 latria_flavor_public_disgrace = {
 	latria_flavor_indulgence_stress_consequence = yes
 	add_prestige = { value = latria_flavor_major_prestige_loss }
-	add_character_modifier = { modifier = latria_flavor_public_disgrace years = 5 }
-	add_character_modifier = { modifier = latria_flavor_unburdened months = latria_flavor_modifier_months }
+	add_character_modifier = { modifier = latria_flavor_public_disgrace days = latria_flavor_disgrace_days }
+	add_character_modifier = { modifier = latria_flavor_unburdened days = latria_flavor_modifier_days }
 	latria_flavor_scandalize_witness = yes
 	latria_flavor_lose_authority = yes
 	latria_flavor_embarrass_family = yes

@@ -42,3 +42,20 @@ latria_act_pregnancy_rule_multiplier = {
 		value = 2
 	}
 }
+
+latria_repression_flavor_interval_days = {
+	value = 180
+	if = { limit = { has_game_rule = latria_repression_flavor_interval_60 } value = 60 }
+	else_if = { limit = { has_game_rule = latria_repression_flavor_interval_120 } value = 120 }
+	else_if = { limit = { has_game_rule = latria_repression_flavor_interval_240 } value = 240 }
+	else_if = { limit = { has_game_rule = latria_repression_flavor_interval_360 } value = 360 }
+	else_if = { limit = { has_game_rule = latria_repression_flavor_interval_720 } value = 720 }
+}
+
+# Rebase the existing effects by 1.5 at 180 days, then scale with the interval.
+# Multiply before dividing to preserve the exact 60- and 120-day factors.
+latria_repression_flavor_effect_multiplier = {
+	value = 1.5
+	multiply = latria_repression_flavor_interval_days
+	divide = 180
+}

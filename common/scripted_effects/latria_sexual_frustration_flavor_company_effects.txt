@@ -62,7 +62,7 @@ latria_prepare_flavor_confidant = {
 
 latria_flavor_company_opinion = {
 	scope:latria_flavor_company ?= {
-		add_opinion = { target = root modifier = $MODIFIER$ }
+		add_opinion = { target = root modifier = $MODIFIER$ days = $DAYS$ }
 	}
 }
 
@@ -70,26 +70,26 @@ latria_flavor_candid_company_reaction = {
 	scope:latria_flavor_company ?= {
 		if = {
 			limit = { latria_flavor_company_enjoys_candor = yes }
-			add_opinion = { target = root modifier = latria_flavor_enjoyed_candor_opinion }
+			add_opinion = { target = root modifier = latria_flavor_enjoyed_candor_opinion days = latria_flavor_opinion_days }
 		}
 		else = {
-			add_opinion = { target = root modifier = latria_flavor_foolish_display_opinion }
+			add_opinion = { target = root modifier = latria_flavor_foolish_display_opinion days = latria_flavor_opinion_days }
 		}
 	}
 }
 
 latria_flavor_disappoint_colleague = {
-	latria_flavor_company_opinion = { MODIFIER = latria_flavor_delayed_business_opinion }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_delayed_business_opinion DAYS = latria_flavor_opinion_days }
 }
 
 latria_flavor_impress_colleague = {
-	latria_flavor_company_opinion = { MODIFIER = latria_flavor_reliable_colleague_opinion }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_reliable_colleague_opinion DAYS = latria_flavor_lasting_opinion_days }
 }
 
 latria_flavor_listen_to_guide = {
-	latria_flavor_company_opinion = { MODIFIER = latria_flavor_attentive_student_opinion }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_attentive_student_opinion DAYS = latria_flavor_opinion_days }
 }
 
 latria_flavor_scandalize_witness = {
-	latria_flavor_company_opinion = { MODIFIER = latria_flavor_scandalized_witness_opinion }
+	latria_flavor_company_opinion = { MODIFIER = latria_flavor_scandalized_witness_opinion DAYS = latria_flavor_scandal_opinion_days }
 }

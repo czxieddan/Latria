@@ -18,6 +18,7 @@ latria_flavor_release_amount = {
 	if = { limit = { scope:latria_flavor_resolution_severity >= 3 } value = 35 }
 	if = { limit = { scope:latria_flavor_resolution_severity >= 4 } value = 55 }
 	if = { limit = { scope:latria_flavor_resolution_severity >= 5 } value = 80 }
+	multiply = latria_repression_flavor_effect_multiplier
 	max = var:latria_sexual_frustration
 	min = 0
 }
@@ -30,6 +31,7 @@ latria_flavor_release_relief = {
 latria_flavor_reflection_amount = {
 	value = 5
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 	max = var:latria_sexual_frustration
 	min = 0
 }
@@ -42,6 +44,7 @@ latria_flavor_reflection_relief = {
 latria_flavor_resistance_gain = {
 	value = 2
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 # These are vanilla stress, separate from the repression values above.
@@ -51,6 +54,7 @@ latria_flavor_indulgence_stress = {
 	else_if = { limit = { has_trait = temperate } value = 1 }
 	else_if = { limit = { has_trait = lustful } value = -3 }
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_restraint_stress = {
@@ -61,92 +65,131 @@ latria_flavor_restraint_stress = {
 	if = { limit = { has_trait = lustful has_trait = patient } multiply = 0.5 }
 	if = { limit = { has_trait = lustful has_trait = impatient } multiply = 1.5 }
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_comfort_stress = {
 	value = -5
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_effort_stress = {
 	value = 4
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_prestige_gain = {
 	value = 10
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_prestige_loss = {
 	value = -10
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_major_prestige_loss = {
 	value = -25
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_piety_gain = {
 	value = 15
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_piety_loss = {
 	value = -15
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 latria_flavor_vigil_piety_gain = {
 	value = latria_flavor_piety_gain
 	multiply = 2
 }
 
-
-latria_flavor_modifier_months = {
+# Convert durations to days before scaling to retain partial months.
+latria_flavor_modifier_days = {
 	value = 2
 	multiply = latria_flavor_severity
+	multiply = 30
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
-latria_flavor_reputation_months = {
+latria_flavor_reputation_days = {
 	value = 3
 	if = { limit = { scope:latria_flavor_resolution_severity >= 2 } value = 6 }
 	if = { limit = { scope:latria_flavor_resolution_severity >= 3 } value = 12 }
 	if = { limit = { scope:latria_flavor_resolution_severity >= 4 } value = 24 }
 	if = { limit = { scope:latria_flavor_resolution_severity >= 5 } value = 60 }
+	multiply = 30
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
-latria_flavor_short_months = {
+latria_flavor_short_days = {
 	value = latria_flavor_severity
 	max = 3
+	multiply = 30
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_fatigue_days = {
 	value = 5
 	multiply = latria_flavor_severity
 	max = 21
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_practice_xp = {
 	value = 15
 	multiply = latria_flavor_severity
 	max = 60
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_hunter_practice_xp = {
 	value = 3
 	multiply = latria_flavor_severity
 	max = 10
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_dread_loss = {
 	value = -2
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
 }
 
 latria_flavor_music_cost = {
 	value = 5
 	multiply = latria_flavor_severity
+	multiply = latria_repression_flavor_effect_multiplier
+}
+
+latria_flavor_disgrace_days = {
+	value = 1825
+	multiply = latria_repression_flavor_effect_multiplier
+}
+
+latria_flavor_opinion_days = {
+	value = 365
+	multiply = latria_repression_flavor_effect_multiplier
+}
+
+latria_flavor_lasting_opinion_days = {
+	value = latria_flavor_opinion_days
+	multiply = 2
+}
+
+latria_flavor_scandal_opinion_days = {
+	value = latria_flavor_opinion_days
+	multiply = 3
 }
 
 # AI weights for flavor choices. Traits, current stress, current repression,

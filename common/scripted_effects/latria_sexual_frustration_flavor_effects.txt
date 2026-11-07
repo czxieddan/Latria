@@ -8,7 +8,7 @@ latria_try_sexual_frustration_flavor_event = {
 			chance = latria_sexual_frustration_flavor_event_chance
 			add_character_flag = {
 				flag = latria_sexual_frustration_flavor_cooldown
-				days = 120
+				days = latria_repression_flavor_interval_days
 			}
 			latria_dispatch_sexual_frustration_flavor_event = yes
 		}

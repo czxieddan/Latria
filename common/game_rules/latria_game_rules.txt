@@ -16,6 +16,21 @@ latria_repression_growth = {
 	latria_repression_growth_plus_500 = { flag = blocks_achievements }
 }
 
+latria_repression_flavor_interval = {
+	categories = {
+		latria difficulty
+	}
+
+	default = latria_repression_flavor_interval_180
+
+	latria_repression_flavor_interval_60 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_120 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_180 = {}
+	latria_repression_flavor_interval_240 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_360 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_720 = { flag = blocks_achievements }
+}
+
 latria_repression_suicide = {
 	categories = {
 		latria health
