@@ -1,0 +1,34 @@
+latria_designate_sacred_heir = {
+	category = interaction_category_diplomacy
+	icon = heir
+	desc = latria_designate_sacred_heir_desc
+	interface_priority = 300
+	common_interaction = yes
+	use_diplomatic_range = no
+	auto_accept = no
+	can_send_despite_rejection = yes
+	popup_on_receive = yes
+	pause_on_receive = yes
+	greeting = positive
+	notification_text = latria_sacred_invitation_notification
+	answer_accept_key = latria_sacred_invitation_accept
+	answer_reject_key = latria_sacred_invitation_decline
+	is_available = { has_title = title:e_latria_holy_see }
+	is_shown = { latria_sacred_invitation_is_valid = yes }
+	is_valid_showing_failures_only = { latria_sacred_invitation_is_valid = yes }
+	cost = { piety = 2000 }
+	on_accept = {
+		scope:actor = {
+			show_as_tooltip = { latria_complete_sacred_invitation = yes }
+			hidden_effect = { latria_accept_sacred_invitation = yes }
+		}
+	}
+	on_decline = { latria_decline_sacred_invitation = yes }
+	ai_accept = {
+		base = -30
+		latria_sacred_invitation_political_modifiers = yes
+		latria_sacred_invitation_religious_modifiers = yes
+		latria_sacred_invitation_personal_modifiers = yes
+	}
+	ai_will_do = { base = 0 }
+}

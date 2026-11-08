@@ -1,0 +1,62 @@
+latria_sacred_invitation_political_modifiers = {
+	modifier = {
+		add = latria_sacred_invitation_realm_score
+		desc = latria_sacred_invitation_realm_reason
+	}
+	modifier = {
+		add = latria_sacred_invitation_rank_score
+		desc = latria_sacred_invitation_rank_reason
+	}
+	modifier = {
+		scope:recipient = { is_independent_ruler = yes }
+		add = -25
+		desc = latria_sacred_invitation_independent_reason
+	}
+}
+
+latria_sacred_invitation_religious_modifiers = {
+	modifier = {
+		add = latria_sacred_invitation_devotion_score
+		desc = latria_sacred_invitation_devotion_reason
+	}
+	modifier = {
+		scope:recipient.faith = scope:actor.faith
+		add = 20
+		desc = latria_sacred_invitation_same_faith_reason
+	}
+	modifier = {
+		scope:recipient.rite = scope:actor.rite
+		add = 25
+		desc = latria_sacred_invitation_same_rite_reason
+	}
+	modifier = {
+		scope:recipient.faith != scope:actor.faith
+		add = -40
+		desc = latria_sacred_invitation_other_faith_reason
+	}
+	modifier = {
+		scope:recipient = {
+			faith = faith:catholic
+			is_clergy = yes
+		}
+		add = 40
+		desc = latria_sacred_invitation_clergy_reason
+	}
+}
+
+latria_sacred_invitation_personal_modifiers = {
+	modifier = {
+		add = latria_sacred_invitation_personality_score
+		desc = latria_sacred_invitation_personality_reason
+	}
+	opinion_modifier = {
+		who = scope:recipient
+		opinion_target = scope:actor
+		multiplier = 0.5
+		desc = AI_OPINION_REASON
+	}
+	modifier = {
+		add = latria_sacred_invitation_kinship_score
+		desc = latria_sacred_invitation_kinship_reason
+	}
+}

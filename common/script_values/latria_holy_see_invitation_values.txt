@@ -1,0 +1,48 @@
+latria_sacred_invitation_realm_score = {
+	value = scope:actor.realm_size
+	subtract = scope:recipient.realm_size
+	multiply = 0.2
+	min = -40
+	max = 40
+}
+
+latria_sacred_invitation_rank_score = {
+	value = scope:actor.highest_held_title_tier
+	subtract = scope:recipient.highest_held_title_tier
+	multiply = 10
+	min = -40
+	max = 40
+}
+
+latria_sacred_invitation_devotion_score = {
+	value = scope:actor.piety_level
+	subtract = scope:recipient.piety_level
+	multiply = 5
+	min = -25
+	max = 25
+}
+
+latria_sacred_invitation_personality_score = {
+	value = scope:recipient.ai_zeal
+	multiply = 0.3
+	if = {
+		limit = { scope:recipient.faith != scope:actor.faith }
+		multiply = -1
+	}
+	add = { value = scope:recipient.ai_honor multiply = 0.1 }
+	subtract = { value = scope:recipient.ai_greed multiply = 0.2 }
+	min = -50
+	max = 50
+}
+
+latria_sacred_invitation_kinship_score = {
+	value = 0
+	if = {
+		limit = { scope:recipient = { is_close_family_of = scope:actor } }
+		add = 25
+	}
+	else_if = {
+		limit = { scope:recipient = { is_close_or_extended_family_of = scope:actor } }
+		add = 10
+	}
+}

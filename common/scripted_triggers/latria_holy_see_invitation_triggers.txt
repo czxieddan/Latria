@@ -1,0 +1,14 @@
+latria_sacred_invitation_is_valid = {
+	scope:actor = {
+		is_alive = yes
+		has_title = title:e_latria_holy_see
+	}
+	scope:recipient = { is_alive = yes }
+	scope:actor != scope:recipient
+}
+
+latria_sacred_heir_chain_is_acyclic = {
+	scope:latria_heir_cursor = { NOT = { exists = designated_heir } }
+	scope:latria_heir_cursor != scope:actor
+	scope:actor = { NOT = { is_in_list = latria_heir_chain } }
+}

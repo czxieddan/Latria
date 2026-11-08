@@ -1,0 +1,66 @@
+# Unsafe designation is valid only for an acyclic heir chain, checked again at acceptance.
+latria_trace_sacred_heir_chain = {
+	scope:recipient = { save_scope_as = latria_heir_cursor }
+	while = {
+		limit = {
+			scope:latria_heir_cursor = {
+				exists = designated_heir
+				NOT = { is_in_list = latria_heir_chain }
+			}
+		}
+		scope:latria_heir_cursor = {
+			add_to_temporary_list = latria_heir_chain
+			designated_heir = { save_scope_as = latria_heir_cursor }
+		}
+	}
+}
+
+latria_designate_sacred_heir_effect = {
+	custom_tooltip = latria_designate_sacred_heir_tt
+	hidden_effect = { set_designated_heir_unsafe = scope:recipient }
+}
+
+latria_accept_sacred_rite = {
+	# Decide before converting: a convert must not also receive the same-rite reward.
+	if = {
+		limit = { rite = scope:actor.rite }
+		add_piety = 2000
+	}
+	else = { set_character_rite = scope:actor.rite }
+}
+
+latria_complete_sacred_invitation = {
+	latria_designate_sacred_heir_effect = yes
+	scope:recipient = {
+		latria_accept_sacred_rite = yes
+		custom_tooltip = latria_sacred_heir_relinquish_lands_tt
+	}
+}
+
+latria_accept_sacred_invitation = {
+	if = {
+		limit = { latria_sacred_invitation_is_valid = yes }
+		hidden_effect = { latria_trace_sacred_heir_chain = yes }
+		if = {
+			limit = { latria_sacred_heir_chain_is_acyclic = yes }
+			latria_complete_sacred_invitation = yes
+		}
+		else = {
+			send_interface_toast = {
+				title = latria_designate_sacred_heir
+				custom_tooltip = latria_sacred_heir_cycle_tt
+				left_icon = scope:recipient
+			}
+		}
+	}
+}
+
+latria_decline_sacred_invitation = {
+	if = {
+		limit = {
+			latria_sacred_invitation_is_valid = yes
+			scope:recipient.rite = scope:actor.rite
+		}
+		scope:recipient = { add_piety = -2000 }
+	}
+}
