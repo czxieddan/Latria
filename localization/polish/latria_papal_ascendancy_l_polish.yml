@@ -1,6 +1,6 @@
 ﻿l_polish:
- h_latria_holy_see: "Stolica Apostolska"
- h_latria_holy_see_adj: "Katolicka"
+ e_latria_holy_see: "Stolica Apostolska"
+ e_latria_holy_see_adj: "Katolicka"
  nick_latria_vicar_of_christ: "Namiestnik Chrystusa"
  nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNotMeNoTooltipNoFormat|U] jest ostatnim zbawieniem [CHARACTER.GetFaith.HighGodNamePossessive] dla upadłego świata – bo gdyby świat mógł jeszcze zbawić się sam, czy [CHARACTER.GetFaith.HighGodName] [Select_CString(EqualTo_string(CHARACTER.GetFaith.HighGodNameSheHe, 'ona' ), 'wyniosłaby', 'wyniósłby' )] ponad wszystkie korony kogoś takiego jak #EMP [Select_CString(CHARACTER.IsFemale, 'ona', 'on' )]#!?"
 
@@ -84,3 +84,18 @@
  latria_papal_scandal_war.0001.desc: "Władcy chwytają za broń, by pozbawić urzędu osobę, którą jest [latria_scandal_target.GetShortUIName], po ujawnieniu [latria_scandal_target.GetHerHis] cudzołóstwa. Ich posłowie przybywają na mój dwór i proszą, bym wyruszył z koalicją."
  latria_papal_scandal_war.0001.a: "Chwycić za broń u boku koalicji"
  latria_papal_scandal_war.0001.b: "Pozostać poza tą wojną"
+
+ latria_holy_see_government: "Stolica Apostolska"
+ latria_holy_see_government_adjective: "Papieska"
+ latria_holy_see_government_realm: "Władztwo Stolicy Apostolskiej"
+ latria_holy_see_government_desc: "\n#F Pod rządami Stolicy Apostolskiej władza duchowna i świecka skupiają się w jednych rękach. Namiestnik rządzi z woli Boga, a książęta i prałaci jednakowo podlegają jego zwierzchnictwu.#!"
+ latria_holy_see_government_with_icon: "@latria_holy_see_government! $latria_holy_see_government$"
+ latria_divine_succession_law: "Boska sukcesja"
+ latria_divine_succession_law_subname: "Wybór Boga"
+ latria_divine_succession_law_desc: "Stolica Apostolska przypada dziedzicowi wybranemu przez Boga. Namiestnik ogłasza ten wybór i powierza następcy święty urząd."
+ latria_holy_see_ruler_male: "Namiestnik"
+ latria_holy_see_ruler_female: "Namiestniczka"
+ latria_holy_see_vassals_convert_tt: "Wszyscy [vassals|E] przyjmują ustrój [GetGovernment('ecclesiastical_government').GetName]"
+ latria_redeemed_realm_convert_tt: "Odkupiony władca i wszyscy jego [vassals|E] przyjmują ustrój [GetGovernment('ecclesiastical_government').GetName]"
+ latria_papal_title_locked_tt: "Tego tytułu nie można zniszczyć"
+ latria_holy_see_government_icon: "@latria_holy_see_government!"

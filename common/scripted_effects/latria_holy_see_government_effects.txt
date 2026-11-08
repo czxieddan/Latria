@@ -1,0 +1,35 @@
+latria_adopt_holy_see_government = {
+	if = {
+		limit = { NOT = { has_government = latria_holy_see_government } }
+		change_government = latria_holy_see_government
+	}
+}
+
+latria_convert_all_vassals_to_church = {
+	custom_tooltip = latria_holy_see_vassals_convert_tt
+	hidden_effect = {
+		every_vassal_or_below = {
+			limit = { NOT = { has_government = ecclesiastical_government } }
+			change_government = ecclesiastical_government
+		}
+	}
+}
+
+# Keep the original realm before rank reduction moves its kings to the Pope.
+latria_snapshot_redeemed_realm = {
+	scope:latria_redeemed_ruler = {
+		add_to_temporary_list = latria_redeemed_realm
+		every_vassal_or_below = { add_to_temporary_list = latria_redeemed_realm }
+	}
+}
+
+latria_convert_redeemed_realm_to_church = {
+	custom_tooltip = latria_redeemed_realm_convert_tt
+	hidden_effect = {
+		every_in_list = {
+			list = latria_redeemed_realm
+			limit = { NOT = { has_government = ecclesiastical_government } }
+			change_government = ecclesiastical_government
+		}
+	}
+}

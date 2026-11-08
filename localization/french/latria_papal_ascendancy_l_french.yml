@@ -1,6 +1,6 @@
 ﻿l_french:
- h_latria_holy_see: "Saint-Siège"
- h_latria_holy_see_adj: "catholique"
+ e_latria_holy_see: "Saint-Siège"
+ e_latria_holy_see_adj: "catholique"
  nick_latria_vicar_of_christ: "le Vicaire du Christ"
  nick_latria_vicar_of_christ_desc: "[CHARACTER.Custom('FR_le_Char_U_Pi')|U][CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsLocalPlayer,'êtes','est')] l’ultime salut que [CHARACTER.GetFaith.HighGodName] accorde à un monde déchu — car si le monde pouvait encore se sauver seul, [CHARACTER.GetFaith.HighGodName] aurait-[CHARACTER.GetFaith.HighGodNameSheHe] élevé au-dessus de toutes les couronnes quelqu’un comme #EMP [Select_CString(CHARACTER.IsLocalPlayer,'vous',Select_CString(CHARACTER.IsFemale,'elle','lui'))]#! ?"
 
@@ -84,3 +84,18 @@
  latria_papal_scandal_war.0001.desc: "Des souverains ont pris les armes pour déposer [latria_scandal_target.GetShortUIName] après la révélation de sa liaison adultère. Leurs émissaires arrivent à ma cour pour me demander de marcher avec la coalition."
  latria_papal_scandal_war.0001.a: "Prendre les armes avec la coalition"
  latria_papal_scandal_war.0001.b: "Rester à l’écart de cette guerre"
+
+ latria_holy_see_government: "Saint-Siège"
+ latria_holy_see_government_adjective: "pontifical"
+ latria_holy_see_government_realm: "Domaine du Saint-Siège"
+ latria_holy_see_government_desc: "\n#F Sous le Saint-Siège, les pouvoirs spirituel et temporel sont réunis entre les mêmes mains. Le vicaire règne au nom de Dieu, et princes comme prélats sont soumis à son autorité.#!"
+ latria_holy_see_government_with_icon: "@latria_holy_see_government! $latria_holy_see_government$"
+ latria_divine_succession_law: "Succession divine"
+ latria_divine_succession_law_subname: "Choix de Dieu"
+ latria_divine_succession_law_desc: "Le Saint-Siège revient à l’héritier désigné par Dieu. Le vicaire proclame ce choix et lui confie la succession de sa charge sacrée."
+ latria_holy_see_ruler_male: "Vicaire"
+ latria_holy_see_ruler_female: "Vicaire"
+ latria_holy_see_vassals_convert_tt: "Tous les [vassals|E] adoptent le gouvernement [GetGovernment('ecclesiastical_government').GetName]"
+ latria_redeemed_realm_convert_tt: "Le souverain racheté et tous ses [vassals|E] adoptent le gouvernement [GetGovernment('ecclesiastical_government').GetName]"
+ latria_papal_title_locked_tt: "Ce titre ne peut être détruit"
+ latria_holy_see_government_icon: "@latria_holy_see_government!"

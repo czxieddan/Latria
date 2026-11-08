@@ -12,9 +12,12 @@
 }
 
 latria_grant_papal_scandal_victory_rewards = {
-	# The Pope's ecclesiastical government uses church authority, not crown authority.
-	add_realm_law_skip_effects = church_authority_3
 	latria_grant_papal_holy_see = yes
+	latria_lock_papal_title = yes
+	latria_declare_kingdom_of_heaven = yes
+	hidden_effect = { latria_repair_holy_see_state = yes }
+	add_realm_law_skip_effects = church_authority_3
+	latria_convert_all_vassals_to_church = yes
 	if = {
 		limit = { NOT = { has_trait = conqueror } }
 		add_trait = conqueror
@@ -41,14 +44,15 @@ latria_grant_papal_holy_see = {
 		save_scope_as = latria_holy_see_change
 		add_claim_on_loss = no
 	}
-	title:h_latria_holy_see = {
+	title:e_latria_holy_see = {
 		change_title_holder = {
 			holder = scope:latria_holy_see_recipient
 			change = scope:latria_holy_see_change
 		}
 	}
 	resolve_title_and_vassal_change = scope:latria_holy_see_change
-	set_primary_title_to = title:h_latria_holy_see
+	set_primary_title_to = title:e_latria_holy_see
+	latria_establish_holy_see = yes
 	give_nickname = nick_latria_vicar_of_christ
 	set_prestige_level = {
 		value = 5

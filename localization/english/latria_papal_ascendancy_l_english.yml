@@ -1,6 +1,6 @@
 ﻿l_english:
- h_latria_holy_see: "Holy See"
- h_latria_holy_see_adj: "Catholic"
+ e_latria_holy_see: "Holy See"
+ e_latria_holy_see_adj: "Catholic"
  nick_latria_vicar_of_christ: "the Vicar of Christ"
  nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharAreIs(CHARACTER)] the last salvation [CHARACTER.GetFaith.HighGodName] has granted a fallen world — for if the world could still save itself, would [CHARACTER.GetFaith.HighGodName] have raised one such as #EMP [CharYouHerHim(CHARACTER)]#! above every crown?"
 
@@ -84,3 +84,18 @@
  latria_papal_scandal_war.0001.desc: "Rulers have taken up arms to depose [latria_scandal_target.GetShortUIName] after [latria_scandal_target.GetHerHis] affair was made public. Their envoys arrive at my court, asking me to march with the coalition."
  latria_papal_scandal_war.0001.a: "Take up arms with the coalition"
  latria_papal_scandal_war.0001.b: "Stay out of this war"
+
+ latria_holy_see_government: "Holy See"
+ latria_holy_see_government_adjective: "Pontifical"
+ latria_holy_see_government_realm: "Holy See Realm"
+ latria_holy_see_government_desc: "\n#F Under the Holy See, ecclesiastical and temporal power rest in a single seat. The Vicar rules by God's mandate, and princes and prelates alike answer to that authority.#!"
+ latria_holy_see_government_with_icon: "@latria_holy_see_government! $latria_holy_see_government$"
+ latria_divine_succession_law: "Divine Succession"
+ latria_divine_succession_law_subname: "Chosen by God"
+ latria_divine_succession_law_desc: "The Holy See passes to the heir chosen by God. The Vicar proclaims that choice and entrusts the sacred office to its successor."
+ latria_holy_see_ruler_male: "Vicar"
+ latria_holy_see_ruler_female: "Vicar"
+ latria_holy_see_vassals_convert_tt: "All [vassals|E] adopt [GetGovernment('ecclesiastical_government').GetName] government"
+ latria_redeemed_realm_convert_tt: "The redeemed ruler and all their [vassals|E] adopt [GetGovernment('ecclesiastical_government').GetName] government"
+ latria_papal_title_locked_tt: "This title cannot be destroyed"
+ latria_holy_see_government_icon: "@latria_holy_see_government!"

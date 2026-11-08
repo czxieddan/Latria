@@ -1,0 +1,47 @@
+latria_install_divine_title_law = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_title_law = latria_divine_succession_law } }
+			clear_title_laws = yes
+			add_title_law = latria_divine_succession_law
+		}
+	}
+}
+
+latria_select_default_sacred_heir = {
+	save_scope_as = latria_divine_ruler
+	hidden_effect = { clear_designated_heir = yes }
+	random_child = {
+		limit = { latria_is_eldest_living_sacred_child = yes }
+		scope:latria_divine_ruler = { set_designated_heir = prev }
+	}
+}
+
+latria_restore_divine_laws = {
+	if = {
+		limit = { NOT = { has_realm_law = latria_divine_succession_law } }
+		add_realm_law_skip_effects = latria_divine_succession_law
+	}
+	hidden_effect = {
+		every_held_title = {
+			limit = { tier >= tier_duchy }
+			latria_install_divine_title_law = yes
+		}
+	}
+}
+
+latria_initialize_divine_succession = {
+	latria_restore_divine_laws = yes
+	if = {
+		limit = {
+			OR = {
+				NOT = { exists = title:e_latria_holy_see.var:latria_succession_holder }
+				title:e_latria_holy_see.var:latria_succession_holder != this
+			}
+		}
+		title:e_latria_holy_see = {
+			set_variable = { name = latria_succession_holder value = prev }
+		}
+		latria_select_default_sacred_heir = yes
+	}
+}

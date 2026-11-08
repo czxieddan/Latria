@@ -1,0 +1,67 @@
+on_death = {
+	on_actions = {
+		latria_holy_see_on_ruler_death
+		latria_holy_see_on_heir_death
+	}
+}
+
+on_birth_child = {
+	on_actions = { latria_holy_see_on_child_birth }
+}
+
+latria_holy_see_on_heir_death = {
+	trigger = {
+		exists = title:e_latria_holy_see.holder.designated_heir
+		title:e_latria_holy_see.holder.designated_heir = root
+	}
+	effect = {
+		# on_death runs before the dying character is marked dead.
+		save_scope_as = latria_dying_heir
+		title:e_latria_holy_see.holder = { latria_select_default_sacred_heir = yes }
+	}
+}
+
+latria_holy_see_on_child_birth = {
+	trigger = {
+		exists = title:e_latria_holy_see.holder
+		is_child_of = title:e_latria_holy_see.holder
+		title:e_latria_holy_see.holder = { NOT = { exists = designated_heir } }
+	}
+	effect = {
+		title:e_latria_holy_see.holder = { latria_select_default_sacred_heir = yes }
+	}
+}
+
+latria_holy_see_on_ruler_death = {
+	trigger = { has_title = title:e_latria_holy_see }
+	effect = { latria_prepare_sacred_succession = yes }
+}
+
+on_title_destroyed = {
+	on_actions = { latria_holy_see_on_succession_destruction }
+}
+
+latria_holy_see_on_succession_destruction = {
+	trigger = {
+		scope:landed_title = title:e_latria_holy_see
+		exists = var:latria_sacred_successor_on_death
+		var:latria_sacred_successor_on_death = { is_alive = yes }
+	}
+	effect = {
+		# Recover after the destruction and native succession have both completed.
+		var:latria_sacred_successor_on_death = {
+			trigger_event = { on_action = latria_holy_see_recover_sacred_succession days = 1 }
+		}
+	}
+}
+
+latria_holy_see_recover_sacred_succession = {
+	trigger = {
+		is_alive = yes
+		NOT = { exists = title:e_latria_holy_see.holder }
+	}
+	effect = {
+		save_scope_as = latria_sacred_successor
+		title:e_latria_holy_see = { latria_transfer_sacred_succession_title = yes }
+	}
+}

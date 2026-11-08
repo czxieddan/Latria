@@ -1,0 +1,22 @@
+# Loaded after the vanilla gender laws so divine succession stays gender-neutral.
+latria_divine_succession_law = {
+	law_group_type = succession_order_laws
+	index = 100
+	can_keep = { has_government = latria_holy_see_government }
+	can_have = { has_government = latria_holy_see_government }
+	should_start_with = { has_government = latria_holy_see_government }
+	can_realm_have = { has_government = latria_holy_see_government }
+	can_title_have = { holder ?= { has_government = latria_holy_see_government } }
+	can_remove_from_title = { always = no }
+	potential = { has_government = latria_holy_see_government }
+	requires_approve = { always = no }
+	succession = {
+		order_of_succession = inheritance
+		traversal_order = children
+		rank = oldest
+		title_division = single_heir
+		gender_law = equal
+		resign_outside_realm = yes
+	}
+	flag = can_designate_heirs
+}

@@ -1,0 +1,17 @@
+e_latria_holy_see = {
+	pattern = "pattern_solid.dds"
+	color1 = rgb { 25 25 75 }
+	color2 = "white"
+	colored_emblem = {
+		texture = "ce_key_st_peter.dds"
+		color1 = "yellow"
+		color2 = "yellow"
+		instance = { position = { 0.542 0.5 } rotation = -40 scale = { 0.9 0.9 } }
+	}
+	colored_emblem = {
+		texture = "ce_key_st_peter.dds"
+		color1 = "white"
+		color2 = "white"
+		instance = { position = { 0.458 0.5 } rotation = 40 scale = { -0.9 0.9 } }
+	}
+}

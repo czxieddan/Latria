@@ -1,0 +1,65 @@
+on_title_gain = {
+	on_actions = {
+		latria_holy_see_on_title_gain
+		latria_holy_see_on_secondary_title_gain
+		latria_holy_see_on_empire_created
+		latria_holy_see_on_papal_title_gain
+	}
+}
+
+latria_holy_see_on_title_gain = {
+	trigger = {
+		OR = {
+			scope:title = title:e_latria_holy_see
+			latria_is_sacred_succession_transfer = yes
+		}
+	}
+	effect = {
+		latria_route_sacred_title_succession = yes
+		if = {
+			limit = {
+				scope:title = title:e_latria_holy_see
+				has_title = title:e_latria_holy_see
+			}
+			latria_establish_holy_see = yes
+		}
+	}
+}
+
+latria_holy_see_on_empire_created = {
+	trigger = {
+		has_title = title:e_latria_holy_see
+		scope:transfer_type = flag:created
+		scope:title = { tier = tier_empire }
+	}
+	effect = {
+		scope:title = { set_de_jure_liege_title = title:h_kingdom_of_heaven }
+	}
+}
+
+latria_holy_see_on_secondary_title_gain = {
+	trigger = {
+		has_title = title:e_latria_holy_see
+		scope:title != title:e_latria_holy_see
+		scope:title = { tier >= tier_duchy }
+	}
+	effect = {
+		scope:title = { latria_install_divine_title_law = yes }
+	}
+}
+
+latria_holy_see_on_papal_title_gain = {
+	trigger = { scope:title = title:k_papal_state }
+	effect = {
+		# Vanilla assigns papal elective succession during the same title transfer.
+		latria_schedule_holy_see_restoration = yes
+	}
+}
+
+latria_holy_see_restore_divine_succession = {
+	effect = {
+		remove_variable = latria_holy_see_restoration_pending
+		# Check ownership after the transfer, then restore government before its laws.
+		latria_repair_holy_see_state = yes
+	}
+}

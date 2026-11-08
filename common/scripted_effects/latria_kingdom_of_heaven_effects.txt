@@ -1,0 +1,88 @@
+latria_grant_kingdom_of_heaven_title = {
+	create_title_and_vassal_change = {
+		type = created
+		save_scope_as = latria_heaven_title_change
+		add_claim_on_loss = no
+	}
+	title:h_kingdom_of_heaven = {
+		change_title_holder = {
+			holder = scope:kingdom_of_heaven_founder
+			change = scope:latria_heaven_title_change
+		}
+	}
+	resolve_title_and_vassal_change = scope:latria_heaven_title_change
+	set_primary_title_to = title:h_kingdom_of_heaven
+}
+
+latria_accept_kingdom_of_heaven_fealty = {
+	add_to_list = new_vassals
+	hidden_effect = {
+		create_title_and_vassal_change = {
+			type = swear_fealty
+			save_scope_as = latria_heaven_fealty_change
+			add_claim_on_loss = no
+		}
+		change_liege = {
+			liege = scope:kingdom_of_heaven_founder
+			change = scope:latria_heaven_fealty_change
+		}
+		resolve_title_and_vassal_change = scope:latria_heaven_fealty_change
+	}
+}
+
+latria_gather_kingdom_of_heaven_vassals = {
+	faith = {
+		every_faith_ruler = {
+			limit = { latria_kingdom_of_heaven_can_receive_fealty = yes }
+			random = {
+				chance = latria_kingdom_of_heaven_vassal_chance
+				latria_accept_kingdom_of_heaven_fealty = yes
+			}
+		}
+	}
+}
+
+latria_integrate_kingdom_of_heaven_empires = {
+	every_empire = {
+		limit = { latria_kingdom_of_heaven_can_integrate_empire = yes }
+		set_de_jure_liege_title = title:h_kingdom_of_heaven
+	}
+}
+
+latria_announce_kingdom_of_heaven = {
+	every_player = {
+		limit = {
+			this != scope:kingdom_of_heaven_founder
+			faith = scope:kingdom_of_heaven_founder.faith
+		}
+		send_interface_toast = {
+			title = pam_kingdom_of_heaven_news_title
+			custom_tooltip = pam_kingdom_of_heaven_news_tt
+			left_icon = scope:kingdom_of_heaven_founder
+			right_icon = title:h_kingdom_of_heaven
+		}
+	}
+}
+
+# PAM's declaration rewards, without relocation or dynasty rewards.
+# Named character scopes also work when a war callback is the root.
+latria_declare_kingdom_of_heaven = {
+	save_scope_as = kingdom_of_heaven_founder
+	latria_grant_kingdom_of_heaven_title = yes
+	if = {
+		limit = { NOT = { exists = dynasty } }
+		add_character_modifier = pam_founded_kingdom_of_heaven_modifier
+	}
+	custom_tooltip = pam_kingdom_of_heaven_decision_vassals_effect_tt
+	custom_tooltip = {
+		text = pam_kingdom_of_heaven_decision_subjugation_effect_tt
+		set_variable = koh_subjugation_cb_allowed
+	}
+	set_global_variable = { name = created_kingdom_of_heaven value = yes }
+	custom_tooltip = pam_kingdom_of_heaven_decision_de_jure_effect_tt
+	hidden_effect = {
+		latria_gather_kingdom_of_heaven_vassals = yes
+		latria_integrate_kingdom_of_heaven_empires = yes
+		latria_announce_kingdom_of_heaven = yes
+	}
+}

@@ -1,0 +1,25 @@
+latria_holy_see_ruler_male = {
+	type = character
+	gender = male
+	special = holder
+	priority = 1000
+	titles = { e_latria_holy_see }
+	flavourization_rules = {
+		top_liege = no
+		only_holder = yes
+		spouse_takes_title = no
+	}
+}
+
+latria_holy_see_ruler_female = {
+	type = character
+	gender = female
+	special = holder
+	priority = 1000
+	titles = { e_latria_holy_see }
+	flavourization_rules = {
+		top_liege = no
+		only_holder = yes
+		spouse_takes_title = no
+	}
+}

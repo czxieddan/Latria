@@ -1,0 +1,31 @@
+﻿# Government-specific modifiers are preregistered from this list at startup.
+# Preserve vanilla entries and the verified additions of supported registrations.
+NGovernment = {
+	GOVERNMENT_TYPES = {
+		# Vanilla CK3 1.20
+		"feudal_government"
+		"republic_government"
+		"theocracy_government"
+		"clan_government"
+		"tribal_government"
+		"mercenary_government"
+		"holy_order_government"
+		"monastic_holy_order_government"
+		"administrative_government"
+		"landless_adventurer_government"
+		"nomad_government"
+		"herder_government"
+		"celestial_government"
+		"japan_administrative_government"
+		"japan_feudal_government"
+		"mandala_government"
+		"wanua_government"
+		"meritocratic_government"
+		"steppe_admin_government"
+		"ecclesiastical_government"
+
+		# Latria
+		"latria_holy_see_government"
+
+	}
+}

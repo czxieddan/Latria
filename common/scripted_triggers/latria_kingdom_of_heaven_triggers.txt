@@ -1,0 +1,38 @@
+latria_kingdom_of_heaven_can_receive_fealty = {
+	this != scope:kingdom_of_heaven_founder
+	is_independent_ruler = yes
+	is_available_quick = { landed = yes ai = yes advanced_ruler = yes }
+	is_playable_character = yes
+	highest_held_title_tier >= tier_county
+	highest_held_title_tier < tier_hegemony
+	NOR = {
+		has_relation_rival = scope:kingdom_of_heaven_founder
+		is_at_war_with = scope:kingdom_of_heaven_founder
+		government_has_flag = cannot_be_vassal_or_liege
+	}
+}
+
+latria_kingdom_of_heaven_is_territorial_empire = {
+	is_landless_type_title = no
+	any_in_de_jure_hierarchy = {
+		tier = tier_kingdom
+		is_landless_type_title = no
+		any_in_de_jure_hierarchy = {
+			tier = tier_duchy
+			is_landless_type_title = no
+		}
+	}
+}
+
+latria_kingdom_of_heaven_can_integrate_empire = {
+	latria_kingdom_of_heaven_is_territorial_empire = yes
+	trigger_if = {
+		limit = { exists = holder.top_liege }
+		holder.top_liege = scope:kingdom_of_heaven_founder
+	}
+	save_temporary_scope_as = latria_heaven_empire
+	OR = {
+		holder ?= scope:kingdom_of_heaven_founder
+		scope:kingdom_of_heaven_founder = { completely_controls = scope:latria_heaven_empire }
+	}
+}

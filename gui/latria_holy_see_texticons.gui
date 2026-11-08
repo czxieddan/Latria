@@ -1,0 +1,9 @@
+texticon = {
+	icon = latria_holy_see_government
+	iconsize = {
+		texture = "gfx/interface/icons/government_types/latria_holy_see_government.dds"
+		size = { 28 28 }
+		offset = { 0 6 }
+		fontsize = 16
+	}
+}

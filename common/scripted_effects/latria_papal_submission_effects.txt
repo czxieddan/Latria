@@ -88,6 +88,7 @@ latria_reduce_papal_subject_rank = {
 latria_force_papal_submission = {
 	$REDEEMER$ = { save_scope_as = latria_redeemer }
 	$SUBJECT$ = { save_scope_as = latria_redeemed_ruler }
+	latria_snapshot_redeemed_realm = yes
 	latria_collect_papal_redemption_payment = yes
 
 	if = {
@@ -116,4 +117,5 @@ latria_force_papal_submission = {
 	scope:latria_redeemed_ruler = {
 		convert_to_rite_with_consequences_effect = { RITE = scope:latria_redeemer.rite }
 	}
+	latria_convert_redeemed_realm_to_church = yes
 }

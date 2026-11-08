@@ -1,0 +1,31 @@
+latria_is_living_sacred_child = {
+	is_alive = yes
+	trigger_if = {
+		limit = { exists = scope:latria_dying_heir }
+		this != scope:latria_dying_heir
+	}
+}
+
+latria_is_eldest_living_sacred_child = {
+	latria_is_living_sacred_child = yes
+	save_temporary_scope_as = latria_sacred_child
+	NOT = {
+		scope:latria_divine_ruler = {
+			any_child = {
+				latria_is_living_sacred_child = yes
+				birth_date < scope:latria_sacred_child.birth_date
+			}
+		}
+	}
+}
+
+latria_has_living_sacred_heir = {
+	exists = designated_heir
+	designated_heir != this
+	designated_heir = { is_alive = yes }
+}
+
+latria_is_sacred_succession_transfer = {
+	exists = scope:previous_holder.var:latria_sacred_successor_on_death
+	scope:previous_holder.var:latria_sacred_successor_on_death = { is_alive = yes }
+}

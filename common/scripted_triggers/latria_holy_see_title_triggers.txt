@@ -1,0 +1,11 @@
+﻿latria_faith_uses_papal_head = {
+	OR = {
+		this = faith:catholic
+		this = faith:conversos
+		this = scope:latria_holy_see_holder.faith
+		AND = {
+			exists = religious_head_title
+			religious_head_title = title:k_papal_state
+		}
+	}
+}

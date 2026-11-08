@@ -1,0 +1,66 @@
+latria_bind_holy_see_faiths = {
+	save_scope_as = latria_holy_see_holder
+	every_religion_global = {
+		every_faith = {
+			limit = { latria_faith_uses_papal_head = yes }
+			set_religious_head_title = title:e_latria_holy_see
+		}
+	}
+	latria_refresh_holy_see_rites = yes
+}
+
+latria_set_holy_see_title_status = {
+	title:k_papal_state = { set_de_jure_liege_title = title:e_latria_holy_see }
+	latria_bind_holy_see_faiths = yes
+}
+
+latria_establish_holy_see = {
+	latria_set_holy_see_title_status = yes
+	latria_adopt_holy_see_government = yes
+	latria_initialize_divine_succession = yes
+	latria_schedule_holy_see_restoration = yes
+}
+
+# Also repairs an existing Holy See without repeating rewards or heir selection.
+latria_repair_holy_see_state = {
+	if = {
+		limit = { has_title = title:e_latria_holy_see }
+		latria_set_holy_see_title_status = yes
+		latria_adopt_holy_see_government = yes
+		latria_restore_divine_laws = yes
+	}
+}
+
+latria_refresh_holy_see_rites = {
+	every_religion_global = {
+		every_faith = {
+			limit = {
+				exists = religious_head_title
+				religious_head_title = title:e_latria_holy_see
+			}
+			every_faith_rite = { force_refresh_head_of_rite = yes }
+		}
+	}
+}
+
+latria_lock_papal_title = {
+	title:k_papal_state = {
+		set_variable = {
+			name = latria_papal_title_locked
+			value = yes
+		}
+	}
+}
+
+latria_schedule_holy_see_restoration = {
+	hidden_effect = {
+		if = {
+			limit = { NOT = { has_variable = latria_holy_see_restoration_pending } }
+			set_variable = { name = latria_holy_see_restoration_pending value = yes }
+			trigger_event = {
+				on_action = latria_holy_see_restore_divine_succession
+				days = 1
+			}
+		}
+	}
+}

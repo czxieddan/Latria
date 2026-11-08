@@ -1,0 +1,56 @@
+# Override priority, not filename order, lets Holy See holders choose a papal name.
+namespace = pam_clergy_events
+
+pam_clergy_events.0001 = {
+	id_override_priority = 1
+	theme = christian
+	type = character_event
+	title = pam_clergy_events.0001.t
+	window = big_event_window
+	desc = pam_clergy_events.0001.desc
+
+	override_background = pam_gothic_cathedral_interior
+	override_sound = { reference = "event:/DLC/CE3/SFX/Stingers/ce3_mx_sting_ElectPope" }
+
+	trigger = {
+		is_ai = no
+		OR = { primary_title = title:k_papal_state has_title = title:e_latria_holy_see }
+		exists = cp:councillor_court_chaplain
+	}
+
+	left_portrait = {
+		character = root
+		animation = acknowledging_crozier
+		camera = camera_event_left
+	}
+
+	right_portrait = {
+		character = scope:chaplain
+		animation = happy_teacher
+		camera = camera_event_very_right
+	}
+
+	immediate = {
+		cp:councillor_court_chaplain = {
+			save_scope_as = chaplain
+		}
+	}
+
+	# naming widget
+	widgets = {
+		widget = {
+			gui = event_window_widget_vfx_stained_glass
+			container = background_shader_vfx_container
+		}
+		widget = {
+			gui = "event_window_widget_name_pope"
+			container = "dynamic_birth_name"
+			controller = name_character
+			setup_scope = { root = { save_scope_as = name_character_target } }
+		}
+	}
+
+	option = {
+		name = pam_clergy_events.0001.a
+	}
+}

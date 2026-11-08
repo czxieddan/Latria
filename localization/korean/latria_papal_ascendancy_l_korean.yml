@@ -1,6 +1,6 @@
 ﻿l_korean:
- h_latria_holy_see: "성좌"
- h_latria_holy_see_adj: "가톨릭"
+ e_latria_holy_see: "성좌"
+ e_latria_holy_see_adj: "가톨릭"
  nick_latria_vicar_of_christ: "그리스도의 대리자"
  nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U](은)는 [CHARACTER.GetFaith.HighGodName](이)가 타락한 세계에 내리는 마지막 구원입니다. 세상이 아직 스스로 구원받을 수 있었다면, [CHARACTER.GetFaith.HighGodName]께서 #EMP [CHARACTER.GetShortUINameNoTooltipNoFormat]#! 같은 인물을 모든 왕관 위에 세우지도 않으셨겠지요."
 
@@ -84,3 +84,18 @@
  latria_papal_scandal_war.0001.desc: "[latria_scandal_target.GetShortUIName](은)는 [latria_scandal_target.GetHerHis] 불륜이 공개되자 폐위하려고 무기를 든 영주들과 맞서게 되었다. 연합군의 사절들이 내 궁정에 도착해 함께 진군할 것을 청한다."
  latria_papal_scandal_war.0001.a: "무기를 들고 연합군에 합류한다"
  latria_papal_scandal_war.0001.b: "이 전쟁에 관여하지 않는다"
+
+ latria_holy_see_government: "성좌제"
+ latria_holy_see_government_adjective: "성좌"
+ latria_holy_see_government_realm: "성좌령"
+ latria_holy_see_government_desc: "\n#F 성좌제에서는 교회와 세속의 권력이 성좌에 모인다. 대리자는 신의 명으로 통치하며, 제후와 성직자는 모두 그 권위에 복종한다.#!"
+ latria_holy_see_government_with_icon: "@latria_holy_see_government! $latria_holy_see_government$"
+ latria_divine_succession_law: "신수 계승제"
+ latria_divine_succession_law_subname: "신의 선택"
+ latria_divine_succession_law_desc: "성좌는 신이 선택한 후계자에게 이어진다. 대리자는 그 뜻을 선포하고 성스러운 직분의 계승을 맡긴다."
+ latria_holy_see_ruler_male: "대리자"
+ latria_holy_see_ruler_female: "대리자"
+ latria_holy_see_vassals_convert_tt: "모든 [vassals|E]이 [GetGovernment('ecclesiastical_government').GetName](으)로 전환함"
+ latria_redeemed_realm_convert_tt: "구원받은 통치자와 모든 [vassals|E]이 [GetGovernment('ecclesiastical_government').GetName](으)로 전환함"
+ latria_papal_title_locked_tt: "이 작위는 파괴할 수 없음"
+ latria_holy_see_government_icon: "@latria_holy_see_government!"

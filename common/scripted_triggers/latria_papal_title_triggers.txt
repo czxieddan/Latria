@@ -1,0 +1,6 @@
+latria_papal_title_is_unlocked = {
+	custom_tooltip = {
+		text = latria_papal_title_locked_tt
+		NOT = { has_variable = latria_papal_title_locked }
+	}
+}

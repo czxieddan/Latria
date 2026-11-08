@@ -1,6 +1,6 @@
 ﻿l_russian:
- h_latria_holy_see: "Святой престол"
- h_latria_holy_see_adj: "Католическ"
+ e_latria_holy_see: "Святой престол"
+ e_latria_holy_see_adj: "Католическ"
  nick_latria_vicar_of_christ: "Наместник Христа"
  nick_latria_vicar_of_christ_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] — последнее спасение, ниспосланное падшему миру милостью [CHARACTER.GetFaith.HighGodNamePossessive], ведь будь мир ещё способен спастись сам, разве склонились бы перед #EMP [Select_CString(CHARACTER.IsLocalPlayer, 'вами', Select_CString(CHARACTER.IsFemale, 'ней', 'ним' ))]#! все короны?"
 
@@ -84,3 +84,18 @@
  latria_papal_scandal_war.0001.desc: "Правители берутся за оружие, чтобы низложить персонажа [latria_scandal_target.GetShortUIName], после того как [latria_scandal_target.GetHerHis] связь на стороне стала достоянием гласности. Их посланники прибывают ко мне ко двору с просьбой выступить вместе с коалицией."
  latria_papal_scandal_war.0001.a: "Взяться за оружие вместе с коалицией"
  latria_papal_scandal_war.0001.b: "Остаться в стороне от этой войны"
+
+ latria_holy_see_government: "Святой престол"
+ latria_holy_see_government_adjective: "Папск"
+ latria_holy_see_government_realm: "Владения Святого престола"
+ latria_holy_see_government_desc: "\n#F При Святом престоле духовная и светская власть сосредоточены в одних руках. Наместник правит по воле Бога, а князья и прелаты в равной мере подчиняются его власти.#!"
+ latria_holy_see_government_with_icon: "@latria_holy_see_government! $latria_holy_see_government$"
+ latria_divine_succession_law: "Божественное наследование"
+ latria_divine_succession_law_subname: "Избрание Божье"
+ latria_divine_succession_law_desc: "Святой престол переходит к наследнику, избранному Богом. Наместник объявляет этот выбор и вверяет преемнику священное служение."
+ latria_holy_see_ruler_male: "Наместник"
+ latria_holy_see_ruler_female: "Наместница"
+ latria_holy_see_vassals_convert_tt: "Все [vassals|E] принимают форму правления «[GetGovernment('ecclesiastical_government').GetName]»"
+ latria_redeemed_realm_convert_tt: "Искупленный правитель и все его [vassals|E] принимают форму правления «[GetGovernment('ecclesiastical_government').GetName]»"
+ latria_papal_title_locked_tt: "Этот титул нельзя уничтожить"
+ latria_holy_see_government_icon: "@latria_holy_see_government!"

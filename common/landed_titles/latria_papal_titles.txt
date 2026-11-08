@@ -1,5 +1,5 @@
-# The Holy See - a landless hegemon title granted to the victorious Pope.
-h_latria_holy_see = {
+# The Holy See is the imperial head-of-faith title of the victorious Pope.
+e_latria_holy_see = {
 	color = { 255 249 198 }
 
 	capital = c_roma

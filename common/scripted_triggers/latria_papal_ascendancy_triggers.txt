@@ -1,5 +1,8 @@
 latria_is_canonical_pope = {
-	has_title = title:k_papal_state
+	OR = {
+		has_title = title:k_papal_state
+		has_title = title:e_latria_holy_see
+	}
 	latria_adultery_scandal_is_head_of_faith = yes
 }
 
