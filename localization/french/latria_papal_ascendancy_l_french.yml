@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Les [rulers|E] indépendants de votre [rite|E] et les [vassals|E] qui ne vous soutiennent pas pleinement peuvent rejoindre la coalition visant à vous déposer"
  latria_decision_paramour_defense_tt: "Si la personne avec qui vous entretenez cette liaison est un [ruler|E], elle peut rejoindre les défenseurs"
  latria_decision_allies_call_tt: "Vos [allies|E] peuvent répondre à votre appel et rejoindre les défenseurs"
- latria_decision_forced_defenders_tt: "Vos [rulers|E] fantoches et les souverains indépendants de votre [rite|E] dont le [piety_level|E] est @piety_level_0_icon! [piety_level_0|E] peuvent rejoindre les défenseurs"
+ latria_decision_forced_defenders_tt: "Vos [rulers|E] fantoches et les souverains indépendants de votre [rite|E] dont le [piety_level|E] est @piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L] peuvent rejoindre les défenseurs"
  latria_decision_disgraced_defenders_tt: "Les personnages de votre [rite|E] possédant le [trait|E] [GetTrait('adulterer').GetName(GetNullCharacter)] ou [GetTrait('fornicator').GetName(GetNullCharacter)] et commandant des troupes peuvent rejoindre les défenseurs"
  latria_decision_hook_defenders_tt: "Vos [hooks|E] peuvent être dépensés pour rallier des personnages de votre [rite|E] à la défense"
 

@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Независимые [rulers|E], следующие вашему [rite|E], и [vassals|E], не поддерживающие вас всецело, могут присоединиться к коалиции за ваше низложение"
  latria_decision_paramour_defense_tt: "Если ваш любовный партнёр — [ruler|E], он может присоединиться к обороняющейся стороне"
  latria_decision_allies_call_tt: "Ваши [allies|E] могут ответить на призыв и присоединиться к обороняющейся стороне"
- latria_decision_forced_defenders_tt: "Ваши марионеточные [rulers|E] и независимые правители, следующие вашему [rite|E] и имеющие [piety_level|E] @piety_level_0_icon![piety_level_0|E], могут присоединиться к обороняющейся стороне"
+ latria_decision_forced_defenders_tt: "Ваши марионеточные [rulers|E] и независимые правители, следующие вашему [rite|E] и имеющие [piety_level|E] @piety_level_0_icon_christian![GetModifier( 'piety_level_0' ).GetNameWithTooltip|L], могут присоединиться к обороняющейся стороне"
  latria_decision_disgraced_defenders_tt: "Персонажи, следующие вашему [rite|E], имеющие [trait|E] [GetTrait('adulterer').GetName(GetNullCharacter)] или [GetTrait('fornicator').GetName(GetNullCharacter)] и располагающие войсками, могут присоединиться к обороняющейся стороне"
  latria_decision_hook_defenders_tt: "Ваши [hooks|E] могут быть использованы, чтобы привлечь к защите персонажей, следующих вашему [rite|E]"
 

@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Los [rulers|E] independientes de tu [rite|E] y los [vassals|E] que no te apoyen plenamente pueden unirse a la coalición para deponerte"
  latria_decision_paramour_defense_tt: "Si tu pareja adúltera es un [ruler|E], puede unirse a los defensores"
  latria_decision_allies_call_tt: "Tus [allies|E] pueden responder a tu llamada y unirse a los defensores"
- latria_decision_forced_defenders_tt: "Tus [rulers|E] títeres y los gobernantes independientes de tu [rite|E] cuyo [piety_level|E] sea @piety_level_0_icon! [piety_level_0|E] pueden unirse a los defensores"
+ latria_decision_forced_defenders_tt: "Tus [rulers|E] títeres y los gobernantes independientes de tu [rite|E] cuyo [piety_level|E] sea @piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L] pueden unirse a los defensores"
  latria_decision_disgraced_defenders_tt: "Los personajes de tu [rite|E] con el [trait|E] [GetTrait('adulterer').GetName(GetNullCharacter)] o [GetTrait('fornicator').GetName(GetNullCharacter)] y tropas a su mando pueden unirse a los defensores"
  latria_decision_hook_defenders_tt: "Puedes gastar tus [hooks|E] para incorporar a la defensa a personajes de tu [rite|E]"
 

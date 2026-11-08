@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "당신과 같은 [rite|E]를 따르는 독립 [rulers|E] 및 당신을 전적으로 지지하지 않는 [vassals|E]이 폐위 연합군에 합류할 수 있습니다"
  latria_decision_paramour_defense_tt: "불륜 상대가 [ruler|E]라면 방어 측에 합류할 수 있습니다"
  latria_decision_allies_call_tt: "당신의 [allies|E]이 소집에 응해 방어 측에 합류할 수 있습니다"
- latria_decision_forced_defenders_tt: "당신의 꼭두각시 [rulers|E] 및 당신과 같은 [rite|E]를 따르며 [piety_level|E]가 @piety_level_0_icon![piety_level_0|E]인 독립 영주들이 방어 측에 합류할 수 있습니다"
+ latria_decision_forced_defenders_tt: "당신의 꼭두각시 [rulers|E] 및 당신과 같은 [rite|E]를 따르며 [piety_level|E]가 @piety_level_0_icon_christian![GetModifier( 'piety_level_0' ).GetNameWithTooltip|L]인 독립 영주들이 방어 측에 합류할 수 있습니다"
  latria_decision_disgraced_defenders_tt: "당신과 같은 [rite|E]를 따르며 [GetTrait('adulterer').GetName(GetNullCharacter)] 또는 [GetTrait('fornicator').GetName(GetNullCharacter)] [trait|E]을 지니고 병력을 거느린 인물들이 방어 측에 합류할 수 있습니다"
  latria_decision_hook_defenders_tt: "[hooks|E]을 소모하여 당신과 같은 [rite|E]의 인물들을 방어 측에 합류시킬 수 있습니다"
 

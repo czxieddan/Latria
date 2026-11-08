@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Unabhängige [rulers|E] Eures [rite|E] und [vassals|E], die Euch nicht vollständig unterstützen, können sich dem Bündnis zu Eurer Absetzung anschließen"
  latria_decision_paramour_defense_tt: "Falls Euer heimlicher Geliebter ein [ruler|E] ist, kann er sich den Verteidigern anschließen"
  latria_decision_allies_call_tt: "Eure [allies|E] können Eurem Ruf folgen und sich den Verteidigern anschließen"
- latria_decision_forced_defenders_tt: "Eure Marionetten unter den [rulers|E] sowie unabhängige Herrscher Eures [rite|E] mit der [piety_level|E] @piety_level_0_icon! [piety_level_0|E] können sich den Verteidigern anschließen"
+ latria_decision_forced_defenders_tt: "Eure Marionetten unter den [rulers|E] sowie unabhängige Herrscher Eures [rite|E] mit der [piety_level|E] @piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L] können sich den Verteidigern anschließen"
  latria_decision_disgraced_defenders_tt: "Charaktere Eures [rite|E] mit dem [trait|E] [GetTrait('adulterer').GetName(GetNullCharacter)] oder [GetTrait('fornicator').GetName(GetNullCharacter)] und eigenen Truppen können sich den Verteidigern anschließen"
  latria_decision_hook_defenders_tt: "Eure [hooks|E] können eingesetzt werden, um Charaktere Eures [rite|E] für die Verteidigung zu gewinnen"
 

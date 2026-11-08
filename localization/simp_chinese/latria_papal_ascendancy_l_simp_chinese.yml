@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "同[rite|E]的独立[rulers|E]及未完全拥护你的[vassals|E]可能加入废黜联军"
  latria_decision_paramour_defense_tt: "私通对象若为[ruler|E]，可能加入防守方"
  latria_decision_allies_call_tt: "你的[allies|E]可能响应号召，加入防守方"
- latria_decision_forced_defenders_tt: "你的傀儡[rulers|E]及与你同[rite|E]、[piety_level|E]为@piety_level_0_icon! [piety_level_0|E]的独立统治者可能加入防守方"
+ latria_decision_forced_defenders_tt: "你的傀儡[rulers|E]及与你同[rite|E]、[piety_level|E]为@piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L]的独立统治者可能加入防守方"
  latria_decision_disgraced_defenders_tt: "与你同[rite|E]、拥有[GetTrait('adulterer').GetName(GetNullCharacter)]或[GetTrait('fornicator').GetName(GetNullCharacter)][trait|E]且仍有兵力的角色可能加入防守方"
  latria_decision_hook_defenders_tt: "你可能消耗[hooks|E]，召集同[rite|E]的角色加入防守方"
 

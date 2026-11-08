@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "あなたの[rite|E]に属する独立した[rulers|E]と、あなたを全面的には支持しない[vassals|E]が、あなたの廃位を目指す連合に加わることがある"
  latria_decision_paramour_defense_tt: "不義の相手が[ruler|E]であれば、防衛側に加わることがある"
  latria_decision_allies_call_tt: "あなたの[allies|E]が招集に応じ、防衛側に加わることがある"
- latria_decision_forced_defenders_tt: "あなたの傀儡である[rulers|E]や、あなたの[rite|E]に属し[piety_level|E]が@piety_level_0_icon![piety_level_0|E]の独立した統治者が、防衛側に加わることがある"
+ latria_decision_forced_defenders_tt: "あなたの傀儡である[rulers|E]や、あなたの[rite|E]に属し[piety_level|E]が@piety_level_0_icon_christian![GetModifier( 'piety_level_0' ).GetNameWithTooltip|L]の独立した統治者が、防衛側に加わることがある"
  latria_decision_disgraced_defenders_tt: "あなたの[rite|E]に属し、[GetTrait('adulterer').GetName(GetNullCharacter)]または[GetTrait('fornicator').GetName(GetNullCharacter)]の[trait|E]を持ち、軍勢を率いる人物が、防衛側に加わることがある"
  latria_decision_hook_defenders_tt: "[hooks|E]を使い、あなたの[rite|E]の人物を防衛側に加えられることがある"
 

@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Independent [rulers|E] of your [rite|E] and [vassals|E] who do not fully support you may join the coalition to depose you"
  latria_decision_paramour_defense_tt: "If your paramour is a [ruler|E], they may join the defenders"
  latria_decision_allies_call_tt: "Your [allies|E] may answer your call and join the defenders"
- latria_decision_forced_defenders_tt: "Your puppet [rulers|E] and independent rulers of your [rite|E] whose [piety_level|E] is @piety_level_0_icon! [piety_level_0|E] may join the defenders"
+ latria_decision_forced_defenders_tt: "Your puppet [rulers|E] and independent rulers of your [rite|E] whose [piety_level|E] is @piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L] may join the defenders"
  latria_decision_disgraced_defenders_tt: "Characters of your [rite|E] with the [GetTrait('adulterer').GetName(GetNullCharacter)] or [GetTrait('fornicator').GetName(GetNullCharacter)] [trait|E] and troops at their command may join the defenders"
  latria_decision_hook_defenders_tt: "Your [hooks|E] may be spent to bring characters of your [rite|E] into the defense"
 

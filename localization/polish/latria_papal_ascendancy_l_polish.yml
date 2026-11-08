@@ -42,7 +42,7 @@
  latria_decision_war_attackers_tt: "Niezależni [rulers|E] wyznający twój [rite|E] oraz [vassals|E], którzy nie popierają cię w pełni, mogą dołączyć do koalicji dążącej do twojego obalenia"
  latria_decision_paramour_defense_tt: "Osoba, z którą cudzołożysz, może dołączyć do obrońców, jeśli sprawuje władzę jako [ruler|E]"
  latria_decision_allies_call_tt: "Twoi [allies|E] mogą odpowiedzieć na wezwanie i dołączyć do obrońców"
- latria_decision_forced_defenders_tt: "Marionetkowi [rulers|E] pod twoją kontrolą oraz niezależni władcy wyznający twój [rite|E], których [piety_level|E] wynosi @piety_level_0_icon! [piety_level_0|E], mogą dołączyć do obrońców"
+ latria_decision_forced_defenders_tt: "Marionetkowi [rulers|E] pod twoją kontrolą oraz niezależni władcy wyznający twój [rite|E], których [piety_level|E] wynosi @piety_level_0_icon_christian! [GetModifier( 'piety_level_0' ).GetNameWithTooltip|L], mogą dołączyć do obrońców"
  latria_decision_disgraced_defenders_tt: "Postacie wyznające twój [rite|E], mające cechę ([trait|E]) [GetTrait('adulterer').GetName(GetNullCharacter)] lub [GetTrait('fornicator').GetName(GetNullCharacter)] i dowodzące wojskami mogą dołączyć do obrońców"
  latria_decision_hook_defenders_tt: "Twoje [hooks|E] mogą zostać wykorzystane do wezwania na pomoc postaci wyznających twój [rite|E]"
 
