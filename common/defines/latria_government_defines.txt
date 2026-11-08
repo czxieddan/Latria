@@ -27,5 +27,28 @@ NGovernment = {
 		# Latria
 		"latria_holy_see_government"
 
+		# Oriental Empires (All Under Heaven), Workshop 2506311074
+		"stratocratic_government"
+		"bureau_government"
+		"ulus_government"
+		"native_government"
+
+		# A Game of Thrones 0.5.2.1, Workshop 2962333032 (common/defines/00_defines.txt)
+		"lp_feudal_government"
+		"silent_sisterhood_government"
+		"kingsguard_government"
+		"nights_watch_government"
+		"the_citadel_government"
+		"ruins_government"
+		"unknown_government"
+		"wilderness_government"
+		"pirate_government"
+		"pirate_no_dlc_government"
+		"dummy_adventurer_govt_for_bms"
+		"dummy_admin_govt_for_bms"
+		"first_ranger_government"
+		"command_government"
+		"lorathi_principality_government"
+		"norvos_government"
 	}
 }

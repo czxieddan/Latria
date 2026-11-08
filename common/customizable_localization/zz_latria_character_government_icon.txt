@@ -1,0 +1,134 @@
+# Holy See and verified mod icons precede native families, preserving the native fallback.
+GetGovernmentIcon = {
+	type = character
+
+	# Mod: Latria - Holy See
+	text = {
+		trigger = {
+			latria_character_has_government_icon_source = yes
+			latria_character_uses_exact_government_icon = { GOVERNMENT = latria_holy_see_government }
+		}
+		localization_key = latria_holy_see_government_icon
+	}
+
+	# Mod: A Game of Thrones (AGOT) 0.5.2.1, Workshop 2962333032; source: common/customizable_localization/00_government_custom_loc.txt
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = pirate_government FLAG = government_is_pirate } }
+		localization_key = pirate_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = pirate_no_dlc_government FLAG = government_is_pirate_without_landless_dlc } }
+		localization_key = pirate_no_dlc_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_nights_watch_icon = yes }
+		localization_key = nw_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = the_citadel_government FLAG = government_is_the_citadel } }
+		localization_key = citadel_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = kingsguard_government FLAG = government_is_kg } }
+		localization_key = kg_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = silent_sisterhood_government FLAG = government_is_silent_sisters } }
+		localization_key = silent_sisterhood_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = ruins_government FLAG = government_is_ruins } }
+		localization_key = ruins_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = command_government FLAG = government_is_command } }
+		localization_key = command_govt_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = norvos_government FLAG = government_is_norvos } }
+		localization_key = norvos_govt_concept
+	}
+
+	# Vanilla: CK3 1.20
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = monastic_holy_order_government FLAG = government_is_monastic_holy_order } }
+		localization_key = monastic_holy_order_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_special_title_icon = { GOVERNMENT = holy_order_government TITLE_CHECK = is_holy_order } }
+		localization_key = holy_order_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_special_title_icon = { GOVERNMENT = mercenary_government TITLE_CHECK = is_mercenary_company } }
+		localization_key = mercenary_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = landless_adventurer_government FLAG = government_is_landless_adventurer } }
+		localization_key = adventurer_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = nomad_government FLAG = government_is_nomadic } }
+		localization_key = nomadic_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_exact_government_icon = { GOVERNMENT = herder_government } }
+		localization_key = herder_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = celestial_government FLAG = government_is_celestial } }
+		localization_key = celestial_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = mandala_government FLAG = government_is_mandala } }
+		localization_key = mandala_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = wanua_government FLAG = government_is_wanua } }
+		localization_key = wanua_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = meritocratic_government FLAG = government_is_meritocratic } }
+		localization_key = meritocratic_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = tribal_government FLAG = government_is_tribal_excluding_wanua } }
+		localization_key = tribal_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = clan_government FLAG = government_is_clan } }
+		localization_key = clan_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_exact_government_icon = { GOVERNMENT = japan_administrative_government } }
+		localization_key = japan_administrative_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = administrative_government FLAG = government_is_administrative } }
+		localization_key = administrative_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = republic_government FLAG = government_is_republic } }
+		localization_key = republic_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = ecclesiastical_government FLAG = government_is_ecclesiastical } }
+		localization_key = ecclesiastical_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = theocracy_government FLAG = government_is_theocracy } }
+		localization_key = theocracy_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_exact_government_icon = { GOVERNMENT = japan_feudal_government } }
+		localization_key = japan_feudal_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_exact_government_icon = { GOVERNMENT = steppe_admin_government } }
+		localization_key = steppe_admin_icon_concept
+	}
+	text = {
+		trigger = { always = no }
+		localization_key = feudal_icon_concept
+		fallback = yes
+	}
+}

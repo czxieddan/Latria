@@ -1,0 +1,128 @@
+# Government-type contexts do not have a character or liege; use the dedicated flag.
+GetGovernmentTypeIcon = {
+	type = government_type
+
+	# Mod: Latria - Holy See
+	text = {
+		trigger = { government_type_has_flag = latria_government_is_holy_see }
+		localization_key = latria_holy_see_government_icon
+	}
+
+	# Mod: A Game of Thrones (AGOT) 0.5.2.1, Workshop 2962333032
+	# This version has no GetGovernmentTypeIcon; map its character icon keys through government flags.
+	text = {
+		trigger = { government_type_has_flag = government_is_pirate }
+		localization_key = pirate_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_pirate_without_landless_dlc }
+		localization_key = pirate_no_dlc_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_nw }
+		localization_key = nw_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_the_citadel }
+		localization_key = citadel_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_kg }
+		localization_key = kg_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_silent_sisters }
+		localization_key = silent_sisterhood_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_ruins }
+		localization_key = ruins_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_command }
+		localization_key = command_govt_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_norvos }
+		localization_key = norvos_govt_concept
+	}
+
+	# Vanilla: CK3 1.20
+	text = {
+		trigger = { government_type_has_flag = government_is_holy_order }
+		localization_key = holy_order_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_mercenary }
+		localization_key = mercenary_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_landless_adventurer }
+		localization_key = adventurer_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_nomadic }
+		localization_key = nomadic_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_herder }
+		localization_key = herder_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_celestial }
+		localization_key = celestial_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_mandala }
+		localization_key = mandala_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_wanua }
+		localization_key = wanua_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_meritocratic }
+		localization_key = meritocratic_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_tribal_excluding_wanua }
+		localization_key = tribal_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_clan }
+		localization_key = clan_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_japan_administrative }
+		localization_key = japan_administrative_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_administrative }
+		localization_key = administrative_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_republic }
+		localization_key = republic_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_ecclesiastical }
+		localization_key = ecclesiastical_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_theocracy }
+		localization_key = theocracy_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_japan_feudal }
+		localization_key = japan_feudal_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_steppe_admin }
+		localization_key = steppe_admin_icon_concept
+	}
+	text = {
+		trigger = { always = no }
+		localization_key = feudal_icon_concept
+		fallback = yes
+	}
+}
