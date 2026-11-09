@@ -30,6 +30,7 @@ latria_repression_gain_icon gfx/interface/icons/latria_repression_gain_icon.dds 
 latria_repression_loss_icon gfx/interface/icons/latria_repression_loss_icon.dds sexual repression loss text icon
 latria_army_of_god gfx/interface/icons/traits/latria_army_of_god.dds lord's holy army trait icon
 latria_white_tiger gfx/interface/icons/traits/latria_white_tiger.dds white tiger trait icon
+latria_unclean gfx/interface/icons/traits/latria_unclean.dds unclean trait icon
 latria_saint_peter_iron_guard gfx/interface/icons/regimenttypes/latria_saint_peter_iron_guard.dds Saint Peter Iron Guard regiment icon
 latria_saint_peter_iron_guard gfx/interface/illustrations/men_at_arms_big/latria_saint_peter_iron_guard.dds Saint Peter Iron Guard horizontal illustration
 latria_saint_peter_iron_guard gfx/interface/illustrations/men_at_arms_small/latria_saint_peter_iron_guard.dds Saint Peter Iron Guard vertical illustration

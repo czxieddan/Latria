@@ -1,6 +1,6 @@
 latria_unclean = {
 	category = fame
-	icon = leper.dds
+	icon = latria_unclean.dds
 
 	general_opinion = -10
 	islam_religion_opinion = -100
