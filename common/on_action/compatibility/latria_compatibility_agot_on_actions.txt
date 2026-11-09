@@ -1,0 +1,18 @@
+# Runs on the mother after Latria's pregnancy roll succeeds.
+# Each compatibility file appends its handler to this shared on_action.
+latria_on_act_pregnancy_compatibility = {
+	on_actions = { latria_compatibility_agot_on_act_pregnancy }
+}
+
+latria_compatibility_agot_on_act_pregnancy = {
+	effect = {
+		if = {
+			limit = { latria_agot_is_loaded = yes }
+			# AGOT 0.5.2.1 waits a day for the pregnancy to become visible to scripts.
+			trigger_event = {
+				id = latria_compatibility_agot.0001
+				days = 1
+			}
+		}
+	}
+}

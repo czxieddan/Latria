@@ -1,0 +1,10 @@
+# Load Latria after AGOT. Its independent LMF entry must use the same intercourse path.
+# Use a real pregnancy, not the stray-seed story that separately creates a child.
+lmf_random_sex_and_possible_stray_effect = {
+	save_scope_as = had_sex_root_character
+	$CHARACTER$ = { save_scope_as = had_sex_with_effect_partner }
+	had_sex_with_effect = {
+		CHARACTER = $CHARACTER$
+		PREGNANCY_CHANCE = latria_compatibility_agot_lmf_pregnancy_chance
+	}
+}

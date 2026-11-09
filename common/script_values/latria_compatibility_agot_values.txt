@@ -1,0 +1,26 @@
+# AGOT's LMF fertility roll, expressed using vanilla fields so AGOT stays optional.
+# Latria applies its pregnancy rule multiplier after capturing this caller chance.
+latria_compatibility_agot_lmf_pregnancy_chance = {
+	value = scope:had_sex_root_character.fertility
+	if = {
+		limit = { scope:had_sex_root_character.fertility > scope:had_sex_with_effect_partner.fertility }
+		value = scope:had_sex_with_effect_partner.fertility
+	}
+	multiply = 100
+	round = yes
+	if = {
+		limit = {
+			scope:had_sex_root_character = { any_child = { count > 2 } }
+		}
+		max = 30
+	}
+	else_if = {
+		limit = {
+			scope:had_sex_root_character = {
+				NOT = { is_consort_of = scope:had_sex_with_effect_partner }
+			}
+		}
+		max = 50
+	}
+	else = { max = 90 }
+}

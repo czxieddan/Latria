@@ -1,0 +1,13 @@
+namespace = latria_compatibility_agot
+
+latria_compatibility_agot.0001 = {
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = { is_pregnant = yes }
+			# Only bypass AGOT's distance check, not its canon or unfruitful-marriage rules.
+			add_character_flag = { flag = no_pregnancy_blocker days = 61 }
+		}
+	}
+}

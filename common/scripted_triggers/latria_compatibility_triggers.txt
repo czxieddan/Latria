@@ -1,0 +1,4 @@
+# AGOT exposes this variable for other mods; absent variables are safe in vanilla.
+latria_agot_is_loaded = {
+	has_global_variable = AGOT_is_loaded
+}

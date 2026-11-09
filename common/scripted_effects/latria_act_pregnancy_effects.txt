@@ -8,6 +8,7 @@ latria_roll_act_pregnancy_as_mother = {
 	random = {
 		chance = latria_resolved_pregnancy_chance
 		make_pregnant = { father = scope:latria_partner }
+		trigger_event = { on_action = latria_on_act_pregnancy_compatibility }
 	}
 }
 
@@ -21,6 +22,7 @@ latria_roll_act_pregnancy_as_father = {
 		random = {
 			chance = latria_resolved_pregnancy_chance
 			make_pregnant = { father = prev }
+			trigger_event = { on_action = latria_on_act_pregnancy_compatibility }
 		}
 	}
 }
