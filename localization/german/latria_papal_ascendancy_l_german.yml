@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! Wer den Titel [GetTitleByKey('e_latria_holy_see').GetNameNoTier] erbt, gibt alle zuvor gehaltenen Ländereien auf."
  latria_holy_see_ruler_male: "Stellvertreter"
  latria_holy_see_ruler_female: "Stellvertreterin"
+ latria_holy_see_consort_male: "Heiliger Gemahl"
+ latria_holy_see_consort_female: "Heilige Gemahlin"
  latria_designate_sacred_heir: "Göttlicher Ruf zur Nachfolge"
  latria_designate_sacred_heir_desc: "[recipient.GetShortUINameNoTooltip] einladen, dem göttlichen Ruf zu folgen und die Nachfolge des Heiligen Stuhls anzutreten."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName] wird zum Erben des Heiligen Stuhls bestimmt"

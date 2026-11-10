@@ -23,3 +23,30 @@ latria_holy_see_ruler_female = {
 		spouse_takes_title = no
 	}
 }
+
+# Consort styles rank below the holder-only Vicar styles.
+latria_holy_see_consort_male = {
+	type = character
+	gender = male
+	special = holder
+	priority = 999
+	titles = { e_latria_holy_see }
+	flavourization_rules = {
+		top_liege = no
+		only_holder = no
+		spouse_takes_title = yes
+	}
+}
+
+latria_holy_see_consort_female = {
+	type = character
+	gender = female
+	special = holder
+	priority = 999
+	titles = { e_latria_holy_see }
+	flavourization_rules = {
+		top_liege = no
+		only_holder = no
+		spouse_takes_title = yes
+	}
+}

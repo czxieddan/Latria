@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon!继承[GetTitleByKey('e_latria_holy_see').GetNameNoTier]时，继承人将交出此前持有的所有领地。"
  latria_holy_see_ruler_male: "代牧"
  latria_holy_see_ruler_female: "代牧"
+ latria_holy_see_consort_male: "圣配"
+ latria_holy_see_consort_female: "圣配"
  latria_designate_sacred_heir: "圣选继承"
  latria_designate_sacred_heir_desc: "邀请[recipient.GetShortUINameNoTooltip]领受神意，成为圣座继承人。"
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName]受圣选，成为圣座继承人"

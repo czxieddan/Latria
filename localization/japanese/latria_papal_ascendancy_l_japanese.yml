@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! [GetTitleByKey('e_latria_holy_see').GetNameNoTier]を継承する際、後継者はそれまでに保有していたすべての領地を手放す。"
  latria_holy_see_ruler_male: "代牧"
  latria_holy_see_ruler_female: "代牧"
+ latria_holy_see_consort_male: "聖配"
+ latria_holy_see_consort_female: "聖配"
  latria_designate_sacred_heir: "聖なる召命"
  latria_designate_sacred_heir_desc: "聖座の後継者となるよう、神の名において[recipient.GetShortUINameNoTooltip]を招く。"
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName]が聖座の後継者に指名される"

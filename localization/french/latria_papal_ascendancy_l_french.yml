@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! En héritant du [GetTitleByKey('e_latria_holy_see').GetNameNoTier], l’héritier renonce à toutes les terres qu’il détenait auparavant."
  latria_holy_see_ruler_male: "Vicaire"
  latria_holy_see_ruler_female: "Vicaire"
+ latria_holy_see_consort_male: "Époux sacré"
+ latria_holy_see_consort_female: "Épouse sacrée"
  latria_designate_sacred_heir: "Appel à la succession sacrée"
  latria_designate_sacred_heir_desc: "Inviter [recipient.GetShortUINameNoTooltip] à accepter l’appel divin à la succession du Saint-Siège."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName] est désigné comme héritier du Saint-Siège"

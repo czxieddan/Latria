@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! [GetTitleByKey('e_latria_holy_see').GetNameNoTier]를 계승할 때 후계자는 이전에 보유하던 모든 영지를 내려놓는다."
  latria_holy_see_ruler_male: "대리자"
  latria_holy_see_ruler_female: "대리자"
+ latria_holy_see_consort_male: "성스러운 배필"
+ latria_holy_see_consort_female: "성스러운 배필"
  latria_designate_sacred_heir: "신성한 계승의 부름"
  latria_designate_sacred_heir_desc: "[recipient.GetShortUINameNoTooltip]에게 신의 부름을 받아 성좌의 후계자가 되기를 청한다."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName](이)가 성좌의 후계자로 지명됨"

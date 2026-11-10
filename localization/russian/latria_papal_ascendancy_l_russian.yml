@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! Наследуя титул [GetTitleByKey('e_latria_holy_see').GetNameNoTier], наследник отказывается от всех земель, которыми владел прежде."
  latria_holy_see_ruler_male: "Наместник"
  latria_holy_see_ruler_female: "Наместница"
+ latria_holy_see_consort_male: "Священный супруг"
+ latria_holy_see_consort_female: "Священная супруга"
  latria_designate_sacred_heir: "Священное призвание"
  latria_designate_sacred_heir_desc: "[recipient.GetShortUINameNoTooltip] получит приглашение принять божественное призвание и стать наследником Святого престола."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName] становится назначенным наследником Святого престола"

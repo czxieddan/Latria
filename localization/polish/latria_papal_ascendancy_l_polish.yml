@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! Gdy [GetTitleByKey('e_latria_holy_see').GetNameNoTier] przechodzi na dziedzica, zrzeka się on wszystkich dotychczas posiadanych ziem."
  latria_holy_see_ruler_male: "Namiestnik"
  latria_holy_see_ruler_female: "Namiestniczka"
+ latria_holy_see_consort_male: "Święty małżonek"
+ latria_holy_see_consort_female: "Święta małżonka"
  latria_designate_sacred_heir: "Powołaj do świętej sukcesji"
  latria_designate_sacred_heir_desc: "Zaproś postać [recipient.GetShortUINameNoTooltip] do przyjęcia boskiego powołania na dziedzica Stolicy Apostolskiej."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName] otrzymuje prawo dziedziczenia Stolicy Apostolskiej"

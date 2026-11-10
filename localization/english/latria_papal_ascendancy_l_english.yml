@@ -97,6 +97,8 @@
  latria_divine_succession_law_warning: "@alert_icon! Upon inheriting the [GetTitleByKey('e_latria_holy_see').GetNameNoTier], the heir relinquishes all previously held lands."
  latria_holy_see_ruler_male: "Vicar"
  latria_holy_see_ruler_female: "Vicar"
+ latria_holy_see_consort_male: "Sacred Consort"
+ latria_holy_see_consort_female: "Sacred Consort"
  latria_designate_sacred_heir: "Divine Call to Succession"
  latria_designate_sacred_heir_desc: "Invite [recipient.GetShortUINameNoTooltip] to answer the divine call and become heir to the Holy See."
  latria_designate_sacred_heir_tt: "[recipient.GetShortUIName] is designated heir to the Holy See"
