@@ -19,4 +19,10 @@ latria_divine_succession_law = {
 		resign_outside_realm = yes
 	}
 	flag = can_designate_heirs
+	modifier = {
+		glory_hound_opinion = -10
+		parochial_opinion = -5
+		player_heir_opinion = 20
+		eligible_child_except_player_heir_opinion = -5
+	}
 }

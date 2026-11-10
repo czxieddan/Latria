@@ -1,0 +1,10 @@
+latria_holy_see_government = {
+	texture = "gfx/interface/icons/government_types/latria_holy_see_government.dds"
+	parent = government
+	alias = { latria_holy_see_government_i }
+}
+
+latria_vicar = {
+	texture = "gfx/interface/icons/government_types/latria_holy_see_government.dds"
+	parent = head_of_faith
+}
