@@ -1,4 +1,4 @@
-# Signed stress. Negative relieves. Capped so one night cannot empty or break a mind.
+# Solo always relieves 10-40 stress before character stress modifiers.
 latria_solo_stress_delta = {
 	value = minor_stress_impact_loss
 	add = latria_solo_stress_traits
@@ -6,7 +6,7 @@ latria_solo_stress_delta = {
 	add = latria_solo_stress_doctrine
 	add = latria_solo_stress_culture
 	min = -40
-	max = 40
+	max = -10
 }
 
 latria_solo_stress_traits = {

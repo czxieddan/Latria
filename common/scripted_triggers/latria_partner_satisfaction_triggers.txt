@@ -19,3 +19,20 @@ latria_both_partners_are_healthy_adults = {
 		is_pregnant = no
 	}
 }
+
+# Satisfaction belongs to the other participant, whichever side is being resolved.
+latria_other_act_participant_is_satisfied = {
+	trigger_if = {
+		limit = { exists = scope:latria_dissatisfied_person }
+		trigger_if = {
+			limit = { this = scope:latria_actor }
+			scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied
+		}
+		trigger_else = {
+			scope:latria_dissatisfied_person = flag:latria_partner_dissatisfied
+		}
+	}
+	trigger_else = {
+		exists = scope:latria_act_satisfied
+	}
+}

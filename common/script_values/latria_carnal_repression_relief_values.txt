@@ -46,6 +46,37 @@ latria_intercourse_repression_relief_amount = {
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_8 } add = 120 }
 }
 
+# Combine both sources before applying the change so the tooltip records the total.
+latria_pair_repression_relief_amount = {
+	value = latria_satisfying_partner_repression_relief_amount
+	if = {
+		limit = { exists = scope:latria_act_satisfied }
+		if = {
+			limit = { scope:latria_act_kind = flag:latria_act_manual }
+			add = latria_manual_repression_relief_amount
+		}
+		else_if = {
+			limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+			add = latria_intercourse_repression_relief_amount
+		}
+	}
+}
+
+latria_satisfying_partner_repression_relief_amount = {
+	value = 0
+	if = {
+		limit = { latria_other_act_participant_is_satisfied = yes }
+		if = {
+			limit = { scope:latria_act_kind = flag:latria_act_manual }
+			add = -10
+		}
+		else_if = {
+			limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+			add = -20
+		}
+	}
+}
+
 latria_nonlustful_carnal_drive_multiplier = {
 	value = 1
 	if = {
