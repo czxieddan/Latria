@@ -87,3 +87,17 @@ latria_vicar_mandate = {
 	latria_vicar_mandate_enabled = {}
 	latria_vicar_mandate_disabled = { flag = blocks_achievements }
 }
+
+latria_fatal_scheme_intrigue = {
+	categories = {
+		latria difficulty
+	}
+
+	default = latria_fatal_scheme_intrigue_default
+
+	latria_fatal_scheme_intrigue_default = {}
+	latria_fatal_scheme_intrigue_disabled = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_player = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_player_unrestricted = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_everyone = { flag = blocks_achievements }
+}

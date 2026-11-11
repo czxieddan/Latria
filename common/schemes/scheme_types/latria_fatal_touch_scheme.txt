@@ -20,7 +20,11 @@ latria_fatal_touch = {
 	success_chance_growth_per_skill_point = t2_scgpsp_value
 
 	allow = {
-		intrigue >= latria_fatal_liaison_start_intrigue
+		latria_fatal_scheme_actor_is_allowed = yes
+		trigger_if = {
+			limit = { latria_fatal_scheme_intrigue_is_required = yes }
+			intrigue >= latria_fatal_liaison_start_intrigue
+		}
 		is_imprisoned = no
 		latria_carnal_strain_death_is_enabled = yes
 		latria_can_share_manual_act = { PARTNER = scope:target }
