@@ -109,17 +109,24 @@ latria_commit_direct_manual = {
 
 latria_ai_try_solo_relief = {
 	if = {
-		limit = {
-			is_imprisoned = no
-			latria_can_act_alone = yes
-			latria_solo_interval_clear = yes
-			NOT = { has_character_flag = latria_no_carnal_drive }
-			NOT = { has_character_flag = latria_partner_act_today }
-		}
+		limit = { latria_ai_should_try_solo_relief = yes }
 		random = {
 			chance = latria_solo_relief_ai_chance
-			latria_commit_direct_solo = yes
+			latria_ai_resolve_monthly_solo_relief = yes
 		}
+	}
+}
+
+# One monthly visit, at most four acts. Each act retains relief decay and consequences.
+latria_ai_resolve_monthly_solo_relief = {
+	latria_commit_direct_solo = yes
+	while = {
+		count = latria_ai_solo_extra_acts
+		limit = {
+			latria_ai_can_relieve_alone = yes
+			latria_ai_needs_frequent_solo_relief = yes
+		}
+		latria_commit_direct_solo = yes
 	}
 }
 

@@ -5,6 +5,7 @@ latria_apply_carnal_repression_relief = {
 	}
 	else = {
 		latria_change_sexual_frustration = { CHANGE = latria_pair_repression_relief_amount }
+		latria_record_partner_relief = yes
 	}
 	latria_advance_carnal_repression_relief = yes
 }
@@ -12,6 +13,15 @@ latria_apply_carnal_repression_relief = {
 latria_apply_pair_carnal_repression_relief = {
 	latria_apply_carnal_repression_relief = yes
 	scope:latria_partner = { latria_apply_carnal_repression_relief = yes }
+}
+
+# Both participants pass here only after a shared act actually resolves.
+latria_record_partner_relief = {
+	remove_character_flag = latria_recent_partner_relief
+	add_character_flag = {
+		flag = latria_recent_partner_relief
+		days = 60
+	}
 }
 
 latria_advance_carnal_repression_relief = {

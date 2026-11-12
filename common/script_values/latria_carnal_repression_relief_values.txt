@@ -12,10 +12,24 @@ latria_current_carnal_relief_level = {
 
 latria_solo_repression_relief_amount = {
 	value = -35
+	add = latria_solo_repression_relief_low_decay
+	add = latria_solo_repression_relief_high_decay
+	if = {
+		limit = { is_ai = yes }
+		max = latria_ai_solo_repression_relief_floor
+	}
+}
+
+latria_solo_repression_relief_low_decay = {
+	value = 0
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 17 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 26 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_3 } add = 31 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_4 } add = 33 }
+}
+
+latria_solo_repression_relief_high_decay = {
+	value = 0
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_5 } add = 34 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_6 } add = 34 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_7 } add = 35 }

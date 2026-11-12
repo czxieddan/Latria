@@ -49,6 +49,7 @@ latria_roll_carnal_drive = {
 	if = {
 		limit = { NOT = { has_character_flag = latria_carnal_drive_rolled } }
 		add_character_flag = latria_carnal_drive_rolled
+		add_character_flag = latria_solo_drive_rebalanced
 		random = {
 			chance = latria_ai_no_carnal_drive_percent
 			add_character_flag = latria_no_carnal_drive
@@ -63,7 +64,9 @@ latria_process_player_sexual_frustration = {
 }
 
 latria_process_ai_carnal_month = {
+	latria_rebalance_ai_solo_drive = yes
 	latria_ai_run_carnal_pulse = yes
+	latria_ai_try_solo_relief = yes
 	latria_clear_inactive_sexual_frustration = yes
 	latria_try_sexual_frustration_flavor_event = yes
 }
@@ -79,10 +82,24 @@ latria_ai_run_carnal_pulse = {
 		}
 		latria_ai_try_close_manual = yes
 		latria_ai_try_consort_intercourse = yes
-		latria_ai_try_solo_relief = yes
 	}
 	if = {
 		limit = { is_alive = yes }
 		latria_change_sexual_frustration = { CHANGE = latria_ai_pulse_sexual_frustration_gain }
+	}
+}
+
+# Old saves rolled a 2% refusal rate. Retain half of those flags exactly once.
+latria_rebalance_ai_solo_drive = {
+	if = {
+		limit = { NOT = { has_character_flag = latria_solo_drive_rebalanced } }
+		add_character_flag = latria_solo_drive_rebalanced
+		if = {
+			limit = { has_character_flag = latria_no_carnal_drive }
+			random = {
+				chance = 50
+				remove_character_flag = latria_no_carnal_drive
+			}
+		}
 	}
 }

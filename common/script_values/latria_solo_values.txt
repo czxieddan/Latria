@@ -7,6 +7,10 @@ latria_solo_stress_delta = {
 	add = latria_solo_stress_culture
 	min = -40
 	max = -10
+	if = {
+		limit = { is_ai = yes }
+		max = latria_ai_solo_stress_floor
+	}
 }
 
 latria_solo_stress_traits = {

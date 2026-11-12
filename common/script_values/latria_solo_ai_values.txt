@@ -1,0 +1,75 @@
+# Keep personality preferences below the need to recover from stress or repression.
+latria_solo_relief_ai_chance = {
+	value = 80
+	add = latria_solo_ai_personality_chance
+	multiply = latria_nonlustful_carnal_drive_multiplier
+	add = latria_solo_ai_partner_chance
+	add = latria_solo_ai_stress_chance
+	add = latria_solo_ai_repression_chance
+	if = {
+		limit = { latria_ai_needs_frequent_solo_relief = yes }
+		min = 90
+	}
+	if = {
+		limit = { latria_ai_needs_urgent_solo_relief = yes }
+		min = 100
+	}
+	if = {
+		limit = { has_character_flag = latria_no_carnal_drive }
+		multiply = 0
+	}
+	min = 0
+	max = 100
+}
+
+latria_solo_ai_personality_chance = {
+	value = 0
+	if = { limit = { has_trait = lustful } add = 30 }
+	if = { limit = { has_trait = chaste } add = -40 }
+	if = { limit = { has_trait = temperate } add = -20 }
+}
+
+# A nominal spouse or an unanswered invitation is not a successful shared act.
+latria_solo_ai_partner_chance = {
+	value = 0
+	if = {
+		limit = { NOT = { has_character_flag = latria_recent_partner_relief } }
+		add = 35
+	}
+}
+
+latria_solo_ai_stress_chance = {
+	value = 0
+	if = { limit = { stress >= low_stress } add = 20 }
+	if = { limit = { stress_level >= 1 } add = 30 }
+	if = { limit = { stress_level >= 2 } add = 50 }
+}
+
+latria_solo_ai_repression_chance = {
+	value = latria_current_sexual_frustration
+	multiply = 0.4
+	max = 80
+}
+
+# Additional attempts are bounded and stop once pressure falls below the coping threshold.
+latria_ai_solo_extra_acts = {
+	value = 0
+	if = { limit = { latria_ai_needs_frequent_solo_relief = yes } value = 1 }
+	if = { limit = { latria_ai_needs_urgent_solo_relief = yes } value = 3 }
+}
+
+# Repeated AI coping must still offset growth, even after the shared relief stack fills.
+latria_ai_solo_repression_relief_floor = {
+	value = latria_daily_sexual_frustration_gain
+	multiply = 35
+	min = 5
+	if = { limit = { latria_ai_needs_urgent_solo_relief = yes } min = 10 }
+	multiply = -1
+}
+
+latria_ai_solo_stress_floor = {
+	value = -10
+	if = { limit = { stress_level >= 1 } max = -20 }
+	if = { limit = { stress_level >= 2 } max = -30 }
+	if = { limit = { stress_level >= 3 } max = -40 }
+}

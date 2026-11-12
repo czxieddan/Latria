@@ -1,0 +1,39 @@
+latria_ai_can_relieve_alone = {
+	is_ai = yes
+	is_imprisoned = no
+	latria_can_act_alone = yes
+	NOT = { has_character_flag = latria_no_carnal_drive }
+}
+
+latria_ai_needs_frequent_solo_relief = {
+	is_ai = yes
+	OR = {
+		stress_level >= 1
+		latria_sexual_frustration_level_1_reached = yes
+	}
+}
+
+latria_ai_needs_urgent_solo_relief = {
+	is_ai = yes
+	OR = {
+		stress_level >= 2
+		latria_sexual_frustration_level_2_reached = yes
+	}
+}
+
+# Evaluated only by the monthly AI pulse, never by an extra story or on_action.
+latria_ai_should_try_solo_relief = {
+	latria_ai_can_relieve_alone = yes
+	OR = {
+		latria_has_sexual_need = yes
+		stress >= low_stress
+	}
+	OR = {
+		latria_solo_interval_clear = yes
+		latria_ai_needs_frequent_solo_relief = yes
+	}
+	OR = {
+		NOT = { has_character_flag = latria_partner_act_today }
+		latria_ai_needs_urgent_solo_relief = yes
+	}
+}

@@ -33,10 +33,11 @@ latria_sexual_frustration_resists_collapse = {
 	}
 }
 
-# The game rule rules out collapse for everyone. Trait resistance applies when it is on.
+# AI with an available solo outlet recovers through its coping pulse before collapse.
 latria_sexual_frustration_can_collapse = {
 	latria_repression_suicide_is_enabled = yes
 	latria_sexual_frustration_resists_collapse = no
+	latria_ai_can_relieve_alone = no
 }
 
 latria_can_receive_sexual_frustration_flavor_event = {
