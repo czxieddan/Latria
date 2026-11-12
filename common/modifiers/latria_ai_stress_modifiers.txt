@@ -1,0 +1,3 @@
+latria_ai_stress_gain_modifier = {
+	stress_gain_mult = -0.5
+}

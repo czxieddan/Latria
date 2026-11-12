@@ -7,13 +7,34 @@ latria_repression_growth = {
 
 	default = latria_repression_growth_default
 
-	latria_repression_growth_minus_50 = { flag = blocks_achievements }
-	latria_repression_growth_minus_25 = { flag = blocks_achievements }
-	latria_repression_growth_default = {}
-	latria_repression_growth_plus_50 = { flag = blocks_achievements }
-	latria_repression_growth_plus_100 = { flag = blocks_achievements }
-	latria_repression_growth_plus_250 = { flag = blocks_achievements }
-	latria_repression_growth_plus_500 = { flag = blocks_achievements }
+	# Keep AI stress relief independent of the selected repression growth setting.
+	latria_repression_growth_minus_50 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
+	latria_repression_growth_minus_25 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
+	latria_repression_growth_default = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+	}
+	latria_repression_growth_plus_50 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
+	latria_repression_growth_plus_100 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
+	latria_repression_growth_plus_250 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
+	latria_repression_growth_plus_500 = {
+		apply_modifier = ai:latria_ai_stress_gain_modifier
+		flag = blocks_achievements
+	}
 }
 
 latria_repression_flavor_interval = {
