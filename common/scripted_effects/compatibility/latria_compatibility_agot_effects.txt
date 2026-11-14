@@ -5,6 +5,6 @@ lmf_random_sex_and_possible_stray_effect = {
 	$CHARACTER$ = { save_scope_as = had_sex_with_effect_partner }
 	had_sex_with_effect = {
 		CHARACTER = $CHARACTER$
-		PREGNANCY_CHANCE = latria_compatibility_agot_lmf_pregnancy_chance
+		PREGNANCY_CHANCE = latria_act_pregnancy_chance
 	}
 }

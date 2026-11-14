@@ -1,5 +1,5 @@
-# AGOT's LMF fertility roll, expressed using vanilla fields so AGOT stays optional.
-# Latria applies its pregnancy rule multiplier after capturing this caller chance.
+# Unused legacy AGOT LMF pregnancy formula, retained for reference.
+# The AGOT LMF entry now uses latria_act_pregnancy_chance instead.
 latria_compatibility_agot_lmf_pregnancy_chance = {
 	value = scope:had_sex_root_character.fertility
 	if = {
