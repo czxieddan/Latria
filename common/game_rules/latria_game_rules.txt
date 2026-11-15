@@ -10,11 +10,9 @@ latria_repression_growth = {
 	# Keep AI stress relief independent of the selected repression growth setting.
 	latria_repression_growth_minus_50 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
 	}
 	latria_repression_growth_minus_25 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
 	}
 	latria_repression_growth_default = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
@@ -44,12 +42,26 @@ latria_repression_flavor_interval = {
 
 	default = latria_repression_flavor_interval_180
 
-	latria_repression_flavor_interval_60 = { flag = blocks_achievements }
-	latria_repression_flavor_interval_120 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_60 = {}
+	latria_repression_flavor_interval_120 = {}
 	latria_repression_flavor_interval_180 = {}
-	latria_repression_flavor_interval_240 = { flag = blocks_achievements }
-	latria_repression_flavor_interval_360 = { flag = blocks_achievements }
-	latria_repression_flavor_interval_720 = { flag = blocks_achievements }
+	latria_repression_flavor_interval_240 = {}
+	latria_repression_flavor_interval_360 = {}
+	latria_repression_flavor_interval_720 = {}
+}
+
+latria_fatal_scheme_intrigue = {
+	categories = {
+		latria difficulty
+	}
+
+	default = latria_fatal_scheme_intrigue_default
+
+	latria_fatal_scheme_intrigue_default = {}
+	latria_fatal_scheme_intrigue_disabled = {}
+	latria_fatal_scheme_intrigue_player = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_player_unrestricted = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_everyone = { flag = blocks_achievements }
 }
 
 latria_repression_suicide = {
@@ -60,7 +72,7 @@ latria_repression_suicide = {
 	default = latria_repression_suicide_enabled
 
 	latria_repression_suicide_enabled = {}
-	latria_repression_suicide_disabled = { flag = blocks_achievements }
+	latria_repression_suicide_disabled = {}
 }
 
 latria_carnal_strain_death = {
@@ -106,19 +118,5 @@ latria_vicar_mandate = {
 	default = latria_vicar_mandate_enabled
 
 	latria_vicar_mandate_enabled = {}
-	latria_vicar_mandate_disabled = { flag = blocks_achievements }
-}
-
-latria_fatal_scheme_intrigue = {
-	categories = {
-		latria difficulty
-	}
-
-	default = latria_fatal_scheme_intrigue_default
-
-	latria_fatal_scheme_intrigue_default = {}
-	latria_fatal_scheme_intrigue_disabled = { flag = blocks_achievements }
-	latria_fatal_scheme_intrigue_player = { flag = blocks_achievements }
-	latria_fatal_scheme_intrigue_player_unrestricted = { flag = blocks_achievements }
-	latria_fatal_scheme_intrigue_everyone = { flag = blocks_achievements }
+	latria_vicar_mandate_disabled = {}
 }
