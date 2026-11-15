@@ -25,6 +25,15 @@ ecclesiastical_government = {
 
 	can_get_government = {
 		NOT = { has_title = title:e_latria_holy_see }
+		# Elder Kings 2 gives its Mane hierocracy priority over every theocratic type.
+		# Inline its condition so vanilla and other total conversions never resolve an EK2-only trigger.
+		trigger_if = {
+			limit = { latria_ek2_is_loaded = yes }
+			faith = {
+				has_doctrine_parameter = hof_is_hierocracy
+				religious_head = prev
+			}
+		}
 		theocratic_lay_clergy_trigger = yes
 		#The LAAMP Construct Holding decision
 		trigger_if = {
