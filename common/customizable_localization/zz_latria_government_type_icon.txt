@@ -2,7 +2,7 @@
 GetGovernmentTypeIcon = {
 	type = government_type
 
-	# Mod: Latria - Holy See
+	# Mod: Latria
 	text = {
 		trigger = { government_type_has_flag = latria_government_is_holy_see }
 		localization_key = latria_holy_see_government_icon
@@ -11,7 +11,11 @@ GetGovernmentTypeIcon = {
 	# Mod: A Game of Thrones (AGOT) 0.5.2.1, Workshop 2962333032
 	# This version has no GetGovernmentTypeIcon; map its character icon keys through government flags.
 	text = {
-		trigger = { government_type_has_flag = government_is_pirate }
+		trigger = {
+			# Same as EK2.
+			latria_agot_is_loaded = yes
+			government_type_has_flag = government_is_pirate
+		}
 		localization_key = pirate_govt_concept
 	}
 	text = {
@@ -45,6 +49,27 @@ GetGovernmentTypeIcon = {
 	text = {
 		trigger = { government_type_has_flag = government_is_norvos }
 		localization_key = norvos_govt_concept
+	}
+
+	# Mod: Elder Kings 2 0.22.0, Workshop 2887120253
+	text = {
+		trigger = {
+			latria_ek2_is_loaded = yes
+			government_type_has_flag = government_is_pirate
+		}
+		localization_key = pirate_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_autocracy }
+		localization_key = autocracy_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_academy }
+		localization_key = academy_icon_concept
+	}
+	text = {
+		trigger = { government_type_has_flag = government_is_landed_order }
+		localization_key = landed_order_icon_concept
 	}
 
 	# Vanilla: CK3 1.20

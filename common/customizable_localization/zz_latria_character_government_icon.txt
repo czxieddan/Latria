@@ -13,7 +13,11 @@ GetGovernmentIcon = {
 
 	# Mod: A Game of Thrones (AGOT) 0.5.2.1, Workshop 2962333032; source: common/customizable_localization/00_government_custom_loc.txt
 	text = {
-		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = pirate_government FLAG = government_is_pirate } }
+		trigger = { 
+			# Same as EK2.
+			latria_agot_is_loaded = yes
+			latria_character_uses_mod_government_icon = { GOVERNMENT = pirate_government FLAG = government_is_pirate } 
+		}
 		localization_key = pirate_govt_concept
 	}
 	text = {
@@ -47,6 +51,28 @@ GetGovernmentIcon = {
 	text = {
 		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = norvos_government FLAG = government_is_norvos } }
 		localization_key = norvos_govt_concept
+	}
+
+	# Mod: Elder Kings 2 0.22.0, Workshop 2887120253
+	# It reuses pirate_government and government_is_pirate but ships its own icon key.
+	text = {
+		trigger = {
+			latria_ek2_is_loaded = yes
+			latria_character_uses_mod_government_icon = { GOVERNMENT = pirate_government FLAG = government_is_pirate }
+		}
+		localization_key = pirate_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = autocracy_government FLAG = government_is_autocracy } }
+		localization_key = autocracy_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = academy_government FLAG = government_is_academy } }
+		localization_key = academy_icon_concept
+	}
+	text = {
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = landed_order_government FLAG = government_is_landed_order } }
+		localization_key = landed_order_icon_concept
 	}
 
 	# Vanilla: CK3 1.20

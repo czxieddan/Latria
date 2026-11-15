@@ -2,3 +2,8 @@
 latria_agot_is_loaded = {
 	has_global_variable = AGOT_is_loaded
 }
+
+# Elder Kings 2 ships e_skyrim and replaces the whole landed_titles tree; nothing else defines it.
+latria_ek2_is_loaded = {
+	exists = title:e_skyrim
+}
