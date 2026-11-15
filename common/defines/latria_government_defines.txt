@@ -32,6 +32,7 @@ NGovernment = {
 		"bureau_government"
 		"ulus_government"
 		"native_government"
+
 		# A Game of Thrones 0.5.2.1, Workshop 2962333032 (common/defines/00_defines.txt)
 		"lp_feudal_government"
 		"silent_sisterhood_government"
@@ -49,10 +50,15 @@ NGovernment = {
 		"command_government"
 		"lorathi_principality_government"
 		"norvos_government"
+
 		# Elder Kings 2 0.22.0, Workshop 2887120253 (common/defines/ek_defines.txt)
 		# pirate_government is already listed above under AGOT; the ID is shared.
 		"academy_government"
 		"autocracy_government"
 		"landed_order_government"
+
+		# Elf Destiny Beta_v2.0.8, Workshop 3114064450 (common/defines/elf_destiny_defines.txt)
+		"aeluran_weavers_government"
+		"advanced_tribal_government"
 	}
 }
