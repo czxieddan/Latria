@@ -27,7 +27,8 @@ latria_fatal_touch = {
 		}
 		is_imprisoned = no
 		latria_carnal_strain_death_is_enabled = yes
-		latria_can_share_manual_act = { PARTNER = scope:target }
+		# Become the same as latria_propose_intercourse_interaction.
+		latria_can_propose_intercourse = { PARTNER = scope:target }
 	}
 	valid = {
 		is_incapable = no
