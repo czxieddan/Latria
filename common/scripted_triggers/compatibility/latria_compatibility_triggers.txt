@@ -1,3 +1,8 @@
+# Always true while Latria is loaded; other mods can gate on it without copying version checks.
+latria_is_enabled = {
+	always = yes
+}
+
 # AGOT exposes this variable for other mods; absent variables are safe in vanilla.
 latria_agot_is_loaded = {
 	has_global_variable = AGOT_is_loaded
