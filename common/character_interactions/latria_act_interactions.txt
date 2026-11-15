@@ -140,7 +140,8 @@ latria_propose_manual_interaction = {
 		scope:puppet_or_actor != scope:recipient
 		scope:puppet_or_actor = {
 			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
-			latria_can_propose_manual_act = { PARTNER = scope:recipient }
+			# Become the same as latria_propose_intercourse_interaction.
+			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 		}
 		scope:puppet_or_actor = {
 			custom_tooltip = {
@@ -162,7 +163,8 @@ latria_propose_manual_interaction = {
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
 			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
-			latria_can_propose_manual_act = { PARTNER = scope:recipient }
+			# Become the same as latria_propose_intercourse_interaction.
+			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 			custom_tooltip = {
 				text = latria_act_too_recent
 				latria_act_interval_clear = { PARTNER = scope:recipient }
