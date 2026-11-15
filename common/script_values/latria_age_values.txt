@@ -1,21 +1,21 @@
 # Earliest age for solo and shared manual-touch acts.
 latria_manual_act_minimum_age = {
-	value = 10
+	value = 11
 }
 
 # Earliest age for intercourse.
 latria_intercourse_minimum_age = {
-	value = 14
+	value = 16
 }
 
 # First age at which daily sexual need accumulates.
 latria_sexual_need_start_age = {
-	value = 12
+	value = 14
 }
 
 # Age at which daily sexual need stops accumulating.
 latria_sexual_need_end_age = {
-	value = 70
+	value = 67
 }
 
 # Prime-adult range shared by satisfaction and frustration calculations.
@@ -49,12 +49,12 @@ latria_frustration_senior_age_start = {
 
 # Minimum recipient age for the pig-embrace prison punishment.
 latria_pig_embrace_minimum_age = {
-	value = 12
+	value = 16
 }
 
 # Minimum recipient age for the charming abduction scheme.
 latria_charming_abduction_minimum_age = {
-	value = 15
+	value = 16
 }
 
 # Earliest age for the white tiger physical trait.
