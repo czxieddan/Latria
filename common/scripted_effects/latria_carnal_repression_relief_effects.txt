@@ -12,7 +12,12 @@ latria_apply_carnal_repression_relief = {
 
 latria_apply_pair_carnal_repression_relief = {
 	latria_apply_carnal_repression_relief = yes
-	scope:latria_partner = { latria_apply_carnal_repression_relief = yes }
+	scope:latria_partner = {
+		if = {
+			limit = { is_alive = yes }
+			latria_apply_carnal_repression_relief = yes
+		}
+	}
 }
 
 # Both participants pass here only after a shared act actually resolves.
