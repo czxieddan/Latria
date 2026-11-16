@@ -21,6 +21,7 @@ latria_ai_carnal_cycle = {
 
 	effect_group = {
 		months = 1
+		trigger = { scope:story.story_owner = { latria_ai_carnal_scope_is_allowed = yes } }
 		fallback = {
 			story_owner = {
 				trigger_event = { on_action = latria_ai_carnal_story_pulse }

@@ -1,0 +1,71 @@
+# Which AI characters keep the monthly carnal settlement. Root is the character
+# being tested, so every bond is read from this side and no scope is saved.
+# The default rule, and any save that never stored it, settles every AI character.
+
+latria_ai_carnal_scope_is_allowed = {
+	trigger_if = {
+		limit = { latria_ai_carnal_scope_is_restricted = yes }
+		OR = {
+			latria_ai_carnal_scope_is_core_member = yes
+			AND = {
+				latria_ai_carnal_scope_includes_courtiers = yes
+				latria_ai_carnal_scope_is_courtier_member = yes
+			}
+		}
+	}
+}
+
+latria_ai_carnal_scope_is_core_member = {
+	OR = {
+		latria_ai_carnal_scope_is_ruler = yes
+		latria_ai_carnal_scope_has_bonded_member = { MEMBER = latria_ai_carnal_scope_is_ruler }
+		latria_ai_carnal_scope_is_player = yes
+		latria_ai_carnal_scope_has_bonded_member = { MEMBER = latria_ai_carnal_scope_is_player }
+		latria_ai_carnal_scope_is_notable_dynast = yes
+		latria_ai_carnal_scope_has_bonded_member = { MEMBER = latria_ai_carnal_scope_is_notable_dynast }
+	}
+}
+
+latria_ai_carnal_scope_is_courtier_member = {
+	latria_ai_carnal_scope_is_player_courtier = yes
+	latria_ai_carnal_scope_has_bonded_member = { MEMBER = latria_ai_carnal_scope_is_player_courtier }
+}
+
+# Spouse, concubine, lover, or soulmate of a qualifying character. A concubine
+# reaches the holder through her liege; the other bonds are listed here.
+latria_ai_carnal_scope_has_bonded_member = {
+	OR = {
+		any_spouse = { $MEMBER$ = yes }
+		AND = {
+			is_concubine = yes
+			liege ?= { $MEMBER$ = yes }
+		}
+		any_relation = {
+			type = lover
+			$MEMBER$ = yes
+		}
+		any_relation = {
+			type = soulmate
+			$MEMBER$ = yes
+		}
+	}
+}
+
+latria_ai_carnal_scope_is_ruler = {
+	is_ruler = yes
+}
+
+latria_ai_carnal_scope_is_player = {
+	is_ai = no
+}
+
+# Not lowborn, and the dynasty stands above the "unknown" prestige level.
+latria_ai_carnal_scope_is_notable_dynast = {
+	is_lowborn = no
+	dynasty ?= { dynasty_prestige_level > 0 }
+}
+
+latria_ai_carnal_scope_is_player_courtier = {
+	is_courtier = yes
+	liege ?= { is_ai = no }
+}

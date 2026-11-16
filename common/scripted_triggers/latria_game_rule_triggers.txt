@@ -51,3 +51,16 @@ latria_fatal_scheme_actor_is_allowed = {
 		}
 	}
 }
+
+# The rule is new. A save that never stored it keeps the old behavior, so only
+# the two restricted settings turn the gate on.
+latria_ai_carnal_scope_is_restricted = {
+	OR = {
+		has_game_rule = latria_ai_carnal_scope_ruler
+		has_game_rule = latria_ai_carnal_scope_ruler_court
+	}
+}
+
+latria_ai_carnal_scope_includes_courtiers = {
+	has_game_rule = latria_ai_carnal_scope_ruler_court
+}

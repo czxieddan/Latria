@@ -110,6 +110,18 @@ latria_ai_overtures = {
 	latria_ai_overtures_disabled = { flag = blocks_achievements }
 }
 
+latria_ai_carnal_scope = {
+	categories = {
+		latria ai
+	}
+
+	default = latria_ai_carnal_scope_default
+
+	latria_ai_carnal_scope_default = {}
+	latria_ai_carnal_scope_ruler = {}
+	latria_ai_carnal_scope_ruler_court = {}
+}
+
 latria_vicar_mandate = {
 	categories = {
 		latria faith
