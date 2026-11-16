@@ -88,12 +88,22 @@ latria_mark_recent_close_bond_act = {
 # Vanilla reads is_naked for both the nude portrait and the nightgown fallback.
 latria_mark_act_undressed = {
 	add_character_flag = is_naked
-	$PARTNER$ = { add_character_flag = is_naked }
+	$PARTNER$ = {
+		if = {
+			limit = { is_alive = yes }
+			add_character_flag = is_naked
+		}
+	}
 }
 
 latria_clear_act_undressed = {
 	remove_character_flag = is_naked
-	$PARTNER$ = { remove_character_flag = is_naked }
+	$PARTNER$ = {
+		if = {
+			limit = { is_alive = yes }
+			remove_character_flag = is_naked
+		}
+	}
 }
 
 latria_resolve_act = {
