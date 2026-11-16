@@ -46,6 +46,14 @@
  setting_latria_ai_overtures_disabled: "#high 비활성화#!"
  setting_latria_ai_overtures_disabled_desc: "인물이 플레이어에게 육욕의 쾌락이나 애무를 제안하지 않습니다."
 
+ rule_latria_ai_carnal_scope: "월간 정산 범위"
+ setting_latria_ai_carnal_scope_default: "기본"
+ setting_latria_ai_carnal_scope_default_desc: "모든 AI 인물이 매월 정산됩니다."
+ setting_latria_ai_carnal_scope_ruler: "#high 통치자#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "[rulers|E]와 그 [spouses|E]·[concubines|E]·[lovers|E]·[soulmates|E], 플레이어의 [spouses|E]·[concubines|E]·[lovers|E]·[soulmates|E], 그리고 [lowborn|E]이 아니고 [dynasty_prestige_level_0|E]을 넘는 [dynasty|E]의 구성원과 그 [spouses|E]·[concubines|E]·[lovers|E]·[soulmates|E]만 매월 정산됩니다."
+ setting_latria_ai_carnal_scope_ruler_court: "#high 통치자 및 조신#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "#V 통치자#!와 마찬가지로 플레이어의 [courtiers|E]와 그 [spouses|E]·[concubines|E]·[lovers|E]·[soulmates|E]도 매월 정산됩니다."
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high 비활성화#!"
  setting_latria_vicar_mandate_disabled_desc: "교황의 연인 [secret|E]은 폭로되는 즉시 사라지며, $latria_papal_scandal_depose_war$은 일어나지 않습니다. $latria_reveal_papal_secret_decision$ [decision|E]을 사용할 수 없습니다."

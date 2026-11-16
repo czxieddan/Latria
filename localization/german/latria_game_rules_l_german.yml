@@ -46,6 +46,15 @@
  setting_latria_ai_overtures_disabled: "#high Deaktiviert#!"
  setting_latria_ai_overtures_disabled_desc: "Charaktere schlagen Spielern nie fleischliche Freuden vor und bieten ihnen keine Zärtlichkeiten an."
 
+ rule_latria_ai_carnal_scope: "Umfang der monatlichen Abrechnung"
+ setting_latria_ai_carnal_scope_default: "Standard"
+ setting_latria_ai_carnal_scope_default_desc: "Jeder KI-Charakter wird monatlich abgerechnet."
+ setting_latria_ai_carnal_scope_ruler: "#high Herrscher#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "Nur [rulers|E], ihre [spouses|E], [concubines|E], [lovers|E] und [soulmates|E]; die [spouses|E], [concubines|E], [lovers|E] und [soulmates|E] eines Spielers; sowie Mitglieder einer [dynasty|E], die nicht [lowborn|E] ist und über [dynasty_prestige_level_0|E] steht, samt ihren [spouses|E], [concubines|E], [lovers|E] und [soulmates|E], werden monatlich abgerechnet."
+ setting_latria_ai_carnal_scope_ruler_court: "#high Herrscher und Höflinge#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "Wie #V Herrscher#!, zusätzlich werden die [courtiers|E] eines Spielers samt ihren [spouses|E], [concubines|E], [lovers|E] und [soulmates|E] monatlich abgerechnet."
+
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high Deaktiviert#!"
  setting_latria_vicar_mandate_disabled_desc: "Das Liebhaber-[secret|E] eines Papstes verschwindet, sobald es enthüllt wird, und löst keinen $latria_papal_scandal_depose_war$ aus. Die [decision|E] $latria_reveal_papal_secret_decision$ ist nicht verfügbar."

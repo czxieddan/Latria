@@ -46,6 +46,15 @@
  setting_latria_ai_overtures_disabled: "#high Désactivé#!"
  setting_latria_ai_overtures_disabled_desc: "Les personnages ne proposent jamais de plaisirs charnels ni de caresse à un joueur."
 
+ rule_latria_ai_carnal_scope: "Portée du règlement mensuel"
+ setting_latria_ai_carnal_scope_default: "Par défaut"
+ setting_latria_ai_carnal_scope_default_desc: "Chaque personnage IA est réglé chaque mois."
+ setting_latria_ai_carnal_scope_ruler: "#high Dirigeants#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "Seuls les [rulers|E], leurs [spouses|E], [concubines|E], [lovers|E] et [soulmates|E] ; les [spouses|E], [concubines|E], [lovers|E] et [soulmates|E] d'un joueur ; ainsi que les membres d'une [dynasty|E] qui n'est pas [lowborn|E] et dépasse le niveau [dynasty_prestige_level_0|E], avec leurs [spouses|E], [concubines|E], [lovers|E] et [soulmates|E], sont réglés chaque mois."
+ setting_latria_ai_carnal_scope_ruler_court: "#high Dirigeants et courtisans#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "Comme #V Dirigeants#!, les [courtiers|E] d'un joueur, avec leurs [spouses|E], [concubines|E], [lovers|E] et [soulmates|E], sont aussi réglés chaque mois."
+
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high Désactivé#!"
  setting_latria_vicar_mandate_disabled_desc: "Le [secret|E] d'amant d'un pape disparaît dès qu'il est révélé et ne provoque aucune $latria_papal_scandal_depose_war$. La [decision|E] $latria_reveal_papal_secret_decision$ est indisponible."

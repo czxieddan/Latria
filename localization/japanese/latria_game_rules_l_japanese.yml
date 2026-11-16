@@ -46,6 +46,14 @@
  setting_latria_ai_overtures_disabled: "#high 無効#!"
  setting_latria_ai_overtures_disabled_desc: "キャラクターがプレイヤーを肉体の快楽や愛撫に誘うことはありません。"
 
+ rule_latria_ai_carnal_scope: "月次処理の範囲"
+ setting_latria_ai_carnal_scope_default: "デフォルト"
+ setting_latria_ai_carnal_scope_default_desc: "すべてのAI人物が毎月処理されます。"
+ setting_latria_ai_carnal_scope_ruler: "#high 統治者#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "[rulers|E]とその[spouses|E]・[concubines|E]・[lovers|E]・[soulmates|E]、プレイヤーの[spouses|E]・[concubines|E]・[lovers|E]・[soulmates|E]、そして[lowborn|E]ではなく[dynasty_prestige_level_0|E]を超える[dynasty|E]の成員とその[spouses|E]・[concubines|E]・[lovers|E]・[soulmates|E]だけが毎月処理されます。"
+ setting_latria_ai_carnal_scope_ruler_court: "#high 統治者と廷臣#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "#V 統治者#!と同様に、プレイヤーの[courtiers|E]とその[spouses|E]・[concubines|E]・[lovers|E]・[soulmates|E]も毎月処理されます。"
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high 無効#!"
  setting_latria_vicar_mandate_disabled_desc: "教皇の愛人の[secret|E]は暴露されるとすぐに消え、$latria_papal_scandal_depose_war$は起こりません。[decision|E]「$latria_reveal_papal_secret_decision$」は利用できません。"

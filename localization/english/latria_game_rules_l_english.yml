@@ -46,6 +46,15 @@
  setting_latria_ai_overtures_disabled: "#high Disabled#!"
  setting_latria_ai_overtures_disabled_desc: "Characters never propose carnal pleasure or offer a caress to a player."
 
+ rule_latria_ai_carnal_scope: "Monthly Settlement Scope"
+ setting_latria_ai_carnal_scope_default: "Default"
+ setting_latria_ai_carnal_scope_default_desc: "Every AI character is settled each month."
+ setting_latria_ai_carnal_scope_ruler: "#high Rulers#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "Only [rulers|E], their [spouses|E], [concubines|E], [lovers|E], and [soulmates|E]; a player's [spouses|E], [concubines|E], [lovers|E], and [soulmates|E]; and members of a [dynasty|E] that is not [lowborn|E] and stands above [dynasty_prestige_level_0|E], together with their [spouses|E], [concubines|E], [lovers|E], and [soulmates|E], are settled each month."
+ setting_latria_ai_carnal_scope_ruler_court: "#high Rulers and Courtiers#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "As #V Rulers#!, a player's [courtiers|E], together with their [spouses|E], [concubines|E], [lovers|E], and [soulmates|E], are also settled each month."
+
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high Disabled#!"
  setting_latria_vicar_mandate_disabled_desc: "A Pope's lover [secret|E] vanishes as soon as it is exposed, and no $latria_papal_scandal_depose_war$ follows. The $latria_reveal_papal_secret_decision$ [decision|E] is unavailable."

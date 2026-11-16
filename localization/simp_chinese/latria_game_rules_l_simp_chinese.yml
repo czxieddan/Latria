@@ -46,6 +46,15 @@
  setting_latria_ai_overtures_disabled: "#high 禁用#!"
  setting_latria_ai_overtures_disabled_desc: "角色不会主动向玩家邀约交合或爱抚。"
 
+ rule_latria_ai_carnal_scope: "月度结算范围"
+ setting_latria_ai_carnal_scope_default: "默认"
+ setting_latria_ai_carnal_scope_default_desc: "所有AI角色都进行每月结算。"
+ setting_latria_ai_carnal_scope_ruler: "#high 是统治者#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "只有[rulers|E]及其[spouses|E]、[concubines|E]、[lovers|E]、[soulmates|E]，玩家的[spouses|E]、[concubines|E]、[lovers|E]、[soulmates|E]，以及宗族非[lowborn|E]且高于[dynasty_prestige_level_0|E]的[dynasty|E]成员及其[spouses|E]、[concubines|E]、[lovers|E]、[soulmates|E]，才进行每月结算。"
+ setting_latria_ai_carnal_scope_ruler_court: "#high 是统治者及廷臣#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "在#V 是统治者#!的基础上，玩家的[courtiers|E]及其[spouses|E]、[concubines|E]、[lovers|E]、[soulmates|E]也进行每月结算。"
+
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high 禁用#!"
  setting_latria_vicar_mandate_disabled_desc: "教宗的情人[secret|E]一经曝光便随即消失，不会引发$latria_papal_scandal_depose_war$。“$latria_reveal_papal_secret_decision$”[decision|E]不可用。"

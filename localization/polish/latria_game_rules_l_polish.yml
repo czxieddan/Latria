@@ -46,6 +46,14 @@
  setting_latria_ai_overtures_disabled: "#high Niedozwolone#!"
  setting_latria_ai_overtures_disabled_desc: "Postacie nigdy nie proponują graczom cielesnych uciech ani pieszczot."
 
+ rule_latria_ai_carnal_scope: "Zakres comiesięcznego rozliczenia"
+ setting_latria_ai_carnal_scope_default: "Domyślnie"
+ setting_latria_ai_carnal_scope_default_desc: "Każda postać AI jest rozliczana co miesiąc."
+ setting_latria_ai_carnal_scope_ruler: "#high Władcy#!"
+ setting_latria_ai_carnal_scope_ruler_desc: "Co miesiąc rozliczani są tylko [rulers|E], ich [spouses|E], [concubines|E], [lovers|E] i [soulmates|E]; [spouses|E], [concubines|E], [lovers|E] i [soulmates|E] gracza; oraz członkowie [dynasty|E], która nie jest [lowborn|E] i przewyższa poziom [dynasty_prestige_level_0|E], wraz z ich [spouses|E], [concubines|E], [lovers|E] i [soulmates|E]."
+ setting_latria_ai_carnal_scope_ruler_court: "#high Władcy i dworzanie#!"
+ setting_latria_ai_carnal_scope_ruler_court_desc: "Jak #V Władcy#!, a ponadto [courtiers|E] gracza wraz z ich [spouses|E], [concubines|E], [lovers|E] i [soulmates|E] również są rozliczani co miesiąc."
+
  rule_latria_vicar_mandate: "$latria_papal_ascendancy.0002.t$"
  setting_latria_vicar_mandate_disabled: "#high Niedozwolone#!"
  setting_latria_vicar_mandate_disabled_desc: "[secret|E] papieża o kochanku znika, gdy tylko zostanie ujawniony. $latria_papal_scandal_depose_war$ nie wybucha, a [decision|E] „$latria_reveal_papal_secret_decision$” jest niedostępna."
