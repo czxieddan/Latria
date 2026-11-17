@@ -78,7 +78,7 @@ latria_flavor_duty_restraint = {
 	add_character_modifier = { modifier = latria_flavor_reliable days = latria_flavor_modifier_days }
 	latria_flavor_impress_colleague = yes
 	if = {
-		limit = { is_adventurer = yes }
+		limit = { is_landless_adventurer = yes }
 		add_character_modifier = { modifier = latria_flavor_vagabond_focus days = latria_flavor_modifier_days }
 	}
 }

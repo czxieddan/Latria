@@ -156,7 +156,7 @@ latria_sexual_frustration_flavor.1110 = {
 	desc = {
 		first_valid = {
 			triggered_desc = { trigger = { is_clergy = yes } desc = latria_sexual_frustration_flavor.1110.desc.clergy }
-			triggered_desc = { trigger = { is_adventurer = yes } desc = latria_sexual_frustration_flavor.1110.desc.adventurer }
+			triggered_desc = { trigger = { is_landless_adventurer = yes } desc = latria_sexual_frustration_flavor.1110.desc.adventurer }
 			desc = latria_sexual_frustration_flavor.1110.desc
 		}
 	}
@@ -164,7 +164,7 @@ latria_sexual_frustration_flavor.1110 = {
 	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
 	override_background = { reference = bedchamber }
 	left_portrait = { character = root animation = sadness outfit_tags = { nightgown } }
-	trigger = { OR = { is_clergy = yes is_adventurer = yes } }
+	trigger = { OR = { is_clergy = yes is_landless_adventurer = yes } }
 	immediate = { latria_capture_flavor_severity = { LEVEL = 2 } }
 	option = {
 		name = latria_sexual_frustration_flavor.1110.a

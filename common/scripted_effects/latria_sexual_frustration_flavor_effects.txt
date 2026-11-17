@@ -81,7 +81,7 @@ latria_roll_sexual_frustration_flavor_level_1 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1005 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1005 } }
@@ -152,7 +152,7 @@ latria_roll_sexual_frustration_flavor_level_2 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1105 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1105 } }
@@ -188,7 +188,7 @@ latria_roll_sexual_frustration_flavor_level_2 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes }
 				latria_can_roll_flavor_event = { EVENT = 1110 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1110 } }
@@ -226,7 +226,7 @@ latria_roll_sexual_frustration_flavor_level_3 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1205 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1205 } }
@@ -259,7 +259,7 @@ latria_roll_sexual_frustration_flavor_level_3 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1210 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1210 } }
@@ -297,7 +297,7 @@ latria_roll_sexual_frustration_flavor_level_4 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1305 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1305 } }
@@ -330,7 +330,7 @@ latria_roll_sexual_frustration_flavor_level_4 = {
 		}
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1310 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1310 } }
@@ -353,7 +353,7 @@ latria_roll_sexual_frustration_flavor_level_5_pool = {
 		5 = { latria_roll_sexual_frustration_flavor_level_5_group = yes }
 		1 = {
 			trigger = {
-				OR = { is_clergy = yes is_adventurer = yes is_ruler = yes }
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
 				latria_can_roll_flavor_event = { EVENT = 1405 }
 			}
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1405 } }

@@ -166,7 +166,7 @@ latria_sexual_frustration_flavor.1005 = {
 	desc = {
 		first_valid = {
 			triggered_desc = { trigger = { highest_held_title_tier = tier_empire } desc = latria_sexual_frustration_flavor.1005.desc.emperor }
-			triggered_desc = { trigger = { is_adventurer = yes } desc = latria_sexual_frustration_flavor.1005.desc.adventurer }
+			triggered_desc = { trigger = { is_landless_adventurer = yes } desc = latria_sexual_frustration_flavor.1005.desc.adventurer }
 			triggered_desc = { trigger = { is_clergy = yes } desc = latria_sexual_frustration_flavor.1005.desc.clergy }
 			desc = latria_sexual_frustration_flavor.1005.desc.ruler
 		}
@@ -175,7 +175,7 @@ latria_sexual_frustration_flavor.1005 = {
 	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
 	override_background = { reference = study }
 	left_portrait = { character = root animation = worry }
-	trigger = { OR = { is_clergy = yes is_adventurer = yes is_ruler = yes } }
+	trigger = { OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes } }
 	immediate = {
 		latria_capture_flavor_severity = { LEVEL = 1 }
 		latria_prepare_flavor_company = yes
