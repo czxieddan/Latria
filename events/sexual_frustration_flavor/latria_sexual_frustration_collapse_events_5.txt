@@ -24,7 +24,6 @@ latria_sexual_frustration_flavor.1501 = {
 		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1501.a.dead }
 		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1501.a.survived }
 		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1501.a.severe }
-		default_option = yes
 		if = {
 			limit = { latria_collapse_attempt_survived = yes }
 			custom_tooltip = latria_collapse_no_relief_tt
@@ -57,7 +56,6 @@ latria_sexual_frustration_flavor.1502 = {
 		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1502.a.dead }
 		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1502.a.survived }
 		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1502.a.severe }
-		default_option = yes
 		if = {
 			limit = { latria_collapse_attempt_survived = yes }
 			custom_tooltip = latria_collapse_no_relief_tt
@@ -90,7 +88,6 @@ latria_sexual_frustration_flavor.1503 = {
 		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1503.a.dead }
 		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1503.a.survived }
 		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1503.a.severe }
-		default_option = yes
 		if = {
 			limit = { latria_collapse_attempt_survived = yes }
 			custom_tooltip = latria_collapse_no_relief_tt
@@ -123,7 +120,6 @@ latria_sexual_frustration_flavor.1504 = {
 		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1504.a.dead }
 		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1504.a.survived }
 		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1504.a.severe }
-		default_option = yes
 		if = {
 			limit = { latria_collapse_attempt_survived = yes }
 			custom_tooltip = latria_collapse_no_relief_tt
@@ -156,7 +152,6 @@ latria_sexual_frustration_flavor.1505 = {
 		name = { trigger = { latria_collapse_outcome_fatal = yes } text = latria_sexual_frustration_flavor.1505.a.dead }
 		name = { trigger = { latria_collapse_outcome_moderate = yes } text = latria_sexual_frustration_flavor.1505.a.survived }
 		name = { trigger = { latria_collapse_outcome_severe = yes } text = latria_sexual_frustration_flavor.1505.a.severe }
-		default_option = yes
 		if = {
 			limit = { latria_collapse_attempt_survived = yes }
 			custom_tooltip = latria_collapse_no_relief_tt
