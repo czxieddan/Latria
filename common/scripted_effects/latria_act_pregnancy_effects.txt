@@ -40,6 +40,13 @@ latria_roll_act_pregnancy = {
 			possible_pregnancy_after_sex_with_character_trigger = {
 				CHARACTER = scope:latria_partner
 			}
+			# Princes of Darkness: vampires cannot conceive; keep its splat rule on Latria's path.
+			trigger_if = {
+				limit = { latria_pod_is_loaded = yes }
+				POD_race_pregnancy_compatibility_with_character_trigger = {
+					CHARACTER = scope:latria_partner
+				}
+			}
 		}
 		latria_roll_act_pregnancy_as_mother = yes
 	}
@@ -53,6 +60,13 @@ latria_roll_act_pregnancy = {
 				is_female = yes
 				possible_pregnancy_after_sex_with_character_trigger = {
 					CHARACTER = prev
+				}
+				# Princes of Darkness: keep its splat rule on Latria's path in both directions.
+				trigger_if = {
+					limit = { latria_pod_is_loaded = yes }
+					POD_race_pregnancy_compatibility_with_character_trigger = {
+						CHARACTER = prev
+					}
 				}
 			}
 		}
