@@ -60,5 +60,17 @@ NGovernment = {
 		# Elf Destiny Beta_v2.0.8, Workshop 3114064450 (common/defines/elf_destiny_defines.txt)
 		"aeluran_weavers_government"
 		"advanced_tribal_government"
+
+		# Princes of Darkness 1.20.1, Workshop 2216659254 (common/defines/00_defines.txt)
+		# theocracy_government and ecclesiastical_government are already listed above.
+		"traditions_government"
+		"august_court_government"
+		"inquisition_government"
+		"cell_government"
+		"cult_government"
+		"household_government"
+		"infernal_court_government"
+		"fera_tribe_government"
+		"dark_kingdom_government"
 	}
 }
