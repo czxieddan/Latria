@@ -1,4 +1,4 @@
-latria_flavor_indulgence_stress_consequence = {
+﻿latria_flavor_indulgence_stress_consequence = {
 	add_stress = { value = latria_flavor_indulgence_stress }
 }
 

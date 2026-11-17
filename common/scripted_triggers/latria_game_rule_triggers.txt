@@ -1,4 +1,4 @@
-# Every Latria game rule is read here. Settings that keep the old behavior are tested
+﻿# Every Latria game rule is read here. Settings that keep the old behavior are tested
 # by exclusion, so a save started before the rule existed behaves as before.
 
 latria_repression_growth_is_adjusted = {

@@ -1,4 +1,4 @@
-latria_papal_redemption_or_ruin = {
+﻿latria_papal_redemption_or_ruin = {
 	category = interaction_category_vassal
 	icon = invasion
 	popup_on_receive = yes

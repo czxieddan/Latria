@@ -1,4 +1,4 @@
-# Vanilla exposure adds the public trait; this listener applies the clerical penalty.
+﻿# Vanilla exposure adds the public trait; this listener applies the clerical penalty.
 on_trait_gained = {
 	on_actions = { latria_adultery_scandal_on_trait_gained }
 }

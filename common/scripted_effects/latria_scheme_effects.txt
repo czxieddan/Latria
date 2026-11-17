@@ -1,4 +1,4 @@
-latria_fatal_liaison_prep_effect = {
+﻿latria_fatal_liaison_prep_effect = {
 	save_scope_as = scheme
 	scheme_owner = { save_scope_as = owner }
 	scheme_target_character = { save_scope_as = target }

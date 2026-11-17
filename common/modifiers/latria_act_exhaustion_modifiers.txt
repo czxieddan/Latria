@@ -1,4 +1,4 @@
-latria_act_exhausted_health = {
+﻿latria_act_exhausted_health = {
 	icon = health_negative
 	health = -0.75
 }

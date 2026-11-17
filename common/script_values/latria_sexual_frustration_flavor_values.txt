@@ -1,4 +1,4 @@
-latria_sexual_frustration_flavor_event_chance = {
+﻿latria_sexual_frustration_flavor_event_chance = {
 	value = 0
 	if = { limit = { latria_sexual_frustration_level_1_reached = yes } add = 1 }
 	if = { limit = { latria_sexual_frustration_level_2_reached = yes } add = 1 }

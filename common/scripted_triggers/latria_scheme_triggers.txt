@@ -1,4 +1,4 @@
-# Saved schemes started before these slots existed still carry murder agents.
+﻿# Saved schemes started before these slots existed still carry murder agents.
 
 latria_liaison_has_murder_agent = {
 	OR = {

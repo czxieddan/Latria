@@ -1,4 +1,4 @@
-latria_remove_all_legitimacy_for_adultery = {
+﻿latria_remove_all_legitimacy_for_adultery = {
 	if = {
 		limit = { has_legitimacy = yes }
 		add_legitimacy = {

@@ -1,4 +1,4 @@
-latria_start_fatal_liaison_interaction = {
+﻿latria_start_fatal_liaison_interaction = {
 	icon = latria_fatal_liaison
 	common_interaction = yes
 	interface_priority = 80

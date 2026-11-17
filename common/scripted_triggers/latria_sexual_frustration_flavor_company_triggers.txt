@@ -1,4 +1,4 @@
-# These scopes are witnesses or conversational companions, never romantic partners.
+﻿# These scopes are witnesses or conversational companions, never romantic partners.
 latria_flavor_available_company = {
 	is_available_adult = yes
 	this != root

@@ -1,4 +1,4 @@
-latria_flavor_culture_reputation = {
+﻿latria_flavor_culture_reputation = {
 	if = {
 		limit = { culture = { has_cultural_parameter = adultery_always_accepted } }
 		add_prestige = { value = latria_flavor_prestige_gain }

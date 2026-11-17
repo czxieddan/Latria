@@ -1,4 +1,4 @@
-# current_date is a numeric day count. No daily updates or stage flags are needed.
+﻿# current_date is a numeric day count. No daily updates or stage flags are needed.
 # Old saves without timestamps use 75% progress (-100) until the original flag expires.
 latria_carnal_act_recovery_progress = {
 	value = 1

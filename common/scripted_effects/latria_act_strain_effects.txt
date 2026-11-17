@@ -1,4 +1,4 @@
-# Scheme success and the accidental roll both come through here.
+﻿# Scheme success and the accidental roll both come through here.
 # No killer is written, so the two deaths read the same.
 latria_kill_partner_intercourse_strain = {
 	scope:latria_partner = {

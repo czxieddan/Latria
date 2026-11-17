@@ -1,4 +1,4 @@
-# Registers the faith flags the act gate reads. Not a pickable tenet.
+﻿# Registers the faith flags the act gate reads. Not a pickable tenet.
 latria_carnal_gate = {
 	icon = tenet_carnal_exaltation
 	is_shown = { always = no }

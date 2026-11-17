@@ -1,4 +1,4 @@
-latria_flavor_remember_public_choice = {
+﻿latria_flavor_remember_public_choice = {
 	if = {
 		limit = {
 			NOT = { latria_flavor_has_recent_memory = { TYPE = $TYPE$ } }

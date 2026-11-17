@@ -1,4 +1,4 @@
-# Holy See and verified mod icons precede native families, preserving the native fallback.
+﻿# Holy See and verified mod icons precede native families, preserving the native fallback.
 GetGovernmentIcon = {
 	type = character
 

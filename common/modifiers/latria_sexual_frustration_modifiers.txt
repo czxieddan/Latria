@@ -1,4 +1,4 @@
-latria_sexual_frustration_0 = {
+﻿latria_sexual_frustration_0 = {
 	icon = stress_positive
 	stress_gain_mult = -0.25
 	health = 0.1

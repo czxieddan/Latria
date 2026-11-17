@@ -1,4 +1,4 @@
-# Scripts read these settings only through latria_game_rule_triggers and latria_game_rule_values.
+﻿# Scripts read these settings only through latria_game_rule_triggers and latria_game_rule_values.
 
 latria_repression_growth = {
 	categories = {

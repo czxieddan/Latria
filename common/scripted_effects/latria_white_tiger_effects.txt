@@ -1,4 +1,4 @@
-# Population rate among adults: 0.4% female, 1.2% male.
+﻿# Population rate among adults: 0.4% female, 1.2% male.
 latria_try_gain_white_tiger = {
 	if = {
 		limit = { is_female = yes }

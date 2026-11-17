@@ -1,4 +1,4 @@
-latria_relinquish_sacred_heir_realm = {
+﻿latria_relinquish_sacred_heir_realm = {
 	if = {
 		limit = { is_landed = yes }
 		# Before the inheritance: depose must never include the new Holy See titles.

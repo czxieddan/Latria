@@ -1,4 +1,4 @@
-latria_grant_kingdom_of_heaven_title = {
+﻿latria_grant_kingdom_of_heaven_title = {
 	create_title_and_vassal_change = {
 		type = created
 		save_scope_as = latria_heaven_title_change

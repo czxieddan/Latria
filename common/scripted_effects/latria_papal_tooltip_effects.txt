@@ -1,4 +1,4 @@
-latria_papal_scandal_victory_preview = {
+﻿latria_papal_scandal_victory_preview = {
 	latria_reform_papal_rite_after_scandal_victory = yes
 	latria_grant_papal_scandal_victory_rewards = yes
 	custom_description = {

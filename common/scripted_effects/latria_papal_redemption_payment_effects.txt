@@ -1,4 +1,4 @@
-# Record the demand in the interaction's saved scopes, so later balance changes do not alter it.
+﻿# Record the demand in the interaction's saved scopes, so later balance changes do not alter it.
 latria_snapshot_papal_redemption_payment = {
 	save_scope_value_as = {
 		name = latria_papal_redemption_gold

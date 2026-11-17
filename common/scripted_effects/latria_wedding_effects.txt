@@ -1,4 +1,4 @@
-# Vanilla bedding options already call had_sex_with_effect. Do not add another roll
+﻿# Vanilla bedding options already call had_sex_with_effect. Do not add another roll
 # at a weekly pulse: the couple may not have consummated the marriage there.
 latria_resolve_wedding_night_act = {
 	if = {

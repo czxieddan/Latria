@@ -1,4 +1,4 @@
-# Human initiators use acceptance penalties; AI keeps the shared hard pause.
+﻿# Human initiators use acceptance penalties; AI keeps the shared hard pause.
 latria_act_interval_clear = {
 	OR = {
 		is_ai = no

@@ -1,4 +1,4 @@
-latria_try_sexual_frustration_flavor_event = {
+﻿latria_try_sexual_frustration_flavor_event = {
 	if = {
 		limit = {
 			latria_can_receive_sexual_frustration_flavor_event = yes

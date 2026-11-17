@@ -1,4 +1,4 @@
-# No periodic on_action reads these scores. An act performs decay, gain, and the limit check.
+﻿# No periodic on_action reads these scores. An act performs decay, gain, and the limit check.
 latria_decay_act_month_exhaustion = {
 	if = {
 		limit = { NOT = { has_character_flag = latria_act_month_exhaustion_decay } }

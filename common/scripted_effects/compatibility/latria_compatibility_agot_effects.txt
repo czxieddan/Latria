@@ -1,4 +1,4 @@
-# Load Latria after AGOT. Its independent LMF entry must use the same intercourse path.
+﻿# Load Latria after AGOT. Its independent LMF entry must use the same intercourse path.
 # Use a real pregnancy, not the stray-seed story that separately creates a child.
 lmf_random_sex_and_possible_stray_effect = {
 	save_scope_as = had_sex_root_character

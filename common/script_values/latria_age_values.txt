@@ -1,4 +1,4 @@
-# Earliest age for solo and shared manual-touch acts.
+﻿# Earliest age for solo and shared manual-touch acts.
 latria_manual_act_minimum_age = {
 	value = 12
 }

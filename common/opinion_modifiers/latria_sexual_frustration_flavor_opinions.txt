@@ -1,4 +1,4 @@
-latria_flavor_foolish_display_opinion = {
+﻿latria_flavor_foolish_display_opinion = {
 	opinion = -10
 	years = 1
 }

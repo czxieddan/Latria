@@ -1,4 +1,4 @@
-# Which AI characters keep the monthly carnal settlement. Root is the character
+﻿# Which AI characters keep the monthly carnal settlement. Root is the character
 # being tested, so every bond is read from this side and no scope is saved.
 # The default rule, and any save that never stored it, settles every AI character.
 

@@ -1,4 +1,4 @@
-on_title_gain = {
+﻿on_title_gain = {
 	on_actions = {
 		latria_holy_see_on_title_gain
 		latria_holy_see_on_secondary_title_gain

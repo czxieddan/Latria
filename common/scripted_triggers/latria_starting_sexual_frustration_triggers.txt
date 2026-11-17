@@ -1,4 +1,4 @@
-# Game start. The partner is read from its own side; scope:latria_starting_owner asks.
+﻿# Game start. The partner is read from its own side; scope:latria_starting_owner asks.
 latria_starting_partner_accepts = {
 	save_temporary_scope_as = latria_starting_partner
 	scope:latria_starting_owner = {

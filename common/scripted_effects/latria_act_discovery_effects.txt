@@ -1,4 +1,4 @@
-# Vanilla's homosexual secret is male-only; a lover secret requires a lover relation.
+﻿# Vanilla's homosexual secret is male-only; a lover secret requires a lover relation.
 # This targeted secret records the act itself and exposes both participants together.
 latria_save_same_sex_pair_secret = {
 	random_secret = {

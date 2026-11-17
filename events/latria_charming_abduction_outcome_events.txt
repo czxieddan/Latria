@@ -1,4 +1,4 @@
-namespace = latria_charming_abduction
+﻿namespace = latria_charming_abduction
 
 latria_charming_abduction.0001 = {
 	hidden = yes

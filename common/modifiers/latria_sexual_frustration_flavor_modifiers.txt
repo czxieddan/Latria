@@ -1,4 +1,4 @@
-latria_flavor_focus = {
+﻿latria_flavor_focus = {
 	icon = learning_positive
 	learning = 1
 }

@@ -1,4 +1,4 @@
-# Game start only. Characters without the need keep no value.
+﻿# Game start only. Characters without the need keep no value.
 latria_assign_starting_sexual_frustration = {
 	if = {
 		limit = { latria_has_sexual_need = yes }

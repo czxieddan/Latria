@@ -1,4 +1,4 @@
-latria_is_living_sacred_child = {
+﻿latria_is_living_sacred_child = {
 	is_alive = yes
 	trigger_if = {
 		limit = { exists = scope:latria_dying_heir }

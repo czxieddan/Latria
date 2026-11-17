@@ -1,4 +1,4 @@
-latria_is_canonical_pope = {
+﻿latria_is_canonical_pope = {
 	OR = {
 		has_title = title:k_papal_state
 		has_title = title:e_latria_holy_see

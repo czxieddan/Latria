@@ -1,4 +1,4 @@
-latria_kingdom_of_heaven_vassal_piety_chance = {
+﻿latria_kingdom_of_heaven_vassal_piety_chance = {
 	value = 20
 	if = { limit = { piety_level >= 1 } add = 5 }
 	if = { limit = { piety_level >= 2 } add = 8 }

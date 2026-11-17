@@ -1,4 +1,4 @@
-latria_ai_try_consort_intercourse = {
+﻿latria_ai_try_consort_intercourse = {
 	if = {
 		limit = { is_alive = yes }
 		every_spouse = {

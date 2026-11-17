@@ -1,4 +1,4 @@
-latria_kingdom_of_heaven_can_receive_fealty = {
+﻿latria_kingdom_of_heaven_can_receive_fealty = {
 	this != scope:kingdom_of_heaven_founder
 	is_independent_ruler = yes
 	is_available_quick = { landed = yes ai = yes advanced_ruler = yes }

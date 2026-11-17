@@ -1,4 +1,4 @@
-latria_flavor_lose_authority = {
+﻿latria_flavor_lose_authority = {
 	if = {
 		limit = { is_ruler = yes }
 		add_dread = { value = latria_flavor_dread_loss }

@@ -1,4 +1,4 @@
-# Government-type contexts do not have a character or liege; use the dedicated flag.
+﻿# Government-type contexts do not have a character or liege; use the dedicated flag.
 GetGovernmentTypeIcon = {
 	type = government_type
 

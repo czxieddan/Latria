@@ -1,4 +1,4 @@
-latria_sacred_invitation_realm_score = {
+﻿latria_sacred_invitation_realm_score = {
 	value = scope:actor.realm_size
 	subtract = scope:recipient.realm_size
 	multiply = 0.2

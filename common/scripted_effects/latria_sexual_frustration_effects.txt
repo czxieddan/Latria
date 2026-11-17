@@ -1,4 +1,4 @@
-latria_clear_sexual_frustration_modifiers = {
+﻿latria_clear_sexual_frustration_modifiers = {
 	remove_character_modifier = latria_sexual_frustration_0
 	remove_character_modifier = latria_sexual_frustration_1
 	remove_character_modifier = latria_sexual_frustration_2

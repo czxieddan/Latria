@@ -1,4 +1,4 @@
-latria_flavor_published_confession_memory = {
+﻿latria_flavor_published_confession_memory = {
 	categories = { negative major }
 	icon = "_default.dds"
 	description = { random_valid = { desc = latria_flavor_published_confession_memory_desc } }

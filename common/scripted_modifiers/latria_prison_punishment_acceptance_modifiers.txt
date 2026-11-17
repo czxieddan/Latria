@@ -1,4 +1,4 @@
-celestial_hierarchy_acceptance_modifier = {
+﻿celestial_hierarchy_acceptance_modifier = {
 	modifier = {
 		add = 20
 		$ACTOR$ = {

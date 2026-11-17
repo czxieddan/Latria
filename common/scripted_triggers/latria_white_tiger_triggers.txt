@@ -1,4 +1,4 @@
-# Alive, at or above the sex-specific age.
+﻿# Alive, at or above the sex-specific age.
 latria_can_gain_white_tiger = {
 	is_alive = yes
 	OR = {

@@ -1,4 +1,4 @@
-latria_papal_redemption_war = {
+﻿latria_papal_redemption_war = {
 	icon = invasion
 	group = event
 	allow_hostages = no

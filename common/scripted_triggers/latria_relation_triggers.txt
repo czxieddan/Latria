@@ -1,4 +1,4 @@
-# Vanilla bonds. Read these. Do not replace the relations themselves.
+﻿# Vanilla bonds. Read these. Do not replace the relations themselves.
 
 latria_are_consorts = {
 	OR = {

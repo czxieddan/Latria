@@ -1,4 +1,4 @@
-latria_adultery_is_not_accepted_for_character = {
+﻿latria_adultery_is_not_accepted_for_character = {
 	OR = {
 		AND = {
 			is_female = yes

@@ -1,4 +1,4 @@
-latria_reduce_papal_subject_rank = {
+﻿latria_reduce_papal_subject_rank = {
 	# Preserve only the subject's kingdom layer before making the ruler a vassal.
 	scope:latria_redeemed_ruler = {
 		hidden_effect = {

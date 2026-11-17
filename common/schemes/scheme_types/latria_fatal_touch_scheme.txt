@@ -1,4 +1,4 @@
-latria_fatal_touch = {
+﻿latria_fatal_touch = {
 	skill = intrigue
 	desc = latria_fatal_touch_desc_general
 	success_desc = "LATRIA_FATAL_TOUCH_SUCCESS_DESC"

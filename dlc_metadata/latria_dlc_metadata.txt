@@ -1,4 +1,4 @@
-dlc_latria = {
+﻿dlc_latria = {
 	key = "Latria"
 	type = major
 	priority = 100

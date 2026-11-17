@@ -1,4 +1,4 @@
-# The scores are hidden. Health and physique move only the limits, never the gain.
+﻿# The scores are hidden. Health and physique move only the limits, never the gain.
 latria_act_month_exhaustion_limit = {
 	value = 20
 	if = {

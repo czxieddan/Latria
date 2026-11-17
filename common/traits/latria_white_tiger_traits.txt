@@ -1,4 +1,4 @@
-latria_white_tiger = {
+﻿latria_white_tiger = {
 	physical = yes
 	genetic = yes
 	random_creation = 0.5

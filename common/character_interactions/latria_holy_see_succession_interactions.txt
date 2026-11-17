@@ -1,4 +1,4 @@
-latria_designate_sacred_heir = {
+﻿latria_designate_sacred_heir = {
 	category = interaction_category_diplomacy
 	icon = heir
 	desc = latria_designate_sacred_heir_desc

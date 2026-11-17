@@ -1,4 +1,4 @@
-# Unsafe designation is valid only for an acyclic heir chain, checked again at acceptance.
+﻿# Unsafe designation is valid only for an acyclic heir chain, checked again at acceptance.
 latria_trace_sacred_heir_chain = {
 	scope:recipient = { save_scope_as = latria_heir_cursor }
 	while = {

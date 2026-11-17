@@ -1,4 +1,4 @@
-# Story pulses enter character on_actions so effects keep a character root.
+﻿# Story pulses enter character on_actions so effects keep a character root.
 latria_player_carnal_cycle = {
 	visible = no
 

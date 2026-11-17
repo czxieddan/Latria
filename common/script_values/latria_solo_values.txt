@@ -1,4 +1,4 @@
-# Solo always relieves 10-40 stress before character stress modifiers.
+﻿# Solo always relieves 10-40 stress before character stress modifiers.
 latria_solo_stress_delta = {
 	value = minor_stress_impact_loss
 	add = latria_solo_stress_traits

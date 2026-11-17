@@ -1,4 +1,4 @@
-LatriaSchemeBondTitle = {
+﻿LatriaSchemeBondTitle = {
 	type = character
 
 	text = {

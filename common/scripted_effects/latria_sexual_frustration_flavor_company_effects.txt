@@ -1,4 +1,4 @@
-latria_find_flavor_company = {
+﻿latria_find_flavor_company = {
 	random_courtier_or_guest = {
 		limit = { latria_flavor_available_company = yes }
 		save_scope_as = latria_flavor_company

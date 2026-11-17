@@ -1,4 +1,4 @@
-# Keep personality preferences below the need to recover from stress or repression.
+﻿# Keep personality preferences below the need to recover from stress or repression.
 latria_solo_relief_ai_chance = {
 	value = 80
 	add = latria_solo_ai_personality_chance

@@ -1,4 +1,4 @@
-# Called in scheme scope by the scheme callbacks.
+﻿# Called in scheme scope by the scheme callbacks.
 latria_charming_abduction_bind_scheme_effect = {
 	save_scope_as = scheme
 	scheme_owner = { save_scope_as = owner }

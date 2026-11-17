@@ -1,4 +1,4 @@
-on_death = {
+﻿on_death = {
 	on_actions = {
 		latria_holy_see_on_ruler_death
 		latria_holy_see_on_heir_death

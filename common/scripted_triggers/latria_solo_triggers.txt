@@ -1,4 +1,4 @@
-# Human initiators can repeat solo acts. AI retains its existing pause.
+﻿# Human initiators can repeat solo acts. AI retains its existing pause.
 latria_solo_interval_clear = {
 	OR = {
 		is_ai = no

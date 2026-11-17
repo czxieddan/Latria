@@ -1,4 +1,4 @@
-latria_bind_holy_see_faiths = {
+﻿latria_bind_holy_see_faiths = {
 	save_scope_as = latria_holy_see_holder
 	every_religion_global = {
 		every_faith = {

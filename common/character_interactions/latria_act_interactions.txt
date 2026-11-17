@@ -1,4 +1,4 @@
-latria_propose_intercourse_interaction = {
+﻿latria_propose_intercourse_interaction = {
 	icon = latria_propose_intercourse
 	common_interaction = yes
 	interface_priority = 40

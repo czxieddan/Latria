@@ -1,4 +1,4 @@
-# Vanilla birth and adultery events expect these scope names during the act chain.
+﻿# Vanilla birth and adultery events expect these scope names during the act chain.
 latria_register_vanilla_sex_scopes = {
 	save_scope_as = had_sex_root_character
 	scope:latria_partner = { save_scope_as = had_sex_with_effect_partner }

@@ -1,4 +1,4 @@
-# Shared by both invitations. All relationship checks are from the recipient's side.
+﻿# Shared by both invitations. All relationship checks are from the recipient's side.
 # Only the strongest existing intimate bond contributes.
 latria_act_romance_acceptance_modifiers = {
 	modifier = {

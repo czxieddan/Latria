@@ -1,4 +1,4 @@
-latria_fatal_liaison_show_intrigue = 13
+﻿latria_fatal_liaison_show_intrigue = 13
 latria_fatal_liaison_start_intrigue = 15
 latria_act_pregnancy_chance = 20
 

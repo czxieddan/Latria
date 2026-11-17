@@ -1,4 +1,4 @@
-latria_charming_abduction_adult = {
+﻿latria_charming_abduction_adult = {
 	age >= latria_charming_abduction_minimum_age
 }
 

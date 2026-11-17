@@ -1,4 +1,4 @@
-latria_mark_actor_dissatisfied = {
+﻿latria_mark_actor_dissatisfied = {
 	save_scope_value_as = {
 		name = latria_dissatisfied_person
 		value = flag:latria_actor_dissatisfied

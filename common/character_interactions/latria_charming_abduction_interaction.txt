@@ -1,4 +1,4 @@
-latria_start_charming_abduction_interaction = {
+﻿latria_start_charming_abduction_interaction = {
 	icon = latria_charming_abduction
 	interface_priority = 71
 	category = interaction_category_hostile

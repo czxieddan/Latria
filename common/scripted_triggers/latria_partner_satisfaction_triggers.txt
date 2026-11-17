@@ -1,4 +1,4 @@
-latria_has_dissatisfaction_risk = {
+﻿latria_has_dissatisfaction_risk = {
 	OR = {
 		is_pregnant = yes
 		age <= latria_dissatisfaction_young_age_end

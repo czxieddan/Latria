@@ -1,4 +1,4 @@
-# Remember the stress this crossing added. A later drop refunds that amount, not a new roll.
+﻿# Remember the stress this crossing added. A later drop refunds that amount, not a new roll.
 latria_charge_sexual_frustration_stress_2 = {
 	save_temporary_scope_value_as = {
 		name = latria_stress_charge

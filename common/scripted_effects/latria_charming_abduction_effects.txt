@@ -1,4 +1,4 @@
-latria_begin_charming_abduction_balanced_effect = {
+﻿latria_begin_charming_abduction_balanced_effect = {
 	begin_scheme_with_agents_effect = {
 		SCHEME_TYPE = latria_charming_abduction
 		TARGET_TYPE = target_character

@@ -1,4 +1,4 @@
-namespace = latria_prison_punishment
+﻿namespace = latria_prison_punishment
 
 latria_prison_punishment.0001 = {
 	type = character_event

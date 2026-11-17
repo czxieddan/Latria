@@ -1,4 +1,4 @@
-namespace = latria_compatibility_agot
+﻿namespace = latria_compatibility_agot
 
 latria_compatibility_agot.0001 = {
 	hidden = yes

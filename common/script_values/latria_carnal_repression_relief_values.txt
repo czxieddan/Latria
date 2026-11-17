@@ -1,4 +1,4 @@
-latria_current_carnal_relief_level = {
+﻿latria_current_carnal_relief_level = {
 	value = 0
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_1 } add = 1 }
 	if = { limit = { has_character_flag = latria_carnal_repression_relief_2 } add = 2 }

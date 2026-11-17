@@ -1,4 +1,4 @@
-latria_force_pig_embrace_interaction = {
+﻿latria_force_pig_embrace_interaction = {
 	interface_priority = 25
 	icon = latria_force_pig_embrace
 	category = interaction_category_prison

@@ -1,4 +1,4 @@
-latria_sacred_invitation_political_modifiers = {
+﻿latria_sacred_invitation_political_modifiers = {
 	modifier = {
 		add = latria_sacred_invitation_realm_score
 		desc = latria_sacred_invitation_realm_reason

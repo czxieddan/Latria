@@ -1,4 +1,4 @@
-latria_solo_relief_interaction = {
+﻿latria_solo_relief_interaction = {
 	icon = latria_solo_relief
 	common_interaction = yes
 	interface_priority = 38

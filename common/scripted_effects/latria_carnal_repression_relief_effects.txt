@@ -1,4 +1,4 @@
-latria_apply_carnal_repression_relief = {
+﻿latria_apply_carnal_repression_relief = {
 	if = {
 		limit = { scope:latria_act_kind = flag:latria_act_solo }
 		latria_change_sexual_frustration = { CHANGE = latria_solo_repression_relief_amount }

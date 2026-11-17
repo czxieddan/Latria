@@ -1,4 +1,4 @@
-# Replaces vanilla had_sex_with_effect.
+﻿# Replaces vanilla had_sex_with_effect.
 # Seduction, courtship, and every other vanilla sex call enter here.
 # Spouse, concubine, lover, and soulmate relations stay where vanilla sets them.
 # Same-sex acts are allowed when latria_can_share_intercourse passes.

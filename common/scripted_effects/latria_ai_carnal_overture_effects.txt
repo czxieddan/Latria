@@ -1,4 +1,4 @@
-# AI scope. Related players are found from the suitor's own monthly pulse.
+﻿# AI scope. Related players are found from the suitor's own monthly pulse.
 latria_ai_try_player_overtures = {
 	if = {
 		limit = { latria_ai_can_proposition_player = yes }

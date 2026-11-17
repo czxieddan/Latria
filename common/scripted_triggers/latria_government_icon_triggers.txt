@@ -1,4 +1,4 @@
-# Preserve the vanilla distinction between dead rulers, living rulers and courtiers.
+﻿# Preserve the vanilla distinction between dead rulers, living rulers and courtiers.
 latria_character_uses_government_flag_icon = {
 	trigger_if = {
 		limit = { is_alive = no }

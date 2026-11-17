@@ -1,4 +1,4 @@
-latria_ai_can_relieve_alone = {
+﻿latria_ai_can_relieve_alone = {
 	is_ai = yes
 	is_imprisoned = no
 	latria_can_act_alone = yes

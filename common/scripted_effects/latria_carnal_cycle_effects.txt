@@ -1,4 +1,4 @@
-latria_initialize_carnal_character = {
+﻿latria_initialize_carnal_character = {
 	if = {
 		limit = { is_alive = yes }
 		latria_roll_carnal_drive = yes

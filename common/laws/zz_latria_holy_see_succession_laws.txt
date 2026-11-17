@@ -1,4 +1,4 @@
-# Loaded after the vanilla gender laws so divine succession stays gender-neutral.
+﻿# Loaded after the vanilla gender laws so divine succession stays gender-neutral.
 latria_divine_succession_law = {
 	law_group_type = succession_order_laws
 	index = 100

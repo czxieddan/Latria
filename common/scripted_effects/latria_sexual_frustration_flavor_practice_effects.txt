@@ -1,4 +1,4 @@
-latria_flavor_practice_diplomacy = {
+﻿latria_flavor_practice_diplomacy = {
 	add_diplomacy_lifestyle_xp = latria_flavor_practice_xp
 }
 

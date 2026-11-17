@@ -1,4 +1,4 @@
-latria_is_unvowed_clerical_chastity_witness = {
+﻿latria_is_unvowed_clerical_chastity_witness = {
 	is_alive = yes
 	NOT = { has_character_modifier = clerical_chastity_vow_modifier }
 }

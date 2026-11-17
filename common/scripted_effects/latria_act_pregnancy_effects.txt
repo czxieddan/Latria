@@ -1,4 +1,4 @@
-# Intercourse only. The two sexes have to differ. A manual act never reaches this.
+﻿# Intercourse only. The two sexes have to differ. A manual act never reaches this.
 latria_roll_act_pregnancy_as_mother = {
 	# Vanilla bastard birth events read this list after the pregnancy begins.
 	add_to_variable_list = {

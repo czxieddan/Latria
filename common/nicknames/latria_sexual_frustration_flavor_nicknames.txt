@@ -1,1 +1,1 @@
-nick_latria_the_unquiet = { is_bad = yes }
+﻿nick_latria_the_unquiet = { is_bad = yes }

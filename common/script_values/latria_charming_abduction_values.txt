@@ -1,4 +1,4 @@
-# Beauty and relationship bonuses are percentage points. Target opinion is
+﻿# Beauty and relationship bonuses are percentage points. Target opinion is
 # scaled by the coefficient below; the existing success cap still applies.
 latria_charming_abduction_base_success_value = -25
 latria_charming_abduction_max_success_value = 85

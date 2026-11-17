@@ -1,4 +1,4 @@
-# The Holy See is the imperial head-of-faith title of the victorious Pope.
+﻿# The Holy See is the imperial head-of-faith title of the victorious Pope.
 e_latria_holy_see = {
 	color = { 255 249 198 }
 

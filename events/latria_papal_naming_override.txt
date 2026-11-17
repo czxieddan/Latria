@@ -1,4 +1,4 @@
-# Override priority, not filename order, lets Holy See holders choose a papal name.
+﻿# Override priority, not filename order, lets Holy See holders choose a papal name.
 namespace = pam_clergy_events
 
 pam_clergy_events.0001 = {

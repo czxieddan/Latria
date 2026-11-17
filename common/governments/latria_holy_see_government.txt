@@ -1,4 +1,4 @@
-latria_holy_see_government = {
+﻿latria_holy_see_government = {
 	government_rules = {
 		inherit_from_dynastic_government = no
 		treasury = yes

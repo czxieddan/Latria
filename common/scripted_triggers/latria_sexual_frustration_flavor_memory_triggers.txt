@@ -1,4 +1,4 @@
-latria_flavor_has_recent_memory = {
+﻿latria_flavor_has_recent_memory = {
 	any_memory = {
 		has_memory_type = $TYPE$
 		memory_age_years < 1

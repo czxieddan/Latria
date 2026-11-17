@@ -1,4 +1,4 @@
-# Override only the Papal State; preserve its vanilla properties and Church situation restriction.
+﻿# Override only the Papal State; preserve its vanilla properties and Church situation restriction.
 k_papal_state = {
 	color = { 255 249 198 }
 	definite_form = yes

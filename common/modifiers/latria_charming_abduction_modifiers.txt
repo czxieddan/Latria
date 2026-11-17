@@ -1,4 +1,4 @@
-# These modifiers belong to the scheme, never to either participant.
+﻿# These modifiers belong to the scheme, never to either participant.
 latria_charming_abduction_bedchamber_modifier = {
 	icon = love_positive
 	scheme_success_chance = 10

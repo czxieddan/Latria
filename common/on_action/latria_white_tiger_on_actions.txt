@@ -1,4 +1,4 @@
-# Once, on the birthday that first meets the age requirement.
+﻿# Once, on the birthday that first meets the age requirement.
 on_birthday = {
 	on_actions = { latria_white_tiger_on_birthday }
 }

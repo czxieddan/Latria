@@ -1,4 +1,4 @@
-latria_unclean = {
+﻿latria_unclean = {
 	category = fame
 	icon = latria_unclean.dds
 

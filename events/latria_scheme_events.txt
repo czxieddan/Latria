@@ -1,4 +1,4 @@
-namespace = latria_scheme
+﻿namespace = latria_scheme
 
 latria_scheme.0001 = {
 	hidden = yes

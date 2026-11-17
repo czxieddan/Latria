@@ -1,4 +1,4 @@
-latria_saint_peter_iron_guard = {
+﻿latria_saint_peter_iron_guard = {
 	type = heavy_cavalry
 
 	damage = 191

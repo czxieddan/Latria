@@ -1,4 +1,4 @@
-# Only writer for an act. Caller sets latria_act_kind. A partner act also sets latria_partner.
+﻿# Only writer for an act. Caller sets latria_act_kind. A partner act also sets latria_partner.
 # latria_force_death, when set, skips the roll and still uses the same death.
 # Keep the original AI cooldown flag; timestamp and duration drive player acceptance.
 latria_record_act_interval = {

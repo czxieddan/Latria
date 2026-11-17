@@ -1,4 +1,4 @@
-# Secrecy slots for the fatal liaison.
+﻿# Secrecy slots for the fatal liaison.
 
 latria_agent_door = {
 	contribution_type = secrecy

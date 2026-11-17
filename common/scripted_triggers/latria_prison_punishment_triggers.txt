@@ -1,4 +1,4 @@
-latria_can_impose_pig_embrace = {
+﻿latria_can_impose_pig_embrace = {
 	is_adult = yes
 	faith = {
 		NOR = {

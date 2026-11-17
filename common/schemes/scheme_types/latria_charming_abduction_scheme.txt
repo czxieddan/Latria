@@ -1,4 +1,4 @@
-latria_charming_abduction = {
+﻿latria_charming_abduction = {
 	skill = intrigue
 	desc = latria_charming_abduction_desc_general
 	success_desc = LATRIA_CHARMING_ABDUCTION_SUCCESS_DESC

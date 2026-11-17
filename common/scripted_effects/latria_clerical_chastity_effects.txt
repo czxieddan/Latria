@@ -1,4 +1,4 @@
-latria_apply_clerical_chastity_vow_penalty = {
+﻿latria_apply_clerical_chastity_vow_penalty = {
 	send_interface_toast = {
 		type = event_toast_effect_bad
 		title = latria_clerical_chastity_vow_broken_toast

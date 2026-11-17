@@ -1,4 +1,4 @@
-death_latria_intercourse_strain = {
+﻿death_latria_intercourse_strain = {
 	public_knowledge = no
 	icon = "death_natural.dds"
 }

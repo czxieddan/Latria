@@ -1,4 +1,4 @@
-latria_flavor_grow_company_friendship = {
+﻿latria_flavor_grow_company_friendship = {
 	if = {
 		limit = { latria_flavor_can_grow_company_friendship = yes }
 		progress_towards_friend_effect = {

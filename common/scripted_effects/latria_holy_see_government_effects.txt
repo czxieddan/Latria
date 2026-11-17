@@ -1,4 +1,4 @@
-latria_adopt_holy_see_government = {
+﻿latria_adopt_holy_see_government = {
 	if = {
 		limit = { NOT = { has_government = latria_holy_see_government } }
 		change_government = latria_holy_see_government

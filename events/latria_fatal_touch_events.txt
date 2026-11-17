@@ -1,4 +1,4 @@
-namespace = latria_fatal_touch
+﻿namespace = latria_fatal_touch
 
 latria_fatal_touch.0001 = {
 	hidden = yes

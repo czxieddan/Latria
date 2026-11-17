@@ -1,4 +1,4 @@
-# Activity scope. The vanilla bridge saves both participants before checking this.
+﻿# Activity scope. The vanilla bridge saves both participants before checking this.
 latria_wedding_has_act_spouses = {
 	OR = {
 		AND = {

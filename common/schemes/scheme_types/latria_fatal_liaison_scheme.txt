@@ -1,4 +1,4 @@
-latria_fatal_liaison = {
+﻿latria_fatal_liaison = {
 	skill = intrigue
 	desc = latria_fatal_liaison_desc_general
 	success_desc = "LATRIA_FATAL_LIAISON_SUCCESS_DESC"

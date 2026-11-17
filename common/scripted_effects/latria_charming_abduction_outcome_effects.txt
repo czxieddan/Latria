@@ -1,4 +1,4 @@
-# The shared preparation window has already spent the execution opportunities.
+﻿# The shared preparation window has already spent the execution opportunities.
 latria_charming_abduction_attempt_effect = {
 	if = {
 		limit = { latria_charming_abduction_can_execute = yes }

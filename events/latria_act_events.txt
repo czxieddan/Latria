@@ -1,4 +1,4 @@
-namespace = latria_act
+﻿namespace = latria_act
 
 latria_act.0101 = {
 	type = character_event

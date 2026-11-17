@@ -1,4 +1,4 @@
-# Runs on the mother after Latria's pregnancy roll succeeds.
+﻿# Runs on the mother after Latria's pregnancy roll succeeds.
 # Each compatibility file appends its handler to this shared on_action.
 latria_on_act_pregnancy_compatibility = {
 	on_actions = { latria_compatibility_agot_on_act_pregnancy }

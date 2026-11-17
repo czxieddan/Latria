@@ -1,4 +1,4 @@
-# Always true while Latria is loaded; other mods can gate on it without copying version checks.
+﻿# Always true while Latria is loaded; other mods can gate on it without copying version checks.
 latria_is_enabled = {
 	always = yes
 }

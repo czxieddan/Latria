@@ -1,4 +1,4 @@
-# Physiology. The body can still act: alive, and not incapable.
+﻿# Physiology. The body can still act: alive, and not incapable.
 # This is not puberty, and it is not adulthood in the period.
 latria_body_can_act = {
 	is_alive = yes

@@ -1,4 +1,4 @@
-latria_install_divine_title_law = {
+﻿latria_install_divine_title_law = {
 	hidden_effect = {
 		if = {
 			limit = { NOT = { has_title_law = latria_divine_succession_law } }

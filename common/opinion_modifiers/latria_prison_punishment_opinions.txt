@@ -1,4 +1,4 @@
-latria_forced_pig_embrace_opinion = {
+﻿latria_forced_pig_embrace_opinion = {
 	opinion = -50
 	years = 50
 	decaying = yes

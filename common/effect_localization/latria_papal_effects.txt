@@ -1,4 +1,4 @@
-latria_decision_immediate_effect = {
+﻿latria_decision_immediate_effect = {
 	global = latria_decision_immediate_effect_loc
 	first = latria_decision_immediate_effect_loc
 	third = latria_decision_immediate_effect_loc

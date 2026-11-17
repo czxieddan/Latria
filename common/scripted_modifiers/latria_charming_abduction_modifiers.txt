@@ -1,4 +1,4 @@
-latria_charming_abduction_attribute_modifier = {
+﻿latria_charming_abduction_attribute_modifier = {
 	modifier = {
 		add = latria_charming_abduction_beauty_value
 		desc = latria_charming_abduction_beauty_modifier_desc

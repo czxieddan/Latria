@@ -1,4 +1,4 @@
-latria_sacred_invitation_is_valid = {
+﻿latria_sacred_invitation_is_valid = {
 	scope:actor = {
 		is_alive = yes
 		has_title = title:e_latria_holy_see

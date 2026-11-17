@@ -1,4 +1,4 @@
-# Fatal liaison slots. Murder agents do not belong on this scheme.
+﻿# Fatal liaison slots. Murder agents do not belong on this scheme.
 
 latria_agent_quack = {
 	contribution_type = success_chance_max
