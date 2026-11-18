@@ -71,7 +71,8 @@
 		min = 0
 	}
 	base_success_chance = {
-		base = latria_charming_abduction_base_success_value
+		base = 0
+		modifier = { add = latria_charming_abduction_base_success_value }
 		scheme_type_skill_success_chance_modifier = { SKILL = INTRIGUE }
 		latria_charming_abduction_attribute_modifier = yes
 		hostile_scheme_base_chance_modifier = yes
