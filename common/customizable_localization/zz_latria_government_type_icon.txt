@@ -146,6 +146,10 @@ GetGovernmentTypeIcon = {
 		localization_key = steppe_admin_icon_concept
 	}
 	text = {
+		trigger = { government_type_has_flag = government_is_merchant }
+		localization_key = merchant_icon_concept
+	}
+	text = {
 		trigger = { always = no }
 		localization_key = feudal_icon_concept
 		fallback = yes

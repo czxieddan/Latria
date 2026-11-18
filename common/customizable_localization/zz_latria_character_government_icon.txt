@@ -153,6 +153,10 @@ GetGovernmentIcon = {
 		localization_key = steppe_admin_icon_concept
 	}
 	text = {
+		trigger = { latria_character_uses_government_flag_icon = { GOVERNMENT = merchant_government FLAG = government_is_merchant } }
+		localization_key = merchant_icon_concept
+	}
+	text = {
 		trigger = { always = no }
 		localization_key = feudal_icon_concept
 		fallback = yes
