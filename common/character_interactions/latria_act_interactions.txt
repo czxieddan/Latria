@@ -114,7 +114,8 @@
 		}
 	}
 	ai_will_do = {
-		base = latria_partner_act_ai_desire
+		base = 0
+		modifier = { add = latria_partner_act_ai_desire }
 	}
 }
 latria_propose_manual_interaction = {
@@ -226,6 +227,7 @@ latria_propose_manual_interaction = {
 		latria_act_recency_acceptance_modifiers = yes
 	}
 	ai_will_do = {
-		base = latria_manual_overture_chance
+		base = 0
+		modifier = { add = latria_manual_overture_chance }
 	}
 }
