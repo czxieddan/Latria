@@ -51,6 +51,7 @@
 		hegemony = 0
 	}
 	ai_will_do = {
-		base = latria_solo_relief_ai_chance
+		base = 0
+		modifier = { add = latria_solo_relief_ai_chance }
 	}
 }
