@@ -11,6 +11,17 @@ latria_character_uses_government_flag_icon = {
 	trigger_else = { liege ?= { government_has_flag = $FLAG$ } }
 }
 
+# Mod governments that only publish a flag. has_government would resolve an ID that
+# may not be registered, so test the flag everywhere; an unknown flag is simply false.
+latria_character_uses_flag_only_government_icon = {
+	latria_character_has_government_icon_source = yes
+	trigger_if = {
+		limit = { OR = { is_alive = no is_ruler = yes } }
+		government_has_flag = $FLAG$
+	}
+	trigger_else = { liege ?= { government_has_flag = $FLAG$ } }
+}
+
 latria_character_uses_exact_government_icon = {
 	trigger_if = {
 		limit = { OR = { is_alive = no is_ruler = yes } }

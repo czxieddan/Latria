@@ -73,5 +73,14 @@ NGovernment = {
 		"infernal_court_government"
 		"fera_tribe_government"
 		"dark_kingdom_government"
+
+		# LotR: Realms in Exile, Workshop 2291024373 (common/defines/00_defines.txt)
+		# Its 00_government_types.txt predates CK3 1.20 and drops merchant_government
+		# and monastic_holy_order_government; those stay listed above for vanilla.
+		"wastelands_government"
+		"elven_government"
+		"hobbit_government"
+		"oligarchy_government"
+		"orcish_government"
 	}
 }
