@@ -76,22 +76,21 @@ GetGovernmentIcon = {
 	}
 
 	# Mod: LotR: Realms in Exile, Workshop 2291024373; source: common/customizable_localization/00_government_custom_loc.txt
-	# Its governments are matched by flag only, so absent IDs never resolve. wastelands_government
-	# is left to the fallback: it is unobtainable and ships no icon key.
+	# wastelands_government is left to the fallback: it is unobtainable and ships no icon key.
 	text = {
-		trigger = { latria_character_uses_flag_only_government_icon = { FLAG = government_is_elven } }
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = elven_government FLAG = government_is_elven } }
 		localization_key = elven_icon_concept
 	}
 	text = {
-		trigger = { latria_character_uses_flag_only_government_icon = { FLAG = government_is_hobbit } }
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = hobbit_government FLAG = government_is_hobbit } }
 		localization_key = hobbit_icon_concept
 	}
 	text = {
-		trigger = { latria_character_uses_flag_only_government_icon = { FLAG = government_is_oligarchy } }
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = oligarchy_government FLAG = government_is_oligarchy } }
 		localization_key = oligarchy_icon_concept
 	}
 	text = {
-		trigger = { latria_character_uses_flag_only_government_icon = { FLAG = government_is_orcish } }
+		trigger = { latria_character_uses_mod_government_icon = { GOVERNMENT = orcish_government FLAG = government_is_orcish } }
 		localization_key = orcish_icon_concept
 	}
 
