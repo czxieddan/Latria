@@ -8,12 +8,13 @@ latria_agot_is_loaded = {
 	has_global_variable = AGOT_is_loaded
 }
 
-# Elder Kings 2 ships e_skyrim and replaces the whole landed_titles tree; nothing else defines it.
+# Elder Kings 2 sets this in on_game_start_lunar_cycle; the name is unique to it.
+# A missing global variable is safe to test, so vanilla and other mods never log an error.
 latria_ek2_is_loaded = {
-	exists = title:e_skyrim
+	has_global_variable = lunarphase_masser
 }
 
-# Princes of Darkness ships e_enoch; no other supported mod or vanilla defines it.
+# Princes of Darkness sets POD_loaded in its on_game_start explicitly for mod compatibility.
 latria_pod_is_loaded = {
-	exists = title:e_enoch
+	has_global_variable = POD_loaded
 }
