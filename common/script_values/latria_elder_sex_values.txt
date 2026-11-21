@@ -1,0 +1,52 @@
+# Death roll for the two vanilla faltering-heart events.
+# The subject is the character whose heart gives out, saved before the roll.
+# A night that answers a lifetime of repression reads as the best of their life,
+# and that release is what the heart cannot take. The age term stays vanilla.
+latria_elder_sex_death_chance = {
+	value = {
+		value = root.age
+		add = latria_elder_sex_death_age_offset
+		min = 1
+	}
+	add = latria_elder_sex_repression_death_chance_add
+}
+
+# Vanilla rolled the younger partner's age with no offset. Kept, plus repression.
+latria_elder_sex_partner_death_chance = {
+	value = root.age
+	add = latria_elder_sex_repression_death_chance_add
+}
+
+latria_elder_sex_death_age_offset = {
+	value = -40
+}
+
+latria_elder_sex_repression_death_chance_add = {
+	value = 0
+	if = {
+		limit = { scope:latria_elder_sex_subject = { latria_elder_sex_has_repression = yes } }
+		add = {
+			value = scope:latria_elder_sex_subject.latria_current_sexual_frustration
+			multiply = latria_elder_sex_repression_risk_multiplier
+		}
+	}
+}
+
+# Ten points of repression add about one percent.
+latria_elder_sex_repression_risk_multiplier = {
+	value = 0.1
+}
+
+# Lowest repression the elder events treat as a real need.
+latria_elder_sex_repression_minimum = {
+	value = 50
+}
+
+# Read in the subject's scope. Most of what was held back leaves with the night.
+latria_elder_sex_repression_relief_amount = {
+	value = -20
+	add = {
+		value = latria_current_sexual_frustration
+		multiply = -0.5
+	}
+}

@@ -1,0 +1,27 @@
+# The repression the two elder events read. The variable only exists while the
+# character still has a sexual need, so an elder past that age reads zero here.
+latria_elder_sex_has_repression = {
+	exists = var:latria_sexual_frustration
+	var:latria_sexual_frustration >= latria_elder_sex_repression_minimum
+}
+
+# Vanilla boundaries for the older holder of a faltering heart.
+latria_elder_sex_holder_is_eligible = {
+	is_available_adult = yes
+	has_trait = faltering_heart
+	age >= 50
+	NOR = {
+		has_trait = chaste
+		has_trait = celibate
+	}
+}
+
+# Vanilla boundaries for the younger consort whose heart gives out.
+latria_elder_sex_consort_is_eligible = {
+	is_available_ai_adult = yes
+	has_trait = faltering_heart
+	NOR = {
+		has_trait = chaste
+		has_trait = celibate
+	}
+}

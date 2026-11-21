@@ -1,0 +1,26 @@
+# Shared pieces for the two vanilla faltering-heart events.
+# The events save scope:latria_elder_sex_subject before any effect runs.
+
+# Only unspent desire makes the night the best of a life, and only that release
+# stops the heart. Without repression the night passes and nobody dies of it.
+latria_roll_elder_sex_death = {
+	if = {
+		limit = { scope:latria_elder_sex_subject = { latria_elder_sex_has_repression = yes } }
+		random = {
+			chance = $CHANCE$
+			scope:latria_elder_sex_subject = {
+				death = { death_reason = death_best_sex_of_their_life }
+			}
+		}
+	}
+}
+
+# Most of what was held back leaves with the night.
+latria_relieve_elder_sex_repression = {
+	scope:latria_elder_sex_subject = {
+		if = {
+			limit = { latria_elder_sex_has_repression = yes }
+			latria_change_sexual_frustration = { CHANGE = latria_elder_sex_repression_relief_amount }
+		}
+	}
+}

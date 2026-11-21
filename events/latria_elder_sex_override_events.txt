@@ -1,0 +1,222 @@
+# Overrides the two vanilla faltering-heart events so repression matters.
+# id_override_priority lets the game pick these in place of the vanilla copies.
+# Vanilla structure is kept; only the effect blocks and one added option change.
+namespace = elder_events
+
+elder_events.1400 = {
+	id_override_priority = 1
+	type = character_event
+	title = elder_events.1400.t
+	desc = elder_events.1400.desc
+	theme = physical_health
+
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = holding_crutch
+		camera = camera_event_right_pointing_left
+	}
+
+	right_portrait = {
+		character = scope:lover
+		animation = flirtation_left
+		camera = camera_event_right_crowner_crowning
+	}
+
+	trigger = {
+		latria_elder_sex_holder_is_eligible = yes
+		latria_elder_sex_has_repression = yes
+		OR = {
+			any_consort = {
+				location = root.location
+				is_attracted_to_gender_of = root
+				appropriate_lover = yes
+			}
+			any_relation = {
+				type = lover
+				appropriate_lover = yes
+			}
+		}
+	}
+
+	cooldown = { years = 25 }
+
+	immediate = {
+		save_scope_as = root_scope
+		add_character_flag = is_naked
+		random_relation = {
+			type = lover
+			limit = {
+				appropriate_lover = yes
+			}
+			save_scope_as = lover
+			add_character_flag = is_naked
+		}
+		if = {
+			limit = {
+				NOT = {
+					exists = scope:lover
+				}
+			}
+			random_consort = {
+				limit = {
+					location = root.location
+					is_attracted_to_gender_of = root
+					appropriate_lover = yes
+				}
+				save_scope_as = lover
+				add_character_flag = is_naked
+			}
+		}
+		root = { save_scope_as = latria_elder_sex_subject }
+	}
+
+	option = {
+		name = elder_events.1400.a
+
+		trigger = {
+			has_trait = faltering_heart
+		}
+
+		add_stress = {
+			value = massive_stress_loss
+			add = massive_stress_loss
+		}
+
+		had_sex_with_effect = {
+			CHARACTER = scope:lover
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+
+		latria_relieve_elder_sex_repression = yes
+
+		latria_roll_elder_sex_death = { CHANCE = latria_elder_sex_death_chance }
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = elder_events.1400.b
+
+		add_stress = major_stress_gain
+		scope:lover = {
+			add_opinion = {
+				target = root
+				modifier = disappointed_opinion
+				opinion = -20
+			}
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+
+	after = {
+		if = {
+			limit = {
+				is_alive = yes
+			}
+			remove_character_flag = is_naked
+		}
+		scope:lover = {
+			if = {
+				limit = {
+					is_alive = yes
+				}
+				remove_character_flag = is_naked
+			}
+		}
+	}
+}
+
+# Young partner with an old faltering heart. The heart gives out on the holder.
+elder_events.1500 = {
+	id_override_priority = 1
+	type = character_event
+	title = elder_events.1500.t
+	desc = elder_events.1500.desc
+	theme = lover_relation
+
+	override_background = { reference = bedchamber }
+
+	left_portrait = {
+		character = root
+		animation = flirtation
+		outfit_tags = { nightgown }
+	}
+
+	right_portrait = {
+		character = scope:lover
+		animation = holding_crutch
+		outfit_tags = { nightgown }
+	}
+
+	trigger = {
+		is_available_adult = yes
+		age <= 40
+		NOR = {
+			has_trait = chaste
+			has_trait = celibate
+		}
+		any_consort = {
+			latria_elder_sex_consort_is_eligible = yes
+			latria_elder_sex_has_repression = yes
+		}
+	}
+	cooldown = { years = 25 }
+
+	immediate = {
+		save_scope_as = root_scope
+		random_consort = {
+			limit = {
+				latria_elder_sex_consort_is_eligible = yes
+				latria_elder_sex_has_repression = yes
+			}
+			save_scope_as = lover
+		}
+		scope:lover = { save_scope_as = latria_elder_sex_subject }
+	}
+
+	option = {
+		name = elder_events.1500.a
+
+		stress_impact = {
+			compassionate = minor_stress_impact_loss
+			lustful = medium_stress_impact_loss
+		}
+
+		had_sex_with_effect = {
+			CHARACTER = scope:lover
+			PREGNANCY_CHANCE = pregnancy_chance
+		}
+
+		scope:lover = {
+			add_stress = {
+				value = massive_stress_loss
+				add = massive_stress_loss
+			}
+		}
+		latria_relieve_elder_sex_repression = yes
+		latria_roll_elder_sex_death = { CHANCE = latria_elder_sex_partner_death_chance }
+
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = elder_events.1500.b
+
+		stress_impact = {
+			lustful = medium_stress_impact_gain
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+}
