@@ -31,11 +31,11 @@ elder_events.1400 = {
 			any_consort = {
 				location = root.location
 				is_attracted_to_gender_of = root
-				appropriate_lover = yes
+				latria_appropriate_lover = yes
 			}
 			any_relation = {
 				type = lover
-				appropriate_lover = yes
+				latria_appropriate_lover = yes
 			}
 		}
 	}
@@ -48,7 +48,7 @@ elder_events.1400 = {
 		random_relation = {
 			type = lover
 			limit = {
-				appropriate_lover = yes
+				latria_appropriate_lover = yes
 			}
 			save_scope_as = lover
 			add_character_flag = is_naked
@@ -63,7 +63,7 @@ elder_events.1400 = {
 				limit = {
 					location = root.location
 					is_attracted_to_gender_of = root
-					appropriate_lover = yes
+					latria_appropriate_lover = yes
 				}
 				save_scope_as = lover
 				add_character_flag = is_naked

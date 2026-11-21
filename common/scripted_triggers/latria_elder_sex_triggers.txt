@@ -25,3 +25,30 @@ latria_elder_sex_consort_is_eligible = {
 		has_trait = celibate
 	}
 }
+
+# Copy of the vanilla file-scoped appropriate_lover from events/elder_events.txt.
+# It was only visible inside that vanilla file, so the override redefines it.
+latria_appropriate_lover = {
+	is_available_ai_adult = yes
+	age <= 40
+	OR = {
+		age <= 20
+		has_trait = lustful
+		has_trait = athletic
+		has_trait = physique_good
+		has_trait = lifestyle_reveler
+		has_trait = fecund
+		has_trait = seducer
+		rite = {
+			rite_has_tenet = tenet_carnal_exaltation
+		}
+		AND = {
+			has_relation_lover = root
+			root.age >= 60
+		}
+	}
+	NOR = {
+		has_trait = chaste
+		has_trait = celibate
+	}
+}
