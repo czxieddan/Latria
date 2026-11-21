@@ -1,4 +1,4 @@
-# Shared pieces for the two vanilla faltering-heart events.
+﻿# Shared pieces for the two vanilla faltering-heart events.
 # The events save scope:latria_elder_sex_subject before any effect runs.
 
 # Only unspent desire makes the night the best of a life, and only that release

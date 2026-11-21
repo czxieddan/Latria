@@ -1,4 +1,4 @@
-# Death roll for the two vanilla faltering-heart events.
+﻿# Death roll for the two vanilla faltering-heart events.
 # The subject is the character whose heart gives out, saved before the roll.
 # A night that answers a lifetime of repression reads as the best of their life,
 # and that release is what the heart cannot take. The age term stays vanilla.

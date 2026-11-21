@@ -1,4 +1,4 @@
-# Overrides the two vanilla faltering-heart events so repression matters.
+﻿# Overrides the two vanilla faltering-heart events so repression matters.
 # id_override_priority lets the game pick these in place of the vanilla copies.
 # Vanilla structure is kept; only the effect blocks and one added option change.
 namespace = elder_events

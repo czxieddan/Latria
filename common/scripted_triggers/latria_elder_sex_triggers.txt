@@ -1,4 +1,4 @@
-# The repression the two elder events read. The variable only exists while the
+﻿# The repression the two elder events read. The variable only exists while the
 # character still has a sexual need, so an elder past that age reads zero here.
 latria_elder_sex_has_repression = {
 	exists = var:latria_sexual_frustration
