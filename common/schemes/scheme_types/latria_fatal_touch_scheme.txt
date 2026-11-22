@@ -27,8 +27,8 @@
 		}
 		is_imprisoned = no
 		latria_carnal_strain_death_is_enabled = yes
-		# Become the same as latria_propose_intercourse_interaction.
-		latria_can_propose_intercourse = { PARTNER = scope:target }
+		# A scheme has no actor or recipient scope, so it uses the share gate.
+		latria_can_share_manual_act = { PARTNER = scope:target }
 	}
 	valid = {
 		is_incapable = no
@@ -128,7 +128,11 @@
 	}
 	on_monthly = {
 		latria_replace_murder_liaison_agents = yes
-		latria_fatal_liaison_monthly_effect = yes
+		# Skip the pulse if the owner is already gone; the scheme clears next tick.
+		if = {
+			limit = { exists = scheme_owner }
+			latria_fatal_liaison_monthly_effect = yes
+		}
 		hostile_scheme_monthly_discovery_chance_effect = yes
 	}
 	on_invalidated = {

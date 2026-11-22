@@ -142,9 +142,19 @@ latria_fatal_liaison_accept_effect = {
 # latria_force_death routes through latria_roll_partner_strain, so the death reason stays
 # death_latria_intercourse_strain or death_latria_manual_strain. Nothing else kills here.
 latria_fatal_liaison_roll_death_effect = {
-	save_scope_value_as = {
-		name = latria_fatal_icon_kind
-		value = scope:latria_act_kind
+	# A flag scope value cannot be copied into another, so write it out again.
+	if = {
+		limit = { scope:latria_act_kind ?= flag:latria_act_manual }
+		save_scope_value_as = {
+			name = latria_fatal_icon_kind
+			value = flag:latria_act_manual
+		}
+	}
+	else = {
+		save_scope_value_as = {
+			name = latria_fatal_icon_kind
+			value = flag:latria_act_intercourse
+		}
 	}
 	random = {
 		chance = scope:scheme.scheme_success_chance

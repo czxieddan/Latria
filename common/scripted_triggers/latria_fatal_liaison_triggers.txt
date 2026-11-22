@@ -33,8 +33,14 @@ latria_fatal_liaison_invitation_available = {
 	latria_fatal_liaison_preparation_available = yes
 	scope:owner = {
 		latria_can_exchange_act_invitation = { PARTNER = scope:target }
-		latria_can_propose_intercourse = { PARTNER = scope:target }
 		latria_act_interval_clear = { PARTNER = scope:target }
+		trigger_if = {
+			limit = { scope:scheme = { var:latria_scheme_act_kind ?= flag:latria_act_manual } }
+			latria_can_share_manual_act = { PARTNER = scope:target }
+		}
+		trigger_else = {
+			latria_can_share_intercourse = { PARTNER = scope:target }
+		}
 	}
 	OR = {
 		scope:target = { is_imprisoned_by = scope:owner }
