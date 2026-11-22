@@ -69,6 +69,14 @@
 				scope:puppet_or_actor = {
 					save_scope_as = latria_actor
 					scope:recipient = { save_scope_as = latria_partner }
+					# A fatal invitation is answered exactly like an ordinary one.
+					if = {
+						limit = { latria_fatal_liaison_invitation_armed = { TARGET = scope:latria_partner } }
+						save_scope_value_as = {
+							name = latria_fatal_night
+							value = yes
+						}
+					}
 					save_scope_value_as = {
 						name = latria_act_kind
 						value = flag:latria_act_intercourse
@@ -77,10 +85,17 @@
 						limit = { latria_lack_of_ability_to_say_no = yes }
 						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
-					latria_resolve_act = yes
+					# A fatal invitation writes the night itself and rolls the death.
 					if = {
-						limit = { is_ai = no }
-						trigger_event = latria_act.0101
+						limit = { exists = scope:latria_fatal_night }
+						latria_fatal_liaison_accept_effect = yes
+					}
+					else = {
+						latria_resolve_act = yes
+						if = {
+							limit = { is_ai = no }
+							trigger_event = latria_act.0101
+						}
 					}
 				}
 				scope:recipient = {
@@ -88,11 +103,19 @@
 						limit = {
 							is_alive = yes
 							is_ai = no
+							# The fatal night speaks for itself, or not at all.
+							NOT = { exists = scope:latria_fatal_night }
 						}
 						trigger_event = latria_act.0102
 					}
 				}
 			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			latria_fatal_liaison_declined_effect = { TARGET = scope:recipient }
 		}
 	}
 
@@ -190,6 +213,14 @@ latria_propose_manual_interaction = {
 				scope:puppet_or_actor = {
 					save_scope_as = latria_actor
 					scope:recipient = { save_scope_as = latria_partner }
+					# A fatal invitation is answered exactly like an ordinary one.
+					if = {
+						limit = { latria_fatal_liaison_invitation_armed = { TARGET = scope:latria_partner } }
+						save_scope_value_as = {
+							name = latria_fatal_night
+							value = yes
+						}
+					}
 					save_scope_value_as = {
 						name = latria_act_kind
 						value = flag:latria_act_manual
@@ -198,10 +229,17 @@ latria_propose_manual_interaction = {
 						limit = { latria_lack_of_ability_to_say_no = yes }
 						save_scope_value_as = { name = latria_skip_act_interval value = flag:latria_debug_act }
 					}
-					latria_resolve_act = yes
+					# A fatal invitation writes the night itself and rolls the death.
 					if = {
-						limit = { is_ai = no }
-						trigger_event = latria_act.0101
+						limit = { exists = scope:latria_fatal_night }
+						latria_fatal_liaison_accept_effect = yes
+					}
+					else = {
+						latria_resolve_act = yes
+						if = {
+							limit = { is_ai = no }
+							trigger_event = latria_act.0101
+						}
 					}
 				}
 				scope:recipient = {
@@ -209,11 +247,19 @@ latria_propose_manual_interaction = {
 						limit = {
 							is_alive = yes
 							is_ai = no
+							# The fatal night speaks for itself, or not at all.
+							NOT = { exists = scope:latria_fatal_night }
 						}
 						trigger_event = latria_act.0102
 					}
 				}
 			}
+		}
+	}
+
+	on_decline = {
+		scope:actor = {
+			latria_fatal_liaison_declined_effect = { TARGET = scope:recipient }
 		}
 	}
 

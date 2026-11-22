@@ -32,7 +32,8 @@
 				intrigue >= latria_fatal_liaison_show_intrigue
 			}
 			latria_carnal_strain_death_is_enabled = yes
-			latria_can_share_intercourse = { PARTNER = scope:recipient }
+			# Become the same as latria_propose_intercourse_interaction.
+			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 		}
 	}
 	is_valid_showing_failures_only = {
