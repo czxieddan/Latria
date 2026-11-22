@@ -28,7 +28,7 @@
  latria_scheme.0010.a: "Cubrir a [target.GetShortUIName] con la manta y después abrir la puerta."
  latria_scheme.0020.t: "Una noche de espera"
  latria_scheme.0020.desc: "La lámpara ha bajado y todavía no oigo a [target.GetFirstName] junto a la puerta.\n\nCaliento el vino dos veces y vuelvo a doblar la ropa sobre la silla. De vez en cuando alguien cruza el pasillo. Cuando los pasos se acercan, contengo la respiración. Cuando se alejan, vuelvo a quedarme sin compañía. Cada vez creo que es [target.GetSheHe].\n\nAl final la vela vacila y la cera cae en la bandeja. Solo entonces admito que la noche ha terminado. El vino, las palabras y la excusa que preparé no harán falta."
- latria_scheme.0020.a: "Apagar la luz. No tiene sentido seguir esperando."
+ latria_scheme.0020.a: "Apagar las velas. Con una basta."
  latria_scheme.0030.t: "Una noticia demasiado tardía"
  latria_scheme.0030.desc: "Todavía sopeso qué puerta lateral sería más apartada y qué invitación despertaría menos sospechas cuando dejan la noticia sobre mi mesa.\n\n[target.GetFirstName] ya ha dejado este mundo. Hay pocas palabras en el papel. Las leo durante largo rato. Las cartas que no envié, los pasillos que memoricé, la excusa preparada para esta única noche: todo resulta inútil de pronto.\n\nVierto el vino mientras aún está tibio. Algunos preparativos pueden esperar una noche mejor. Ninguno alcanza a una muerte que ya ha ocurrido."
  latria_scheme.0030.a: "Quemar la carta que nunca envié."

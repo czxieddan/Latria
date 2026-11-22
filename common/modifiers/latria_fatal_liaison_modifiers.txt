@@ -1,0 +1,36 @@
+﻿# Scheme modifiers for the fatal chain. Success chance answers one question only:
+# once the night happens, does the target's body give out? It never moves whether the target
+# comes, so only the preparation events touch it. The invitation's setting moves secrecy alone.
+latria_fatal_liaison_bedchamber_modifier = {
+	icon = love_positive
+	scheme_secrecy = 10
+}
+
+latria_fatal_liaison_antechamber_modifier = {
+	icon = intrigue_positive
+	scheme_secrecy = -10
+}
+
+latria_fatal_liaison_demanding_night_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 15
+	scheme_secrecy = -5
+}
+
+latria_fatal_liaison_measured_night_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 5
+	scheme_secrecy = 5
+}
+
+latria_fatal_liaison_weakness_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 10
+	scheme_secrecy = -5
+}
+
+latria_fatal_liaison_whisper_modifier = {
+	icon = intrigue_positive
+	scheme_success_chance = 5
+	scheme_secrecy = 10
+}

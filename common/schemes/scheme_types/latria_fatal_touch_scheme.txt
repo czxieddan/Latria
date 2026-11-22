@@ -32,6 +32,7 @@
 	}
 	valid = {
 		is_incapable = no
+		# The invitation itself asks for the manual gate again.
 		latria_can_share_manual_act = { PARTNER = scope:target }
 		scope:target = {
 			is_imprisoned = no
@@ -111,22 +112,23 @@
 	}
 	on_phase_completed = {
 		suppress_scheme_follow_up_event_till_input_given_effect = yes
-		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_fatal_touch.0001 }
+		latria_fatal_liaison_prep_effect = yes
 		cap_schemes_and_fire_reminders_effect = yes
 	}
 	on_hud_click = {
 		latria_replace_murder_liaison_agents = yes
-		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_fatal_touch.0001 }
+		latria_fatal_liaison_prep_effect = yes
 	}
 	on_semiyearly = {
 		if = {
 			limit = { scheme_owner = { is_ai = yes } }
-			latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_fatal_touch.0001 }
+			latria_fatal_liaison_prep_effect = yes
 			purge_ai_scheme_slots_effect = yes
 		}
 	}
 	on_monthly = {
 		latria_replace_murder_liaison_agents = yes
+		latria_fatal_liaison_monthly_effect = yes
 		hostile_scheme_monthly_discovery_chance_effect = yes
 	}
 	on_invalidated = {
@@ -140,7 +142,7 @@
 					NOT = { has_character_flag = latria_fatal_liaison_concluded }
 				}
 			}
-			scope:owner = { trigger_event = latria_fatal_touch.0030 }
+			scope:owner = { trigger_event = latria_scheme.0030 }
 		}
 		else_if = {
 			limit = {
@@ -149,7 +151,7 @@
 					NOT = { has_character_flag = latria_fatal_liaison_concluded }
 				}
 			}
-			scope:owner = { trigger_event = latria_fatal_touch.0040 }
+			scope:owner = { trigger_event = latria_scheme.0040 }
 		}
 	}
 }

@@ -28,7 +28,7 @@
  latria_scheme.0010.a: "Draw the covers over [target.GetHerHim], then open the door."
  latria_scheme.0020.t: "A Night of Waiting"
  latria_scheme.0020.desc: "The lamp has burned low, and still I do not hear [target.GetFirstName] at the door.\n\nI warm the wine twice and fold the clothes upon the chair again. Now and then someone passes in the corridor. When the steps approach, I hold my breath. When they recede, I am alone once more. Each time, I think it is [target.GetSheHe].\n\nAt last the candle gutters, and wax drops into the tray. Only then do I admit that the night is over. The wine, the words, and the excuse I prepared will none of them be needed."
- latria_scheme.0020.a: "Put out the light. There is no point in waiting."
+ latria_scheme.0020.a: "Put out the candles. One will do."
  latria_scheme.0030.t: "News That Comes Too Late"
  latria_scheme.0030.desc: "I am still weighing which side door is more private, and which invitation would rouse the least suspicion, when the news is set upon my table.\n\n[target.GetFirstName] is already gone from the world. There are few words on the paper. I read them for a long time. The unsent letters, the passages I have memorized, the excuse prepared for this one night: all of it is suddenly useless.\n\nI pour out the wine while it is still warm. Some arrangements can wait for a better night. None of them can overtake a death that has already happened."
  latria_scheme.0030.a: "Burn the letter I never sent."

@@ -1,0 +1,65 @@
+﻿# The liaison and the caress share one chain. Scopes come from the scheme callbacks,
+# from latria_fatal_liaison_bind_scheme_effect, or from an answered invitation.
+latria_fatal_liaison_scheme_matches = {
+	exists = scope:scheme
+	scope:scheme = {
+		OR = {
+			scheme_type = latria_fatal_liaison
+			scheme_type = latria_fatal_touch
+		}
+		scheme_owner = { this = scope:owner }
+		scheme_target_character = { this = scope:target }
+	}
+}
+
+latria_fatal_liaison_scene_available = {
+	latria_fatal_liaison_scheme_matches = yes
+	scope:owner = {
+		is_alive = yes
+		NOT = { has_character_flag = latria_fatal_liaison_concluded }
+	}
+	scope:target = { is_alive = yes }
+}
+
+# An invitation is out, so nothing new opens until it is answered or lapses.
+latria_fatal_liaison_preparation_available = {
+	latria_fatal_liaison_scene_available = yes
+	NOT = { scope:scheme = { has_variable = latria_fatal_liaison_armed } }
+}
+
+# The invitation is the ordinary one, so it asks for the ordinary conditions:
+# the same ones both Latria invitations check before they are shown.
+latria_fatal_liaison_invitation_available = {
+	latria_fatal_liaison_preparation_available = yes
+	scope:owner = {
+		latria_can_exchange_act_invitation = { PARTNER = scope:target }
+		latria_can_propose_intercourse = { PARTNER = scope:target }
+		latria_act_interval_clear = { PARTNER = scope:target }
+	}
+	OR = {
+		scope:target = { is_imprisoned_by = scope:owner }
+		scope:target = {
+			is_imprisoned = no
+			in_diplomatic_range = scope:owner
+		}
+	}
+}
+
+# Read in the proposer's scope while one of its invitations is being answered.
+latria_fatal_liaison_invitation_armed = {
+	any_scheme = {
+		OR = {
+			scheme_type = latria_fatal_liaison
+			scheme_type = latria_fatal_touch
+		}
+		has_variable = latria_fatal_liaison_armed
+		scheme_target_character = $TARGET$
+	}
+}
+
+latria_fatal_liaison_has_unseen_preparation = {
+	OR = {
+		NOT = { has_variable = latria_fatal_liaison_pace_seen }
+		NOT = { has_variable = latria_fatal_liaison_heart_seen }
+	}
+}

@@ -1,0 +1,35 @@
+﻿l_english:
+ latria_fatal_liaison.1001.t: "An Invitation"
+ latria_fatal_liaison.1001.desc: "The candles are lit early, and the wine has stood long enough to lose its chill. I have written nothing that could be read aloud at court. What I send is an hour and a place.\n\n[target.GetFirstName] will read it as an ordinary invitation, because that is what it is. If [target.GetSheHe] comes, [target.GetSheHe] comes for a night and nothing beyond it. What happens after the door closes is mine to arrange."
+ latria_fatal_liaison.1001.a: "Ask [target.GetHerHim] to the bedchamber."
+ latria_fatal_liaison.1001.b: "Ask [target.GetHerHim] for wine in the outer chamber."
+ latria_fatal_liaison.1001.c: "Set the letter aside. There will be another night."
+ latria_fatal_liaison.1001.d: "Burn the letter."
+ latria_fatal_liaison_wait_tt: "The invitation is not sent, and the month is spent."
+
+ latria_fatal_liaison.1101.t: "How the Night Is Kept"
+ latria_fatal_liaison.1101.desc: "The brazier is lit early and the shutters are closed on the morning side. I have told the servants to bring the wine up themselves and not to knock again until daylight. Everything the night needs is already in the room.\n\nOnly the hour is left to settle. Whether to keep [target.GetFirstName] without sleep until the candles are down to their last, or to let [target.GetHerHim] rest before the worst of it. A body that is never allowed to rest carries less than one that is.\n\nI settle it now, and once."
+ latria_fatal_liaison.1101.a: "Keep [target.GetHerHim] awake until the last candle."
+ latria_fatal_liaison.1101.b: "Let [target.GetHerHim] rest before dawn."
+ latria_fatal_liaison.1101.c: "Leave the night to itself."
+
+ latria_fatal_liaison.1102.t: "On the Stairs"
+ latria_fatal_liaison.1102.desc: "I let [target.GetFirstName] go up ahead of me and follow a few steps behind. Halfway to the landing [target.GetSheHe] stops, one hand flat against the wall, and stays there until [target.GetHerHis] breath comes back. Then [target.GetSheHe] smiles as though nothing had happened.\n\nI have seen that pause in guests who did not see the spring. I do not say so. I only count how long it takes."
+ latria_fatal_liaison.1102.a: "Count the seconds until [target.GetSheHe] moves again."
+ latria_fatal_liaison.1102.b: "Ask whether [target.GetSheHe] has seen a physician about it."
+ latria_fatal_liaison.1102.c: "Say nothing, and let [target.GetHerHim] walk on."
+
+ latria_fatal_liaison.1201.t: "Morning, and a Breath"
+ latria_fatal_liaison.1201.desc: "The window is grey before I understand what went wrong. [target.GetFirstName] is asleep, and the blankets rise and fall with a steadiness I did not plan for.\n\nI lie still and listen. Twice more, then a third time. The night I arranged has passed and left both of us breathing.\n\nThere is nothing left but to be found beside [target.GetHerHim], awake, and to say I slept well."
+ latria_fatal_liaison.1201.a: "Rise before [target.GetSheHe] wakes."
+
+ latria_fatal_liaison.1211.t: "A Heavier Morning"
+ latria_fatal_liaison.1211.desc: "I wake sore in every joint, and for a while I do not move. [owner.GetFirstName] is already awake beside me, watching the ceiling, and does not notice at first that my eyes are open.\n\nPerhaps the night was longer than I remember. Perhaps I am not as young as I was. I sit up slowly and gather my clothes.\n\nAt the door I look back once, and cannot say why."
+ latria_fatal_liaison.1211.a: "Close the door behind me."
+
+ latria_fatal_liaison_bedchamber_modifier: "By the Bed"
+ latria_fatal_liaison_antechamber_modifier: "In the Outer Chamber"
+ latria_fatal_liaison_demanding_night_modifier: "A Demanding Night"
+ latria_fatal_liaison_measured_night_modifier: "A Measured Night"
+ latria_fatal_liaison_weakness_modifier: "A Known Weakness"
+ latria_fatal_liaison_whisper_modifier: "A Quiet Question"

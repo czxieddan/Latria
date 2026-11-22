@@ -1,0 +1,213 @@
+﻿# The event chain both fatal schemes share. Called in scheme scope by the scheme callbacks.
+latria_fatal_liaison_bind_scheme_effect = {
+	save_scope_as = scheme
+	scheme_owner = { save_scope_as = owner }
+	scheme_target_character = { save_scope_as = target }
+}
+
+# Opens the shared agent window, which pays for the invitation once.
+latria_fatal_liaison_prep_effect = {
+	latria_fatal_liaison_bind_scheme_effect = yes
+	save_scope_value_as = {
+		name = follow_up_event
+		value = event_id:latria_fatal_liaison.1001
+	}
+	# The window opens only when the invitation can actually be sent.
+	if = {
+		limit = {
+			latria_fatal_liaison_invitation_available = yes
+			NOT = { exists = scope:suppress_next_event }
+		}
+		scheme_owner = { trigger_event = scheme_critical_moments.0002 }
+	}
+}
+
+# A quiet month can still teach the plot something.
+latria_fatal_liaison_monthly_effect = {
+	latria_fatal_liaison_bind_scheme_effect = yes
+	if = {
+		limit = {
+			latria_fatal_liaison_preparation_available = yes
+			latria_fatal_liaison_has_unseen_preparation = yes
+		}
+		random = {
+			chance = 10
+			latria_fatal_liaison_choose_preparation_effect = yes
+		}
+	}
+}
+
+latria_fatal_liaison_choose_preparation_effect = {
+	random_list = {
+		50 = {
+			trigger = { NOT = { has_variable = latria_fatal_liaison_pace_seen } }
+			set_variable = { name = latria_fatal_liaison_pace_seen value = yes }
+			scheme_owner = {
+				trigger_event = { id = latria_fatal_liaison.1101 days = { 1 30 } }
+			}
+		}
+		50 = {
+			trigger = { NOT = { has_variable = latria_fatal_liaison_heart_seen } }
+			set_variable = { name = latria_fatal_liaison_heart_seen value = yes }
+			scheme_owner = {
+				trigger_event = { id = latria_fatal_liaison.1102 days = { 1 30 } }
+			}
+		}
+	}
+}
+
+latria_fatal_liaison_add_preparation_effect = {
+	if = {
+		limit = { latria_fatal_liaison_preparation_available = yes }
+		scope:scheme = { add_scheme_modifier = { type = $MODIFIER$ } }
+	}
+}
+
+# The invitation is the ordinary one, so the target answers it. Only an accepted night can kill.
+# The variable lapses on its own, which simply opens the chain for another invitation.
+latria_fatal_liaison_invite_effect = {
+	if = {
+		limit = { latria_fatal_liaison_invitation_available = yes }
+		scope:scheme = {
+			add_scheme_modifier = { type = latria_fatal_liaison_$APPROACH$_modifier }
+			set_variable = {
+				name = latria_fatal_liaison_armed
+				value = yes
+				days = 60
+			}
+		}
+		latria_fatal_liaison_send_invitation_effect = yes
+	}
+}
+
+latria_fatal_liaison_send_invitation_effect = {
+	if = {
+		limit = { scope:scheme = { var:latria_scheme_act_kind ?= flag:latria_act_manual } }
+		run_interaction = {
+			interaction = latria_propose_manual_interaction
+			actor = scope:owner
+			recipient = scope:target
+			send_threshold = decline
+		}
+	}
+	else = {
+		run_interaction = {
+			interaction = latria_propose_intercourse_interaction
+			actor = scope:owner
+			recipient = scope:target
+			send_threshold = decline
+		}
+	}
+}
+
+# Choosing not to write yet costs the month's impatience and nothing else.
+latria_fatal_liaison_wait_effect = {
+	if = {
+		limit = { latria_fatal_liaison_preparation_available = yes }
+		stress_and_fulfillment_impact = {
+			impatient = medium_stress_impact_gain
+		}
+	}
+}
+
+latria_fatal_liaison_cancel_effect = {
+	latria_close_fatal_liaison_effect = yes
+}
+
+# Runs in the proposer's scope from the answered invitation. latria_act_kind and latria_partner are set.
+# The fatal chain writes the act itself, so the caller must not resolve it a second time.
+latria_fatal_liaison_accept_effect = {
+	if = {
+		limit = { latria_fatal_liaison_invitation_armed = { TARGET = scope:latria_partner } }
+		every_scheme = {
+			limit = {
+				OR = {
+					scheme_type = latria_fatal_liaison
+					scheme_type = latria_fatal_touch
+				}
+				has_variable = latria_fatal_liaison_armed
+				scheme_target_character = scope:latria_partner
+			}
+			remove_variable = latria_fatal_liaison_armed
+			save_scope_as = scheme
+		}
+		save_scope_as = owner
+		latria_fatal_liaison_roll_death_effect = yes
+		latria_resolve_act = yes
+		latria_fatal_liaison_show_outcome_effect = yes
+	}
+}
+
+# Success chance decides one thing only: whether the body gives out during the act itself.
+# latria_force_death routes through latria_roll_partner_strain, so the death reason stays
+# death_latria_intercourse_strain or death_latria_manual_strain. Nothing else kills here.
+latria_fatal_liaison_roll_death_effect = {
+	save_scope_value_as = {
+		name = latria_fatal_icon_kind
+		value = scope:latria_act_kind
+	}
+	random = {
+		chance = scope:scheme.scheme_success_chance
+		save_scope_value_as = {
+			name = latria_force_death
+			value = yes
+		}
+	}
+	add_character_flag = latria_fatal_liaison_concluded
+}
+
+latria_fatal_liaison_show_outcome_effect = {
+	scope:latria_partner = { save_scope_as = target }
+	if = {
+		limit = {
+			OR = {
+				exists = scope:latria_force_death
+				# Carnal strain can still take the target during the act itself.
+				scope:target = { is_alive = no }
+			}
+		}
+		trigger_event = latria_scheme.0010
+	}
+	else = {
+		trigger_event = latria_fatal_liaison.1201
+		if = {
+			limit = {
+				scope:target = {
+					is_alive = yes
+					is_ai = no
+				}
+			}
+			scope:target = { trigger_event = latria_fatal_liaison.1211 }
+		}
+	}
+	latria_close_fatal_liaison_effect = yes
+}
+
+# Runs in the proposer's scope when the invitation is refused. TARGET is the recipient.
+latria_fatal_liaison_declined_effect = {
+	if = {
+		limit = { latria_fatal_liaison_invitation_armed = { TARGET = $TARGET$ } }
+		every_scheme = {
+			limit = {
+				OR = {
+					scheme_type = latria_fatal_liaison
+					scheme_type = latria_fatal_touch
+				}
+				has_variable = latria_fatal_liaison_armed
+				scheme_target_character = $TARGET$
+			}
+			remove_variable = latria_fatal_liaison_armed
+			save_scope_as = scheme
+		}
+		save_scope_as = owner
+		$TARGET$ = { save_scope_as = target }
+		latria_save_fatal_liaison_icon_kind = yes
+		latria_fatal_liaison_lost_night_effect = yes
+	}
+}
+
+# The night the target stayed away. It costs a month, not the plan.
+# Called in the owner's scope.
+latria_fatal_liaison_lost_night_effect = {
+	trigger_event = latria_scheme.0020
+}

@@ -1,0 +1,35 @@
+﻿l_japanese:
+ latria_fatal_liaison.1001.t: "一つの誘い"
+ latria_fatal_liaison.1001.desc: "蝋燭はいつもより早く灯され、酒は待たされて冷たさを失っている。宮廷で読み上げられるような言葉は一行も書いていない。送るのは、時刻と場所だけだ。\n\n[target.GetFirstName]はこれを普通の誘いとして読むだろう。実際に普通の誘いだからだ。来るのなら、一夜のためだけに来る。扉が閉まったあとの始末は、私の側にある。"
+ latria_fatal_liaison.1001.a: "寝室へ来るよう誘う。"
+ latria_fatal_liaison.1001.b: "前の間に酒を勧める。"
+ latria_fatal_liaison.1001.c: "手紙をしまっておく。別の夜がある。"
+ latria_fatal_liaison.1001.d: "手紙を焼く。"
+ latria_fatal_liaison_wait_tt: "手紙は送られず、月日だけが過ぎる。"
+
+ latria_fatal_liaison.1101.t: "一夜をどう過ごさせるか"
+ latria_fatal_liaison.1101.desc: "炭火は早くから起こし、夜明け側の窓には板を打ちつけた。酒は召使いに直接運ばせ、日が昇るまで戸を叩くなと言ってある。この夜に要るものは、もう部屋に揃っている。\n\n残っているのは刻限だけだ。蝋燭が燃えさしになるまで[target.GetFirstName]を眠らせずにおくか、いちばん苦しい時が来る前に[target.GetHerHim]を休ませるか。休みを与えられない身体は、与えられた身体より長くは持たない。\n\nいま決める。決めるのは一度だけだ。"
+ latria_fatal_liaison.1101.a: "最後の蝋燭まで眠らせない。"
+ latria_fatal_liaison.1101.b: "夜明け前に休ませる。"
+ latria_fatal_liaison.1101.c: "夜の成り行きに任せる。"
+
+ latria_fatal_liaison.1102.t: "階段の途中で"
+ latria_fatal_liaison.1102.desc: "[target.GetFirstName]を先に上がらせ、私は二、三段下を歩く。踊り場の手前で[target.GetSheHe]は足を止め、片手を平らに壁へ当てたまま、息が戻るまでそうしていた。それから、何もなかったように笑う。\n\n春を見られなかった客にも、同じ間の取り方をする人がいた。口には出さない。どれだけかかったかだけを数える。"
+ latria_fatal_liaison.1102.a: "[target.GetSheHe]が動き出すまでの秒を数える。"
+ latria_fatal_liaison.1102.b: "医者に診てもらったのか尋ねる。"
+ latria_fatal_liaison.1102.c: "何も言わず、[target.GetHerHim]をそのまま行かせる。"
+
+ latria_fatal_liaison.1201.t: "明け方、まだ息がある"
+ latria_fatal_liaison.1201.desc: "窓が灰色になるころ、どこで狂ったのかを悟る。[target.GetFirstName]は眠っていて、掛け布は私の想定とは違う規則正しさで上下している。\n\nじっとして耳を澄ます。二度、もう一度。私が整えた夜は過ぎ、二人ともまだ息をしている。\n\nいま出来るのは、目を覚ました[target.GetHerHim]の隣で起きているところを見られ、よく眠れたと言うことだけだ。"
+ latria_fatal_liaison.1201.a: "[target.GetSheHe]が目を覚ます前に起きる。"
+
+ latria_fatal_liaison.1211.t: "重い朝"
+ latria_fatal_liaison.1211.desc: "目覚めると節々が痛み、しばらく動かない。[owner.GetFirstName]はもう起きていて、隣で天井を見ている。私が目を開けていることに、すぐには気づかない。\n\n思っていたより長い夜だったのかもしれない。もう若くはないのかもしれない。ゆっくり上体を起こし、衣服をまとめる。\n\n戸口で一度振り返る。なぜ振り返ったのかは、自分でも分からない。"
+ latria_fatal_liaison.1211.a: "戸を閉める。"
+
+ latria_fatal_liaison_bedchamber_modifier: "寝台のそば"
+ latria_fatal_liaison_antechamber_modifier: "前の間にて"
+ latria_fatal_liaison_demanding_night_modifier: "度を越した夜"
+ latria_fatal_liaison_measured_night_modifier: "加減した夜"
+ latria_fatal_liaison_weakness_modifier: "知られた弱み"
+ latria_fatal_liaison_whisper_modifier: "低い問い"

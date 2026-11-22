@@ -1,18 +1,16 @@
 ﻿namespace = latria_scheme
 
-latria_scheme.0001 = {
-	hidden = yes
-	immediate = {
-		latria_resolve_fatal_liaison_outcome = {
-			SUCCESS_EVENT = latria_scheme.0010
-			FAILURE_EVENT = latria_scheme.0020
-		}
-	}
-}
-
 latria_scheme.0010 = {
 	type = character_event
-	title = latria_scheme.0010.t_line
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+				desc = latria_fatal_touch
+			}
+			desc = latria_scheme.0010.t_line
+		}
+	}
 	theme = intrigue
 	override_icon = {
 		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
@@ -33,10 +31,7 @@ latria_scheme.0010 = {
 	}
 	override_background = { reference = bedchamber }
 	desc = latria_scheme.0010.desc
-	immediate = {
-		latria_mark_act_undressed = { PARTNER = scope:target }
-		latria_close_fatal_liaison_effect = yes
-	}
+	immediate = { latria_mark_act_undressed = { PARTNER = scope:target } }
 	option = {
 		name = latria_scheme.0010.a
 	}
@@ -45,6 +40,7 @@ latria_scheme.0010 = {
 	}
 }
 
+# The invitation was refused. The scheme stays open, and the night is lost.
 latria_scheme.0020 = {
 	type = character_event
 	title = latria_scheme.0020.t
@@ -60,7 +56,6 @@ latria_scheme.0020 = {
 	right_portrait = { character = scope:target }
 	override_background = { reference = bedchamber }
 	desc = latria_scheme.0020.desc
-	immediate = { latria_close_fatal_liaison_effect = yes }
 	option = {
 		name = latria_scheme.0020.a
 	}

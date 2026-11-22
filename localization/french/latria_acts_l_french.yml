@@ -28,7 +28,7 @@
  latria_scheme.0010.a: "Ramener la couverture sur [Select_CString(target.IsFemale, 'elle', 'lui')], puis ouvrir la porte."
  latria_scheme.0020.t: "Une nuit d’attente"
  latria_scheme.0020.desc: "La lampe a baissé, et je n’entends toujours pas [target.GetFirstName] derrière la porte.\n\nJe réchauffe le vin deux fois et replie encore les vêtements sur la chaise. Par moments, quelqu’un traverse le couloir. Quand les pas approchent, je retiens mon souffle. Quand ils s’éloignent, il ne reste que moi. Chaque fois, je crois que c’est [Select_CString(target.IsFemale, 'elle', 'lui')].\n\nEnfin la bougie vacille et la cire tombe dans le plateau. Alors seulement, j’admets que la nuit est finie. Le vin, les mots et l’excuse que j’avais préparés ne serviront pas."
- latria_scheme.0020.a: "Éteindre la lumière. Inutile d’attendre."
+ latria_scheme.0020.a: "Éteindre les bougies. Une suffira."
  latria_scheme.0030.t: "Une nouvelle trop tardive"
  latria_scheme.0030.desc: "Je pèse encore quelle porte latérale serait la plus discrète, et quelle invitation éveillerait le moins de soupçons, lorsque la nouvelle est posée sur ma table.\n\n[target.GetFirstName] a déjà quitté ce monde. Le papier contient peu de mots. Je les lis longtemps. Les lettres jamais envoyées, les couloirs appris par cœur, l’excuse préparée pour cette seule nuit : tout cela devient soudain inutile.\n\nJe verse le vin encore chaud. Certains arrangements peuvent attendre une meilleure nuit. Aucun ne peut rattraper une mort déjà survenue."
  latria_scheme.0030.a: "Brûler la lettre que je n’ai pas envoyée."

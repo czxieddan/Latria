@@ -27,7 +27,8 @@
 		}
 		is_imprisoned = no
 		latria_carnal_strain_death_is_enabled = yes
-		latria_can_share_intercourse = { PARTNER = scope:target }
+		# Become the same as latria_propose_intercourse_interaction.
+		latria_can_propose_intercourse = { PARTNER = scope:target }
 	}
 	valid = {
 		is_incapable = no
@@ -110,22 +111,23 @@
 	}
 	on_phase_completed = {
 		suppress_scheme_follow_up_event_till_input_given_effect = yes
-		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
+		latria_fatal_liaison_prep_effect = yes
 		cap_schemes_and_fire_reminders_effect = yes
 	}
 	on_hud_click = {
 		latria_replace_murder_liaison_agents = yes
-		latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
+		latria_fatal_liaison_prep_effect = yes
 	}
 	on_semiyearly = {
 		if = {
 			limit = { scheme_owner = { is_ai = yes } }
-			latria_fatal_liaison_prep_effect = { FOLLOW_UP_EVENT = latria_scheme.0001 }
+			latria_fatal_liaison_prep_effect = yes
 			purge_ai_scheme_slots_effect = yes
 		}
 	}
 	on_monthly = {
 		latria_replace_murder_liaison_agents = yes
+		latria_fatal_liaison_monthly_effect = yes
 		hostile_scheme_monthly_discovery_chance_effect = yes
 	}
 	on_invalidated = {

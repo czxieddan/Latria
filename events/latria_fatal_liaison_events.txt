@@ -1,0 +1,178 @@
+﻿namespace = latria_fatal_liaison
+
+# The invitation. It is sent as the ordinary one, so the target answers it.
+latria_fatal_liaison.1001 = {
+	type = character_event
+	title = latria_fatal_liaison.1001.t
+	desc = latria_fatal_liaison.1001.desc
+	theme = intrigue
+	override_icon = {
+		trigger = { scope:scheme = { var:latria_scheme_act_kind ?= flag:latria_act_manual } }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = flirtation
+	}
+	right_portrait = {
+		character = scope:target
+		animation = love
+	}
+	widget = {
+		gui = "event_window_widget_scheme"
+		container = "custom_widgets_container"
+	}
+	trigger = { latria_fatal_liaison_invitation_available = yes }
+
+	option = {
+		name = latria_fatal_liaison.1001.a
+		latria_fatal_liaison_invite_effect = { APPROACH = bedchamber }
+		ai_chance = { base = 60 }
+	}
+	option = {
+		name = latria_fatal_liaison.1001.b
+		latria_fatal_liaison_invite_effect = { APPROACH = antechamber }
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = latria_fatal_liaison.1001.c
+		custom_tooltip = latria_fatal_liaison_wait_tt
+		latria_fatal_liaison_wait_effect = yes
+		ai_chance = { base = 0 }
+	}
+	option = {
+		name = latria_fatal_liaison.1001.d
+		latria_fatal_liaison_cancel_effect = yes
+		ai_chance = { base = 0 }
+	}
+}
+
+# How far the night is pushed decides how surely the body fails.
+latria_fatal_liaison.1101 = {
+	type = character_event
+	title = latria_fatal_liaison.1101.t
+	desc = latria_fatal_liaison.1101.desc
+	theme = intrigue
+	override_icon = {
+		trigger = { scope:scheme = { var:latria_scheme_act_kind ?= flag:latria_act_manual } }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = { latria_fatal_liaison_preparation_available = yes }
+
+	option = {
+		name = latria_fatal_liaison.1101.a
+		latria_fatal_liaison_add_preparation_effect = {
+			MODIFIER = latria_fatal_liaison_demanding_night_modifier
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = latria_fatal_liaison.1101.b
+		latria_fatal_liaison_add_preparation_effect = {
+			MODIFIER = latria_fatal_liaison_measured_night_modifier
+		}
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = latria_fatal_liaison.1101.c
+		ai_chance = { base = 10 }
+	}
+}
+
+# What a body cannot survive. Asking after it leaves a trail.
+latria_fatal_liaison.1102 = {
+	type = character_event
+	title = latria_fatal_liaison.1102.t
+	desc = latria_fatal_liaison.1102.desc
+	theme = intrigue
+	override_icon = {
+		trigger = { scope:scheme = { var:latria_scheme_act_kind ?= flag:latria_act_manual } }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_background = { reference = corridor_night }
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	trigger = { latria_fatal_liaison_preparation_available = yes }
+
+	option = {
+		name = latria_fatal_liaison.1102.a
+		latria_fatal_liaison_add_preparation_effect = {
+			MODIFIER = latria_fatal_liaison_weakness_modifier
+		}
+		ai_chance = { base = 50 }
+	}
+	option = {
+		name = latria_fatal_liaison.1102.b
+		latria_fatal_liaison_add_preparation_effect = {
+			MODIFIER = latria_fatal_liaison_whisper_modifier
+		}
+		ai_chance = { base = 40 }
+	}
+	option = {
+		name = latria_fatal_liaison.1102.c
+		ai_chance = { base = 10 }
+	}
+}
+
+# The night happened and the target is still breathing.
+latria_fatal_liaison.1201 = {
+	type = character_event
+	title = latria_fatal_liaison.1201.t
+	desc = latria_fatal_liaison.1201.desc
+	theme = intrigue
+	override_icon = {
+		trigger = { scope:latria_fatal_icon_kind ?= flag:latria_act_manual }
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_touch.dds"
+	}
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:target
+		animation = love
+	}
+	option = { name = latria_fatal_liaison.1201.a }
+}
+
+# The target's own memory of a night that went wrong.
+latria_fatal_liaison.1211 = {
+	type = character_event
+	title = latria_fatal_liaison.1211.t
+	desc = latria_fatal_liaison.1211.desc
+	theme = intrigue
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_fatal_liaison.dds"
+	}
+	override_background = { reference = bedchamber }
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:owner
+		animation = personality_rational
+	}
+	option = { name = latria_fatal_liaison.1211.a }
+}

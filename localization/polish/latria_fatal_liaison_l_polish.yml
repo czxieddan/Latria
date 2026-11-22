@@ -1,0 +1,35 @@
+﻿l_polish:
+ latria_fatal_liaison.1001.t: "Zaproszenie"
+ latria_fatal_liaison.1001.desc: "Świece płoną wcześniej niż zwykle, a wino straciło chłód od czekania. Nie napisałam nic, co można by odczytać na dworze. Wysyłam tylko godzinę i miejsce.\n\n[target.GetFirstName] odczyta to jako zwykłe zaproszenie, bo nim jest. Jeśli przyjdzie, przyjdzie na jedną noc i nic więcej. To, co dzieje się po zamknięciu drzwi, należy do mnie."
+ latria_fatal_liaison.1001.a: "Poprosić, by przyszła do sypialni."
+ latria_fatal_liaison.1001.b: "Zaprosić na wino do przedpokoju."
+ latria_fatal_liaison.1001.c: "Odłożyć list. Będzie inna noc."
+ latria_fatal_liaison.1001.d: "Spalić list."
+ latria_fatal_liaison_wait_tt: "List nie zostaje wysłany, a miesiąc mija."
+
+ latria_fatal_liaison.1101.t: "Jak poprowadzić tę noc"
+ latria_fatal_liaison.1101.desc: "Kadzielnica płonie od wczesna, a okiennice od strony poranka są zamknięte. Służba ma sama zanieść wino na górę i nie pukać aż do światła. Wszystko, czego ta noc potrzebuje, już jest w komnacie.\n\nZostaje tylko godzina. Trzymać [target.GetFirstName] bez snu, aż świece staną się ogarkami, czy pozwolić [target.GetHerHim] zasnąć przed najgorszym. Ciało, któremu nie daje się spoczynku, znosi mniej niż to, które go miało.\n\nRozstrzygam to teraz i raz."
+ latria_fatal_liaison.1101.a: "Nie pozwolić na sen do ostatniej świecy."
+ latria_fatal_liaison.1101.b: "Pozwolić zasnąć przed świtem."
+ latria_fatal_liaison.1101.c: "Zostawić noc jej biegowi."
+
+ latria_fatal_liaison.1102.t: "Na schodach"
+ latria_fatal_liaison.1102.desc: "Puszczam [target.GetFirstName] przodem i idę kilka stopni niżej. W połowie drogi [target.GetSheHe] zatrzymuje się, z dłonią płasko na ścianie, i stoi tak, aż oddech wróci. Potem uśmiecha się, jakby nic się nie stało.\n\nTen przestanek widuje się u gości, którzy nie doczekali wiosny. Nie mówię tego. Liczę tylko, ile to trwa."
+ latria_fatal_liaison.1102.a: "Liczyć sekundy, aż [target.GetSheHe] ruszy dalej."
+ latria_fatal_liaison.1102.b: "Spytać, czy [target.GetSheHe] był u lekarza."
+ latria_fatal_liaison.1102.c: "Nic nie mówić i pozwolić [target.GetHerHim] iść dalej."
+
+ latria_fatal_liaison.1201.t: "Rano, i oddech"
+ latria_fatal_liaison.1201.desc: "Okno szarzeje, nim zrozumiem, czego zabrakło. [target.GetFirstName] śpi, a kołdra unosi się i opada z regularnością, której nie było w planie.\n\nLeżę bez ruchu i nasłuchuję. Jeszcze dwa razy, potem trzeci. Noc minęła według mojego planu i zostawiła nas oboje oddychających.\n\nPozostaje dać się zastać obok [target.GetHerHim], czuwając, i powiedzieć, że spałam dobrze."
+ latria_fatal_liaison.1201.a: "Wstać, zanim [target.GetSheHe] się obudzi."
+
+ latria_fatal_liaison.1211.t: "Cięższy poranek"
+ latria_fatal_liaison.1211.desc: "Budzę się z bólem w każdym stawie i przez chwilę się nie ruszam. [owner.GetFirstName] już nie śpi, patrzy w sufit i dopiero po chwili dostrzega, że mam otwarte oczy.\n\nMoże noc była dłuższa, niż pamiętam. Może nie mam już tego wieku. Podnoszę się powoli i zbieram ubranie.\n\nW drzwiach odwracam się raz i nie umiem powiedzieć dlaczego."
+ latria_fatal_liaison.1211.a: "Zamknąć za sobą drzwi."
+
+ latria_fatal_liaison_bedchamber_modifier: "Przy łożu"
+ latria_fatal_liaison_antechamber_modifier: "W przedpokoju"
+ latria_fatal_liaison_demanding_night_modifier: "Noc bez miary"
+ latria_fatal_liaison_measured_night_modifier: "Noc odmierzone"
+ latria_fatal_liaison_weakness_modifier: "Znana słabość"
+ latria_fatal_liaison_whisper_modifier: "Ciche pytanie"

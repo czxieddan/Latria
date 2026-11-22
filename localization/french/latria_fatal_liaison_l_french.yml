@@ -1,0 +1,35 @@
+﻿l_french:
+ latria_fatal_liaison.1001.t: "Une invitation"
+ latria_fatal_liaison.1001.desc: "Les bougies sont allumées plus tôt que de coutume, et le vin a perdu sa fraîcheur à force d’attendre. Je n’ai rien écrit qui puisse être lu à voix haute devant une cour. Ce que j’envoie n’est qu’une heure et un lieu.\n\n[target.GetFirstName] y verra une invitation ordinaire, car c’en est une. Si [target.GetSheHe] vient, ce sera pour une nuit et rien de plus. Ce qui suit la porte refermée m’appartient."
+ latria_fatal_liaison.1001.a: "Lui demander de venir dans la chambre."
+ latria_fatal_liaison.1001.b: "Lui proposer du vin dans l’antichambre."
+ latria_fatal_liaison.1001.c: "Ranger la lettre. Il y aura une autre nuit."
+ latria_fatal_liaison.1001.d: "Brûler la lettre."
+ latria_fatal_liaison_wait_tt: "L’invitation n’est pas envoyée, et le mois passe."
+
+ latria_fatal_liaison.1101.t: "Comment tenir la nuit"
+ latria_fatal_liaison.1101.desc: "Le brasero est allumé tôt et les volets sont fermés du côté du matin. J’ai dit aux serviteurs de monter le vin eux-mêmes et de ne plus frapper avant le jour. Tout ce qu’il faut à cette nuit est déjà dans la chambre.\n\nIl ne reste que l’heure. Tenir [target.GetFirstName] sans sommeil jusqu’à ce que les bougies n’en soient plus qu’un reste, ou laisser [target.GetHerHim] dormir avant le pire. Un corps à qui l’on n’accorde aucun repos porte moins qu’un autre.\n\nJe tranche maintenant, et une seule fois."
+ latria_fatal_liaison.1101.a: "Ne lui laisser aucun repos jusqu’à la dernière bougie."
+ latria_fatal_liaison.1101.b: "Lui laisser le sommeil avant l’aube."
+ latria_fatal_liaison.1101.c: "Laisser la nuit aller."
+
+ latria_fatal_liaison.1102.t: "Dans l’escalier"
+ latria_fatal_liaison.1102.desc: "Je laisse [target.GetFirstName] monter devant moi et je suis quelques marches plus bas. À mi-chemin [target.GetSheHe] s’arrête, une main à plat contre le mur, et reste là jusqu’à ce que [target.GetHerHis] souffle revienne. Puis [target.GetSheHe] sourit comme si rien ne s’était passé.\n\nJ’ai déjà vu cette pause chez des hôtes qui n’ont pas vu le printemps. Je ne le dis pas. Je compte seulement combien de temps cela prend."
+ latria_fatal_liaison.1102.a: "Compter les secondes avant qu’[target.GetSheHe] reparte."
+ latria_fatal_liaison.1102.b: "Demander si [target.GetSheHe] a consulté un médecin."
+ latria_fatal_liaison.1102.c: "Ne rien dire et laisser [target.GetHerHim] continuer."
+
+ latria_fatal_liaison.1201.t: "Le matin, et un souffle"
+ latria_fatal_liaison.1201.desc: "La fenêtre est grise avant que je comprenne ce qui a manqué. [target.GetFirstName] dort, et les couvertures montent et descendent avec une régularité que je n’avais pas prévue.\n\nJe reste immobile et j’écoute. Encore deux fois, puis une troisième. La nuit que j’avais arrangée est passée, et nous respirons encore tous les deux.\n\nIl ne reste qu’à me laisser trouver auprès d’[target.GetHerHim], les yeux ouverts, et à dire que j’ai bien dormi."
+ latria_fatal_liaison.1201.a: "Me lever avant [target.GetHerHim]."
+
+ latria_fatal_liaison.1211.t: "Un matin plus lourd"
+ latria_fatal_liaison.1211.desc: "Je m’éveille avec des douleurs partout et, un moment, je ne bouge pas. [owner.GetFirstName] est déjà les yeux ouverts auprès de moi, le regard au plafond, et ne remarque pas tout de suite que les miens le sont aussi.\n\nLa nuit fut peut-être plus longue que dans mon souvenir. Peut-être je n’ai plus l’âge. Je me redresse lentement et rassemble mes vêtements.\n\nÀ la porte, je me retourne une fois, sans pouvoir dire pourquoi."
+ latria_fatal_liaison.1211.a: "Refermer la porte derrière moi."
+
+ latria_fatal_liaison_bedchamber_modifier: "Auprès du lit"
+ latria_fatal_liaison_antechamber_modifier: "Dans l’antichambre"
+ latria_fatal_liaison_demanding_night_modifier: "Une nuit exigeante"
+ latria_fatal_liaison_measured_night_modifier: "Une nuit mesurée"
+ latria_fatal_liaison_weakness_modifier: "Une faiblesse connue"
+ latria_fatal_liaison_whisper_modifier: "Une question discrète"

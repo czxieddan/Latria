@@ -1,18 +1,4 @@
-﻿latria_fatal_liaison_prep_effect = {
-	save_scope_as = scheme
-	scheme_owner = { save_scope_as = owner }
-	scheme_target_character = { save_scope_as = target }
-	save_scope_value_as = {
-		name = follow_up_event
-		value = event_id:$FOLLOW_UP_EVENT$
-	}
-	if = {
-		limit = { NOT = { exists = scope:suppress_next_event } }
-		scheme_owner = { trigger_event = scheme_critical_moments.0002 }
-	}
-}
-
-latria_clear_liaison_agent_slots = {
+﻿latria_clear_liaison_agent_slots = {
 	while = {
 		limit = { any_scheme_agent_slot = { always = yes } }
 		random_scheme_agent_slot = { save_scope_as = latria_old_slot }
@@ -39,22 +25,6 @@ latria_close_fatal_liaison_effect = {
 		scope:scheme = { end_scheme = yes }
 	}
 	remove_character_flag = latria_fatal_liaison_concluded
-}
-
-latria_bind_fatal_liaison_scopes = {
-	if = {
-		limit = { NOT = { exists = scope:owner } }
-		save_scope_as = owner
-	}
-	if = {
-		limit = {
-			NOT = { exists = scope:target }
-			exists = scope:scheme
-		}
-		scope:scheme = {
-			scheme_target_character = { save_scope_as = target }
-		}
-	}
 }
 
 latria_begin_fatal_liaison_balanced = {
@@ -141,37 +111,5 @@ latria_save_fatal_liaison_icon_kind = {
 			name = latria_fatal_icon_kind
 			value = flag:latria_act_manual
 		}
-	}
-}
-
-latria_resolve_fatal_liaison_outcome = {
-	latria_bind_fatal_liaison_scopes = yes
-	latria_save_fatal_liaison_icon_kind = yes
-	random = {
-		chance = scope:scheme.scheme_success_chance
-		save_scope_value_as = {
-			name = latria_scheme_succeeded
-			value = yes
-		}
-	}
-	scope:owner = { add_character_flag = latria_fatal_liaison_concluded }
-	if = {
-		limit = { exists = scope:latria_scheme_succeeded }
-		scope:owner = {
-			save_scope_value_as = {
-				name = latria_act_kind
-				value = scope:latria_fatal_icon_kind
-			}
-			save_scope_value_as = {
-				name = latria_force_death
-				value = yes
-			}
-			scope:target = { save_scope_as = latria_partner }
-			latria_resolve_act = yes
-			trigger_event = $SUCCESS_EVENT$
-		}
-	}
-	else = {
-		scope:owner = { trigger_event = $FAILURE_EVENT$ }
 	}
 }

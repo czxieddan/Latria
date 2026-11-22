@@ -28,7 +28,7 @@
  latria_scheme.0010.a: "Naciągnąć na [Select_CString(target.IsFemale, 'nią', 'niego')] przykrycie i otworzyć drzwi."
  latria_scheme.0020.t: "Noc oczekiwania"
  latria_scheme.0020.desc: "Olej w lampie opadł, a kroków [target.GetFirstName] wciąż nie słychać przy drzwiach.\n\nDwa razy ogrzewam wino i znów składam ubranie na krześle. Czasem ktoś przechodzi korytarzem. Gdy kroki się zbliżają, wstrzymuję oddech. Gdy się oddalają, znów jestem [Select_CString(ROOT.Char.IsFemale, 'sama', 'sam')]. Za każdym razem myślę, że to [target.GetSheHe].\n\nW końcu świeca zamigocze, a wosk spada na tackę. Dopiero wtedy przyznaję, że noc się skończyła. Wino, słowa i przygotowana wymówka nie będą potrzebne."
- latria_scheme.0020.a: "Zgasić światło. Nie ma sensu czekać."
+ latria_scheme.0020.a: "Zgasić świece. Jedna wystarczy."
  latria_scheme.0030.t: "Zbyt późna wieść"
  latria_scheme.0030.desc: "Wciąż ważę, które boczne drzwi byłyby bardziej ustronne i które zaproszenie wzbudziłoby najmniej podejrzeń, gdy wieść kładą na stole.\n\n[target.GetFirstName] już [Select_CString(target.IsFemale, 'odeszła', 'odszedł')] z tego świata. Słów na papierze jest niewiele. Czytam je długo. Niewysłane listy, zapamiętane korytarze, wymówka przygotowana na tę jedną noc — wszystko naraz staje się zbędne.\n\nWylewam jeszcze ciepłe wino. Niektóre przygotowania mogą poczekać na lepszą noc. Żadne nie dogoni śmierci, która już się stała."
  latria_scheme.0030.a: "Spalić niewysłany list."

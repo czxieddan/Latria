@@ -1,0 +1,35 @@
+﻿l_german:
+ latria_fatal_liaison.1001.t: "Eine Einladung"
+ latria_fatal_liaison.1001.desc: "Die Kerzen brennen früher als sonst, und der Wein hat seine Kühle verloren. Ich habe nichts geschrieben, das man bei Hofe vorlesen könnte. Was ich schicke, ist nur eine Stunde und ein Ort.\n\n[target.GetFirstName] wird es als gewöhnliche Einladung lesen, denn das ist es. Kommt [target.GetSheHe], dann für eine Nacht und für nichts darüber hinaus. Was nach der geschlossenen Tür geschieht, liegt bei mir."
+ latria_fatal_liaison.1001.a: "In die Schlafkammer bitten."
+ latria_fatal_liaison.1001.b: "Auf ein Glas Wein in den Vorraum bitten."
+ latria_fatal_liaison.1001.c: "Den Brief weglegen. Es wird eine andere Nacht geben."
+ latria_fatal_liaison.1001.d: "Den Brief verbrennen."
+ latria_fatal_liaison_wait_tt: "Der Brief bleibt unsent, und der Monat geht vorüber."
+
+ latria_fatal_liaison.1101.t: "Wie die Nacht geführt wird"
+ latria_fatal_liaison.1101.desc: "Die Kohlenpfanne brennt früh, und die Läden sind zur Morgenseite geschlossen. Ich habe den Dienern gesagt, sie sollen den Wein selbst heraufbringen und bis zum Tageslicht nicht wieder klopfen. Alles, was diese Nacht braucht, steht schon im Zimmer.\n\nEs bleibt nur die Stunde. [target.GetFirstName] ohne Schlaf zu halten, bis die Kerzen nur noch Stummel sind, oder [target.GetHerHim] vor dem Schlimmsten schlafen zu lassen. Ein Körper, dem man keine Ruhe gönnt, trägt weniger als einer, der sie hatte.\n\nIch entscheide es jetzt, und einmal."
+ latria_fatal_liaison.1101.a: "Bis zur letzten Kerze keinen Schlaf lassen."
+ latria_fatal_liaison.1101.b: "Vor dem Morgengrauen schlafen lassen."
+ latria_fatal_liaison.1101.c: "Die Nacht nehmen, wie sie kommt."
+
+ latria_fatal_liaison.1102.t: "Auf der Treppe"
+ latria_fatal_liaison.1102.desc: "Ich lasse [target.GetFirstName] vorausgehen und folge ein paar Stufen tiefer. Auf halber Höhe bleibt [target.GetSheHe] stehen, die eine Hand flach an der Wand, und bleibt so, bis der Atem zurückkommt. Dann lächelt [target.GetSheHe], als wäre nichts geschehen.\n\nDiese Pause habe ich bei Gästen gesehen, die den Frühling nicht mehr erlebten. Ich sage es nicht. Ich zähle nur, wie lange es dauert."
+ latria_fatal_liaison.1102.a: "Zählen, wie lange [target.GetSheHe] braucht."
+ latria_fatal_liaison.1102.b: "Fragen, ob [target.GetSheHe] deswegen einen Arzt gesehen hat."
+ latria_fatal_liaison.1102.c: "Nichts sagen und [target.GetHerHim] weitergehen lassen."
+
+ latria_fatal_liaison.1201.t: "Der Morgen, und ein Atemzug"
+ latria_fatal_liaison.1201.desc: "Das Fenster ist grau, ehe ich begreife, was gefehlt hat. [target.GetFirstName] schläft, und die Decken heben und senken sich mit einer Gleichmäßigkeit, die ich nicht geplant hatte.\n\nIch liege still und höre zu. Noch zweimal, dann ein drittes Mal. Die Nacht, die ich gerichtet hatte, ist vergangen und hat uns beide atmen lassen.\n\nNun bleibt nur, wach an [target.GetHerHis] Seite gefunden zu werden und zu sagen, ich hätte gut geschlafen."
+ latria_fatal_liaison.1201.a: "Aufstehen, ehe [target.GetSheHe] erwacht."
+
+ latria_fatal_liaison.1211.t: "Ein schwererer Morgen"
+ latria_fatal_liaison.1211.desc: "Ich erwache mit Schmerzen in jedem Gelenk und bewege mich eine Weile nicht. [owner.GetFirstName] ist schon wach und starrt an die Decke; [owner.GetSheHe] merkt nicht gleich, dass meine Augen offen sind.\n\nVielleicht war die Nacht länger, als ich sie in Erinnerung habe. Vielleicht bin ich nicht mehr so jung. Ich setze mich langsam auf und suche meine Kleider zusammen.\n\nAn der Tür sehe ich mich einmal um und kann nicht sagen, warum."
+ latria_fatal_liaison.1211.a: "Die Tür hinter mir schließen."
+
+ latria_fatal_liaison_bedchamber_modifier: "Am Bett"
+ latria_fatal_liaison_antechamber_modifier: "Im Vorraum"
+ latria_fatal_liaison_demanding_night_modifier: "Eine fordernde Nacht"
+ latria_fatal_liaison_measured_night_modifier: "Eine bemessene Nacht"
+ latria_fatal_liaison_weakness_modifier: "Eine bekannte Schwäche"
+ latria_fatal_liaison_whisper_modifier: "Eine leise Frage"

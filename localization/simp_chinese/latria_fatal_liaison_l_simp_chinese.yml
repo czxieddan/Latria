@@ -1,0 +1,35 @@
+﻿l_simp_chinese:
+ latria_fatal_liaison.1001.t: "一封邀约"
+ latria_fatal_liaison.1001.desc: "烛火点得比平日早，酒搁得太久，凉意已经散尽。我没有写下任何一句能在宫廷里念出口的话，送出去的只是一个时辰和一处地方。\n\n[target.GetFirstName]会把它当作寻常的邀约，因为它本来就是。若[target.GetSheHe]肯来，也是为了一夜而来，不为别的。门合上之后的事，由我来安排。"
+ latria_fatal_liaison.1001.a: "请[target.GetHerHim]到寝殿来。"
+ latria_fatal_liaison.1001.b: "请[target.GetHerHim]到外间喝一杯。"
+ latria_fatal_liaison.1001.c: "把信收起来，等下一个夜晚。"
+ latria_fatal_liaison.1001.d: "烧掉这封信。"
+ latria_fatal_liaison_wait_tt: "邀约没有送出，这个月便这样过去。"
+
+ latria_fatal_liaison.1101.t: "这一夜怎么过"
+ latria_fatal_liaison.1101.desc: "炭盆早早点上了，朝早晨那一边的窗板也关严。我把话吩咐下去了：酒由仆人直接送到门口，天亮之前不必再敲门。这一夜要用的东西，屋里已经齐了。\n\n剩下的只有时辰。是让[target.GetFirstName]一直不睡，直到烛火只剩最后一点，还是在天最难熬的时候之前让[target.GetHerHim]歇一歇。始终不许歇的人，比歇过的人撑得更少。\n\n现在定下来，也只定这一次。"
+ latria_fatal_liaison.1101.a: "直到最后一支烛，不许[target.GetHerHim]合眼。"
+ latria_fatal_liaison.1101.b: "天亮前让[target.GetHerHim]歇一会儿。"
+ latria_fatal_liaison.1101.c: "这一夜，随它去。"
+
+ latria_fatal_liaison.1102.t: "楼梯上"
+ latria_fatal_liaison.1102.desc: "我让[target.GetFirstName]先上楼，自己落后几步跟着。走到一半，[target.GetSheHe]停了下来，一只手平贴在墙上，就那样站着，直到气息慢慢接回来。然后[target.GetSheHe]笑了笑，像什么都没发生过。\n\n这样的停顿，我在没能熬过春天的客人身上见过。我没有说出来，只记着这一回停了多久。"
+ latria_fatal_liaison.1102.a: "数着[target.GetSheHe]停了多久。"
+ latria_fatal_liaison.1102.b: "问[target.GetSheHe]可曾为此看过医者。"
+ latria_fatal_liaison.1102.c: "什么也不说，让[target.GetHerHim]继续走。"
+
+ latria_fatal_liaison.1201.t: "天亮时还有呼吸"
+ latria_fatal_liaison.1201.desc: "窗纸泛白，我才明白哪里出了差错。[target.GetFirstName]还在睡，被褥随着呼吸一起一伏，平稳得不像我安排的那样。\n\n我躺着听那声音，听了两回，又听第三回。我安排的那一夜过去了，两个人都还留着气。\n\n眼下能做的，只是醒着躺在[target.GetHerHim]身边，等[target.GetSheHe]醒来，说一句我睡得很好。"
+ latria_fatal_liaison.1201.a: "在[target.GetSheHe]醒之前起身。"
+
+ latria_fatal_liaison.1211.t: "醒得更沉"
+ latria_fatal_liaison.1211.desc: "醒来时每个关节都发酸，好一会儿没有动。[owner.GetFirstName]已经醒了，躺在旁边看着帐顶，起初没发现我睁着眼。\n\n也许是这一夜比记得的更长。也许是我已经不是从前那个年纪。我慢慢坐起身，把衣裳找齐。\n\n走到门口，我回头看了一眼，说不上为什么要看。"
+ latria_fatal_liaison.1211.a: "带上门。"
+
+ latria_fatal_liaison_bedchamber_modifier: "榻边相候"
+ latria_fatal_liaison_antechamber_modifier: "外间对饮"
+ latria_fatal_liaison_demanding_night_modifier: "不知节制的夜"
+ latria_fatal_liaison_measured_night_modifier: "有节制的夜"
+ latria_fatal_liaison_weakness_modifier: "已知的弱处"
+ latria_fatal_liaison_whisper_modifier: "低声一问"

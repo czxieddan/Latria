@@ -1,0 +1,35 @@
+﻿l_spanish:
+ latria_fatal_liaison.1001.t: "Una invitación"
+ latria_fatal_liaison.1001.desc: "Las velas están encendidas antes de lo acostumbrado y el vino ha perdido el frío de tanto esperar. No he escrito nada que pudiera leerse en voz alta ante una corte. Lo que envío es solo una hora y un lugar.\n\n[target.GetFirstName] lo leerá como una invitación corriente, porque lo es. Si viene, vendrá por una noche y nada más. Lo que ocurra tras cerrarse la puerta corre de mi cuenta."
+ latria_fatal_liaison.1001.a: "Pedirle que venga a la cámara."
+ latria_fatal_liaison.1001.b: "Ofrecerle vino en la antecámara."
+ latria_fatal_liaison.1001.c: "Guardar la carta. Habrá otra noche."
+ latria_fatal_liaison.1001.d: "Quemar la carta."
+ latria_fatal_liaison_wait_tt: "La invitación no se envía, y el mes se agota."
+
+ latria_fatal_liaison.1101.t: "Cómo se lleva la noche"
+ latria_fatal_liaison.1101.desc: "El brasero está encendido desde temprano y los postigos cerrados del lado del amanecer. He dicho a los criados que suban el vino ellos mismos y que no llamen otra vez hasta que haya luz. Todo lo que la noche necesita ya está en la habitación.\n\nSolo queda la hora. Mantener a [target.GetFirstName] sin sueño hasta que las velas sean un resto, o dejar que [target.GetHerHim] duerma antes de lo peor. Un cuerpo al que no se concede descanso aguanta menos que uno que lo tuvo.\n\nLo decido ahora, y una sola vez."
+ latria_fatal_liaison.1101.a: "No dejarle dormir hasta la última vela."
+ latria_fatal_liaison.1101.b: "Dejarle dormir antes del alba."
+ latria_fatal_liaison.1101.c: "Dejar la noche como venga."
+
+ latria_fatal_liaison.1102.t: "En la escalera"
+ latria_fatal_liaison.1102.desc: "Dejo que [target.GetFirstName] suba delante y sigo unos peldaños por detrás. A mitad de camino se detiene, con una mano plana contra el muro, y se queda así hasta que el aliento vuelve. Luego sonríe como si no hubiera pasado nada.\n\nHe visto esa pausa en huéspedes que no llegaron a ver la primavera. No lo digo. Solo cuento cuánto tarda."
+ latria_fatal_liaison.1102.a: "Contar los segundos hasta que se mueva."
+ latria_fatal_liaison.1102.b: "Preguntar si ha visto a un médico por esto."
+ latria_fatal_liaison.1102.c: "No decir nada y dejar que siga."
+
+ latria_fatal_liaison.1201.t: "La mañana, y un aliento"
+ latria_fatal_liaison.1201.desc: "La ventana está gris antes de que comprenda qué ha faltado. [target.GetFirstName] duerme, y las mantas suben y bajan con una regularidad que no había previsto.\n\nMe quedo sin moverme y escucho. Dos veces más, y luego una tercera. La noche que dispuse ha pasado y nos ha dejado respirando a los dos.\n\nSolo queda que me encuentren sin dormir junto a [target.GetHerHim] y que diga que he descansado."
+ latria_fatal_liaison.1201.a: "Levantarme antes de que despierte."
+
+ latria_fatal_liaison.1211.t: "Una mañana más pesada"
+ latria_fatal_liaison.1211.desc: "Despierto con dolor en cada articulación y por un rato no me muevo. [owner.GetFirstName] ya no duerme a mi lado, mira el techo, y no advierte de inmediato que tengo los ojos abiertos.\n\nQuizá la noche fue más larga de lo que recuerdo. Quizá ya no tengo la edad. Me incorporo despacio y reúno mi ropa.\n\nEn la puerta me vuelvo una vez, y no sabría decir por qué."
+ latria_fatal_liaison.1211.a: "Cerrar la puerta a mi espalda."
+
+ latria_fatal_liaison_bedchamber_modifier: "Junto al lecho"
+ latria_fatal_liaison_antechamber_modifier: "En la antecámara"
+ latria_fatal_liaison_demanding_night_modifier: "Una noche exigente"
+ latria_fatal_liaison_measured_night_modifier: "Una noche medida"
+ latria_fatal_liaison_weakness_modifier: "Una flaqueza conocida"
+ latria_fatal_liaison_whisper_modifier: "Una pregunta quedo"

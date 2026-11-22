@@ -28,7 +28,7 @@
  latria_scheme.0010.a: "Die Decke über [target.GetHerHim] ziehen und dann die Tür öffnen."
  latria_scheme.0020.t: "Eine Nacht des Wartens"
  latria_scheme.0020.desc: "Das Öl in der Lampe ist gesunken, und noch immer höre ich [target.GetFirstName] nicht an der Tür.\n\nIch wärme den Wein zweimal und falte die Kleider auf dem Stuhl erneut. Bisweilen geht jemand über den Gang. Nähern sich die Schritte, halte ich den Atem an. Entfernen sie sich, bin ich wieder allein. Jedes Mal glaube ich, es sei die erwartete Person.\n\nZuletzt flackert die Kerze, und Wachs fällt in die Schale. Erst da gestehe ich mir ein, dass die Nacht vorüber ist. Wein, Worte und die vorbereitete Ausrede werden nicht gebraucht."
- latria_scheme.0020.a: "Das Licht löschen. Warten hat keinen Sinn."
+ latria_scheme.0020.a: "Die Kerzen löschen. Eine genügt."
  latria_scheme.0030.t: "Eine zu späte Nachricht"
  latria_scheme.0030.desc: "Ich wäge noch ab, welche Seitentür abgeschiedener wäre und welche Einladung den geringsten Verdacht wecken würde, als die Nachricht auf meinen Tisch gelegt wird.\n\n[target.GetFirstName] ist bereits aus der Welt gegangen. Auf dem Papier stehen wenige Worte. Ich lese sie lange. Die ungesandten Briefe, die Gänge, die ich auswendig kenne, die Ausrede für diese eine Nacht: alles ist mit einem Mal nutzlos.\n\nIch gieße den noch warmen Wein fort. Manche Vorkehrungen können auf eine bessere Nacht warten. Keine holt einen Tod ein, der bereits eingetreten ist."
  latria_scheme.0030.a: "Den Brief verbrennen, den ich nie sandte."
