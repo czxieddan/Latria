@@ -13,7 +13,8 @@ latria_select_default_sacred_heir = {
 	hidden_effect = { clear_designated_heir = yes }
 	random_child = {
 		limit = { latria_is_eldest_living_sacred_child = yes }
-		scope:latria_divine_ruler = { set_designated_heir = prev }
+		# The law no longer grants can_designate_heirs, so the checked variant would refuse.
+		scope:latria_divine_ruler = { set_designated_heir_unsafe = prev }
 	}
 }
 

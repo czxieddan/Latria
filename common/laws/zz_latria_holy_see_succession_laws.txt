@@ -18,7 +18,6 @@ latria_divine_succession_law = {
 		gender_law = equal
 		resign_outside_realm = yes
 	}
-	flag = can_designate_heirs
 	modifier = {
 		glory_hound_opinion = -10
 		parochial_opinion = -5
