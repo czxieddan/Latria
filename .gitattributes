@@ -1,0 +1,6 @@
+# Line endings stay LF in the repository and in every checkout, overriding core.autocrlf.
+* text=auto eol=lf
+
+# Images are binary: no line ending conversion, no text merge.
+*.dds binary
+*.png binary
