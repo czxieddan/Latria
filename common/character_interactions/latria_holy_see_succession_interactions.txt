@@ -14,7 +14,15 @@
 	answer_accept_key = latria_sacred_invitation_accept
 	answer_reject_key = latria_sacred_invitation_decline
 	is_available = { has_title = title:e_latria_holy_see }
-	is_shown = { latria_sacred_invitation_is_valid = yes }
+	is_shown = {
+		latria_sacred_invitation_is_valid = yes
+		scope:actor = {
+			trigger_if = {
+				limit = { exists = designated_heir }
+				designated_heir != scope:recipient
+			}
+		}
+	}
 	is_valid_showing_failures_only = { latria_sacred_invitation_is_valid = yes }
 	cost = { piety = 2000 }
 	on_accept = {
