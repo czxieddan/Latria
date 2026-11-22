@@ -1,0 +1,39 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = false
+
+# CK3 scripts are indented with tabs.
+[*.{txt,gui,mod}]
+indent_style = tab
+
+# Every localization key starts with a single space.
+[*.yml]
+indent_style = space
+indent_size = 1
+
+[*.md]
+indent_style = space
+indent_size = 2
+
+# Data files under these directories carry a UTF-8 BOM, which the game uses to detect the encoding.
+[common/**]
+charset = utf-8-bom
+
+[events/**]
+charset = utf-8-bom
+
+[localization/**]
+charset = utf-8-bom
+
+[dlc_metadata/**]
+charset = utf-8-bom
+
+[*.{dds,png}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
