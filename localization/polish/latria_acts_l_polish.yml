@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName] nie prowadzi mnie ku łóżku, tylko siada obok i odsuwa poduszkę między nami.\n\nNiedokończone sprawy dnia nagle wydają się zdolne poczekać. Wymieniamy pocałunki i kilka zdań, których nie trzeba kończyć. Dłonie zatrzymują się na rękawie albo we włosach i nie idą głębiej. Za oknem wciąż jest ciemno, a wołanie strażnika jest jeszcze daleko.\n\nPrzy rozstaniu [latria_actor.GetSheHe] wygładza fałdę, którą [Select_CString(ROOT.Char.IsFemale, 'sama pogniotłam', 'sam pogniotłem')] na swoim ubraniu. Noc jest krótka, ale nie zostawia wrażenia, że czegoś brakuje."
 
  latria_scheme.0010.t: "Zbliżenie"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "Mój [spouse|E]"
  latria_scheme.0010.t.concubine: "Moja [concubine|E]"
  latria_scheme.0010.t.soulmate: "Moja [soulmate|E]"

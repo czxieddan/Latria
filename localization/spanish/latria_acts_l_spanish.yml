@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName] no me lleva hacia la cama, sino que se sienta a mi lado y aparta el cojín que había entre nosotros.\n\nLos asuntos inacabados del día parecen de pronto capaces de esperar. Intercambiamos besos y algunas frases que no hace falta terminar. Las manos se detienen en una manga o en el cabello y no van más adentro. Más allá de la ventana sigue siendo de noche, y el aviso del vigilante aún está lejos.\n\nAl despedirnos, [latria_actor.GetSheHe] alisa el pliegue que he dejado en mi ropa. La noche es breve, pero no deja la sensación de que falte algo."
 
  latria_scheme.0010.t: "El encuentro carnal"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "Mi [spouse|E]"
  latria_scheme.0010.t.concubine: "Mi [concubine|E]"
  latria_scheme.0010.t.soulmate: "Mi [soulmate|E]"

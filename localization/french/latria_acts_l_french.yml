@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName] ne m’entraîne pas vers le lit, mais s’assied près de moi et écarte le coussin placé entre nous.\n\nLes affaires inachevées du jour semblent soudain pouvoir attendre. Nous échangeons des baisers et quelques phrases qu’il n’est pas nécessaire de terminer. Les mains s’attardent sur une manche ou dans les cheveux, sans aller plus loin. Au-delà de la fenêtre, il fait encore nuit, et l’appel du veilleur est encore loin.\n\nAu moment de nous quitter, [latria_actor.GetSheHe] lisse le pli que j’ai moi-même dérangé dans mes vêtements. La nuit est courte, mais elle ne laisse pas le sentiment qu’il y manque quelque chose."
 
  latria_scheme.0010.t: "L’acte charnel"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "Mon [spouse|E]"
  latria_scheme.0010.t.concubine: "Mon [concubine|E]"
  latria_scheme.0010.t.soulmate: "Mon [soulmate|E]"

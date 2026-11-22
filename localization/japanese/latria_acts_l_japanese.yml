@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName]は私を寝台へ引かず、ただそばに座り、間にあった枕をどける。\n\n昼に残っていた用事が、急に待てるように思える。口づけと、最後まで言わなくてもよい言葉を交わす。手は袖や髪に留まり、それより深くは進まない。窓の外はまだ暗く、夜回りの声もまだ遠い。\n\n別れるとき、私が自分で乱した衣の皺を、指が直してくれる。夜は短いが、何かが足りないという感じは残さない。"
 
  latria_scheme.0010.t: "交わり"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "私の[spouse|E]"
  latria_scheme.0010.t.concubine: "私の[concubine|E]"
  latria_scheme.0010.t.soulmate: "私の[soulmate|E]"

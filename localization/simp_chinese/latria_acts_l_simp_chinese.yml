@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName]没有拉我走向床榻，只在我身旁坐下，把中间那只碍事的靠枕挪开。\n\n白日里那些还没办完的事，忽然都不急了。我们交换亲吻，也交换一些不必说完的话。手在衣袖和发间停留，却没有再往更深处去。窗外的天色仍黑着，更鼓也还远。\n\n分别时，[latria_actor.GetSheHe]替我拢了拢被我自己弄乱的衣襟。这一夜短，却并不叫人觉得亏欠。"
 
  latria_scheme.0010.t: "交合"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "[spouse|E]"
  latria_scheme.0010.t.concubine: "[concubine|E]"
  latria_scheme.0010.t.soulmate: "[soulmate|E]"

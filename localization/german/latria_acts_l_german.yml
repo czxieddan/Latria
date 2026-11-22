@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName] zieht mich nicht zum Bett, sondern setzt sich neben mich und schiebt das Kissen zwischen uns beiseite.\n\nDie unerledigten Geschäfte des Tages scheinen plötzlich warten zu können. Wir tauschen Küsse und ein paar Sätze, die nicht zu Ende gesprochen werden müssen. Hände verweilen an einem Ärmel oder im Haar und gehen nicht tiefer. Hinter dem Fenster ist es noch dunkel, und der Ruf des Wächters ist noch fern.\n\nBeim Abschied wird die Falte geglättet, die ich selbst in meinen Kleidern verursacht habe. Die Nacht ist kurz, doch sie lässt nicht das Gefühl zurück, es fehle etwas."
 
  latria_scheme.0010.t: "Die Vereinigung"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "Mein [spouse|E]"
  latria_scheme.0010.t.concubine: "Meine [concubine|E]"
  latria_scheme.0010.t.soulmate: "Mein [soulmate|E]"

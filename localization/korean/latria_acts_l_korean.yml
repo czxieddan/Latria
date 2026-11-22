@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName](은)는 나를 침대로 끌어가지 않고 곁에 앉아 사이에 있던 베개를 치운다.\n\n낮에 끝내지 못한 일들이 갑자기 기다려도 될 것처럼 보인다. 입맞춤과, 끝까지 말하지 않아도 되는 몇 마디를 나눈다. 손은 소매나 머리카락에 머물고 더 깊이는 가지 않는다. 창밖은 아직 어둡고 야경꾼의 소리도 아직 멀다.\n\n헤어질 때 손가락이 내가 스스로 흐트러뜨린 옷의 주름을 펴 준다. 밤은 짧지만, 무언가 부족한 느낌은 남기지 않는다."
 
  latria_scheme.0010.t: "정사"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "나의 [spouse|E]"
  latria_scheme.0010.t.concubine: "나의 [concubine|E]"
  latria_scheme.0010.t.soulmate: "나의 [soulmate|E]"

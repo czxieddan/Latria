@@ -18,7 +18,7 @@
  latria_act.0102.desc.manual: "[latria_actor.GetShortUIName] does not draw me toward the bed, but sits beside me and moves aside the cushion between us.\n\nThe unfinished business of the day suddenly seems able to wait. We trade kisses, and a few sentences that do not need to be completed. Hands linger at a sleeve or in the hair, and go no deeper. Beyond the window it is still dark, and the watchman's call is still far off.\n\nAt parting, [latria_actor.GetSheHe] smooths the fold I have disordered in my own clothes. The night is short, but it leaves no sense of something withheld."
 
  latria_scheme.0010.t: "The Act"
- latria_scheme.0010.t_line: "[ROOT.Custom('LatriaSchemeBondTitle')]"
+ latria_scheme.0010.t_line: "[ROOT.Char.Custom('LatriaSchemeBondTitle')]"
  latria_scheme.0010.t.spouse: "My [spouse|E]"
  latria_scheme.0010.t.concubine: "My [concubine|E]"
  latria_scheme.0010.t.soulmate: "My [soulmate|E]"
