@@ -19,19 +19,19 @@ latria_repression_growth = {
 	}
 	latria_repression_growth_plus_50 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
+		# flag = blocks_achievements removed uniformly; may be restored later
 	}
 	latria_repression_growth_plus_100 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
+		# flag = blocks_achievements removed uniformly; may be restored later
 	}
 	latria_repression_growth_plus_250 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
+		# flag = blocks_achievements removed uniformly; may be restored later
 	}
 	latria_repression_growth_plus_500 = {
 		apply_modifier = ai:latria_ai_stress_gain_modifier
-		flag = blocks_achievements
+		# flag = blocks_achievements removed uniformly; may be restored later
 	}
 }
 
@@ -59,9 +59,15 @@ latria_fatal_scheme_intrigue = {
 
 	latria_fatal_scheme_intrigue_default = {}
 	latria_fatal_scheme_intrigue_disabled = {}
-	latria_fatal_scheme_intrigue_player = { flag = blocks_achievements }
-	latria_fatal_scheme_intrigue_player_unrestricted = { flag = blocks_achievements }
-	latria_fatal_scheme_intrigue_everyone = { flag = blocks_achievements }
+	latria_fatal_scheme_intrigue_player = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
+	latria_fatal_scheme_intrigue_player_unrestricted = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
+	latria_fatal_scheme_intrigue_everyone = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
 }
 
 latria_repression_suicide = {
@@ -83,7 +89,9 @@ latria_carnal_strain_death = {
 	default = latria_carnal_strain_death_enabled
 
 	latria_carnal_strain_death_enabled = {}
-	latria_carnal_strain_death_disabled = { flag = blocks_achievements }
+	latria_carnal_strain_death_disabled = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
 }
 
 latria_act_pregnancy = {
@@ -93,10 +101,16 @@ latria_act_pregnancy = {
 
 	default = latria_act_pregnancy_default
 
-	latria_act_pregnancy_none = { flag = blocks_achievements }
-	latria_act_pregnancy_halved = { flag = blocks_achievements }
+	latria_act_pregnancy_none = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
+	latria_act_pregnancy_halved = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
 	latria_act_pregnancy_default = {}
-	latria_act_pregnancy_doubled = { flag = blocks_achievements }
+	latria_act_pregnancy_doubled = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
 }
 
 latria_ai_overtures = {
@@ -107,7 +121,9 @@ latria_ai_overtures = {
 	default = latria_ai_overtures_enabled
 
 	latria_ai_overtures_enabled = {}
-	latria_ai_overtures_disabled = { flag = blocks_achievements }
+	latria_ai_overtures_disabled = {
+		# flag = blocks_achievements removed uniformly; may be restored later
+	}
 }
 
 latria_ai_carnal_scope = {
