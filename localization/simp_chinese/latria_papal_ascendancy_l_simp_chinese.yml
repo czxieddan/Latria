@@ -88,7 +88,7 @@
  latria_holy_see_government: "圣座制"
  latria_holy_see_government_adjective: "圣座制"
  latria_holy_see_government_realm: "圣座领"
- latria_holy_see_government_desc: "\n#F 在圣座制政体中，教会与世俗的权力统一于[GetTitleByKey('e_latria_holy_see').GetNameNoTier]。[latria_vicar|E]奉天主之命统治，诸侯与教士皆须服从其权威。#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F 在圣座制政体中，教会与世俗的权力统一于[GetTitleByKey('e_latria_holy_see').GetNameNoTier]。[latria_vicar|E]奉天主之命统治，诸侯与教士皆须服从其权威。#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "神授继承制"
  latria_divine_succession_law_subname: "神意所归"

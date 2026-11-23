@@ -88,7 +88,7 @@
  latria_holy_see_government: "Saint-Siège"
  latria_holy_see_government_adjective: "pontifical"
  latria_holy_see_government_realm: "Domaine du Saint-Siège"
- latria_holy_see_government_desc: "\n#F Sous le [GetTitleByKey('e_latria_holy_see').GetNameNoTier], les pouvoirs spirituel et temporel sont réunis entre les mêmes mains. Le [latria_vicar|El] règne au nom de Dieu, et princes comme prélats sont soumis à son autorité.#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F Sous le [GetTitleByKey('e_latria_holy_see').GetNameNoTier], les pouvoirs spirituel et temporel sont réunis entre les mêmes mains. Le [latria_vicar|El] règne au nom de Dieu, et princes comme prélats sont soumis à son autorité.#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "Succession divine"
  latria_divine_succession_law_subname: "Choix de Dieu"

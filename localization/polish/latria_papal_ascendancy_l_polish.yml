@@ -88,7 +88,7 @@
  latria_holy_see_government: "Stolica Apostolska"
  latria_holy_see_government_adjective: "Papieska"
  latria_holy_see_government_realm: "Władztwo Stolicy Apostolskiej"
- latria_holy_see_government_desc: "\n#F [GetTitleByKey('e_latria_holy_see').GetNameNoTier] skupia władzę duchowną i świecką w jednych rękach. [latria_vicar|E] rządzi z woli Boga, a książęta i prałaci jednakowo podlegają jego zwierzchnictwu.#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F [GetTitleByKey('e_latria_holy_see').GetNameNoTier] skupia władzę duchowną i świecką w jednych rękach. [latria_vicar|E] rządzi z woli Boga, a książęta i prałaci jednakowo podlegają jego zwierzchnictwu.#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "Boska sukcesja"
  latria_divine_succession_law_subname: "Wybór Boga"

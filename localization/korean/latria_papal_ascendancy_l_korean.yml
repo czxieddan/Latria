@@ -88,7 +88,7 @@
  latria_holy_see_government: "성좌제"
  latria_holy_see_government_adjective: "성좌"
  latria_holy_see_government_realm: "성좌령"
- latria_holy_see_government_desc: "\n#F 성좌제에서는 교회와 세속의 권력이 [GetTitleByKey('e_latria_holy_see').GetNameNoTier]에 모인다. [latria_vicar|E]는 신의 명으로 통치하며, 제후와 성직자는 모두 그 권위에 복종한다.#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F 성좌제에서는 교회와 세속의 권력이 [GetTitleByKey('e_latria_holy_see').GetNameNoTier]에 모인다. [latria_vicar|E]는 신의 명으로 통치하며, 제후와 성직자는 모두 그 권위에 복종한다.#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "신수 계승제"
  latria_divine_succession_law_subname: "신의 선택"

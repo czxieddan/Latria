@@ -88,7 +88,7 @@
  latria_holy_see_government: "Heiliger Stuhl"
  latria_holy_see_government_adjective: "Päpstlich"
  latria_holy_see_government_realm: "Herrschaft des Heiligen Stuhls"
- latria_holy_see_government_desc: "\n#F Mit dem Titel [GetTitleByKey('e_latria_holy_see').GetNameNoTier] sind geistliche und weltliche Macht in einer Hand vereint. Der [latria_vicar|E] regiert im Auftrag Gottes; Fürsten und Prälaten unterstehen gleichermaßen seiner Autorität.#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F Mit dem Titel [GetTitleByKey('e_latria_holy_see').GetNameNoTier] sind geistliche und weltliche Macht in einer Hand vereint. Der [latria_vicar|E] regiert im Auftrag Gottes; Fürsten und Prälaten unterstehen gleichermaßen seiner Autorität.#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "Göttliche Nachfolge"
  latria_divine_succession_law_subname: "Von Gott erwählt"

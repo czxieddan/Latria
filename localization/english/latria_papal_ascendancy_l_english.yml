@@ -88,7 +88,7 @@
  latria_holy_see_government: "Holy See"
  latria_holy_see_government_adjective: "Pontifical"
  latria_holy_see_government_realm: "Holy See Realm"
- latria_holy_see_government_desc: "\n#F Under the [GetTitleByKey('e_latria_holy_see').GetNameNoTier], ecclesiastical and temporal power rest in a single seat. The [latria_vicar|E] rules by God's mandate, and princes and prelates alike answer to that authority.#!"
+ latria_holy_see_government_desc: "\n$game_concept_latria_holy_see_government_desc$\n\n#F Under the [GetTitleByKey('e_latria_holy_see').GetNameNoTier], ecclesiastical and temporal power rest in a single seat. The [latria_vicar|E] rules by God's mandate, and princes and prelates alike answer to that authority.#!"
  latria_holy_see_government_with_icon: "$latria_holy_see_government_icon$ $latria_holy_see_government$"
  latria_divine_succession_law: "Divine Succession"
  latria_divine_succession_law_subname: "Chosen by God"
