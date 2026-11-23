@@ -1,0 +1,220 @@
+﻿# The three night opinions are one family. A night replaces whatever the last one left,
+# whoever held it and whichever of the three it was.
+latria_clear_night_opinion = {
+	$HOLDER$ = {
+		if = {
+			limit = {
+				has_opinion_modifier = {
+					target = $TARGET$
+					modifier = $MODIFIER$
+				}
+			}
+			remove_opinion = {
+				target = $TARGET$
+				modifier = $MODIFIER$
+			}
+		}
+	}
+}
+
+latria_clear_holder_night_opinions = {
+	latria_clear_night_opinion = {
+		HOLDER = $HOLDER$
+		TARGET = $TARGET$
+		MODIFIER = latria_satisfying_night_opinion
+	}
+	latria_clear_night_opinion = {
+		HOLDER = $HOLDER$
+		TARGET = $TARGET$
+		MODIFIER = latria_dreadful_night_opinion
+	}
+	latria_clear_night_opinion = {
+		HOLDER = $HOLDER$
+		TARGET = $TARGET$
+		MODIFIER = latria_bed_shame_opinion
+	}
+}
+
+latria_clear_pair_night_opinions = {
+	latria_clear_holder_night_opinions = {
+		HOLDER = scope:latria_actor
+		TARGET = scope:latria_partner
+	}
+	latria_clear_holder_night_opinions = {
+		HOLDER = scope:latria_partner
+		TARGET = scope:latria_actor
+	}
+}
+
+latria_clear_night_grants = {
+	clear_saved_scope = latria_night_satisfying
+	clear_saved_scope = latria_night_dreadful
+	clear_saved_scope = latria_night_bed_shame
+}
+
+latria_add_night_opinion = {
+	$HOLDER$ = {
+		add_opinion = {
+			target = $TARGET$
+			modifier = $MODIFIER$
+			months = 1
+		}
+	}
+}
+
+# Rolled on the holder, so the chance follows their own traits and their own opinion.
+# The partner is saved because a script value cannot take a parameter.
+latria_roll_night_opinion = {
+	$HOLDER$ = {
+		$PARTNER$ = { save_scope_as = latria_night_partner }
+		random = {
+			chance = $CHANCE$
+			save_scope_value_as = {
+				name = $GRANTED$
+				value = yes
+			}
+		}
+	}
+}
+
+latria_roll_satisfying_night = {
+	latria_roll_night_opinion = {
+		HOLDER = scope:latria_actor
+		PARTNER = scope:latria_partner
+		GRANTED = latria_night_satisfying
+		CHANCE = latria_satisfying_night_opinion_chance
+	}
+}
+
+latria_roll_dreadful_night = {
+	latria_roll_night_opinion = {
+		HOLDER = $HOLDER$
+		PARTNER = $PARTNER$
+		GRANTED = latria_night_dreadful
+		CHANCE = latria_dreadful_night_opinion_chance
+	}
+}
+
+latria_roll_bed_shame = {
+	latria_roll_night_opinion = {
+		HOLDER = $HOLDER$
+		PARTNER = $PARTNER$
+		GRANTED = latria_night_bed_shame
+		CHANCE = latria_bed_shame_opinion_chance
+	}
+}
+
+# The one who was disappointed may think badly of the other. The other may in turn
+# feel ashamed of how the night went.
+latria_roll_dissatisfied_nights = {
+	if = {
+		limit = { scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied }
+		latria_roll_dreadful_night = {
+			HOLDER = scope:latria_actor
+			PARTNER = scope:latria_partner
+		}
+		latria_roll_bed_shame = {
+			HOLDER = scope:latria_partner
+			PARTNER = scope:latria_actor
+		}
+	}
+	else = {
+		latria_roll_dreadful_night = {
+			HOLDER = scope:latria_partner
+			PARTNER = scope:latria_actor
+		}
+		latria_roll_bed_shame = {
+			HOLDER = scope:latria_actor
+			PARTNER = scope:latria_partner
+		}
+	}
+}
+
+# One shared night, so both sides carry the same opinion of it.
+latria_apply_satisfying_night = {
+	latria_add_night_opinion = {
+		HOLDER = scope:latria_actor
+		TARGET = scope:latria_partner
+		MODIFIER = latria_satisfying_night_opinion
+	}
+	latria_add_night_opinion = {
+		HOLDER = scope:latria_partner
+		TARGET = scope:latria_actor
+		MODIFIER = latria_satisfying_night_opinion
+	}
+}
+
+latria_apply_dreadful_night = {
+	if = {
+		limit = { scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied }
+		latria_add_night_opinion = {
+			HOLDER = scope:latria_actor
+			TARGET = scope:latria_partner
+			MODIFIER = latria_dreadful_night_opinion
+		}
+	}
+	else = {
+		latria_add_night_opinion = {
+			HOLDER = scope:latria_partner
+			TARGET = scope:latria_actor
+			MODIFIER = latria_dreadful_night_opinion
+		}
+	}
+}
+
+latria_apply_bed_shame = {
+	if = {
+		limit = { scope:latria_dissatisfied_person = flag:latria_actor_dissatisfied }
+		latria_add_night_opinion = {
+			HOLDER = scope:latria_partner
+			TARGET = scope:latria_actor
+			MODIFIER = latria_bed_shame_opinion
+		}
+	}
+	else = {
+		latria_add_night_opinion = {
+			HOLDER = scope:latria_actor
+			TARGET = scope:latria_partner
+			MODIFIER = latria_bed_shame_opinion
+		}
+	}
+}
+
+# A new night replaces the last one, so the pair's old night opinions always go first.
+latria_apply_night_opinions = {
+	latria_clear_pair_night_opinions = yes
+	if = {
+		limit = { exists = scope:latria_night_satisfying }
+		latria_apply_satisfying_night = yes
+	}
+	if = {
+		limit = { exists = scope:latria_night_dreadful }
+		latria_apply_dreadful_night = yes
+	}
+	if = {
+		limit = { exists = scope:latria_night_bed_shame }
+		latria_apply_bed_shame = yes
+	}
+}
+
+latria_roll_night_opinions = {
+	if = {
+		limit = {
+			is_alive = yes
+			scope:latria_partner = { is_alive = yes }
+		}
+		latria_clear_night_grants = yes
+		if = {
+			limit = { exists = scope:latria_dissatisfied_person }
+			latria_roll_dissatisfied_nights = yes
+		}
+		else = {
+			latria_roll_satisfying_night = yes
+		}
+		latria_apply_night_opinions = yes
+	}
+	if = {
+		limit = { exists = scope:latria_night_partner }
+		clear_saved_scope = latria_night_partner
+	}
+}

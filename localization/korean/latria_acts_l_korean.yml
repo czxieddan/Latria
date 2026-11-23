@@ -78,7 +78,9 @@
  latria_act_accept_nemesis: "[nemesis|E]: $VALUE|+0=$"
  latria_act_accept_pregnant: "$trait_pregnant$: $VALUE|+0=$"
  latria_act_accept_recent_act: "최근의 친밀한 만남: $VALUE|+0=$"
- latria_unsatisfying_act_opinion: "우리의 정사에 불만을 느낌"
+ latria_satisfying_night_opinion: "만족스러운 하룻밤"
+ latria_dreadful_night_opinion: "끔찍한 하룻밤"
+ latria_bed_shame_opinion: "침상의 수치"
 
  latria_carnal_gate_name: "열리지 않음"
  latria_carnal_gate_desc: "문이 닫혀 있습니다."

@@ -3,24 +3,12 @@
 		name = latria_dissatisfied_person
 		value = flag:latria_actor_dissatisfied
 	}
-	add_opinion = {
-		target = scope:latria_partner
-		modifier = latria_unsatisfying_act_opinion
-		months = 3
-	}
 }
 
 latria_mark_partner_dissatisfied = {
 	save_scope_value_as = {
 		name = latria_dissatisfied_person
 		value = flag:latria_partner_dissatisfied
-	}
-	scope:latria_partner = {
-		add_opinion = {
-			target = scope:latria_actor
-			modifier = latria_unsatisfying_act_opinion
-			months = 3
-		}
 	}
 }
 
@@ -59,4 +47,5 @@ latria_roll_partner_satisfaction = {
 			value = yes
 		}
 	}
+	latria_roll_night_opinions = yes
 }

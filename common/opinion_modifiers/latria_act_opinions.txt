@@ -1,3 +1,11 @@
-﻿latria_unsatisfying_act_opinion = {
+﻿latria_satisfying_night_opinion = {
+	opinion = 5
+}
+
+latria_dreadful_night_opinion = {
 	opinion = -20
+}
+
+latria_bed_shame_opinion = {
+	opinion = -10
 }

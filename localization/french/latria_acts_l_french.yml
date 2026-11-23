@@ -78,7 +78,9 @@
  latria_act_accept_nemesis: "[nemesis|E] : $VALUE|+0=$"
  latria_act_accept_pregnant: "$trait_pregnant$ : $VALUE|+0=$"
  latria_act_accept_recent_act: "Intimité récente : $VALUE|+0=$"
- latria_unsatisfying_act_opinion: "Rencontre charnelle décevante"
+ latria_satisfying_night_opinion: "Une nuit satisfaisante"
+ latria_dreadful_night_opinion: "Une nuit épouvantable"
+ latria_bed_shame_opinion: "Honte au lit"
 
  latria_carnal_gate_name: "Toujours close"
  latria_carnal_gate_desc: "La porte reste fermée."

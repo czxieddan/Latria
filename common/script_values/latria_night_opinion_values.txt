@@ -1,0 +1,53 @@
+﻿# Read on whoever holds the night opinion. The other participant is scope:latria_night_partner.
+# A satisfied night is rolled once for the pair, so either side reads the same way.
+latria_satisfying_night_opinion_chance = {
+	value = 60
+	if = {
+		limit = { latria_partner_is_spouse_or_soulmate = { PARTNER = scope:latria_night_partner } }
+		add = 20
+	}
+	if = {
+		limit = { latria_partner_is_lover = { PARTNER = scope:latria_night_partner } }
+		add = 10
+	}
+	if = { limit = { has_trait = lustful } add = 10 }
+	if = { limit = { stress_level >= 2 } add = -20 }
+	if = {
+		limit = {
+			opinion = {
+				target = scope:latria_night_partner
+				value >= 50
+			}
+		}
+		add = 10
+	}
+	min = 5
+	max = 90
+}
+
+latria_dreadful_night_opinion_chance = {
+	value = 70
+	if = { limit = { has_trait = chaste } add = 10 }
+	if = { limit = { has_trait = wrathful } add = 10 }
+	if = {
+		limit = {
+			opinion = {
+				target = scope:latria_night_partner
+				value < 0
+			}
+		}
+		add = 15
+	}
+	min = 10
+	max = 90
+}
+
+latria_bed_shame_opinion_chance = {
+	value = 35
+	if = { limit = { has_trait = shy } add = 20 }
+	if = { limit = { has_trait = paranoid } add = 10 }
+	if = { limit = { has_trait = lustful } add = 10 }
+	if = { limit = { has_trait = arrogant } add = -20 }
+	min = 5
+	max = 90
+}
