@@ -1,6 +1,6 @@
 ﻿latria_designate_sacred_heir = {
 	category = interaction_category_diplomacy
-	icon = heir
+	icon = latria_designate_sacred_heir
 	desc = latria_designate_sacred_heir_desc
 	interface_priority = 300
 	common_interaction = yes
