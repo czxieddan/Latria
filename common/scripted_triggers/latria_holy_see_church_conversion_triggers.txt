@@ -1,0 +1,17 @@
+# The Vicar may bind any vassal below him to the Church once his authority is absolute.
+latria_can_demand_church_government = {
+	scope:actor = {
+		is_alive = yes
+		has_title = title:e_latria_holy_see
+		has_government = latria_holy_see_government
+		has_realm_law = church_authority_3
+	}
+	scope:recipient = {
+		is_alive = yes
+		is_landed = yes
+		is_vassal_or_below_of = scope:actor
+		NOT = { has_government = ecclesiastical_government }
+		NOT = { has_title = title:e_latria_holy_see }
+	}
+	scope:actor != scope:recipient
+}

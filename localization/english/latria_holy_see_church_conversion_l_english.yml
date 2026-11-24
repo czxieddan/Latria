@@ -1,0 +1,12 @@
+﻿l_english:
+ latria_demand_church_government: "Demand Church Government"
+ latria_demand_church_government_desc: "Demand that [recipient.GetShortUINameNoTooltip] surrender [recipient.GetHerHis] lands to the rule of the Church."
+ latria_demand_church_government_tt: "Adopt [GetGovernment('ecclesiastical_government').GetName] government"
+
+ latria_holy_see_church_conversion.0001.t: "The Vicar's Writ"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] waits before the altar with a sealed writ. The church is empty, and the candlelight presses [latria_vicar.GetHerHis] shadow against the stone. The writ asks one thing of me: these lands, under the Church.\n\n[latria_vicar.GetSheHe] holds it out and waits for me to speak."
+ latria_holy_see_church_conversion.0001.a: "Bow and accept"
+ latria_holy_see_church_conversion.0001.b: "Accept, and protest to [latria_vicar.GetHerHis] face"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U] was made to accept the Vicar's writ and take up Church government."
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U] was made to accept the Vicar's writ and take up Church government."

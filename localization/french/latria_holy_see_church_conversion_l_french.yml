@@ -1,0 +1,12 @@
+﻿l_french:
+ latria_demand_church_government: "Exiger un gouvernement ecclésiastique"
+ latria_demand_church_government_desc: "Exiger que [recipient.GetShortUINameNoTooltip] remette ses terres au gouvernement de l'Église."
+ latria_demand_church_government_tt: "Adopter le gouvernement [GetGovernment('ecclesiastical_government').GetName]"
+
+ latria_holy_see_church_conversion.0001.t: "Le mandat du vicaire"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] attend devant l'autel, un mandat scellé à la main. L'église est vide, et la lumière des cierges jette [latria_vicar.GetHerHis] ombre sur la pierre. Le mandat ne demande qu'une chose : ces terres, sous l'Église.\n\n[latria_vicar.GetSheHe] me le tend sans un mot."
+ latria_holy_see_church_conversion.0001.a: "S'incliner et accepter"
+ latria_holy_see_church_conversion.0001.b: "Accepter, mais protester"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U] a dû se soumettre au mandat du vicaire et prendre le gouvernement de l'Église."
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U] a dû se soumettre au mandat du vicaire et prendre le gouvernement de l'Église."

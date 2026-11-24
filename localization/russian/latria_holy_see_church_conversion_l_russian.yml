@@ -1,0 +1,12 @@
+﻿l_russian:
+ latria_demand_church_government: "Потребовать церковное правление"
+ latria_demand_church_government_desc: "Потребовать, чтобы [recipient.GetShortUINameNoTooltip] передал свои земли под власть Церкви."
+ latria_demand_church_government_tt: "Принять правление [GetGovernment('ecclesiastical_government').GetName]"
+
+ latria_holy_see_church_conversion.0001.t: "Указ викария"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] ждёт у алтаря с запечатанным указом. Церковь пуста, и свет свечей кладёт [latria_vicar.GetHerHis] тень на камень. Указ требует одного: эти земли — под Церковью.\n\n[latria_vicar.GetSheHe] протягивает его мне и молчит."
+ latria_holy_see_church_conversion.0001.a: "Поклониться и принять"
+ latria_holy_see_church_conversion.0001.b: "Принять и возразить"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U] был вынужден принять указ викария и перейти к церковному правлению."
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U] был вынужден принять указ викария и перейти к церковному правлению."

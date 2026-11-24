@@ -1,0 +1,45 @@
+namespace = latria_holy_see_church_conversion
+
+# The Vicar does not offer a refusal. The vassal may only choose how he bows.
+latria_holy_see_church_conversion.0001 = {
+	type = character_event
+	title = latria_holy_see_church_conversion.0001.t
+	desc = latria_holy_see_church_conversion.0001.desc
+	theme = christian
+	override_icon = {
+		reference = "gfx/interface/icons/character_interactions/latria_demand_church_government.dds"
+	}
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+	right_portrait = {
+		character = scope:latria_vicar
+		animation = personality_zealous
+	}
+
+	trigger = {
+		NOT = { has_government = ecclesiastical_government }
+		title:e_latria_holy_see.holder ?= { is_alive = yes }
+		title:e_latria_holy_see.holder != root
+	}
+
+	immediate = {
+		title:e_latria_holy_see.holder = { save_scope_as = latria_vicar }
+	}
+
+	option = {
+		name = latria_holy_see_church_conversion.0001.a
+		latria_impose_ecclesiastical_government = yes
+		add_piety = medium_piety_gain
+	}
+	option = {
+		name = latria_holy_see_church_conversion.0001.b
+		latria_impose_ecclesiastical_government = yes
+		set_relation_rival = {
+			target = scope:latria_vicar
+			reason = latria_forced_church_government_rival
+		}
+	}
+}

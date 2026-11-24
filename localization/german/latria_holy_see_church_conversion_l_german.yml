@@ -1,0 +1,12 @@
+﻿l_german:
+ latria_demand_church_government: "Kirchliche Herrschaft verlangen"
+ latria_demand_church_government_desc: "Verlange, dass [recipient.GetShortUINameNoTooltip] [recipient.GetHerHis] Land der Herrschaft der Kirche übergibt."
+ latria_demand_church_government_tt: "Regierungsform [GetGovernment('ecclesiastical_government').GetName] annehmen"
+
+ latria_holy_see_church_conversion.0001.t: "Der Erlass des Vikars"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] wartet mit einem versiegelten Erlass vor dem Altar. Die Kirche ist leer, und das Kerzenlicht drückt [latria_vicar.GetHerHis] Schatten auf den Stein. Der Erlass verlangt nur eines: dieses Land, unter der Kirche.\n\n[latria_vicar.GetSheHe] hält ihn mir hin und sagt nichts."
+ latria_holy_see_church_conversion.0001.a: "Sich verneigen und annehmen"
+ latria_holy_see_church_conversion.0001.b: "Annehmen und widersprechen"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U] musste den Erlass des Vikars annehmen und die Regierungsform der Kirche übernehmen."
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U] musste den Erlass des Vikars annehmen und die Regierungsform der Kirche übernehmen."

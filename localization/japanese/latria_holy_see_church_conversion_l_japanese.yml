@@ -1,0 +1,12 @@
+﻿l_japanese:
+ latria_demand_church_government: "教会統治を要求"
+ latria_demand_church_government_desc: "[recipient.GetShortUINameNoTooltip]に領地を教会の支配に委ねるよう要求する。"
+ latria_demand_church_government_tt: "[GetGovernment('ecclesiastical_government').GetName]に移行する"
+
+ latria_holy_see_church_conversion.0001.t: "代牧の勅書"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip]は封印された勅書を手に祭壇の前で待っている。教会には誰もおらず、蝋燭の灯が[latria_vicar.GetHerHis]影を石に落とす。勅書が求めるのは一つだけ——この領地を教会の下に。\n\n[latria_vicar.GetSheHe]は黙ってそれを差し出した。"
+ latria_holy_see_church_conversion.0001.a: "ひれ伏して受ける"
+ latria_holy_see_church_conversion.0001.b: "受けて、抗議する"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U]は代牧の勅書を受け入れ、教会統治に移らされた。"
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U]は代牧の勅書を受け入れ、教会統治に移らされた。"

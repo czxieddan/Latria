@@ -1,0 +1,12 @@
+﻿l_korean:
+ latria_demand_church_government: "교회 통치 요구"
+ latria_demand_church_government_desc: "[recipient.GetShortUINameNoTooltip]에게 영지를 교회의 통치에 넘기도록 요구합니다."
+ latria_demand_church_government_tt: "[GetGovernment('ecclesiastical_government').GetName](으)로 전환"
+
+ latria_holy_see_church_conversion.0001.t: "대리자의 칙서"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip]가 봉인된 칙서를 들고 제단 앞에서 기다린다. 성당에는 아무도 없고, 촛불이 [latria_vicar.GetHerHis] 그림자를 돌바닥에 드리운다. 칙서가 요구하는 것은 하나뿐이다. 이 영지를 교회의 아래에.\n\n[latria_vicar.GetSheHe]가 말없이 칙서를 내민다."
+ latria_holy_see_church_conversion.0001.a: "엎드려 받아들인다"
+ latria_holy_see_church_conversion.0001.b: "받아들이고 항의한다"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U]는 대리자의 칙서를 받아들여 교회 통치로 옮겨졌다."
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U]는 대리자의 칙서를 받아들여 교회 통치로 옮겨졌다."

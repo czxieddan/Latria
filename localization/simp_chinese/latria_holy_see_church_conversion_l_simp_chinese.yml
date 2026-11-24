@@ -1,0 +1,12 @@
+﻿l_simp_chinese:
+ latria_demand_church_government: "要求改行教会制"
+ latria_demand_church_government_desc: "要求[recipient.GetShortUINameNoTooltip]交出世俗权柄，让[recipient.GetHerHis]的领地归教会统辖。"
+ latria_demand_church_government_tt: "改为[GetGovernment('ecclesiastical_government').GetName]"
+
+ latria_holy_see_church_conversion.0001.t: "代牧的诏令"
+ latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip]站在祭坛前，手中是一份盖了印的诏书。教堂里没有旁人，烛火把[latria_vicar.GetHerHis]的影子压在石地上。诏书只要一句话：这片领地归教会。\n\n[latria_vicar.GetSheHe]把诏书递过来，等着我开口。"
+ latria_holy_see_church_conversion.0001.a: "俯首领命"
+ latria_holy_see_church_conversion.0001.b: "领命，但当面抗辩"
+
+ latria_forced_church_government_rival: "[CHARACTER.GetShortUIName|U]被迫接下代牧的诏令，改行教会制。"
+ latria_forced_church_government_rival_corresponding: "[TARGET_CHARACTER.GetShortUIName|U]被迫接下代牧的诏令，改行教会制。"

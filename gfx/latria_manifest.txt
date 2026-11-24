@@ -35,3 +35,4 @@ latria_saint_peter_iron_guard gfx/interface/icons/regimenttypes/latria_saint_pet
 latria_saint_peter_iron_guard gfx/interface/illustrations/men_at_arms_big/latria_saint_peter_iron_guard.dds Saint Peter Iron Guard horizontal illustration
 latria_saint_peter_iron_guard gfx/interface/illustrations/men_at_arms_small/latria_saint_peter_iron_guard.dds Saint Peter Iron Guard vertical illustration
 latria_holy_see_government gfx/interface/icons/government_types/latria_holy_see_government.dds Holy See government and text icon
+latria_demand_church_government gfx/interface/icons/character_interactions/latria_demand_church_government.dds demand church government interaction and event icon
