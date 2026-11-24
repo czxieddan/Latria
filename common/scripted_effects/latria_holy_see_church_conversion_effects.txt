@@ -1,9 +1,4 @@
 latria_impose_ecclesiastical_government = {
 	custom_tooltip = latria_demand_church_government_tt
-	hidden_effect = {
-		if = {
-			limit = { NOT = { has_government = ecclesiastical_government } }
-			change_government = ecclesiastical_government
-		}
-	}
+	hidden_effect = { latria_change_government_to_ecclesiastical = yes }
 }

@@ -5,12 +5,30 @@
 	}
 }
 
+# A city barony cannot come along for the change: church government has no room for cities and the engine refuses the whole switch.
+# Rewrite the holdings first so republican vassals convert as readily as anyone else.
+latria_change_government_to_ecclesiastical = {
+	if = {
+		limit = {
+			NOT = { has_government = ecclesiastical_government }
+			any_held_title = { latria_title_blocks_church_government = yes }
+		}
+		every_held_title = {
+			limit = { latria_title_blocks_church_government = yes }
+			title_province = { set_holding_type = church_holding }
+		}
+	}
+	if = {
+		limit = { NOT = { has_government = ecclesiastical_government } }
+		change_government = ecclesiastical_government
+	}
+}
+
 latria_convert_all_vassals_to_church = {
 	custom_tooltip = latria_holy_see_vassals_convert_tt
 	hidden_effect = {
 		every_vassal_or_below = {
-			limit = { NOT = { has_government = ecclesiastical_government } }
-			change_government = ecclesiastical_government
+			latria_change_government_to_ecclesiastical = yes
 		}
 	}
 }
@@ -28,8 +46,7 @@ latria_convert_redeemed_realm_to_church = {
 	hidden_effect = {
 		every_in_list = {
 			list = latria_redeemed_realm
-			limit = { NOT = { has_government = ecclesiastical_government } }
-			change_government = ecclesiastical_government
+			latria_change_government_to_ecclesiastical = yes
 		}
 	}
 }
