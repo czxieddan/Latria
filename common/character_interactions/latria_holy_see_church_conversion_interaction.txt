@@ -1,4 +1,4 @@
-latria_demand_church_government = {
+﻿latria_demand_church_government = {
 	category = interaction_category_religion
 	icon = latria_demand_church_government
 	desc = latria_demand_church_government_desc

@@ -1,4 +1,4 @@
-namespace = latria_holy_see_church_conversion
+﻿namespace = latria_holy_see_church_conversion
 
 # The Vicar does not offer a refusal. The vassal may only choose how he bows.
 latria_holy_see_church_conversion.0001 = {

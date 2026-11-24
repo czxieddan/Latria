@@ -1,4 +1,4 @@
-# Church government keeps no cities, so a city barony blocks the whole change and the engine refuses it outright.
+﻿# Church government keeps no cities, so a city barony blocks the whole change and the engine refuses it outright.
 latria_title_blocks_church_government = {
 	tier = tier_barony
 	title_province = { has_holding_type = city_holding }

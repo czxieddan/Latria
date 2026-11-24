@@ -1,4 +1,4 @@
-e_latria_holy_see = {
+﻿e_latria_holy_see = {
 	pattern = "pattern_solid.dds"
 	color1 = rgb { 25 25 75 }
 	color2 = "white"

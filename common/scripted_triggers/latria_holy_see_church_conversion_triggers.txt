@@ -1,4 +1,4 @@
-# The Vicar may bind any vassal below him to the Church once his authority is absolute.
+﻿# The Vicar may bind any vassal below him to the Church once his authority is absolute.
 latria_can_demand_church_government = {
 	scope:actor = {
 		is_alive = yes
