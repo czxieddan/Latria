@@ -2,6 +2,9 @@
  latria_demand_church_government: "Потребовать церковное правление"
  latria_demand_church_government_desc: "Потребовать, чтобы [recipient.GetShortUINameNoTooltip] передал свои земли под власть Церкви."
  latria_demand_church_government_tt: "Принять правление [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_title_tt: "Титул [recipient.GetPrimaryTitle.GetName] перейдёт под [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_accept_tt: "#high #bold Если они примут:#!#!\nони получат [piety_i]#P [EmptyScope.ScriptValue('medium_piety_gain')|+0]#! [piety|E]"
+ latria_demand_church_government_refuse_tt: "#high #bold Если они откажутся:#!#!\nони станут [rival|E] для [actor.GetShortUIName]"
 
  latria_holy_see_church_conversion.0001.t: "Указ викария"
  latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] ждёт у алтаря с запечатанным указом. Церковь пуста, и свет свечей кладёт [latria_vicar.GetHerHis] тень на камень. Указ требует одного: эти земли — под Церковью.\n\n[latria_vicar.GetSheHe] протягивает его мне и молчит."

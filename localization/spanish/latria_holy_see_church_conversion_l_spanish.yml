@@ -2,6 +2,9 @@
  latria_demand_church_government: "Exigir gobierno eclesiástico"
  latria_demand_church_government_desc: "Exigir que [recipient.GetShortUINameNoTooltip] entregue sus tierras al gobierno de la Iglesia."
  latria_demand_church_government_tt: "Adoptar el gobierno [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_title_tt: "[recipient.GetPrimaryTitle.GetName] pasará al gobierno [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_accept_tt: "#high #bold Si aceptan:#!#!\nobtienen [piety_i]#P [EmptyScope.ScriptValue('medium_piety_gain')|+0]#! [piety|E]"
+ latria_demand_church_government_refuse_tt: "#high #bold Si se niegan:#!#!\nse convierten en [rival|E] de [actor.GetShortUIName]"
 
  latria_holy_see_church_conversion.0001.t: "El mandato del vicario"
  latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] aguarda ante el altar con un mandato sellado. La iglesia está vacía, y la luz de las velas proyecta [latria_vicar.GetHerHis] sombra sobre la piedra. El mandato solo pide una cosa: estas tierras, bajo la Iglesia.\n\n[latria_vicar.GetSheHe] me lo tiende sin decir nada."

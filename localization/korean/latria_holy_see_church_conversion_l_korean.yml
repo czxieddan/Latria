@@ -2,6 +2,9 @@
  latria_demand_church_government: "교회 통치 요구"
  latria_demand_church_government_desc: "[recipient.GetShortUINameNoTooltip]에게 영지를 교회의 통치에 넘기도록 요구합니다."
  latria_demand_church_government_tt: "[GetGovernment('ecclesiastical_government').GetName](으)로 전환"
+ latria_demand_church_government_title_tt: "[recipient.GetPrimaryTitle.GetName] 작위는 [GetGovernment('ecclesiastical_government').GetName](으)로 전환된다"
+ latria_demand_church_government_accept_tt: "#high #bold 수용한다면:#!#!\n[piety_i]#P [EmptyScope.ScriptValue('medium_piety_gain')|+0]#![piety|E]을 얻는다"
+ latria_demand_church_government_refuse_tt: "#high #bold 항명한다면:#!#!\n[actor.GetShortUIName]의 [rival|E]가 된다"
 
  latria_holy_see_church_conversion.0001.t: "대리자의 칙서"
  latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip]가 봉인된 칙서를 들고 제단 앞에서 기다린다. 성당에는 아무도 없고, 촛불이 [latria_vicar.GetHerHis] 그림자를 돌바닥에 드리운다. 칙서가 요구하는 것은 하나뿐이다. 이 영지를 교회의 아래에.\n\n[latria_vicar.GetSheHe]가 말없이 칙서를 내민다."

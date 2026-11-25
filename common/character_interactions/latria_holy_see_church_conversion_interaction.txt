@@ -15,7 +15,14 @@
 
 	on_accept = {
 		scope:recipient = {
-			trigger_event = latria_holy_see_church_conversion.0001
+			show_as_tooltip = {
+				custom_tooltip = latria_demand_church_government_title_tt
+				custom_tooltip = latria_demand_church_government_accept_tt
+				custom_tooltip = latria_demand_church_government_refuse_tt
+			}
+			hidden_effect = {
+				trigger_event = latria_holy_see_church_conversion.0001
+			}
 		}
 	}
 

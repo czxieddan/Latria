@@ -2,6 +2,9 @@
  latria_demand_church_government: "要求改行教会制"
  latria_demand_church_government_desc: "要求[recipient.GetShortUINameNoTooltip]交出世俗权柄，让[recipient.GetHerHis]的领地归教会统辖。"
  latria_demand_church_government_tt: "改为[GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_title_tt: "[recipient.GetPrimaryTitle.GetName]将改行[GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_accept_tt: "#high #bold 若领命：#!#!\n获得[piety_i]#P [EmptyScope.ScriptValue('medium_piety_gain')|+0]#![piety|E]"
+ latria_demand_church_government_refuse_tt: "#high #bold 若抗命：#!#!\n与[actor.GetShortUIName]成为[rival|E]"
 
  latria_holy_see_church_conversion.0001.t: "代牧的诏令"
  latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip]站在祭坛前，手中是一份盖了印的诏书。教堂里没有旁人，烛火把[latria_vicar.GetHerHis]的影子压在石地上。诏书只要一句话：这片领地归教会。\n\n[latria_vicar.GetSheHe]把诏书递过来，等着我开口。"

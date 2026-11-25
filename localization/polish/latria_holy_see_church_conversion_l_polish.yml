@@ -2,6 +2,9 @@
  latria_demand_church_government: "Żądaj rządów kościelnych"
  latria_demand_church_government_desc: "Żądaj, by [recipient.GetShortUINameNoTooltip] oddał swe ziemie pod władzę Kościoła."
  latria_demand_church_government_tt: "Przyjmij ustrój [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_title_tt: "Tytuł [recipient.GetPrimaryTitle.GetName] przejdzie na ustrój [GetGovernment('ecclesiastical_government').GetName]"
+ latria_demand_church_government_accept_tt: "#high #bold Jeśli przyjmą:#!#!\nzyskają [piety_i]#P [EmptyScope.ScriptValue('medium_piety_gain')|+0]#! [piety|E]"
+ latria_demand_church_government_refuse_tt: "#high #bold Jeśli odmówią:#!#!\nzyskają [rival|E] w [actor.GetShortUIName]"
 
  latria_holy_see_church_conversion.0001.t: "Dekret wikariusza"
  latria_holy_see_church_conversion.0001.desc: "[latria_vicar.GetShortUINameNoTooltip] czeka przed ołtarzem z zapieczętowanym dekretem. Kościół jest pusty, a blask świec kładzie [latria_vicar.GetHerHis] cień na kamieniu. Dekret żąda jednego: te ziemie pod Kościołem.\n\n[latria_vicar.GetSheHe] podaje mi go i milczy."
