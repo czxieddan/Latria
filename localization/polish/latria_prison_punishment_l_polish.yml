@@ -18,3 +18,4 @@
  nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNotMeNoTooltipNoFormat|U] [Select_CString(CHARACTER.IsFemale, 'poniosła', 'poniósł' )] w lochu karę, o której wszyscy słyszeli, i nikt już nie chce zasiąść z [Select_CString(CHARACTER.IsFemale, 'nią', 'nim' )] przy jednym stole."
 
  latria_forced_pig_embrace_opinion: "Przymus do cielesnych uciech ze świnią"
+ latria_pig_embrace_crime: "Cielesne uciechy ze świnią"

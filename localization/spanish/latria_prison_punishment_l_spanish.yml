@@ -18,3 +18,4 @@
  nick_latria_the_unclean_desc: "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [Select_CString( CHARACTER.IsLocalPlayer, 'sufriste', 'sufrió' )] en la mazmorra un castigo del que todos han oído hablar, y ya nadie quiere sentarse a [Select_CString( CHARACTER.IsLocalPlayer, 'tu', 'su' )] mesa."
 
  latria_forced_pig_embrace_opinion: "Me obligó a unirme carnalmente con un cerdo"
+ latria_pig_embrace_crime: "Placer carnal con un cerdo"

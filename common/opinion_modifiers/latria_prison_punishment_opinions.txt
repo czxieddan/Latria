@@ -3,3 +3,8 @@
 	years = 50
 	decaying = yes
 }
+
+latria_pig_embrace_crime = {
+	opinion = -15
+	imprisonment_reason = yes
+}
