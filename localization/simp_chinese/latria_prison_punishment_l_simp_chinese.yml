@@ -1,6 +1,6 @@
 ﻿l_simp_chinese:
  latria_force_pig_embrace_interaction: "与猪交合"
- latria_force_pig_embrace_interaction_desc: "命人当众强迫[recipient.GetShortUINameNoTooltip]与猪交合。"
+ latria_force_pig_embrace_interaction_desc: "命人当众强迫[recipient.GetShortUINameNoTooltip]与猪交合"
 
  latria_prison_punishment.0001.t: "与猪交合"
  latria_prison_punishment.0001.desc: "卫兵把一头尖叫的猪牵进地牢。[recipient.GetShortUIName]连连后退，我一声令下，他们便按住[recipient.GetHerHim]，迫使[recipient.GetHerHim]在众狱卒面前与猪交合。"

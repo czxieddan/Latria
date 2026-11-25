@@ -1,6 +1,6 @@
 ﻿l_korean:
  latria_force_pig_embrace_interaction: "돼지와의 정사"
- latria_force_pig_embrace_interaction_desc: "사람들이 보는 앞에서 [recipient.GetShortUINameNoTooltip]에게 돼지와의 정사를 강요합니다."
+ latria_force_pig_embrace_interaction_desc: "사람들이 보는 앞에서 [recipient.GetShortUINameNoTooltip]에게 돼지와의 정사를 강요합니다"
 
  latria_prison_punishment.0001.t: "돼지와의 정사"
  latria_prison_punishment.0001.desc: "경비병들이 꽥꽥거리는 돼지를 지하 감옥으로 끌고 온다. [recipient.GetShortUIName](은)는 뒷걸음질 치지만, 내 명령에 경비병들은 [recipient.GetHerHim]에게 간수들이 보는 앞에서 돼지와의 정사를 강요한다."

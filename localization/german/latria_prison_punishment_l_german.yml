@@ -1,6 +1,6 @@
 ﻿l_german:
  latria_force_pig_embrace_interaction: "Fleischliche Freuden mit einem Schwein"
- latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip] vor Zeugen zu fleischlichen Freuden mit einem Schwein zwingen."
+ latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip] vor Zeugen zu fleischlichen Freuden mit einem Schwein zwingen"
 
  latria_prison_punishment.0001.t: "Fleischliche Freuden mit einem Schwein"
  latria_prison_punishment.0001.desc: "Die Wachen führen ein quiekendes Schwein in den Kerker. [recipient.GetShortUIName] weicht zurück, doch auf meinen Befehl zwingen sie [recipient.GetHerHim] vor den Augen der Kerkermeister zu fleischlichen Freuden mit dem Tier."

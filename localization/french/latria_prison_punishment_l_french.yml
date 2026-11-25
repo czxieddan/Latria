@@ -1,6 +1,6 @@
 ﻿l_french:
  latria_force_pig_embrace_interaction: "Plaisirs charnels avec un porc"
- latria_force_pig_embrace_interaction_desc: "Forcer [recipient.GetShortUINameNoTooltip] à des rapports charnels avec un porc devant témoins."
+ latria_force_pig_embrace_interaction_desc: "Forcer [recipient.GetShortUINameNoTooltip] à des rapports charnels avec un porc devant témoins"
 
  latria_prison_punishment.0001.t: "Plaisirs charnels avec un porc"
  latria_prison_punishment.0001.desc: "Les gardes mènent un porc couinant dans le cachot. [recipient.GetShortUIName] recule, mais à mon ordre, ils [recipient.GetHerHim] contraignent à des rapports charnels avec l’animal sous les yeux des geôliers."

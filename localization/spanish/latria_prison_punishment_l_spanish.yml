@@ -1,6 +1,6 @@
 ﻿l_spanish:
  latria_force_pig_embrace_interaction: "Placer carnal con un cerdo"
- latria_force_pig_embrace_interaction_desc: "Obligar a [recipient.GetShortUINameNoTooltip] a unirse carnalmente con un cerdo ante testigos."
+ latria_force_pig_embrace_interaction_desc: "Obligar a [recipient.GetShortUINameNoTooltip] a unirse carnalmente con un cerdo ante testigos"
 
  latria_prison_punishment.0001.t: "Placer carnal con un cerdo"
  latria_prison_punishment.0001.desc: "Los guardias llevan un cerdo que chilla a la mazmorra. [recipient.GetShortUIName] retrocede, pero, a mi orden, [recipient.GetHerHim] obligan a unirse carnalmente con el animal ante los carceleros."

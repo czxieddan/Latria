@@ -1,6 +1,6 @@
 ﻿l_russian:
  latria_force_pig_embrace_interaction: "Плотские утехи со свиньёй"
- latria_force_pig_embrace_interaction_desc: "Заставить персону по имени [recipient.GetShortUINameNoTooltip] предаться плотским утехам со свиньёй при свидетелях."
+ latria_force_pig_embrace_interaction_desc: "Заставить персону по имени [recipient.GetShortUINameNoTooltip] предаться плотским утехам со свиньёй при свидетелях"
 
  latria_prison_punishment.0001.t: "Плотские утехи со свиньёй"
  latria_prison_punishment.0001.desc: "Стражники приводят в темницу визжащую свинью. [recipient.GetShortUIName] отшатывается, но по моему приказу они заставляют [Select_CString(recipient.IsFemale, 'её', 'его')] предаться с ней плотским утехам на глазах у тюремщиков."

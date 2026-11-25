@@ -1,6 +1,6 @@
 ﻿l_japanese:
  latria_force_pig_embrace_interaction: "豚との交わり"
- latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip]に、人前で豚との肉体の交わりを強いる。"
+ latria_force_pig_embrace_interaction_desc: "[recipient.GetShortUINameNoTooltip]に、人前で豚との肉体の交わりを強いる"
 
  latria_prison_punishment.0001.t: "豚との交わり"
  latria_prison_punishment.0001.desc: "衛兵が鳴き叫ぶ豚を地下牢に引き入れた。[recipient.GetShortUIName]は身を引くが、私の命令で、衛兵は[recipient.GetHerHim]に獄吏たちの前で豚との肉体の交わりを強いた。"
