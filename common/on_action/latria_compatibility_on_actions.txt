@@ -1,0 +1,13 @@
+﻿# Global variable for mod compatibility. Set before other mods' after-lobby hooks run.
+on_game_start = {
+	on_actions = { latria_on_game_start }
+}
+
+latria_on_game_start = {
+	effect = {
+		set_global_variable = {
+			name = latria_is_loaded
+			value = yes
+		}
+	}
+}
