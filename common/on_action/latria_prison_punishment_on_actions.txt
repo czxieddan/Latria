@@ -1,0 +1,11 @@
+﻿on_game_start = {
+	on_actions = {
+		latria_pig_embrace_register_crime
+	}
+}
+
+latria_pig_embrace_register_crime = {
+	effect = {
+		latria_pig_embrace_register_crime_effect = yes
+	}
+}

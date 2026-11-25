@@ -5,6 +5,7 @@
 }
 
 latria_pig_embrace_crime = {
-	opinion = -15
+	opinion = -100
 	imprisonment_reason = yes
+	revoke_title_reason = yes
 }

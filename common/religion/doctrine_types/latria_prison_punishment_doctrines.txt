@@ -1,0 +1,10 @@
+﻿latria_doctrine_pig_embrace_crime = {
+	doctrine_group_type = latria_pig_embrace_crime_group
+	icon = "special_doctrine_default"
+
+	visible = no
+
+	parameters = {
+		latria_pig_embrace_is_crime
+	}
+}

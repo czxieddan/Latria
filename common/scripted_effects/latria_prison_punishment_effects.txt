@@ -76,22 +76,17 @@ latria_pig_embrace_recipient_faith_effect = {
 	}
 }
 
-latria_pig_embrace_recipient_crime_effect = {
-	save_temporary_scope_as = latria_pig_embrace_sinner
-	every_ruler = {
+# A doctrine carries the crime: rulers of these religions hold the reason now and after they take power.
+latria_pig_embrace_register_crime_effect = {
+	every_faith = {
 		limit = {
-			this != scope:latria_pig_embrace_sinner
-			faith = {
-				OR = {
-					religion_tag = islam_religion
-					religion_tag = judaism_religion
-				}
+			OR = {
+				religion_tag = islam_religion
+				religion_tag = judaism_religion
 			}
+			NOT = { has_doctrine = latria_doctrine_pig_embrace_crime }
 		}
-		add_opinion = {
-			target = scope:latria_pig_embrace_sinner
-			modifier = latria_pig_embrace_crime
-		}
+		add_doctrine = latria_doctrine_pig_embrace_crime
 	}
 }
 
@@ -131,7 +126,6 @@ latria_pig_embrace_recipient_release_effect = {
 latria_pig_embrace_recipient_consequences = {
 	latria_pig_embrace_recipient_stress_effect = yes
 	latria_pig_embrace_recipient_faith_effect = yes
-	latria_pig_embrace_recipient_crime_effect = yes
 	latria_pig_embrace_recipient_culture_effect = yes
 	latria_pig_embrace_recipient_trait_effect = yes
 	latria_pig_embrace_recipient_opinion_effect = yes

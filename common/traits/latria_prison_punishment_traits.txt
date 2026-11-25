@@ -3,12 +3,17 @@
 	icon = latria_unclean.dds
 
 	general_opinion = -10
-	islam_religion_opinion = -100
 	monthly_prestige_gain_mult = -0.25
 
 	rite_modifier = {
 		parameter = islamic_syncretic_recipient
 		monthly_piety = -0.5
+	}
+
+	triggered_opinion = {
+		parameter = latria_pig_embrace_is_crime
+		opinion_modifier = latria_pig_embrace_crime
+		ignore_opinion_value_if_same_trait = yes
 	}
 
 	shown_in_ruler_designer = no
