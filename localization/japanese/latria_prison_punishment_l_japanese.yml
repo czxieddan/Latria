@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "豚との交わりを強いた"
  latria_pig_embrace_crime: "豚との交わり"
+ latria_doctrine_diet_kosher_name: "コーシャーの食事"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "律法は清浄と不浄を分かつ。反芻し蹄が割れた獣のみが清く、血は命であり、乳と肉を同じ卓には載せない。"
+ latria_doctrine_diet_halal_name: "ハラールの食事"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "獣は神の名において屠られ、血を絞りきって初めて食べてよい。豚は不潔であり、口にすることはない。"
+ doctrine_parameter_latria_diet_forbidden_foods: "死肉、血、禁じられた獣の肉は食べてはならない"
+ doctrine_parameter_latria_pig_embrace_is_crime: "[GetTrait('latria_unclean').GetName( GetDummyMale )]の[trait|E]を持つ者は[criminals|E]とみなされる"

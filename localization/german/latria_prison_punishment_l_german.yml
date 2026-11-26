@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "Zwang mich zu fleischlichen Freuden mit einem Schwein"
  latria_pig_embrace_crime: "Fleischliche Freuden mit einem Schwein"
+ latria_doctrine_diet_kosher_name: "Koschere Speisen"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "Das Gesetz scheidet rein von unrein: Rein ist nur das Wiederkäuer mit gespaltener Klaue; das Blut ist das Leben, und Milch und Fleisch kommen nicht an einen Tisch."
+ latria_doctrine_diet_halal_name: "Halal-Speisen"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Tiere werden nur gegessen, wenn sie im Namen Gottes geschlachtet und ausgeblutet wurden; das Schwein ist unrein und kommt nie über unsere Lippen."
+ doctrine_parameter_latria_diet_forbidden_foods: "Aas, Blut und das Fleisch verbotener Tiere dürfen nicht gegessen werden"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Charaktere mit der [trait|E] [GetTrait('latria_unclean').GetName(GetNullCharacter)] sind [criminals|E]"

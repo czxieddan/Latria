@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "Forced Me to Carnal Pleasure with a Pig"
  latria_pig_embrace_crime: "Carnal Pleasure with a Pig"
+ latria_doctrine_diet_kosher_name: "Kosher Food"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "Only beasts that chew the cud and part the hoof are clean; the blood is the life, and milk and meat do not share one table."
+ latria_doctrine_diet_halal_name: "Halal Food"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Land beasts are eaten only when slaughtered in the name of God and drained of blood; the pig is unclean and never crosses our lips."
+ doctrine_parameter_latria_diet_forbidden_foods: "Carrion, blood and the flesh of forbidden beasts may not be eaten"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Characters with the [GetTrait('latria_unclean').GetName( GetNullCharacter )] [trait|E] are [criminals|E]"

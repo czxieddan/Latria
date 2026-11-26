@@ -1,4 +1,0 @@
-﻿# Holds a single flag. Kept out of every faith-creation list on purpose.
-latria_pig_embrace_crime_group = {
-	category = not_creatable
-}

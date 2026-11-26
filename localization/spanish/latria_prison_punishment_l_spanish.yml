@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "Me obligó a unirme carnalmente con un cerdo"
  latria_pig_embrace_crime: "Placer carnal con un cerdo"
+ latria_doctrine_diet_kosher_name: "Comida kosher"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "La ley separa lo puro de lo impuro: solo es puro el rumiante de pezuña hendida; la sangre es la vida, y la leche no comparte mesa con la carne."
+ latria_doctrine_diet_halal_name: "Comida halal"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Las bestias solo se comen si se sacrifican en el nombre de Dios y se les drena la sangre; el cerdo es impuro y jamás cruza nuestros labios."
+ doctrine_parameter_latria_diet_forbidden_foods: "La carroña, la sangre y la carne de las bestias prohibidas no pueden comerse"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Los personajes con el [trait|lE] [GetTrait('latria_unclean').GetName( GetNullCharacter )] son [criminals|lE]"

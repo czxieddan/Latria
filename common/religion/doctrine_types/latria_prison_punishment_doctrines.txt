@@ -1,10 +1,96 @@
-﻿latria_doctrine_pig_embrace_crime = {
-	doctrine_group_type = latria_pig_embrace_crime_group
+﻿# Slots 6 and 7 of the vanilla dietary ladder. A change of food law only ever
+# faces doctrine_diet_unrestricted or the other doctrine in the piety cost,
+# and stays hidden outside islam_religion and judaism_religion.
+latria_doctrine_diet_kosher = {
+	doctrine_group_type = dietary_restrictions
+	index = 6
+	divergence = 5.0
+
 	icon = "special_doctrine_default"
 
-	visible = no
+	piety_cost = {
+		value = faith_doctrine_cost_high
+		if = {
+			limit = { rite_has_doctrine = latria_doctrine_diet_kosher }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+		else_if = {
+			limit = {
+				OR = {
+					rite_has_doctrine = latria_doctrine_diet_halal
+					rite_has_doctrine = doctrine_diet_unrestricted
+				}
+			}
+			multiply = faith_changed_doctrine_cost_mult_two_step
+		}
+	}
+
+	is_shown = {
+		religion_tag = judaism_religion
+	}
 
 	parameters = {
+		latria_diet_forbidden_foods
 		latria_pig_embrace_is_crime
+		meat_permitted
+		leather_permitted
+	}
+
+	traits = {
+		sins = {
+			latria_unclean = { weight = 60 scale = 2 }
+		}
+	}
+
+	character_modifier = {
+		health = 0.025
+		province_size_baseline_add = 50
+	}
+}
+
+latria_doctrine_diet_halal = {
+	doctrine_group_type = dietary_restrictions
+	index = 7
+	divergence = 5.0
+
+	icon = "special_doctrine_default"
+
+	piety_cost = {
+		value = faith_doctrine_cost_high
+		if = {
+			limit = { rite_has_doctrine = latria_doctrine_diet_halal }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+		else_if = {
+			limit = {
+				OR = {
+					rite_has_doctrine = latria_doctrine_diet_kosher
+					rite_has_doctrine = doctrine_diet_unrestricted
+				}
+			}
+			multiply = faith_changed_doctrine_cost_mult_two_step
+		}
+	}
+
+	is_shown = {
+		religion_tag = islam_religion
+	}
+
+	parameters = {
+		latria_diet_forbidden_foods
+		latria_pig_embrace_is_crime
+		meat_permitted
+		leather_permitted
+	}
+
+	traits = {
+		sins = {
+			latria_unclean = { weight = 60 scale = 2 }
+		}
+	}
+
+	character_modifier = {
+		health = 0.025
+		province_size_baseline_add = 50
 	}
 }

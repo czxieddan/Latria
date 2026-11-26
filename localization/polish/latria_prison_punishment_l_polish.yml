@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "Przymus do cielesnych uciech ze świnią"
  latria_pig_embrace_crime: "Cielesne uciechy ze świnią"
+ latria_doctrine_diet_kosher_name: "Jedzenie koszerne"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "Prawo dzieli czyste od nieczystego: czyste jest tylko to, co przeżuwa i ma rozdzielone kopyto; krew jest życiem, a mleko i mięso nie zasiadają przy jednym stole."
+ latria_doctrine_diet_halal_name: "Jedzenie halal"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Zwierzę je się tylko wtedy, gdy zarżano je w imię Boga i wypuszczono z niego krew; świnia jest nieczysta i nigdy nie zadjemy jej mięsa."
+ doctrine_parameter_latria_diet_forbidden_foods: "Padlina, krew i mięso zwierząt zakazanych nie mogą być jedzone"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Postacie z [Concept( 'trait', 'cechą' )|E] [GetTrait('latria_unclean').GetName( GetNullCharacter )|l] są [Concept( 'criminals', 'przestępcami' )|E]"

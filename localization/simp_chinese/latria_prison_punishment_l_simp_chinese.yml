@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "强迫我与猪交合"
  latria_pig_embrace_crime: "与猪交合"
+ latria_doctrine_diet_kosher_name: "洁食"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "律法分洁净与不洁：唯有倒嚼分蹄的走兽可食，血即生命，奶与肉不同席。"
+ latria_doctrine_diet_halal_name: "清真饮食"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "走兽须奉宰杀、放尽血后方可食用，凡猪所出的都不得入口。"
+ doctrine_parameter_latria_diet_forbidden_foods: "自死之物、血与不洁走兽的肉不可食用"
+ doctrine_parameter_latria_pig_embrace_is_crime: "拥有[GetTrait('latria_unclean').GetName( GetNullCharacter )][trait|E]的角色被视为[criminals|E]"

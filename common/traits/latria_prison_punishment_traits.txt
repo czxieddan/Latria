@@ -15,7 +15,6 @@
 		opinion_modifier = latria_pig_embrace_crime
 		ignore_opinion_value_if_same_trait = yes
 	}
-
 	shown_in_ruler_designer = no
 
 	desc = {

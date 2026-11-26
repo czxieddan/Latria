@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "나에게 돼지와의 정사를 강요함"
  latria_pig_embrace_crime: "돼지와의 정사"
+ latria_doctrine_diet_kosher_name: "코셔 음식"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "율법은 정결과 부정을 구별한다. 반추하고 발굽이 갈라진 짐승만이 정결하며, 피는 곧 목숨이니 젖과 고기를 한 상에 나란히 두지 않는다."
+ latria_doctrine_diet_halal_name: "할랄 음식"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "짐승은 하나님의 이름으로 도륙하여 피를 완전히 빼야만 먹을 수 있다. 돼지는 부정하여 결코 입에 넣지 않는다."
+ doctrine_parameter_latria_diet_forbidden_foods: "자연사한 것, 피, 금지된 짐승의 고기는 먹을 수 없음"
+ doctrine_parameter_latria_pig_embrace_is_crime: "[GetTrait('latria_unclean').GetName( GetNullCharacter )] [trait|E]을 가진 인물은 [criminals|E]가 됨"

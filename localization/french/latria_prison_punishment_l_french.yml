@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "M’a forcé à des rapports charnels avec un porc"
  latria_pig_embrace_crime: "Plaisirs charnels avec un porc"
+ latria_doctrine_diet_kosher_name: "Nourriture cachère"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "La loi sépare le pur de l'impur : seuls sont purs les ruminants aux sabots fendus ; le sang est la vie, et le lait ne s'accorde pas avec la viande."
+ latria_doctrine_diet_halal_name: "Nourriture halal"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Les bêtes sont mangées seulement si égorgées au nom de Dieu et vidées de leur sang ; le porc est impur et ne touche jamais nos lèvres."
+ doctrine_parameter_latria_diet_forbidden_foods: "La charogne, le sang et la chair des bêtes interdites ne peuvent être mangés"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Les personnages avec le [trait|El] [GetTrait('latria_unclean').GetName( GetNullCharacter )|l] sont des [Concept( 'crime', 'criminels' )|E]"

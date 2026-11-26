@@ -19,3 +19,11 @@
 
  latria_forced_pig_embrace_opinion: "Принуждение к плотским утехам со свиньёй"
  latria_pig_embrace_crime: "Плотские утехи со свиньёй"
+ latria_doctrine_diet_kosher_name: "Кашерная пища"
+ latria_doctrine_diet_kosher_descriptive_name: "$latria_doctrine_diet_kosher_name$"
+ latria_doctrine_diet_kosher_desc: "Закон делит чистое и нечистое: чист лишь скот, что жуёт жвачку и имеет раздвоенное копыто; кровь есть жизнь, и молоко не ставят на один стол с мясом."
+ latria_doctrine_diet_halal_name: "Халяльная пища"
+ latria_doctrine_diet_halal_descriptive_name: "$latria_doctrine_diet_halal_name$"
+ latria_doctrine_diet_halal_desc: "Скот едят лишь если он заколут во имя Бога и из него выпущена вся кровь; свинья нечиста, и её мясо не касается наших уст."
+ doctrine_parameter_latria_diet_forbidden_foods: "Падаль, кровь и мясо запрещённых животных нельзя есть"
+ doctrine_parameter_latria_pig_embrace_is_crime: "Персонажи, имеющие [trait|El] «[GetTrait('latria_unclean').GetName( GetNullCharacter )]», — [criminals|El]"

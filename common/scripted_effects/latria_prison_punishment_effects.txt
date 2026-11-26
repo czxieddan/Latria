@@ -76,17 +76,35 @@ latria_pig_embrace_recipient_faith_effect = {
 	}
 }
 
-# A doctrine carries the crime: rulers of these religions hold the reason now and after they take power.
+# Swaps the vanilla no-restriction doctrine for the religion's food law.
 latria_pig_embrace_register_crime_effect = {
+	religion:islam_religion = {
+		latria_swap_in_halal_effect = yes
+	}
+	religion:judaism_religion = {
+		latria_swap_in_kosher_effect = yes
+	}
+}
+
+latria_swap_in_halal_effect = {
 	every_faith = {
 		limit = {
-			OR = {
-				religion_tag = islam_religion
-				religion_tag = judaism_religion
-			}
-			NOT = { has_doctrine = latria_doctrine_pig_embrace_crime }
+			main_rite = { rite_has_doctrine = doctrine_diet_unrestricted }
+			NOT = { has_doctrine = latria_doctrine_diet_halal }
 		}
-		add_doctrine = latria_doctrine_pig_embrace_crime
+		remove_doctrine = doctrine_diet_unrestricted
+		add_doctrine = latria_doctrine_diet_halal
+	}
+}
+
+latria_swap_in_kosher_effect = {
+	every_faith = {
+		limit = {
+			main_rite = { rite_has_doctrine = doctrine_diet_unrestricted }
+			NOT = { has_doctrine = latria_doctrine_diet_kosher }
+		}
+		remove_doctrine = doctrine_diet_unrestricted
+		add_doctrine = latria_doctrine_diet_kosher
 	}
 }
 
