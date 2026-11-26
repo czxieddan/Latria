@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U] pokonuje koalicję i pozostaje na urzędzie jako [head_of_faith|E]."
 
  latria_papal_ascendancy.0010.t: "Wezwanie do obrony Stolicy Apostolskiej"
- latria_papal_ascendancy.0010.desc: "Twój [ally|E], [latria_pope.GetShortUIName], staje wobec koalicji, która chce pozbawić [Select_CString( latria_pope.IsFemale, 'ją', 'go' )] urzędu z powodu cudzołóstwa. Powołując się na wasz sojusz, [latria_pope.GetSheHe] prosi cię o wymarsz przeciw koalicji."
+ latria_papal_ascendancy.0010.desc: "Jeszcze przed świtem dociera do mego dworu posłaniec z listem opieczętowanym pieczęcią Stolicy Apostolskiej. Mój [ally|E], [latria_pope.GetShortUIName], staje w obliczu koalicji władców, którzy chcą rozliczyć [Select_CString( latria_pope.IsFemale, 'ją', 'go' )] z cudzołóstwa, a ich wojska są już w marszu.\n\nRęka, która pisała tę prośbę, nie drży, lecz pośpiech przebija z każdej linii. „Nie będę zaprzeczać temu, co [Select_CString(latria_pope.IsFemale, 'uczyniłam', 'uczyniłem')]”, pisze [latria_pope.GetShortUIName]. „Ale Stolica Apostolska nie może zostać pusta; jeśli upadnę, tron wpadnie w ręce książąt, które podporządkują Kościół własnym celom. Sojusz między nami został przysięgany przed Bogiem; proszę cię, byś go [Select_CString(ROOT.Char.IsFemale, 'dotrzymała', 'dotrzymał')].”\n\n[latria_pope.GetSheHe] prosi mnie o wymarsz przeciw koalicji. Mogę podnieść swoje sztandary i podzielić hańbę, która spada na Stolicę Apostolską, albo pozwolić, by rozliczenie się dokonało, i patrzeć, jak tron przechodzi w inne ręce."
  latria_papal_ascendancy.0010.a: "Dotrzymać świętego sojuszu i wyruszyć"
  latria_papal_ascendancy.0010.b: "Nie możemy walczyć w obronie takiego skandalu"
  latria_honored_papal_alliance_opinion: "Obrona Stolicy Apostolskiej"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName] odrzuca twoje wezwanie do obrony Stolicy Apostolskiej."
 
  latria_papal_scandal_war.0001.t: "Wezwanie do obalenia papieża"
- latria_papal_scandal_war.0001.desc: "Władcy chwytają za broń, by pozbawić urzędu osobę, którą jest [latria_scandal_target.GetShortUIName], po ujawnieniu [latria_scandal_target.GetHerHis] cudzołóstwa. Ich posłowie przybywają na mój dwór i proszą, bym wyruszył z koalicją."
+ latria_papal_scandal_war.0001.desc: "Skandal wybuchł przed tygodniami, a wciąż kroczy za [latria_scandal_target.GetShortUIName] jak cień. Władcy chwytają za broń, by pozbawić urzędu osobę, którą jest [latria_scandal_target.GetShortUIName], a ich sztandary gromadzą się już na drogach ku Stolicy Apostolskiej.\n\nIch urazy nie są jednej natury. Niektórzy są szczerze oburzeni, że grzesznik zajmuje najwyższe miejsce wiary; inni mówią o czystości, rozglądając się po skarbcu Rzymu; jeszcze inni szukają tu rozwiązania własnych sporów. Wszyscy jednak maszerują pod jednym sztandarem: nierządca, który nie żałuje swego czynu, nie może nosić korony Kościoła.\n\nIch posłowie przybywają na mój dwór z prośbą opieczętowaną wieloma pieczęciami, prosząc mnie, bym wyruszył z koalicją. Przyłączyć się do nich, to dzielić łupy i stanąć wśród samozwańczych oczyszczycieli wiary; odmówić, to zachować ręce czyste od wojny przeciwko namiestnikowi Boga."
  latria_papal_scandal_war.0001.a: "Chwycić za broń u boku koalicji"
  latria_papal_scandal_war.0001.b: "Pozostać poza tą wojną"
 

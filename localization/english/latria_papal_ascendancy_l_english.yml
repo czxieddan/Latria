@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U] defeats the coalition and remains [head_of_faith|E]."
 
  latria_papal_ascendancy.0010.t: "Call to Defend the Holy See"
- latria_papal_ascendancy.0010.desc: "Your [ally|E], [latria_pope.GetShortUIName], faces a coalition seeking to depose [latria_pope.GetHerHim] over an affair. Invoking your alliance, [latria_pope.GetSheHe] asks you to march against the coalition."
+ latria_papal_ascendancy.0010.desc: "A courier reaches my court before dawn, carrying a letter sealed with the papal crest. My [ally|E], [latria_pope.GetShortUIName], is besieged by a coalition of rulers who demand [latria_pope.GetHerHim] answer for an affair, and their armies are already on the march.\n\nThe hand that wrote the plea is steady, but the urgency shows through every line. \"I will not deny what I have done,\" [latria_pope.GetShortUIName] writes. \"Yet the Holy See cannot stand empty, and if I fall, it falls into the hands of princes who would bend the Church to their own ends. The alliance between us was sworn before God; I ask you now to honor it.\"\n\n[latria_pope.GetSheHe] asks me to march against the coalition. I may raise my banners and share the disgrace of a scandal-stricken pope, or I may let the reckoning proceed and watch the throne pass to other hands."
  latria_papal_ascendancy.0010.a: "Honor the sacred alliance and march"
  latria_papal_ascendancy.0010.b: "We cannot fight for such a scandal"
  latria_honored_papal_alliance_opinion: "Defended the Holy See"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName] refused your call to defend the Holy See."
 
  latria_papal_scandal_war.0001.t: "A Call to Depose the Pope"
- latria_papal_scandal_war.0001.desc: "Rulers have taken up arms to depose [latria_scandal_target.GetShortUIName] after [latria_scandal_target.GetHerHis] affair was made public. Their envoys arrive at my court, asking me to march with the coalition."
+ latria_papal_scandal_war.0001.desc: "The scandal broke weeks ago, yet it still follows [latria_scandal_target.GetShortUIName] like a shadow. Rulers have taken up arms to depose [latria_scandal_target.GetHerHim], and their banners now gather on the roads to the Holy See.\n\nTheir grievances are not all of one kind. Some are truly scandalized that a sinner should hold the highest seat of the faith; others speak of purity while eyeing the treasury of Rome; still others have quarrels of their own and merely borrow the crusading cry. But all of them march under one banner: an unrepentant adulterer cannot be suffered to wear the crown of the Church.\n\nTheir envoys arrive at my court with a petition signed by many seals, asking me to march with the coalition. To join them is to share in the spoils and stand among the self-appointed purifiers of the faith; to refuse is to keep my hands clean of a war against God's own vicar."
  latria_papal_scandal_war.0001.a: "Take up arms with the coalition"
  latria_papal_scandal_war.0001.b: "Stay out of this war"
 

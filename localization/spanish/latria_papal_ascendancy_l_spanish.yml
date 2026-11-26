@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U] derrota a la coalición y sigue siendo [head_of_faith|E]."
 
  latria_papal_ascendancy.0010.t: "Llamada a defender la Santa Sede"
- latria_papal_ascendancy.0010.desc: "Tu [ally|E], [latria_pope.GetShortUIName], se enfrenta a una coalición que busca deponer[latria_pope.GetHerHim] por una relación adúltera. Invocando vuestra alianza, [latria_pope.GetSheHe] te pide que marches contra la coalición."
+ latria_papal_ascendancy.0010.desc: "Un mensajero llega a mi corte antes del alba con una carta sellada con el sello de la Santa Sede. Mi [ally|E], [latria_pope.GetShortUIName], se enfrenta a una coalición de gobernantes que exige que [latria_pope.GetSheHe] responda por una relación adúltera, y sus ejércitos ya están en marcha.\n\nLa mano que trazó esta súplica es firme, pero la urgencia se filtra en cada línea. «No negaré lo que he hecho», escribe [latria_pope.GetShortUIName]. «Pero la Santa Sede no puede quedar vacante; si caigo, caerá en manos de príncipes que doblegarán la Iglesia a sus propios fines. La alianza que nos une fue jurada ante Dios; te pido que la honres.»\n\n[latria_pope.GetSheHe] me pide que marche contra la coalición. Puedo alzar mis estandartes y compartir la deshonra que pesa sobre la Santa Sede, o dejar que el ajuste de cuentas siga su curso y ver cómo el trono pasa a otras manos."
  latria_papal_ascendancy.0010.a: "Honrar la sagrada alianza y marchar"
  latria_papal_ascendancy.0010.b: "No podemos luchar por semejante escándalo"
  latria_honored_papal_alliance_opinion: "Defendió la Santa Sede"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName] rechazó tu llamada a defender la Santa Sede."
 
  latria_papal_scandal_war.0001.t: "Una llamada a deponer al Papa"
- latria_papal_scandal_war.0001.desc: "Los gobernantes han tomado las armas para deponer a [latria_scandal_target.GetShortUIName] después de que [latria_scandal_target.GetHerHis] relación adúltera se hiciera pública. Sus enviados llegan a mi corte para pedirme que marche con la coalición."
+ latria_papal_scandal_war.0001.desc: "El escándalo estalló hace semanas, pero aún sigue a [latria_scandal_target.GetShortUIName] como una sombra. Los gobernantes han tomado las armas para deponer a [latria_scandal_target.GetShortUIName] del trono, y sus estandartes se reúnen ya en los caminos hacia la Santa Sede.\n\nSus agravios no son todos de la misma clase. Algunos están sinceramente escandalizados de que un pecador ocupe el asiento más alto de la fe; otros hablan de pureza mientras otean el tesoro de Roma; otros más ajustan cuentas propias y solo toman prestado el grito de cruzada. Todos marchan, sin embargo, bajo una misma bandera: un adúltero impenitente no puede cargar la corona de la Iglesia.\n\nSus enviados llegan a mi corte con una petición sellada por muchos sellos para pedirme que marche con la coalición. Unirme a ellos es compartir el botín y figurar entre los autoproclamados purificadores de la fe; abstenerme es mantener mis manos limpias de una guerra contra el vicario de Dios."
  latria_papal_scandal_war.0001.a: "Tomar las armas junto a la coalición"
  latria_papal_scandal_war.0001.b: "Mantenerse al margen de esta guerra"
 

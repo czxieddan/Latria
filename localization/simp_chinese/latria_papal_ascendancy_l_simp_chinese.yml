@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U]击退废黜联军，保住[head_of_faith|E]之位。"
 
  latria_papal_ascendancy.0010.t: "教宗的求援请求"
- latria_papal_ascendancy.0010.desc: "你的[ally|E][latria_pope.GetShortUIName]因私通丑闻遭到诸侯围攻。[latria_pope.GetSheHe]援引盟约，请你出兵对抗废黜联军。"
+ latria_papal_ascendancy.0010.desc: "信使连夜送来教宗的亲笔信，蜡封上还留着宫灯的余温。我的[ally|E][latria_pope.GetShortUIName]因私通丑闻遭到诸侯围攻，废黜联军的兵锋已经逼近圣座城下。\n\n信上的字迹依旧从容，却掩不住字里行间的紧迫。“我承认我犯了过犯，但圣座不可空缺，教会不可无首。”[latria_pope.GetShortUIName]写道，“若我因此倒下，圣座便落入野心家之手，届时无人能再约束诸侯的刀兵。盟约既立，你我当共守此誓。”\n\n[latria_pope.GetSheHe]援引盟约，请我出兵对抗废黜联军。盟约、信仰与战火在灯下交错。我可以挥兵解围，与丑闻缠身的教宗共担骂名；也可以坐视这场清算，任凭圣座易主他人。"
  latria_papal_ascendancy.0010.a: "恪守盟约，起兵保卫圣座"
  latria_papal_ascendancy.0010.b: "以此罪名开战，恕难从命"
  latria_honored_papal_alliance_opinion: "保卫圣座"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName]因私通丑闻拒绝出兵援助圣座。"
 
  latria_papal_scandal_war.0001.t: "废黜教宗的号召"
- latria_papal_scandal_war.0001.desc: "诸侯已经举兵，要求[latria_scandal_target.GetShortUIName]为公开的私通丑闻让出[head_of_faith|E]之位。联军的使者来到我的宫廷，邀我一同进军。"
+ latria_papal_scandal_war.0001.desc: "圣座城内传出丑闻，诸侯的兵马已在集结。他们打着“涤净圣座”的旗号，要求[latria_scandal_target.GetShortUIName]为公开的私通丑闻让出[head_of_faith|E]之位。\n\n联军的力量足以撼动圣座，而各路诸侯的算计并不相同：有人真心愤慨，有人觊觎圣座富庶的领地，有人只是想借机在教界安插自己人。但他们的口号一致——私通者不配执掌圣座。\n\n联军的使者来到我的宫廷，呈上联署的书信，邀我一同进军。加入他们，我便能分得战利品，在教界赢得拥护圣座清誉的美名；置身事外，我便不会背上讨伐教宗的骂名，但也会错过这份唾手可得的大战利品。"
  latria_papal_scandal_war.0001.a: "举兵加入废黜联军"
  latria_papal_scandal_war.0001.b: "不卷入这场战争"
 

@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U] besiegt das Bündnis und bleibt [head_of_faith|E]."
 
  latria_papal_ascendancy.0010.t: "Aufruf zur Verteidigung des Heiligen Stuhls"
- latria_papal_ascendancy.0010.desc: "Euer [ally|E], [latria_pope.GetShortUIName], steht einem Bündnis gegenüber, das [latria_pope.GetHerHim] wegen eines Seitensprungs absetzen will. Unter Berufung auf Euer Bündnis bittet [latria_pope.GetSheHe] Euch, gegen die Gegner ins Feld zu ziehen."
+ latria_papal_ascendancy.0010.desc: "Noch vor der Dämmerung erreicht ein Bote meinen Hof und bringt einen Brief mit dem Siegel des Heiligen Stuhls. Mein [ally|E], [latria_pope.GetShortUIName], sieht sich einer Koalition von Herrschern gegenüber, die [latria_pope.GetHerHim] wegen eines Seitensprungs zur Rechenschaft ziehen will, und deren Heere sind bereits im Anmarsch.\n\nDie Hand, die diesen Hilferuf schrieb, bleibt fest, doch in jeder Zeile steht die Eile. „Ich will nicht leugnen, was ich getan habe“, schreibt [latria_pope.GetShortUIName]. „Doch der Heilige Stuhl darf nicht leer bleiben; falle ich, so fällt er in die Hände von Fürsten, die die Kirche ihren Zwecken unterwerfen werden. Das Bündnis zwischen uns wurde vor Gott geschworen; ich bitte Euch, es zu ehren.“\n\n[latria_pope.GetSheHe] bittet mich, gegen die Koalition ins Feld zu ziehen. Ich kann meine Banner erheben und die Schande teilen, die auf dem Heiligen Stuhl lastet, oder den Freispruch geschehen lassen und zusehen, wie der Thron in andere Hände übergeht."
  latria_papal_ascendancy.0010.a: "Das heilige Bündnis ehren und ins Feld ziehen"
  latria_papal_ascendancy.0010.b: "Für einen solchen Skandal können wir nicht kämpfen"
  latria_honored_papal_alliance_opinion: "Verteidigte den Heiligen Stuhl"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName] hat Euren Ruf zur Verteidigung des Heiligen Stuhls abgelehnt."
 
  latria_papal_scandal_war.0001.t: "Ein Aufruf zur Absetzung des Papstes"
- latria_papal_scandal_war.0001.desc: "Herrscher haben zu den Waffen gegriffen, um [latria_scandal_target.GetShortUIName] abzusetzen, nachdem [latria_scandal_target.Custom('DE_PRO_POS_S_3P')] Seitensprung bekannt wurde. Ihre Gesandten kommen an meinen Hof und bitten mich, mit ihrem Bündnis ins Feld zu ziehen."
+ latria_papal_scandal_war.0001.desc: "Der Skandal ist seit Wochen öffentlich, doch er folgt [latria_scandal_target.GetShortUIName] noch immer wie ein Schatten. Herrscher haben zu den Waffen gegriffen, um [latria_scandal_target.GetHerHim] abzusetzen, und ihre Banner sammeln sich bereits auf den Straßen zum Heiligen Stuhl.\n\nIhre Beschwerden sind nicht gleicher Art. Manche sind aufrichtig empört, dass ein Sünder den höchsten Sitz des Glaubens innehat; andere sprechen von Reinheit und werfen dabei einen Blick auf die Schatzkammer Roms; wieder andere tragen eigene Streitigkeiten aus und leihen sich nur den Kreuzzugsruf. Doch alle marschieren unter einem Banner: Ein unbußfertiger Ehebrecher darf die Krone der Kirche nicht tragen.\n\nIhre Gesandten kommen an meinen Hof und bringen eine Bittschrift mit vielen Siegeln, um mich zu bitten, mit ihrer Koalition ins Feld zu ziehen. Sich ihnen anzuschließen, heißt Beute teilen und unter den selbsternannten Reinigern des Glaubens stehen; sich zu enthalten, heißt, meine Hände aus einem Krieg gegen den Stellvertreter Gottes herauszuhalten."
  latria_papal_scandal_war.0001.a: "Mit dem Bündnis zu den Waffen greifen"
  latria_papal_scandal_war.0001.b: "Mich aus diesem Krieg heraushalten"
 

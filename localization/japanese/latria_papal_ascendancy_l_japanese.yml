@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U]は連合を破り、[head_of_faith|E]の地位を守る。"
 
  latria_papal_ascendancy.0010.t: "聖座防衛の要請"
- latria_papal_ascendancy.0010.desc: "あなたの[ally|E]である[latria_pope.GetShortUIName]は、不義の関係を理由に[latria_pope.GetHerHim]を廃位しようとする連合に直面している。[latria_pope.GetSheHe]は盟約に基づき、連合に対する出兵をあなたに求めている。"
+ latria_papal_ascendancy.0010.desc: "夜明け前に、聖座の印章を押した手紙を携えた伝令が私の宮廷に届く。私の[ally|E]である[latria_pope.GetShortUIName]は、不義の関係を理由に[latria_pope.GetHerHim]を廃位しようとする諸侯の連合に包囲され、その軍勢はすでに進軍を始めている。\n\n嘆願を書いた筆は穏やかだが、行間に切迫がにじむ。「自分の過ちは認める」と[latria_pope.GetShortUIName]は書く。「だが聖座を空けてはならぬ。私が倒れれば、聖座は教会を私物化する諸侯の手に落ちる。我々の盟約は神の前で交わされた。どうかそれを守ってほしい」。\n\n[latria_pope.GetSheHe]は盟約に基づき、連合に対する出兵を私に求めている。私には、醜聞にまみれた教宗とともに汚名を分かち合うために旗を揚げる道もあるし、裁きを見届けて玉座が別の手に渡るのを眺める道もある。"
  latria_papal_ascendancy.0010.a: "聖なる盟約を守り、出陣する"
  latria_papal_ascendancy.0010.b: "このような醜聞のためには戦えない"
  latria_honored_papal_alliance_opinion: "聖座を守った"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName]は聖座の防衛への招集を拒んだ。"
 
  latria_papal_scandal_war.0001.t: "教皇廃位の呼びかけ"
- latria_papal_scandal_war.0001.desc: "[latria_scandal_target.GetHerHis]の不義の関係が公になると、統治者たちは[latria_scandal_target.GetShortUIName]を廃位すべく武器を取った。その使者が私の宮廷を訪れ、連合と共に進軍するよう求めている。"
+ latria_papal_scandal_war.0001.desc: "醜聞が公になって数週間、それは今も[latria_scandal_target.GetShortUIName]に影のように付きまとう。統治者たちは[latria_scandal_target.GetHerHis]を廃位すべく武器を取り、その旗印はすでに聖座へと続く街道に集いつつある。\n\n彼らの不満は一色ではない。罪人が信仰の最高座に座すことを真に憤る者もいれば、純潔を説きながらローマの宝庫を狙う者もいれば、自らの遺恨を晴らすために聖戦の叫びを借りる者もいる。だが全員が同じ旗の下に立つ──悔いのない姦通者に、教会の冠は負わせられぬ、と。\n\nその使者が署名の連なる請願書を携え、私の宮廷を訪れ、連合と共に進軍するよう求めている。彼らに加われば、私は戦利品を分け与えられ、信仰の浄化を自任する者たちの列に並ぶことになる。距離を置けば、神の代理人への戦争に手を染めずに済む。"
  latria_papal_scandal_war.0001.a: "武器を取り、連合に加わる"
  latria_papal_scandal_war.0001.b: "この戦争には加わらない"
 

@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U](은)는 연합군을 격파하고 [head_of_faith|E] 지위를 유지합니다."
 
  latria_papal_ascendancy.0010.t: "성좌를 지켜달라는 요청"
- latria_papal_ascendancy.0010.desc: "당신의 [ally|E] [latria_pope.GetShortUIName](이)가 불륜을 이유로 [latria_pope.GetHerHim](을)를 폐위하려는 연합군에 맞서고 있다. [latria_pope.GetSheHe](은)는 동맹을 내세워 당신에게 연합군을 향해 진군해 달라고 요청한다."
+ latria_papal_ascendancy.0010.desc: "새벽 전에 성좌의 인장이 찍힌 편지를 지닌 전령이 내 궁정에 도착한다. 나의 [ally|E] [latria_pope.GetShortUIName](은)는 불륜을 이유로 [latria_pope.GetHerHim](을)를 폐위하려는 제후 연합군에 포위되었고, 그 군세는 이미 진군을 시작했다.\n\n탄원을 쓴 손은 꼿꼿하나 행 사이로 절박함이 배어 나온다. \"제가 지은 잘못은 부인하지 않겠습니다. 그러나 성좌를 비워 두어서는 안 됩니다. 제가 쓰러지면 성좌는 교회를 사유화하려는 제후들의 손에 넘어가고 맙니다. 우리의 동맹은 하느님 앞에서 맺어졌습니다. 부디 그것을 지켜 주십시오.\" [latria_pope.GetShortUIName](이)가 써 내려갔다.\n\n[latria_pope.GetSheHe](은)는 동맹을 내세워 연합군을 향해 진군해 달라고 나에게 요청한다. 나는 추문에 물든 교황과 함께 욕명을 짊어지며 기치를 들 수도 있고, 심판이 끝나는 것을 지켜보며 옥좌가 다른 손으로 넘어가는 것을 두고 볼 수도 있다."
  latria_papal_ascendancy.0010.a: "신성한 동맹을 지켜 진군하겠다"
  latria_papal_ascendancy.0010.b: "그런 추문을 위해 싸울 수는 없다"
  latria_honored_papal_alliance_opinion: "성좌를 수호함"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName](이)가 성좌를 수호해 달라는 당신의 요청을 거부했습니다."
 
  latria_papal_scandal_war.0001.t: "교황 폐위의 외침"
- latria_papal_scandal_war.0001.desc: "[latria_scandal_target.GetShortUIName](은)는 [latria_scandal_target.GetHerHis] 불륜이 공개되자 폐위하려고 무기를 든 영주들과 맞서게 되었다. 연합군의 사절들이 내 궁정에 도착해 함께 진군할 것을 청한다."
+ latria_papal_scandal_war.0001.desc: "추문이 공개된 지 수주가 지났지만, 그것은 아직도 [latria_scandal_target.GetShortUIName](을)를 그림자처럼 따라다닌다. 제후들은 [latria_scandal_target.GetHerHis] 불륜을 이유로 폐위하려고 무기를 들었고, 그 기치는 이미 성좌로 이어지는 길목에 모이고 있다.\n\n그들의 불만은 한결같지 않다. 죄인이 신앙의 최고 자리에 앉아 있는 것을 진심으로 분개하는 이도 있고, 순결을 운운하며 로마의 보고를 노리는 이도 있고, 제 사정을 풀려고 성전의 이름을 빌리는 이도 있다. 그러나 모두가 하나의 기치 아래 선다─뉘우치지 않는 간음자에게 교회의 왕관을 씌울 수는 없다고.\n\n연합군의 사절들이 도장이 가득한 탄원서를 들고 내 궁정에 도착해 함께 진군할 것을 청한다. 그들에 합류하면 나는 전리품을 나누고, 스스로 신앙을 정화한다 자처하는 무리 곁에 설 것이다. 거리를 두면, 하느님의 대리인을 향한 전쟁에 손을 더럽히지 않을 수 있다."
  latria_papal_scandal_war.0001.a: "무기를 들고 연합군에 합류한다"
  latria_papal_scandal_war.0001.b: "이 전쟁에 관여하지 않는다"
 

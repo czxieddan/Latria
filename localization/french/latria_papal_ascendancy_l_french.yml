@@ -68,7 +68,7 @@
  latria_papal_scandal_depose_war_defeat_desc: "[defender.GetShortUINameNotMe|U] bat la coalition et reste [head_of_faith|E]."
 
  latria_papal_ascendancy.0010.t: "Appel à défendre le Saint-Siège"
- latria_papal_ascendancy.0010.desc: "Votre [ally|E], [latria_pope.GetShortUIName], affronte une coalition qui cherche à [latria_pope.GetHerHim] déposer à cause d’une liaison adultère. Au nom de votre alliance, [latria_pope.GetSheHe] vous demande de marcher contre la coalition."
+ latria_papal_ascendancy.0010.desc: "Un messager parvient à ma cour avant l’aube, portant une lettre au sceau du Saint-Siège. Mon [ally|E], [latria_pope.GetShortUIName], affronte une coalition de souverains qui veulent [latria_pope.GetHerHim] déposer pour une liaison adultère, et leurs armées sont déjà en marche.\n\nLa main qui a tracé cette supplique reste ferme, mais l’urgence transperce chaque ligne. « Je ne nierai pas ce que j’ai fait », écrit [latria_pope.GetShortUIName]. « Mais le Saint-Siège ne saurait demeurer vacant ; si je tombe, il passera entre les mains de princes qui plieront l’Église à leurs fins. L’alliance qui nous unit a été jurée devant Dieu ; je vous demande de l’honorer. »\n\n[latria_pope.GetSheHe] me demande de marcher contre la coalition. Je peux lever mes bannières et partager la disgrâce qui frappe le Saint-Siège, ou laisser le châtiment s’accomplir et voir le trône passer à d’autres mains."
  latria_papal_ascendancy.0010.a: "Honorer l’alliance sacrée et marcher"
  latria_papal_ascendancy.0010.b: "Nous ne pouvons combattre pour un tel scandale"
  latria_honored_papal_alliance_opinion: "A défendu le Saint-Siège"
@@ -81,7 +81,7 @@
  latria_ally_refused_defense_msg_desc: "[ROOT.Char.GetShortUIName] a refusé votre appel à défendre le Saint-Siège."
 
  latria_papal_scandal_war.0001.t: "Un appel à déposer le pape"
- latria_papal_scandal_war.0001.desc: "Des souverains ont pris les armes pour déposer [latria_scandal_target.GetShortUIName] après la révélation de sa liaison adultère. Leurs émissaires arrivent à ma cour pour me demander de marcher avec la coalition."
+ latria_papal_scandal_war.0001.desc: "Le scandale a éclaté il y a des semaines, et pourtant il suit encore [latria_scandal_target.GetShortUIName] comme une ombre. Des souverains ont pris les armes pour [latria_scandal_target.GetHerHim] déposer, et leurs bannières se rassemblent sur les routes du Saint-Siège.\n\nLeurs griefs ne sont pas d’une seule nature. Les uns sont sincèrement scandalisés qu’un pécheur occupe la plus haute place de la foi ; les autres parlent de pureté tout en lorgnant sur le trésor de Rome ; d’autres encore règlent par là leurs propres querelles. Tous marchent pourtant sous la même bannière : on ne saurait souffrir qu’un adultère non repenti porte la couronne de l’Église.\n\nLeurs émissaires arrivent à ma cour avec une requête scellée de nombreux cachets, pour me demander de marcher avec la coalition. Les rejoindre, c’est partager le butin et prêter main-forte aux censeurs autoproclamés de la foi ; refuser, c’est garder les mains propres d’une guerre contre le vicaire de Dieu."
  latria_papal_scandal_war.0001.a: "Prendre les armes avec la coalition"
  latria_papal_scandal_war.0001.b: "Rester à l’écart de cette guerre"
 
