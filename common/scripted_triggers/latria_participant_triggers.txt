@@ -22,6 +22,15 @@ latria_faith_stands = {
 	NOT = { has_personal_tenet_flag = latria_carnal_personal_barred }
 }
 
+# Vanilla vow. The interaction stays visible; only its availability fails.
+# Kept out of the shared gates because vanilla had_sex_with_effect reads those.
+latria_not_celibate = {
+	custom_tooltip = {
+		text = trait_celibate
+		NOT = { has_trait = celibate }
+	}
+}
+
 # Shared non-age gates, plus attraction and the vanilla kin limit.
 # Age-specific callers add the manual-touch or intercourse boundary.
 latria_can_share_carnal_act = {

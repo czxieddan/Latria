@@ -43,6 +43,7 @@
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_not_celibate = yes
 			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
 			latria_can_propose_intercourse = { PARTNER = scope:recipient }
 			custom_tooltip = {
@@ -186,6 +187,7 @@ latria_propose_manual_interaction = {
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_not_celibate = yes
 			latria_can_exchange_act_invitation = { PARTNER = scope:recipient }
 			# Become the same as latria_propose_intercourse_interaction.
 			latria_can_propose_intercourse = { PARTNER = scope:recipient }

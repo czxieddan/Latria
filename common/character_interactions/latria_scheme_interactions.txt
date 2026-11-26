@@ -38,6 +38,7 @@
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_not_celibate = yes
 			can_start_scheme = {
 				type = latria_fatal_liaison
 				target_character = scope:recipient
@@ -128,6 +129,7 @@ latria_start_fatal_touch_interaction = {
 	}
 	is_valid_showing_failures_only = {
 		scope:puppet_or_actor = {
+			latria_not_celibate = yes
 			can_start_scheme = {
 				type = latria_fatal_touch
 				target_character = scope:recipient
