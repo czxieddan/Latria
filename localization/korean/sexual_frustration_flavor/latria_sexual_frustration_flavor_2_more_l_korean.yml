@@ -152,3 +152,33 @@
  latria_sexual_frustration_flavor.1135.a: "곡을 따라 다음 박을 춤춘다."
  latria_sexual_frustration_flavor.1135.b: "손을 거두어 사람들 사이로 든다."
  latria_sexual_frustration_flavor.1135.c: "그 온기 속에 머물러 곡을 끝까지 듣는다."
+
+ latria_sexual_frustration_flavor.1136.t: "해질녘의 정자"
+ latria_sexual_frustration_flavor.1136.desc: "정자에는 우드 향과 오렌지 껍질 냄새가 배어 있고, 하인들은 은잔에 땀을 흘리는 셔벗을 두고 갔다. 카시다가 우리 사이에서 반쯤 읊조리다 흐르고, 각 행은 하나의 가로대인데 어느 쪽도 마지막 가로대에 오르지 않는다.\n\n해질녘이 분수의 물을 홍차빛으로 물들인다. 내가 원하는 그 사람이 잔을 들고 마시지 않은 채 잔 너머로 나를 보기만 하는데, 그 눈이 시의 마지막 전체다.\n\n나는 그 사람의 손에서 잔을 받아 그 입이 닿았던 자리를 마시고 내려놓는다. 우드 연주자는 기다린다. 아무도 마지막 행을 말하지 않았다."
+ latria_sexual_frustration_flavor.1136.a: "우드를 청해 노래에 말하게 한다."
+ latria_sexual_frustration_flavor.1136.b: "좌중에 인사하고 자리를 뜬다."
+ latria_sexual_frustration_flavor.1136.c: "머물며 그 고요와 벗이 된다."
+
+ latria_sexual_frustration_flavor.1137.t: "새김 병풍 뒤에서"
+ latria_sexual_frustration_flavor.1137.desc: "분수의 물소리가 뜰을 채우고, 내 입에서는 무와샤하가 흐른다. 사랑하는 이의 눈썹, 그 휘는 선, 그 떨어지는 모양에 관한 시다. 그 사랑하는 이는 내 운율을 고쳐줄 만큼 가까이 있다.\n\n새김 병풍 뒤로 빛이 작은 별들처럼 들어온다. 그 사람의 어깨가 내 어깨에 닿아 비단 두 겹을 통해 따뜻하고, 시는 그 주제를 완전히 저버렸다.\n\n나는 마지막 행을 끝내지 않은 채 둔다. 병풍은 우리를 뜰로부터 감추고 누구에게도 보이지 않게 하며, 물은 계속 떨어진다."
+ latria_sexual_frustration_flavor.1137.a: "한 사람만을 위한 속삭임으로 시를 끝맺는다."
+ latria_sexual_frustration_flavor.1137.b: "몸을 세우고 분수의 보수에 관해 말한다."
+ latria_sexual_frustration_flavor.1137.c: "등불이 켜질 때까지 회랑을 혼자 걷는다."
+
+ latria_sexual_frustration_flavor.1138.t: "푸른 가지 축제"
+ latria_sexual_frustration_flavor.1138.desc: "내 믿음은 몸을 선물이라 부르고, 일 년에 한 번 우리는 신전을 푸른 가지로 장식하며 그렇게 여긴다. 축제는 오늘 밤이다. 작년의 축제가 생각난다. 나뭇가지 아래에서 내 손을 잡은 손, 향, 우리 위에 덮개처럼 내려앉던 축복.\n\n내가 원하는 그 사람이 신전 건너편에 푸른 가지를 쥐고 서 있고, 사제는 이미 첫 등불에 불을 붙이고 있다. 내 피는 조용하지 않고, 내 믿음은 그것을 조용하라 하지 않는다.\n\n나는 작년의 가지를 기억하며 손을 가다듬고, 사방에 푸른 냄새가 가득하다."
+ latria_sexual_frustration_flavor.1138.a: "앞으로 나가 축복이 우리 둘 위에 내리게 한다."
+ latria_sexual_frustration_flavor.1138.b: "가지가 시들 때까지 밤의 철야를 지킨다."
+ latria_sexual_frustration_flavor.1138.c: "결합의 의례를 끝까지 읽는다."
+
+ latria_sexual_frustration_flavor.1139.t: "경기장에서의 하루"
+ latria_sexual_frustration_flavor.1139.desc: "먼지가 경기장 위에 걸려 있고, 파벌들은 자기들의 색을 향해 고함친다. 내 상자 앞을 성상들이 장대에 실려 지나가고, 향이 말과 뜨거운 모래 냄새를 갈라놓는다.\n\n전차몰이꾼 하나가 낮게 커브를 돌며 관중석을 올려다보고 나를 찾아낸다. 그 눈길은 경기를 한 박자 넘겨 머물며, 경기 따위가 약속할 수 없는 것을 약속한다. 내 손이 난간을 쥔다.\n\n먼지가 가라앉고 파벌들은 목이 쉰다. 나는 여전히 전차가 사라진 트랙을 보고 있고, 향은 재까지 타들어 갔다."
+ latria_sexual_frustration_flavor.1139.a: "내가 누구의 눈길을 붙들고 있는지 소리 내어 말한다."
+ latria_sexual_frustration_flavor.1139.b: "몸을 뒤로 기대고 경기는 경기일 뿐이라 둔다."
+ latria_sexual_frustration_flavor.1139.c: "무리의 따뜻한 소음으로 충분히 여긴다."
+
+ latria_sexual_frustration_flavor.1140.t: "사막 교부의 가르침"
+ latria_sexual_frustration_flavor.1140.desc: "사막 교부는 몸을 원수라 가르치고, 나는 그 말을 들었다는 증거로 법의 아래에 털옷을 입는다. 털이 숨을 쉴 때마다 깃을 찌른다. 그 목소리는 와디처럼 마르고 그 두 배로 인내심이 있다.\n\n그는 기도를 피의 열을 식히는 불이라 부른다. 내 것은 식지 않는다. 감은 눈 뒤에서 보이는 것은 원수가 아니라 내가 원하는 그 사람이고, 털옷이 목을 자꾸 쓸어낸다.\n\n나는 고개를 숙이고 기도를 처음부터 다시 시작하지만, 그 말들은 타는 것을 끄지 못한다."
+ latria_sexual_frustration_flavor.1140.a: "일어나 옛 법에 내가 느끼는 것을 이름 붙이게 한다."
+ latria_sexual_frustration_flavor.1140.b: "무릎 꿇고 털옷이 제 일을 하게 둔다."
+ latria_sexual_frustration_flavor.1140.c: "교부의 가르침을 한 줄씩 따라간다."

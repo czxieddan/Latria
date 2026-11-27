@@ -152,3 +152,33 @@
  latria_sexual_frustration_flavor.1135.a: "Iść za melodią i zatańczyć następną miarę."
  latria_sexual_frustration_flavor.1135.b: "Cofnąć dłoń i wejść w tłum."
  latria_sexual_frustration_flavor.1135.c: "Zostać w cieple i wysłuchać melodii do końca."
+
+ latria_sexual_frustration_flavor.1136.t: "Pawilon o zmierzchu"
+ latria_sexual_frustration_flavor.1136.desc: "Pawilon pachnie oudem i skórką pomarańczy, a służba zostawiła sorbet, żeby pocił się w srebrnym pucharze. Między nami toczy się na wpół wypowiedziana kasida, każda linijka to szczebel, i żadne z nas nie wchodzi na ostatni.\n\nZmierzch robi z wody w fontannie kolor herbaty. Ta osoba, której chcę, unosi puchar i nie pije, tylko patrzy na mnie nad brzegiem, i te oczy są całym końcem wiersza.\n\nBiorę puchar z tej dłoni, piję tam, gdzie były jej usta, i odstawiam go. Oudysta czeka. Nikt nie powiedział ostatniej linijki."
+ latria_sexual_frustration_flavor.1136.a: "Kazać zagrać na oudzie i pozwolić pieśni to powiedzieć."
+ latria_sexual_frustration_flavor.1136.b: "Podziękować towarzystwu i odejść."
+ latria_sexual_frustration_flavor.1136.c: "Zostać i pozwolić ciszy być dobrym towarzystwem."
+
+ latria_sexual_frustration_flavor.1137.t: "Za rzeźbionym przepierzeniem"
+ latria_sexual_frustration_flavor.1137.desc: "Cisza fontanny wypełnia dziedziniec, a z moich ust toczy się muwaszszach o brwiach umiłowanej osoby, o tym, jak się wyginają, jak opadają. Umiłowana osoba jest dość blisko, by poprawić mi metrum.\n\nZa rzeźbionym przepierzeniem światło przechodzi drobnymi gwiazdami. Ramię tej osoby jest przy moim, ciepłe przez dwie warstwy jedwabiu, a wiersz porzucił swój temat zupełnie.\n\nZostawiam ostatnią linijkę niedokończoną. Przepierzenie chowa nas przed dworem i nie pokazuje nikomu, a woda dalej spada."
+ latria_sexual_frustration_flavor.1137.a: "Dokończyć wers szeptem przeznaczonym dla jednej osoby."
+ latria_sexual_frustration_flavor.1137.b: "Wyprostować się i mówić o naprawie fontanny."
+ latria_sexual_frustration_flavor.1137.c: "Przejść się samemu po arkadach, aż zapalą lampy."
+
+ latria_sexual_frustration_flavor.1138.t: "Święto zielonych gałęzi"
+ latria_sexual_frustration_flavor.1138.desc: "Moja wiara nazywa ciało darem i raz do roku wieszamy w świątyni zielone gałęzie, i mówimy to serio. Święto jest dziś. Pamiętam zeszłoroczne: dłoń w mojej pod gałęziami, kadzidło, błogosławieństwo wypowiedziane nad nami jak baldachim.\n\nTa osoba, której chcę, stoi po drugiej stronie świątyni z zieloną gałęzią w garści, a kapłan już zapala pierwszą lampę. Krew nie jest we mnie cicha i wiara nie każe jej uciszać.\n\nTrzymam się pamięci zeszłorocznych gałęzi, aż dłonie mam pewne, a zapach zieleni jest wszędzie."
+ latria_sexual_frustration_flavor.1138.a: "Wystąpić i pozwolić błogosławieństwu opaść na nas oboje."
+ latria_sexual_frustration_flavor.1138.b: "Trwać w nocnym czuwaniu, aż gałęzie zwiędną."
+ latria_sexual_frustration_flavor.1138.c: "Przeczytać ryt zjednoczenia do końca."
+
+ latria_sexual_frustration_flavor.1139.t: "Dzień w hipodromie"
+ latria_sexual_frustration_flavor.1139.desc: "Pył wisi nad hipodromem, a fakcje ryczą za swoimi barwami. Ikony niosą na drągach obok mojej loży, a kadzidło tnie zapach koni i gorącego piasku.\n\nWoźnica bierze zakręt nisko, patrzy w górę w trybuny i znajduje mnie. Spojrzenie trzyma się o uderzenie dłużej niż wyścig i obiecuje więcej, niż wyścig kiedykolwiek może. Dłoń zaciska się na poręczy.\n\nPył osiada. Fakcje ochrypają. Wciąż patrzę na tor, tam gdzie odszedł rydwan, a kadzidło wypaliło się do popiołu."
+ latria_sexual_frustration_flavor.1139.a: "Powiedzieć na głos, czyje spojrzenie trzymam."
+ latria_sexual_frustration_flavor.1139.b: "Odchylić się i pozwolić wyścigowi być tylko wyścigiem."
+ latria_sexual_frustration_flavor.1139.c: "Pozwolić ciepłemu hałasowi tłumu wystarczyć."
+
+ latria_sexual_frustration_flavor.1140.t: "Nauka pustynnego ojca"
+ latria_sexual_frustration_flavor.1140.desc: "Pustynny ojciec uczy, że ciało jest wrogiem, a ja noszę pod szatą włosiennicę, żeby dowieść, że go słyszę. Włos kłuje mnie przy kołnierzu z każdym oddechem. Jego głos jest suchy jak wadi i dwa razy cierpliwszy.\n\nNazywa modlitwę ogniem, który chłodzi krew. Moja nie stygnie. Za zamkniętymi powiekami nie widzę wroga, lecz tę osobę, której chcę, a włosiennica pili mnie w gardle.\n\nSchylam głowę i biorę modlitwę od początku, a słowa nie gaszą tego, co płonie."
+ latria_sexual_frustration_flavor.1140.a: "Wstać i pozwolić staremu prawu nazwać to, co czuję."
+ latria_sexual_frustration_flavor.1140.b: "Klęknąć i pozwolić włosiennicy robić swoje."
+ latria_sexual_frustration_flavor.1140.c: "Iść za nauką ojca linijka po linijce."

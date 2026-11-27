@@ -152,3 +152,33 @@
  latria_sexual_frustration_flavor.1035.a: "もう一曲所望して、踊り抜こう。"
  latria_sexual_frustration_flavor.1035.b: "寝衣を直して、窓辺で冷たい空気に当たろう。"
  latria_sexual_frustration_flavor.1035.c: "広間が空になるまで、火のそばで老犬と座っていよう。"
+
+ latria_sexual_frustration_flavor.1036.t: "灯籠の川"
+ latria_sexual_frustration_flavor.1036.desc: "庭には灯籠が張り巡らされ、眼下の川にもさらに多くが漂い、光が緩やかに暗がりへ流れていく。門で誰かに押しつけられた絹の灯籠を手にしている。側面に謎が記されているが、二度目は読んでいない。人混みが動いて、知らぬ者の手が一度だけ私の手に触れ、群れの中へ消えた。\n\n顔は見えなかった。肩と、袖の揺れ、そして川を下る灯籠だけが見えた。私は空を掴んで手を閉じる。謎は、運ぶほど重くなるものを人は何と抱えるかと問う。答えは分かっているが、知りたくない。\n\n今宵、いるべきあの人がいない。私は灯籠を残りの灯籠とともに水へ置き、流れに乗るのを見送る。灯りは曲がり角の向こうで一つ、また一つと消える。最後の一つが消えるまで、欄干のそばに留まる。"
+ latria_sexual_frustration_flavor.1036.a: "自分の灯籠を所望し、名を記そう。"
+ latria_sexual_frustration_flavor.1036.b: "人混みに礼を述べ、静かな道を帰ろう。"
+ latria_sexual_frustration_flavor.1036.c: "謎を最後まで読み、心で反芻しよう。"
+
+ latria_sexual_frustration_flavor.1037.t: "温かく、恥じず"
+ latria_sexual_frustration_flavor.1037.desc: "儀礼は終わり、神殿は空きゆくが、私はしばらく後生の温もりに跪いている。我が信仰は、身体を負債とは説かない。今宵の言葉もそうであった。肌はその温もりを保ち、私はそれを悔いていない。\n\n一つの触れが甦る。幾日か前、首の後ろに置かれた手。かつてなら汚点と呼んだはずの場所に、今は祝福だけがある。私は記憶を留める。それは焼かず、灯明のように内に座し、私の息は緩く均される。\n\n最後の蝋燭が私の前を運ばれていく。私は膝を据えて立ち、顔を涼やかに保つ。私のあるじまいが何であれ、それを恥じてはおらず、神殿も恥じよとは求めない。"
+ latria_sexual_frustration_flavor.1037.a: "祝福を声に出し、温もりを留めよう。"
+ latria_sexual_frustration_flavor.1037.b: "祭壇に辞儀し、静けさを携え出よう。"
+ latria_sexual_frustration_flavor.1037.c: "なお座し、私を解き放った言葉を味わおう。"
+
+ latria_sexual_frustration_flavor.1038.t: "炎への願い"
+ latria_sexual_frustration_flavor.1038.desc: "年の変わりに、中庭には高い篝火が組まれ、家中の者が一度ずつ跳び越えた。空中にサフランの香り、杯には冷やしたシャーベット。私は炎の上で願いをかけ、口には出さなかった。炎の向こうで、誰かがそれを見、目を逸らさなかった。\n\n今、宴は酒と喧噪に私を室内へ運んだ。襟は緩み、部屋は温かい。脛に炎の熱がまだ残り、あの視線の重みも、知らぬ者より一息長く留まったまま。私は杯を回し、飲まない。\n\n炎はもう戸口の向こうで赤い残り火だ。私はシャーベットを置く。願いはまだ私のもので、使い果してはいない。"
+ latria_sexual_frustration_flavor.1038.a: "炎の向こうの人を探し、率直に語ろう。"
+ latria_sexual_frustration_flavor.1038.b: "良い年を祈り、暇を告げよう。"
+ latria_sexual_frustration_flavor.1038.c: "熾火のそばへ出て、冷えた庭を歩こう。"
+
+ latria_sexual_frustration_flavor.1039.t: "長い一瞥"
+ latria_sexual_frustration_flavor.1039.desc: "ナーダムは三日、埃と音に満ちる。馬乳酒が、思うより頭に回っている。草を均された野で、力士はまだ組み合い、唸り、腿の埃を払っている。開けた草原から風が来て、私と空の間に何もない。\n\n二番目の競走で、一人の乗り手が過ぐる際に、一拍長く私の視線を受け止めた。それ以来、手放せずにいる。次の組を見ながら、何も見えていない。外套の下で、手が縫い目を探し、握る。草は鳴り、伏し、また立つ。\n\n野に埃が積もる。腿に当たる皮袋の乳は温かい。天幕へは、まだ行かない。"
+ latria_sexual_frustration_flavor.1039.a: "競走のあと馬を走らせ、風に託そう。"
+ latria_sexual_frustration_flavor.1039.b: "力士に礼を述べ、夜の床に就こう。"
+ latria_sexual_frustration_flavor.1039.c: "乗り手らと座し、光の消えるまで語ろう。"
+
+ latria_sexual_frustration_flavor.1040.t: "侵犯"
+ latria_sexual_frustration_flavor.1040.desc: "儀礼はこの渇望を罪と名づけ、私はそれを祓うため冷たい石に跪いた。冷たさは膝から上り、その働きをするが、渇望は去らない。静水の下の石のように祈りの下に座し、私の一言一句がその上への侵犯となる。\n\n繰り返し甦る口は、名も知らぬ誰かのものではなく、ただ温もり、近さ、在って、やがて消えた手。私は額を拳に押し当て、告解を形にしようとする。言葉は出ず、喉が閉ざされ、神殿は何も返さない。\n\n衝立の向こうで兄弟が身じろぎし、静まる。私は石に伏したまま。務めの鐘は近く、私は告げておらず、立ち上がらない。"
+ latria_sexual_frustration_flavor.1040.a: "自室に下がり、渇望に始末をつけよう。"
+ latria_sexual_frustration_flavor.1040.b: "徹夜の祈りを保ち、石に身を委ねよう。"
+ latria_sexual_frustration_flavor.1040.c: "暗がりに横たわり、慰めが訪れるに任せよう。"

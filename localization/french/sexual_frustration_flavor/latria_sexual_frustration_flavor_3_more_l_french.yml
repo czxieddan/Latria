@@ -153,3 +153,33 @@
  latria_sexual_frustration_flavor.1235.a: "Demander aux musiciens une danse de plus et tenir l'autre de plus près."
  latria_sexual_frustration_flavor.1235.b: "Remercier, saluer et me retirer avant que la figure tourne encore."
  latria_sexual_frustration_flavor.1235.c: "Garder sa compagnie et parler de tout sauf de ceci."
+
+ latria_sexual_frustration_flavor.1236.t: "Le long feu"
+ latria_sexual_frustration_flavor.1236.desc: "Le feu s'est consumé jusqu'à un long lit rouge et la salle est devenue bruyante comme quand personne ne part. Un scalde déroule un vers sur le grand-père de quelqu'un. Fourrure, hydromel, le banc chaud là où les corps s'entassent le long.\n\nLa personne que je veux est assise près de moi, le bras le long du dossier du banc, sans me toucher, et j'ai conscience de ce bras depuis trois vers. Dehors la porte, le fjord est noir et la glace descend de l'eau. Mon genou est contre le sien et ni l'un ni l'autre ne l'a bougé.\n\nLe scalde s'arrête pour souffler. Le bras derrière moi se déplace et ne descend pas."
+ latria_sexual_frustration_flavor.1236.a: "Demander un vers et chanter moi-même la réponse."
+ latria_sexual_frustration_flavor.1236.b: "Remercier le banc, me lever et sortir dans le noir."
+ latria_sexual_frustration_flavor.1236.c: "Me tourner vers cette personne et parler jusqu'à ce que le feu soit braise."
+
+ latria_sexual_frustration_flavor.1237.t: "La crue"
+ latria_sexual_frustration_flavor.1237.desc: "La crue a passé par-dessus les champs et l'air est assez épais pour qu'on le boive. Je suis au jardin en lin, le khôl aux yeux, une guirlande de lotus qui s'amollit déjà à la chaleur. Le temple d'Isis garde sa pierre fraîche à quelques pas, et j'ai longé ce mur deux fois.\n\nUne main se tend dans le noir chaud, paume en l'air, sans hâte. Les grillons sont assez bruyants pour que personne dans la maison n'entende une réponse. Mon corps en a déjà donné une, bas et insistante, et elle n'attend pas mes manières.\n\nJe n'ai pas pris la main. Le lotus goutte sur mon poignet."
+ latria_sexual_frustration_flavor.1237.a: "Prendre la main et en répondre devant ma maison."
+ latria_sexual_frustration_flavor.1237.b: "Croiser les mains dans mes manches et rentrer à l'écart."
+ latria_sexual_frustration_flavor.1237.c: "Parcourir le sentier inondé jusqu'à ce qu'on allume les lampes."
+
+ latria_sexual_frustration_flavor.1238.t: "Le rite des branches vertes"
+ latria_sexual_frustration_flavor.1238.desc: "Le rite est fini et le temple sent encore les branches coupées. L'eau de source a été bénie à la porte et j'ai été compté saint avec le reste, corps compris, ce qui est la part à laquelle je reviens. Des choses vertes pendent à chaque pilier.\n\nLa danse a dépassé les lampes et je l'ai dansée. Le goût m'en reste à la bouche : un poignet dans le mien, un tour, le tambour. Mon corps a décidé que la bénédiction était une permission et plaide la cause.\n\nLes piliers gouttent. Quelqu'un rit encore sous le porche."
+ latria_sexual_frustration_flavor.1238.a: "Tenir le rite à sa parole et laisser mes propres mains répondre."
+ latria_sexual_frustration_flavor.1238.b: "M'agenouiller et garder la veille jusqu'à ce que les tambours s'arrêtent."
+ latria_sexual_frustration_flavor.1238.c: "Lire le texte même du rite jusqu'à ce que les mots tiennent."
+
+ latria_sexual_frustration_flavor.1239.t: "L'aube sur la steppe"
+ latria_sexual_frustration_flavor.1239.desc: "Nous chevauchons avant le soleil, du koumis dans une outre et le ciel du bleu qu'il n'a qu'ici, sans bord nulle part. Un faucon se tient à mon poignet et l'herbe est bruyante d'insectes. Rien n'a été dit depuis les chariots.\n\nUn cavalier a retenu sa monture près de moi à la crête et n'a pas continué. Sa jambe est contre la mienne, les deux chevaux soufflant, et la terre ouverte est devant nous, sans mur et sans prêtre à une journée. Cela n'a jamais rendu le désir plus petit.\n\nLe faucon déplace ses pattes. Le cavalier attend."
+ latria_sexual_frustration_flavor.1239.a: "Tourner avec cette personne et laisser l'herbe le garder."
+ latria_sexual_frustration_flavor.1239.b: "Faire un signe, chevaucher et mettre le travail du jour entre nous."
+ latria_sexual_frustration_flavor.1239.c: "Tenir la selle et respirer jusqu'à ce que mes mains soient assurées."
+
+ latria_sexual_frustration_flavor.1240.t: "Le fouet et l'eau"
+ latria_sexual_frustration_flavor.1240.desc: "Le fouet est sur le banc où je l'ai posé et l'eau froide est dans la cuvette. Ma foi est claire que le corps est une chose à briser à l'obéissance. Je n'ai jamais trouvé que le brisement prenait.\n\nJ'ai usé des deux. L'eau saisit, les épaules piquent, et après le désir est encore là derrière mes côtes, tout à fait guère impressionné. C'est la part que personne ne dit tout haut : on ne le chassera pas au fouet.\n\nLa cuvette goutte sur les dalles. Mes mains sont assurées sur le banc."
+ latria_sexual_frustration_flavor.1240.a: "Écarter le fouet et prendre le désir entre mes propres mains."
+ latria_sexual_frustration_flavor.1240.b: "Reprendre le fouet et être obéissant."
+ latria_sexual_frustration_flavor.1240.c: "Lire avec mon maître jusqu'à ce que les mots soient plus forts."

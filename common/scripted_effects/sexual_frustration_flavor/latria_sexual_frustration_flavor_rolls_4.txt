@@ -240,5 +240,50 @@
 			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1335 } }
 			latria_fire_flavor_event = { EVENT = 1335 }
 		}
+		1 = {
+			trigger = {
+				culture = { name = han }
+				latria_can_roll_flavor_event = { EVENT = 1336 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1336 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1336 } }
+			latria_fire_flavor_event = { EVENT = 1336 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = persian }
+				latria_can_roll_flavor_event = { EVENT = 1337 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1337 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1337 } }
+			latria_fire_flavor_event = { EVENT = 1337 }
+		}
+		1 = {
+			trigger = {
+				latria_solo_rite_favors_flesh = yes
+				latria_can_roll_flavor_event = { EVENT = 1338 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1338 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1338 } }
+			latria_fire_flavor_event = { EVENT = 1338 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = greek }
+				latria_can_roll_flavor_event = { EVENT = 1339 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1339 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1339 } }
+			latria_fire_flavor_event = { EVENT = 1339 }
+		}
+		1 = {
+			trigger = {
+				latria_solo_rite_condemns_flesh = yes
+				latria_can_roll_flavor_event = { EVENT = 1340 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1340 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1340 } }
+			latria_fire_flavor_event = { EVENT = 1340 }
+		}
 	}
 }

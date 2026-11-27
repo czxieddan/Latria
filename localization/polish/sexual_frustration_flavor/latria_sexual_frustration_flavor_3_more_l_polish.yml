@@ -153,3 +153,33 @@
  latria_sexual_frustration_flavor.1235.a: "Poprosić muzykantów o jeszcze jeden taniec i trzymać tę osobę bliżej."
  latria_sexual_frustration_flavor.1235.b: "Podziękować, ukłonić się i wycofać, zanim figura obróci się znowu."
  latria_sexual_frustration_flavor.1235.c: "Zachować towarzystwo tej osoby i mówić o wszystkim prócz tego."
+
+ latria_sexual_frustration_flavor.1236.t: "Długi ogień"
+ latria_sexual_frustration_flavor.1236.desc: "Ogień wypalił się w długie czerwone łoże, a sala zrobiła się głośna tak, jak robi się, gdy nikt nie wychodzi. Skald brnie przez wers o czyimś dziadku. Futra, miód, ława ciepła tam, gdzie ciała leżą jedno przy drugim.\n\nTa osoba, której chcę, siedzi obok z ramieniem na oparciu ławy, nie dotykając mnie, a ja od trzech wersów jestem świadomy tego ramienia. Za drzwiami fiord jest czarny i lód schodzi z wody. Moje kolano jest przy jej kolanie i żadne z nas go nie odsuwa.\n\nSkald przerywa dla oddechu. Ramię za mną przesuwa się i nie opada."
+ latria_sexual_frustration_flavor.1236.a: "Poprosić o wers i zaśpiewać odpowiedź samemu."
+ latria_sexual_frustration_flavor.1236.b: "Podziękować ławie, wstać i wyjść w ciemność."
+ latria_sexual_frustration_flavor.1236.c: "Odwrócić się do tej osoby i mówić, aż ogień będzie żarem."
+
+ latria_sexual_frustration_flavor.1237.t: "Wylew"
+ latria_sexual_frustration_flavor.1237.desc: "Wylew stanął nad polami, a powietrze jest dość gęste, by je pić. Jestem w ogrodzie w lnie, z kohlem na oczach, girlanda z lotosu już mięknie w upale. Świątynia Izydy trzyma swój chłodny kamień kilka kroków dalej, a ja dwa razy przechodzę obok tego muru.\n\nW ciepłej ciemności ktoś podaje dłoń, otwartą, bez pośpiechu. Świerszcze są dość głośne, by nikt w domu nie usłyszał odpowiedzi. Moje ciało już jej udzieliło, niskiej i natarczywej, i nie czeka na moje obycie.\n\nNie biorę tej dłoni. Lotos kapie mi na przegub."
+ latria_sexual_frustration_flavor.1237.a: "Wziąć dłoń i odpowiedzieć za to przed moim domem."
+ latria_sexual_frustration_flavor.1237.b: "Złożyć dłonie w rękawach i wejść do środka samemu."
+ latria_sexual_frustration_flavor.1237.c: "Przejść zalaną ścieżką, aż zapalą lampy."
+
+ latria_sexual_frustration_flavor.1238.t: "Ryt zielonych gałęzi"
+ latria_sexual_frustration_flavor.1238.desc: "Ryt się skończył, a świątynia wciąż pachnie ściętymi gałęziami. Wiosenna woda została pobłogosławiona w drzwiach, a mnie liczono pośród świętych razem z resztą, ciało wliczone, i do tego właśnie wracam. Z każdego filaru wiszą zielone rzeczy.\n\nTaniec trwa dłużej niż lampy i tańczę go. Posmak wciąż mam w ustach: przegub w moim, obrót, bęben. Ciało postanowiło, że błogosławieństwo było pozwoleniem, i prowadzi tę sprawę.\n\nFilary kapią. Ktoś wciąż śmieje się w przedsionku."
+ latria_sexual_frustration_flavor.1238.a: "Trzymać ryt jego słowem i pozwolić odpowiedzieć własnym dłoniom."
+ latria_sexual_frustration_flavor.1238.b: "Klęknąć i trwać w czuwaniu, aż bębny zamilkną."
+ latria_sexual_frustration_flavor.1238.c: "Czytać własny tekst rytu, aż słowa utrzymają."
+
+ latria_sexual_frustration_flavor.1239.t: "Świt na stepie"
+ latria_sexual_frustration_flavor.1239.desc: "Wyjeżdżamy przed słońcem, z kumysem w bukłaku i niebem tak niebieskim, jak bywa tylko tutaj, bez krawędzi nigdzie. Sokół siedzi mi na przegubie, a trawa jest głośna od owadów. Od czasu wozów nic nie powiedziano.\n\nJeden jeździec wstrzymał konia przy mnie na grani i nie pojechał dalej. Noga tej osoby jest przy mojej, oba konie parskają, a przed nami otwarty kraj, bez muru i bez kapłana w promieniu dnia. To nigdy nie zmniejszyło tęsknoty.\n\nSokół przestępuje z nogi na nogę. Jeździec czeka."
+ latria_sexual_frustration_flavor.1239.a: "Skręcić z tą osobą i pozwolić trawie to zatrzymać."
+ latria_sexual_frustration_flavor.1239.b: "Skinąć, jechać dalej i włożyć między nas pracę dnia."
+ latria_sexual_frustration_flavor.1239.c: "Siedzieć w siodle i oddychać, aż dłonie będą pewne."
+
+ latria_sexual_frustration_flavor.1240.t: "Bicz i woda"
+ latria_sexual_frustration_flavor.1240.desc: "Bicz leży na ławie, gdzie został odłożony, a zimna woda stoi w miednicy. Moja wiara mówi wprost, że ciało trzeba złamać do posłuszeństwa. Nigdy nie widzę, żeby to łamanie brało.\n\nUżywam obu. Woda wstrząsa, ramiona pieką, a potem tęsknota wciąż jest za żebrami, całkiem niewzruszona. Tego nikt nie mówi głośno: nie da się jej wybiczować.\n\nMiednica kapie na płyty. Dłonie mam pewne na ławie."
+ latria_sexual_frustration_flavor.1240.a: "Odłożyć bicz i wziąć tęsknotę we własne ręce."
+ latria_sexual_frustration_flavor.1240.b: "Wziąć bicz znowu i być posłusznym."
+ latria_sexual_frustration_flavor.1240.c: "Czytać z nauczycielem, aż słowa będą głośniejsze."

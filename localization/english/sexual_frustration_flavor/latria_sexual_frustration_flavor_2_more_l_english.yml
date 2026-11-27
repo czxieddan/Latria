@@ -152,3 +152,33 @@
  latria_sexual_frustration_flavor.1135.a: "Follow the tune and dance the next measure."
  latria_sexual_frustration_flavor.1135.b: "Draw my hand back and step into the crowd."
  latria_sexual_frustration_flavor.1135.c: "Stay in the warmth and hear the tune through."
+
+ latria_sexual_frustration_flavor.1136.t: "The Pavilion at Dusk"
+ latria_sexual_frustration_flavor.1136.desc: "The pavilion smells of oud and orange peel, and the servants have left the sherbet to sweat in its silver cup. A qasida runs half-spoken between us, each line a rung, and neither of us climbs the last one.\n\nDusk turns the water in the fountain the color of tea. The one I want lifts the cup and does not drink, only watches me over the rim, and those eyes are the whole end of the poem.\n\nI take the cup from their hand, drink where their mouth has been, and set it down. The oud player waits. No one has said the last line."
+ latria_sexual_frustration_flavor.1136.a: "Call for the oud and let the song say it."
+ latria_sexual_frustration_flavor.1136.b: "Thank the company and take my leave."
+ latria_sexual_frustration_flavor.1136.c: "Stay, and let the quiet be good company."
+
+ latria_sexual_frustration_flavor.1137.t: "Behind the Carved Screen"
+ latria_sexual_frustration_flavor.1137.desc: "The fountain's hush fills the court, and a muwashshah runs from my mouth about the eyebrows of the beloved, the way they arch, the way they fall. The beloved is close enough to correct my meter.\n\nBehind the carved screen the light comes through in small stars. Their shoulder is against mine, warm through two layers of silk, and the poem has abandoned its subject entirely.\n\nI let the last line go unfinished. The screen keeps us from the court and shows us to no one, and the water goes on falling."
+ latria_sexual_frustration_flavor.1137.a: "Finish the verse in a whisper meant for one."
+ latria_sexual_frustration_flavor.1137.b: "Straighten, and speak of the fountain's repair."
+ latria_sexual_frustration_flavor.1137.c: "Walk the arcade alone until the lamps are lit."
+
+ latria_sexual_frustration_flavor.1138.t: "The Festival of Green Branches"
+ latria_sexual_frustration_flavor.1138.desc: "My faith calls the body a gift, and once a year we hang the temple with green branches and mean it. The festival is tonight. I remember last year's, a hand in mine under the boughs, the incense, the blessing spoken over us like a canopy.\n\nThe one I want stands across the temple with a green branch in their fist, and the priest is already lighting the first lamp. My blood is not quiet, and my faith does not ask it to be.\n\nI hold to the memory of last year's branches until my hands are steady, and the green smell is everywhere."
+ latria_sexual_frustration_flavor.1138.a: "Step forward and let the blessing fall on us both."
+ latria_sexual_frustration_flavor.1138.b: "Keep the night's vigil until the branches wilt."
+ latria_sexual_frustration_flavor.1138.c: "Read the rite of union to its end."
+
+ latria_sexual_frustration_flavor.1139.t: "A Day at the Hippodrome"
+ latria_sexual_frustration_flavor.1139.desc: "Dust hangs over the hippodrome and the factions roar for their colors. Icons are carried past my box on poles, and the incense cuts through the smell of horses and hot sand.\n\nA charioteer takes the turn low, looks up into the stands, and finds me. The glance holds a beat past the race and promises more than the race ever could. My hand tightens on the rail.\n\nThe dust settles. The factions go hoarse. I am still watching the track where the chariot went, and the incense has burned down to ash."
+ latria_sexual_frustration_flavor.1139.a: "Say aloud whose glance I am holding."
+ latria_sexual_frustration_flavor.1139.b: "Lean back and let the race be only a race."
+ latria_sexual_frustration_flavor.1139.c: "Let the crowd's warm noise be enough."
+
+ latria_sexual_frustration_flavor.1140.t: "The Desert Father's Teaching"
+ latria_sexual_frustration_flavor.1140.desc: "The desert father teaches that the body is the enemy, and I wear a hairshirt under my robe to prove I have heard him. The hair pricks at my collar with every breath. His voice is dry as the wadi and twice as patient.\n\nHe calls prayer a fire that cools the blood. Mine will not cool. Behind my closed eyes it is not the enemy I see but the one I want, and the hairshirt saws at my throat.\n\nI bow my head and take up the prayer again from the top, and the words will not put out what is burning."
+ latria_sexual_frustration_flavor.1140.a: "Rise and let the old law name what I feel."
+ latria_sexual_frustration_flavor.1140.b: "Kneel and let the hairshirt do its work."
+ latria_sexual_frustration_flavor.1140.c: "Follow the father's teaching line by line."

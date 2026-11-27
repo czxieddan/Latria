@@ -2,7 +2,7 @@
 	if = {
 		limit = { latria_can_receive_sexual_frustration_collapse_event = yes }
 		random_list = {
-			35 = { latria_roll_sexual_frustration_flavor_level_5_pool = yes }
+			40 = { latria_roll_sexual_frustration_flavor_level_5_pool = yes }
 			5 = { latria_roll_sexual_frustration_collapse_level_5 = yes }
 		}
 	}
@@ -263,6 +263,51 @@ latria_roll_sexual_frustration_flavor_level_5_pool = {
 			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1435 } }
 			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1435 } }
 			latria_fire_flavor_event = { EVENT = 1435 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = mongol }
+				latria_can_roll_flavor_event = { EVENT = 1436 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1436 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1436 } }
+			latria_fire_flavor_event = { EVENT = 1436 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = arabic }
+				latria_can_roll_flavor_event = { EVENT = 1437 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1437 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1437 } }
+			latria_fire_flavor_event = { EVENT = 1437 }
+		}
+		1 = {
+			trigger = {
+				latria_solo_rite_favors_flesh = yes
+				latria_can_roll_flavor_event = { EVENT = 1438 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1438 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1438 } }
+			latria_fire_flavor_event = { EVENT = 1438 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = andalusian }
+				latria_can_roll_flavor_event = { EVENT = 1439 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1439 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1439 } }
+			latria_fire_flavor_event = { EVENT = 1439 }
+		}
+		1 = {
+			trigger = {
+				latria_solo_rite_condemns_flesh = yes
+				latria_can_roll_flavor_event = { EVENT = 1440 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1440 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1440 } }
+			latria_fire_flavor_event = { EVENT = 1440 }
 		}
 	}
 }

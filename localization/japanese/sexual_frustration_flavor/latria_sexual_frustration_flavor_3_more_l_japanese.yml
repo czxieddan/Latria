@@ -153,3 +153,33 @@
  latria_sexual_frustration_flavor.1235.a: "楽師にもう一曲を頼み、もっと近く支えよう。"
  latria_sexual_frustration_flavor.1235.b: "礼を述べ、辞儀をして、型が再び回る前に退こう。"
  latria_sexual_frustration_flavor.1235.c: "相手のそばに留まり、このことでない話をしよう。"
+
+ latria_sexual_frustration_flavor.1236.t: "長く燃える火"
+ latria_sexual_frustration_flavor.1236.desc: "火は長い赤い熾きへ燃え尽き、広間は、誰も帰らぬという賑わい方をしている。スカルドが誰かの祖父についての詩節を紡いでいる。毛皮、蜜酒、びっしり詰まった体の間で温まる腰掛け。\n\n欲しいあの人は私の隣に、腕を腰掛けの背に沿えて座り、触れてはいない。その腕を、三節の間ずっと意識している。戸の外ではフィヨルドが黒く、氷が水から下りてくる。私の膝は相手の膝に触れ、どちらも動かさない。\n\nスカルドが息継ぎに止まる。背後の腕が動き、降りてはこない。"
+ latria_sexual_frustration_flavor.1236.a: "一節を所望し、自ら歌って答えよう。"
+ latria_sexual_frustration_flavor.1236.b: "腰掛けに礼を述べ、立ち、暗がりへ出よう。"
+ latria_sexual_frustration_flavor.1236.c: "相手に向き、火が炭になるまで語ろう。"
+
+ latria_sexual_frustration_flavor.1237.t: "氾濫"
+ latria_sexual_frustration_flavor.1237.desc: "氾濫は畑を覆い、空気は飲めるほど濃い。私は亜麻をまとい、目にはコールを差し、蓮の花環が暑さにもう柔らかくなって、庭にいる。イシス神殿が数歩先に涼しい石を保ち、私はその壁を二度通り過ぎた。\n\n温かな暗がりに、手のひらを上に向けた手が差し出される。急かさない。虫の音は、家の中で誰にも答えを聞かせぬほど大きい。私の身体はもう、低く執拗に答えており、礼儀を待ってはいない。\n\n私はその手を取っていない。蓮が手首に滴る。"
+ latria_sexual_frustration_flavor.1237.a: "その手を取り、家の者に釈明しよう。"
+ latria_sexual_frustration_flavor.1237.b: "袖に手を畳み、一人で内へ入ろう。"
+ latria_sexual_frustration_flavor.1237.c: "灯がともるまで、水に浸かった道を歩こう。"
+
+ latria_sexual_frustration_flavor.1238.t: "緑の枝の儀礼"
+ latria_sexual_frustration_flavor.1238.desc: "儀礼は終わり、神殿にはまだ切った枝の匂いがする。戸口で春の水が祝われ、私は残りのすべてとともに、身体もろとも聖なるものと数えられた。繰り返し甦るのはその一節だ。緑のものがすべての柱から下がる。\n\n踊りは灯を過ぎて続き、私も踊った。余韻がまだ口にある。私の手に握られた手首、旋回、太鼓。私の身体は、祝福が許しだったと決め、その論を張っている。\n\n柱が滴る。誰かがまだ玄関で笑っている。"
+ latria_sexual_frustration_flavor.1238.a: "儀礼の言葉に縋り、自らの手に答えさせよう。"
+ latria_sexual_frustration_flavor.1238.b: "跪き、太鼓が止むまで祈りを保とう。"
+ latria_sexual_frustration_flavor.1238.c: "儀礼の本文を読み、言葉が保つまで進もう。"
+
+ latria_sexual_frustration_flavor.1239.t: "草原の夜明け"
+ latria_sexual_frustration_flavor.1239.desc: "日は昇る前、革袋のクミスを携えて乗り出す。空は、ここだけでしか見えぬ青、どこにも縁がない。鷹が私の腕にとまり、草は虫の音で満ちる。荷車のそばから、何も言われていない。\n\n尾根の頂で、一人の乗り手が私に並んで手綱を緩め、先へは進まなかった。二頭が鼻を鳴らす間、相手の脚が私の脚に触れる。開けた土地が前にあり、壁もなく、一日の内に司祭もない。それでも渇望が小さくなったためしはない。\n\n鷹が足を換える。乗り手は待つ。"
+ latria_sexual_frustration_flavor.1239.a: "相手と道を外れ、草に託そう。"
+ latria_sexual_frustration_flavor.1239.b: "頷き、先へ進み、日々の務めを間に置こう。"
+ latria_sexual_frustration_flavor.1239.c: "鞍に座し、手が据わるまで息をしよう。"
+
+ latria_sexual_frustration_flavor.1240.t: "聖人の断食"
+ latria_sexual_frustration_flavor.1240.desc: "私は聖人の断食を守り、身体は巡り歩く牢となった。立てた誓いは古布のように薄れ、神殿の床の冷たい石に、破りの縁が指に触れるほど迫っている。脈は祈りより速く走る。\n\n寝衣は薄く、石が膝から熱を奪う。私は手を平らに石床へ押しつけるが、血の速さは冷たさにも静まらない。自らに禁じた触れ、断つと誓った温もりを思い、息が浅くなる。\n\n頭のそばの蝋燭がまっすぐ燃える。私は縁に縋り、断食と脈が暗がりで争うに任せる。"
+ latria_sexual_frustration_flavor.1240.a: "沈黙を破り、誓いがどれほど薄れたか告げよう。"
+ latria_sexual_frustration_flavor.1240.b: "冷たい石に押しつけ、夜を徹して断食を守ろう。"
+ latria_sexual_frustration_flavor.1240.c: "信心書を開き、賢い声に導き戻されよう。"

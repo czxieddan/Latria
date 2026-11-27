@@ -153,3 +153,33 @@
  latria_sexual_frustration_flavor.1235.a: "Ask the musicians for one more dance and hold them closer."
  latria_sexual_frustration_flavor.1235.b: "Thank them, bow, and withdraw before the figure turns again."
  latria_sexual_frustration_flavor.1235.c: "Keep their company and talk of anything but this."
+
+ latria_sexual_frustration_flavor.1236.t: "The Long Fire"
+ latria_sexual_frustration_flavor.1236.desc: "The fire has burned down to a long red bed and the hall has gone loud in the way that means nobody is leaving. A skald is working through a verse about somebody's grandfather. Fur, mead, the bench warm where the bodies are packed along it.\n\nThe one I want sits beside me with their arm along the back of the bench, not touching me, and I have been aware of that arm for three verses. Outside the door the fjord is black and the ice is coming down off the water. My knee is against theirs and neither of us has moved it.\n\nThe skald stops for breath. The arm behind me shifts, and does not come down."
+ latria_sexual_frustration_flavor.1236.a: "Ask for a verse and sing the answer myself."
+ latria_sexual_frustration_flavor.1236.b: "Thank the bench, rise, and go out into the dark."
+ latria_sexual_frustration_flavor.1236.c: "Turn to them and talk until the fire is coals."
+
+ latria_sexual_frustration_flavor.1237.t: "The Flood"
+ latria_sexual_frustration_flavor.1237.desc: "The flood is up over the fields and the air is thick enough to drink. I am in the garden in linen, kohl at my eyes, a lotus garland already going soft in the heat. The Isis temple keeps its cool stone a few paces off, and I have walked past that wall twice.\n\nA hand is offered in the warm dark, palm up, unhurried. The crickets are loud enough that nobody in the house would hear an answer. My body has already given one, low and insistent, and it is not waiting on my manners.\n\nI have not taken the hand. The lotus drips on my wrist."
+ latria_sexual_frustration_flavor.1237.a: "Take the hand and answer for it to my house."
+ latria_sexual_frustration_flavor.1237.b: "Fold my hands in my sleeves and go in alone."
+ latria_sexual_frustration_flavor.1237.c: "Walk the flooded path until the lamps are lit."
+
+ latria_sexual_frustration_flavor.1238.t: "The Rite of Green Branches"
+ latria_sexual_frustration_flavor.1238.desc: "The rite is over and the temple still smells of cut branches. Spring water was blessed at the door and I was counted holy with the rest of it, body included, which is the part I keep returning to. Green things hang from every pillar.\n\nThe dancing ran past the lamps and I danced it. The aftertaste is still in my mouth: a wrist in mine, a turn, the drum. My body has decided the blessing was permission and is arguing the case.\n\nThe pillars drip. Someone is still laughing in the porch."
+ latria_sexual_frustration_flavor.1238.a: "Hold the rite to its word and let my own hands answer."
+ latria_sexual_frustration_flavor.1238.b: "Kneel and keep the vigil until the drums stop."
+ latria_sexual_frustration_flavor.1238.c: "Read the rite's own text until the words hold."
+
+ latria_sexual_frustration_flavor.1239.t: "Dawn on the Steppe"
+ latria_sexual_frustration_flavor.1239.desc: "We ride out before the sun with kumis in a skin and the sky the blue it only is out here, with no edge to it anywhere. A hawk sits my wrist and the grass is loud with insects. Nothing has been said since the wagons.\n\nOne rider reined in beside me at the crest and did not ride on. Their leg is against mine, both horses blowing, and the open land is in front of us with no wall and no priest within a day. That has never made the wanting smaller.\n\nThe hawk shifts its feet. The rider waits."
+ latria_sexual_frustration_flavor.1239.a: "Turn off with them and let the grass keep it."
+ latria_sexual_frustration_flavor.1239.b: "Nod, ride on, and put the day's work between us."
+ latria_sexual_frustration_flavor.1239.c: "Sit the saddle and breathe until my hands are steady."
+
+ latria_sexual_frustration_flavor.1240.t: "The Scourge and the Water"
+ latria_sexual_frustration_flavor.1240.desc: "The scourge is on the bench where I set it and the cold water is in the basin. My faith is plain that the body is a thing to be broken to obedience. I have never found the breaking to take.\n\nI have used both. The water shocks, the shoulders sting, and afterward the wanting is still there behind my ribs, entirely unimpressed. That is the part nobody says out loud: it will not be scourged out.\n\nThe basin drips on the flagstones. My hands are steady on the bench."
+ latria_sexual_frustration_flavor.1240.a: "Set the scourge aside and take the wanting in my own hands."
+ latria_sexual_frustration_flavor.1240.b: "Take up the scourge again and be obedient."
+ latria_sexual_frustration_flavor.1240.c: "Read with my teacher until the words are louder."

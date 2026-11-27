@@ -697,3 +697,78 @@ latria_sexual_frustration_flavor.1335 = {
 	option = { name = latria_sexual_frustration_flavor.1335.b latria_flavor_resist = yes latria_flavor_private_restraint = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
 	option = { name = latria_sexual_frustration_flavor.1335.c latria_flavor_reflect = yes latria_flavor_warm_company = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
 }
+
+latria_sexual_frustration_flavor.1336 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1336.t
+	desc = latria_sexual_frustration_flavor.1336.desc
+	theme = seduction
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = garden }
+	left_portrait = { character = root animation = flirtation }
+	# gate: culture = { name = han }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 4 } }
+	option = { name = latria_sexual_frustration_flavor.1336.a latria_flavor_release = yes latria_flavor_honest_confession = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_release } } }
+	option = { name = latria_sexual_frustration_flavor.1336.b latria_flavor_resist = yes latria_flavor_private_restraint = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
+	option = { name = latria_sexual_frustration_flavor.1336.c latria_flavor_reflect = yes latria_flavor_walk = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
+}
+
+latria_sexual_frustration_flavor.1337 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1337.t
+	desc = latria_sexual_frustration_flavor.1337.desc
+	theme = party
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = feast }
+	left_portrait = { character = root animation = personality_amused }
+	# gate: culture = { name = persian }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 4 } }
+	option = { name = latria_sexual_frustration_flavor.1337.a latria_flavor_release = yes latria_flavor_poetry = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_release } } }
+	option = { name = latria_sexual_frustration_flavor.1337.b latria_flavor_resist = yes latria_flavor_courteous_withdrawal = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
+	option = { name = latria_sexual_frustration_flavor.1337.c latria_flavor_reflect = yes latria_flavor_chess = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
+}
+
+latria_sexual_frustration_flavor.1338 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1338.t
+	desc = latria_sexual_frustration_flavor.1338.desc
+	theme = faith
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = temple }
+	left_portrait = { character = root animation = personality_zealous }
+	# gate: latria_solo_rite_favors_flesh = yes
+	immediate = { latria_capture_flavor_severity = { LEVEL = 4 } }
+	option = { name = latria_sexual_frustration_flavor.1338.a latria_flavor_release = yes latria_flavor_faith_consequences = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_release } } }
+	option = { name = latria_sexual_frustration_flavor.1338.b latria_flavor_resist = yes latria_flavor_vigil = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
+	option = { name = latria_sexual_frustration_flavor.1338.c latria_flavor_reflect = yes latria_flavor_devotional_study = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
+}
+
+latria_sexual_frustration_flavor.1339 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1339.t
+	desc = latria_sexual_frustration_flavor.1339.desc
+	theme = party
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = feast }
+	left_portrait = { character = root animation = personality_amused }
+	# gate: culture = { name = greek }
+	immediate = { latria_capture_flavor_severity = { LEVEL = 4 } }
+	option = { name = latria_sexual_frustration_flavor.1339.a latria_flavor_release = yes latria_flavor_music = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_release } } }
+	option = { name = latria_sexual_frustration_flavor.1339.b latria_flavor_resist = yes latria_flavor_restful_restraint = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
+	option = { name = latria_sexual_frustration_flavor.1339.c latria_flavor_reflect = yes latria_flavor_good_company = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
+}
+
+latria_sexual_frustration_flavor.1340 = {
+	type = character_event
+	title = latria_sexual_frustration_flavor.1340.t
+	desc = latria_sexual_frustration_flavor.1340.desc
+	theme = faith
+	override_icon = { reference = "gfx/interface/icons/latria_sexual_frustration_flavor.dds" }
+	override_background = { reference = temple }
+	left_portrait = { character = root animation = worry }
+	# gate: latria_solo_rite_condemns_flesh = yes
+	immediate = { latria_capture_flavor_severity = { LEVEL = 4 } }
+	option = { name = latria_sexual_frustration_flavor.1340.a latria_flavor_release = yes latria_flavor_private_indulgence = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_release } } }
+	option = { name = latria_sexual_frustration_flavor.1340.b latria_flavor_resist = yes latria_flavor_faith_restraint_consequences = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_resist } } }
+	option = { name = latria_sexual_frustration_flavor.1340.c latria_flavor_reflect = yes latria_flavor_guided_study = yes ai_chance = { base = 0 modifier = { add = latria_ai_flavor_reflect } } }
+}
