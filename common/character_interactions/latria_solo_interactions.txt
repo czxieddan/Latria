@@ -1,6 +1,7 @@
 ﻿latria_solo_relief_interaction = {
 	icon = latria_solo_relief
 	common_interaction = yes
+	desc = latria_solo_relief_interaction_desc
 	interface_priority = 38
 	category = interaction_category_friendly
 	send_name = latria_solo_relief_send

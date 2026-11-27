@@ -1,5 +1,6 @@
 ﻿latria_start_fatal_liaison_interaction = {
 	icon = latria_fatal_liaison
+	desc = latria_start_fatal_liaison_interaction_desc
 	common_interaction = yes
 	interface_priority = 80
 	category = interaction_category_hostile
@@ -92,6 +93,7 @@
 latria_start_fatal_touch_interaction = {
 	icon = latria_fatal_touch
 	common_interaction = yes
+	desc = latria_start_fatal_touch_interaction_desc
 	interface_priority = 79
 	category = interaction_category_hostile
 	ignores_pending_interaction_block = yes
