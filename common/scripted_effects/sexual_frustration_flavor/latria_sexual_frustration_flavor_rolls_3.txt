@@ -1,0 +1,238 @@
+﻿latria_roll_sexual_frustration_flavor_level_3 = {
+	random_list = {
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1201 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1201 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1201 } }
+			latria_fire_flavor_event = { EVENT = 1201 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1202 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1202 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1202 } }
+			latria_fire_flavor_event = { EVENT = 1202 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1203 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1203 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1203 } }
+			latria_fire_flavor_event = { EVENT = 1203 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1204 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1204 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1204 } }
+			latria_fire_flavor_event = { EVENT = 1204 }
+		}
+		1 = {
+			trigger = {
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
+				latria_can_roll_flavor_event = { EVENT = 1205 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1205 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1205 } }
+			latria_fire_flavor_event = { EVENT = 1205 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1206 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1206 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1206 } }
+			latria_fire_flavor_event = { EVENT = 1206 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1207 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1207 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1207 } }
+			latria_fire_flavor_event = { EVENT = 1207 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1208 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1208 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1208 } }
+			latria_fire_flavor_event = { EVENT = 1208 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1209 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1209 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1209 } }
+			latria_fire_flavor_event = { EVENT = 1209 }
+		}
+		1 = {
+			trigger = {
+				OR = { is_clergy = yes is_landless_adventurer = yes is_ruler = yes }
+				latria_can_roll_flavor_event = { EVENT = 1210 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1210 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1210 } }
+			latria_fire_flavor_event = { EVENT = 1210 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1211 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1211 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1211 } }
+			latria_fire_flavor_event = { EVENT = 1211 }
+		}
+		1 = {
+			trigger = {
+				is_ruler = yes
+				latria_can_roll_flavor_event = { EVENT = 1212 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1212 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1212 } }
+			latria_fire_flavor_event = { EVENT = 1212 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1213 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1213 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1213 } }
+			latria_fire_flavor_event = { EVENT = 1213 }
+		}
+		1 = {
+			trigger = {
+				is_clergy = yes
+				latria_can_roll_flavor_event = { EVENT = 1214 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1214 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1214 } }
+			latria_fire_flavor_event = { EVENT = 1214 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1215 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1215 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1215 } }
+			latria_fire_flavor_event = { EVENT = 1215 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = han }
+				latria_can_roll_flavor_event = { EVENT = 1216 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1216 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1216 } }
+			latria_fire_flavor_event = { EVENT = 1216 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1217 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1217 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1217 } }
+			latria_fire_flavor_event = { EVENT = 1217 }
+		}
+		1 = {
+			trigger = {
+				is_landless_adventurer = yes
+				latria_can_roll_flavor_event = { EVENT = 1218 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1218 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1218 } }
+			latria_fire_flavor_event = { EVENT = 1218 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1219 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1219 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1219 } }
+			latria_fire_flavor_event = { EVENT = 1219 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1220 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1220 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1220 } }
+			latria_fire_flavor_event = { EVENT = 1220 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1221 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1221 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1221 } }
+			latria_fire_flavor_event = { EVENT = 1221 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1222 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1222 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1222 } }
+			latria_fire_flavor_event = { EVENT = 1222 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1223 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1223 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1223 } }
+			latria_fire_flavor_event = { EVENT = 1223 }
+		}
+		1 = {
+			trigger = {
+				culture = { name = mongol }
+				latria_can_roll_flavor_event = { EVENT = 1224 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1224 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1224 } }
+			latria_fire_flavor_event = { EVENT = 1224 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1225 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1225 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1225 } }
+			latria_fire_flavor_event = { EVENT = 1225 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1226 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1226 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1226 } }
+			latria_fire_flavor_event = { EVENT = 1226 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1227 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1227 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1227 } }
+			latria_fire_flavor_event = { EVENT = 1227 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1228 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1228 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1228 } }
+			latria_fire_flavor_event = { EVENT = 1228 }
+		}
+		1 = {
+			trigger = {
+				is_clergy = yes
+				latria_can_roll_flavor_event = { EVENT = 1229 }
+			}
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1229 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1229 } }
+			latria_fire_flavor_event = { EVENT = 1229 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1230 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1230 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1230 } }
+			latria_fire_flavor_event = { EVENT = 1230 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1231 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1231 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1231 } }
+			latria_fire_flavor_event = { EVENT = 1231 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1232 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1232 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1232 } }
+			latria_fire_flavor_event = { EVENT = 1232 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1233 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1233 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1233 } }
+			latria_fire_flavor_event = { EVENT = 1233 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1234 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1234 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1234 } }
+			latria_fire_flavor_event = { EVENT = 1234 }
+		}
+		1 = {
+			trigger = { latria_can_roll_flavor_event = { EVENT = 1235 } }
+			modifier = { factor = 0.5 latria_flavor_recent_at = { SLOT = 0 EVENT = 1235 } }
+			modifier = { factor = 0.25 latria_flavor_recent_at = { SLOT = 1 EVENT = 1235 } }
+			latria_fire_flavor_event = { EVENT = 1235 }
+		}
+	}
+}
