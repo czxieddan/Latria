@@ -1,0 +1,5 @@
+﻿l_polish:
+ trait_lovers_pox:0 "Opryszczka narządów płciowych"
+ disease_lovers_pox:0 "opryszczkę narządów płciowych."
+ disease_early_great_pox:0 "opryszczkę narządów płciowych."
+ court.0110.desc.pox:0 "„Masz więcej kochan[Select_CString( ROOT.Char.IsFemale, 'ków', 'ek' )] niż dziki pies pcheł. Obawiam się, że opryszczka narządów płciowych może nie być jedyną rzeczą, która zabarwi twoje ciało, gdy twoja żądza zostanie zaspokojona”."
