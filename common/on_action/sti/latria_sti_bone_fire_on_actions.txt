@@ -20,7 +20,8 @@ latria_on_sti_contract = {
 	effect = {
 		if = {
 			limit = { scope:disease_type = flag:latria_bone_fire }
-			trigger_event = { id = latria_sti.2 days = { 5 15 } }
+			# Consumptive fever: short incubation (weeks to a few months).
+			trigger_event = { id = latria_sti.2 days = { 45 120 } }
 		}
 	}
 }

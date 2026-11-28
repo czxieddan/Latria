@@ -13,20 +13,28 @@ contract_lovers_pox_from = {
 
 # One-way spread of a single STI.
 # Params: SOURCE (source character scope) TARGET (receiving character scope) DISEASE (trait key) CHANCE (0-100 int).
-# Only when the source has the disease and the target neither has it nor is immune, roll to infect the target.
-# Stamps disease_type on the target and hands off to the latria_on_sti_contract on_action, which routes
-# each disease to its dedicated infection event.
+# A carrier is anyone with the trait OR the same-named pathogen flag; the flag is stamped on infection so an
+# incubating (trait-not-yet-shown) carrier can still transmit. On a successful roll the target immediately gets
+# the pathogen flag, then disease_type is stamped and the latria_on_sti_contract on_action schedules the trait
+# event after that disease's latency.
 latria_sti_transmit_one_way = {
 	if = {
 		limit = {
-			$SOURCE$ = { has_trait = $DISEASE$ }
+			$SOURCE$ = {
+				OR = {
+					has_trait = $DISEASE$
+					has_character_flag = $DISEASE$
+				}
+			}
 			$TARGET$ = { NOT = { has_trait = $DISEASE$ } }
+			$TARGET$ = { NOT = { has_character_flag = $DISEASE$ } }
 			$TARGET$ = { NOT = { has_character_flag = immune_to_disease } }
 		}
 		random = {
 			chance = $CHANCE$
 			$SOURCE$ = { save_scope_as = infecting_partner }
 			$TARGET$ = {
+				add_character_flag = $DISEASE$
 				save_scope_value_as = {
 					name = disease_type
 					value = flag:$DISEASE$

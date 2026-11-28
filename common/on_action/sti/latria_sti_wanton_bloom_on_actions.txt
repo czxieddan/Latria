@@ -20,7 +20,8 @@ latria_on_sti_contract = {
 	effect = {
 		if = {
 			limit = { scope:disease_type = flag:latria_wanton_bloom }
-			trigger_event = { id = latria_sti.1 days = { 5 15 } }
+			# AIDS-like: very long latency (roughly 5-10 years) before the wasting shows.
+			trigger_event = { id = latria_sti.1 days = { 1825 3650 } }
 		}
 	}
 }

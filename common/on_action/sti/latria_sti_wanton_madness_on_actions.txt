@@ -20,7 +20,8 @@ latria_on_sti_contract = {
 	effect = {
 		if = {
 			limit = { scope:disease_type = flag:latria_wanton_madness }
-			trigger_event = { id = latria_sti.3 days = { 5 15 } }
+			# Insanity: long, creeping latency (roughly 1.5-3 years).
+			trigger_event = { id = latria_sti.3 days = { 540 1095 } }
 		}
 	}
 }

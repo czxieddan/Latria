@@ -20,7 +20,8 @@ latria_on_sti_contract = {
 	effect = {
 		if = {
 			limit = { scope:disease_type = flag:latria_bayberry_pox }
-			trigger_event = { id = latria_sti.4 days = { 5 15 } }
+			# Sores: brief incubation (a few weeks).
+			trigger_event = { id = latria_sti.4 days = { 21 60 } }
 		}
 	}
 }

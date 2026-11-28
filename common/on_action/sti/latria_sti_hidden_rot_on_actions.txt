@@ -20,7 +20,8 @@ latria_on_sti_contract = {
 	effect = {
 		if = {
 			limit = { scope:disease_type = flag:latria_hidden_rot }
-			trigger_event = { id = latria_sti.5 days = { 5 15 } }
+			# Deep abscess: medium latency (months to ~1.5 years).
+			trigger_event = { id = latria_sti.5 days = { 180 540 } }
 		}
 	}
 }
