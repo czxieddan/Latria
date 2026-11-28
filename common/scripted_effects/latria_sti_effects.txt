@@ -1,0 +1,39 @@
+﻿# Sexually transmitted infection (STI) hub. Centralizes how "genital herpes" (lovers_pox) and future STIs spread.
+# Goals:
+#   1. Block the vanilla "periodic spread to non-participants": vanilla contract_lovers_pox_from is emptied here,
+#      which cuts health.1200 from periodically infecting consorts/family who never took part.
+#   2. Whenever two characters actually have an act (mod interaction, AI, scheme, wedding night, vanilla sex, etc.),
+#      spread only between those two participants, never to other partners or family.
+#   3. Intercourse chance is higher than manual; to add an STI later, add one latria_sti_transmit_one_way line per branch below.
+
+# Override vanilla: empty the entry that adds lovers_pox via sex/periodic checks.
+# Both risk_of_std_from_effect and health.1200 funnel through it, so vanilla no longer spreads the herpes.
+contract_lovers_pox_from = {
+}
+
+# One-way spread of a single STI.
+# Params: SOURCE (source character scope) TARGET (receiving character scope) DISEASE (trait key) CHANCE (0-100 int).
+# Only when the source has the disease and the target neither has it nor is immune, roll to infect the target
+# (reuses the vanilla health.1008 infection notice).
+latria_sti_transmit_one_way = {
+	if = {
+		limit = {
+			$SOURCE$ = { has_trait = $DISEASE$ }
+			$TARGET$ = { NOT = { has_trait = $DISEASE$ } }
+			$TARGET$ = { NOT = { has_character_flag = immune_to_disease } }
+		}
+		random = {
+			chance = $CHANCE$
+			$TARGET$ = {
+				contract_disease_notify_effect = { DISEASE = $DISEASE$ }
+			}
+		}
+	}
+}
+
+# Bidirectional spread of one STI between the two real participants.
+# Params: DISEASE (trait key) CHANCE (0-100 int). Requires scope:latria_actor and scope:latria_partner to be set.
+latria_sti_transmit_disease_pair = {
+	latria_sti_transmit_one_way = { SOURCE = scope:latria_actor  TARGET = scope:latria_partner DISEASE = $DISEASE$ CHANCE = $CHANCE$ }
+	latria_sti_transmit_one_way = { SOURCE = scope:latria_partner TARGET = scope:latria_actor  DISEASE = $DISEASE$ CHANCE = $CHANCE$ }
+}

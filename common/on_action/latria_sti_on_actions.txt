@@ -1,0 +1,22 @@
+﻿# Dispatched after a partner act resolves. Root is the acting character; scope:latria_partner is the other participant.
+# This is the single place to list STIs. To add a disease, add one latria_sti_transmit_disease_pair line in each branch below.
+# Spread runs only between the two who actually took part, never to uninvolved consorts or family.
+latria_on_act_sti_spread = {
+	effect = {
+		if = {
+			limit = {
+				scope:latria_actor = { is_alive = yes }
+				scope:latria_partner = { is_alive = yes }
+			}
+			if = {
+				limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+				# Intercourse: higher chance
+				latria_sti_transmit_disease_pair = { DISEASE = lovers_pox CHANCE = 45 }
+			}
+			else = {
+				# Manual: lower chance
+				latria_sti_transmit_disease_pair = { DISEASE = lovers_pox CHANCE = 20 }
+			}
+		}
+	}
+}

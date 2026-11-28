@@ -176,4 +176,5 @@ latria_resolve_partner_act = {
 		}
 		latria_mark_recent_carnal_act = yes
 	}
+	trigger_event = { on_action = latria_on_act_sti_spread }
 }
