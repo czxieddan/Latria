@@ -37,3 +37,8 @@ latria_saint_peter_iron_guard gfx/interface/illustrations/men_at_arms_small/latr
 latria_holy_see_government gfx/interface/icons/government_types/latria_holy_see_government.dds Holy See government and text icon
 latria_demand_church_government gfx/interface/icons/character_interactions/latria_demand_church_government.dds demand church government interaction and event icon
 latria_designate_sacred_heir gfx/interface/icons/character_interactions/latria_designate_sacred_heir.dds sacred heir designation interaction icon
+latria_wanton_bloom gfx/interface/icons/traits/latria_wanton_bloom.dds wanton's bloom venereal wasting trait icon (placeholder, replace)
+latria_bone_fire gfx/interface/icons/traits/latria_bone_fire.dds bone-fire venereal consumptive fever trait icon (placeholder, replace)
+latria_wanton_madness gfx/interface/icons/traits/latria_wanton_madness.dds wanton's madness venereal insanity trait icon (placeholder, replace)
+latria_bayberry_pox gfx/interface/icons/traits/latria_bayberry_pox.dds bayberry pox venereal sores trait icon (placeholder, replace)
+latria_hidden_rot gfx/interface/icons/traits/latria_hidden_rot.dds hidden rot venereal deep abscess trait icon (placeholder, replace)

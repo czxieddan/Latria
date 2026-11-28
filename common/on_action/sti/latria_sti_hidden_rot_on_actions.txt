@@ -1,0 +1,26 @@
+﻿# Hidden Rot (deep abscess) STI: spread + infection on_actions. Grayscale: spread lines commented until icons are final.
+latria_on_act_sti_spread = {
+	effect = {
+		if = {
+			limit = {
+				scope:latria_actor = { is_alive = yes }
+				scope:latria_partner = { is_alive = yes }
+			}
+			if = {
+				limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+				# latria_sti_transmit_disease_pair = { DISEASE = latria_hidden_rot CHANCE = 25 }
+			}
+			else = {
+				# latria_sti_transmit_disease_pair = { DISEASE = latria_hidden_rot CHANCE = 10 }
+			}
+		}
+	}
+}
+latria_on_sti_contract = {
+	effect = {
+		if = {
+			limit = { scope:disease_type = flag:latria_hidden_rot }
+			trigger_event = { id = latria_sti.5 days = { 5 15 } }
+		}
+	}
+}

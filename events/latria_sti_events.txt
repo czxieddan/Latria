@@ -1,0 +1,95 @@
+﻿namespace = latria_sti
+
+# Dedicated infection events for the mod's venereal diseases.
+# Fired by latria_contract_sti_notify_effect (common/scripted_effects/latria_sti_effects.txt).
+# Root is the newly infected character; scope:infecting_partner is the source (may be empty).
+
+# Wanton's Bloom (wasting)
+latria_sti.1 = {
+	type = character_event
+	title = latria_sti.1.t
+	desc = latria_sti.1.desc
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:infecting_partner
+	trigger = { NOT = { has_trait = latria_wanton_bloom } }
+	immediate = { add_trait_force_tooltip = latria_wanton_bloom }
+	option = {
+		name = latria_sti.1.a
+	}
+}
+
+# Bone-Fire (consumptive fever)
+latria_sti.2 = {
+	type = character_event
+	title = latria_sti.2.t
+	desc = latria_sti.2.desc
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:infecting_partner
+	trigger = { NOT = { has_trait = latria_bone_fire } }
+	immediate = { add_trait_force_tooltip = latria_bone_fire }
+	option = {
+		name = latria_sti.2.a
+	}
+}
+
+# Wanton's Madness (insanity)
+latria_sti.3 = {
+	type = character_event
+	title = latria_sti.3.t
+	desc = latria_sti.3.desc
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:infecting_partner
+	trigger = { NOT = { has_trait = latria_wanton_madness } }
+	immediate = { add_trait_force_tooltip = latria_wanton_madness }
+	option = {
+		name = latria_sti.3.a
+	}
+}
+
+# Bayberry Pox (sores)
+latria_sti.4 = {
+	type = character_event
+	title = latria_sti.4.t
+	desc = latria_sti.4.desc
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:infecting_partner
+	trigger = { NOT = { has_trait = latria_bayberry_pox } }
+	immediate = { add_trait_force_tooltip = latria_bayberry_pox }
+	option = {
+		name = latria_sti.4.a
+	}
+}
+
+# Hidden Rot (deep abscess)
+latria_sti.5 = {
+	type = character_event
+	title = latria_sti.5.t
+	desc = latria_sti.5.desc
+	theme = healthcare
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	right_portrait = scope:infecting_partner
+	trigger = { NOT = { has_trait = latria_hidden_rot } }
+	immediate = { add_trait_force_tooltip = latria_hidden_rot }
+	option = {
+		name = latria_sti.5.a
+	}
+}

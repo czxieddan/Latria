@@ -1,0 +1,253 @@
+﻿# Period-flavored venereal diseases (folk names, not modern medical terms), varied in nature:
+# wasting, consumptive fever, madness, sores, and deep rot - not all the same "sore" symptom.
+# Each is a single trait with a faltering_heart-style track (25/50/75/100), not split traits.
+# shown_in_ruler_designer is kept "no" for now (grayscale rollout): flip the commented "yes" once icons are final.
+# Placeholder icons are copies of vanilla lovers_pox.dds and are meant to be replaced per the manifest.
+
+latria_wanton_bloom = {
+	icon = latria_wanton_bloom.dds
+	category = health
+	flag = illness
+	flag = lowers_health
+	flag = death_on_max_level
+	minimum_age = 16
+
+	health = -0.1
+	fertility = -0.05
+
+	ruler_designer_cost = 20
+	# Enable character-creation selection once the icons are finalized.
+	shown_in_ruler_designer = no
+	# shown_in_ruler_designer = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_wanton_bloom_desc
+			}
+			desc = trait_latria_wanton_bloom_character_desc
+		}
+	}
+
+	tracks = {
+		latria_wanton_bloom = {
+			25 = {
+				health = -0.3
+				fertility = -0.1
+				attraction_opinion = -5
+			}
+			50 = {
+				health = -0.5
+				fertility = -0.15
+				attraction_opinion = -10
+				dread_baseline_add = -3
+			}
+			75 = {
+				health = -0.75
+				fertility = -0.2
+				attraction_opinion = -15
+				dread_baseline_add = -5
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
+
+latria_bone_fire = {
+	icon = latria_bone_fire.dds
+	category = health
+	flag = illness
+	flag = lowers_health
+	flag = death_on_max_level
+	minimum_age = 16
+
+	health = -0.1
+
+	ruler_designer_cost = 20
+	shown_in_ruler_designer = no
+	# shown_in_ruler_designer = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_bone_fire_desc
+			}
+			desc = trait_latria_bone_fire_character_desc
+		}
+	}
+
+	tracks = {
+		latria_bone_fire = {
+			25 = {
+				health = -0.3
+				stress_gain_mult = 0.1
+			}
+			50 = {
+				health = -0.5
+				stress_gain_mult = 0.15
+				attraction_opinion = -5
+			}
+			75 = {
+				health = -0.8
+				stress_gain_mult = 0.2
+				attraction_opinion = -10
+				dread_baseline_add = -3
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
+
+latria_wanton_madness = {
+	icon = latria_wanton_madness.dds
+	category = health
+	flag = illness
+	flag = death_on_max_level
+	minimum_age = 16
+
+	stress_gain_mult = 0.1
+
+	ruler_designer_cost = 20
+	shown_in_ruler_designer = no
+	# shown_in_ruler_designer = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_wanton_madness_desc
+			}
+			desc = trait_latria_wanton_madness_character_desc
+		}
+	}
+
+	tracks = {
+		latria_wanton_madness = {
+			25 = {
+				stress_gain_mult = 0.15
+				diplomacy = -1
+				attraction_opinion = -5
+			}
+			50 = {
+				stress_gain_mult = 0.25
+				diplomacy = -2
+				health = -0.25
+				attraction_opinion = -10
+			}
+			75 = {
+				stress_gain_mult = 0.35
+				diplomacy = -3
+				health = -0.5
+				attraction_opinion = -15
+				dread_baseline_add = -4
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
+
+latria_bayberry_pox = {
+	icon = latria_bayberry_pox.dds
+	category = health
+	flag = illness
+	flag = lowers_health
+	flag = death_on_max_level
+	minimum_age = 16
+
+	attraction_opinion = -5
+
+	ruler_designer_cost = 20
+	shown_in_ruler_designer = no
+	# shown_in_ruler_designer = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_bayberry_pox_desc
+			}
+			desc = trait_latria_bayberry_pox_character_desc
+		}
+	}
+
+	tracks = {
+		latria_bayberry_pox = {
+			25 = {
+				attraction_opinion = -10
+				health = -0.2
+			}
+			50 = {
+				attraction_opinion = -15
+				health = -0.4
+				dread_baseline_add = -3
+			}
+			75 = {
+				attraction_opinion = -20
+				health = -0.6
+				fertility = -0.1
+				dread_baseline_add = -4
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
+
+latria_hidden_rot = {
+	icon = latria_hidden_rot.dds
+	category = health
+	flag = illness
+	flag = lowers_health
+	flag = death_on_max_level
+	minimum_age = 16
+
+	health = -0.1
+	dread_baseline_add = -2
+
+	ruler_designer_cost = 20
+	shown_in_ruler_designer = no
+	# shown_in_ruler_designer = yes
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_latria_hidden_rot_desc
+			}
+			desc = trait_latria_hidden_rot_character_desc
+		}
+	}
+
+	tracks = {
+		latria_hidden_rot = {
+			25 = {
+				health = -0.4
+				dread_baseline_add = -3
+			}
+			50 = {
+				health = -0.6
+				fertility = -0.1
+				dread_baseline_add = -4
+				attraction_opinion = -10
+			}
+			75 = {
+				health = -0.9
+				fertility = -0.15
+				dread_baseline_add = -5
+				attraction_opinion = -15
+			}
+			100 = {
+				health = -100
+			}
+		}
+	}
+}
