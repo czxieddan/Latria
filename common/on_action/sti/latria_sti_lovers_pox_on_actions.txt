@@ -1,0 +1,27 @@
+﻿# Genital herpes (lovers_pox) STI: spread + infection on_actions.
+# Spread: latria_on_act_sti_spread. Infection: latria_on_sti_contract. Both merge across the sti/ files.
+latria_on_act_sti_spread = {
+	effect = {
+		if = {
+			limit = {
+				scope:latria_actor = { is_alive = yes }
+				scope:latria_partner = { is_alive = yes }
+			}
+			if = {
+				limit = { scope:latria_act_kind = flag:latria_act_intercourse }
+				latria_sti_transmit_disease_pair = { DISEASE = lovers_pox CHANCE = 45 }
+			}
+			else = {
+				latria_sti_transmit_disease_pair = { DISEASE = lovers_pox CHANCE = 20 }
+			}
+		}
+	}
+}
+latria_on_sti_contract = {
+	effect = {
+		if = {
+			limit = { scope:disease_type = flag:lovers_pox }
+			trigger_event = { id = health.1008 days = { 5 15 } }
+		}
+	}
+}

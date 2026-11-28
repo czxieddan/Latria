@@ -13,8 +13,9 @@ contract_lovers_pox_from = {
 
 # One-way spread of a single STI.
 # Params: SOURCE (source character scope) TARGET (receiving character scope) DISEASE (trait key) CHANCE (0-100 int).
-# Only when the source has the disease and the target neither has it nor is immune, roll to infect the target
-# (reuses the vanilla health.1008 infection notice).
+# Only when the source has the disease and the target neither has it nor is immune, roll to infect the target.
+# Stamps disease_type on the target and hands off to the latria_on_sti_contract on_action, which routes
+# each disease to its dedicated infection event.
 latria_sti_transmit_one_way = {
 	if = {
 		limit = {
@@ -24,8 +25,13 @@ latria_sti_transmit_one_way = {
 		}
 		random = {
 			chance = $CHANCE$
+			$SOURCE$ = { save_scope_as = infecting_partner }
 			$TARGET$ = {
-				contract_disease_notify_effect = { DISEASE = $DISEASE$ }
+				save_scope_value_as = {
+					name = disease_type
+					value = flag:$DISEASE$
+				}
+				trigger_event = { on_action = latria_on_sti_contract }
 			}
 		}
 	}
